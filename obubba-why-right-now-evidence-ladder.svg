@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500" role="img" aria-labelledby="title desc">
+  <title id="title">OBubba's evidence ladder for Why right now</title>
+  <desc id="desc">Five steps show how OBubba establishes a changed pattern, checks dated clues, ranks possibilities, suggests a reversible response, and exits to clinical help when symptoms or parent instinct require it.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111b3f"/>
+      <stop offset="1" stop-color="#302755"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#080d26" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="1000" height="1500" rx="48" fill="url(#bg)"/>
+  <circle cx="910" cy="92" r="180" fill="#9d82d9" opacity=".13"/>
+  <circle cx="52" cy="1400" r="210" fill="#f28f78" opacity=".10"/>
+
+  <text x="72" y="104" fill="#f7f3ff" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="750">Before OBubba says “why”</text>
+  <text x="72" y="158" fill="#cfc7e8" font-family="Inter, Arial, sans-serif" font-size="28">A five-step evidence ladder—not a diagnosis</text>
+
+  <path d="M120 275 V1225" stroke="#9d82d9" stroke-width="8" stroke-linecap="round" opacity=".55"/>
+
+  <g filter="url(#shadow)">
+    <rect x="78" y="218" width="844" height="190" rx="32" fill="#f8f6fc"/>
+    <circle cx="120" cy="280" r="36" fill="#6952a3"/>
+    <text x="120" y="291" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">1</text>
+    <text x="184" y="273" fill="#161f43" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="760">Is the pattern truly different?</text>
+    <text x="184" y="321" fill="#4e5570" font-family="Inter, Arial, sans-serif" font-size="25">At least 3 recent nights, then repeated disruption</text>
+    <text x="184" y="357" fill="#4e5570" font-family="Inter, Arial, sans-serif" font-size="25">or a meaningful rise from this baby’s own baseline.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="78" y="438" width="844" height="190" rx="32" fill="#f8f6fc"/>
+    <circle cx="120" cy="500" r="36" fill="#7f68b7"/>
+    <text x="120" y="511" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">2</text>
+    <text x="184" y="493" fill="#161f43" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="760">What dated clues are nearby?</text>
+    <text x="184" y="541" fill="#4e5570" font-family="Inter, Arial, sans-serif" font-size="25">Illness • tooth • milestone • food • feeding change</text>
+    <text x="184" y="577" fill="#4e5570" font-family="Inter, Arial, sans-serif" font-size="25">Specific observations carry more context than age alone.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="78" y="658" width="844" height="190" rx="32" fill="#f8f6fc"/>
+    <circle cx="120" cy="720" r="36" fill="#9d82d9"/>
+    <text x="120" y="731" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">3</text>
+    <text x="184" y="713" fill="#161f43" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="760">Which possibility ranks first?</text>
+    <text x="184" y="761" fill="#4e5570" font-family="Inter, Arial, sans-serif" font-size="25">Stronger and more recent clues rise—but ranking is</text>
+    <text x="184" y="797" fill="#4e5570" font-family="Inter, Arial, sans-serif" font-size="25">not proof that one thing caused the changed night.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="78" y="878" width="844" height="190" rx="32" fill="#f8f6fc"/>
+    <circle cx="120" cy="940" r="36" fill="#e88472"/>
+    <text x="120" y="951" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">4</text>
+    <text x="184" y="933" fill="#161f43" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="760">Choose a reversible response</text>
+    <text x="184" y="981" fill="#4e5570" font-family="Inter, Arial, sans-serif" font-size="25">Keep familiar cues, meet needs, change one thing at</text>
+    <text x="184" y="1017" fill="#4e5570" font-family="Inter, Arial, sans-serif" font-size="25">a time and review complete days—not one noisy night.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="78" y="1098" width="844" height="190" rx="32" fill="#fff0ec" stroke="#f28f78" stroke-width="3"/>
+    <circle cx="120" cy="1160" r="36" fill="#d85f4b"/>
+    <text x="120" y="1171" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">5</text>
+    <text x="184" y="1153" fill="#65251d" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="780">Symptoms or instinct? Exit.</text>
+    <text x="184" y="1201" fill="#75463f" font-family="Inter, Arial, sans-serif" font-size="25">Check the baby and use current clinical guidance.</text>
+    <text x="184" y="1237" fill="#75463f" font-family="Inter, Arial, sans-serif" font-size="25">The app must never delay professional help.</text>
+  </g>
+
+  <rect x="78" y="1340" width="844" height="92" rx="28" fill="#ffffff" opacity=".10"/>
+  <text x="500" y="1380" text-anchor="middle" fill="#fff5f1" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">A top-ranked clue means “check this first”</text>
+  <text x="500" y="1415" text-anchor="middle" fill="#d9d1ed" font-family="Inter, Arial, sans-serif" font-size="24">It never means “cause proven”.</text>
+</svg>

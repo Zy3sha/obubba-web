@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba identifies brief cycle-linked stirs</title>
+  <desc id="desc">A night ribbon passes through five checks: baby is at least 16 weeks, two or more wakes, every wake explicitly timed, each lasts one to ten minutes, and no night feed is logged. If all pass, OBubba reassures rather than prescribing a change.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#09162e"/>
+      <stop offset="1" stop-color="#18234d"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#70d9dd"/>
+      <stop offset=".52" stop-color="#f0a276"/>
+      <stop offset="1" stop-color="#f7d48b"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="820" rx="38" fill="url(#bg)"/>
+  <circle cx="1060" cy="112" r="56" fill="#f7d48b" opacity=".95"/>
+  <circle cx="1083" cy="91" r="58" fill="#0f1a37"/>
+  <g fill="#f7d48b" opacity=".8">
+    <circle cx="90" cy="92" r="3"/><circle cx="214" cy="122" r="4"/><circle cx="404" cy="72" r="3"/>
+    <circle cx="732" cy="106" r="4"/><circle cx="900" cy="66" r="3"/><circle cx="1124" cy="218" r="3"/>
+  </g>
+  <text x="68" y="93" fill="#f8e8bf" font-family="Georgia,serif" font-size="42">Not every wake means the same thing</text>
+  <text x="68" y="135" fill="#b9c5df" font-family="Arial,sans-serif" font-size="21">OBubba checks the shape of the logged night before it suggests a change.</text>
+
+  <path d="M76 252 C140 252 166 252 224 252 C242 252 247 204 272 204 C297 204 303 252 328 252 C390 252 403 252 458 252 C478 252 482 214 506 214 C530 214 534 252 558 252 C620 252 638 252 690 252 C710 252 715 222 738 222 C761 222 766 252 790 252 C860 252 938 252 1125 252" fill="none" stroke="#183256" stroke-width="18" stroke-linecap="round"/>
+  <path d="M76 252 C140 252 166 252 224 252 C242 252 247 204 272 204 C297 204 303 252 328 252 C390 252 403 252 458 252 C478 252 482 214 506 214 C530 214 534 252 558 252 C620 252 638 252 690 252 C710 252 715 222 738 222 C761 222 766 252 790 252 C860 252 938 252 1125 252" fill="none" stroke="url(#ribbon)" stroke-width="7" stroke-linecap="round" filter="url(#glow)"/>
+  <g font-family="Arial,sans-serif" text-anchor="middle">
+    <text x="272" y="185" fill="#f5b18a" font-size="16" font-weight="700">5m</text>
+    <text x="506" y="195" fill="#f5b18a" font-size="16" font-weight="700">6m</text>
+    <text x="738" y="203" fill="#f5b18a" font-size="16" font-weight="700">4m</text>
+  </g>
+
+  <g font-family="Arial,sans-serif">
+    <g transform="translate(62 342)">
+      <rect width="206" height="142" rx="23" fill="#152a49" stroke="#365277"/>
+      <circle cx="34" cy="34" r="17" fill="#70d9dd"/><path d="M26 34l6 6 11-13" fill="none" stroke="#09162e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="61" y="40" fill="#f5f0e7" font-size="18" font-weight="700">Older-baby read</text>
+      <text x="22" y="78" fill="#b9c5df" font-size="16">At least 16 weeks</text>
+      <text x="22" y="105" fill="#8495b4" font-size="14">Newborns get a separate,</text>
+      <text x="22" y="126" fill="#8495b4" font-size="14">age-appropriate explanation.</text>
+    </g>
+    <g transform="translate(279 342)">
+      <rect width="206" height="142" rx="23" fill="#152a49" stroke="#365277"/>
+      <circle cx="34" cy="34" r="17" fill="#70d9dd"/><path d="M26 34l6 6 11-13" fill="none" stroke="#09162e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="61" y="40" fill="#f5f0e7" font-size="18" font-weight="700">Repeated</text>
+      <text x="22" y="78" fill="#b9c5df" font-size="16">2 or more wakes</text>
+      <text x="22" y="105" fill="#8495b4" font-size="14">One wake stays an ordinary</text>
+      <text x="22" y="126" fill="#8495b4" font-size="14">single-wake night.</text>
+    </g>
+    <g transform="translate(496 342)">
+      <rect width="206" height="142" rx="23" fill="#152a49" stroke="#365277"/>
+      <circle cx="34" cy="34" r="17" fill="#70d9dd"/><path d="M26 34l6 6 11-13" fill="none" stroke="#09162e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="61" y="40" fill="#f5f0e7" font-size="18" font-weight="700">Measured</text>
+      <text x="22" y="78" fill="#b9c5df" font-size="16">Every wake is timed</text>
+      <text x="22" y="105" fill="#8495b4" font-size="14">Missing duration never</text>
+      <text x="22" y="126" fill="#8495b4" font-size="14">means “zero minutes”.</text>
+    </g>
+    <g transform="translate(713 342)">
+      <rect width="206" height="142" rx="23" fill="#152a49" stroke="#365277"/>
+      <circle cx="34" cy="34" r="17" fill="#f0a276"/><path d="M26 34l6 6 11-13" fill="none" stroke="#09162e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="61" y="40" fill="#f5f0e7" font-size="18" font-weight="700">Brief</text>
+      <text x="22" y="78" fill="#b9c5df" font-size="16">Each is 1–10 minutes</text>
+      <text x="22" y="105" fill="#8495b4" font-size="14">An 11-minute wake sends</text>
+      <text x="22" y="126" fill="#8495b4" font-size="14">the night down another path.</text>
+    </g>
+    <g transform="translate(930 342)">
+      <rect width="206" height="142" rx="23" fill="#152a49" stroke="#365277"/>
+      <circle cx="34" cy="34" r="17" fill="#f0a276"/><path d="M26 34l6 6 11-13" fill="none" stroke="#09162e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="61" y="40" fill="#f5f0e7" font-size="18" font-weight="700">No feed logged</text>
+      <text x="22" y="78" fill="#b9c5df" font-size="16">0 night feeds</text>
+      <text x="22" y="105" fill="#8495b4" font-size="14">Feed-linked wakes are read</text>
+      <text x="22" y="126" fill="#8495b4" font-size="14">through feeding logic instead.</text>
+    </g>
+  </g>
+
+  <path d="M600 511v42" stroke="#6981a5" stroke-width="3" stroke-linecap="round"/>
+  <path d="M590 544l10 11 10-11" fill="none" stroke="#6981a5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="155" y="574" width="890" height="169" rx="32" fill="#f8e8bf"/>
+  <circle cx="236" cy="659" r="49" fill="#f0a276"/>
+  <text x="236" y="676" text-anchor="middle" font-size="50">💫</text>
+  <text x="313" y="630" fill="#17213f" font-family="Georgia,serif" font-size="34">Brief cycle-linked stirs</text>
+  <text x="313" y="669" fill="#374764" font-family="Arial,sans-serif" font-size="20">Reassurance, not a sleep-change assignment.</text>
+  <text x="313" y="704" fill="#60708b" font-family="Arial,sans-serif" font-size="17">If illness, teething or a developmental leap is active, that context takes priority.</text>
+  <rect x="835" y="621" width="155" height="58" rx="29" fill="#17213f"/>
+  <text x="912" y="657" text-anchor="middle" fill="#f8e8bf" font-family="Arial,sans-serif" font-size="18" font-weight="700">Nothing to fix</text>
+</svg>

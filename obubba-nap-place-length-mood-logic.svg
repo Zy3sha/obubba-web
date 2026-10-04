@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1320" viewBox="0 0 1000 1320" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba compares nap length and wake mood by location</title>
+  <desc id="desc">A portrait flow showing optional nap log fields feeding two separate comparisons. The longest-nap card requires three naps per location and a fifteen-minute gap. The happiest-wake card requires three mood-labelled naps per location, a winner at sixty percent happy and a lower location below forty percent.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff9f4"/>
+      <stop offset="0.52" stop-color="#f7eef2"/>
+      <stop offset="1" stop-color="#e9f4f0"/>
+    </linearGradient>
+    <linearGradient id="rose" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff0ea"/>
+      <stop offset="1" stop-color="#f2d8e1"/>
+    </linearGradient>
+    <linearGradient id="sage" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#edf8f4"/>
+      <stop offset="1" stop-color="#d6ebe5"/>
+    </linearGradient>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34283d"/>
+      <stop offset="1" stop-color="#58435f"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#392b3e" flood-opacity="0.14"/>
+    </filter>
+    <style>
+      .serif { font-family: Georgia, 'Times New Roman', serif; fill: #33283a; }
+      .sans { font-family: Arial, Helvetica, sans-serif; fill: #4f4353; }
+      .eyebrow { font-size: 20px; font-weight: 800; letter-spacing: 2.5px; }
+      .title { font-size: 52px; font-weight: 700; }
+      .subtitle { font-size: 25px; }
+      .cardTitle { font-size: 33px; font-weight: 800; }
+      .body { font-size: 25px; }
+      .small { font-size: 21px; }
+      .pill { font-size: 18px; font-weight: 800; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="1320" rx="42" fill="url(#bg)"/>
+  <circle cx="910" cy="105" r="150" fill="#c07088" opacity="0.09"/>
+  <circle cx="80" cy="1220" r="175" fill="#5f9b8e" opacity="0.10"/>
+
+  <text x="500" y="67" text-anchor="middle" class="sans eyebrow" fill="#9a5269">ONE NAP → TWO DIFFERENT READS</text>
+  <text x="500" y="130" text-anchor="middle" class="serif title">What counts as “best”?</text>
+  <text x="500" y="176" text-anchor="middle" class="sans subtitle">OBubba keeps length and wake mood separate</text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="225" width="820" height="230" rx="34" fill="#ffffff" stroke="#c8943e" stroke-opacity="0.38" stroke-width="2"/>
+  </g>
+  <g transform="translate(135 267)">
+    <circle cx="43" cy="43" r="43" fill="#c8943e"/>
+    <path d="M25 27h36v39H25zM32 20v14M54 20v14M25 42h36" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="112" y="35" class="sans cardTitle">Log the outcome</text>
+    <text x="112" y="73" class="sans small">Real start + end · Where · How woke</text>
+    <rect x="0" y="125" width="145" height="43" rx="21.5" fill="#f7eef2"/>
+    <text x="72" y="153" text-anchor="middle" class="sans pill" fill="#8e4f64">COT</text>
+    <rect x="160" y="125" width="175" height="43" rx="21.5" fill="#edf8f4"/>
+    <text x="247" y="153" text-anchor="middle" class="sans pill" fill="#477f73">CONTACT</text>
+    <rect x="350" y="125" width="145" height="43" rx="21.5" fill="#f7eef2"/>
+    <text x="422" y="153" text-anchor="middle" class="sans pill" fill="#8e4f64">PRAM</text>
+    <rect x="510" y="125" width="145" height="43" rx="21.5" fill="#edf8f4"/>
+    <text x="582" y="153" text-anchor="middle" class="sans pill" fill="#477f73">MORE</text>
+  </g>
+
+  <path d="M500 472v62" stroke="#c8943e" stroke-width="5" stroke-linecap="round"/>
+  <path d="m487 522 13 16 13-16" fill="none" stroke="#c8943e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="560" width="410" height="420" rx="34" fill="url(#rose)" stroke="#c07088" stroke-opacity="0.35" stroke-width="2"/>
+    <rect x="520" y="560" width="410" height="420" rx="34" fill="url(#sage)" stroke="#5f9b8e" stroke-opacity="0.38" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(108 602)">
+    <circle cx="42" cy="42" r="42" fill="#c07088"/>
+    <path d="M22 57h40M27 57V35h30v22M34 35V25h16v10" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="100" y="34" class="sans cardTitle">Runs longest</text>
+    <text x="0" y="112" class="sans body">Average completed nap</text>
+    <text x="0" y="145" class="sans body">duration by location</text>
+    <rect x="0" y="180" width="235" height="46" rx="23" fill="#fff" opacity="0.88"/>
+    <text x="117" y="210" text-anchor="middle" class="sans pill" fill="#8e4f64">3 NAPS PER PLACE</text>
+    <rect x="0" y="242" width="252" height="46" rx="23" fill="#fff" opacity="0.88"/>
+    <text x="126" y="272" text-anchor="middle" class="sans pill" fill="#8e4f64">AT LEAST 2 PLACES</text>
+    <text x="0" y="329" class="sans body" font-weight="800">Winner must lead by</text>
+    <text x="0" y="368" class="serif" font-size="42" font-weight="700" fill="#8e4f64">15+ minutes</text>
+  </g>
+
+  <g transform="translate(558 602)">
+    <circle cx="42" cy="42" r="42" fill="#5f9b8e"/>
+    <circle cx="42" cy="42" r="20" fill="none" stroke="#fff" stroke-width="4"/>
+    <path d="M34 37h.1M50 37h.1M33 48c5 7 13 7 18 0" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <text x="100" y="34" class="sans cardTitle">Wakes happiest</text>
+    <text x="0" y="112" class="sans body">Share of mood-labelled</text>
+    <text x="0" y="145" class="sans body">naps marked Happy</text>
+    <rect x="0" y="180" width="235" height="46" rx="23" fill="#fff" opacity="0.88"/>
+    <text x="117" y="210" text-anchor="middle" class="sans pill" fill="#477f73">3 NAPS PER PLACE</text>
+    <rect x="0" y="242" width="252" height="46" rx="23" fill="#fff" opacity="0.88"/>
+    <text x="126" y="272" text-anchor="middle" class="sans pill" fill="#477f73">AT LEAST 2 PLACES</text>
+    <text x="0" y="324" class="sans body" font-weight="800">Best ≥60% Happy</text>
+    <text x="0" y="361" class="sans body" font-weight="800">Worst &lt;40% Happy</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="1045" width="820" height="190" rx="36" fill="url(#night)"/>
+  </g>
+  <text x="500" y="1092" text-anchor="middle" class="sans eyebrow" fill="#f0c46a">THE HONEST OUTCOME</text>
+  <text x="500" y="1140" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#ffffff">Both cards · One card · Or no card</text>
+  <text x="500" y="1183" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#efe8f2">No clear gap means the app stays quiet</text>
+  <text x="500" y="1280" text-anchor="middle" class="sans small" fill="#716578">Safer sleep always outranks a location pattern</text>
+  <text x="500" y="1308" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#716578">Motion winners can be held back when a motion-reduction card is active</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1120" viewBox="0 0 900 1120" role="img" aria-labelledby="title desc">
+  <title id="title">What OBubba learns from a nap review</title>
+  <desc id="desc">The clock provides the nap anchor. Optional wake mood, settling, quality and place add context. Repeated similar naps can form a pattern.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f4ed"/><stop offset="1" stop-color="#edf3f0"/></linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#fbfaf7"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="9" stdDeviation="13" flood-color="#24333b" flood-opacity=".09"/></filter>
+    <style>
+      .serif{font-family:Georgia,'Times New Roman',serif;fill:#21343d}.sans{font-family:Arial,Helvetica,sans-serif;fill:#52646c}.eyebrow{font:700 17px Arial,Helvetica,sans-serif;letter-spacing:3px;fill:#8d6d31}.label{font:700 21px Arial,Helvetica,sans-serif;letter-spacing:.7px;fill:#21343d}.body{font:400 19px Arial,Helvetica,sans-serif;fill:#586970}.line{stroke:#c7b078;stroke-width:4;stroke-linecap:round}.icon{fill:none;stroke:#284856;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <rect width="900" height="1120" rx="42" fill="url(#bg)"/>
+  <circle cx="820" cy="78" r="145" fill="#e3d5b2" opacity=".28"/><circle cx="42" cy="1050" r="175" fill="#b9d2ca" opacity=".25"/>
+  <text x="450" y="66" text-anchor="middle" class="eyebrow">A SIMPLE NAP REVIEW</text>
+  <text x="450" y="119" text-anchor="middle" class="serif" font-size="39" font-weight="700">The clock says how long.</text>
+  <text x="450" y="164" text-anchor="middle" class="serif" font-size="39" font-weight="700">The review says how it looked.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="55" y="220" width="375" height="300" rx="28" fill="url(#card)"/>
+    <rect x="470" y="220" width="375" height="300" rx="28" fill="url(#card)"/>
+    <rect x="55" y="555" width="375" height="300" rx="28" fill="url(#card)"/>
+    <rect x="470" y="555" width="375" height="300" rx="28" fill="url(#card)"/>
+  </g>
+
+  <g transform="translate(242 306)"><circle r="48" fill="#e8f0ed"/><circle r="29" class="icon"/><path d="M0-19V2L15 11" class="icon"/></g>
+  <text x="242" y="385" text-anchor="middle" class="label">TIMING</text>
+  <text x="242" y="425" text-anchor="middle" class="body"><tspan x="242">Start + real end anchor</tspan><tspan x="242" dy="29">the next awake stretch.</tspan></text>
+
+  <g transform="translate(657 306)"><circle r="48" fill="#f3ead2"/><circle r="29" class="icon"/><circle cx="-10" cy="-7" r="3" fill="#284856"/><circle cx="10" cy="-7" r="3" fill="#284856"/><path d="M-12 10Q0 20 12 10" class="icon"/></g>
+  <text x="657" y="385" text-anchor="middle" class="label">HOW THEY WOKE</text>
+  <text x="657" y="425" text-anchor="middle" class="body"><tspan x="657">Happy, Sleepy or Fussy</tspan><tspan x="657" dy="29">adds restoration context.</tspan></text>
+
+  <g transform="translate(242 641)"><circle r="48" fill="#e8edf4"/><path d="M-27 18Q-10-12 7 8T29-22" class="icon"/><circle cx="-28" cy="20" r="6" fill="#284856"/><circle cx="30" cy="-24" r="6" fill="#284856"/></g>
+  <text x="242" y="720" text-anchor="middle" class="label">SETTLING + QUALITY</text>
+  <text x="242" y="760" text-anchor="middle" class="body"><tspan x="242">Effort and outcome help</tspan><tspan x="242" dy="29">explain the same duration.</tspan></text>
+
+  <g transform="translate(657 641)"><circle r="48" fill="#ece6ef"/><path d="M0 35S-29 7-29-12A29 29 0 0 1 29-12C29 7 0 35 0 35Z" class="icon"/><circle cy="-11" r="8" class="icon"/></g>
+  <text x="657" y="720" text-anchor="middle" class="label">WHERE</text>
+  <text x="657" y="760" text-anchor="middle" class="body"><tspan x="657">Cot, contact or on-the-go</tspan><tspan x="657" dy="29">lets settings be compared.</tspan></text>
+
+  <path d="M242 887V910H657V887" fill="none" class="line"/>
+  <rect x="92" y="934" width="716" height="114" rx="40" fill="#213f4b"/>
+  <text x="450" y="974" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#dbc48f">THE USEFUL DIFFERENCE</text>
+  <text x="450" y="1010" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="24" font-weight="700" fill="#fff">One nap is an event.</text>
+  <text x="450" y="1037" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="24" font-weight="700" fill="#fff">Repeated similar naps become a pattern.</text>
+  <text x="450" y="1090" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#64757b">Every detail is optional · observation, not diagnosis</text>
+</svg>

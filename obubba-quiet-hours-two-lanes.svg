@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1540" role="img" aria-labelledby="title desc">
+  <title id="title">Quiet hours route reminders into two lanes</title>
+  <desc id="desc">Predicted OBubba nudges are muted during quiet hours while parent-set appointments, custom reminders and the close-the-night rescue remain scheduled.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06162c"/><stop offset="1" stop-color="#201438"/></linearGradient>
+    <linearGradient id="moon" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4d37a"/><stop offset="1" stop-color="#bb9aff"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1000" height="1540" rx="54" fill="url(#bg)"/>
+  <circle cx="890" cy="110" r="180" fill="#b79aff" opacity=".08"/>
+  <text x="70" y="105" fill="#f4d37a" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="4">OBUBBA QUIET HOURS</text>
+  <text x="70" y="175" fill="#ffffff" font-family="Georgia, serif" font-size="58" font-weight="700">Quiet is not one rule.</text>
+  <text x="70" y="230" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="25">The app separates predictions from promises you set.</text>
+
+  <g filter="url(#shadow)">
+    <circle cx="500" cy="390" r="118" fill="#101e3b" stroke="url(#moon)" stroke-width="5"/>
+    <path d="M545 307a87 87 0 1 0 21 148 98 98 0 0 1-21-148z" fill="url(#moon)"/>
+    <text x="500" y="548" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="35" font-weight="800">7pm → 7am</text>
+    <text x="500" y="583" text-anchor="middle" fill="#9fb0c6" font-family="Arial, sans-serif" font-size="21">Start included · end excluded · wraps midnight</text>
+  </g>
+
+  <path d="M500 620v72M500 692L320 760M500 692l180 68" fill="none" stroke="#71839e" stroke-width="5" stroke-linecap="round"/>
+
+  <rect x="55" y="755" width="425" height="630" rx="34" fill="#0d2b42" stroke="#64d8c6" stroke-width="3" filter="url(#shadow)"/>
+  <circle cx="125" cy="835" r="38" fill="#64d8c6"/><path d="M108 836h34" stroke="#062237" stroke-width="8" stroke-linecap="round"/>
+  <text x="185" y="822" fill="#64d8c6" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">MUTED</text>
+  <text x="185" y="862" fill="#ffffff" font-family="Georgia, serif" font-size="36" font-weight="700">OBubba predicts</text>
+  <text x="95" y="915" fill="#b8c8d7" font-family="Arial, sans-serif" font-size="22">Filtered when the fire time</text>
+  <text x="95" y="945" fill="#b8c8d7" font-family="Arial, sans-serif" font-size="22">falls inside your window.</text>
+  <g font-family="Arial, sans-serif" font-size="25" fill="#f5f7fa">
+    <rect x="90" y="990" width="355" height="66" rx="18" fill="#163a50"/><text x="120" y="1032">Nap wind-down</text>
+    <rect x="90" y="1072" width="355" height="66" rx="18" fill="#163a50"/><text x="120" y="1114">Feed check-in</text>
+    <rect x="90" y="1154" width="355" height="66" rx="18" fill="#163a50"/><text x="120" y="1196">Bedtime wind-down</text>
+    <rect x="90" y="1236" width="355" height="66" rx="18" fill="#163a50"/><text x="120" y="1278">Evening log nudge</text>
+    <rect x="90" y="1318" width="355" height="66" rx="18" fill="#163a50"/><text x="120" y="1360">Development note</text>
+  </g>
+
+  <rect x="520" y="755" width="425" height="630" rx="34" fill="#251d49" stroke="#bb9aff" stroke-width="3" filter="url(#shadow)"/>
+  <circle cx="590" cy="835" r="38" fill="#bb9aff"/><path d="M574 835l11 12 22-27" fill="none" stroke="#21163f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="650" y="822" fill="#bb9aff" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">STILL SCHEDULED</text>
+  <text x="650" y="862" fill="#ffffff" font-family="Georgia, serif" font-size="34" font-weight="700">You chose it</text>
+  <text x="560" y="915" fill="#c8bee2" font-family="Arial, sans-serif" font-size="22">Explicit commitments bypass</text>
+  <text x="560" y="945" fill="#c8bee2" font-family="Arial, sans-serif" font-size="22">the quiet-hours filter.</text>
+  <g font-family="Arial, sans-serif" fill="#f7f5fb">
+    <rect x="555" y="990" width="355" height="86" rx="18" fill="#32275c"/><text x="585" y="1028" font-size="25">Appointment</text><text x="585" y="1056" fill="#c8bee2" font-size="19">Parent-set lead time</text>
+    <rect x="555" y="1092" width="355" height="86" rx="18" fill="#32275c"/><text x="585" y="1130" font-size="25">Custom plan item</text><text x="585" y="1158" fill="#c8bee2" font-size="19">Bath, meal, play…</text>
+    <rect x="555" y="1194" width="355" height="86" rx="18" fill="#32275c"/><text x="585" y="1232" font-size="25">Close the night</text><text x="585" y="1260" fill="#c8bee2" font-size="19">8am rescue</text>
+    <rect x="555" y="1296" width="355" height="86" rx="18" fill="#32275c"/><text x="585" y="1334" font-size="25">Running timer</text><text x="585" y="1362" fill="#c8bee2" font-size="19">Separate ongoing status</text>
+  </g>
+
+  <rect x="70" y="1425" width="860" height="72" rx="24" fill="#ffffff" opacity=".08"/>
+  <text x="500" y="1455" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="21" font-weight="700">Your phone still has the final say.</text>
+  <text x="500" y="1483" text-anchor="middle" fill="#abb8ca" font-family="Arial, sans-serif" font-size="19">Focus, silent mode and notification permission can delay or silence either lane.</text>
+</svg>

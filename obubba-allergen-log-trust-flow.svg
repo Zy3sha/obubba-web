@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">How a trustworthy allergen log is built</title>
+  <desc id="desc">A flow from the real ingredient label, to a clear meal description, to detected allergen chips, and then to the OBubba food journal and later prompts.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf5"/>
+      <stop offset="1" stop-color="#f3efe8"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff927d"/>
+      <stop offset="1" stop-color="#ef6f63"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#4a372f" flood-opacity=".12"/>
+    </filter>
+    <style>
+      .eyebrow{font:700 17px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:2.1px;fill:#a6544f}
+      .h1{font:800 48px Georgia,serif;fill:#342a27}
+      .lead{font:400 22px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#675b56}
+      .step{font:800 15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:1.5px;fill:#b05f56}
+      .cardTitle{font:800 26px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#342a27}
+      .body{font:400 18px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#675b56}
+      .chip{font:800 16px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#8d4a43}
+      .small{font:600 15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#786b65}
+    </style>
+  </defs>
+  <rect width="1440" height="900" rx="44" fill="url(#bg)"/>
+  <circle cx="1328" cy="92" r="120" fill="#ffd9cb" opacity=".55"/>
+  <circle cx="74" cy="826" r="170" fill="#dce9dc" opacity=".58"/>
+  <text x="96" y="88" class="eyebrow">OBUBBA • A TRUSTWORTHY FOOD RECORD</text>
+  <text x="96" y="151" class="h1">Label first. Clear log second.</text>
+  <text x="96" y="195" class="lead">The app organises the evidence you give it—it does not inspect the meal.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="82" y="274" width="360" height="390" rx="30" fill="#ffffff"/>
+    <rect x="540" y="274" width="360" height="390" rx="30" fill="#ffffff"/>
+    <rect x="998" y="274" width="360" height="390" rx="30" fill="#ffffff"/>
+  </g>
+
+  <g transform="translate(118 310)">
+    <text class="step">01 • PARENT CHECK</text>
+    <rect x="0" y="44" width="130" height="166" rx="15" fill="#f7eee5" stroke="#d6c1b2" stroke-width="2"/>
+    <rect x="22" y="68" width="86" height="12" rx="6" fill="#ef7a6e"/>
+    <rect x="22" y="98" width="72" height="7" rx="3.5" fill="#cab8ac"/>
+    <rect x="22" y="118" width="86" height="7" rx="3.5" fill="#cab8ac"/>
+    <rect x="22" y="138" width="60" height="7" rx="3.5" fill="#342a27"/>
+    <rect x="22" y="158" width="86" height="7" rx="3.5" fill="#cab8ac"/>
+    <rect x="22" y="178" width="52" height="7" rx="3.5" fill="#342a27"/>
+    <circle cx="188" cy="112" r="51" fill="#f7c97a" opacity=".38"/>
+    <path d="M172 112l12 12 25-30" fill="none" stroke="#5f8868" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <text y="258" class="cardTitle">Read the real ingredients</text>
+    <text y="294" class="body">Pack, recipe and substitutions</text>
+    <text y="320" class="body">are the source of truth.</text>
+  </g>
+
+  <g transform="translate(576 310)">
+    <text class="step">02 • CLEAR DESCRIPTION</text>
+    <rect x="0" y="50" width="288" height="125" rx="18" fill="#fff8f3" stroke="#efb9aa" stroke-width="2"/>
+    <circle cx="28" cy="82" r="7" fill="#ef786b"/>
+    <text x="47" y="90" class="small">Porridge (oats)</text>
+    <circle cx="28" cy="116" r="7" fill="#ef786b"/>
+    <text x="47" y="124" class="small">cow’s milk + banana</text>
+    <circle cx="28" cy="150" r="7" fill="#ef786b"/>
+    <text x="47" y="158" class="small">smooth peanut butter</text>
+    <g transform="translate(0 198)">
+      <rect width="92" height="38" rx="19" fill="#fde0d7"/>
+      <text x="19" y="25" class="chip">gluten</text>
+      <rect x="104" width="82" height="38" rx="19" fill="#fde0d7"/>
+      <text x="124" y="25" class="chip">dairy</text>
+      <rect x="198" width="94" height="38" rx="19" fill="#fde0d7"/>
+      <text x="213" y="25" class="chip">peanut</text>
+    </g>
+    <text y="294" class="cardTitle">Check the live badges</text>
+    <text y="330" class="body">Specific words give the app</text>
+    <text y="356" class="body">something honest to organise.</text>
+  </g>
+
+  <g transform="translate(1034 310)">
+    <text class="step">03 • USEFUL CONTEXT</text>
+    <rect x="0" y="50" width="288" height="58" rx="16" fill="#e9f2e9"/>
+    <circle cx="30" cy="79" r="12" fill="#5f8868"/>
+    <path d="M24 79l4 4 8-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <text x="54" y="85" class="small">Food journal</text>
+    <rect x="0" y="120" width="288" height="58" rx="16" fill="#fff1d8"/>
+    <circle cx="30" cy="149" r="12" fill="#db9c3b"/>
+    <text x="54" y="155" class="small">Allergen journey</text>
+    <rect x="0" y="190" width="288" height="58" rx="16" fill="#fde4dc"/>
+    <circle cx="30" cy="219" r="12" fill="#e26f63"/>
+    <text x="54" y="225" class="small">Cautious next prompts</text>
+    <text y="294" class="cardTitle">One record, less memory</text>
+    <text y="330" class="body">Helpful patterns come later;</text>
+    <text y="356" class="body">the parent stays in control.</text>
+  </g>
+
+  <path d="M458 466h63" stroke="#d49b8e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M507 451l16 15-16 15" fill="none" stroke="#d49b8e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M916 466h63" stroke="#d49b8e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M965 451l16 15-16 15" fill="none" stroke="#d49b8e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(206 734)">
+    <rect width="1028" height="90" rx="45" fill="url(#coral)"/>
+    <text x="514" y="38" text-anchor="middle" style="font:800 22px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#fff">“Not detected” does not mean “allergen-free”.</text>
+    <text x="514" y="67" text-anchor="middle" style="font:500 17px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#fff7f3">If the badges do not match the meal, check the label and edit the description.</text>
+  </g>
+</svg>

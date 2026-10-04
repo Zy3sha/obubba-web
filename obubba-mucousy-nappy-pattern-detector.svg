@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1080" viewBox="0 0 720 1080" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba counts a recurring mucousy-nappy pattern</title>
+  <desc id="desc">The current Flutter app reads up to seven recent days and shows its low-urgency mucus trend after three distinct days contain a Mucousy tag. Watery, hard or absent-stool patterns can speak first. Blood, pale and very dark stools use a separate urgent safety route.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf4ec"/><stop offset="1" stop-color="#eee8f2"/></linearGradient>
+    <linearGradient id="safe" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#26324c"/><stop offset="1" stop-color="#4d476a"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#45394d" flood-opacity=".11"/></filter>
+  </defs>
+  <rect width="720" height="1080" rx="34" fill="url(#bg)"/>
+  <circle cx="654" cy="74" r="78" fill="#d9c5dc" opacity=".48"/><circle cx="56" cy="1014" r="108" fill="#cbdacb" opacity=".54"/>
+
+  <text x="52" y="67" fill="#a55442" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">PATTERN, NOT DIAGNOSIS</text>
+  <text x="52" y="119" fill="#2e2b3a" font-family="Georgia, serif" font-size="39" font-weight="700">Three days make a pattern.</text>
+  <text x="52" y="163" fill="#2e2b3a" font-family="Georgia, serif" font-size="39" font-weight="700">One busy day can’t.</text>
+  <text x="52" y="202" fill="#665f6d" font-family="Arial, sans-serif" font-size="18">The Flutter rule counts parent-selected texture tags.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="236" width="636" height="154" rx="24" fill="#fffdf9"/>
+    <circle cx="91" cy="288" r="27" fill="#e7d7c0"/><text x="91" y="295" text-anchor="middle" fill="#905b49" font-family="Arial, sans-serif" font-size="20" font-weight="700">1</text>
+    <text x="134" y="280" fill="#302e3b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Read up to 7 recent days</text>
+    <text x="134" y="313" fill="#68616e" font-family="Arial, sans-serif" font-size="17">At least 4 days of history are needed before any trend.</text>
+    <g transform="translate(134 337)">
+      <rect width="54" height="27" rx="8" fill="#d58a73"/><rect x="64" width="54" height="27" rx="8" fill="#eee5dc"/><rect x="128" width="54" height="27" rx="8" fill="#d58a73"/><rect x="192" width="54" height="27" rx="8" fill="#eee5dc"/><rect x="256" width="54" height="27" rx="8" fill="#eee5dc"/><rect x="320" width="54" height="27" rx="8" fill="#d58a73"/><rect x="384" width="54" height="27" rx="8" fill="#eee5dc"/>
+      <g fill="#fff" font-family="Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle"><text x="27" y="19">S</text><text x="155" y="19">T</text><text x="347" y="19">F</text></g>
+    </g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="414" width="636" height="150" rx="24" fill="#fffdf9"/>
+    <circle cx="91" cy="466" r="27" fill="#d7e3d4"/><text x="91" y="473" text-anchor="middle" fill="#4c705a" font-family="Arial, sans-serif" font-size="20" font-weight="700">2</text>
+    <text x="134" y="458" fill="#302e3b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Any “Mucousy” poo flags that day</text>
+    <text x="134" y="491" fill="#68616e" font-family="Arial, sans-serif" font-size="17">One tagged nappy or five tagged nappies = one mucus day.</text>
+    <g transform="translate(134 515)"><rect width="147" height="30" rx="15" fill="#dbe7d8"/><text x="73.5" y="20" text-anchor="middle" fill="#456954" font-family="Arial, sans-serif" font-size="14" font-weight="700">1 TAGGED NAPPY</text><text x="172" y="21" fill="#968d98" font-family="Arial, sans-serif" font-size="20">=</text><rect x="199" width="120" height="30" rx="15" fill="#c97b67"/><text x="259" y="20" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="14" font-weight="700">1 DAY</text></g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="588" width="636" height="132" rx="24" fill="#fffdf9"/>
+    <circle cx="91" cy="640" r="27" fill="#ddd3ea"/><text x="91" y="647" text-anchor="middle" fill="#675380" font-family="Arial, sans-serif" font-size="20" font-weight="700">3</text>
+    <text x="134" y="632" fill="#302e3b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Need 3 distinct flagged days</text>
+    <text x="134" y="665" fill="#68616e" font-family="Arial, sans-serif" font-size="17">They can be separated. Unlogged days are unknown, not normal.</text>
+    <g transform="translate(134 684)"><circle cx="10" cy="0" r="10" fill="#c97b67"/><path d="M26 0h78" stroke="#c6b9ca" stroke-width="4" stroke-dasharray="4 7"/><circle cx="120" cy="0" r="10" fill="#c97b67"/><path d="M136 0h78" stroke="#c6b9ca" stroke-width="4" stroke-dasharray="4 7"/><circle cx="230" cy="0" r="10" fill="#c97b67"/><path d="M246 0h76" stroke="#4f765c" stroke-width="4"/><path d="M317 -7l12 7-12 7z" fill="#4f765c"/><text x="346" y="6" fill="#4f765c" font-family="Arial, sans-serif" font-size="15" font-weight="700">CARD CAN SHOW</text></g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="744" width="636" height="128" rx="24" fill="#fff9ef" stroke="#ddb577" stroke-width="2"/>
+    <text x="68" y="782" fill="#9a5d43" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="1.4">OTHER TUMMY PATTERNS CAN SPEAK FIRST</text>
+    <g fill="#5f5864" font-family="Arial, sans-serif" font-size="17"><circle cx="73" cy="815" r="5" fill="#c97b67"/><text x="90" y="821">3 watery days from today</text><circle cx="338" cy="815" r="5" fill="#8aa28c"/><text x="355" y="821">2 pellet-like days</text><circle cx="73" cy="849" r="5" fill="#8276a1"/><text x="90" y="855">No dirty nappy while tracking continues</text></g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="896" width="636" height="130" rx="24" fill="url(#safe)"/>
+    <text x="68" y="936" fill="#f1ca83" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="1.5">SEPARATE URGENT SAFETY ROUTE</text>
+    <text x="68" y="973" fill="#fff" font-family="Arial, sans-serif" font-size="21" font-weight="700">Blood · pale · very dark stools</text>
+    <text x="68" y="1002" fill="#ded9e5" font-family="Arial, sans-serif" font-size="16">Don’t wait for three days. Show a health professional promptly.</text>
+  </g>
+
+  <text x="360" y="1057" text-anchor="middle" fill="#635c68" font-family="Arial, sans-serif" font-size="15">Counts tags. Doesn’t inspect nappies or diagnose a cause.</text>
+</svg>

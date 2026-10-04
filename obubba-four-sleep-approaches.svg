@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 1370" role="img" aria-labelledby="title desc">
+  <title id="title">OBubba's four sleep approaches</title>
+  <desc id="desc">A vertical comparison of Gentle, Baby-led, Build and Training, followed by the safety rules that never change.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07182f"/><stop offset="1" stop-color="#102a49"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#bca8ff"/><stop offset="1" stop-color="#82d9da"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020a15" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="780" height="1370" rx="34" fill="url(#bg)"/>
+  <circle cx="700" cy="70" r="150" fill="#7f6bd8" opacity=".11"/><circle cx="60" cy="1310" r="170" fill="#55c5c7" opacity=".08"/>
+
+  <text x="52" y="66" fill="#dfd4a8" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2.2">PREFERENCES → SLEEP APPROACH</text>
+  <text x="52" y="118" fill="#fff" font-family="Arial, sans-serif" font-size="34" font-weight="800">You choose how OBubba helps</text>
+  <text x="52" y="157" fill="#fff" font-family="Arial, sans-serif" font-size="34" font-weight="800">with sleep</text>
+  <text x="52" y="201" fill="#b9c7d8" font-family="Arial, sans-serif" font-size="20">The setting changes settling-method guidance.</text>
+  <text x="52" y="231" fill="#b9c7d8" font-family="Arial, sans-serif" font-size="20">It does not change timing, health or safer sleep.</text>
+  <rect x="52" y="260" width="676" height="4" rx="2" fill="url(#line)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="52" y="300" width="676" height="190" rx="24" fill="#142f4e" stroke="#bca8ff" stroke-opacity=".48"/>
+    <circle cx="103" cy="352" r="27" fill="#826de1"/><text x="103" y="361" text-anchor="middle" fill="#fff" font-family="Arial" font-size="25">♥</text>
+    <text x="146" y="347" fill="#fff" font-family="Arial, sans-serif" font-size="29" font-weight="800">Gentle</text>
+    <text x="146" y="379" fill="#b9c7d8" font-family="Arial, sans-serif" font-size="19">Default</text>
+    <text x="82" y="425" fill="#eef4fa" font-family="Arial, sans-serif" font-size="22">Responsive, parent-present settling help</text>
+    <text x="82" y="458" fill="#93a9bf" font-family="Arial, sans-serif" font-size="18">Method support when relevant; no pressure to change.</text>
+
+    <rect x="52" y="520" width="676" height="190" rx="24" fill="#142f4e" stroke="#82d9da" stroke-opacity=".48"/>
+    <circle cx="103" cy="572" r="27" fill="#3ca6aa"/><text x="103" y="581" text-anchor="middle" fill="#fff" font-family="Arial" font-size="25">↝</text>
+    <text x="146" y="567" fill="#fff" font-family="Arial, sans-serif" font-size="29" font-weight="800">Baby-led</text>
+    <text x="146" y="599" fill="#b9c7d8" font-family="Arial, sans-serif" font-size="19">Follow my baby's lead</text>
+    <text x="82" y="645" fill="#eef4fa" font-family="Arial, sans-serif" font-size="22">Timing, routine and environment only</text>
+    <text x="82" y="678" fill="#93a9bf" font-family="Arial, sans-serif" font-size="18">No method push and no “habit to break” framing.</text>
+
+    <rect x="52" y="740" width="676" height="190" rx="24" fill="#142f4e" stroke="#dfd4a8" stroke-opacity=".5"/>
+    <circle cx="103" cy="792" r="27" fill="#b49a43"/><text x="103" y="801" text-anchor="middle" fill="#fff" font-family="Arial" font-size="25">↑</text>
+    <text x="146" y="787" fill="#fff" font-family="Arial, sans-serif" font-size="29" font-weight="800">Build</text>
+    <text x="146" y="819" fill="#b9c7d8" font-family="Arial, sans-serif" font-size="19">Build independent sleep</text>
+    <text x="82" y="865" fill="#eef4fa" font-family="Arial, sans-serif" font-size="22">Proactive gentle, parent-present steps</text>
+    <text x="82" y="898" fill="#93a9bf" font-family="Arial, sans-serif" font-size="18">Gradual retreat, fading and structured ladders.</text>
+
+    <rect x="52" y="960" width="676" height="190" rx="24" fill="#142f4e" stroke="#e693b3" stroke-opacity=".5"/>
+    <circle cx="103" cy="1012" r="27" fill="#bd6688"/><text x="103" y="1021" text-anchor="middle" fill="#fff" font-family="Arial" font-size="25">✓</text>
+    <text x="146" y="1007" fill="#fff" font-family="Arial, sans-serif" font-size="29" font-weight="800">Training</text>
+    <text x="146" y="1039" fill="#b9c7d8" font-family="Arial, sans-serif" font-size="19">Explicit opt-in</text>
+    <text x="82" y="1085" fill="#eef4fa" font-family="Arial, sans-serif" font-size="22">Adds a vetted timed-check-in option</text>
+    <text x="82" y="1118" fill="#93a9bf" font-family="Arial, sans-serif" font-size="18">Only when corrected age is 26+ weeks.</text>
+  </g>
+
+  <rect x="52" y="1190" width="676" height="126" rx="24" fill="#0d223b" stroke="#dfd4a8" stroke-opacity=".35"/>
+  <text x="82" y="1230" fill="#dfd4a8" font-family="Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="2">NEVER CHANGES</text>
+  <text x="82" y="1266" fill="#f5f8fb" font-family="Arial, sans-serif" font-size="19">Safer sleep • age gates • health warnings</text>
+  <text x="82" y="1296" fill="#f5f8fb" font-family="Arial, sans-serif" font-size="19">Illness holds • your right to switch back</text>
+</svg>

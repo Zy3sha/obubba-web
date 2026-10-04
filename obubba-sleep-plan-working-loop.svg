@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba recognises a Sleep Consultation win</title>
+  <desc id="desc">A flow diagram from plan activation and a saved top finding through a three-day wait and fresh profile gates, then to no win, a new focus or everything settled.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111A35"/><stop offset=".58" stop-color="#293458"/><stop offset="1" stop-color="#53476F"/></linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#F5B68D"/><stop offset="1" stop-color="#EAD9FF"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#080D20" flood-opacity=".28"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#C5CBDB"/></marker>
+    <style>
+      .eyebrow{font:700 18px system-ui,sans-serif;letter-spacing:2px;fill:#F5B68D}.title{font:700 42px Georgia,serif;fill:#fff}.sub{font:400 20px system-ui,sans-serif;fill:#DDE4F4}.label{font:700 16px system-ui,sans-serif;letter-spacing:1.2px;fill:#68718B}.head{font:700 24px Georgia,serif;fill:#17203A}.body{font:400 16px system-ui,sans-serif;fill:#46516C}.small{font:600 14px system-ui,sans-serif;fill:#675B7D}.pill{font:700 15px system-ui,sans-serif;fill:#17203A}.line{stroke:#C5CBDB;stroke-width:3;fill:none;stroke-linecap:round;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="820" rx="34" fill="url(#bg)"/>
+  <circle cx="1080" cy="82" r="64" fill="#F5B68D" opacity=".12"/><circle cx="1105" cy="57" r="21" fill="#FFF1D8" opacity=".78"/>
+  <text x="66" y="66" class="eyebrow">THE LIVING CONSULTATION</text>
+  <text x="66" y="116" class="title">Progress means the original focus drops out</text>
+  <text x="66" y="153" class="sub">A saved starting point is compared with a fresh multi-day read—not one good night.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="66" y="198" width="292" height="150" rx="26" fill="#FFF9F3"/>
+    <text x="96" y="231" class="label">1 · PLAN STARTS</text>
+    <text x="96" y="272" class="head">Save what was shown</text>
+    <text x="96" y="303" class="body">Top category + nap times</text>
+    <text x="96" y="328" class="body">+ bedtime + activation date</text>
+  </g>
+  <path d="M358 273 H424" class="line"/>
+  <g filter="url(#shadow)">
+    <rect x="424" y="198" width="292" height="150" rx="26" fill="#FFFFFF"/>
+    <text x="454" y="231" class="label">2 · GIVE IT TIME</text>
+    <text x="454" y="272" class="head">Wait ≥ 3 days</text>
+    <text x="454" y="303" class="body">Calendar-day count is</text>
+    <text x="454" y="328" class="body">daylight-saving safe</text>
+  </g>
+  <path d="M716 273 H782" class="line"/>
+  <g filter="url(#shadow)">
+    <rect x="782" y="198" width="352" height="150" rx="26" fill="#FFFFFF"/>
+    <text x="812" y="231" class="label">3 · FRESH REVIEW</text>
+    <text x="812" y="266" class="head">Up to 14 complete</text>
+    <text x="812" y="292" class="head">past days</text>
+    <text x="812" y="319" class="body">At least 5 usable profiles</text>
+    <text x="812" y="340" class="body">Today stays out while unfinished</text>
+  </g>
+
+  <path d="M958 348 V402 H600 V438" class="line"/>
+  <g filter="url(#shadow)">
+    <rect x="365" y="438" width="470" height="106" rx="28" fill="#F1EEFF"/>
+    <text x="600" y="476" class="label" text-anchor="middle">THE EXACT QUESTION</text>
+    <text x="600" y="513" class="head" text-anchor="middle">Is the original category still flagged?</text>
+  </g>
+
+  <path d="M365 491 H196 V606" class="line"/>
+  <path d="M835 491 H1004 V606" class="line"/>
+  <text x="248" y="476" class="pill">YES</text><text x="936" y="476" class="pill">NO</text>
+
+  <g filter="url(#shadow)">
+    <rect x="66" y="606" width="310" height="132" rx="26" fill="#FFFFFF"/>
+    <text x="96" y="641" class="label">NO WIN YET</text>
+    <text x="96" y="679" class="head">Keep reviewing</text>
+    <text x="96" y="709" class="body">Even a lower severity stays quiet</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="445" y="606" width="310" height="132" rx="26" fill="url(#win)"/>
+    <text x="475" y="641" class="label">WIN + NEW FOCUS</text>
+    <text x="475" y="672" class="head">Parent chooses</text>
+    <text x="475" y="699" class="head">the update</text>
+    <text x="475" y="725" class="body">Fresh times + new snapshot</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="824" y="606" width="310" height="132" rx="26" fill="#D8EFE4"/>
+    <text x="854" y="641" class="label">WIN + NOTHING ELSE</text>
+    <text x="854" y="672" class="head">Everything flagged</text>
+    <text x="854" y="699" class="head">is quiet</text>
+    <text x="854" y="725" class="body">Keep times or choose flexibility</text>
+  </g>
+  <path d="M958 544 V575 H600 V606" class="line"/><path d="M958 575 V606" class="line"/>
+
+  <rect x="206" y="766" width="788" height="34" rx="17" fill="#151D38" opacity=".88"/>
+  <text x="600" y="789" text-anchor="middle" style="font:600 15px system-ui,sans-serif;fill:#F4EAFB">Category disappeared ≠ plan caused it ≠ every part of sleep is fixed</text>
+</svg>

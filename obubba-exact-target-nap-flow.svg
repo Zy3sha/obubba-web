@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba handles exact nap times and flexible targets</title>
+  <desc id="desc">Both modes save the parent’s times. Follow exactly sends them into the Track schedule, while Use as a target currently returns to adaptive prediction without directly blending the typed times.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf2"/>
+      <stop offset="1" stop-color="#f2ede7"/>
+    </linearGradient>
+    <linearGradient id="exact" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffdfd2"/>
+      <stop offset="1" stop-color="#fff5eb"/>
+    </linearGradient>
+    <linearGradient id="target" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dceae2"/>
+      <stop offset="1" stop-color="#f3f6ee"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#27344a" flood-opacity=".12"/>
+    </filter>
+    <marker id="arrowCoral" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0 0 9 4.5 0 9Z" fill="#cf765e"/>
+    </marker>
+    <marker id="arrowSage" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0 0 9 4.5 0 9Z" fill="#5d7f70"/>
+    </marker>
+    <style>
+      .serif{font-family:Georgia,'Times New Roman',serif;fill:#24344b}.sans{font-family:Arial,Helvetica,sans-serif;fill:#435169}.eyebrow{font-size:15px;font-weight:700;letter-spacing:2.1px}.h1{font-size:38px;font-weight:700}.h2{font-size:25px;font-weight:700}.body{font-size:17px}.small{font-size:14px}.bold{font-weight:700}.muted{fill:#667286}.pill{font-size:14px;font-weight:700;letter-spacing:.3px}
+    </style>
+  </defs>
+  <rect width="1200" height="675" rx="36" fill="url(#bg)"/>
+  <circle cx="1120" cy="80" r="148" fill="#efd9cb" opacity=".38"/>
+  <circle cx="85" cy="624" r="170" fill="#d9e6dd" opacity=".42"/>
+
+  <text x="70" y="66" class="sans eyebrow" fill="#ad6b58">SOURCE-CHECKED IN THE FLUTTER APP</text>
+  <text x="70" y="112" class="serif h1">One schedule choice. Two different paths.</text>
+  <text x="70" y="145" class="sans body muted">Both save your chosen nap times locally for this child.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="188" width="1060" height="112" rx="24" fill="#fff"/>
+  </g>
+  <circle cx="128" cy="244" r="29" fill="#f5e6d2"/>
+  <path d="M128 226v19l13 8" fill="none" stroke="#9b7244" stroke-width="4" stroke-linecap="round"/>
+  <text x="177" y="230" class="sans h2">Parent sets nap count + start times</text>
+  <text x="177" y="264" class="sans body muted">Example: Nap 1 at 9:00am · Nap 2 at 1:00pm</text>
+  <rect x="883" y="218" width="192" height="52" rx="26" fill="#f7f1e8" stroke="#d7c2a3"/>
+  <text x="979" y="250" text-anchor="middle" class="sans pill" fill="#795d3e">SAVED PER CHILD</text>
+
+  <path d="M360 300v44c0 26-22 34-46 34H297" fill="none" stroke="#cf765e" stroke-width="4" marker-end="url(#arrowCoral)"/>
+  <path d="M840 300v44c0 26 22 34 46 34h17" fill="none" stroke="#5d7f70" stroke-width="4" marker-end="url(#arrowSage)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="365" width="505" height="242" rx="28" fill="url(#exact)"/>
+    <rect x="625" y="365" width="505" height="242" rx="28" fill="url(#target)"/>
+  </g>
+  <rect x="102" y="397" width="135" height="36" rx="18" fill="#c96f58"/>
+  <text x="169.5" y="421" text-anchor="middle" class="sans pill" fill="#fff">FOLLOW EXACTLY</text>
+  <text x="102" y="474" class="serif h2">Pinned starts win</text>
+  <text x="102" y="508" class="sans body">Track plan uses 9:00am + 1:00pm.</text>
+  <text x="102" y="539" class="sans body">Short naps do not move those starts.</text>
+  <line x1="104" y1="570" x2="526" y2="570" stroke="#d8aa98"/>
+  <text x="102" y="594" class="sans small muted">Projected length stays age-typical.</text>
+
+  <rect x="657" y="397" width="155" height="36" rx="18" fill="#5d7f70"/>
+  <text x="734.5" y="421" text-anchor="middle" class="sans pill" fill="#fff">USE AS A TARGET</text>
+  <text x="657" y="474" class="serif h2">Adaptive engine wins</text>
+  <text x="657" y="508" class="sans body">Track returns to live prediction.</text>
+  <text x="657" y="539" class="sans body">Typed targets are not yet blended in.</text>
+  <line x1="659" y1="570" x2="1081" y2="570" stroke="#a9c2b5"/>
+  <text x="657" y="594" class="sans small muted">The times remain saved for later.</text>
+
+  <rect x="333" y="627" width="534" height="32" rx="16" fill="#293a51"/>
+  <text x="600" y="649" text-anchor="middle" class="sans small bold" fill="#fff">A plan is coordination—not proof that a baby must sleep on cue.</text>
+</svg>

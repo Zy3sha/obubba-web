@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba builds the expected night-wake range</title>
+  <desc id="desc">Eligible completed nights from the last seven days become an average and then a simple display range. Corrected age and the previous week affect the explanation, not the logged average.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#211a2d"/>
+      <stop offset="1" stop-color="#41304d"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff9f6"/>
+      <stop offset="1" stop-color="#f1eaf4"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f38b78"/>
+      <stop offset="1" stop-color="#c97996"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#120c19" flood-opacity=".3"/>
+    </filter>
+    <style>
+      .eyebrow{font:700 16px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:2px;fill:#efb2aa}
+      .h1{font:800 47px Georgia,serif;fill:#fffaf8}
+      .lead{font:400 21px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#d8ccdc}
+      .step{font:800 14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:1.5px;fill:#a8556d}
+      .title{font:800 25px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#33273a}
+      .body{font:400 17px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#6e6172}
+      .number{font:800 31px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#38293f}
+      .small{font:700 14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#7e6d82}
+    </style>
+  </defs>
+  <rect width="1440" height="900" rx="44" fill="url(#bg)"/>
+  <circle cx="1308" cy="126" r="170" fill="#76566f" opacity=".34"/>
+  <circle cx="82" cy="850" r="180" fill="#604d75" opacity=".38"/>
+  <text x="92" y="82" class="eyebrow">OBUBBA • WHAT “EXPECT 1–2” ACTUALLY MEANS</text>
+  <text x="92" y="145" class="h1">Recent average → readable range</text>
+  <text x="92" y="188" class="lead">A planning summary from completed logs—not a promise about tonight.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="264" width="390" height="410" rx="30" fill="url(#card)"/>
+    <rect x="525" y="264" width="390" height="410" rx="30" fill="url(#card)"/>
+    <rect x="978" y="264" width="390" height="410" rx="30" fill="url(#card)"/>
+  </g>
+
+  <g transform="translate(106 300)">
+    <text class="step">01 • ELIGIBLE NIGHTS</text>
+    <text y="47" class="title">Last 7 completed nights</text>
+    <g transform="translate(0 82)">
+      <rect width="46" height="76" rx="14" fill="#eadff0"/>
+      <text x="23" y="31" text-anchor="middle" class="small">S</text><text x="23" y="62" text-anchor="middle" class="number">1</text>
+      <rect x="51" width="46" height="76" rx="14" fill="#eadff0"/>
+      <text x="74" y="31" text-anchor="middle" class="small">M</text><text x="74" y="62" text-anchor="middle" class="number">2</text>
+      <rect x="102" width="46" height="76" rx="14" fill="#eadff0"/>
+      <text x="125" y="31" text-anchor="middle" class="small">T</text><text x="125" y="62" text-anchor="middle" class="number">1</text>
+      <rect x="153" width="46" height="76" rx="14" fill="#f1ecef" stroke="#c8bbc8" stroke-dasharray="5 5"/>
+      <text x="176" y="31" text-anchor="middle" class="small">W</text><text x="176" y="61" text-anchor="middle" class="body">—</text>
+      <rect x="204" width="46" height="76" rx="14" fill="#eadff0"/>
+      <text x="227" y="31" text-anchor="middle" class="small">T</text><text x="227" y="62" text-anchor="middle" class="number">3</text>
+      <rect x="255" width="46" height="76" rx="14" fill="#eadff0"/>
+      <text x="278" y="31" text-anchor="middle" class="small">F</text><text x="278" y="62" text-anchor="middle" class="number">2</text>
+      <rect x="306" width="46" height="76" rx="14" fill="#f1ecef" stroke="#c8bbc8" stroke-dasharray="5 5"/>
+      <text x="329" y="31" text-anchor="middle" class="small">S</text><text x="329" y="61" text-anchor="middle" class="body">—</text>
+    </g>
+    <text y="206" class="body">A bedtime is required.</text>
+    <text y="232" class="body">Missing nights are skipped—</text>
+    <text y="258" class="body">never silently counted as zero.</text>
+    <rect y="291" width="190" height="40" rx="20" fill="#e6f0e9"/>
+    <text x="95" y="317" text-anchor="middle" style="font:800 15px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#4e755d">5 nights used ✓</text>
+  </g>
+
+  <g transform="translate(559 300)">
+    <text class="step">02 • RECENT MEAN</text>
+    <text y="47" class="title">Add wakes, then divide</text>
+    <rect y="86" width="322" height="111" rx="22" fill="#fff" stroke="#dfd2e1"/>
+    <text x="161" y="127" text-anchor="middle" class="body">1 + 2 + 1 + 3 + 2</text>
+    <line x1="72" y1="143" x2="250" y2="143" stroke="#ba91aa" stroke-width="2"/>
+    <text x="161" y="177" text-anchor="middle" class="body">5 eligible nights</text>
+    <text y="246" class="small">ROUNDED TO ONE DECIMAL</text>
+    <text y="296" class="number">Average = 1.8 wakes</text>
+    <text y="335" class="body">This is descriptive history,</text>
+    <text y="361" class="body">not a probability model.</text>
+  </g>
+
+  <g transform="translate(1012 300)">
+    <text class="step">03 • DISPLAY BUCKET</text>
+    <text y="47" class="title">Turn the mean into words</text>
+    <rect y="82" width="322" height="126" rx="25" fill="url(#coral)"/>
+    <text x="161" y="127" text-anchor="middle" style="font:700 16px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#fff3f1">TONIGHT’S GUIDANCE</text>
+    <text x="161" y="174" text-anchor="middle" style="font:800 27px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#fff">Expect roughly 1–2 wakes</text>
+    <text y="257" class="body">≤1.0 → 0–1</text>
+    <text y="286" class="body">1.1–2.5 → 1–2</text>
+    <text y="315" class="body">Above 2.5 → wider range</text>
+    <text y="360" class="body">Tonight may land outside it.</text>
+  </g>
+
+  <path d="M478 469h31" stroke="#d69bad" stroke-width="5" stroke-linecap="round"/>
+  <path d="M497 454l15 15-15 15" fill="none" stroke="#d69bad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M931 469h31" stroke="#d69bad" stroke-width="5" stroke-linecap="round"/>
+  <path d="M950 454l15 15-15 15" fill="none" stroke="#d69bad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(196 738)">
+    <rect width="1048" height="96" rx="48" fill="#fff" opacity=".1" stroke="#d9bfd4"/>
+    <circle cx="52" cy="48" r="27" fill="#ef9b87"/>
+    <text x="52" y="56" text-anchor="middle" style="font:800 24px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#fff">+</text>
+    <text x="98" y="38" style="font:800 18px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#fff">Corrected age + previous 7 nights shape the explanation</text>
+    <text x="98" y="66" style="font:400 16px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#d8ccdc">They do not tell the app why a baby woke, or whether a feed, comfort or care is needed.</text>
+  </g>
+</svg>

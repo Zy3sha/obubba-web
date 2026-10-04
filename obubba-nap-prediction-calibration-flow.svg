@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1580" viewBox="0 0 1000 1580" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba learns from a missed first-nap prediction</title>
+  <desc id="desc">A vertical flow showing the reconstructed base prediction, actual first nap, error, sample gate, recency-weighted bounded correction and accuracy celebration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff8f2"/>
+      <stop offset="0.55" stop-color="#f7f1ff"/>
+      <stop offset="1" stop-color="#edf8f5"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#392e48" flood-opacity="0.11"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0L12 6 0 12z" fill="#7b6b8e"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="1580" rx="48" fill="url(#bg)"/>
+  <circle cx="94" cy="92" r="36" fill="#ee8f7d"/>
+  <path d="M75 94c11-21 27-21 38 0-11 15-27 15-38 0z" fill="#fff"/>
+  <text x="150" y="82" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#995b50" letter-spacing="2">INSIDE THE FLUTTER APP</text>
+  <text x="70" y="158" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="800" fill="#292239">A miss becomes learning</text>
+  <text x="70" y="207" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#625b72">First naps train a bounded timing correction.</text>
+
+  <g filter="url(#shadow)"><rect x="70" y="260" width="860" height="205" rx="34" fill="#fff"/></g>
+  <text x="105" y="315" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#765c98">ONE PAST MORNING</text>
+  <text x="105" y="380" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="800" fill="#292239">Base midpoint 9:00 → slept 9:18</text>
+  <rect x="105" y="407" width="308" height="42" rx="21" fill="#f2eaff"/>
+  <text x="259" y="436" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800" fill="#765c98">error = +18 minutes</text>
+
+  <path d="M500 465v65" stroke="#7b6b8e" stroke-width="7" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)"><rect x="70" y="550" width="860" height="190" rx="34" fill="#fff1eb"/></g>
+  <text x="105" y="608" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="800" fill="#8a4d43">Wait for a repeat</text>
+  <text x="105" y="664" font-family="Arial, Helvetica, sans-serif" font-size="31" fill="#5e4d4a">Fewer than 4 valid first naps?</text>
+  <text x="105" y="708" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="800" fill="#8a4d43">No correction yet.</text>
+
+  <path d="M500 740v65" stroke="#7b6b8e" stroke-width="7" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)"><rect x="70" y="825" width="860" height="270" rx="34" fill="#eef8f4"/></g>
+  <text x="105" y="883" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="800" fill="#397663">Learn the offset</text>
+  <text x="105" y="940" font-family="Arial, Helvetica, sans-serif" font-size="31" fill="#426e61">5+ samples: trim 1 wild miss</text>
+  <text x="105" y="988" font-family="Arial, Helvetica, sans-serif" font-size="31" fill="#426e61">Give newer mornings more weight</text>
+  <rect x="105" y="1023" width="500" height="54" rx="27" fill="#fff"/>
+  <text x="355" y="1060" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="800" fill="#397663">Correction capped at ±40 min</text>
+
+  <path d="M500 1095v65" stroke="#7b6b8e" stroke-width="7" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)"><rect x="70" y="1180" width="860" height="200" rx="34" fill="#fff"/></g>
+  <text x="105" y="1238" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="800" fill="#292239">Apply the shift</text>
+  <text x="105" y="1297" font-family="Arial, Helvetica, sans-serif" font-size="36" fill="#514a5f">Raw 9:00 → calibrated 9:18</text>
+  <text x="105" y="1343" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#6a6275">Clock and reminder move together.</text>
+
+  <g filter="url(#shadow)"><rect x="70" y="1420" width="860" height="108" rx="30" fill="#322b45"/></g>
+  <text x="500" y="1464" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#f7d28b">ACCURACY CARD</text>
+  <text x="500" y="1504" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#fff">4+ samples · at least 75% within ±15 min</text>
+
+  <text x="500" y="1560" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#70687f">Current scope: reconstructed base prediction · first naps only</text>
+</svg>

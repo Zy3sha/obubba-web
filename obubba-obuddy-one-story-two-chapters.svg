@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1540" role="img" aria-labelledby="title desc">
+  <title id="title">One child story, two chapters</title>
+  <desc id="desc">OBubba baby context passes through age, code and parent-choice gates into an OBuddy toddler starting profile.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07172d"/><stop offset="1" stop-color="#161238"/>
+    </linearGradient>
+    <linearGradient id="bridge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#73e0cf"/><stop offset=".55" stop-color="#f3c867"/><stop offset="1" stop-color="#b89bff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="1000" height="1540" rx="54" fill="url(#bg)"/>
+  <circle cx="875" cy="110" r="170" fill="#b89bff" opacity=".08"/>
+  <circle cx="100" cy="1380" r="220" fill="#73e0cf" opacity=".07"/>
+  <text x="80" y="108" fill="#f3c867" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="4">OBUBBA → OBUDDY</text>
+  <text x="80" y="176" fill="#ffffff" font-family="Georgia, serif" font-size="58" font-weight="700">One child story.</text>
+  <text x="80" y="240" fill="#ffffff" font-family="Georgia, serif" font-size="58" font-weight="700">Two useful chapters.</text>
+  <text x="80" y="295" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="25">A selective handoff—not an automatic move.</text>
+
+  <rect x="70" y="355" width="860" height="340" rx="34" fill="#0e2946" stroke="#73e0cf" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="142" cy="427" r="35" fill="#73e0cf"/><path d="M127 432c10-24 27-24 37 0M145 410v34" fill="none" stroke="#07172d" stroke-width="7" stroke-linecap="round"/>
+  <text x="200" y="414" fill="#73e0cf" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">CHAPTER ONE</text>
+  <text x="200" y="458" fill="#ffffff" font-family="Georgia, serif" font-size="41" font-weight="700">OBubba knows the baby days</text>
+  <g font-family="Arial, sans-serif" font-size="25" fill="#e2e8f0">
+    <rect x="110" y="500" width="370" height="62" rx="31" fill="#173959"/><text x="220" y="540">Sleep + naps</text>
+    <rect x="500" y="500" width="390" height="62" rx="31" fill="#173959"/><text x="620" y="540">Feeds + meals</text>
+    <rect x="110" y="578" width="370" height="62" rx="31" fill="#173959"/><text x="225" y="618">Nappy care</text>
+    <rect x="500" y="578" width="390" height="62" rx="31" fill="#173959"/><text x="594" y="618">Latest milestone</text>
+  </g>
+  <text x="110" y="670" fill="#a9b8ca" font-family="Arial, sans-serif" font-size="23">Name and date of birth anchor the child’s profile.</text>
+
+  <path d="M500 695v72" stroke="url(#bridge)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M477 748l23 29 23-29" fill="none" stroke="#f3c867" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="70" y="785" width="860" height="360" rx="34" fill="#1a2341" stroke="#f3c867" stroke-width="2" filter="url(#shadow)"/>
+  <text x="110" y="845" fill="#f3c867" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">THE THREE GATES</text>
+  <g font-family="Arial, sans-serif">
+    <circle cx="140" cy="913" r="38" fill="#f3c867"/><text x="128" y="924" fill="#07172d" font-size="31" font-weight="800">1</text>
+    <text x="205" y="903" fill="#ffffff" font-size="29" font-weight="700">At least 22 months</text><text x="205" y="938" fill="#b9c5d6" font-size="21">A product prompt—not a readiness test.</text>
+    <circle cx="140" cy="1003" r="38" fill="#f3c867"/><text x="128" y="1014" fill="#07172d" font-size="31" font-weight="800">2</text>
+    <text x="205" y="993" fill="#ffffff" font-size="29" font-weight="700">A usable private code</text><text x="205" y="1028" fill="#b9c5d6" font-size="21">No code means no broken handoff card.</text>
+    <circle cx="140" cy="1093" r="38" fill="#f3c867"/><text x="128" y="1104" fill="#07172d" font-size="31" font-weight="800">3</text>
+    <text x="205" y="1083" fill="#ffffff" font-size="29" font-weight="700">The parent chooses</text><text x="205" y="1118" fill="#b9c5d6" font-size="21">Tap to continue—or “Not yet” to stop the nudge.</text>
+  </g>
+
+  <path d="M500 1145v70" stroke="url(#bridge)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M477 1196l23 29 23-29" fill="none" stroke="#b89bff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="70" y="1230" width="860" height="235" rx="34" fill="#211a4a" stroke="#b89bff" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="142" cy="1298" r="35" fill="#b89bff"/><path d="M128 1303h28M142 1289v28" stroke="#171136" stroke-width="7" stroke-linecap="round"/>
+  <text x="200" y="1286" fill="#b89bff" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">CHAPTER TWO</text>
+  <text x="200" y="1330" fill="#ffffff" font-family="Georgia, serif" font-size="40" font-weight="700">OBuddy starts with context</text>
+  <text x="110" y="1385" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="25">Precise age band · care-rhythm memory · latest win</text>
+  <text x="110" y="1427" fill="#b9c5d6" font-family="Arial, sans-serif" font-size="22">Then the parent fills the gaps for feelings, routines and autonomy.</text>
+  <text x="500" y="1510" text-anchor="middle" fill="#92a4ba" font-family="Arial, sans-serif" font-size="20">No birthday deadline. No automatic transfer. Keep the code private.</text>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Which OBubba Reports range should I choose?</title>
+  <desc id="desc">Four range cards compare one week, two weeks, one month and two months. Shorter windows respond faster; longer windows smooth noise but require more history.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071b3a"/>
+      <stop offset="1" stop-color="#102956"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#63ddcf"/>
+      <stop offset="1" stop-color="#a978f1"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#020b1d" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" rx="42" fill="url(#bg)"/>
+  <circle cx="1078" cy="96" r="150" fill="#a978f1" opacity=".08"/>
+  <circle cx="106" cy="676" r="180" fill="#63ddcf" opacity=".06"/>
+  <g fill="#fff" opacity=".65">
+    <circle cx="70" cy="72" r="2"/><circle cx="1138" cy="218" r="2"/><circle cx="1020" cy="696" r="3"/><circle cx="194" cy="136" r="2"/>
+  </g>
+  <text x="64" y="84" fill="#bd96ff" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="800" letter-spacing="3">OBUBBA REPORTS</text>
+  <text x="64" y="133" fill="#ffffff" font-family="Georgia,serif" font-size="42" font-weight="700">Choose the window that fits the question</text>
+  <text x="64" y="170" fill="#b8c4de" font-family="Inter,Arial,sans-serif" font-size="20">Short views react quickly. Long views smooth noise — and need more history.</text>
+
+  <g transform="translate(64 220)" filter="url(#shadow)">
+    <rect width="250" height="310" rx="28" fill="#132d58" stroke="#63ddcf" stroke-opacity=".55"/>
+    <circle cx="48" cy="48" r="23" fill="#63ddcf" opacity=".16"/>
+    <path d="M38 48h20M48 38v20" stroke="#63ddcf" stroke-width="3" stroke-linecap="round"/>
+    <text x="82" y="56" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="800">1 week</text>
+    <text x="24" y="106" fill="#63ddcf" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="800" letter-spacing="1.5">FAST CHECK</text>
+    <text x="24" y="143" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700">Was this week</text>
+    <text x="24" y="170" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700">really different?</text>
+    <line x1="24" y1="200" x2="226" y2="200" stroke="#ffffff" stroke-opacity=".12"/>
+    <text x="24" y="235" fill="#b8c4de" font-family="Inter,Arial,sans-serif" font-size="16">Needs 14 calendar days</text>
+    <text x="24" y="270" fill="#f5c96b" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700">Most responsive</text>
+  </g>
+
+  <g transform="translate(338 220)" filter="url(#shadow)">
+    <rect width="250" height="310" rx="28" fill="#132d58" stroke="#80cbbf" stroke-opacity=".45"/>
+    <circle cx="48" cy="48" r="23" fill="#80cbbf" opacity=".15"/>
+    <path d="M37 43h22M37 53h22" stroke="#80cbbf" stroke-width="3" stroke-linecap="round"/>
+    <text x="82" y="56" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="800">2 weeks</text>
+    <text x="24" y="106" fill="#80cbbf" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="800" letter-spacing="1.5">SMALL EXPERIMENT</text>
+    <text x="24" y="143" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700">Did one routine</text>
+    <text x="24" y="170" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700">change hold?</text>
+    <line x1="24" y1="200" x2="226" y2="200" stroke="#ffffff" stroke-opacity=".12"/>
+    <text x="24" y="235" fill="#b8c4de" font-family="Inter,Arial,sans-serif" font-size="16">Needs 28 calendar days</text>
+    <text x="24" y="270" fill="#f5c96b" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700">Balanced view</text>
+  </g>
+
+  <g transform="translate(612 220)" filter="url(#shadow)">
+    <rect width="250" height="310" rx="28" fill="#132d58" stroke="#a978f1" stroke-opacity=".55"/>
+    <circle cx="48" cy="48" r="23" fill="#a978f1" opacity=".17"/>
+    <path d="M37 41h22v18H37zM41 36v10M55 36v10" fill="none" stroke="#a978f1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="82" y="56" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="800">1 month</text>
+    <text x="24" y="106" fill="#bd96ff" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="800" letter-spacing="1.5">SLOWER CHANGE</text>
+    <text x="24" y="143" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700">Is a broader</text>
+    <text x="24" y="170" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700">pattern forming?</text>
+    <line x1="24" y1="200" x2="226" y2="200" stroke="#ffffff" stroke-opacity=".12"/>
+    <text x="24" y="235" fill="#b8c4de" font-family="Inter,Arial,sans-serif" font-size="16">Needs 60 calendar days</text>
+    <text x="24" y="270" fill="#f5c96b" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700">Smoother, less local</text>
+  </g>
+
+  <g transform="translate(886 220)" filter="url(#shadow)">
+    <rect width="250" height="310" rx="28" fill="#132d58" stroke="#c48af5" stroke-opacity=".44"/>
+    <circle cx="48" cy="48" r="23" fill="#c48af5" opacity=".15"/>
+    <path d="M36 40h24v18H36zM42 35v10M54 35v10M42 49h3M51 49h3" fill="none" stroke="#c48af5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="82" y="56" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="800">2 months</text>
+    <text x="24" y="106" fill="#d3aeff" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="800" letter-spacing="1.5">BROAD CONTEXT</text>
+    <text x="24" y="143" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700">What changed</text>
+    <text x="24" y="170" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700">across a season?</text>
+    <line x1="24" y1="200" x2="226" y2="200" stroke="#ffffff" stroke-opacity=".12"/>
+    <text x="24" y="235" fill="#b8c4de" font-family="Inter,Arial,sans-serif" font-size="16">Needs 120 calendar days</text>
+    <text x="24" y="270" fill="#f17685" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700">Archive limits apply</text>
+  </g>
+
+  <g transform="translate(76 592)">
+    <text x="0" y="0" fill="#63ddcf" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="800">RESPONDS FASTER</text>
+    <text x="1048" y="0" text-anchor="end" fill="#bd96ff" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="800">SMOOTHS MORE NOISE</text>
+    <rect x="0" y="22" width="1048" height="8" rx="4" fill="#ffffff" opacity=".10"/>
+    <rect x="0" y="22" width="1048" height="8" rx="4" fill="url(#line)"/>
+    <circle cx="0" cy="26" r="10" fill="#63ddcf"/>
+    <circle cx="1048" cy="26" r="10" fill="#a978f1"/>
+  </g>
+  <g transform="translate(64 676)">
+    <rect width="1072" height="48" rx="16" fill="#ffffff" opacity=".07"/>
+    <circle cx="26" cy="24" r="10" fill="#f5c96b"/>
+    <text x="48" y="30" fill="#d6deef" font-family="Inter,Arial,sans-serif" font-size="17">Pick the shortest range that fully contains the change — then check how many days actually contributed.</text>
+  </g>
+</svg>

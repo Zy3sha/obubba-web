@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1040" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba detects that mornings are settling later</title>
+  <desc id="desc">The app filters morning wakes to 3am through 11am, compares the median of 14 recent valid wakes with 6 to 14 older valid wakes, and speaks when the recent median is at least 20 minutes later. It offers no experiment.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff8f0"/><stop offset=".53" stop-color="#f6f1ff"/><stop offset="1" stop-color="#ecf8f5"/></linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffb37d"/><stop offset="1" stop-color="#f3777d"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#493c68" flood-opacity=".13"/></filter>
+  </defs>
+  <rect width="1000" height="1040" rx="42" fill="url(#bg)"/>
+  <circle cx="860" cy="126" r="115" fill="#ffd5b7" opacity=".55"/><circle cx="860" cy="126" r="56" fill="url(#sun)" opacity=".8"/>
+  <text x="70" y="78" fill="#69548e" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="3">A QUIET, MULTI-NIGHT WIN</text>
+  <text x="70" y="125" fill="#332a4a" font-family="Georgia, serif" font-size="39" font-weight="700">When does the card appear?</text>
+  <text x="70" y="160" fill="#71697c" font-family="Arial, sans-serif" font-size="18">Real wake records → two medians → one deliberately calm response</text>
+
+  <g filter="url(#shadow)"><rect x="70" y="215" width="860" height="150" rx="28" fill="#fff"/></g>
+  <circle cx="124" cy="270" r="27" fill="#f28270"/><text x="124" y="278" text-anchor="middle" fill="#fff" font-family="Arial" font-size="21" font-weight="700">1</text>
+  <text x="174" y="267" fill="#332a4a" font-family="Georgia, serif" font-size="28" font-weight="700">Keep plausible morning endpoints</text>
+  <text x="174" y="307" fill="#71697c" font-family="Arial" font-size="20">Up to 28 recent nights · valid only from 3:00am through 11:00am</text>
+  <rect x="174" y="326" width="470" height="22" rx="11" fill="#fff0e8"/><rect x="174" y="326" width="350" height="22" rx="11" fill="url(#sun)" opacity=".85"/>
+
+  <path d="M500 379 v38" stroke="#b9abd8" stroke-width="5" stroke-linecap="round"/><path d="m487 404 13 14 13-14" fill="none" stroke="#b9abd8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)"><rect x="70" y="430" width="860" height="268" rx="28" fill="#fff"/></g>
+  <circle cx="124" cy="485" r="27" fill="#9a82df"/><text x="124" y="493" text-anchor="middle" fill="#fff" font-family="Arial" font-size="21" font-weight="700">2</text>
+  <text x="174" y="482" fill="#332a4a" font-family="Georgia, serif" font-size="28" font-weight="700">Compare the middle of two groups</text>
+  <rect x="112" y="532" width="336" height="120" rx="22" fill="#f7f2ff"/>
+  <text x="140" y="565" fill="#69548e" font-family="Arial" font-size="15" font-weight="700" letter-spacing="1.5">PRIOR GROUP</text>
+  <text x="140" y="610" fill="#332a4a" font-family="Georgia, serif" font-size="34" font-weight="700">Median 6:05</text>
+  <text x="140" y="638" fill="#71697c" font-family="Arial" font-size="17">6–14 older valid wakes</text>
+  <path d="M465 590 H535" stroke="#f28a74" stroke-width="6" stroke-linecap="round"/><path d="m517 575 18 15-18 15" fill="none" stroke="#f28a74" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="552" y="532" width="336" height="120" rx="22" fill="#eef9f5"/>
+  <text x="580" y="565" fill="#328a75" font-family="Arial" font-size="15" font-weight="700" letter-spacing="1.5">RECENT GROUP</text>
+  <text x="580" y="610" fill="#332a4a" font-family="Georgia, serif" font-size="34" font-weight="700">Median 6:35</text>
+  <text x="580" y="638" fill="#71697c" font-family="Arial" font-size="17">14 most-recent valid wakes</text>
+  <text x="500" y="682" text-anchor="middle" fill="#b04f51" font-family="Arial" font-size="18" font-weight="700">+30 minutes · clears the +20-minute gate</text>
+
+  <path d="M500 712 v38" stroke="#b9abd8" stroke-width="5" stroke-linecap="round"/><path d="m487 737 13 14 13-14" fill="none" stroke="#b9abd8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)"><rect x="70" y="765" width="860" height="200" rx="30" fill="#31294e"/></g>
+  <circle cx="124" cy="820" r="27" fill="#58b89b"/><text x="124" y="828" text-anchor="middle" fill="#fff" font-family="Arial" font-size="21" font-weight="700">3</text>
+  <text x="174" y="816" fill="#f9d48a" font-family="Arial" font-size="15" font-weight="700" letter-spacing="2">THE RESPONSE</text>
+  <text x="174" y="866" fill="#fff" font-family="Georgia, serif" font-size="36" font-weight="700">Mornings are settling later</text>
+  <text x="174" y="905" fill="#ddd5ed" font-family="Arial" font-size="19">Low urgency · sample shown · no seven-night experiment</text>
+  <rect x="714" y="836" width="150" height="54" rx="27" fill="#fff" opacity=".12"/>
+  <text x="789" y="870" text-anchor="middle" fill="#fff" font-family="Arial" font-size="19" font-weight="700">Lovely</text>
+  <text x="500" y="1005" text-anchor="middle" fill="#6f6679" font-family="Arial" font-size="16">Clock trend only · not proof of cause, longer sleep or a new schedule</text>
+</svg>

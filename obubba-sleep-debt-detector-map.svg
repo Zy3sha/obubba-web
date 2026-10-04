@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1700" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba decides a multi-day sleep shortfall is worth showing</title>
+  <desc id="desc">A mobile-readable map of the current Flutter sleep-debt logic: complete day and night pairs, age floor, shortfall sum, significance gate, trajectory and recovery suggestion.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9f4eb"/><stop offset="1" stop-color="#eef1ed"/></linearGradient>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2e3d58"/><stop offset="1" stop-color="#172337"/></linearGradient>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="138%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#202a3a" flood-opacity=".12"/></filter>
+  </defs>
+  <rect width="640" height="1700" rx="34" fill="url(#bg)"/>
+  <circle cx="575" cy="80" r="105" fill="#d7b45e" opacity=".13"/><circle cx="60" cy="1635" r="135" fill="#849986" opacity=".12"/>
+  <text x="42" y="67" fill="#8a6616" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2.4">CURRENT FLUTTER LOGIC</text>
+  <text x="42" y="116" fill="#202838" font-family="Georgia, serif" font-size="34" font-weight="700">A careful shortfall ledger.</text>
+  <text x="42" y="153" fill="#596270" font-family="Arial, sans-serif" font-size="20">Completed records in. Missing sleep never becomes zero.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="30" y="200" width="580" height="250" rx="24" fill="url(#night)"/>
+    <circle cx="86" cy="260" r="32" fill="#f5f1e9"/><text x="86" y="269" text-anchor="middle" fill="#202838" font-family="Arial" font-size="24" font-weight="800">1</text>
+    <text x="135" y="249" fill="#fffdf9" font-family="Arial" font-size="27" font-weight="800">Build complete day–night pairs</text>
+    <text x="58" y="303" fill="#dfe4e8" font-family="Arial" font-size="21">For each prior day, OBubba needs:</text>
+    <rect x="58" y="326" width="524" height="43" rx="14" fill="#ffffff" opacity=".10"/><text x="77" y="354" fill="#fffdf9" font-family="Arial" font-size="20">✓ a reconstructable bedtime and morning wake</text>
+    <rect x="58" y="379" width="524" height="43" rx="14" fill="#ffffff" opacity=".10"/><text x="77" y="407" fill="#fffdf9" font-family="Arial" font-size="20">✓ at least one genuinely logged nap</text>
+    <text x="58" y="437" fill="#e2c978" font-family="Arial" font-size="18" font-weight="700">Incomplete pair? Skip it—do not book a false deficit.</text>
+  </g>
+  <path d="M320 450v45m-10-12 10 13 10-13" fill="none" stroke="#b4934a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="30" y="505" width="580" height="225" rx="24" fill="#fffdf9"/>
+    <circle cx="86" cy="565" r="32" fill="#d7b45e"/><text x="86" y="574" text-anchor="middle" fill="#202838" font-family="Arial" font-size="24" font-weight="800">2</text>
+    <text x="135" y="554" fill="#202838" font-family="Arial" font-size="27" font-weight="800">Add night span + naps</text>
+    <text x="58" y="608" fill="#596270" font-family="Arial" font-size="21">The insight checks up to 7 prior days.</text>
+    <text x="58" y="640" fill="#596270" font-family="Arial" font-size="21">The expanded Track summary checks up to 4.</text>
+    <rect x="58" y="667" width="524" height="40" rx="20" fill="#eee9dc"/>
+    <text x="320" y="694" text-anchor="middle" fill="#46505e" font-family="Arial" font-size="19" font-weight="700">bedtime → morning span  +  completed nap time</text>
+  </g>
+  <path d="M320 730v45m-10-12 10 13 10-13" fill="none" stroke="#b4934a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="30" y="785" width="580" height="235" rx="24" fill="#fffdf9"/>
+    <circle cx="86" cy="845" r="32" fill="#d7b45e"/><text x="86" y="854" text-anchor="middle" fill="#202838" font-family="Arial" font-size="24" font-weight="800">3</text>
+    <text x="135" y="834" fill="#202838" font-family="Arial" font-size="27" font-weight="800">Compare with the age floor</text>
+    <text x="58" y="888" fill="#596270" font-family="Arial" font-size="21">Only minutes below the lower guideline count.</text>
+    <rect x="58" y="916" width="160" height="64" rx="18" fill="#eee7d4"/><rect x="239" y="916" width="160" height="64" rx="18" fill="#e5ece4"/><rect x="420" y="916" width="162" height="64" rx="18" fill="#e7e3ed"/>
+    <text x="138" y="943" text-anchor="middle" fill="#6e5a29" font-family="Arial" font-size="16" font-weight="800">4–11 MONTHS</text><text x="138" y="967" text-anchor="middle" fill="#202838" font-family="Arial" font-size="20" font-weight="800">12h floor</text>
+    <text x="319" y="943" text-anchor="middle" fill="#45604a" font-family="Arial" font-size="16" font-weight="800">1–2 YEARS</text><text x="319" y="967" text-anchor="middle" fill="#202838" font-family="Arial" font-size="20" font-weight="800">11h floor</text>
+    <text x="501" y="943" text-anchor="middle" fill="#58506a" font-family="Arial" font-size="16" font-weight="800">2+ YEARS</text><text x="501" y="967" text-anchor="middle" fill="#202838" font-family="Arial" font-size="20" font-weight="800">10h floor</text>
+    <text x="58" y="1003" fill="#8a6616" font-family="Arial" font-size="18" font-weight="700">No proactive debt card before 16 weeks.</text>
+  </g>
+  <path d="M320 1020v45m-10-12 10 13 10-13" fill="none" stroke="#b4934a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="30" y="1075" width="580" height="225" rx="24" fill="#fffdf9"/>
+    <circle cx="86" cy="1135" r="32" fill="#d7b45e"/><text x="86" y="1144" text-anchor="middle" fill="#202838" font-family="Arial" font-size="24" font-weight="800">4</text>
+    <text x="135" y="1124" fill="#202838" font-family="Arial" font-size="27" font-weight="800">Pass both significance gates</text>
+    <rect x="58" y="1173" width="252" height="75" rx="20" fill="#e7eee6"/><rect x="330" y="1173" width="252" height="75" rx="20" fill="#eee7d4"/>
+    <text x="184" y="1203" text-anchor="middle" fill="#45604a" font-family="Arial" font-size="18" font-weight="800">AT LEAST</text><text x="184" y="1233" text-anchor="middle" fill="#202838" font-family="Arial" font-size="25" font-weight="800">2 short days</text>
+    <text x="456" y="1203" text-anchor="middle" fill="#6e5a29" font-family="Arial" font-size="18" font-weight="800">TOTAL OF AT LEAST</text><text x="456" y="1233" text-anchor="middle" fill="#202838" font-family="Arial" font-size="25" font-weight="800">90 minutes</text>
+    <text x="58" y="1280" fill="#596270" font-family="Arial" font-size="19">One short day alone stays quiet—even if very short.</text>
+  </g>
+  <path d="M320 1300v45m-10-12 10 13 10-13" fill="none" stroke="#b4934a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="30" y="1355" width="580" height="270" rx="24" fill="#fffdf9"/>
+    <circle cx="86" cy="1415" r="32" fill="#d7b45e"/><text x="86" y="1424" text-anchor="middle" fill="#202838" font-family="Arial" font-size="24" font-weight="800">5</text>
+    <text x="135" y="1404" fill="#202838" font-family="Arial" font-size="27" font-weight="800">Name direction, offer recovery</text>
+    <text x="58" y="1458" fill="#596270" font-family="Arial" font-size="21">With 5+ usable days, the newest 3 are compared</text>
+    <text x="58" y="1490" fill="#596270" font-family="Arial" font-size="21">with older days: widening, steady or narrowing.</text>
+    <rect x="58" y="1520" width="524" height="70" rx="20" fill="#f1e9d5"/>
+    <text x="320" y="1549" text-anchor="middle" fill="#8a6616" font-family="Arial" font-size="18" font-weight="800">RECOVERY SUGGESTION</text>
+    <text x="320" y="1577" text-anchor="middle" fill="#202838" font-family="Arial" font-size="20" font-weight="800">~30 min/day · 2–10 days · protect naps</text>
+    <text x="58" y="1615" fill="#596270" font-family="Arial" font-size="17">Conflicting current advice can suppress this card.</text>
+  </g>
+  <text x="320" y="1668" text-anchor="middle" fill="#596270" font-family="Arial" font-size="17">A tracking heuristic—not a diagnosis or a debt inside the body.</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">How to log allergens in a mixed baby meal</title>
+  <desc id="desc">A four-step flow: name the dish, list ingredients actually used, record what baby ate and when, then note the response. It ends in an exposure history built from facts rather than the recipe name alone.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFF8F0"/>
+      <stop offset="1" stop-color="#F1F8F4"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#3F4B46" flood-opacity=".1"/>
+    </filter>
+    <style>
+      .kicker{font:700 17px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:2.2px;fill:#8C642E}
+      .heading{font:800 42px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#263833}
+      .step{font:800 17px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:1px;fill:#8C642E}
+      .title{font:800 24px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#263833}
+      .body{font:500 17px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#5B6B66}
+      .foot{font:700 20px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#FFFFFF}
+      .small{font:500 16px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#DDE9E5}
+    </style>
+  </defs>
+  <rect width="1200" height="660" rx="36" fill="url(#bg)"/>
+  <circle cx="1110" cy="82" r="100" fill="#EBC989" opacity=".16"/>
+  <circle cx="70" cy="608" r="122" fill="#8FD6C4" opacity=".14"/>
+  <text x="70" y="68" class="kicker">ONE MEAL · FOUR USEFUL FACTS</text>
+  <text x="70" y="119" class="heading">From mixed dish to clear allergen history</text>
+
+  <g filter="url(#shadow)">
+    <rect x="55" y="170" width="250" height="264" rx="24" fill="#FFFFFF"/>
+    <rect x="325" y="170" width="250" height="264" rx="24" fill="#FFFFFF"/>
+    <rect x="595" y="170" width="250" height="264" rx="24" fill="#FFFFFF"/>
+    <rect x="865" y="170" width="280" height="264" rx="24" fill="#FFFFFF"/>
+  </g>
+
+  <g>
+    <circle cx="95" cy="212" r="22" fill="#F3DFC0"/>
+    <text x="95" y="219" text-anchor="middle" class="step">1</text>
+    <text x="80" y="266" class="title">Name the dish</text>
+    <text x="80" y="307" class="body"><tspan x="80">“Fish pie” is a useful</tspan><tspan x="80" dy="27">memory cue—but it is</tspan><tspan x="80" dy="27">not the ingredient list.</tspan></text>
+
+    <circle cx="365" cy="212" r="22" fill="#DFF3EC"/>
+    <text x="365" y="219" text-anchor="middle" class="step">2</text>
+    <text x="350" y="266" class="title">List what was used</text>
+    <text x="350" y="307" class="body"><tspan x="350">Fish · milk · wheat</tspan><tspan x="350" dy="27">Only include ingredients</tspan><tspan x="350" dy="27">in this actual recipe.</tspan></text>
+
+    <circle cx="635" cy="212" r="22" fill="#FBE4DA"/>
+    <text x="635" y="219" text-anchor="middle" class="step">3</text>
+    <text x="620" y="266" class="title">Record the event</text>
+    <text x="620" y="307" class="body"><tspan x="620">Time · preparation</tspan><tspan x="620" dy="27">Rough amount eaten</tspan><tspan x="620" dy="27">or “unsure swallowed”</tspan></text>
+
+    <circle cx="905" cy="212" r="22" fill="#E9E6F8"/>
+    <text x="905" y="219" text-anchor="middle" class="step">4</text>
+    <text x="890" y="266" class="title">Note the response</text>
+    <text x="890" y="307" class="body"><tspan x="890">Loved it · Unsure</tspan><tspan x="890" dy="27">Reaction—or a short,</tspan><tspan x="890" dy="27">plain-language note.</tspan></text>
+  </g>
+
+  <path d="M306 302h18M576 302h18M846 302h18" stroke="#B58A4C" stroke-width="4" stroke-linecap="round"/>
+  <path d="m316 295 8 7-8 7m270-14 8 7-8 7m270-14 8 7-8 7" fill="none" stroke="#B58A4C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="120" y="487" width="960" height="112" rx="24" fill="#243B35"/>
+  <circle cx="175" cy="543" r="28" fill="#8FD6C4"/>
+  <path d="m162 543 9 9 18-21" fill="none" stroke="#243B35" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="225" y="535" class="foot" fill="#FFFFFF">One meal; separate ingredient histories.</text>
+  <text x="225" y="567" class="small" fill="#DDE9E5">The app can spot common words. Only you know the recipe, label and substitutions.</text>
+</svg>

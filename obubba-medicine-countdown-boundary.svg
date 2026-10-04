@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="title desc">
+  <title id="title">What OBubba's baby medicine countdown knows and cannot know</title>
+  <desc id="desc">OBubba can compare a recognised medicine name with logged times, a generic count and a basic age gate. It cannot inspect the product, dose, weight, contraindications, hidden ingredients or unlogged care.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101a2c"/><stop offset="1" stop-color="#263247"/></linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e2a35e"/><stop offset="1" stop-color="#cb8391"/></linearGradient>
+    <linearGradient id="cool" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#29405a"/><stop offset="1" stop-color="#1c293d"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#050a12" flood-opacity=".36"/></filter>
+  </defs>
+  <rect width="1440" height="960" rx="52" fill="url(#bg)"/>
+  <circle cx="1285" cy="115" r="280" fill="#5ba196" opacity=".10"/><circle cx="100" cy="850" r="260" fill="#c98391" opacity=".08"/>
+  <text x="720" y="74" fill="#f2ba6c" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4" text-anchor="middle">THE EXACT FLUTTER BOUNDARY</text>
+  <text x="720" y="128" fill="#fff9f2" font-family="Georgia, serif" font-size="48" font-weight="700" text-anchor="middle">A timer can check the log. It cannot clear the dose.</text>
+  <text x="720" y="166" fill="#bdc8d6" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">“Safe to give now” is stronger than the data the app receives.</text>
+
+  <g filter="url(#shadow)"><rect x="90" y="210" width="1260" height="146" rx="28" fill="#1c293d" stroke="#71839a" stroke-width="2"/></g>
+  <text x="130" y="250" fill="#9fb0c4" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">INPUTS THE STATUS FUNCTION RECEIVES</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <g transform="translate(150 277)"><rect width="300" height="52" rx="18" fill="#2b405a"/><text x="150" y="33" fill="#f7f9fc" font-size="20">Medicine name</text></g>
+    <g transform="translate(570 277)"><rect width="300" height="52" rx="18" fill="#2b405a"/><text x="150" y="33" fill="#f7f9fc" font-size="20">Logged minutes ago</text></g>
+    <g transform="translate(990 277)"><rect width="300" height="52" rx="18" fill="#2b405a"/><text x="150" y="33" fill="#f7f9fc" font-size="20">Age in weeks</text></g>
+  </g>
+  <path d="M720 374v42" stroke="#e2aa61" stroke-width="5" stroke-linecap="round"/><path d="M706 410l14 24 14-24" fill="#e2aa61"/>
+
+  <g filter="url(#shadow)"><rect x="90" y="454" width="596" height="310" rx="30" fill="url(#cool)" stroke="#66a89d" stroke-width="2"/><rect x="754" y="454" width="596" height="310" rx="30" fill="url(#cool)" stroke="#d19263" stroke-width="2"/></g>
+  <text x="130" y="504" fill="#80c1b5" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">WHAT OBUBBA CAN CHECK</text>
+  <g fill="#fff8f1" font-family="Arial, sans-serif" font-size="23">
+    <circle cx="144" cy="552" r="7" fill="#72b3a8"/><text x="168" y="560">Recognised name or brand alias</text>
+    <circle cx="144" cy="600" r="7" fill="#72b3a8"/><text x="168" y="608">Matching logs in the last 24 hours</text>
+    <circle cx="144" cy="648" r="7" fill="#72b3a8"/><text x="168" y="656">Simple elapsed-time and count rules</text>
+    <circle cx="144" cy="696" r="7" fill="#72b3a8"/><text x="168" y="704">Basic age gate</text>
+  </g>
+  <text x="130" y="742" fill="#aebccd" font-family="Arial, sans-serif" font-size="16">Likely partner duplicates within ~3 minutes are collapsed.</text>
+
+  <text x="794" y="504" fill="#efb272" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">WHAT IT CANNOT VERIFY</text>
+  <g fill="#fff8f1" font-family="Arial, sans-serif" font-size="23">
+    <circle cx="808" cy="552" r="7" fill="#df9f62"/><text x="832" y="560">Product strength or the amount</text>
+    <circle cx="808" cy="600" r="7" fill="#df9f62"/><text x="832" y="608">Weight, gestation or contraindications</text>
+    <circle cx="808" cy="648" r="7" fill="#df9f62"/><text x="832" y="656">Hidden shared ingredients</text>
+    <circle cx="808" cy="696" r="7" fill="#df9f62"/><text x="832" y="704">Unlogged doses or a clinical plan</text>
+  </g>
+  <text x="794" y="742" fill="#aebccd" font-family="Arial, sans-serif" font-size="16">The packet, dispensing label and professional advice stay in charge.</text>
+
+  <path d="M720 782v34" stroke="#e2aa61" stroke-width="5" stroke-linecap="round"/><path d="M706 810l14 24 14-24" fill="#e2aa61"/>
+  <g filter="url(#shadow)"><rect x="250" y="842" width="940" height="88" rx="28" fill="url(#warm)"/></g>
+  <text x="720" y="877" fill="#162135" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="3" text-anchor="middle">THE HONEST STATUS</text>
+  <text x="720" y="912" fill="#162135" font-family="Georgia, serif" font-size="30" font-weight="700" text-anchor="middle">“Interval clear in this log — check packet”</text>
+</svg>

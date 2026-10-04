@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba guidance snooze works</title>
+  <desc id="desc">Ordinary guidance can be acknowledged or hidden for seven days. It can return after expiry if the pattern still applies. Safety guidance bypasses snooze and stays visible.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1630"/><stop offset="1" stop-color="#192343"/></linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#222e54"/><stop offset="1" stop-color="#151d39"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#05091a" flood-opacity=".45"/></filter>
+    <marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0 0L11 5.5L0 11Z" fill="#9f93ed"/></marker>
+  </defs>
+  <rect width="1200" height="1500" rx="54" fill="url(#bg)"/>
+  <circle cx="1080" cy="110" r="260" fill="#f39a82" opacity=".08"/><circle cx="95" cy="1390" r="280" fill="#73c8bf" opacity=".06"/>
+
+  <text x="86" y="104" fill="#f8f3eb" font-family="Arial, sans-serif" font-size="49" font-weight="700">Less repetition.</text>
+  <text x="86" y="164" fill="#f8f3eb" font-family="Arial, sans-serif" font-size="49" font-weight="700">No safety blind spot.</text>
+  <text x="86" y="218" fill="#bfc7dd" font-family="Arial, sans-serif" font-size="25">Ordinary and safety guidance follow different paths.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="86" y="282" width="1028" height="245" rx="34" fill="url(#card)" stroke="#8f84df" stroke-width="3"/>
+    <rect x="126" y="322" width="190" height="43" rx="22" fill="#978bea" opacity=".18"/>
+    <text x="221" y="351" text-anchor="middle" fill="#d0c8ff" font-family="Arial, sans-serif" font-size="20" font-weight="700">ORDINARY</text>
+    <text x="126" y="424" fill="#fff" font-family="Arial, sans-serif" font-size="39" font-weight="700">A useful pattern appears</text>
+    <text x="126" y="468" fill="#c4cadd" font-family="Arial, sans-serif" font-size="24">Sleep · feeds · weaning · routine</text>
+    <rect x="779" y="337" width="285" height="67" rx="34" fill="#9f93ed"/>
+    <text x="922" y="380" text-anchor="middle" fill="#141a35" font-family="Arial, sans-serif" font-size="24" font-weight="700">Got it</text>
+    <rect x="779" y="423" width="285" height="67" rx="34" fill="none" stroke="#9f93ed" stroke-width="3"/>
+    <text x="922" y="466" text-anchor="middle" fill="#e0dbff" font-family="Arial, sans-serif" font-size="23" font-weight="700">Hide for a week</text>
+  </g>
+
+  <path d="M600 527V594" fill="none" stroke="#9f93ed" stroke-width="7" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="86" y="624" width="1028" height="245" rx="34" fill="url(#card)" stroke="#73c8bf" stroke-width="3"/>
+    <circle cx="204" cy="746" r="69" fill="#73c8bf" opacity=".16"/>
+    <path d="M204 707V748L234 766" fill="none" stroke="#94e5dc" stroke-width="9" stroke-linecap="round"/>
+    <text x="317" y="708" fill="#94e5dc" font-family="Arial, sans-serif" font-size="20" font-weight="700">PAUSED FOR THIS CHILD ON THIS DEVICE</text>
+    <text x="317" y="762" fill="#fff" font-family="Arial, sans-serif" font-size="41" font-weight="700">Same pattern: quiet for 7 days</text>
+    <text x="317" y="812" fill="#c4cadd" font-family="Arial, sans-serif" font-size="25">The confirmation offers Undo.</text>
+  </g>
+
+  <path d="M600 869V936" fill="none" stroke="#9f93ed" stroke-width="7" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="86" y="966" width="1028" height="214" rx="34" fill="url(#card)" stroke="#8f84df" stroke-width="3"/>
+    <text x="126" y="1022" fill="#d0c8ff" font-family="Arial, sans-serif" font-size="20" font-weight="700">AFTER EXPIRY</text>
+    <text x="126" y="1083" fill="#fff" font-family="Arial, sans-serif" font-size="39" font-weight="700">The pattern is checked again</text>
+    <text x="126" y="1132" fill="#c4cadd" font-family="Arial, sans-serif" font-size="25">If it still applies, the guidance can return.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="86" y="1245" width="1028" height="170" rx="34" fill="#2b2137" stroke="#f09a82" stroke-width="3"/>
+    <path d="M173 1282L219 1299V1335C219 1372 195 1392 173 1402C151 1392 127 1372 127 1335V1299Z" fill="#f09a82" opacity=".2" stroke="#f5ad98" stroke-width="4"/>
+    <path d="M154 1337L167 1350L193 1319" fill="none" stroke="#f7b29f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="261" y="1304" fill="#f8b7a5" font-family="Arial, sans-serif" font-size="20" font-weight="700">SAFETY LANE · NO SNOOZE ACTION</text>
+    <text x="261" y="1361" fill="#fff" font-family="Arial, sans-serif" font-size="38" font-weight="700">Safety guidance stays visible</text>
+    <text x="261" y="1397" fill="#d6cad4" font-family="Arial, sans-serif" font-size="21">High urgency + medium-or-higher health cards</text>
+  </g>
+
+  <text x="600" y="1460" text-anchor="middle" fill="#c9d0e2" font-family="Arial, sans-serif" font-size="21">A quiet Guidance page is not a medical all-clear.</text>
+</svg>

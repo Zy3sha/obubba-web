@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1180" viewBox="0 0 960 1180" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba detects a daytime feeding dip around a logged tooth</title>
+  <desc id="desc">A four-step visual showing the actual-tooth gate, baseline and around-tooth date windows, dominant milk-measure selection, and the 15 and 30 percent thresholds.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fbf6ef"/><stop offset="1" stop-color="#eef1e7"/></linearGradient>
+    <linearGradient id="dark" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102c4f"/><stop offset="1" stop-color="#32275b"/></linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ef8d79"/><stop offset="1" stop-color="#efc96f"/></linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="10" flood-color="#363142" flood-opacity=".11"/></filter>
+    <style>
+      .eyebrow{font:700 17px Arial,sans-serif;letter-spacing:2px;fill:#9f594c}.head{font:700 43px Georgia,serif;fill:#292a39}.sub{font:19px Arial,sans-serif;fill:#686370}.step{font:700 24px Arial,sans-serif;fill:#2c2d3b}.body{font:18px Arial,sans-serif;fill:#67616d}.small{font:16px Arial,sans-serif;fill:#6d6672}.label{font:700 14px Arial,sans-serif;letter-spacing:1px;fill:#746c78}.number{font:700 20px Arial,sans-serif;fill:#644f76}.pill{font:700 16px Arial,sans-serif}.white{fill:#fffaf3}.foot{font:700 17px Arial,sans-serif;fill:#45414d}
+    </style>
+  </defs>
+  <rect width="960" height="1180" rx="38" fill="url(#bg)"/>
+  <circle cx="866" cy="94" r="88" fill="#d9c9eb" opacity=".48"/><circle cx="80" cy="1090" r="122" fill="#d5e3cf" opacity=".58"/>
+  <text x="68" y="78" class="eyebrow">WHAT THE FLUTTER APP ACTUALLY CHECKS</text>
+  <text x="68" y="137" class="head">A tooth does not make the card.</text>
+  <text x="68" y="178" class="sub">The date, the diary and one honest measurement all have to line up.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="220" width="852" height="150" rx="27" fill="#fffdf9"/>
+    <circle cx="108" cy="273" r="28" fill="#e7dbee"/><text x="108" y="280" text-anchor="middle" class="number">1</text>
+    <text x="153" y="266" class="step">Start with an actual tooth entry</text>
+    <text x="153" y="299" class="body">Named tooth · valid date · today or the previous 5 days.</text>
+    <rect x="153" y="323" width="520" height="14" rx="7" fill="#d8d0e2"/><rect x="548" y="323" width="125" height="14" rx="7" fill="url(#warm)"/>
+    <text x="153" y="357" class="label">OLDER HISTORY</text><text x="552" y="357" class="label">D−5 → TODAY</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="396" width="852" height="206" rx="27" fill="#fffdf9"/>
+    <circle cx="108" cy="449" r="28" fill="#dce8d8"/><text x="108" y="456" text-anchor="middle" class="number">2</text>
+    <text x="153" y="442" class="step">Compare two groups of logged dates</text>
+    <text x="153" y="475" class="body">Missing dates are skipped; the near-tooth group stops at today.</text>
+    <rect x="153" y="511" width="322" height="55" rx="16" fill="#e5e1ed"/>
+    <text x="174" y="536" class="label">BASELINE · D−19 TO D−6</text><text x="174" y="558" class="small">14 calendar days · needs 5+ logged dates</text>
+    <rect x="491" y="511" width="356" height="55" rx="16" fill="#f5ddcf"/>
+    <text x="512" y="536" class="label">AROUND TOOTH · D−5 TO D+5</text><text x="512" y="558" class="small">stop at today · needs 2+ logged dates</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="628" width="852" height="263" rx="27" fill="#fffdf9"/>
+    <circle cx="108" cy="681" r="28" fill="#dce5f1"/><text x="108" y="688" text-anchor="middle" class="number">3</text>
+    <text x="153" y="674" class="step">Choose one measurement language</text>
+    <text x="153" y="707" class="body">Across milk-feed records in both groups:</text>
+    <rect x="88" y="745" width="247" height="102" rx="20" fill="#e4edf7"/>
+    <text x="110" y="776" class="label">70%+ BOTTLE-LIKE</text><text x="110" y="811" class="step">ml / daytime</text><text x="110" y="837" class="small">compare daily means</text>
+    <rect x="357" y="745" width="247" height="102" rx="20" fill="#eee5f5"/>
+    <text x="379" y="776" class="label">70%+ BREAST-LIKE</text><text x="379" y="811" class="step">min / daytime</text><text x="379" y="837" class="small">rough proxy, not volume</text>
+    <rect x="626" y="745" width="247" height="102" rx="20" fill="#e8e7e5"/>
+    <text x="648" y="776" class="label">NEITHER REACHES 70%</text><text x="648" y="811" class="step">Stay quiet</text><text x="648" y="837" class="small">never add ml + minutes</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="917" width="852" height="145" rx="27" fill="url(#dark)"/>
+    <text x="82" y="953" class="label white">AROUND-TOOTH MEAN VS BASELINE MEAN</text>
+    <rect x="82" y="978" width="244" height="50" rx="25" fill="#59627c"/><text x="204" y="1009" text-anchor="middle" class="pill white">under 15% → quiet</text>
+    <rect x="350" y="978" width="244" height="50" rx="25" fill="#8b78a0"/><text x="472" y="1009" text-anchor="middle" class="pill white">15–29% → low</text>
+    <rect x="618" y="978" width="260" height="50" rx="25" fill="url(#warm)"/><text x="748" y="1009" text-anchor="middle" class="pill" fill="#37271f">30%+ → medium</text>
+  </g>
+
+  <text x="480" y="1109" text-anchor="middle" class="foot">Daytime only. Solids do not count as a milk mode.</text>
+  <text x="480" y="1140" text-anchor="middle" class="sub">The pattern does not diagnose teething, intake or dehydration.</text>
+</svg>

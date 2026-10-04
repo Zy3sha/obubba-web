@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1100" viewBox="0 0 720 1100" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba learns a baby's sleep in stages</title>
+  <desc id="desc">A four-step ladder from the first real logs, through an early read and complete nights, to deeper patterns with their own evidence gates.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf6"/>
+      <stop offset="0.52" stop-color="#f9f2fb"/>
+      <stop offset="1" stop-color="#edf8f4"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bd7191"/>
+      <stop offset="0.5" stop-color="#9d7ad0"/>
+      <stop offset="1" stop-color="#59a597"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#4b3657" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .ink{fill:#36283d}.muted{fill:#716675}.eyebrow{font:700 17px Arial,sans-serif;letter-spacing:1.4px}.heading{font:700 28px Arial,sans-serif}.body{font:400 19px Arial,sans-serif}.small{font:400 16px Arial,sans-serif}.num{font:700 23px Arial,sans-serif;fill:#fff}.pill{font:700 16px Arial,sans-serif}.serif{font:700 39px Georgia,serif}
+    </style>
+  </defs>
+  <rect width="720" height="1100" rx="36" fill="url(#bg)"/>
+  <text x="360" y="67" text-anchor="middle" class="serif ink">Useful early. Specific later.</text>
+  <text x="360" y="101" text-anchor="middle" class="body muted">Each feature earns the evidence for its own question.</text>
+
+  <rect x="92" y="142" width="536" height="176" rx="28" fill="#fff" filter="url(#shadow)"/>
+  <circle cx="137" cy="187" r="26" fill="#bd7191"/>
+  <text x="137" y="195" text-anchor="middle" class="num">1</text>
+  <text x="181" y="181" class="eyebrow" fill="#a64f75">START SMALL</text>
+  <text x="181" y="217" class="heading ink">0–2 useful moments</text>
+  <text x="122" y="259" class="body muted">Log one real nap, feed or wake.</text>
+  <text x="122" y="289" class="small muted">No personal rhythm is claimed yet.</text>
+
+  <path d="M360 319 V354" stroke="url(#line)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M346 345 L360 360 L374 345" fill="none" stroke="#a87bc1" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="92" y="370" width="536" height="200" rx="28" fill="#fff" filter="url(#shadow)"/>
+  <circle cx="137" cy="415" r="26" fill="#9d7ad0"/>
+  <text x="137" y="423" text-anchor="middle" class="num">2</text>
+  <text x="181" y="409" class="eyebrow" fill="#8160b8">EARLY READ</text>
+  <text x="181" y="445" class="heading ink">3–25 moments · latest 7 days</text>
+  <text x="122" y="489" class="body muted">One honest “so far” result when supported:</text>
+  <text x="139" y="524" class="small muted">• longest sleep  • daytime feed gaps  • wake windows</text>
+  <rect x="122" y="540" width="260" height="38" rx="19" fill="#eee5fb"/>
+  <text x="252" y="565" text-anchor="middle" class="pill" fill="#684c96">retires when richer reads take over</text>
+
+  <path d="M360 571 V606" stroke="url(#line)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M346 597 L360 612 L374 597" fill="none" stroke="#858fc0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="92" y="622" width="536" height="184" rx="28" fill="#fff" filter="url(#shadow)"/>
+  <circle cx="137" cy="667" r="26" fill="#6d9db1"/>
+  <text x="137" y="675" text-anchor="middle" class="num">3</text>
+  <text x="181" y="661" class="eyebrow" fill="#4d849b">SLEEP PICTURE BUILDING</text>
+  <text x="181" y="697" class="heading ink">4–11 complete nights</text>
+  <text x="122" y="741" class="body muted">Bedtime + morning wake make a complete night.</text>
+  <text x="122" y="775" class="small muted">Progress is real; causes and outcomes are not promised.</text>
+
+  <path d="M360 807 V842" stroke="url(#line)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M346 833 L360 848 L374 833" fill="none" stroke="#64a398" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="92" y="858" width="536" height="188" rx="28" fill="#fff" filter="url(#shadow)"/>
+  <circle cx="137" cy="903" r="26" fill="#59a597"/>
+  <text x="137" y="911" text-anchor="middle" class="num">4</text>
+  <text x="181" y="897" class="eyebrow" fill="#398476">DEEPER PERSONALISATION</text>
+  <text x="181" y="933" class="heading ink">Around 12 nights and beyond</text>
+  <text x="122" y="977" class="body muted">Predictions, trends and comparisons take over—</text>
+  <text x="122" y="1009" class="body muted">only when each engine’s own gate passes.</text>
+
+  <rect x="193" y="1061" width="334" height="30" rx="15" fill="#4b365f"/>
+  <text x="360" y="1082" text-anchor="middle" class="pill" fill="#fff">A handover point, never a magic unlock</text>
+</svg>

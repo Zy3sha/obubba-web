@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba turns a soothing outcome into shared care memory</title>
+  <desc id="desc">Respond first, record what helped, wait for four outcomes before ranking, then share up to three leading methods in a carer hand-off.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#11172e"/><stop offset=".56" stop-color="#28203b"/><stop offset="1" stop-color="#47293f"/></linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9d2b1"/><stop offset="1" stop-color="#ef9b84"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#090914" flood-opacity=".32"/></filter>
+  </defs>
+  <rect width="1000" height="1500" rx="48" fill="url(#bg)"/>
+  <circle cx="874" cy="130" r="220" fill="#765879" opacity=".22"/><circle cx="88" cy="1402" r="245" fill="#315c63" opacity=".23"/>
+  <g fill="#fff3d7" opacity=".75"><circle cx="84" cy="115" r="3"/><circle cx="914" cy="331" r="4"/><circle cx="80" cy="710" r="2"/><circle cx="927" cy="1084" r="3"/></g>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="62" y="102" fill="#efb99d" font-size="22" font-weight="800" letter-spacing="3">OBUBBA • SHARED CARE MEMORY</text>
+    <text x="62" y="169" fill="#fffaf4" font-size="49" font-weight="850">Your village should not</text>
+    <text x="62" y="225" fill="#fffaf4" font-size="49" font-weight="850">start from zero.</text>
+    <text x="62" y="271" fill="#d9d0dd" font-size="21">Remember the outcome. Keep the judgement human.</text>
+
+    <g filter="url(#shadow)">
+      <rect x="52" y="334" width="896" height="205" rx="30" fill="#fffaf4"/>
+      <rect x="52" y="565" width="896" height="235" rx="30" fill="#f2ebf4"/>
+      <rect x="52" y="826" width="896" height="205" rx="30" fill="#e4f2ed"/>
+      <rect x="52" y="1057" width="896" height="235" rx="30" fill="url(#coral)"/>
+    </g>
+
+    <g>
+      <circle cx="126" cy="436" r="44" fill="#322944"/><text x="126" y="447" text-anchor="middle" fill="#fffaf4" font-size="31" font-weight="900">1</text>
+      <text x="197" y="393" fill="#745379" font-size="17" font-weight="900" letter-spacing="2">RESPOND</text>
+      <text x="197" y="435" fill="#2b2738" font-size="30" font-weight="850">CARE FOR THE BABY FIRST</text>
+      <text x="197" y="475" fill="#665f6c" font-size="20">Check health and safety. Comfort now; record afterwards.</text>
+      <text x="197" y="507" fill="#817985" font-size="17">An app should never delay a response.</text>
+
+      <circle cx="126" cy="682" r="44" fill="#714d70"/><text x="126" y="693" text-anchor="middle" fill="#fffaf4" font-size="31" font-weight="900">2</text>
+      <text x="197" y="623" fill="#875c7d" font-size="17" font-weight="900" letter-spacing="2">RECORD</text>
+      <text x="197" y="665" fill="#2b2738" font-size="30" font-weight="850">TAP WHAT HELPED</text>
+      <text x="197" y="705" fill="#665f6c" font-size="19">Feed • sleep • wind • nappy • teething • temperature</text>
+      <text x="197" y="737" fill="#665f6c" font-size="19">less stimulation • cuddle • bath • walk</text>
+      <text x="197" y="769" fill="#817985" font-size="17">One tap adds one success count for this baby.</text>
+
+      <circle cx="126" cy="928" r="44" fill="#2f715d"/><text x="126" y="939" text-anchor="middle" fill="#fffaf4" font-size="31" font-weight="900">3</text>
+      <text x="197" y="885" fill="#387964" font-size="17" font-weight="900" letter-spacing="2">WAIT FOR SIGNAL</text>
+      <text x="197" y="927" fill="#23362f" font-size="30" font-weight="850">FOUR OUTCOMES BEFORE RANKING</text>
+      <text x="197" y="967" fill="#536960" font-size="20">The early list stays neutral; repetition earns the star.</text>
+      <text x="197" y="999" fill="#6b7f77" font-size="17">Most recorded ≠ guaranteed next time</text>
+
+      <circle cx="126" cy="1174" r="44" fill="#694456"/><text x="126" y="1185" text-anchor="middle" fill="#fffaf4" font-size="31" font-weight="900">4</text>
+      <text x="197" y="1115" fill="#75485d" font-size="17" font-weight="900" letter-spacing="2">HAND OFF</text>
+      <text x="197" y="1157" fill="#3a2d39" font-size="30" font-weight="850">SHARE UP TO THREE LEADERS</text>
+      <text x="197" y="1197" fill="#5f4b57" font-size="19">“What settles Mia: a cuddle • sleep help • fresh air”</text>
+      <text x="197" y="1229" fill="#735f6a" font-size="17">Carer briefing needs at least 2 logged days.</text>
+      <text x="197" y="1261" fill="#735f6a" font-size="17">No outcome history? Recent night-settling methods can fill in.</text>
+    </g>
+
+    <rect x="52" y="1340" width="896" height="96" rx="26" fill="#ffffff" opacity=".08" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="82" y="1381" fill="#fffaf4" font-size="21" font-weight="850">WHAT HELPED ≠ WHY THEY CRIED ≠ A DIAGNOSIS</text>
+    <text x="82" y="1415" fill="#cbc1d0" font-size="17">Useful family memory, not an instruction to ignore the baby in front of you.</text>
+    <text x="62" y="1472" fill="#bfb4c5" font-size="16">Flutter implementation reviewed 10 March 2027 • Informational support, not medical care.</text>
+  </g>
+</svg>

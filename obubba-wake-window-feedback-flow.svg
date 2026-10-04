@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 1180" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba responds to wake-window feedback</title>
+  <desc id="desc">A vertical flow showing that Too long shortens the starting range by 25 minutes, About right leaves it unchanged, and Too short lengthens it by 25 minutes. Age-scaled guardrails apply before repeated nap history personalises future predictions.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf5"/>
+      <stop offset="0.52" stop-color="#f8f2ff"/>
+      <stop offset="1" stop-color="#eef8f1"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff9c8f"/>
+      <stop offset="1" stop-color="#b682dc"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#493864" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="780" height="1180" rx="38" fill="url(#bg)"/>
+  <circle cx="700" cy="80" r="120" fill="#eadcf8" opacity="0.55"/>
+  <circle cx="60" cy="1080" r="150" fill="#d9f0df" opacity="0.65"/>
+
+  <text x="390" y="78" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="#7b6991">YOUR OBSERVATION, USED GENTLY</text>
+  <text x="390" y="126" text-anchor="middle" font-family="Georgia, serif" font-size="40" font-weight="700" fill="#2f2940">One tap changes the starting point</text>
+  <text x="390" y="161" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#625b70">It does not turn a prediction into a rigid rule.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="45" y="210" width="690" height="250" rx="30" fill="#ffffff"/>
+  </g>
+  <text x="80" y="255" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="2" fill="#8c789f">1 · TELL OBUBBA WHAT YOU ARE SEEING</text>
+
+  <g>
+    <rect x="75" y="292" width="190" height="112" rx="22" fill="#fff0ec" stroke="#f3b4aa" stroke-width="2"/>
+    <text x="170" y="329" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#4b4054">Too long</text>
+    <text x="170" y="367" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#d06f66">−25 min</text>
+    <text x="170" y="391" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#6a606d">shorter starting range</text>
+  </g>
+  <g>
+    <rect x="295" y="292" width="190" height="112" rx="22" fill="#f3eafd" stroke="#c9a8e6" stroke-width="3"/>
+    <text x="390" y="329" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#4b4054">About right</text>
+    <text x="390" y="367" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#8b61b4">No shift</text>
+    <text x="390" y="391" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#6a606d">keep observing</text>
+  </g>
+  <g>
+    <rect x="515" y="292" width="190" height="112" rx="22" fill="#edf8ef" stroke="#a8d2b1" stroke-width="2"/>
+    <text x="610" y="329" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#4b4054">Too short</text>
+    <text x="610" y="367" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#5d9870">+25 min</text>
+    <text x="610" y="391" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#6a606d">longer starting range</text>
+  </g>
+
+  <path d="M390 476v57" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M377 522l13 16 13-16" fill="none" stroke="#a274c7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="560" width="640" height="190" rx="30" fill="#ffffff"/>
+  </g>
+  <circle cx="130" cy="624" r="34" fill="#f2e8fb"/>
+  <path d="M130 603v22l15 10" fill="none" stroke="#8e65b5" stroke-width="5" stroke-linecap="round"/>
+  <text x="185" y="610" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="2" fill="#8c789f">2 · THE NEXT PREDICTION ADJUSTS</text>
+  <text x="185" y="649" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#302a40">The nudge starts straight away</text>
+  <text x="110" y="698" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#625b70">OBubba still uses the latest real wake, nap position,</text>
+  <text x="110" y="727" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#625b70">today’s naps and bedtime feasibility.</text>
+
+  <path d="M390 766v57" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M377 812l13 16 13-16" fill="none" stroke="#a274c7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="850" width="640" height="220" rx="30" fill="#ffffff"/>
+  </g>
+  <circle cx="130" cy="914" r="34" fill="#e7f5ea"/>
+  <path d="M113 916l11 11 23-28" fill="none" stroke="#5d9870" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="185" y="900" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="2" fill="#718d78">3 · GUARDRAILS + REAL HISTORY</text>
+  <text x="185" y="939" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#302a40">Feedback is not a free-for-all</text>
+  <text x="110" y="986" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#625b70">The shifted range stays inside age-scaled product limits.</text>
+  <text x="110" y="1018" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#625b70">As comparable naps build up, recent and better-restoring</text>
+  <text x="110" y="1050" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#625b70">outcomes help personalise future timing.</text>
+
+  <rect x="145" y="1100" width="490" height="46" rx="23" fill="#302a40"/>
+  <text x="390" y="1130" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Parent insight first · pattern learning over time</text>
+</svg>

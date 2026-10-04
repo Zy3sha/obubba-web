@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1540" viewBox="0 0 1000 1540" role="img" aria-labelledby="title desc">
+  <title id="title">One correction, one honest story</title>
+  <desc id="desc">A visual explanation of how OBubba edits one existing event, repairs its calendar placement and linked context, refreshes derived patterns, and protects deletion from stale family sync while allowing a short undo.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07172d"/>
+      <stop offset="0.58" stop-color="#151735"/>
+      <stop offset="1" stop-color="#2a173d"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd978"/>
+      <stop offset="1" stop-color="#e9a6ce"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#67e0cf"/>
+      <stop offset="1" stop-color="#83a8df"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#020711" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="1540" rx="48" fill="url(#bg)"/>
+  <circle cx="892" cy="92" r="170" fill="#5c477b" opacity="0.18"/>
+  <circle cx="110" cy="1410" r="210" fill="#176e78" opacity="0.12"/>
+
+  <text x="72" y="98" fill="#ffd978" font-family="Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="4">OBUBBA CORRECTION PATH</text>
+  <text x="72" y="170" fill="#fffaf4" font-family="Georgia, serif" font-size="58" font-weight="700">One correction.</text>
+  <text x="72" y="232" fill="#fffaf4" font-family="Georgia, serif" font-size="58" font-weight="700">One honest story.</text>
+  <text x="72" y="278" fill="#c5c8dc" font-family="Arial, sans-serif" font-size="22">Fix the event—not the totals around it.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="334" width="856" height="176" rx="32" fill="#fffaf4"/>
+    <circle cx="158" cy="422" r="48" fill="url(#gold)"/>
+    <path d="M140 423h36M158 405v36" stroke="#171830" stroke-width="8" stroke-linecap="round"/>
+    <text x="230" y="397" fill="#3c2841" font-family="Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="2">THE REAL EVENT</text>
+    <text x="230" y="444" fill="#1d2037" font-family="Georgia, serif" font-size="36" font-weight="700">Feed · 2:10am · left</text>
+    <text x="230" y="479" fill="#6f6877" font-family="Arial, sans-serif" font-size="19">One stored ID anchors the correction.</text>
+  </g>
+
+  <path d="M500 510v68" stroke="#8894bd" stroke-width="5" stroke-linecap="round"/>
+  <path d="M500 578L355 655M500 578l145 77" stroke="#8894bd" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="640" width="428" height="610" rx="36" fill="#0b3445" stroke="#67e0cf" stroke-width="3"/>
+    <circle cx="119" cy="711" r="36" fill="#67e0cf"/>
+    <path d="M102 715l11 11 25-30" stroke="#0b3445" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="173" y="700" fill="#67e0cf" font-family="Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="2">EDIT</text>
+    <text x="173" y="739" fill="#fffaf4" font-family="Georgia, serif" font-size="34" font-weight="700">Keep the event</text>
+    <text x="86" y="793" fill="#c9dce3" font-family="Arial, sans-serif" font-size="19">Change only what was wrong.</text>
+
+    <rect x="84" y="838" width="368" height="94" rx="22" fill="#12485b"/>
+    <text x="112" y="873" fill="#67e0cf" font-family="Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="1.5">1 · RIGHT DAY</text>
+    <text x="112" y="908" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="700">Cross-midnight move is atomic</text>
+
+    <rect x="84" y="950" width="368" height="94" rx="22" fill="#12485b"/>
+    <text x="112" y="985" fill="#67e0cf" font-family="Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="1.5">2 · LINKED MOMENTS</text>
+    <text x="112" y="1020" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="700">Wake and sleep stay aligned</text>
+
+    <rect x="84" y="1062" width="368" height="126" rx="22" fill="#12485b"/>
+    <text x="112" y="1097" fill="#67e0cf" font-family="Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="1.5">3 · CURRENT PATTERN</text>
+    <text x="112" y="1132" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="700">Totals, intervals and insights</text>
+    <text x="112" y="1161" fill="#c9dce3" font-family="Arial, sans-serif" font-size="18">read the corrected record</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="518" y="640" width="428" height="610" rx="36" fill="#2b1c4d" stroke="#bd92ff" stroke-width="3"/>
+    <circle cx="583" cy="711" r="36" fill="#bd92ff"/>
+    <path d="M566 696h34M573 696l4-13h12l4 13M572 705l5 25h14l5-25" stroke="#21163d" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="637" y="700" fill="#c9a8ff" font-family="Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="2">DELETE</text>
+    <text x="637" y="739" fill="#fffaf4" font-family="Georgia, serif" font-size="34" font-weight="700">Remove the false</text>
+    <text x="550" y="793" fill="#ddd2ed" font-family="Arial, sans-serif" font-size="19">Do not let a stale copy revive it.</text>
+
+    <rect x="548" y="838" width="368" height="110" rx="22" fill="#3b2864"/>
+    <text x="576" y="873" fill="#c9a8ff" font-family="Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="1.5">1 · DELETION LEDGER</text>
+    <text x="576" y="908" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="700">Partner sync cannot resurrect</text>
+    <text x="576" y="933" fill="#ddd2ed" font-family="Arial, sans-serif" font-size="17">the removed ID</text>
+
+    <rect x="548" y="966" width="368" height="110" rx="22" fill="#3b2864"/>
+    <text x="576" y="1001" fill="#c9a8ff" font-family="Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="1.5">2 · LINKED CLEAN-UP</text>
+    <text x="576" y="1036" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="700">Companion wake feed follows</text>
+    <text x="576" y="1061" fill="#ddd2ed" font-family="Arial, sans-serif" font-size="17">its parent event</text>
+
+    <rect x="548" y="1094" width="368" height="94" rx="22" fill="#493070" stroke="#ffd978" stroke-width="2"/>
+    <text x="576" y="1129" fill="#ffd978" font-family="Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="1.5">UNDO · 4 SECONDS</text>
+    <text x="576" y="1164" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="700">Restore the same event ID</text>
+  </g>
+
+  <path d="M268 1250v66M732 1250v66M268 1316h464" stroke="#8894bd" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M500 1316v35" stroke="#8894bd" stroke-width="5" stroke-linecap="round"/>
+
+  <rect x="114" y="1352" width="772" height="108" rx="30" fill="#fffaf4"/>
+  <circle cx="178" cy="1406" r="32" fill="url(#mint)"/>
+  <path d="M165 1407l9 9 19-23" stroke="#10243d" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="228" y="1397" fill="#3c2841" font-family="Georgia, serif" font-size="30" font-weight="700">One shared story</text>
+  <text x="228" y="1430" fill="#706978" font-family="Arial, sans-serif" font-size="18">No balancing entry. No phantom return.</text>
+
+  <text x="500" y="1502" fill="#9da5c2" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">A correction improves the record. It does not invent certainty.</text>
+</svg>

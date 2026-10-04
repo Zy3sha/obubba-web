@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1450" viewBox="0 0 900 1450" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba decides when to show Looking good with Egg</title>
+  <desc id="desc">A five-step flow showing recognised allergen logs, calm meal counts, safety gates, a single evidence-labelled card and separate memory for each allergen.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffaf5"/><stop offset="1" stop-color="#f4efff"/></linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff8b78"/><stop offset="1" stop-color="#f26f72"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#442f59" flood-opacity=".11"/></filter>
+    <style>
+      .ink{fill:#342b46}.soft{fill:#665d73}.white{fill:#fff}.card{fill:#fff;stroke:#eadff0;stroke-width:2}.eyebrow{font:700 19px Arial,sans-serif;letter-spacing:2px}.h1{font:700 46px Arial,sans-serif}.h2{font:700 25px Arial,sans-serif}.body{font:400 20px Arial,sans-serif}.small{font:400 17px Arial,sans-serif}.num{font:700 22px Arial,sans-serif}.arrow{stroke:#c7afda;stroke-width:5;stroke-linecap:round}
+    </style>
+  </defs>
+  <rect width="900" height="1450" rx="42" fill="url(#bg)"/>
+  <circle cx="790" cy="88" r="105" fill="#ffd9d0" opacity=".75"/><circle cx="94" cy="1340" r="135" fill="#e3d6fa" opacity=".7"/>
+  <text x="62" y="77" class="eyebrow" fill="#dd625f">INSIDE THE FLUTTER APP</text>
+  <text x="62" y="137" class="h1 ink">Encouraging,</text><text x="62" y="192" class="h1 ink">not a clearance</text>
+  <text x="62" y="231" class="body soft">The card describes the record. It does not diagnose the baby.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="55" y="275" width="790" height="126" rx="26" class="card"/>
+    <circle cx="112" cy="338" r="31" fill="#ffe1da"/><text x="105" y="346" class="num" fill="#cf5e5a">1</text>
+    <text x="165" y="325" class="h2 ink">Recognise an allergen in a solids log</text>
+    <text x="165" y="359" class="body soft">Food text + saved allergen groups are combined.</text>
+  </g>
+  <line x1="450" y1="402" x2="450" y2="435" class="arrow"/><path d="M438 427l12 14 12-14" fill="none" class="arrow"/>
+
+  <g filter="url(#shadow)">
+    <rect x="55" y="443" width="790" height="144" rx="26" class="card"/>
+    <circle cx="112" cy="515" r="31" fill="#e8ddfa"/><text x="105" y="523" class="num" fill="#725b9a">2</text>
+    <text x="165" y="496" class="h2 ink">Count clearly calm meals</text>
+    <text x="165" y="532" class="body soft">Blank or “Loved it” adds one. “Unsure” does not.</text>
+    <text x="165" y="562" class="small soft">The engine cannot measure how much was swallowed.</text>
+  </g>
+  <line x1="450" y1="588" x2="450" y2="621" class="arrow"/><path d="M438 613l12 14 12-14" fill="none" class="arrow"/>
+
+  <g filter="url(#shadow)">
+    <rect x="55" y="629" width="790" height="287" rx="26" class="card"/>
+    <circle cx="112" cy="694" r="31" fill="#fff0c9"/><text x="105" y="702" class="num" fill="#9c7622">3</text>
+    <text x="165" y="687" class="h2 ink">Pass every evidence and safety gate</text>
+    <g class="body soft">
+      <text x="100" y="746">✓ 3–8 calm meals for this allergen</text>
+      <text x="100" y="788">✓ fewer than 2 “Unsure” meals</text>
+      <text x="100" y="830">✓ no recorded reaction in recent or lifetime history</text>
+      <text x="100" y="872">✓ first recent appearance sits in the 21-day window</text>
+    </g>
+  </g>
+  <line x1="450" y1="917" x2="450" y2="950" class="arrow"/><path d="M438 942l12 14 12-14" fill="none" class="arrow"/>
+
+  <g filter="url(#shadow)">
+    <rect x="55" y="958" width="790" height="190" rx="28" fill="url(#coral)"/>
+    <circle cx="112" cy="1021" r="31" fill="#fff" opacity=".92"/><text x="105" y="1029" class="num" fill="#d85d5c">4</text>
+    <text x="165" y="1014" class="h2 white">Looking good with Egg</text>
+    <text x="165" y="1051" class="body white">Maya has had Egg 3 times now with no trouble.</text>
+    <rect x="165" y="1081" width="212" height="40" rx="20" fill="#fff" opacity=".94"/>
+    <text x="186" y="1107" class="small" fill="#8b4f58">early read · 3 meals</text>
+  </g>
+  <line x1="450" y1="1149" x2="450" y2="1182" class="arrow"/><path d="M438 1174l12 14 12-14" fill="none" class="arrow"/>
+
+  <g filter="url(#shadow)">
+    <rect x="55" y="1190" width="790" height="118" rx="26" class="card"/>
+    <circle cx="112" cy="1249" r="31" fill="#dff4ed"/><text x="105" y="1257" class="num" fill="#3d7f70">5</text>
+    <text x="165" y="1237" class="h2 ink">Remember each allergen separately</text>
+    <text x="165" y="1274" class="body soft">Acknowledging peanut never mutes a future egg card.</text>
+  </g>
+
+  <rect x="55" y="1340" width="790" height="70" rx="22" fill="#342b46"/>
+  <text x="85" y="1369" class="small white">“Looking good” = this saved pattern is reassuring enough for a nudge.</text>
+  <text x="85" y="1397" class="small" fill="#ffe0d9">It cannot prove tolerance or rule out a future reaction.</text>
+</svg>

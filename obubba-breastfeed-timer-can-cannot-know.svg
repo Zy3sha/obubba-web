@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="980" viewBox="0 0 720 980" role="img" aria-labelledby="title desc">
+  <title id="title">What a breastfeeding timer can and cannot know</title>
+  <desc id="desc">A stacked guide showing that a timer can remember time, breast side, pauses and patterns but cannot measure milk transfer, attachment, comfort, hydration or growth.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffaf6"/><stop offset="1" stop-color="#f4efff"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="9" stdDeviation="13" flood-color="#493760" flood-opacity=".10"/></filter>
+  </defs>
+  <rect width="720" height="980" rx="34" fill="url(#bg)"/>
+  <text x="360" y="58" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="700" fill="#332841">Let the clock remember.</text>
+  <text x="360" y="95" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="700" fill="#332841">Let the whole picture answer.</text>
+  <text x="360" y="130" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="19" fill="#6c6076">Minutes are useful context — never a milk measurement.</text>
+  <g filter="url(#shadow)">
+    <rect x="52" y="166" width="616" height="298" rx="28" fill="#fff"/>
+    <rect x="52" y="492" width="616" height="298" rx="28" fill="#fff"/>
+  </g>
+  <circle cx="108" cy="220" r="27" fill="#eee5ff"/>
+  <circle cx="108" cy="220" r="17" fill="none" stroke="#7355a7" stroke-width="4"/>
+  <path d="M108 209v12l8 6" fill="none" stroke="#7355a7" stroke-width="4" stroke-linecap="round"/>
+  <text x="150" y="229" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700" fill="#493760">The timer can remember</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="22" fill="#453b4e">
+    <circle cx="103" cy="278" r="5.5" fill="#9a7bc7"/><text x="126" y="286">when the feed started</text>
+    <circle cx="103" cy="319" r="5.5" fill="#9a7bc7"/><text x="126" y="327">left and right minutes</text>
+    <circle cx="103" cy="360" r="5.5" fill="#9a7bc7"/><text x="126" y="368">pauses and side switches</text>
+    <circle cx="103" cy="401" r="5.5" fill="#9a7bc7"/><text x="126" y="409">patterns across several days</text>
+    <circle cx="103" cy="442" r="5.5" fill="#9a7bc7"/><text x="126" y="450">which child the timer began for</text>
+  </g>
+  <circle cx="108" cy="546" r="27" fill="#fde8e4"/>
+  <path d="M96 546h24M108 534v24" stroke="#b95f68" stroke-width="4" stroke-linecap="round" transform="rotate(45 108 546)"/>
+  <text x="150" y="555" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700" fill="#493760">The timer cannot know</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="22" fill="#453b4e">
+    <circle cx="103" cy="604" r="5.5" fill="#d8878c"/><text x="126" y="612">how much milk transferred</text>
+    <circle cx="103" cy="645" r="5.5" fill="#d8878c"/><text x="126" y="653">whether attachment is effective</text>
+    <circle cx="103" cy="686" r="5.5" fill="#d8878c"/><text x="126" y="694">when your baby is swallowing</text>
+    <circle cx="103" cy="727" r="5.5" fill="#d8878c"/><text x="126" y="735">why a baby wants comfort</text>
+    <circle cx="103" cy="768" r="5.5" fill="#d8878c"/><text x="126" y="776">hydration, health or growth</text>
+  </g>
+  <rect x="70" y="830" width="580" height="110" rx="25" fill="#493760"/>
+  <text x="360" y="864" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">THE USEFUL RECORD</text>
+  <text x="360" y="897" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" fill="#fff">timer + baby cues + nappies + weight</text>
+  <text x="360" y="924" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" fill="#fff">+ an observed feed when needed</text>
+</svg>

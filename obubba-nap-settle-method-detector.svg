@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba compares settling methods with nap duration</title>
+  <desc id="desc">A vertical three-step diagram showing eligible naps, four settling buckets, and the three-per-bucket plus fifteen-minute difference gates.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fcf8f1"/>
+      <stop offset="1" stop-color="#edf5f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#172340" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1500" rx="44" fill="url(#bg)"/>
+  <circle cx="1080" cy="110" r="180" fill="#e7dcf2" opacity=".78"/>
+  <circle cx="90" cy="1370" r="200" fill="#d9ebdf" opacity=".72"/>
+
+  <text x="80" y="90" fill="#172340" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="2">WHAT HELPS MAYA NAP LONGEST?</text>
+  <text x="80" y="160" fill="#172340" font-family="Georgia, serif" font-size="51" font-weight="700">A personal comparison.</text>
+  <text x="80" y="217" fill="#536078" font-family="Arial" font-size="25">Useful clue. Not proof of cause.</text>
+
+  <g filter="url(#shadow)"><rect x="70" y="270" width="1060" height="260" rx="34" fill="#ffffff"/></g>
+  <circle cx="140" cy="345" r="42" fill="#172340"/>
+  <text x="140" y="356" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="30" font-weight="700">1</text>
+  <text x="210" y="338" fill="#172340" font-family="Arial" font-size="29" font-weight="700">KEEP ELIGIBLE COMPLETED NAPS</text>
+  <text x="210" y="386" fill="#536078" font-family="Arial" font-size="25">Today + previous 13 days</text>
+  <rect x="210" y="427" width="270" height="60" rx="22" fill="#f4eee3"/>
+  <text x="345" y="466" text-anchor="middle" fill="#665943" font-family="Arial" font-size="24" font-weight="700">5–240 minutes</text>
+  <rect x="505" y="427" width="400" height="60" rx="22" fill="#e9f2ec"/>
+  <text x="705" y="466" text-anchor="middle" fill="#3f624b" font-family="Arial" font-size="24" font-weight="700">recognised primary method</text>
+  <text x="210" y="510" fill="#7a667f" font-family="Arial" font-size="20">Several disrupted day tags and fever days are excluded.</text>
+
+  <g filter="url(#shadow)"><rect x="70" y="570" width="1060" height="510" rx="34" fill="#ffffff"/></g>
+  <circle cx="140" cy="645" r="42" fill="#172340"/>
+  <text x="140" y="656" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="30" font-weight="700">2</text>
+  <text x="210" y="638" fill="#172340" font-family="Arial" font-size="29" font-weight="700">ASSIGN ONE PRIMARY BUCKET</text>
+  <text x="210" y="684" fill="#536078" font-family="Arial" font-size="23">A multi-select nap still lands in one group here.</text>
+
+  <rect x="140" y="735" width="430" height="120" rx="28" fill="#eee5f7"/>
+  <circle cx="195" cy="795" r="28" fill="#a984d0"/>
+  <text x="245" y="785" fill="#172340" font-family="Arial" font-size="25" font-weight="700">SELF</text>
+  <text x="245" y="821" fill="#59657b" font-family="Arial" font-size="21">self-settled only</text>
+
+  <rect x="630" y="735" width="430" height="120" rx="28" fill="#f8e7dc"/>
+  <circle cx="685" cy="795" r="28" fill="#dc9a78"/>
+  <text x="735" y="785" fill="#172340" font-family="Arial" font-size="25" font-weight="700">FED</text>
+  <text x="735" y="821" fill="#59657b" font-family="Arial" font-size="21">fed to sleep</text>
+
+  <rect x="140" y="885" width="430" height="120" rx="28" fill="#e0eee4"/>
+  <circle cx="195" cy="945" r="28" fill="#84b393"/>
+  <text x="245" y="935" fill="#172340" font-family="Arial" font-size="25" font-weight="700">ASSISTED</text>
+  <text x="245" y="971" fill="#59657b" font-family="Arial" font-size="21">rocked · held · patted</text>
+
+  <rect x="630" y="885" width="430" height="120" rx="28" fill="#f5efd9"/>
+  <circle cx="685" cy="945" r="28" fill="#d4b25e"/>
+  <text x="735" y="935" fill="#172340" font-family="Arial" font-size="25" font-weight="700">OTHER</text>
+  <text x="735" y="971" fill="#59657b" font-family="Arial" font-size="21">dummy</text>
+  <text x="140" y="1045" fill="#536078" font-family="Arial" font-size="22">Unknown or missing methods stay out of the comparison.</text>
+
+  <g filter="url(#shadow)"><rect x="70" y="1120" width="1060" height="285" rx="34" fill="#172340"/></g>
+  <circle cx="140" cy="1195" r="42" fill="#d7b46d"/>
+  <text x="140" y="1206" text-anchor="middle" fill="#172340" font-family="Arial" font-size="30" font-weight="700">3</text>
+  <text x="210" y="1187" fill="#ffffff" font-family="Arial" font-size="28" font-weight="700">COMPARE AVERAGE ELAPSED DURATION</text>
+  <rect x="210" y="1230" width="330" height="64" rx="32" fill="#a984d0"/>
+  <text x="375" y="1271" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="25" font-weight="700">≥3 naps per bucket</text>
+  <text x="566" y="1271" fill="#ffffff" font-family="Arial" font-size="25" font-weight="700">AND</text>
+  <rect x="645" y="1230" width="335" height="64" rx="32" fill="#8fbd9e"/>
+  <text x="812" y="1271" text-anchor="middle" fill="#172340" font-family="Arial" font-size="25" font-weight="700">best ≥15 min longer</text>
+  <text x="210" y="1342" fill="#f2d99f" font-family="Georgia" font-size="29" font-weight="700">Association ≠ cause.</text>
+  <text x="210" y="1380" fill="#dbe2ed" font-family="Arial" font-size="22">Position, place and mid-nap wakes still matter.</text>
+
+  <text x="80" y="1460" fill="#536078" font-family="Arial" font-size="22">No age gate · low urgency · raw nap arc · 14-calendar-day lookback</text>
+</svg>

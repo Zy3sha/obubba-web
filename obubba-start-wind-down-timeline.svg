@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba decides when to surface Start wind-down</title>
+  <desc id="desc">A timeline and flow diagram showing the current Flutter inputs, shared bedtime resolver, three wind-down prompts and guided routine.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6f3ff"/><stop offset="1" stop-color="#fff8f2"/></linearGradient>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#304168"/><stop offset="1" stop-color="#171f3b"/></linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1c2740" flood-opacity=".11"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7767a8"/></marker>
+    <style>
+      .serif{font-family:Georgia,'Times New Roman',serif;fill:#202942}.sans{font-family:Inter,Arial,sans-serif;fill:#47516a}.h1{font:700 38px Georgia,'Times New Roman',serif}.h2{font:700 22px Georgia,'Times New Roman',serif}.body{font:16px Inter,Arial,sans-serif}.small{font:14px Inter,Arial,sans-serif}.eyebrow{font:700 15px Inter,Arial,sans-serif;letter-spacing:2px;fill:#7868a6}.pill{font:700 13px Inter,Arial,sans-serif}.line{stroke:#7767a8;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="900" rx="36" fill="url(#bg)"/>
+  <text x="70" y="68" class="eyebrow">ONE BEDTIME, THREE NUDGES</text>
+  <text x="70" y="118" class="serif h1">When “Start wind-down” appears</text>
+  <text x="70" y="151" class="sans body">The current Flutter app resolves tonight first, then times each surface differently.</text>
+
+  <g filter="url(#shadow)"><rect x="70" y="195" width="1060" height="112" rx="25" fill="#fff" stroke="#d8d0eb"/></g>
+  <text x="95" y="226" class="eyebrow">LIVE INPUTS</text>
+  <g class="sans small">
+    <rect x="95" y="245" width="150" height="38" rx="19" fill="#eee9fa"/><text x="170" y="270" text-anchor="middle">age + corrected age</text>
+    <rect x="260" y="245" width="132" height="38" rx="19" fill="#e5f3ee"/><text x="326" y="270" text-anchor="middle">today’s naps</text>
+    <rect x="407" y="245" width="158" height="38" rx="19" fill="#fde5df"/><text x="486" y="270" text-anchor="middle">manual bedtime</text>
+    <rect x="580" y="245" width="163" height="38" rx="19" fill="#eee9fa"/><text x="662" y="270" text-anchor="middle">consultation plan</text>
+    <rect x="758" y="245" width="142" height="38" rx="19" fill="#e5f3ee"/><text x="829" y="270" text-anchor="middle">skip-last-nap</text>
+    <rect x="915" y="245" width="180" height="38" rx="19" fill="#fde5df"/><text x="1005" y="270" text-anchor="middle">day type / disruption</text>
+  </g>
+  <path d="M600 307V349" class="line"/>
+  <g filter="url(#shadow)"><rect x="360" y="360" width="480" height="104" rx="28" fill="url(#night)"/></g>
+  <text x="600" y="400" text-anchor="middle" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#fff">Shared resolved bedtime</text>
+  <text x="600" y="433" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="15" fill="#dad8ea">the same target used by clock, reminder and widget</text>
+  <path d="M600 464V505" class="line"/>
+
+  <line x1="100" y1="548" x2="1100" y2="548" stroke="#c4bbdc" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="190" cy="548" r="14" fill="#8bcfc0"/><circle cx="600" cy="548" r="14" fill="#ef9c87"/><circle cx="700" cy="548" r="14" fill="#a896dc"/><circle cx="1005" cy="548" r="14" fill="#26324f"/>
+  <text x="190" y="521" text-anchor="middle" class="sans pill">BED −90 MIN</text><text x="600" y="521" text-anchor="middle" class="sans pill">BED −30 MIN</text><text x="700" y="521" text-anchor="middle" class="sans pill">BED −22 MIN</text><text x="1005" y="521" text-anchor="middle" class="sans pill">BEDTIME</text>
+
+  <g filter="url(#shadow)"><rect x="70" y="598" width="320" height="174" rx="24" fill="#fff" stroke="#a9dbcf"/><rect x="440" y="598" width="320" height="174" rx="24" fill="#fff" stroke="#f0b4a6"/><rect x="810" y="598" width="320" height="174" rx="24" fill="#fff" stroke="#c9bfe8"/></g>
+  <text x="95" y="636" class="serif h2">Track button</text>
+  <text x="95" y="671" class="sans body">Visible from 90 min before</text><text x="95" y="698" class="sans body">to 30 min after bedtime.</text>
+  <rect x="95" y="722" width="208" height="29" rx="15" fill="#e5f3ee"/><text x="199" y="742" text-anchor="middle" class="pill" fill="#2d6757">PREMIUM / TRIAL PATH</text>
+
+  <text x="465" y="636" class="serif h2">OS reminder</text>
+  <text x="465" y="671" class="sans body">Scheduled exactly 30 min</text><text x="465" y="698" class="sans body">before the resolved bedtime.</text>
+  <rect x="465" y="722" width="184" height="29" rx="15" fill="#fde5df"/><text x="557" y="742" text-anchor="middle" class="pill" fill="#8d4435">DEFAULT ON</text>
+
+  <text x="835" y="636" class="serif h2">In-app snackbar</text>
+  <text x="835" y="671" class="sans body">Fires once per child/day in</text><text x="835" y="698" class="sans body">the 32–22 min window.</text>
+  <rect x="835" y="722" width="193" height="29" rx="15" fill="#eee9fa"/><text x="932" y="742" text-anchor="middle" class="pill" fill="#5d4c87">NOT A DEEP LINK</text>
+
+  <path d="M600 772V810" class="line"/>
+  <rect x="130" y="817" width="940" height="54" rx="27" fill="#e9e4f5"/>
+  <text x="600" y="840" text-anchor="middle" class="sans small">Guided ritual: 6 editable default steps · 42 minutes · child-scoped</text>
+  <text x="600" y="860" text-anchor="middle" class="sans small">Finishing the guide does not log sleep; the parent starts bedtime separately.</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba detects that daytime milk is easing off</title>
+  <desc id="desc">A week-over-week comparison of logged daytime bottle milk. The recent average is 620 millilitres and the earlier average is 900, a 31 percent and 280 millilitre fall. At 22 weeks or older the current app labels the fall as a solids hand-over without checking that solids were logged.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF7EF"/><stop offset="1" stop-color="#EEF8F4"/></linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102C4A"/><stop offset="1" stop-color="#1C5060"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#102C4A" flood-opacity=".13"/></filter>
+    <style>
+      .sans{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.serif{font-family:Georgia,"Times New Roman",serif}.eyebrow{font-size:16px;font-weight:800;letter-spacing:1.6px}.body{font-size:20px}.small{font-size:17px}.strong{font-weight:800}.muted{fill:#667583}
+    </style>
+  </defs>
+  <rect width="1200" height="900" rx="36" fill="url(#bg)"/>
+  <circle cx="1110" cy="95" r="120" fill="#D8A0A9" opacity=".12"/>
+  <circle cx="88" cy="820" r="150" fill="#78BFAE" opacity=".1"/>
+
+  <text x="60" y="64" class="sans eyebrow" fill="#A44F70">THE CURRENT FLUTTER RULE</text>
+  <text x="60" y="111" class="serif" font-size="39" font-weight="700" fill="#2D2633">It sees measured daytime milk—not total intake</text>
+  <text x="60" y="148" class="sans body" fill="#6A6170">Two prior week-sized windows are compared; today stays out because it is still in progress.</text>
+
+  <g filter="url(#shadow)"><rect x="52" y="187" width="694" height="424" rx="29" fill="#FFFFFF"/></g>
+  <text x="84" y="228" class="sans eyebrow muted">AVERAGE OF AMOUNT-BEARING DAYS</text>
+
+  <text x="84" y="279" class="sans strong" font-size="23" fill="#285A59">Recent 7 slots</text>
+  <text x="704" y="279" text-anchor="end" class="sans strong" font-size="27" fill="#137B6D">620 ml / logged day</text>
+  <rect x="84" y="300" width="620" height="58" rx="18" fill="#E9F4F1"/>
+  <rect x="84" y="300" width="427" height="58" rx="18" fill="#77C3B2"/>
+  <g class="sans strong" font-size="15" text-anchor="middle">
+    <g fill="#FFFFFF"><circle cx="111" cy="387" r="18"/><circle cx="171" cy="387" r="18"/><circle cx="231" cy="387" r="18"/><circle cx="291" cy="387" r="18"/><circle cx="351" cy="387" r="18"/></g>
+    <g fill="#167C6E"><text x="111" y="393">ml</text><text x="171" y="393">ml</text><text x="231" y="393">ml</text><text x="291" y="393">ml</text><text x="351" y="393">ml</text></g>
+    <g fill="#EEF1F2" stroke="#AEB8BE" stroke-dasharray="4 4"><circle cx="411" cy="387" r="18"/><circle cx="471" cy="387" r="18"/></g>
+    <g fill="#7A8892"><text x="411" y="393">—</text><text x="471" y="393">—</text></g>
+  </g>
+  <text x="515" y="393" class="sans small muted">5 logged · 2 unknown</text>
+
+  <text x="84" y="455" class="sans strong" font-size="23" fill="#6C493E">Earlier 7 slots</text>
+  <text x="704" y="455" text-anchor="end" class="sans strong" font-size="27" fill="#B2584A">900 ml / logged day</text>
+  <rect x="84" y="476" width="620" height="58" rx="18" fill="#F7EEE9"/>
+  <rect x="84" y="476" width="620" height="58" rx="18" fill="#E0A08B"/>
+  <text x="84" y="575" class="sans strong" font-size="21" fill="#2D3F50">Change: −31% and −280 ml/day</text>
+  <text x="704" y="575" text-anchor="end" class="sans small muted">both thresholds pass</text>
+
+  <g filter="url(#shadow)"><rect x="778" y="187" width="370" height="424" rx="29" fill="url(#ink)"/></g>
+  <text x="812" y="229" class="sans eyebrow" fill="#F4C778">THE WORDING SWITCH</text>
+  <text x="812" y="276" class="serif" font-size="31" font-weight="700" fill="#FFFFFF">The same fall,</text>
+  <text x="812" y="311" class="serif" font-size="31" font-weight="700" fill="#FFFFFF">a different story</text>
+  <rect x="812" y="344" width="302" height="82" rx="20" fill="#FFFFFF" opacity=".1"/>
+  <text x="836" y="376" class="sans eyebrow" fill="#B9D9D2">UNDER 22 WEEKS</text>
+  <text x="836" y="406" class="sans strong" font-size="19" fill="#FFFFFF">“Daytime milk is down”</text>
+  <path d="M963 438v37" stroke="#F4C778" stroke-width="4" stroke-linecap="round"/>
+  <path d="M951 464l12 12 12-12" fill="none" stroke="#F4C778" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="812" y="489" width="302" height="92" rx="20" fill="#F4C778"/>
+  <text x="836" y="521" class="sans eyebrow" fill="#5C4317">22 WEEKS OR MORE</text>
+  <text x="836" y="552" class="sans strong" font-size="19" fill="#443316">“Milk is easing off”</text>
+  <text x="963" y="605" text-anchor="middle" class="sans" font-size="15" fill="#D7E7EA">No solid meal is required to trigger this switch.</text>
+
+  <g filter="url(#shadow)"><rect x="52" y="651" width="1096" height="113" rx="27" fill="#FFFFFF"/></g>
+  <text x="84" y="688" class="sans eyebrow muted">THE CARD NEEDS</text>
+  <g class="sans strong" font-size="17" fill="#183A56">
+    <circle cx="99" cy="729" r="18" fill="#E3F5F0"/><text x="99" y="735" text-anchor="middle" fill="#178776">✓</text><text x="129" y="735">14 prior day slots</text>
+    <circle cx="327" cy="729" r="18" fill="#E3F5F0"/><text x="327" y="735" text-anchor="middle" fill="#178776">✓</text><text x="357" y="735">4+ measured / week</text>
+    <circle cx="596" cy="729" r="18" fill="#E3F5F0"/><text x="596" y="735" text-anchor="middle" fill="#178776">✓</text><text x="626" y="735">change ≥20%</text>
+    <circle cx="809" cy="729" r="18" fill="#E3F5F0"/><text x="809" y="735" text-anchor="middle" fill="#178776">✓</text><text x="839" y="735">change ≥60 ml/day</text>
+  </g>
+
+  <rect x="52" y="801" width="1096" height="62" rx="24" fill="#DDA3AE"/>
+  <text x="600" y="827" text-anchor="middle" class="sans strong" font-size="18" fill="#4C2634">Not checked: actual solids · breast milk transfer · night milk · wet nappies · growth · illness</text>
+  <text x="600" y="851" text-anchor="middle" class="sans small" fill="#5F3341">A measured daytime trend is a prompt to review the whole feeding picture—not a target.</text>
+</svg>

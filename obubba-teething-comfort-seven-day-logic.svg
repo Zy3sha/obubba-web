@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba decides whether to show teething comfort</title>
+  <desc id="desc">The app scans the latest seven days for five discomfort markers. Drooling, chewing and temperature do not trigger the card. A separate episode key stops repeated prompts.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101b2d"/><stop offset="1" stop-color="#243145"/></linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#253349"/><stop offset="1" stop-color="#1b2639"/></linearGradient>
+    <linearGradient id="result" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e3a45f"/><stop offset="1" stop-color="#c9828f"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#060b14" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="1440" height="960" rx="52" fill="url(#bg)"/>
+  <circle cx="1280" cy="110" r="280" fill="#4c938a" opacity=".10"/><circle cx="120" cy="860" r="250" fill="#c9828f" opacity=".08"/>
+  <text x="720" y="76" fill="#f4bd70" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="4" text-anchor="middle">THE EXACT FLUTTER READ</text>
+  <text x="720" y="130" fill="#fff8f1" font-family="Georgia, serif" font-size="48" font-weight="700" text-anchor="middle">Why the teething-comfort card appears</text>
+  <text x="720" y="166" fill="#bdc8d5" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">Recent discomfort unlocks support. Common behaviours and temperature do not.</text>
+  <g filter="url(#shadow)"><rect x="92" y="214" width="1256" height="152" rx="28" fill="url(#card)" stroke="#7c8da4" stroke-width="2"/></g>
+  <text x="132" y="254" fill="#9fb1c6" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">TODAY + PREVIOUS 7 DAYS</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <g transform="translate(154 280)"><rect width="125" height="58" rx="18" fill="#2d425d"/><text x="62.5" y="36" fill="#f4f7fb" font-size="18">Day 7</text></g>
+    <g transform="translate(306 280)"><rect width="125" height="58" rx="18" fill="#2d425d"/><text x="62.5" y="36" fill="#f4f7fb" font-size="18">Day 6</text></g>
+    <g transform="translate(458 280)"><rect width="125" height="58" rx="18" fill="#e1a25f"/><text x="62.5" y="36" fill="#172235" font-size="18" font-weight="700">Sore gum</text></g>
+    <g transform="translate(610 280)"><rect width="125" height="58" rx="18" fill="#2d425d"/><text x="62.5" y="36" fill="#f4f7fb" font-size="18">Day 4</text></g>
+    <g transform="translate(762 280)"><rect width="125" height="58" rx="18" fill="#6ea89e"/><text x="62.5" y="36" fill="#122033" font-size="18" font-weight="700">Fussy</text></g>
+    <g transform="translate(914 280)"><rect width="125" height="58" rx="18" fill="#2d425d"/><text x="62.5" y="36" fill="#f4f7fb" font-size="18">Day 2</text></g>
+    <g transform="translate(1066 280)"><rect width="125" height="58" rx="18" fill="#c9828f"/><text x="62.5" y="36" fill="#182237" font-size="18" font-weight="700">Sleep</text></g>
+    <g transform="translate(1218 280)"><rect width="82" height="58" rx="18" fill="#2d425d"/><text x="41" y="36" fill="#f4f7fb" font-size="18">Now</text></g>
+  </g>
+  <path d="M720 382v54" stroke="#e6b36b" stroke-width="5" stroke-linecap="round"/><path d="M706 430l14 24 14-24" fill="#e6b36b"/>
+  <g filter="url(#shadow)"><rect x="92" y="472" width="598" height="262" rx="30" fill="url(#card)" stroke="#d19a59" stroke-width="2"/><rect x="750" y="472" width="598" height="262" rx="30" fill="url(#card)" stroke="#63a69a" stroke-width="2"/></g>
+  <text x="132" y="520" fill="#f4bd70" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">CAN UNLOCK SUPPORT</text>
+  <g fill="#fff7ef" font-family="Arial, sans-serif" font-size="24"><circle cx="145" cy="566" r="7" fill="#e4a55f"/><text x="170" y="574">Swollen or sore gums</text><circle cx="145" cy="612" r="7" fill="#e4a55f"/><text x="170" y="620">Fussiness · disturbed sleep</text><circle cx="145" cy="658" r="7" fill="#e4a55f"/><text x="170" y="666">Going off food · red cheeks</text></g>
+  <text x="132" y="704" fill="#aebccd" font-family="Arial, sans-serif" font-size="17">Counts distinct symptomatic dates, not taps or teeth.</text>
+  <text x="790" y="520" fill="#82c2b7" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">STORED, BUT DOES NOT UNLOCK IT</text>
+  <g fill="#fff7ef" font-family="Arial, sans-serif" font-size="24"><circle cx="803" cy="566" r="7" fill="#71b0a5"/><text x="828" y="574">Drooling</text><circle cx="803" cy="612" r="7" fill="#71b0a5"/><text x="828" y="620">Chewing</text><circle cx="803" cy="658" r="7" fill="#71b0a5"/><text x="828" y="666">Temperature — check separately</text></g>
+  <text x="790" y="704" fill="#aebccd" font-family="Arial, sans-serif" font-size="17">The log records observations; the card is not a diagnosis.</text>
+  <path d="M720 752v38" stroke="#e6b36b" stroke-width="5" stroke-linecap="round"/><path d="M706 784l14 24 14-24" fill="#e6b36b"/>
+  <g filter="url(#shadow)"><rect x="280" y="820" width="880" height="92" rx="28" fill="url(#result)"/></g>
+  <text x="720" y="858" fill="#172135" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="3" text-anchor="middle">LOW-URGENCY, EPISODE-AWARE SUPPORT</text>
+  <text x="720" y="892" fill="#172135" font-family="Georgia, serif" font-size="30" font-weight="700" text-anchor="middle">“Teething comfort for Maya”</text>
+  <text x="720" y="938" fill="#9eacbd" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">A gap over 10 days starts a new episode; acknowledgement stays stable as symptoms change.</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690" role="img" aria-labelledby="title desc">
+  <title id="title">Does a 5am feed count as night or morning?</title>
+  <desc id="desc">A decision guide: if the overnight sleep continues after the feed, log it with the night. If the baby stays awake and the day begins, log it with the morning.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c2340"/>
+      <stop offset="0.58" stop-color="#18385b"/>
+      <stop offset="1" stop-color="#f3a98f"/>
+    </linearGradient>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#142e51"/>
+      <stop offset="1" stop-color="#244d76"/>
+    </linearGradient>
+    <linearGradient id="morning" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7ed"/>
+      <stop offset="1" stop-color="#f9d6c8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#06152a" flood-opacity=".2"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="690" rx="42" fill="url(#bg)"/>
+  <circle cx="1060" cy="72" r="128" fill="#ffd6b5" opacity=".12"/>
+  <circle cx="90" cy="610" r="170" fill="#88b8d9" opacity=".08"/>
+
+  <text x="600" y="72" text-anchor="middle" fill="#f7d69a" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="4">THE 5AM QUESTION</text>
+  <text x="600" y="124" text-anchor="middle" fill="#ffffff" font-family="Georgia,serif" font-size="42" font-weight="700">What happened after the feed?</text>
+  <text x="600" y="159" text-anchor="middle" fill="#dbe9f4" font-family="Inter,Arial,sans-serif" font-size="21">The clock alone does not decide.</text>
+
+  <path d="M600 180 L600 222 M600 222 L315 258 M600 222 L885 258" fill="none" stroke="#f5d7a0" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="600" cy="222" r="8" fill="#f5d7a0"/>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="258" width="450" height="338" rx="30" fill="url(#night)" stroke="#6d92b5" stroke-width="2"/>
+    <rect x="660" y="258" width="450" height="338" rx="30" fill="url(#morning)" stroke="#f7c4ad" stroke-width="2"/>
+  </g>
+
+  <circle cx="160" cy="327" r="36" fill="#0d203b" stroke="#f7d69a" stroke-width="2"/>
+  <path d="M174 307a24 24 0 1 0 8 43 29 29 0 1 1-8-43z" fill="#f7d69a"/>
+  <text x="215" y="319" fill="#f7d69a" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">BACK TO SLEEP</text>
+  <text x="215" y="350" fill="#ffffff" font-family="Georgia,serif" font-size="28" font-weight="700">Count it with the night</text>
+  <line x1="130" y1="382" x2="500" y2="382" stroke="#6d92b5"/>
+  <text x="130" y="424" fill="#e4eef7" font-family="Inter,Arial,sans-serif" font-size="21">Baby feeds, resettles and the</text>
+  <text x="130" y="454" fill="#e4eef7" font-family="Inter,Arial,sans-serif" font-size="21">overnight sleep continues.</text>
+  <rect x="130" y="495" width="320" height="54" rx="27" fill="#f7d69a"/>
+  <text x="290" y="529" text-anchor="middle" fill="#142e51" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800">5:05 feed → asleep 5:28</text>
+
+  <circle cx="730" cy="327" r="36" fill="#fff7ed" stroke="#c36f58" stroke-width="2"/>
+  <circle cx="730" cy="327" r="15" fill="#ef9b79"/>
+  <g stroke="#ef9b79" stroke-width="3" stroke-linecap="round">
+    <path d="M730 299v-10M730 365v-10M702 327h-10M768 327h-10M710 307l-7-7M757 354l-7-7M750 307l7-7M703 354l7-7"/>
+  </g>
+  <text x="785" y="319" fill="#9b4f3c" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">DAY BEGINS</text>
+  <text x="785" y="350" fill="#18304d" font-family="Georgia,serif" font-size="28" font-weight="700">Count it with morning</text>
+  <line x1="700" y1="382" x2="1070" y2="382" stroke="#eeb9a3"/>
+  <text x="700" y="424" fill="#30455e" font-family="Inter,Arial,sans-serif" font-size="21">Baby stays awake and you move</text>
+  <text x="700" y="454" fill="#30455e" font-family="Inter,Arial,sans-serif" font-size="21">into normal daytime cues.</text>
+  <rect x="700" y="495" width="320" height="54" rx="27" fill="#18385b"/>
+  <text x="860" y="529" text-anchor="middle" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800">5:05 feed → day starts</text>
+
+  <text x="600" y="644" text-anchor="middle" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600">Feed responsively either way. The label helps reveal patterns; it never decides whether baby may eat.</text>
+</svg>

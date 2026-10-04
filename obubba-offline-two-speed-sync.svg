@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1540" viewBox="0 0 1000 1540" role="img" aria-labelledby="title desc">
+  <title id="title">What works offline in OBubba and what waits for connection</title>
+  <desc id="desc">A two-column guide for a previously loaded baby, followed by the save, queue, reconnect and family merge flow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17152e"/><stop offset="1" stop-color="#392044"/></linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6d6ab"/><stop offset="1" stop-color="#e7a887"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0d0b1b" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="1000" height="1540" rx="48" fill="url(#bg)"/>
+  <circle cx="870" cy="118" r="190" fill="#694666" opacity=".24"/><circle cx="78" cy="1420" r="210" fill="#243f58" opacity=".28"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="74" y="108" fill="#eab69a" font-size="24" font-weight="700" letter-spacing="3">OBUBBA • OFFLINE GUIDE</text>
+    <text x="74" y="178" fill="#fffaf4" font-size="56" font-weight="800">No signal is not</text>
+    <text x="74" y="241" fill="#fffaf4" font-size="56" font-weight="800">no story.</text>
+    <text x="74" y="293" fill="#d7cfdd" font-size="25">The honest boundary: same phone + baby already loaded.</text>
+
+    <g filter="url(#shadow)">
+      <rect x="54" y="348" width="430" height="620" rx="30" fill="#fffaf4"/>
+      <rect x="516" y="348" width="430" height="620" rx="30" fill="#f3eaf1"/>
+    </g>
+    <circle cx="108" cy="413" r="24" fill="#d7efe3"/><path d="m97 413 8 8 15-18" fill="none" stroke="#27664d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="146" y="409" fill="#28223c" font-size="29" font-weight="800">Works now</text><text x="146" y="443" fill="#655d70" font-size="19">On this prepared phone</text>
+    <g fill="#342c43" font-size="24">
+      <text x="94" y="518">• Cached baby + recent history</text>
+      <text x="94" y="590">• Add, edit or delete logs</text>
+      <text x="94" y="662">• Sleep and feed timers</text>
+      <text x="94" y="734">• Patterns from cached data</text>
+      <text x="94" y="806">• Stories + sound machine</text>
+      <text x="94" y="878">• Cached care guidance</text>
+    </g>
+    <circle cx="570" cy="413" r="24" fill="#ead7e4"/><path d="M559 413h22M570 402v22" fill="none" stroke="#764668" stroke-width="6" stroke-linecap="round"/>
+    <text x="608" y="409" fill="#28223c" font-size="29" font-weight="800">Waits online</text><text x="608" y="443" fill="#655d70" font-size="19">Identity, sharing + live data</text>
+    <g fill="#342c43" font-size="24">
+      <text x="556" y="518">• First baby setup</text>
+      <text x="556" y="590">• New-device recovery</text>
+      <text x="556" y="662">• Share, join or import</text>
+      <text x="556" y="734">• Live weather + richer AI</text>
+      <text x="556" y="806">• Store verification</text>
+      <text x="556" y="878">• Partner sees queued logs</text>
+    </g>
+
+    <text x="74" y="1048" fill="#eab69a" font-size="23" font-weight="700" letter-spacing="2">WHAT HAPPENS TO A NEW LOG</text>
+    <g font-size="21" font-weight="800" text-anchor="middle">
+      <rect x="54" y="1090" width="196" height="112" rx="24" fill="#fffaf4"/><text x="152" y="1138" fill="#332b42">SAVE</text><text x="152" y="1172" fill="#746a79" font-size="17">on this phone</text>
+      <path d="M265 1146h35" stroke="#e7a887" stroke-width="7" stroke-linecap="round"/><path d="m290 1135 13 11-13 11" fill="none" stroke="#e7a887" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="316" y="1090" width="160" height="112" rx="24" fill="#fffaf4"/><text x="396" y="1138" fill="#332b42">QUEUE</text><text x="396" y="1172" fill="#746a79" font-size="17">safely</text>
+      <path d="M491 1146h35" stroke="#e7a887" stroke-width="7" stroke-linecap="round"/><path d="m516 1135 13 11-13 11" fill="none" stroke="#e7a887" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="542" y="1090" width="166" height="112" rx="24" fill="url(#warm)"/><text x="625" y="1138" fill="#332b42">RECONNECT</text><text x="625" y="1172" fill="#594254" font-size="17">send changes</text>
+      <path d="M723 1146h35" stroke="#e7a887" stroke-width="7" stroke-linecap="round"/><path d="m748 1135 13 11-13 11" fill="none" stroke="#e7a887" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="774" y="1090" width="172" height="112" rx="24" fill="#fffaf4"/><text x="860" y="1138" fill="#332b42">MERGE</text><text x="860" y="1172" fill="#746a79" font-size="17">with family</text>
+    </g>
+
+    <rect x="54" y="1270" width="892" height="176" rx="30" fill="#ffffff" opacity=".09" stroke="#ffffff" stroke-opacity=".16"/>
+    <text x="90" y="1325" fill="#fffaf4" font-size="25" font-weight="800">Fresh phone? Reconnect first.</text>
+    <text x="90" y="1370" fill="#d7cfdd" font-size="21">Without the real cached baby, OBubba refuses to invent a</text>
+    <text x="90" y="1402" fill="#d7cfdd" font-size="21">minimal record that could put richer family history at risk.</text>
+    <text x="74" y="1490" fill="#bcb1c4" font-size="17">Status reflects the Flutter implementation reviewed 7 March 2027.</text>
+  </g>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">When OBubba shows the Spacing out new allergens card</title>
+  <desc id="desc">A plain-language map of the Flutter detector: it checks recent solids and earlier allergen history, identifies genuinely new allergens, and shows a low-urgency card for two first introductions on one calendar day or three in the newest seven-day window.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173c39"/>
+      <stop offset="1" stop-color="#0f2d2b"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#071b19" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1500" rx="56" fill="url(#bg)"/>
+  <circle cx="1065" cy="140" r="180" fill="#dfb965" opacity=".14"/>
+  <circle cx="80" cy="1410" r="210" fill="#83b4a5" opacity=".12"/>
+
+  <text x="78" y="112" fill="#e8c978" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3">CURRENT FLUTTER LOGIC · FEBRUARY 2027</text>
+  <text x="78" y="180" fill="#fffaf1" font-family="Arial, sans-serif" font-size="48" font-weight="700">When “Spacing out new</text>
+  <text x="78" y="238" fill="#fffaf1" font-family="Arial, sans-serif" font-size="48" font-weight="700">allergens” appears</text>
+  <text x="78" y="292" fill="#cfe2dc" font-family="Arial, sans-serif" font-size="25">It is a bookkeeping nudge—not a reaction or readiness check.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="348" width="1060" height="205" rx="32" fill="#fffaf2"/>
+    <circle cx="137" cy="417" r="34" fill="#d7eee6"/>
+    <text x="126" y="428" fill="#173c39" font-family="Arial, sans-serif" font-size="34" font-weight="700">1</text>
+    <text x="195" y="404" fill="#173c39" font-family="Arial, sans-serif" font-size="31" font-weight="700">Reads two layers of history</text>
+    <text x="195" y="450" fill="#405b58" font-family="Arial, sans-serif" font-size="25">Recent solids: today + the previous 21 calendar days</text>
+    <text x="195" y="490" fill="#405b58" font-family="Arial, sans-serif" font-size="25">Earlier history: allergens already logged before that window</text>
+  </g>
+
+  <path d="M600 562v45" stroke="#e8c978" stroke-width="5" stroke-linecap="round"/>
+  <path d="m587 597 13 17 13-17" fill="none" stroke="#e8c978" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="622" width="1060" height="250" rx="32" fill="#fffaf2"/>
+    <circle cx="137" cy="691" r="34" fill="#f5e3b6"/>
+    <text x="126" y="702" fill="#173c39" font-family="Arial, sans-serif" font-size="34" font-weight="700">2</text>
+    <text x="195" y="678" fill="#173c39" font-family="Arial, sans-serif" font-size="31" font-weight="700">Works out what is genuinely “new”</text>
+    <text x="195" y="726" fill="#405b58" font-family="Arial, sans-serif" font-size="25">Recognised names are normalised: eggs → egg, milk → dairy.</text>
+    <text x="195" y="766" fill="#405b58" font-family="Arial, sans-serif" font-size="25">An allergen must not appear in the earlier history, and its first</text>
+    <text x="195" y="804" fill="#405b58" font-family="Arial, sans-serif" font-size="25">recent appearance must sit within six days of the newest meal.</text>
+    <text x="195" y="842" fill="#765918" font-family="Arial, sans-serif" font-size="23" font-weight="700">Established tolerated foods are excluded from the warning.</text>
+  </g>
+
+  <path d="M600 882v45" stroke="#e8c978" stroke-width="5" stroke-linecap="round"/>
+  <path d="m587 917 13 17 13-17" fill="none" stroke="#e8c978" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="78" y="986" fill="#fffaf1" font-family="Arial, sans-serif" font-size="31" font-weight="700">The low-urgency card can appear after 3+ solids logs when…</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="1024" width="505" height="240" rx="32" fill="#d7eee6"/>
+    <text x="112" y="1083" fill="#173c39" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2">PATH A</text>
+    <text x="112" y="1144" fill="#173c39" font-family="Arial, sans-serif" font-size="43" font-weight="700">2+ new</text>
+    <text x="112" y="1196" fill="#173c39" font-family="Arial, sans-serif" font-size="27">allergens first appear on the</text>
+    <text x="112" y="1234" fill="#173c39" font-family="Arial, sans-serif" font-size="27" font-weight="700">same calendar day</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="625" y="1024" width="505" height="240" rx="32" fill="#f5e3b6"/>
+    <text x="667" y="1083" fill="#173c39" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2">PATH B</text>
+    <text x="667" y="1144" fill="#173c39" font-family="Arial, sans-serif" font-size="43" font-weight="700">3+ new</text>
+    <text x="667" y="1196" fill="#173c39" font-family="Arial, sans-serif" font-size="27">allergens first appear across the</text>
+    <text x="667" y="1234" fill="#173c39" font-family="Arial, sans-serif" font-size="27" font-weight="700">newest 7-day window</text>
+  </g>
+
+  <rect x="70" y="1310" width="1060" height="122" rx="28" fill="#0b2422" stroke="#5c817a" stroke-width="2"/>
+  <text x="105" y="1358" fill="#e8c978" font-family="Arial, sans-serif" font-size="24" font-weight="700">STAYS QUIET FOR</text>
+  <text x="105" y="1400" fill="#d7e9e3" font-family="Arial, sans-serif" font-size="24">two new allergens on different days · established foods · stale logs</text>
+  <text x="600" y="1470" text-anchor="middle" fill="#9fbbb5" font-family="Arial, sans-serif" font-size="20">Source: OBubba Flutter weaning_allergen_pacing.dart and automated tests</text>
+</svg>

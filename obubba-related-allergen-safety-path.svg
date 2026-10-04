@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Related allergen does not mean diagnosed allergy</title>
+  <desc id="desc">A calm five-step path from recording an observed reaction to urgent help when severe, pausing the suspected food, preserving exact details, and making the next plan with a clinician. A side note explains that OBubba's related-food prompt is a discussion flag, not a home-test instruction.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbf8f3"/>
+      <stop offset="1" stop-color="#f1ecf6"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9b15e"/>
+      <stop offset="1" stop-color="#a57821"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#4b4056" flood-opacity=".10"/>
+    </filter>
+    <style>
+      .eyebrow{font:700 17px Inter,Arial,sans-serif;letter-spacing:2.4px;fill:#9b7429}
+      .h1{font:700 43px Georgia,serif;fill:#312c3b}
+      .sub{font:400 20px Inter,Arial,sans-serif;fill:#686172}
+      .num{font:800 18px Inter,Arial,sans-serif;fill:white}
+      .label{font:700 21px Inter,Arial,sans-serif;fill:#373140}
+      .body{font:400 17px Inter,Arial,sans-serif;fill:#6f6876}
+      .sideH{font:700 24px Georgia,serif;fill:#383141}
+      .sideB{font:400 17px Inter,Arial,sans-serif;fill:#5e5767}
+      .sideHi{font:700 24px Georgia,serif;fill:#ffffff}
+      .sideBi{font:400 17px Inter,Arial,sans-serif;fill:#eee8f1}
+      .tiny{font:600 15px Inter,Arial,sans-serif;fill:#7b5c22}
+    </style>
+  </defs>
+  <rect width="1200" height="900" rx="34" fill="url(#bg)"/>
+  <circle cx="1090" cy="98" r="128" fill="#eadde2" opacity=".65"/>
+  <circle cx="106" cy="820" r="170" fill="#e4ebdf" opacity=".75"/>
+  <text x="76" y="76" class="eyebrow">OBUBBA · AFTER A RECORDED FOOD REACTION</text>
+  <text x="76" y="132" class="h1">Related is not the same as allergic</text>
+  <text x="76" y="170" class="sub">Use the prompt to prepare a better clinical conversation—not a home challenge.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="64" y="220" width="700" height="116" rx="24" fill="#ffffff"/>
+    <circle cx="116" cy="278" r="27" fill="url(#gold)"/>
+    <text x="110" y="284" text-anchor="middle" class="num">1</text>
+    <text x="166" y="266" class="label">Observe first</text>
+    <text x="166" y="296" class="body">Breathing, alertness and symptoms come before the app.</text>
+
+    <rect x="64" y="354" width="700" height="116" rx="24" fill="#fff7f5" stroke="#e8b2a7" stroke-width="2"/>
+    <circle cx="116" cy="412" r="27" fill="#b95b4a"/>
+    <text x="110" y="418" text-anchor="middle" class="num">2</text>
+    <text x="166" y="400" class="label">Severe reaction? Get urgent help</text>
+    <text x="166" y="430" class="body">Use the allergy plan or adrenaline if prescribed, and call 999.</text>
+
+    <rect x="64" y="488" width="700" height="116" rx="24" fill="#ffffff"/>
+    <circle cx="116" cy="546" r="27" fill="url(#gold)"/>
+    <text x="110" y="552" text-anchor="middle" class="num">3</text>
+    <text x="166" y="534" class="label">Pause the suspected food</text>
+    <text x="166" y="564" class="body">Do not deliberately re-offer it to see whether it happens again.</text>
+
+    <rect x="64" y="622" width="700" height="116" rx="24" fill="#ffffff"/>
+    <circle cx="116" cy="680" r="27" fill="url(#gold)"/>
+    <text x="110" y="686" text-anchor="middle" class="num">4</text>
+    <text x="166" y="668" class="label">Keep the useful facts</text>
+    <text x="166" y="698" class="body">Food, ingredients, amount, timing, symptoms and advice received.</text>
+
+    <rect x="64" y="756" width="700" height="86" rx="24" fill="#ffffff"/>
+    <circle cx="116" cy="799" r="27" fill="url(#gold)"/>
+    <text x="110" y="805" text-anchor="middle" class="num">5</text>
+    <text x="166" y="793" class="label">Make the next plan with a clinician</text>
+    <text x="166" y="820" class="body">Decide what to avoid, keep eating or assess next.</text>
+  </g>
+
+  <path d="M800 298 C848 272 872 255 914 250" fill="none" stroke="#b88b36" stroke-width="3" stroke-dasharray="7 8"/>
+  <circle cx="799" cy="298" r="5" fill="#b88b36"/>
+  <g filter="url(#shadow)">
+    <rect x="826" y="220" width="310" height="402" rx="28" fill="#3a3342"/>
+    <rect x="854" y="250" width="90" height="28" rx="14" fill="#d8b260"/>
+    <text x="899" y="270" text-anchor="middle" class="tiny" fill="#372d25">APP PROMPT</text>
+    <text x="854" y="325" class="sideHi">“Also watch” means</text>
+    <text x="854" y="358" class="sideHi">“also discuss”</text>
+    <text x="854" y="407" class="sideBi">Some allergen families share</text>
+    <text x="854" y="433" class="sideBi">proteins or commonly overlap.</text>
+    <line x1="854" y1="467" x2="1108" y2="467" stroke="#62596a"/>
+    <circle cx="870" cy="503" r="6" fill="#d8b260"/>
+    <text x="890" y="509" class="sideBi">Not a diagnosis</text>
+    <circle cx="870" cy="545" r="6" fill="#d8b260"/>
+    <text x="890" y="551" class="sideBi">Not proof of another allergy</text>
+    <circle cx="870" cy="587" r="6" fill="#d8b260"/>
+    <text x="890" y="593" class="sideBi">Not a prompt to trial at home</text>
+  </g>
+  <rect x="826" y="652" width="310" height="190" rx="24" fill="#fffaf0" stroke="#d8b260" stroke-width="2"/>
+  <text x="854" y="696" class="sideH">Example: peanut</text>
+  <text x="854" y="730" class="sideB">OBubba currently flags</text>
+  <text x="854" y="756" class="sideB">tree nuts, lupin and soya</text>
+  <text x="854" y="782" class="sideB">for discussion. Many children</text>
+  <text x="854" y="808" class="sideB">will not react to all of them.</text>
+</svg>

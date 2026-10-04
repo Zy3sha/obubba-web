@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">How Luna routes an OBubba app-help question</title>
+  <desc id="desc">A parent question passes through safety and intent checks. Precise app questions retrieve a fixed route, care questions use a specialist handler, and weak matches fall back honestly.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff9f3"/>
+      <stop offset="1" stop-color="#f1f2fb"/>
+    </linearGradient>
+    <linearGradient id="luna" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b315a"/>
+      <stop offset="1" stop-color="#1d3049"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#273a4e" flood-opacity=".13"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="780" rx="36" fill="url(#bg)"/>
+  <text x="70" y="76" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#2f2940">One question. The right kind of answer.</text>
+  <text x="70" y="116" font-family="Arial, sans-serif" font-size="20" fill="#655e70">Current Flutter routing keeps exact menu paths away from generative guesswork.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="160" width="1060" height="112" rx="26" fill="url(#luna)"/>
+    <circle cx="129" cy="216" r="30" fill="#f2a587"/>
+    <path d="M118 217c8-14 24-14 32 0M124 207h1M143 207h1" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <text x="182" y="209" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#cfc2f4">PARENT ASKS</text>
+    <text x="182" y="242" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#fff">“Where do I log tummy time?”</text>
+  </g>
+
+  <path d="M600 272V320" stroke="#8778b8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M590 311l10 13 10-13" fill="none" stroke="#8778b8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="326" y="322" width="548" height="86" rx="24" fill="#fff" stroke="#bcb2dc" stroke-width="2"/>
+  <text x="600" y="357" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#796ba7">ROUTER CHECKS FIRST</text>
+  <text x="600" y="386" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#3e4654">Safety · live status · app action · care question</text>
+
+  <path d="M600 408V456M600 438H205V468M600 438H995V468" fill="none" stroke="#a9a1b9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)" font-family="Arial, sans-serif">
+    <rect x="55" y="466" width="300" height="220" rx="26" fill="#fff" stroke="#f0b49a" stroke-width="2"/>
+    <circle cx="98" cy="510" r="20" fill="#f8ddd1"/>
+    <text x="98" y="517" text-anchor="middle" font-size="21">🛡</text>
+    <text x="130" y="516" font-size="17" font-weight="700" fill="#b56043">SAFETY OR CRISIS</text>
+    <text x="82" y="559" font-size="20" font-weight="700" fill="#2f2940">Vetted response first</text>
+    <text x="82" y="591" font-size="16" fill="#655e70">No ordinary menu search</text>
+    <text x="82" y="620" font-size="16" fill="#655e70">No generative rewrite</text>
+    <rect x="82" y="642" width="246" height="26" rx="13" fill="#fdf0ea"/>
+    <text x="205" y="660" text-anchor="middle" font-size="14" font-weight="700" fill="#9c523b">Urgency stays visible</text>
+
+    <rect x="385" y="450" width="430" height="274" rx="28" fill="#fff" stroke="#8e7ac8" stroke-width="3"/>
+    <circle cx="432" cy="497" r="22" fill="#e9e3fa"/>
+    <text x="432" y="505" text-anchor="middle" font-size="23">⌕</text>
+    <text x="470" y="503" font-size="17" font-weight="700" fill="#7562b0">PRECISE APP QUESTION</text>
+    <text x="418" y="548" font-size="22" font-weight="700" fill="#2f2940">Retrieve a fixed app-help card</text>
+    <text x="418" y="583" font-size="17" fill="#655e70">72 current app-help entries</text>
+    <rect x="418" y="605" width="364" height="76" rx="17" fill="#f3effd"/>
+    <text x="438" y="632" font-size="15" font-weight="700" fill="#7562b0">EXACT PATH</text>
+    <text x="438" y="659" font-size="17" fill="#2f2940">Grow → Activities → Log activity…</text>
+    <text x="600" y="705" text-anchor="middle" font-size="15" font-weight="700" fill="#4f846f">No third-party AI needed</text>
+
+    <rect x="845" y="466" width="300" height="220" rx="26" fill="#fff" stroke="#8fc7bb" stroke-width="2"/>
+    <circle cx="888" cy="510" r="20" fill="#dff3ee"/>
+    <text x="888" y="517" text-anchor="middle" font-size="21">♡</text>
+    <text x="920" y="516" font-size="17" font-weight="700" fill="#4e8b7e">CARE OR ADVICE</text>
+    <text x="872" y="559" font-size="20" font-weight="700" fill="#2f2940">Use the relevant handler</text>
+    <text x="872" y="591" font-size="16" fill="#655e70">Sleep · feeding · crying</text>
+    <text x="872" y="620" font-size="16" fill="#655e70">development · live log</text>
+    <rect x="872" y="642" width="246" height="26" rx="13" fill="#edf8f5"/>
+    <text x="995" y="660" text-anchor="middle" font-size="14" font-weight="700" fill="#3e7569">Do not force an app card</text>
+  </g>
+
+  <text x="600" y="758" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#655e70">Weak or unfamiliar wording should fall back honestly—not invent the nearest-sounding screen.</text>
+</svg>

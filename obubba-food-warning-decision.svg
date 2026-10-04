@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">What to do when OBubba shows a food safety warning</title>
+  <desc id="desc">A decision path begins with a live warning. A red danger warning means stop and change the food or preparation. An amber caution means check age, ingredients or preparation. Then verify the real food and serve only when it is suitable, with baby upright and supervised.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFF9F4"/><stop offset="1" stop-color="#F0F7F4"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="135%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#35443F" flood-opacity=".11"/></filter>
+    <style>
+      .k{font:700 17px system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:2.2px;fill:#93672D}
+      .h{font:800 41px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#253934}
+      .t{font:800 23px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#253934}
+      .b{font:500 17px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#5D6D68}
+      .l{font:800 16px system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.8px}
+      .f{font:700 20px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#FFFFFF}
+      .s{font:500 16px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#DDE9E5}
+    </style>
+  </defs>
+  <rect width="1200" height="680" rx="36" fill="url(#bg)"/>
+  <circle cx="1110" cy="92" r="105" fill="#F0CB8B" opacity=".17"/>
+  <circle cx="70" cy="625" r="135" fill="#8FD6C4" opacity=".14"/>
+  <text x="70" y="68" class="k">A PAUSE SIGNAL · NOT A VERDICT</text>
+  <text x="70" y="118" class="h">A warning appears. What happens next?</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="165" width="280" height="255" rx="24" fill="#FFFFFF"/>
+    <rect x="460" y="165" width="290" height="255" rx="24" fill="#FFFFFF"/>
+    <rect x="850" y="165" width="280" height="255" rx="24" fill="#FFFFFF"/>
+  </g>
+  <circle cx="115" cy="210" r="25" fill="#F7DDD5"/><text x="115" y="216" text-anchor="middle" class="l" fill="#A63C36">!</text>
+  <text x="105" y="262" class="t">Read the warning</text>
+  <rect x="105" y="289" width="94" height="29" rx="14" fill="#FCE6E0"/><text x="152" y="309" text-anchor="middle" class="l" fill="#A63C36">DANGER</text>
+  <text x="105" y="346" class="b"><tspan x="105">Danger: stop and change.</tspan><tspan x="105" dy="27">Caution: verify first.</tspan></text>
+  <rect x="208" y="289" width="104" height="29" rx="14" fill="#FFF0D5"/><text x="260" y="309" text-anchor="middle" class="l" fill="#8B642B">CAUTION</text>
+
+  <circle cx="505" cy="210" r="25" fill="#E1F2EC"/><text x="505" y="217" text-anchor="middle" class="l" fill="#286A5C">2</text>
+  <text x="495" y="262" class="t">Check the real food</text>
+  <text x="495" y="308" class="b"><tspan x="495">Age · shape · texture</tspan><tspan x="495" dy="27">ingredients · cooking</tspan><tspan x="495" dy="27">and the packet label.</tspan></text>
+
+  <circle cx="895" cy="210" r="25" fill="#EAE7F8"/><text x="895" y="217" text-anchor="middle" class="l" fill="#655B8F">3</text>
+  <text x="885" y="262" class="t">Make the meal safer</text>
+  <text x="885" y="308" class="b"><tspan x="885">Remove · replace · cook</tspan><tspan x="885" dy="27">soften · quarter or</tspan><tspan x="885" dy="27">choose another food.</tspan></text>
+
+  <path d="M352 292h104M752 292h94" stroke="#B58A4C" stroke-width="4" stroke-linecap="round"/>
+  <path d="m445 283 11 9-11 9m390-18 11 9-11 9" fill="none" stroke="#B58A4C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="130" y="486" width="940" height="126" rx="25" fill="#243B35"/>
+  <circle cx="188" cy="549" r="29" fill="#8FD6C4"/><path d="m174 549 9 9 20-23" fill="none" stroke="#243B35" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="238" y="540" class="f">Then use the safety basics every time.</text>
+  <text x="238" y="573" class="s">Baby alert and upright · harness fitted · adult within arm’s reach.</text>
+</svg>

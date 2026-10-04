@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow"/>
+<meta charset="UTF-8">
+<title>OBubba Share Card — Master Template</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #2a2520;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    font-family: -apple-system, "SF Pro Display", "Inter", sans-serif;
+  }
+
+  /* ══ MASTER CARD — 1080 × 1080 (tighter square for social) ══ */
+  .card {
+    width: 540px;              /* 50% scale for viewing; export at 2x = 1080px */
+    height: 540px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 36px;
+    box-shadow: 0 40px 120px rgba(0,0,0,0.5);
+    background: linear-gradient(180deg, #FAF6F0 0%, #FFF9F2 50%, #F3EFEA 100%);
+  }
+
+  /* Warm glow layers — app aesthetic (blush + gold + mint hints) */
+  .glow-top {
+    position: absolute;
+    top: -80px; left: -60px;
+    width: 360px; height: 360px;
+    background: radial-gradient(circle, rgba(232,200,190,0.55) 0%, transparent 65%);
+    filter: blur(40px);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .glow-right {
+    position: absolute;
+    top: 20%; right: -80px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(212,168,133,0.35) 0%, transparent 60%);
+    filter: blur(50px);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .glow-bottom {
+    position: absolute;
+    bottom: -100px; left: 30%;
+    width: 400px; height: 300px;
+    background: radial-gradient(circle, rgba(192,112,136,0.18) 0%, transparent 65%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .glow-center {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 480px; height: 480px;
+    background: radial-gradient(circle, rgba(255,245,230,0.5) 0%, transparent 60%);
+    filter: blur(40px);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Noise texture overlay */
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.3  0 0 0 0 0.2  0 0 0 0 0.15  0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 36px;
+    gap: 18px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+  .logo {
+    font-family: "SF Pro Display", "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.18em;
+    color: #4A3B35;
+    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+    text-transform: uppercase;
+  }
+  .tagline {
+    font-family: "SF Pro Display", "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    color: #7A5C52;
+    letter-spacing: 0.02em;
+    opacity: 0.85;
+  }
+
+  /* ── HERO TEXT ── */
+  .hero {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.2;
+    color: #4A3B35;
+    text-align: center;
+    max-width: 78%;
+    letter-spacing: -0.005em;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.4);
+  }
+
+  /* ── GLASS CARD ── */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(25px) saturate(140%);
+    -webkit-backdrop-filter: blur(25px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 22px;
+    padding: 18px 22px;
+    box-shadow: 0 10px 30px rgba(74, 59, 53, 0.06), inset 0 1px 0 rgba(255,255,255,0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 240px;
+  }
+  .glass-label {
+    font-size: 10px;
+    font-weight: 500;
+    color: #7A5C52;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-align: center;
+  }
+  .code-box {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 12px;
+    padding: 10px 16px;
+    text-align: center;
+  }
+  .code-text {
+    font-family: "SF Pro Display", "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4A3B35;
+    letter-spacing: 0.15em;
+  }
+  .glass-sub {
+    font-size: 10px;
+    font-weight: 400;
+    color: #7A5C52;
+    text-align: center;
+    opacity: 0.8;
+  }
+
+  /* ── CTA BUTTON ── */
+  .cta {
+    background: linear-gradient(135deg, #E8DED3 0%, #D6C7B8 100%);
+    border: none;
+    border-radius: 999px;
+    padding: 12px 26px;
+    color: #4A3B35;
+    font-family: "SF Pro Display", "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.4);
+    transition: transform 0.15s;
+  }
+  .cta:active { transform: scale(0.98); }
+
+  /* ── FOOTER ── */
+  .footer {
+    font-size: 11px;
+    font-weight: 400;
+    color: #7A5C52;
+    opacity: 0.7;
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+  }
+
+  /* ── MASCOT ── */
+  .mascot-wrap {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 110px;
+    height: 110px;
+    z-index: 4;
+  }
+  .mascot-glow {
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(circle, rgba(243,239,234,0.8) 0%, transparent 65%);
+    filter: blur(20px);
+    pointer-events: none;
+  }
+  .mascot {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 24px rgba(74,59,53,0.15));
+  }
+
+  /* ── Labels beside the card for Figma handoff ── */
+  .spec {
+    color: #a89a8a;
+    font-size: 11px;
+    font-family: "SF Pro Display", monospace;
+    max-width: 280px;
+    line-height: 1.6;
+    padding-left: 32px;
+  }
+  .spec h3 { color: #FAF6F0; font-size: 13px; margin-bottom: 10px; letter-spacing: 0.1em; }
+  .spec .row { margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .spec .k { color: #FAF6F0; opacity: 0.7; }
+  .spec .v { color: #c9b7a0; }
+  .layout { display: flex; align-items: center; }
+</style>
+</head>
+<body>
+<div class="layout">
+  <div class="card">
+    <div class="glow-top"></div>
+    <div class="glow-right"></div>
+    <div class="glow-bottom"></div>
+    <div class="glow-center"></div>
+    <div class="content">
+      <!-- HEADER -->
+      <div class="header">
+        <div class="logo">OBUBBA</div>
+        <div class="tagline">For the long days… and the longer nights</div>
+      </div>
+
+      <!-- HERO TEXT -->
+      <div class="hero">Understand your baby.<br>Not just their data.</div>
+
+      <!-- GLASS CARD -->
+      <div class="glass-card">
+        <div class="glass-label">Invite a friend</div>
+        <div class="code-box">
+          <div class="code-text">OB7K3M</div>
+        </div>
+        <div class="glass-sub">You both unlock OBUBBA+</div>
+      </div>
+
+      <!-- CTA -->
+      <button class="cta">Try OBUBBA</button>
+
+      <!-- FOOTER -->
+      <div class="footer">obubba.com</div>
+    </div>
+
+    <!-- MASCOT -->
+    <div class="mascot-wrap">
+      <div class="mascot-glow"></div>
+      <img class="mascot" src="obubba-happy.png" alt="OBubba" onerror="this.style.display='none'">
+    </div>
+  </div>
+
+  <div class="spec">
+    <h3>MASTER · 1080×1080</h3>
+    <div class="row"><span class="k">BG gradient</span><br><span class="v">#FAF6F0 → #FFF9F2 → #F3EFEA</span></div>
+    <div class="row"><span class="k">Primary text</span> <span class="v">#4A3B35</span><br><span class="k">Secondary</span> <span class="v">#7A5C52</span></div>
+    <div class="row"><span class="k">Accent soft</span> <span class="v">#E8DED3</span><br><span class="k">Accent deep</span> <span class="v">#D6C7B8</span></div>
+    <div class="row"><span class="k">Glass fill</span> <span class="v">#FFF @ 35%</span><br><span class="k">Glass blur</span> <span class="v">25px</span><br><span class="k">Glass radius</span> <span class="v">22px</span></div>
+    <div class="row"><span class="k">Logo</span> <span class="v">SF Pro 600 · 18 · 0.18em</span><br><span class="k">Hero</span> <span class="v">Playfair 500 · 30</span><br><span class="k">Tagline</span> <span class="v">SF Pro 400 · 11</span></div>
+    <div class="row"><span class="k">CTA gradient</span> <span class="v">#E8DED3 → #D6C7B8</span><br><span class="k">CTA radius</span> <span class="v">999</span></div>
+    <div class="row"><span class="k">Glow blush</span> <span class="v">top-left · #E8C8BE @ 55%</span><br><span class="k">Glow gold</span> <span class="v">right · #D4A885 @ 35%</span><br><span class="k">Glow ter</span> <span class="v">bottom · #C07088 @ 18%</span><br><span class="k">Glow warm</span> <span class="v">center · #FFF5E6 @ 50%</span></div>
+    <div class="row"><span class="k">Spec card</span> <span class="v">540×540 (50% preview)</span><br>Export at 2× = 1080×1080</div>
+  </div>
+</div>
+</body>
+</html>

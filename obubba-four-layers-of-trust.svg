@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1460" viewBox="0 0 1000 1460" role="img" aria-labelledby="title desc">
+  <title id="title">Four layers of trust in OBubba</title>
+  <desc id="desc">Original guidance, observations from family logs, deterministic safety guards and a handoff to original sources or professional help.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#11172d"/><stop offset=".55" stop-color="#241936"/><stop offset="1" stop-color="#40243d"/></linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8d8ae"/><stop offset="1" stop-color="#eaa085"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#080a17" flood-opacity=".33"/></filter>
+  </defs>
+  <rect width="1000" height="1460" rx="48" fill="url(#bg)"/>
+  <circle cx="875" cy="130" r="220" fill="#7a5575" opacity=".22"/><circle cx="75" cy="1375" r="230" fill="#315b63" opacity=".22"/>
+  <g fill="#fff5db" opacity=".75"><circle cx="85" cy="98" r="3"/><circle cx="912" cy="307" r="4"/><circle cx="74" cy="657" r="2"/><circle cx="925" cy="985" r="3"/></g>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="64" y="98" fill="#eeb89a" font-size="22" font-weight="800" letter-spacing="3">OBUBBA • TRUST WITH RECEIPTS</text>
+    <text x="64" y="164" fill="#fffaf4" font-size="50" font-weight="850">A confident answer is not enough.</text>
+    <text x="64" y="216" fill="#d7cedd" font-size="22">Know which layer you are seeing—and where it should lead.</text>
+
+    <g filter="url(#shadow)">
+      <rect x="52" y="286" width="896" height="202" rx="30" fill="#fffaf4"/>
+      <rect x="52" y="512" width="896" height="202" rx="30" fill="#f1eaf3"/>
+      <rect x="52" y="738" width="896" height="202" rx="30" fill="#e4f1ec"/>
+      <rect x="52" y="964" width="896" height="202" rx="30" fill="url(#warm)"/>
+    </g>
+
+    <g>
+      <circle cx="128" cy="387" r="45" fill="#312843"/><text x="128" y="398" text-anchor="middle" fill="#fffaf4" font-size="31" font-weight="900">1</text>
+      <text x="202" y="345" fill="#6f4a72" font-size="17" font-weight="900" letter-spacing="2">SOURCE</text>
+      <text x="202" y="387" fill="#282437" font-size="30" font-weight="850">GENERAL GUIDANCE</text>
+      <text x="202" y="426" fill="#625b69" font-size="20">20 original links • 7 care areas • open the organisation</text>
+      <text x="202" y="458" fill="#7c7581" font-size="17">Informed by ≠ endorsed by</text>
+
+      <circle cx="128" cy="613" r="45" fill="#6c466a"/><text x="128" y="624" text-anchor="middle" fill="#fffaf4" font-size="31" font-weight="900">2</text>
+      <text x="202" y="571" fill="#875879" font-size="17" font-weight="900" letter-spacing="2">OBSERVE</text>
+      <text x="202" y="613" fill="#282437" font-size="30" font-weight="850">YOUR BABY’S PATTERN</text>
+      <text x="202" y="652" fill="#625b69" font-size="20">Parent-entered logs • recent context • visible evidence</text>
+      <text x="202" y="684" fill="#7c7581" font-size="17">Observation ≠ diagnosis</text>
+
+      <circle cx="128" cy="839" r="45" fill="#2f6c59"/><text x="128" y="850" text-anchor="middle" fill="#fffaf4" font-size="31" font-weight="900">3</text>
+      <text x="202" y="797" fill="#387761" font-size="17" font-weight="900" letter-spacing="2">GUARD</text>
+      <text x="202" y="839" fill="#22352f" font-size="30" font-weight="850">DETERMINISTIC SAFETY</text>
+      <text x="202" y="878" fill="#50665e" font-size="20">Red flags interrupt coaching • no diagnosis or dose advice</text>
+      <text x="202" y="910" fill="#637970" font-size="17">Safety does not depend on optional AI</text>
+
+      <circle cx="128" cy="1065" r="45" fill="#684254"/><text x="128" y="1076" text-anchor="middle" fill="#fffaf4" font-size="31" font-weight="900">4</text>
+      <text x="202" y="1023" fill="#75485c" font-size="17" font-weight="900" letter-spacing="2">HAND OFF</text>
+      <text x="202" y="1065" fill="#392b38" font-size="30" font-weight="850">THE RIGHT NEXT DESTINATION</text>
+      <text x="202" y="1104" fill="#5d4855" font-size="20">Original source • health visitor • pharmacist • GP • 111 • 999</text>
+      <text x="202" y="1136" fill="#725c68" font-size="17">The app is not always the answer</text>
+    </g>
+
+    <rect x="52" y="1214" width="896" height="126" rx="28" fill="#ffffff" opacity=".08" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="84" y="1256" fill="#f4c7a9" font-size="18" font-weight="900" letter-spacing="1.4">OPTIONAL AI</text>
+    <text x="84" y="1294" fill="#fffaf4" font-size="23" font-weight="800">Consent-gated conversation; built-in answers remain.</text>
+    <text x="84" y="1323" fill="#cfc5d4" font-size="17">If AI is unavailable, OBubba falls back instead of inventing a live reply.</text>
+
+    <text x="64" y="1401" fill="#fffaf4" font-size="20" font-weight="850">SOURCE ≠ PATTERN ≠ DIAGNOSIS</text>
+    <text x="64" y="1432" fill="#bfb4c5" font-size="16">Flutter implementation reviewed 9 March 2027 • Informational support, not medical care.</text>
+  </g>
+</svg>

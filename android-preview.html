@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-ob-platform="android" data-ob-android-webview style="background:#FFFEFD">
+<head>
+<meta name="robots" content="noindex, nofollow"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>OBubba Android Preview</title>
+  <meta name="theme-color" content="#f0ddd6"/>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="icon" type="image/png" href="obubba-baby-tracker-app-icon-crowned-baby.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="obubba-baby-tracker-app-icon-crowned-baby.png"/>
+  <style>@font-face{font-family:'OBubba Script';src:url('Parisienne-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:block}</style>
+  <link rel="preload" href="Parisienne-Regular.ttf" as="font" type="font/ttf"/>
+  <script>
+    (function(){
+      var existing = window.Capacitor || {};
+      window.__OB_ANDROID_PREVIEW__ = true;
+      window._isNative = true;
+      window.Capacitor = Object.assign({}, existing, {
+        getPlatform:function(){ return "android"; },
+        isNativePlatform:function(){ return true; },
+        Plugins:Object.assign({}, existing.Plugins || {})
+      });
+      document.documentElement.setAttribute("data-ob-platform","android");
+      document.documentElement.setAttribute("data-ob-android-webview","");
+      document.addEventListener("DOMContentLoaded", function(){
+        document.body.setAttribute("data-ob-platform","android");
+        document.body.setAttribute("data-ob-android-webview","");
+        document.body.classList.add("android");
+      }, { once:true });
+    })();
+  </script>
+  <script src="/vendor/react.production.min.js"></script>
+  <script src="/vendor/react-dom.production.min.js"></script>
+  <script type="module" src="/firebase.js"></script>
+  <script src="/native-plugins.js" defer></script>
+  <script src="/i18n.js"></script>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="android" data-ob-platform="android" data-ob-android-webview style="background:#FFFEFD;margin:0">
+<div id="ob-splash" style="position:fixed;inset:0;z-index:99999;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#FFFEFD 0%,#FDFAF9 40%,#FBF9F8 100%);padding:40px 24px;text-align:center">
+  <style>
+    #ob-splash .baby{animation:babyBreathe 3.5s ease-in-out infinite;filter:drop-shadow(0 16px 32px rgba(217,207,243,0.35))}
+    @keyframes babyBreathe{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-3px) scale(1.008)}}
+  </style>
+  <div style="position:relative;margin-bottom:28px">
+    <img class="baby" src="obubba-happy.png" alt="" width="180" height="180" style="object-fit:contain;border-radius:42px">
+  </div>
+  <div style="font-family:'OBubba Script','Parisienne',cursive;font-size:32px;font-weight:400;color:#5B4F5F;margin-bottom:8px">OBubba</div>
+  <div style="font-size:13px;color:#A89898;line-height:1.6">Loading Android preview...</div>
+</div>
+<div id="root"></div>
+<button id="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()">🌙</button>
+<script src="/theme.js"></script>
+<script src="/loader.js"></script>
+<script defer src="/app.js"></script>
+<script>
+  function _hideSplash(){var s=document.getElementById('ob-splash');if(s){s.style.opacity='0';s.style.transition='opacity 0.3s';setTimeout(function(){s.style.display='none';},300);}}
+  window.addEventListener('load', function(){setTimeout(_hideSplash, 200);});
+  setTimeout(_hideSplash, 3000);
+</script>
+</body>
+</html>

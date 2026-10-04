@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1440" viewBox="0 0 1080 1440" role="img" aria-labelledby="title desc">
+  <title id="title">What OBubba's Development Map knows</title>
+  <desc id="desc">A four-stage visual showing the age anchor, family observations, the gentle map output and the boundary that the result is not a diagnosis or deadline.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf7"/>
+      <stop offset="0.46" stop-color="#f5f0ff"/>
+      <stop offset="1" stop-color="#eafaf5"/>
+    </linearGradient>
+    <linearGradient id="path" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ee8f78"/>
+      <stop offset="0.52" stop-color="#9872d9"/>
+      <stop offset="1" stop-color="#4ebdac"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#392c58" flood-opacity=".12"/>
+    </filter>
+    <filter id="smallShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="11" flood-color="#392c58" flood-opacity=".10"/>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1440" rx="56" fill="url(#bg)"/>
+  <circle cx="925" cy="120" r="116" fill="#fff" opacity=".42"/>
+  <circle cx="124" cy="1310" r="170" fill="#fff" opacity=".36"/>
+
+  <g font-family="Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="#251c37">
+    <text x="72" y="90" font-size="22" font-weight="800" letter-spacing="3.8" fill="#8b5cc8">INSIDE THE FLUTTER APP</text>
+    <text x="72" y="160" font-size="54" font-weight="850">What the Development Map</text>
+    <text x="72" y="223" font-size="54" font-weight="850">actually knows</text>
+    <text x="72" y="274" font-size="24" font-weight="560" fill="#665c75">Four layers. One important boundary.</text>
+
+    <path d="M174 413 C306 365 305 515 445 472 S604 348 719 431 S811 574 914 508" fill="none" stroke="#fff" stroke-width="32" stroke-linecap="round" opacity=".82"/>
+    <path d="M174 413 C306 365 305 515 445 472 S604 348 719 431 S811 574 914 508" fill="none" stroke="url(#path)" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="174" cy="413" r="31" fill="#fff" stroke="#ee8f78" stroke-width="8"/>
+    <circle cx="445" cy="472" r="31" fill="#fff" stroke="#a075da" stroke-width="8"/>
+    <circle cx="719" cy="431" r="31" fill="#fff" stroke="#76a8cf" stroke-width="8"/>
+    <circle cx="914" cy="508" r="31" fill="#fff" stroke="#4ebdac" stroke-width="8"/>
+    <text x="174" y="422" text-anchor="middle" font-size="25" font-weight="900">1</text>
+    <text x="445" y="481" text-anchor="middle" font-size="25" font-weight="900">2</text>
+    <text x="719" y="440" text-anchor="middle" font-size="25" font-weight="900">3</text>
+    <text x="914" y="517" text-anchor="middle" font-size="25" font-weight="900">4</text>
+
+    <g filter="url(#shadow)">
+      <rect x="62" y="580" width="956" height="205" rx="30" fill="#fff" opacity=".96"/>
+      <rect x="62" y="580" width="14" height="205" rx="7" fill="#ee8f78"/>
+    </g>
+    <circle cx="142" cy="650" r="40" fill="#fff0eb"/>
+    <path d="M124 651h36M142 633v36" stroke="#d66753" stroke-width="5" stroke-linecap="round"/>
+    <text x="205" y="627" font-size="18" font-weight="850" letter-spacing="2.4" fill="#c65c48">LAYER 1 · AGE ANCHOR</text>
+    <text x="205" y="673" font-size="32" font-weight="850">A broad window, not a due date</text>
+    <text x="205" y="715" font-size="22" font-weight="560" fill="#655b73">Birth date + due date when corrected age applies</text>
+    <text x="205" y="750" font-size="20" font-weight="650" fill="#8c8298">Age supplies context. It does not prove a behaviour.</text>
+
+    <g filter="url(#shadow)">
+      <rect x="62" y="820" width="956" height="237" rx="30" fill="#fff" opacity=".96"/>
+      <rect x="62" y="820" width="14" height="237" rx="7" fill="#a075da"/>
+    </g>
+    <circle cx="142" cy="890" r="40" fill="#f2eaff"/>
+    <circle cx="130" cy="886" r="7" fill="#8b5cc8"/>
+    <circle cx="153" cy="877" r="7" fill="#8b5cc8"/>
+    <circle cx="155" cy="901" r="7" fill="#8b5cc8"/>
+    <path d="M135 888l14-8M135 890l15 9" stroke="#8b5cc8" stroke-width="4" stroke-linecap="round"/>
+    <text x="205" y="868" font-size="18" font-weight="850" letter-spacing="2.4" fill="#8153bf">LAYER 2 · OBSERVED SIGNALS</text>
+    <text x="205" y="914" font-size="32" font-weight="850">Only what the family actually logged</text>
+    <text x="205" y="956" font-size="22" font-weight="560" fill="#655b73">Sleep · explicit wake mood · play · notes · teeth</text>
+    <text x="205" y="990" font-size="22" font-weight="560" fill="#655b73">solids · milestones</text>
+    <text x="205" y="1026" font-size="20" font-weight="650" fill="#8c8298">Missing detail stays missing. A blank mood is not “happy”.</text>
+
+    <g filter="url(#shadow)">
+      <rect x="62" y="1092" width="590" height="246" rx="30" fill="#10284c"/>
+      <rect x="76" y="1106" width="562" height="218" rx="23" fill="#17355f" stroke="#7be0d0" stroke-opacity=".38"/>
+    </g>
+    <text x="111" y="1150" font-size="17" font-weight="850" letter-spacing="2.2" fill="#7be0d0">LAYER 3 · GENTLE OUTPUT</text>
+    <text x="111" y="1195" font-size="29" font-weight="850" fill="#fff">Now → Next → Try this week</text>
+    <text x="111" y="1238" font-size="20" font-weight="560" fill="#d9e4f3">A journey, one focus and the basis</text>
+    <text x="111" y="1270" font-size="20" font-weight="560" fill="#d9e4f3">behind a live clue—when one exists.</text>
+    <rect x="111" y="1291" width="222" height="6" rx="3" fill="url(#path)"/>
+
+    <g filter="url(#smallShadow)">
+      <rect x="681" y="1092" width="337" height="246" rx="30" fill="#fff7e7" stroke="#e7bd64" stroke-width="2"/>
+    </g>
+    <circle cx="850" cy="1158" r="40" fill="#ffe6ad"/>
+    <path d="M850 1134v32M850 1180v2" stroke="#9c6611" stroke-width="6" stroke-linecap="round"/>
+    <text x="850" y="1225" text-anchor="middle" font-size="20" font-weight="850" letter-spacing="1.8" fill="#9c6611">THE BOUNDARY</text>
+    <text x="850" y="1266" text-anchor="middle" font-size="27" font-weight="900">Not a diagnosis.</text>
+    <text x="850" y="1302" text-anchor="middle" font-size="27" font-weight="900">Not a deadline.</text>
+
+    <text x="540" y="1391" text-anchor="middle" font-size="21" font-weight="720" fill="#5d536c">The baby leads. The map helps the parent notice.</text>
+  </g>
+</svg>

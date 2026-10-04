@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1050" viewBox="0 0 720 1050" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba detects a rise in logged milk feeds</title>
+  <desc id="desc">OBubba compares today's milk-feed event count with up to seven previously logged days. A large enough rise can prompt a likely growth-spurt card, but the app does not measure milk transfer, calories or growth.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf3"/>
+      <stop offset="1" stop-color="#f2eee9"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#463848" flood-opacity=".09"/>
+    </filter>
+  </defs>
+
+  <rect width="720" height="1050" rx="36" fill="url(#bg)"/>
+  <circle cx="633" cy="81" r="81" fill="#e8ddf0" opacity=".76"/>
+  <circle cx="82" cy="974" r="92" fill="#dce9dc" opacity=".78"/>
+
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="#342c38">
+    <text x="54" y="70" font-size="18" font-weight="750" letter-spacing="2.2" fill="#91566a">OBUBBA • FEEDING</text>
+    <text x="54" y="122" font-size="37" font-weight="800">The card sees a rise.</text>
+    <text x="54" y="166" font-size="37" font-weight="800">Not a cause.</text>
+    <text x="54" y="205" font-size="19" fill="#665d69">What “likely a growth spurt” actually compares</text>
+
+    <g filter="url(#shadow)">
+      <rect x="46" y="246" width="628" height="135" rx="24" fill="#ffffff"/>
+      <circle cx="100" cy="313" r="29" fill="#dce9dd"/>
+      <text x="100" y="321" font-size="22" font-weight="800" text-anchor="middle" fill="#46624d">1</text>
+      <text x="148" y="290" font-size="22" font-weight="800">BUILD THE BASELINE</text>
+      <text x="148" y="323" font-size="19">Up to 7 previous logged days</text>
+      <text x="148" y="351" font-size="17" fill="#716a74">Days with no milk feeds are skipped, not zeroed.</text>
+    </g>
+
+    <path d="M360 381v24" stroke="#a66d81" stroke-width="4" stroke-linecap="round"/>
+    <path d="m349 399 11 12 11-12" fill="none" stroke="#a66d81" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g filter="url(#shadow)">
+      <rect x="46" y="417" width="628" height="144" rx="24" fill="#ffffff"/>
+      <circle cx="100" cy="489" r="29" fill="#eadff1"/>
+      <text x="100" y="497" font-size="22" font-weight="800" text-anchor="middle" fill="#684c77">2</text>
+      <text x="148" y="463" font-size="22" font-weight="800">COUNT MILK-FEED EVENTS</text>
+      <text x="148" y="496" font-size="19" font-weight="700" fill="#684c77">breast • bottle • combined</text>
+      <text x="148" y="526" font-size="17" fill="#716a74">Not solids. Not pumping. Not millilitres.</text>
+    </g>
+
+    <path d="M360 561v24" stroke="#a66d81" stroke-width="4" stroke-linecap="round"/>
+    <path d="m349 579 11 12 11-12" fill="none" stroke="#a66d81" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g filter="url(#shadow)">
+      <rect x="46" y="597" width="628" height="175" rx="24" fill="#ffffff"/>
+      <circle cx="100" cy="677" r="29" fill="#f3ddd5"/>
+      <text x="100" y="685" font-size="22" font-weight="800" text-anchor="middle" fill="#955440">3</text>
+      <text x="148" y="642" font-size="22" font-weight="800">CHECK A REAL JUMP</text>
+      <text x="148" y="677" font-size="19">Baseline is at least 4 feeds/day</text>
+      <text x="148" y="708" font-size="19" font-weight="700" fill="#7a4f5e">Today ≥40% higher</text>
+      <text x="148" y="739" font-size="17" fill="#716a74">plus today ≥50% higher, or yesterday ≥30% higher</text>
+    </g>
+
+    <path d="M360 772v24" stroke="#a66d81" stroke-width="4" stroke-linecap="round"/>
+    <path d="m349 790 11 12 11-12" fill="none" stroke="#a66d81" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g filter="url(#shadow)">
+      <rect x="46" y="808" width="628" height="108" rx="24" fill="#805a73"/>
+      <circle cx="100" cy="862" r="29" fill="#fff7ed"/>
+      <text x="100" y="870" font-size="22" font-weight="800" text-anchor="middle" fill="#805a73">4</text>
+      <text x="148" y="850" font-size="22" font-weight="800" fill="#ffffff">OFFER A POSSIBLE STORY</text>
+      <text x="148" y="881" font-size="19" fill="#fff9f5">“Feeding is up, likely a growth spurt”</text>
+    </g>
+
+    <rect x="46" y="946" width="628" height="58" rx="20" fill="#e5eee3" stroke="#b8cfb7" stroke-width="2"/>
+    <text x="70" y="981" font-size="17" font-weight="750" fill="#48634e">NOT MEASURED  transfer · calories · supply · weight gain · cause</text>
+  </g>
+</svg>

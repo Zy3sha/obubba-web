@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1320" viewBox="0 0 760 1320" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba reviews a logged reaction to egg</title>
+  <desc id="desc">A vertical decision map showing the app choosing a recent Reaction meal, checking food-text allergen recognition, exact-food calm meals, same-day context and raw egg wording, then producing a qualitative attention band while symptoms always outrank the score.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffaf4"/><stop offset="1" stop-color="#f2f7f3"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="10" flood-color="#263a35" flood-opacity=".10"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#57716a"/></marker>
+    <style>
+      .eyebrow{font:700 14px Arial,sans-serif;letter-spacing:2px;fill:#a75645}.h1{font:700 36px Georgia,serif;fill:#233a35}.sub{font:400 17px Arial,sans-serif;fill:#526661}.step{font:700 19px Arial,sans-serif;fill:#233a35}.body{font:400 15px Arial,sans-serif;fill:#526661}.score{font:700 18px Arial,sans-serif;fill:#a75645}.small{font:700 13px Arial,sans-serif;fill:#6b7d78;letter-spacing:.5px}.white{fill:white}.line{stroke:#57716a;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="760" height="1320" rx="34" fill="url(#bg)"/>
+  <circle cx="680" cy="82" r="78" fill="#f4d8c8" opacity=".55"/><circle cx="80" cy="1175" r="102" fill="#dcebe4"/>
+  <text x="60" y="70" class="eyebrow">INSIDE THE CURRENT FLUTTER ENGINE</text>
+  <text x="60" y="119" class="h1">How “About that reaction</text><text x="60" y="161" class="h1">to egg” is built</text>
+  <text x="60" y="198" class="sub">A parent-entered signal, a few context checks—and a firm safety boundary.</text>
+
+  <g filter="url(#shadow)"><rect x="90" y="238" width="580" height="112" rx="24" fill="#fff"/><circle cx="137" cy="294" r="25" fill="#f4d8c8"/><text x="129" y="301" class="step">1</text><text x="180" y="281" class="step">Parent marks a solids meal “Reaction”</text><text x="180" y="309" class="body">The engine chooses the first match on the newest day.</text><text x="180" y="332" class="body">Only today + 9 earlier calendar days can surface.</text></g>
+  <path d="M380 350v37" class="line"/>
+
+  <g filter="url(#shadow)"><rect x="90" y="388" width="580" height="100" rx="24" fill="#fff"/><text x="124" y="425" class="small">STARTING HEURISTIC</text><text x="124" y="462" class="score">0.50</text><text x="202" y="457" class="body">Not 50%. Not a clinical probability.</text></g>
+  <path d="M380 488v37" class="line"/>
+
+  <g filter="url(#shadow)"><rect x="70" y="526" width="620" height="132" rx="24" fill="#e7f0eb"/><text x="105" y="566" class="step">Does the typed food name reveal an allergen?</text><text x="105" y="596" class="body">“Egg” and familiar dishes can be recognised. Vague wording may not be.</text><text x="105" y="629" class="score">YES  +0.20</text><text x="494" y="629" class="small">NO  +0.00</text></g>
+  <path d="M380 658v37" class="line"/>
+
+  <g filter="url(#shadow)"><rect x="70" y="696" width="620" height="132" rx="24" fill="#fff"/><text x="105" y="736" class="step">Three calm logs for the exact same food phrase?</text><text x="105" y="766" class="body">Blank or Loved counts; Unsure and Reaction do not.</text><text x="105" y="798" class="score">YES  −0.10</text><text x="494" y="798" class="small">NO  −0.00</text></g>
+  <path d="M380 828v37" class="line"/>
+
+  <g filter="url(#shadow)"><rect x="70" y="866" width="620" height="142" rx="24" fill="#fff"/><text x="105" y="906" class="step">Separate same-day context?</text><text x="105" y="936" class="body">Fever-temperature entry, or a bounded illness / jab / teething note.</text><text x="105" y="966" class="body">The reaction meal’s own note is excluded.</text><text x="105" y="990" class="score">YES  −0.25</text><text x="494" y="990" class="small">NO  −0.00</text></g>
+  <path d="M380 1008v37" class="line"/>
+
+  <g filter="url(#shadow)"><rect x="70" y="1046" width="620" height="112" rx="24" fill="#fff"/><text x="105" y="1086" class="step">Raw or lightly cooked + recognised egg?</text><text x="105" y="1116" class="body">An egg-only preparation adjustment; not a home reintroduction plan.</text><text x="105" y="1143" class="score">YES  −0.15</text><text x="494" y="1143" class="small">NO  −0.00</text></g>
+  <path d="M380 1158v30" class="line"/>
+
+  <g filter="url(#shadow)"><rect x="38" y="1189" width="684" height="96" rx="24" fill="#294b43"/><text x="70" y="1222" class="small white">CLAMP 0.10–0.85 → WORDING + CARD PRIORITY</text><text x="70" y="1252" class="body white">Below .40: another cause leans  ·  .40–.64: uncertain  ·  .65+: take seriously</text><text x="70" y="1276" class="step white">Symptoms always outrank the score. Do not retry without advice.</text></g>
+  <text x="380" y="1307" text-anchor="middle" class="small">OBUBBA  ·  EXPLANATION, NOT DIAGNOSIS</text>
+</svg>

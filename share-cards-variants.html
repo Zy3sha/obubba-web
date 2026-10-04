@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow"/>
+<meta charset="UTF-8">
+<title>OBubba Share Cards — All Variants</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #1a1612;
+    min-height: 100vh;
+    padding: 40px 20px 80px;
+    font-family: -apple-system, "SF Pro Display", "Inter", sans-serif;
+    color: #c9b7a0;
+  }
+  h1 {
+    text-align: center;
+    color: #FAF6F0;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+    font-size: 22px;
+  }
+  .sub {
+    text-align: center;
+    color: #7a6a58;
+    font-size: 12px;
+    margin-bottom: 48px;
+    letter-spacing: 0.05em;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .cell { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .cell-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #8a7a68; font-weight: 500; }
+
+  /* ══ SHARED CARD BASE ══ */
+  .card {
+    width: 540px; height: 540px;
+    position: relative; overflow: hidden;
+    border-radius: 36px;
+    box-shadow: 0 40px 120px rgba(0,0,0,0.5);
+  }
+  .glow { position: absolute; pointer-events: none; z-index: 1; }
+  .noise {
+    position: absolute; inset: 0; z-index: 2;
+    mix-blend-mode: multiply; opacity: 0.5; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.3  0 0 0 0 0.2  0 0 0 0 0.15  0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .content {
+    position: relative; z-index: 3; height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 100px 36px 40px; gap: 14px;
+  }
+  .logo {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700; font-size: 38px; letter-spacing: 0.08em;
+    text-shadow: 0 0 28px rgba(255,255,255,0.35), 0 2px 12px rgba(0,0,0,0.08);
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .tagline { font-weight: 400; font-size: 10px; letter-spacing: 0.02em; opacity: 0.75; }
+  .header {
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    position: absolute; top: 32px; left: 0; right: 0; z-index: 5;
+  }
+  .hero {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500; font-size: 30px; line-height: 1.15;
+    text-align: center; max-width: 80%; letter-spacing: -0.005em;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.4);
+  }
+  .stat-hero {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700; font-size: 72px; line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .stat-hero .suffix { font-size: 24px; font-weight: 400; opacity: 0.7; margin-left: 4px; }
+  .stat-label {
+    font-size: 10px; font-weight: 500; text-transform: uppercase;
+    letter-spacing: 0.2em; opacity: 0.75;
+  }
+  .glass {
+    backdrop-filter: blur(25px) saturate(140%);
+    -webkit-backdrop-filter: blur(25px) saturate(140%);
+    border-radius: 22px; padding: 18px 26px;
+    box-shadow: 0 10px 30px rgba(74,59,53,0.06), inset 0 1px 0 rgba(255,255,255,0.5);
+    display: flex; flex-direction: column; gap: 6px; align-items: center;
+  }
+  .cta {
+    background: linear-gradient(135deg, #E8DED3 0%, #D6C7B8 100%);
+    border: none; border-radius: 999px;
+    padding: 11px 24px; color: #4A3B35;
+    font-size: 12px; font-weight: 500; letter-spacing: 0.02em;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.4);
+  }
+  /* ── Mascot + badges row ── */
+  .mascot-row {
+    display: flex; align-items: center; justify-content: center; gap: 22px;
+    margin-top: 8px;
+  }
+  .mascot-wrap {
+    position: relative;
+    width: 180px; height: 180px;
+    flex-shrink: 0;
+  }
+  .mascot-glow {
+    position: absolute; inset: -28px;
+    filter: blur(28px); pointer-events: none;
+  }
+  .mascot {
+    position: relative; width: 100%; height: 100%; object-fit: contain;
+  }
+  /* Celebration PNG has extra padding (raised arms/crown) — scale up to visually match happy Bubba */
+  .mascot.celebration { transform: scale(1.25); transform-origin: center; }
+  .date { font-size: 9px; font-weight: 400; opacity: 0.5; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; }
+
+  /* ── App store badges — flanking mascot ── */
+  .store-badge {
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(74,59,53,0.88);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 8px 11px;
+    color: #FAF6F0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.14);
+    flex-shrink: 0;
+  }
+  .store-badge svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .store-badge .top { font-size: 7px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; line-height: 1; margin-bottom: 2px; }
+  .store-badge .bot { font-size: 11px; font-weight: 600; line-height: 1; letter-spacing: 0.01em; }
+  .store-badge .label { display: flex; flex-direction: column; }
+
+  /* ═══ VARIANT 1 — SLEEP WIN (night scene) ═══ */
+  .v-sleep { background: linear-gradient(180deg, #E8DDF0 0%, #D8CCE4 50%, #C9BCD6 100%); }
+  .v-sleep .logo, .v-sleep .hero, .v-sleep .stat-hero { color: #3B2F52; }
+  .v-sleep .tagline, .v-sleep .stat-label, .v-sleep .footer { color: #5D4C78; }
+  .v-sleep .glass { background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.4); }
+  .v-sleep .g1 { top:-80px; left:-60px; width:380px; height:380px; background:radial-gradient(circle, rgba(180,150,210,0.55) 0%, transparent 65%); filter:blur(50px); }
+  .v-sleep .g2 { top:30%; right:-80px; width:320px; height:320px; background:radial-gradient(circle, rgba(140,110,180,0.35) 0%, transparent 60%); filter:blur(55px); }
+  .v-sleep .g3 { bottom:-100px; left:20%; width:420px; height:300px; background:radial-gradient(circle, rgba(100,80,140,0.25) 0%, transparent 65%); filter:blur(60px); }
+  .v-sleep .g4 { top:50%; left:50%; transform:translate(-50%,-50%); width:460px; height:460px; background:radial-gradient(circle, rgba(240,230,255,0.45) 0%, transparent 60%); filter:blur(40px); }
+  .v-sleep .mascot-glow { background:radial-gradient(circle, rgba(220,200,240,0.8) 0%, transparent 65%); }
+
+  /* ═══ VARIANT 2 — DAY WIN (sunny warm) ═══ */
+  .v-day { background: linear-gradient(180deg, #FFF3DC 0%, #FFE9C8 50%, #F5D9B0 100%); }
+  .v-day .logo, .v-day .hero, .v-day .stat-hero { color: #5A3F28; }
+  .v-day .tagline, .v-day .stat-label, .v-day .footer { color: #8A6B48; }
+  .v-day .glass { background: rgba(255,255,255,0.32); border: 1px solid rgba(255,255,255,0.55); }
+  .v-day .g1 { top:-80px; left:-60px; width:380px; height:380px; background:radial-gradient(circle, rgba(255,200,130,0.6) 0%, transparent 65%); filter:blur(50px); }
+  .v-day .g2 { top:30%; right:-80px; width:320px; height:320px; background:radial-gradient(circle, rgba(255,170,90,0.35) 0%, transparent 60%); filter:blur(55px); }
+  .v-day .g3 { bottom:-100px; left:20%; width:420px; height:300px; background:radial-gradient(circle, rgba(230,140,70,0.2) 0%, transparent 65%); filter:blur(60px); }
+  .v-day .g4 { top:50%; left:50%; transform:translate(-50%,-50%); width:460px; height:460px; background:radial-gradient(circle, rgba(255,248,220,0.55) 0%, transparent 60%); filter:blur(40px); }
+  .v-day .mascot-glow { background:radial-gradient(circle, rgba(255,230,180,0.8) 0%, transparent 65%); }
+
+  /* ═══ VARIANT 3 — MILESTONE (gold celebration) ═══ */
+  .v-mile { background: linear-gradient(180deg, #FAF1DC 0%, #F3E3BC 50%, #E8D29A 100%); }
+  .v-mile .logo, .v-mile .hero, .v-mile .stat-hero { color: #4A3820; }
+  .v-mile .tagline, .v-mile .stat-label, .v-mile .footer { color: #7A5E32; }
+  .v-mile .glass { background: rgba(255,253,245,0.35); border: 1px solid rgba(255,240,200,0.6); }
+  .v-mile .g1 { top:-80px; left:-60px; width:380px; height:380px; background:radial-gradient(circle, rgba(245,200,100,0.6) 0%, transparent 65%); filter:blur(50px); }
+  .v-mile .g2 { top:25%; right:-80px; width:320px; height:320px; background:radial-gradient(circle, rgba(220,170,60,0.4) 0%, transparent 60%); filter:blur(55px); }
+  .v-mile .g3 { bottom:-100px; left:20%; width:420px; height:300px; background:radial-gradient(circle, rgba(180,130,40,0.25) 0%, transparent 65%); filter:blur(60px); }
+  .v-mile .g4 { top:50%; left:50%; transform:translate(-50%,-50%); width:480px; height:480px; background:radial-gradient(circle, rgba(255,240,200,0.6) 0%, transparent 60%); filter:blur(40px); }
+  .v-mile .mascot-glow { background:radial-gradient(circle, rgba(255,220,140,0.85) 0%, transparent 65%); }
+  .v-mile .stat-hero { background: linear-gradient(135deg, #B88A3A, #8A6420); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  /* ═══ VARIANT 4 — BAD NIGHT (tender, warm) ═══ */
+  .v-bad { background: linear-gradient(180deg, #F3E5DD 0%, #EBD6CC 50%, #DEC4B8 100%); }
+  .v-bad .logo, .v-bad .hero, .v-bad .stat-hero { color: #4A352E; }
+  .v-bad .tagline, .v-bad .stat-label, .v-bad .footer { color: #7A584C; }
+  .v-bad .glass { background: rgba(255,250,245,0.3); border: 1px solid rgba(255,230,215,0.5); }
+  .v-bad .g1 { top:-80px; left:-60px; width:380px; height:380px; background:radial-gradient(circle, rgba(232,180,160,0.55) 0%, transparent 65%); filter:blur(50px); }
+  .v-bad .g2 { top:30%; right:-80px; width:320px; height:320px; background:radial-gradient(circle, rgba(200,140,120,0.3) 0%, transparent 60%); filter:blur(55px); }
+  .v-bad .g3 { bottom:-100px; left:20%; width:420px; height:300px; background:radial-gradient(circle, rgba(150,100,85,0.2) 0%, transparent 65%); filter:blur(60px); }
+  .v-bad .g4 { top:50%; left:50%; transform:translate(-50%,-50%); width:460px; height:460px; background:radial-gradient(circle, rgba(255,238,228,0.5) 0%, transparent 60%); filter:blur(40px); }
+  .v-bad .mascot-glow { background:radial-gradient(circle, rgba(232,200,185,0.8) 0%, transparent 65%); }
+</style>
+</head>
+<body>
+<h1>OBUBBA · Share Card Variants</h1>
+<p class="sub">1080 × 1080 · shown at 50% · four themed templates · same structure, distinct personalities</p>
+
+<div class="grid">
+
+  <!-- ═══ SLEEP WIN ═══ -->
+  <div class="cell">
+    <div class="cell-label">Sleep Win</div>
+    <div class="card v-sleep">
+      <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div><div class="glow g4"></div>
+      <div class="noise"></div>
+      <div class="content">
+        <div class="header">
+          <div class="logo">OBUBBA</div>
+        </div>
+        <div class="stat-label">A beautiful sleep win</div>
+        <div class="stat-hero">11h 20m<span class="suffix">slept</span></div>
+        <div class="glass">
+          <div class="stat-label">Last night</div>
+          <div class="hero" style="font-size:20px;max-width:100%;">Oliver slept through</div>
+        </div>
+        <div class="mascot-row">
+          <div class="store-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            <div class="label"><div class="top">Download</div><div class="bot">App Store</div></div>
+          </div>
+          <div class="mascot-wrap"><div class="mascot-glow"></div><img class="mascot celebration" src="obubba-celebration.png" onerror="this.src='obubba-happy.png'"></div>
+          <div class="store-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 20.83c-.15-.1-.22-.27-.22-.44V3.61c0-.17.07-.34.22-.44l9.25 8.83-9.25 8.83zm10.16-7.95l2.55 2.43-11.02 6.27 8.47-8.7zm3.56-3.4l2.45 1.39c.76.43.76 1.52 0 1.95l-2.45 1.39-2.78-2.37 2.78-2.36zm-3.56-1.55L4.87 0.34 15.89 6.6l-2.55 2.33z"/></svg>
+            <div class="label"><div class="top">Get it on</div><div class="bot">Google Play</div></div>
+          </div>
+        </div>
+        <div class="date">4 APRIL 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ DAY WIN ═══ -->
+  <div class="cell">
+    <div class="cell-label">Day Win</div>
+    <div class="card v-day">
+      <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div><div class="glow g4"></div>
+      <div class="noise"></div>
+      <div class="content">
+        <div class="header">
+          <div class="logo">OBUBBA</div>
+        </div>
+        <div class="stat-label">A great day</div>
+        <div class="stat-hero">87<span class="suffix">/ 100</span></div>
+        <div class="glass">
+          <div class="stat-label">Today</div>
+          <div class="hero" style="font-size:18px;max-width:100%;">6 feeds · 3 naps · 3h 1m</div>
+        </div>
+        <div class="mascot-row">
+          <div class="store-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            <div class="label"><div class="top">Download</div><div class="bot">App Store</div></div>
+          </div>
+          <div class="mascot-wrap"><div class="mascot-glow"></div><img class="mascot celebration" src="obubba-celebration.png" onerror="this.src='obubba-happy.png'"></div>
+          <div class="store-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 20.83c-.15-.1-.22-.27-.22-.44V3.61c0-.17.07-.34.22-.44l9.25 8.83-9.25 8.83zm10.16-7.95l2.55 2.43-11.02 6.27 8.47-8.7zm3.56-3.4l2.45 1.39c.76.43.76 1.52 0 1.95l-2.45 1.39-2.78-2.37 2.78-2.36zm-3.56-1.55L4.87 0.34 15.89 6.6l-2.55 2.33z"/></svg>
+            <div class="label"><div class="top">Get it on</div><div class="bot">Google Play</div></div>
+          </div>
+        </div>
+        <div class="date">4 APRIL 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MILESTONE ═══ -->
+  <div class="cell">
+    <div class="cell-label">Milestone</div>
+    <div class="card v-mile">
+      <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div><div class="glow g4"></div>
+      <div class="noise"></div>
+      <div class="content">
+        <div class="header">
+          <div class="logo">OBUBBA</div>
+        </div>
+        <div class="stat-label">Milestone unlocked</div>
+        <div class="hero" style="font-size:34px;">First roll<br>over</div>
+        <div class="glass">
+          <div class="stat-label">Oliver · 23 weeks</div>
+          <div class="hero" style="font-size:16px;max-width:100%;">Tummy to back</div>
+        </div>
+        <div class="mascot-row">
+          <div class="store-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            <div class="label"><div class="top">Download</div><div class="bot">App Store</div></div>
+          </div>
+          <div class="mascot-wrap"><div class="mascot-glow"></div><img class="mascot celebration" src="obubba-celebration.png" onerror="this.src='obubba-happy.png'"></div>
+          <div class="store-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 20.83c-.15-.1-.22-.27-.22-.44V3.61c0-.17.07-.34.22-.44l9.25 8.83-9.25 8.83zm10.16-7.95l2.55 2.43-11.02 6.27 8.47-8.7zm3.56-3.4l2.45 1.39c.76.43.76 1.52 0 1.95l-2.45 1.39-2.78-2.37 2.78-2.36zm-3.56-1.55L4.87 0.34 15.89 6.6l-2.55 2.33z"/></svg>
+            <div class="label"><div class="top">Get it on</div><div class="bot">Google Play</div></div>
+          </div>
+        </div>
+        <div class="date">4 APRIL 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ BAD NIGHT ═══ -->
+  <div class="cell">
+    <div class="cell-label">Rough Night</div>
+    <div class="card v-bad">
+      <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div><div class="glow g4"></div>
+      <div class="noise"></div>
+      <div class="content">
+        <div class="header">
+          <div class="logo">OBUBBA</div>
+        </div>
+        <div class="stat-label">You showed up anyway</div>
+        <div class="hero" style="font-size:28px;">Survived<br>the night</div>
+        <div class="glass">
+          <div class="stat-label">4 wakes · handled every one</div>
+          <div class="hero" style="font-size:15px;max-width:100%;opacity:0.85;">That counts. That's everything.</div>
+        </div>
+        <div class="mascot-row">
+          <div class="store-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            <div class="label"><div class="top">Download</div><div class="bot">App Store</div></div>
+          </div>
+          <div class="mascot-wrap"><div class="mascot-glow"></div><img class="mascot" src="obubba-happy.png" onerror="this.style.display='none'"></div>
+          <div class="store-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 20.83c-.15-.1-.22-.27-.22-.44V3.61c0-.17.07-.34.22-.44l9.25 8.83-9.25 8.83zm10.16-7.95l2.55 2.43-11.02 6.27 8.47-8.7zm3.56-3.4l2.45 1.39c.76.43.76 1.52 0 1.95l-2.45 1.39-2.78-2.37 2.78-2.36zm-3.56-1.55L4.87 0.34 15.89 6.6l-2.55 2.33z"/></svg>
+            <div class="label"><div class="top">Get it on</div><div class="bot">Google Play</div></div>
+          </div>
+        </div>
+        <div class="date">4 APRIL 2026</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

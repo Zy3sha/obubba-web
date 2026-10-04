@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Two carers sharing one calm baby-care timeline</title>
+  <desc id="desc">An abstract editorial illustration of two rounded carer profiles connected to one central baby-care record, with no scores or rankings.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff8f3"/>
+      <stop offset="0.5" stop-color="#f5f0ff"/>
+      <stop offset="1" stop-color="#e9f9f5"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#fffaf7" stop-opacity="0.94"/>
+    </linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#5c5475" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" rx="72" fill="url(#bg)"/>
+  <circle cx="124" cy="115" r="44" fill="#f8c9ba" opacity="0.6"/>
+  <circle cx="1075" cy="137" r="66" fill="#91d7c5" opacity="0.38"/>
+  <circle cx="1018" cy="672" r="88" fill="#d7c5f0" opacity="0.4"/>
+  <path d="M310 400 C400 290 477 300 600 338 C723 300 800 290 890 400" fill="none" stroke="#7abfae" stroke-width="12" stroke-linecap="round" stroke-dasharray="1 27" opacity="0.72"/>
+  <g filter="url(#shadow)">
+    <rect x="380" y="140" width="440" height="530" rx="46" fill="url(#card)" stroke="#eadff3" stroke-width="4"/>
+  </g>
+  <rect x="430" y="190" width="340" height="70" rx="24" fill="#171e49"/>
+  <circle cx="470" cy="225" r="13" fill="#f4b75f"/>
+  <rect x="505" y="211" width="202" height="13" rx="7" fill="#ffffff" opacity="0.92"/>
+  <rect x="505" y="233" width="128" height="9" rx="5" fill="#c8d6e9"/>
+  <g>
+    <circle cx="470" cy="330" r="22" fill="#f6b699"/>
+    <rect x="515" y="309" width="193" height="16" rx="8" fill="#465270" opacity="0.86"/>
+    <rect x="515" y="337" width="125" height="11" rx="6" fill="#b7bfd0"/>
+    <circle cx="740" cy="330" r="10" fill="#91d7c5"/>
+  </g>
+  <path d="M470 352 V420" stroke="#e6dcec" stroke-width="5" stroke-linecap="round"/>
+  <g>
+    <circle cx="470" cy="439" r="22" fill="#91d7c5"/>
+    <rect x="515" y="418" width="157" height="16" rx="8" fill="#465270" opacity="0.86"/>
+    <rect x="515" y="446" width="210" height="11" rx="6" fill="#b7bfd0"/>
+    <circle cx="740" cy="439" r="10" fill="#d7c5f0"/>
+  </g>
+  <path d="M470 461 V529" stroke="#e6dcec" stroke-width="5" stroke-linecap="round"/>
+  <g>
+    <circle cx="470" cy="548" r="22" fill="#d7c5f0"/>
+    <rect x="515" y="527" width="218" height="16" rx="8" fill="#465270" opacity="0.86"/>
+    <rect x="515" y="555" width="142" height="11" rx="6" fill="#b7bfd0"/>
+    <path d="M727 547 l9 9 19-23" fill="none" stroke="#67ae9d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g filter="url(#shadow)">
+    <circle cx="245" cy="410" r="112" fill="#fffdfb" stroke="#f0c5b9" stroke-width="5"/>
+    <circle cx="245" cy="379" r="38" fill="#f6b699"/>
+    <path d="M181 467 C190 420 300 420 309 467" fill="#f08e79" opacity="0.88"/>
+    <circle cx="203" cy="395" r="7" fill="#f4b75f"/>
+  </g>
+  <g filter="url(#shadow)">
+    <circle cx="955" cy="410" r="112" fill="#fffdfb" stroke="#9bd8c9" stroke-width="5"/>
+    <circle cx="955" cy="379" r="38" fill="#8f6b5d"/>
+    <path d="M891 467 C900 420 1010 420 1019 467" fill="#6fa898" opacity="0.92"/>
+    <circle cx="997" cy="395" r="7" fill="#f4b75f"/>
+  </g>
+  <path d="M339 493 C366 520 389 538 422 548" fill="none" stroke="#f08e79" stroke-width="12" stroke-linecap="round"/>
+  <path d="M861 493 C834 520 811 538 778 548" fill="none" stroke="#6fa898" stroke-width="12" stroke-linecap="round"/>
+  <path d="M571 629 C590 608 610 608 629 629 C610 650 590 650 571 629Z" fill="#f4b75f" opacity="0.92"/>
+</svg>

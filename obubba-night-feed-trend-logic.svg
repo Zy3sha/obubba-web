@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba detects that night feeds are dropping</title>
+  <desc id="desc">A two-week comparison with six logged recent nights averaging one night feed and seven older nights averaging three, while one unlogged night is excluded rather than treated as zero.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#091F3C"/><stop offset="1" stop-color="#173E5B"/></linearGradient>
+    <linearGradient id="recent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#DDF5EF"/><stop offset="1" stop-color="#D8EBF3"/></linearGradient>
+    <linearGradient id="older" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F6E8E0"/><stop offset="1" stop-color="#F5EEDC"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#06152A" flood-opacity=".22"/></filter>
+    <style>
+      .sans{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.serif{font-family:Georgia,"Times New Roman",serif}.label{font-size:16px;font-weight:750;letter-spacing:1.6px}.body{font-size:20px}.strong{font-weight:750}.muted{fill:#607588}.tiny{font-size:17px}
+    </style>
+  </defs>
+  <rect width="1200" height="900" rx="36" fill="url(#bg)"/>
+  <circle cx="1095" cy="83" r="98" fill="#F2C779" opacity=".1"/>
+  <circle cx="85" cy="815" r="145" fill="#78C6B3" opacity=".08"/>
+  <text x="62" y="66" class="sans label" fill="#F2C779">THE CURRENT FLUTTER RULE</text>
+  <text x="62" y="113" class="serif" font-size="38" font-weight="700" fill="#FFFFFF">It compares feed frequency across two weeks</text>
+  <text x="62" y="149" class="sans body" fill="#D8E5EF">One count per qualifying feed entry—not milk volume, feed length or hunger.</text>
+
+  <g filter="url(#shadow)"><rect x="52" y="187" width="1096" height="405" rx="29" fill="#F9F8F3"/></g>
+  <text x="84" y="228" class="sans label muted">FOURTEEN NIGHT SLOTS · MOST RECENT FIRST</text>
+
+  <rect x="80" y="254" width="500" height="278" rx="23" fill="url(#recent)"/>
+  <text x="108" y="292" class="sans strong" font-size="24" fill="#235A59">This week</text>
+  <text x="548" y="292" text-anchor="end" class="sans strong" font-size="24" fill="#137A6C">1.0 feed / logged night</text>
+  <g class="sans" text-anchor="middle">
+    <g fill="#FFFFFF" stroke="#70B9A8" stroke-width="2">
+      <rect x="108" y="322" width="48" height="64" rx="16"/><rect x="173" y="322" width="48" height="64" rx="16"/><rect x="238" y="322" width="48" height="64" rx="16"/>
+      <rect x="303" y="322" width="48" height="64" rx="16"/><rect x="368" y="322" width="48" height="64" rx="16"/><rect x="433" y="322" width="48" height="64" rx="16"/>
+    </g>
+    <g class="strong" font-size="23" fill="#167E6E"><text x="132" y="362">1</text><text x="197" y="362">1</text><text x="262" y="362">1</text><text x="327" y="362">1</text><text x="392" y="362">1</text><text x="457" y="362">1</text></g>
+    <rect x="498" y="322" width="48" height="64" rx="16" fill="#EEF1F3" stroke="#A9B4BC" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="522" y="349" class="strong" font-size="20" fill="#758590">—</text><text x="522" y="374" font-size="11" fill="#758590">unlogged</text>
+  </g>
+  <text x="108" y="425" class="sans body" fill="#355D63">6 qualifying feeds ÷ 6 logged nights</text>
+  <rect x="108" y="453" width="226" height="44" rx="22" fill="#168674"/><text x="221" y="482" text-anchor="middle" class="sans strong" font-size="18" fill="#FFFFFF">unlogged ≠ zero feeds</text>
+
+  <rect x="620" y="254" width="500" height="278" rx="23" fill="url(#older)"/>
+  <text x="648" y="292" class="sans strong" font-size="24" fill="#6E4A3C">Week before</text>
+  <text x="1090" y="292" text-anchor="end" class="sans strong" font-size="24" fill="#A95143">3.0 feeds / logged night</text>
+  <g class="sans strong" font-size="22" text-anchor="middle" fill="#A95143">
+    <g fill="#FFFFFF" stroke="#D39A83" stroke-width="2"><rect x="648" y="322" width="48" height="64" rx="16"/><rect x="713" y="322" width="48" height="64" rx="16"/><rect x="778" y="322" width="48" height="64" rx="16"/><rect x="843" y="322" width="48" height="64" rx="16"/><rect x="908" y="322" width="48" height="64" rx="16"/><rect x="973" y="322" width="48" height="64" rx="16"/><rect x="1038" y="322" width="48" height="64" rx="16"/></g>
+    <text x="672" y="362">3</text><text x="737" y="362">3</text><text x="802" y="362">3</text><text x="867" y="362">3</text><text x="932" y="362">3</text><text x="997" y="362">3</text><text x="1062" y="362">3</text>
+  </g>
+  <text x="648" y="425" class="sans body" fill="#725A4D">21 qualifying feeds ÷ 7 logged nights</text>
+  <rect x="648" y="453" width="193" height="44" rx="22" fill="#B85E4D"/><text x="744.5" y="482" text-anchor="middle" class="sans strong" font-size="18" fill="#FFFFFF">change: −2.0</text>
+
+  <text x="600" y="569" text-anchor="middle" class="sans tiny muted">The card can fire because the absolute difference is at least 0.4 feeds per logged night.</text>
+
+  <g filter="url(#shadow)"><rect x="52" y="626" width="1096" height="140" rx="27" fill="#FFFFFF"/></g>
+  <text x="84" y="665" class="sans label muted">ALL GATES MUST PASS</text>
+  <g class="sans strong" font-size="17" fill="#183A56">
+    <circle cx="99" cy="714" r="18" fill="#E3F5F0"/><text x="99" y="720" text-anchor="middle" fill="#178776">✓</text><text x="129" y="720">14 night slots</text>
+    <circle cx="300" cy="714" r="18" fill="#E3F5F0"/><text x="300" y="720" text-anchor="middle" fill="#178776">✓</text><text x="330" y="720">4+ logged / week</text>
+    <circle cx="552" cy="714" r="18" fill="#E3F5F0"/><text x="552" y="720" text-anchor="middle" fill="#178776">✓</text><text x="582" y="720">night feed entry</text>
+    <circle cx="774" cy="714" r="18" fill="#E3F5F0"/><text x="774" y="720" text-anchor="middle" fill="#178776">✓</text><text x="804" y="720">not dream / solids</text>
+    <circle cx="1011" cy="714" r="18" fill="#E3F5F0"/><text x="1011" y="720" text-anchor="middle" fill="#178776">✓</text><text x="1041" y="720">|Δ| ≥ 0.4</text>
+  </g>
+
+  <rect x="52" y="801" width="1096" height="61" rx="24" fill="#F2C779"/>
+  <text x="600" y="827" text-anchor="middle" class="sans strong" font-size="18" fill="#4C3917">Not checked: age · daytime intake · wet nappies · growth · feed duration or volume</text>
+  <text x="600" y="851" text-anchor="middle" class="sans tiny" fill="#5A451F">A falling count is progress data—not permission to withhold a feed.</text>
+</svg>

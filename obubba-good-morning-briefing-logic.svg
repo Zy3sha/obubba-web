@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba builds the Good morning briefing</title>
+  <desc id="desc">A flow diagram showing morning availability and a fresh Coach screen, then separate paths for the completed night, today's entries and corrected age, and disruption context.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111A35"/><stop offset=".56" stop-color="#293356"/><stop offset="1" stop-color="#4B4369"/></linearGradient>
+    <linearGradient id="dawn" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#F5B68D"/><stop offset="1" stop-color="#EEE3FF"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#080D20" flood-opacity=".28"/></filter>
+    <style>
+      .eyebrow{font:700 18px system-ui,sans-serif;letter-spacing:2px;fill:#F5B68D}.title{font:700 42px Georgia,serif;fill:#fff}.sub{font:400 20px system-ui,sans-serif;fill:#DDE4F4}.label{font:700 17px system-ui,sans-serif;letter-spacing:1px;fill:#68718B}.head{font:700 25px Georgia,serif;fill:#17203A}.body{font:400 17px system-ui,sans-serif;fill:#46516C}.small{font:600 15px system-ui,sans-serif;fill:#6B587F}.pill{font:700 16px system-ui,sans-serif;fill:#17203A}.white{fill:#fff}.line{stroke:#B7BFD2;stroke-width:3;fill:none;stroke-linecap:round}.dot{fill:#F5B68D}
+    </style>
+  </defs>
+  <rect width="1200" height="820" rx="34" fill="url(#bg)"/>
+  <circle cx="1060" cy="88" r="78" fill="#F5B68D" opacity=".13"/><circle cx="1110" cy="55" r="26" fill="#FFF1D8" opacity=".7"/>
+  <text x="70" y="68" class="eyebrow">INSIDE THE FLUTTER APP</text>
+  <text x="70" y="118" class="title">One morning card, three evidence paths</text>
+  <text x="70" y="154" class="sub">The polished answer is assembled—not guessed—from different parts of the record.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="192" width="1060" height="88" rx="24" fill="#FFF9F1"/>
+    <text x="105" y="222" class="label">THE GATE</text>
+    <rect x="105" y="237" width="155" height="30" rx="15" fill="#F5B68D"/><text x="183" y="258" class="pill" text-anchor="middle">05:00–11:59</text>
+    <rect x="278" y="237" width="180" height="30" rx="15" fill="#D8D1FF"/><text x="368" y="258" class="pill" text-anchor="middle">Fresh Coach</text>
+    <rect x="476" y="237" width="150" height="30" rx="15" fill="#CDECDD"/><text x="551" y="258" class="pill" text-anchor="middle">Premium</text>
+    <rect x="644" y="237" width="205" height="30" rx="15" fill="#E8EAF1"/><text x="746" y="258" class="pill" text-anchor="middle">Baby profile</text>
+    <text x="885" y="258" class="small">device-local time</text>
+  </g>
+
+  <path d="M250 280 V320" class="line"/><path d="M600 280 V320" class="line"/><path d="M950 280 V320" class="line"/>
+  <circle cx="250" cy="320" r="6" class="dot"/><circle cx="600" cy="320" r="6" class="dot"/><circle cx="950" cy="320" r="6" class="dot"/>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="326" width="340" height="255" rx="26" fill="#FFFFFF"/>
+    <text x="105" y="364" class="label">PATH 1 · LAST NIGHT</text>
+    <text x="105" y="405" class="head">Both endpoints?</text>
+    <text x="105" y="437" class="body">Bedtime + morning wake</text>
+    <line x1="105" y1="459" x2="375" y2="459" stroke="#E6E8EF" stroke-width="2"/>
+    <circle cx="119" cy="488" r="7" fill="#CDECDD"/><text x="139" y="494" class="body">0 wakes → “slept through”</text>
+    <circle cx="119" cy="521" r="7" fill="#D8D1FF"/><text x="139" y="527" class="body">1–2 → “settled”</text>
+    <circle cx="119" cy="554" r="7" fill="#F5B68D"/><text x="139" y="560" class="body">3+ → “broken”</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="430" y="326" width="340" height="255" rx="26" fill="#FFFFFF"/>
+    <text x="465" y="364" class="label">PATH 2 · TODAY</text>
+    <text x="465" y="405" class="head">Likely bedtime</text>
+    <text x="465" y="438" class="body">Today’s entries + current time</text>
+    <text x="465" y="469" class="body">+ known corrected age</text>
+    <rect x="465" y="497" width="270" height="54" rx="18" fill="#F1EEFF"/>
+    <text x="600" y="520" class="small" text-anchor="middle">Broken-night wake count</text>
+    <text x="600" y="541" class="small" text-anchor="middle">does not shift the number</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="790" y="326" width="340" height="255" rx="26" fill="#FFFFFF"/>
+    <text x="825" y="364" class="label">PATH 3 · CONTEXT</text>
+    <text x="825" y="405" class="head">One calm focus</text>
+    <text x="825" y="438" class="body">Recent disruption wins priority</text>
+    <text x="825" y="470" class="body">then 3+ wakes, then routine,</text>
+    <text x="825" y="502" class="body">otherwise “log more today”</text>
+    <rect x="825" y="522" width="270" height="29" rx="15" fill="#FFE5D6"/>
+    <text x="960" y="542" class="pill" text-anchor="middle">comfort, not changes</text>
+  </g>
+
+  <path d="M240 581 V625 H600" class="line"/><path d="M600 581 V625" class="line"/><path d="M960 581 V625 H600" class="line"/><circle cx="600" cy="625" r="7" class="dot"/>
+
+  <g filter="url(#shadow)">
+    <rect x="170" y="644" width="860" height="112" rx="30" fill="url(#dawn)"/>
+    <text x="600" y="683" class="label" text-anchor="middle">GOOD MORNING</text>
+    <text x="600" y="717" class="head" text-anchor="middle">Night sentence · likely bedtime · one gentle focus</text>
+    <text x="600" y="742" class="small" text-anchor="middle">One logged-night snapshot—not monitoring, diagnosis or a promise</text>
+  </g>
+</svg>

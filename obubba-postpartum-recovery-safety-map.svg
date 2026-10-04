@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1760" viewBox="0 0 1200 1760" role="img" aria-labelledby="title desc">
+  <title id="title">A calm postpartum recovery safety map</title>
+  <desc id="desc">Four stacked cards explain weekly recovery guidance, when to contact a clinician, when to call emergency services and what OBubba can and cannot do.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf8"/><stop offset="0.52" stop-color="#f4efff"/><stop offset="1" stop-color="#edf8f6"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#25324a" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1760" rx="52" fill="url(#bg)"/>
+  <circle cx="1040" cy="120" r="180" fill="#f3c7bd" opacity="0.28"/>
+  <circle cx="115" cy="1630" r="190" fill="#b9ddd5" opacity="0.24"/>
+
+  <text x="78" y="98" fill="#8d6cc3" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="800" letter-spacing="4">POSTPARTUM RECOVERY</text>
+  <text x="78" y="176" fill="#17253d" font-family="Georgia, serif" font-size="66" font-weight="700">Know the next right step</text>
+  <text x="78" y="232" fill="#536176" font-family="Arial, Helvetica, sans-serif" font-size="31">Notice patterns. Trust your instincts. Get human help.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="292" width="1060" height="300" rx="38" fill="#ffffff" stroke="#cdbbed" stroke-width="4"/>
+    <rect x="70" y="626" width="1060" height="300" rx="38" fill="#fffdf7" stroke="#e3bc72" stroke-width="4"/>
+    <rect x="70" y="960" width="1060" height="300" rx="38" fill="#fff8f8" stroke="#d96b72" stroke-width="5"/>
+    <rect x="70" y="1294" width="1060" height="300" rx="38" fill="#f8fcfb" stroke="#8fcfc0" stroke-width="4"/>
+  </g>
+
+  <circle cx="142" cy="364" r="42" fill="#eee6ff"/>
+  <path d="M122 364h40M142 344v40" stroke="#8d6cc3" stroke-width="8" stroke-linecap="round"/>
+  <text x="210" y="348" fill="#8d6cc3" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="3">WEEK BY WEEK</text>
+  <text x="210" y="405" fill="#17253d" font-family="Georgia, serif" font-size="48" font-weight="700">Useful recovery notes</text>
+  <text x="112" y="474" fill="#536176" font-family="Arial, Helvetica, sans-serif" font-size="36">
+    <tspan x="112" dy="0">Bleeding • wound or tear healing • afterpains</tspan>
+    <tspan x="112" dy="45">Breast comfort • pelvic floor • bowels</tspan>
+    <tspan x="112" dy="45">Energy • 6–8 week check • guidance, not diagnosis</tspan>
+  </text>
+
+  <circle cx="142" cy="698" r="42" fill="#fff0ce"/>
+  <path d="M142 675v31M142 721v3" stroke="#b77b16" stroke-width="8" stroke-linecap="round"/>
+  <text x="210" y="682" fill="#a56d11" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="3">CONTACT TODAY</text>
+  <text x="210" y="739" fill="#17253d" font-family="Georgia, serif" font-size="48" font-weight="700">Midwife, GP or doctor</text>
+  <text x="112" y="808" fill="#536176" font-family="Arial, Helvetica, sans-serif" font-size="36">
+    <tspan x="112" dy="0">Fever • unusual-smelling bleeding</tspan>
+    <tspan x="112" dy="45">Worsening pain • red or leaking wound</tspan>
+    <tspan x="112" dy="45">Bad headache • vision change • one-sided calf pain</tspan>
+  </text>
+
+  <circle cx="142" cy="1032" r="42" fill="#fde2e4"/>
+  <path d="M122 1012l40 40M162 1012l-40 40" stroke="#c94f58" stroke-width="8" stroke-linecap="round"/>
+  <text x="210" y="1016" fill="#c94f58" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="3">CALL 999 NOW</text>
+  <text x="210" y="1073" fill="#17253d" font-family="Georgia, serif" font-size="48" font-weight="700">Do not wait and watch</text>
+  <text x="112" y="1142" fill="#536176" font-family="Arial, Helvetica, sans-serif" font-size="36">
+    <tspan x="112" dy="0">Chest pain • trouble breathing • seizure</tspan>
+    <tspan x="112" dy="45">Thoughts of harming yourself or your baby</tspan>
+    <tspan x="112" dy="45">Sudden very heavy bleeding + faint or dizzy</tspan>
+  </text>
+
+  <circle cx="142" cy="1366" r="42" fill="#dff4ef"/>
+  <rect x="126" y="1342" width="32" height="47" rx="7" fill="none" stroke="#4f9c8b" stroke-width="6"/>
+  <circle cx="142" cy="1381" r="3.5" fill="#4f9c8b"/>
+  <text x="210" y="1350" fill="#3e8b7a" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="3">OBUBBA'S ROLE</text>
+  <text x="210" y="1407" fill="#17253d" font-family="Georgia, serif" font-size="48" font-weight="700">A private prompt, not care</text>
+  <text x="112" y="1476" fill="#536176" font-family="Arial, Helvetica, sans-serif" font-size="36">
+    <tspan x="112" dy="0">Week-aware education • private on-device notes</tspan>
+    <tspan x="112" dy="45">Warning-sign map • no symptom assessment</tspan>
+    <tspan x="112" dy="45">No diagnosis • no automatic call for help</tspan>
+  </text>
+
+  <text x="600" y="1680" text-anchor="middle" fill="#536176" font-family="Arial, Helvetica, sans-serif" font-size="28">UK examples shown • If something feels wrong, trust that feeling</text>
+</svg>

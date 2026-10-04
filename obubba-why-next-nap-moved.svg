@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690" role="img" aria-labelledby="title desc">
+  <title id="title">Why did the next nap time move?</title>
+  <desc id="desc">A flow showing that wake time, the last nap, today's context and bedtime feasibility combine into an updated next nap window.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102945"/>
+      <stop offset="0.58" stop-color="#214a64"/>
+      <stop offset="1" stop-color="#e69b81"/>
+    </linearGradient>
+    <linearGradient id="result" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff4de"/>
+      <stop offset="1" stop-color="#f9d0c0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="13" stdDeviation="15" flood-color="#07172b" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="690" rx="42" fill="url(#bg)"/>
+  <circle cx="1090" cy="72" r="145" fill="#ffdfc7" opacity=".11"/>
+  <circle cx="80" cy="630" r="160" fill="#9ac4c2" opacity=".1"/>
+
+  <text x="600" y="68" text-anchor="middle" fill="#f8d59b" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="4">A LIVE TARGET, NOT A DEADLINE</text>
+  <text x="600" y="118" text-anchor="middle" fill="#ffffff" font-family="Georgia,serif" font-size="42" font-weight="700">Why did the next nap move?</text>
+  <text x="600" y="154" text-anchor="middle" fill="#deebf2" font-family="Inter,Arial,sans-serif" font-size="20">Each real sleep changes the rest of the day.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="212" width="250" height="225" rx="26" fill="#153553" stroke="#7198b3" stroke-width="2"/>
+    <rect x="337" y="212" width="250" height="225" rx="26" fill="#1a405d" stroke="#7198b3" stroke-width="2"/>
+    <rect x="614" y="212" width="250" height="225" rx="26" fill="#fff4ea" stroke="#efbba5" stroke-width="2"/>
+    <rect x="891" y="212" width="250" height="225" rx="26" fill="#fff4ea" stroke="#efbba5" stroke-width="2"/>
+  </g>
+
+  <g font-family="Inter,Arial,sans-serif">
+    <circle cx="105" cy="265" r="27" fill="#f7d79e"/>
+    <path d="M105 247v18l12 8" fill="none" stroke="#153553" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="145" y="260" fill="#f7d79e" font-size="15" font-weight="800" letter-spacing="2">1 · WAKE</text>
+    <text x="95" y="310" fill="#ffffff" font-family="Georgia,serif" font-size="27" font-weight="700">New anchor</text>
+    <text x="95" y="347" fill="#dfeaf1" font-size="18">Morning wake or</text>
+    <text x="95" y="374" fill="#dfeaf1" font-size="18">last nap end</text>
+
+    <circle cx="382" cy="265" r="27" fill="#f7d79e"/>
+    <path d="M369 271c8-19 19-24 30-9-2 15-13 22-30 9z" fill="#1a405d"/>
+    <text x="422" y="260" fill="#f7d79e" font-size="15" font-weight="800" letter-spacing="2">2 · LAST NAP</text>
+    <text x="372" y="310" fill="#ffffff" font-family="Georgia,serif" font-size="27" font-weight="700">Pressure changed</text>
+    <text x="372" y="347" fill="#dfeaf1" font-size="18">Short, long, easy</text>
+    <text x="372" y="374" fill="#dfeaf1" font-size="18">or hard to settle</text>
+
+    <circle cx="659" cy="265" r="27" fill="#1f4964"/>
+    <path d="M648 272h22M653 261h12M657 250h4" fill="none" stroke="#f7d79e" stroke-width="4" stroke-linecap="round"/>
+    <text x="699" y="260" fill="#9c4f3b" font-size="15" font-weight="800" letter-spacing="2">3 · TODAY</text>
+    <text x="649" y="310" fill="#19324b" font-family="Georgia,serif" font-size="27" font-weight="700">Context matters</text>
+    <text x="649" y="347" fill="#3f5366" font-size="18">Rough night, illness,</text>
+    <text x="649" y="374" fill="#3f5366" font-size="18">teething or travel</text>
+
+    <circle cx="936" cy="265" r="27" fill="#1f4964"/>
+    <path d="M924 253h24v24h-24zM930 247v12M942 247v12" fill="none" stroke="#f7d79e" stroke-width="3" stroke-linecap="round"/>
+    <text x="976" y="260" fill="#9c4f3b" font-size="15" font-weight="800" letter-spacing="2">4 · BEDTIME</text>
+    <text x="926" y="310" fill="#19324b" font-family="Georgia,serif" font-size="27" font-weight="700">Does it still fit?</text>
+    <text x="926" y="347" fill="#3f5366" font-size="18">Another nap, bridge</text>
+    <text x="926" y="374" fill="#3f5366" font-size="18">nap or earlier bed</text>
+  </g>
+
+  <g fill="none" stroke="#f7d79e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M310 325h18l-8-8m8 8-8 8"/>
+    <path d="M587 325h18l-8-8m8 8-8 8"/>
+    <path d="M864 325h18l-8-8m8 8-8 8"/>
+    <path d="M600 450v44l-9-10m9 10 9-10"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="250" y="500" width="700" height="118" rx="32" fill="url(#result)" stroke="#f4d093" stroke-width="2"/>
+  </g>
+  <text x="600" y="540" text-anchor="middle" fill="#9c4f3b" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="800" letter-spacing="3">UPDATED NEXT NAP WINDOW</text>
+  <text x="600" y="583" text-anchor="middle" fill="#19324b" font-family="Georgia,serif" font-size="34" font-weight="700">A better fit for the day you actually had</text>
+  <text x="600" y="655" text-anchor="middle" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="600">Use the window with sleepy cues—not instead of them.</text>
+</svg>

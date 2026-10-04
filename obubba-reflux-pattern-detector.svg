@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1080" viewBox="0 0 720 1080" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba detects a possible reflux pattern</title>
+  <desc id="desc">The Flutter detector searches seven calendar days for at least six milk feeds and three timestamped notes containing arching, spit-up, posset or feed-refusal phrases within thirty minutes after feeds. Each note is used once. It does not diagnose reflux.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf4ec"/><stop offset="1" stop-color="#eee8f2"/></linearGradient>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#26324c"/><stop offset="1" stop-color="#51496f"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#45394d" flood-opacity=".11"/></filter>
+  </defs>
+  <rect width="720" height="1080" rx="34" fill="url(#bg)"/>
+  <circle cx="650" cy="75" r="82" fill="#d9c5dc" opacity=".5"/><circle cx="55" cy="1028" r="112" fill="#cbdacb" opacity=".54"/>
+  <text x="52" y="65" fill="#a55442" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">PATTERN, NOT DIAGNOSIS</text>
+  <text x="52" y="116" fill="#2e2b3a" font-family="Georgia, serif" font-size="38" font-weight="700">Three timed links make</text>
+  <text x="52" y="159" fill="#2e2b3a" font-family="Georgia, serif" font-size="38" font-weight="700">the card possible.</text>
+  <text x="52" y="198" fill="#665f6d" font-family="Arial, sans-serif" font-size="18">Here is the current Flutter rule in plain English.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="230" width="636" height="122" rx="24" fill="#fffdf9"/>
+    <circle cx="91" cy="279" r="27" fill="#e7d7c0"/><text x="91" y="286" text-anchor="middle" fill="#905b49" font-family="Arial, sans-serif" font-size="20" font-weight="700">1</text>
+    <text x="134" y="271" fill="#302e3b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Open a 7-calendar-day window</text>
+    <text x="134" y="305" fill="#68616e" font-family="Arial, sans-serif" font-size="17">Today + the previous 6 days. At least 6 milk feeds.</text>
+    <g transform="translate(134 321)" fill="#c97b67"><circle cx="8" cy="8" r="8"/><circle cx="38" cy="8" r="8"/><circle cx="68" cy="8" r="8"/><circle cx="98" cy="8" r="8"/><circle cx="128" cy="8" r="8"/><circle cx="158" cy="8" r="8"/></g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="376" width="636" height="155" rx="24" fill="#fffdf9"/>
+    <circle cx="91" cy="425" r="27" fill="#d7e3d4"/><text x="91" y="432" text-anchor="middle" fill="#4c705a" font-family="Arial, sans-serif" font-size="20" font-weight="700">2</text>
+    <text x="134" y="417" fill="#302e3b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Find a recognised note phrase</text>
+    <text x="134" y="451" fill="#68616e" font-family="Arial, sans-serif" font-size="17">Case-insensitive text match:</text>
+    <g font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#456954"><rect x="134" y="470" width="118" height="30" rx="15" fill="#dbe7d8"/><text x="193" y="490" text-anchor="middle">BACK ARCH</text><rect x="264" y="470" width="104" height="30" rx="15" fill="#dbe7d8"/><text x="316" y="490" text-anchor="middle">SPIT-UP</text><rect x="380" y="470" width="90" height="30" rx="15" fill="#dbe7d8"/><text x="425" y="490" text-anchor="middle">POSSET</text><rect x="482" y="470" width="154" height="30" rx="15" fill="#dbe7d8"/><text x="559" y="490" text-anchor="middle">REFUSES FEED</text></g>
+    <text x="134" y="519" fill="#a55442" font-family="Arial, sans-serif" font-size="15" font-weight="700">“FUSSY” ALONE IS NOT A LITERAL MATCH</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="555" width="636" height="143" rx="24" fill="#fffdf9"/>
+    <circle cx="91" cy="604" r="27" fill="#ddd3ea"/><text x="91" y="611" text-anchor="middle" fill="#675380" font-family="Arial, sans-serif" font-size="20" font-weight="700">3</text>
+    <text x="134" y="596" fill="#302e3b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Link note 0–30m after a feed</text>
+    <text x="134" y="630" fill="#68616e" font-family="Arial, sans-serif" font-size="17">Same calendar day. Before the feed or 31m later = no.</text>
+    <line x1="141" y1="662" x2="540" y2="662" stroke="#c7bdcc" stroke-width="7" stroke-linecap="round"/><circle cx="141" cy="662" r="11" fill="#8276a1"/><circle cx="540" cy="662" r="11" fill="#c97b67"/><text x="141" y="684" text-anchor="middle" fill="#675380" font-family="Arial, sans-serif" font-size="14" font-weight="700">FEED</text><text x="540" y="684" text-anchor="middle" fill="#9a5d43" font-family="Arial, sans-serif" font-size="14" font-weight="700">30M</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="722" width="636" height="130" rx="24" fill="#fffdf9"/>
+    <circle cx="91" cy="771" r="27" fill="#f0d7ca"/><text x="91" y="778" text-anchor="middle" fill="#9a5d43" font-family="Arial, sans-serif" font-size="20" font-weight="700">4</text>
+    <text x="134" y="763" fill="#302e3b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Require 3 matched feeds</text>
+    <text x="134" y="797" fill="#68616e" font-family="Arial, sans-serif" font-size="17">Each note is used once—even if two feeds sit nearby.</text>
+    <g transform="translate(134 815)"><rect width="100" height="18" rx="9" fill="#c97b67"/><rect x="112" width="100" height="18" rx="9" fill="#c97b67"/><rect x="224" width="100" height="18" rx="9" fill="#c97b67"/><text x="349" y="15" fill="#4f765c" font-family="Arial, sans-serif" font-size="14" font-weight="700">CARD CAN APPEAR ✓</text></g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="876" width="636" height="139" rx="24" fill="url(#night)"/>
+    <text x="68" y="914" fill="#f1ca83" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="1.4">WHAT THIS RULE CANNOT SEE</text>
+    <text x="68" y="950" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700">Pain · growth · colour · force · hydration · cause</text>
+    <text x="68" y="982" fill="#ded9e5" font-family="Arial, sans-serif" font-size="16">Solids are excluded. Red flags need help—not another log.</text>
+  </g>
+
+  <text x="360" y="1052" text-anchor="middle" fill="#635c68" font-family="Arial, sans-serif" font-size="15">Awake upright if helpful. Sleep flat on the back.</text>
+</svg>

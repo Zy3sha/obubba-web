@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">What learning your baby's sleep rhythm means in OBubba</title>
+  <desc id="desc">The rhythm learned meter combines completed naps and characterised nights. Prediction confidence separately reflects the evidence available for one next-sleep suggestion.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fbf7f0"/><stop offset="1" stop-color="#e9f1ef"/></linearGradient>
+    <linearGradient id="nap" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#547b70"/><stop offset="1" stop-color="#78a293"/></linearGradient>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#53647c"/><stop offset="1" stop-color="#7889a0"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#22373d" flood-opacity=".09"/></filter>
+    <style>
+      .serif{font-family:Georgia,'Times New Roman',serif;fill:#20353d}.sans{font-family:Arial,Helvetica,sans-serif;fill:#52646b}.eye{font:700 16px Arial,Helvetica,sans-serif;letter-spacing:3px;fill:#966e2c}.head{font:700 25px Arial,Helvetica,sans-serif;fill:#20353d}.body{font:400 20px Arial,Helvetica,sans-serif;fill:#5b6c72}.small{font:400 17px Arial,Helvetica,sans-serif;fill:#68787e}.white{font-family:Arial,Helvetica,sans-serif;fill:#fff}
+    </style>
+  </defs>
+  <rect width="900" height="1200" rx="42" fill="url(#bg)"/>
+  <circle cx="835" cy="68" r="155" fill="#e6d4a7" opacity=".28"/><circle cx="40" cy="1130" r="175" fill="#b8d1ca" opacity=".28"/>
+  <text x="450" y="65" text-anchor="middle" class="eye">WHAT “LEARNING” MEANS</text>
+  <text x="450" y="121" text-anchor="middle" class="serif" font-size="42" font-weight="700">Two signals. Two different jobs.</text>
+  <text x="450" y="160" text-anchor="middle" class="sans" font-size="20">Personal evidence grows; certainty never reaches 100%.</text>
+
+  <g filter="url(#shadow)"><rect x="65" y="205" width="770" height="400" rx="30" fill="#fff"/></g>
+  <circle cx="132" cy="273" r="38" fill="#e8efed"/><path d="M113 281a24 24 0 1 0 31-31 28 28 0 1 1-31 31Z" fill="#547b70"/>
+  <text x="190" y="258" class="eye">OVERALL MODEL</text>
+  <text x="190" y="295" class="head">Rhythm learned</text>
+  <text x="105" y="347" class="body">How much usable sleep history has built the model?</text>
+
+  <text x="105" y="404" class="head" font-size="22">Completed naps</text><text x="795" y="404" text-anchor="end" class="head" fill="#547b70">60%</text>
+  <rect x="105" y="421" width="690" height="24" rx="12" fill="#e3ebe8"/><rect x="105" y="421" width="414" height="24" rx="12" fill="url(#nap)"/>
+  <text x="105" y="474" class="small">Builds toward its full share over 16 completed naps</text>
+
+  <text x="105" y="524" class="head" font-size="22">Characterised nights</text><text x="795" y="524" text-anchor="end" class="head" fill="#53647c">40%</text>
+  <rect x="105" y="541" width="690" height="24" rx="12" fill="#e3e7ec"/><rect x="105" y="541" width="276" height="24" rx="12" fill="url(#night)"/>
+  <text x="105" y="588" class="small">Builds toward its full share over 7 nights</text>
+
+  <path d="M450 605v45" stroke="#bda25e" stroke-width="5" stroke-linecap="round"/><path d="m437 638 13 15 13-15" fill="none" stroke="#bda25e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)"><rect x="65" y="657" width="770" height="352" rx="30" fill="#fff"/></g>
+  <circle cx="132" cy="725" r="38" fill="#edf0f5"/><path d="M108 727h12l9-20 12 39 10-19h23" fill="none" stroke="#53647c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="190" y="710" class="eye">THIS ONE SUGGESTION</text>
+  <text x="190" y="747" class="head">Prediction confidence</text>
+  <text x="105" y="799" class="body">How strong is the evidence for the next sleep window?</text>
+
+  <g transform="translate(105 840)">
+    <rect width="325" height="63" rx="18" fill="#edf3f0"/><circle cx="33" cy="31.5" r="14" fill="#547b70"/><path d="m27 31 5 5 9-11" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="60" y="39" class="head" font-size="19">A real wake anchor</text>
+    <rect x="365" width="325" height="63" rx="18" fill="#f3efe6"/><circle cx="398" cy="31.5" r="14" fill="#b98a4d"/><path d="m392 31 5 5 9-11" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="425" y="39" class="head" font-size="19">Recent usable days</text>
+    <rect y="83" width="325" height="63" rx="18" fill="#eef0f4"/><circle cx="33" cy="114.5" r="14" fill="#53647c"/><path d="m27 114 5 5 9-11" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="60" y="122" class="head" font-size="19">Comparable naps</text>
+    <rect x="365" y="83" width="325" height="63" rx="18" fill="#f3eeee"/><circle cx="398" cy="114.5" r="14" fill="#a56e72"/><path d="m392 114 5 5 9-11" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="425" y="122" class="head" font-size="19">Fewer outliers</text>
+  </g>
+  <text x="450" y="980" text-anchor="middle" class="small">Confidence can change with today's context—even after the rhythm meter fills.</text>
+
+  <rect x="85" y="1060" width="730" height="82" rx="41" fill="#203f4a"/>
+  <text x="450" y="1092" text-anchor="middle" class="white" font-size="17" font-weight="700" letter-spacing="2">THE IMPORTANT LIMIT</text>
+  <text x="450" y="1124" text-anchor="middle" class="white" font-size="23" font-family="Georgia,'Times New Roman',serif" font-weight="700">More personal does not mean perfectly predictable.</text>
+</svg>

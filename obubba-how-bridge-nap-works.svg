@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1450" viewBox="0 0 900 1450" role="img" aria-labelledby="title desc">
+  <title id="title">Two ways OBubba can identify a bridge nap</title>
+  <desc id="desc">The live card checks the afternoon time, completed naps, a 45-minute day-sleep deficit and minimum wake window. The planner separately checks whether bedtime would exceed the final wake window.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffaf5"/><stop offset="1" stop-color="#f0efff"/></linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff8c78"/><stop offset="1" stop-color="#ef6d75"/></linearGradient>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#302748"/><stop offset="1" stop-color="#56456e"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#342742" flood-opacity=".12"/></filter>
+    <style>
+      .ink{fill:#342b46}.soft{fill:#6b6375}.white{fill:#fff}.card{fill:#fff;stroke:#eadfeb;stroke-width:2}.eyebrow{font:700 19px Arial,sans-serif;letter-spacing:2px}.h1{font:700 45px Arial,sans-serif}.h2{font:700 25px Arial,sans-serif}.body{font:400 20px Arial,sans-serif}.small{font:400 17px Arial,sans-serif}.micro{font:400 15px Arial,sans-serif}.num{font:700 22px Arial,sans-serif}.line{stroke:#cbb5da;stroke-width:5;stroke-linecap:round}.dash{stroke:#d9c9e1;stroke-width:4;stroke-dasharray:9 10}
+    </style>
+  </defs>
+  <rect width="900" height="1450" rx="42" fill="url(#bg)"/>
+  <circle cx="792" cy="84" r="110" fill="#ffd9d0" opacity=".75"/><circle cx="79" cy="1374" r="130" fill="#dfd8fa" opacity=".8"/>
+  <text x="62" y="78" class="eyebrow" fill="#d85d62">INSIDE THE FLUTTER APP</text>
+  <text x="62" y="140" class="h1 ink">Two roads to</text><text x="62" y="194" class="h1 ink">a bridge nap</text>
+  <text x="62" y="234" class="body soft">One reads today live. One protects the projected bedtime.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="55" y="278" width="790" height="536" rx="30" class="card"/>
+    <rect x="82" y="304" width="162" height="38" rx="19" fill="#ffe1da"/>
+    <text x="105" y="330" class="small" fill="#be5757">LIVE CARD</text>
+    <text x="82" y="382" class="h2 ink">Can a small nap protect this afternoon?</text>
+    <g class="body soft">
+      <circle cx="105" cy="438" r="23" fill="#fff0ca"/><text x="98" y="446" class="num" fill="#98731f">1</text><text x="145" y="445">Current time is 2:00–5:30pm</text>
+      <circle cx="105" cy="500" r="23" fill="#e8defa"/><text x="98" y="508" class="num" fill="#705792">2</text><text x="145" y="507">At least one completed nap today</text>
+      <circle cx="105" cy="562" r="23" fill="#ddf2eb"/><text x="98" y="570" class="num" fill="#3f7d6e">3</text><text x="145" y="569">No nap is currently active</text>
+      <circle cx="105" cy="624" r="23" fill="#ffe1da"/><text x="98" y="632" class="num" fill="#be5757">4</text><text x="145" y="631">Day sleep is at least 45m below floor</text>
+      <circle cx="105" cy="686" r="23" fill="#e3edff"/><text x="98" y="694" class="num" fill="#4e6d9b">5</text><text x="145" y="693">Minimum wake window has passed</text>
+    </g>
+    <rect x="82" y="732" width="736" height="56" rx="18" fill="url(#coral)"/>
+    <text x="110" y="768" class="h2 white">Offer a brief 20–30 minute opportunity</text>
+  </g>
+
+  <path d="M450 816v48" class="dash"/><path d="M438 856l12 14 12-14" fill="none" class="line"/>
+
+  <g filter="url(#shadow)">
+    <rect x="55" y="878" width="790" height="334" rx="30" fill="url(#night)"/>
+    <rect x="82" y="904" width="205" height="38" rx="19" fill="#fff" opacity=".92"/>
+    <text x="105" y="930" class="small" fill="#56456e">BEDTIME PLANNER</text>
+    <text x="82" y="982" class="h2 white">Would bedtime over-stretch the final window?</text>
+    <line x1="108" y1="1050" x2="786" y2="1050" stroke="#a896c9" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="108" cy="1050" r="16" fill="#ff8c78"/><circle cx="520" cy="1050" r="16" fill="#d9c7f4"/><circle cx="786" cy="1050" r="18" fill="#fff"/>
+    <text x="82" y="1093" class="small white">last nap</text><text x="465" y="1093" class="small white">bridge</text><text x="741" y="1093" class="small white">bedtime</text>
+    <text x="82" y="1140" class="body" fill="#eee7f8">If the earliest bedtime still exceeds the contextual final</text>
+    <text x="82" y="1170" class="body" fill="#eee7f8">wake window, insert 25m / 20m / 15m by age.</text>
+  </g>
+
+  <path d="M450 1214v44" class="dash"/><path d="M438 1250l12 14 12-14" fill="none" class="line"/>
+
+  <g filter="url(#shadow)">
+    <rect x="55" y="1270" width="790" height="101" rx="26" class="card"/>
+    <text x="82" y="1311" class="h2 ink">Then the family chooses the smaller lever</text>
+    <text x="82" y="1347" class="body soft">Brief nap—or a calm, modestly earlier bedtime.</text>
+  </g>
+  <rect x="55" y="1391" width="790" height="35" rx="17" fill="#342b46"/>
+  <text x="97" y="1415" class="micro white">Cues and safer sleep outrank every prediction, for every nap.</text>
+</svg>

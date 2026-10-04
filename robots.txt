@@ -1,0 +1,67 @@
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /*.md$
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /*.md$
+
+User-agent: GPTBot
+Allow: /
+Disallow: /*.md$
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /*.md$
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /*.md$
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /*.md$
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /*.md$
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /*.md$
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /*.md$
+
+User-agent: Applebot
+Allow: /
+Disallow: /*.md$
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /*.md$
+
+User-agent: Bingbot
+Allow: /
+Disallow: /*.md$
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /*.md$
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /*.md$
+
+User-agent: meta-externalagent
+Allow: /
+Disallow: /*.md$
+
+User-agent: *
+Allow: /
+Disallow: /*.md$
+
+Sitemap: https://obubba.com/sitemap.xml
+Sitemap: https://obubba.com/image-sitemap.xml
+LLMs: https://obubba.com/llms.txt

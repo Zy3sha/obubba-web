@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba learns a feed-to-nap spacing pattern</title>
+  <desc id="desc">The detector pairs each completed daytime nap with the most recent daytime milk feed within three hours, sorts pairs into four spacing bands, and only creates guidance when sample and difference thresholds are met.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1731"/><stop offset="1" stop-color="#192443"/></linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#222f55"/><stop offset="1" stop-color="#151d39"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#05091a" flood-opacity=".44"/></filter>
+    <marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0 0L11 5.5L0 11Z" fill="#9f93ed"/></marker>
+  </defs>
+  <rect width="1200" height="1500" rx="54" fill="url(#bg)"/>
+  <circle cx="1085" cy="125" r="270" fill="#f2a17f" opacity=".08"/><circle cx="75" cy="1395" r="290" fill="#73c8bf" opacity=".06"/>
+
+  <text x="82" y="104" fill="#f8f3eb" font-family="Arial, sans-serif" font-size="48" font-weight="700">From ordinary logs to one</text>
+  <text x="82" y="163" fill="#f8f3eb" font-family="Arial, sans-serif" font-size="48" font-weight="700">personal feed-to-nap pattern</text>
+  <text x="82" y="216" fill="#bdc6dc" font-family="Arial, sans-serif" font-size="24">The current Flutter detector compares timing bands—not one nap.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="82" y="276" width="1036" height="260" rx="34" fill="url(#card)" stroke="#73c8bf" stroke-width="3"/>
+    <text x="124" y="328" fill="#91e3d9" font-family="Arial, sans-serif" font-size="20" font-weight="700">1 · BUILD ELIGIBLE PAIRS</text>
+    <text x="124" y="386" fill="#fff" font-family="Arial, sans-serif" font-size="36" font-weight="700">Stored milk-feed time → next nap start</text>
+    <text x="124" y="434" fill="#c6ccde" font-family="Arial, sans-serif" font-size="24">Latest preceding daytime milk feed · no more than 3h earlier</text>
+    <text x="124" y="475" fill="#c6ccde" font-family="Arial, sans-serif" font-size="23">Completed nap: 5–240 min · home-like baseline day</text>
+    <rect x="790" y="455" width="281" height="49" rx="25" fill="#73c8bf" opacity=".14"/>
+    <text x="931" y="488" text-anchor="middle" fill="#a3e8e0" font-family="Arial, sans-serif" font-size="19" font-weight="700">SOLIDS + NIGHT FEEDS OUT</text>
+  </g>
+
+  <path d="M600 536V595" fill="none" stroke="#9f93ed" stroke-width="7" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="82" y="625" width="1036" height="310" rx="34" fill="url(#card)" stroke="#8f84df" stroke-width="3"/>
+    <text x="124" y="677" fill="#d1caff" font-family="Arial, sans-serif" font-size="20" font-weight="700">2 · SORT EACH PAIR INTO ONE BAND</text>
+    <g font-family="Arial, sans-serif" font-weight="700">
+      <rect x="124" y="722" width="445" height="76" rx="23" fill="#8f84df" opacity=".16"/><text x="153" y="771" fill="#fff" font-size="28">Within 15 min</text>
+      <rect x="591" y="722" width="445" height="76" rx="23" fill="#8f84df" opacity=".16"/><text x="620" y="771" fill="#fff" font-size="28">15–30 min</text>
+      <rect x="124" y="820" width="445" height="76" rx="23" fill="#8f84df" opacity=".16"/><text x="153" y="869" fill="#fff" font-size="28">30–60 min</text>
+      <rect x="591" y="820" width="445" height="76" rx="23" fill="#8f84df" opacity=".16"/><text x="620" y="869" fill="#fff" font-size="28">Over 1h</text>
+    </g>
+    <text x="124" y="916" fill="#bcc4da" font-family="Arial, sans-serif" font-size="21">“Over 1h” can only reach 3h because older feeds are not paired.</text>
+  </g>
+
+  <path d="M600 935V994" fill="none" stroke="#9f93ed" stroke-width="7" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="82" y="1024" width="1036" height="268" rx="34" fill="#2a233d" stroke="#f1a17f" stroke-width="3"/>
+    <text x="124" y="1075" fill="#f7b59b" font-family="Arial, sans-serif" font-size="20" font-weight="700">3 · STAY QUIET UNLESS ALL FOUR GATES PASS</text>
+    <text x="124" y="1132" fill="#fff" font-family="Arial, sans-serif" font-size="29" font-weight="700">✓ At least 8 eligible feed–nap pairs</text>
+    <text x="124" y="1175" fill="#fff" font-family="Arial, sans-serif" font-size="29" font-weight="700">✓ At least 2 bands with 3+ naps each</text>
+    <text x="124" y="1218" fill="#fff" font-family="Arial, sans-serif" font-size="29" font-weight="700">✓ Best average beats worst by 15+ min</text>
+    <text x="124" y="1261" fill="#fff" font-family="Arial, sans-serif" font-size="29" font-weight="700">✓ The within-15-min band is not the winner</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="82" y="1350" width="1036" height="92" rx="28" fill="#ffffff" opacity=".07"/>
+    <text x="600" y="1388" text-anchor="middle" fill="#f7f2e9" font-family="Arial, sans-serif" font-size="25" font-weight="700">What it shows: an association in these logs</text>
+    <text x="600" y="1422" text-anchor="middle" fill="#c5ccdf" font-family="Arial, sans-serif" font-size="21">What it cannot prove: that feed spacing caused the nap length</text>
+  </g>
+  <text x="600" y="1477" text-anchor="middle" fill="#aeb8d1" font-family="Arial, sans-serif" font-size="19">Window: up to 21 recent baseline-eligible days</text>
+</svg>

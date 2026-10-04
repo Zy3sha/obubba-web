@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba decides to show the share nights prompt</title>
+  <desc id="desc">OBubba examines the most recent 14 nights. Nights with both a bedtime and morning wake count as complete. Three complete nights produce the low urgency partner invite, but the detector does not read the Family Sharing roster or who provided care. Sharing remains a separate deliberate action.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111726"/>
+      <stop offset="0.62" stop-color="#172c35"/>
+      <stop offset="1" stop-color="#2f3447"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e1aa62"/>
+      <stop offset="1" stop-color="#bd8065"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#6fb7a7"/>
+      <stop offset="1" stop-color="#598f92"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#05080f" flood-opacity=".35"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0L12 6L0 12Z" fill="#ddb078"/>
+    </marker>
+    <style>
+      .serif{font-family:Georgia,serif}.sans{font-family:Inter,Arial,sans-serif}.caps{font:700 17px Inter,Arial,sans-serif;letter-spacing:3px}.h1{font:700 52px Georgia,serif}.h2{font:700 28px Georgia,serif}.body{font:400 18px Inter,Arial,sans-serif}.small{font:650 15px Inter,Arial,sans-serif}.white{fill:#fffaf3}.muted{fill:#c6c9d2}.line{stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <rect width="1440" height="960" rx="40" fill="url(#bg)"/>
+  <circle cx="1260" cy="110" r="260" fill="#6fb7a7" opacity=".08"/>
+  <circle cx="90" cy="900" r="300" fill="#d8946c" opacity=".08"/>
+
+  <text x="720" y="78" text-anchor="middle" class="caps" fill="#efbd7e">THE EXACT FLUTTER GATE</text>
+  <text x="720" y="140" text-anchor="middle" class="h1 white">Why the sharing card appears</text>
+  <text x="720" y="181" text-anchor="middle" class="body muted">Night completeness unlocks the invitation. It does not measure the relationship.</text>
+
+  <rect x="74" y="230" width="1292" height="168" rx="28" fill="#141c2a" stroke="#576170" stroke-width="2" filter="url(#shadow)"/>
+  <text x="112" y="273" class="caps" fill="#9fa9b9">LATEST 14 NIGHTS</text>
+  <g transform="translate(112 305)">
+    <g fill="#233044" stroke="#778397">
+      <rect x="0" y="0" width="66" height="58" rx="14"/><rect x="78" y="0" width="66" height="58" rx="14"/><rect x="156" y="0" width="66" height="58" rx="14"/><rect x="234" y="0" width="66" height="58" rx="14"/><rect x="312" y="0" width="66" height="58" rx="14"/><rect x="390" y="0" width="66" height="58" rx="14"/><rect x="468" y="0" width="66" height="58" rx="14"/><rect x="546" y="0" width="66" height="58" rx="14"/><rect x="624" y="0" width="66" height="58" rx="14"/><rect x="702" y="0" width="66" height="58" rx="14"/><rect x="780" y="0" width="66" height="58" rx="14"/><rect x="858" y="0" width="66" height="58" rx="14"/><rect x="936" y="0" width="66" height="58" rx="14"/><rect x="1014" y="0" width="66" height="58" rx="14"/>
+    </g>
+    <g fill="url(#gold)" stroke="#f2c889" stroke-width="2">
+      <rect x="78" y="0" width="66" height="58" rx="14"/><rect x="390" y="0" width="66" height="58" rx="14"/><rect x="858" y="0" width="66" height="58" rx="14"/>
+    </g>
+    <g fill="#fff9ec">
+      <path d="M101 14a17 17 0 1 0 19 25 21 21 0 1 1-19-25Z"/><path d="M413 14a17 17 0 1 0 19 25 21 21 0 1 1-19-25Z"/><path d="M881 14a17 17 0 1 0 19 25 21 21 0 1 1-19-25Z"/>
+    </g>
+    <text x="1120" y="25" class="small" fill="#e8c183">3 complete</text>
+    <text x="1120" y="48" class="small muted">11 incomplete / unused</text>
+  </g>
+
+  <path d="M720 410V455" stroke="#ddb078" stroke-width="5" class="line" marker-end="url(#arrow)"/>
+  <rect x="125" y="472" width="520" height="205" rx="28" fill="#202a3a" stroke="#d6a46d" stroke-width="2" filter="url(#shadow)"/>
+  <text x="165" y="516" class="caps" fill="#e8b87d">A NIGHT COUNTS WHEN</text>
+  <circle cx="173" cy="560" r="8" fill="#e3ac6c"/>
+  <text x="198" y="568" class="body white">Bedtime was reconstructed</text>
+  <circle cx="173" cy="610" r="8" fill="#e3ac6c"/>
+  <text x="198" y="618" class="body white">Morning wake was reconstructed</text>
+  <text x="165" y="652" class="small muted">Not necessarily consecutive. Middle-of-night detail can vary.</text>
+
+  <rect x="795" y="472" width="520" height="205" rx="28" fill="#202a3a" stroke="#7baea4" stroke-width="2" filter="url(#shadow)"/>
+  <text x="835" y="516" class="caps" fill="#90cabc">THE DETECTOR DOES NOT READ</text>
+  <text x="835" y="560" class="body white">• The live participant roster</text>
+  <text x="835" y="605" class="body white">• Who logged or handled each wake</text>
+  <text x="835" y="650" class="body white">• Family structure or relationship safety</text>
+
+  <path d="M385 690V729H720" fill="none" stroke="#ddb078" stroke-width="4" class="line"/>
+  <path d="M1055 690V729H720" fill="none" stroke="#76b5a7" stroke-width="4" class="line"/>
+  <path d="M720 729V755" stroke="#ddb078" stroke-width="5" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="230" y="772" width="980" height="110" rx="28" fill="url(#gold)" filter="url(#shadow)"/>
+  <text x="720" y="816" text-anchor="middle" class="caps" fill="#3e2b29">LOW-URGENCY INVITATION</text>
+  <text x="720" y="856" text-anchor="middle" class="h2" fill="#281f28">“Share Maya’s nights with your partner”</text>
+
+  <rect x="395" y="900" width="650" height="38" rx="19" fill="#0f1823" stroke="#78ad9f"/>
+  <text x="720" y="925" text-anchor="middle" class="small" fill="#b9dcd4">Sharing is still a separate, deliberate per-child access choice.</text>
+</svg>

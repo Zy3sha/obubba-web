@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">When OBubba says Next sleep is getting overdue</title>
+  <desc id="desc">A plain-language map of the current Flutter detector. After a completed nap, it compares elapsed awake time with the upper wake-window range and speaks only after a 45-minute grace period, before 6pm, when the baby is not asleep and bedtime is not logged.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101f42"/>
+      <stop offset="1" stop-color="#253f59"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#07101f" flood-opacity=".25"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1500" rx="56" fill="url(#bg)"/>
+  <circle cx="1060" cy="125" r="190" fill="#e3bb6e" opacity=".14"/>
+  <circle cx="85" cy="1415" r="220" fill="#a7d7d4" opacity=".1"/>
+
+  <text x="76" y="108" fill="#e3bb6e" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3">CURRENT FLUTTER LOGIC · FEBRUARY 2027</text>
+  <text x="76" y="178" fill="#fffaf3" font-family="Arial, sans-serif" font-size="49" font-weight="700">When “Next sleep is</text>
+  <text x="76" y="238" fill="#fffaf3" font-family="Arial, sans-serif" font-size="49" font-weight="700">getting overdue” appears</text>
+  <text x="76" y="290" fill="#cbdde1" font-family="Arial, sans-serif" font-size="25">A time-based prompt with a grace period—not a diagnosis.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="346" width="1060" height="224" rx="32" fill="#fffaf3"/>
+    <text x="112" y="405" fill="#995f6e" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2">WHAT IT READS</text>
+    <text x="112" y="462" fill="#182a43" font-family="Arial, sans-serif" font-size="30" font-weight="700">Corrected developmental age + wake-window preference</text>
+    <text x="112" y="509" fill="#48606a" font-family="Arial, sans-serif" font-size="25">Latest awake anchor · completed nap count · current clock time</text>
+    <text x="112" y="548" fill="#48606a" font-family="Arial, sans-serif" font-size="25">Asleep, bedtime, paused-night-wake and napless-day state</text>
+  </g>
+
+  <path d="M600 580v48" stroke="#e3bb6e" stroke-width="5" stroke-linecap="round"/>
+  <path d="m587 617 13 17 13-17" fill="none" stroke="#e3bb6e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="646" width="1060" height="285" rx="32" fill="#e0f1ee"/>
+    <text x="112" y="706" fill="#1d615e" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2">AFTER AT LEAST ONE COMPLETED NAP</text>
+    <text x="112" y="768" fill="#182a43" font-family="Arial, sans-serif" font-size="32" font-weight="700">Elapsed awake time must be strictly more than:</text>
+    <rect x="112" y="806" width="696" height="78" rx="20" fill="#fffaf3"/>
+    <text x="150" y="857" fill="#995f6e" font-family="Arial, sans-serif" font-size="38" font-weight="700">upper age range + 45 minutes</text>
+    <text x="842" y="838" fill="#182a43" font-family="Arial, sans-serif" font-size="23" font-weight="700">AND IT MUST</text>
+    <text x="842" y="875" fill="#48606a" font-family="Arial, sans-serif" font-size="25">be before 6pm</text>
+    <text x="112" y="916" fill="#48606a" font-family="Arial, sans-serif" font-size="23">“Overdue” begins only after this built-in grace period.</text>
+  </g>
+
+  <path d="M600 941v48" stroke="#e3bb6e" stroke-width="5" stroke-linecap="round"/>
+  <path d="m587 978 13 17 13-17" fill="none" stroke="#e3bb6e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="1008" width="505" height="190" rx="32" fill="#f5e4be"/>
+    <text x="110" y="1064" fill="#745015" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="2">MEDIUM</text>
+    <text x="110" y="1123" fill="#182a43" font-family="Arial, sans-serif" font-size="38" font-weight="700">46–75 min</text>
+    <text x="110" y="1163" fill="#48606a" font-family="Arial, sans-serif" font-size="24">past the upper range</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="625" y="1008" width="505" height="190" rx="32" fill="#efd7dd"/>
+    <text x="665" y="1064" fill="#8a4055" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="2">HIGH</text>
+    <text x="665" y="1123" fill="#182a43" font-family="Arial, sans-serif" font-size="38" font-weight="700">more than 75 min</text>
+    <text x="665" y="1163" fill="#48606a" font-family="Arial, sans-serif" font-size="24">past the upper range</text>
+  </g>
+
+  <rect x="70" y="1242" width="1060" height="154" rx="30" fill="#0c1832" stroke="#637b8c" stroke-width="2"/>
+  <text x="106" y="1293" fill="#e3bb6e" font-family="Arial, sans-serif" font-size="24" font-weight="700">STAYS QUIET WHEN</text>
+  <text x="106" y="1335" fill="#dbe7e8" font-family="Arial, sans-serif" font-size="23">baby is asleep · bedtime is logged · no wake anchor exists</text>
+  <text x="106" y="1372" fill="#dbe7e8" font-family="Arial, sans-serif" font-size="23">night sleep is paused · parent explicitly chose a napless day</text>
+
+  <text x="600" y="1440" text-anchor="middle" fill="#b8cbd0" font-family="Arial, sans-serif" font-size="22" font-weight="700">NOT READ HERE</text>
+  <text x="600" y="1473" text-anchor="middle" fill="#9fb5bc" font-family="Arial, sans-serif" font-size="20">tired cues · feeds · illness · day type · learned nap outcomes</text>
+</svg>

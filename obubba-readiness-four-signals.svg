@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">One view, four different kinds of signal</title>
+  <desc id="desc">OBubba's sleep meter can personalise a predicted window, while feed, solids and nappy chips are distinct planning prompts. The baby's cues always come first.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf4"/>
+      <stop offset="1" stop-color="#f2f7f1"/>
+    </linearGradient>
+    <linearGradient id="sleep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b9d8c2"/>
+      <stop offset=".58" stop-color="#f2cc8f"/>
+      <stop offset="1" stop-color="#dfa093"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#49615b" flood-opacity=".12"/>
+    </filter>
+    <style>
+      .eyebrow{font:700 18px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:2.6px;fill:#8b5f56}
+      .title{font:700 48px Georgia,"Times New Roman",serif;fill:#243a36}
+      .subtitle{font:400 21px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#526762}
+      .label{font:700 25px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#243a36}
+      .copy{font:400 18px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#526762}
+      .chip{font:700 15px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#243a36}
+      .small{font:600 15px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#61736f}
+      .footer{font:700 27px Georgia,"Times New Roman",serif;fill:#fffaf4}
+    </style>
+  </defs>
+  <rect width="1200" height="900" rx="40" fill="url(#bg)"/>
+  <circle cx="1100" cy="74" r="130" fill="#f4ded7" opacity=".65"/>
+  <circle cx="72" cy="820" r="120" fill="#dcecdf" opacity=".75"/>
+
+  <text x="72" y="78" class="eyebrow">INSIDE THE LIVE READINESS METER</text>
+  <text x="72" y="142" class="title">One view. Four different signals.</text>
+  <text x="72" y="182" class="subtitle">Useful together—but they do not all mean the same thing.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="226" width="1056" height="208" rx="28" fill="#ffffff"/>
+  </g>
+  <circle cx="127" cy="282" r="30" fill="#e6f1e8"/>
+  <path d="M116 282a13 13 0 1 0 22-9 16 16 0 1 1-22 9Z" fill="#477267"/>
+  <text x="176" y="274" class="label">Sleep readiness</text>
+  <text x="176" y="305" class="copy">A predicted nap or bedtime window. Recent good naps can help personalise it.</text>
+  <rect x="176" y="335" width="865" height="34" rx="17" fill="url(#sleep)"/>
+  <circle cx="555" cy="352" r="15" fill="#fff" stroke="#243a36" stroke-width="5"/>
+  <path d="M555 329v-16" stroke="#243a36" stroke-width="4" stroke-linecap="round"/>
+  <text x="176" y="400" class="small">NOT YET</text>
+  <text x="495" y="400" class="small">NAP WINDOW</text>
+  <text x="880" y="400" class="small">WATCH CUES</text>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="466" width="332" height="244" rx="28" fill="#ffffff"/>
+    <rect x="434" y="466" width="332" height="244" rx="28" fill="#ffffff"/>
+    <rect x="796" y="466" width="332" height="244" rx="28" fill="#ffffff"/>
+  </g>
+
+  <circle cx="123" cy="521" r="27" fill="#f8e5df"/>
+  <path d="M112 510h17v24h-17zM116 504h9v6h-9zM129 516h4v12h-4" fill="none" stroke="#9c6257" stroke-width="4" stroke-linejoin="round"/>
+  <text x="164" y="528" class="label">Feed</text>
+  <text x="104" y="576" class="copy">A rhythm-based heads-up</text>
+  <text x="104" y="604" class="copy">from recent daytime feeds.</text>
+  <rect x="104" y="632" width="187" height="40" rx="20" fill="#f8e5df"/>
+  <text x="126" y="658" class="chip">CUES LEAD</text>
+
+  <circle cx="485" cy="521" r="27" fill="#f5e8c8"/>
+  <path d="M472 523h26a13 13 0 0 1-26 0ZM485 507v16" fill="none" stroke="#90723f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="526" y="528" class="label">Solids</text>
+  <text x="466" y="576" class="copy">An age-banded meal slot,</text>
+  <text x="466" y="604" class="copy">only after solids are logged.</text>
+  <rect x="466" y="632" width="238" height="40" rx="20" fill="#f5e8c8"/>
+  <text x="488" y="658" class="chip">NOT A WEANING TEST</text>
+
+  <circle cx="847" cy="521" r="27" fill="#e4edf1"/>
+  <path d="M835 508h24v27h-24zM839 504h16v5h-16zM840 522c5 4 9 4 14 0" fill="none" stroke="#517281" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="888" y="528" class="label">Nappy</text>
+  <text x="828" y="576" class="copy">A gentle timing check from</text>
+  <text x="828" y="604" class="copy">the baby's recorded pattern.</text>
+  <rect x="828" y="632" width="172" height="40" rx="20" fill="#e4edf1"/>
+  <text x="850" y="658" class="chip">NEVER RED</text>
+
+  <rect x="178" y="754" width="844" height="86" rx="43" fill="#304d46"/>
+  <circle cx="225" cy="797" r="24" fill="#f2cc8f"/>
+  <path d="M216 797l7 7 13-15" fill="none" stroke="#304d46" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="270" y="806" class="footer">The baby outranks the bar.</text>
+</svg>

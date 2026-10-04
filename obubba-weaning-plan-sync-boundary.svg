@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">What syncs between two phones in OBubba weaning</title>
+  <desc id="desc">Two phones share dated solids entries through the child record. Each phone separately stores its weekly meal plan, tried ticks, basket checks and manual allergen marks.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07182d"/><stop offset="1" stop-color="#132f4b"/></linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9be4d1"/><stop offset="1" stop-color="#54b69f"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5d989"/><stop offset="1" stop-color="#d9aa50"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="1200" height="800" rx="40" fill="url(#bg)"/>
+  <circle cx="1100" cy="85" r="210" fill="#78cdb7" opacity=".07"/><circle cx="85" cy="760" r="250" fill="#ed9c7c" opacity=".06"/>
+  <text x="600" y="70" text-anchor="middle" fill="#fffaf0" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="800">One baby · two different storage lanes</text>
+  <text x="600" y="108" text-anchor="middle" fill="#afbed0" font-family="Inter,Arial,sans-serif" font-size="18">The care record crosses phones. The weekly checklist currently stays local.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="164" width="280" height="450" rx="34" fill="#0b2038" stroke="#d6b45f" stroke-width="2"/>
+    <rect x="94" y="190" width="232" height="394" rx="25" fill="#102e4d"/>
+    <rect x="163" y="202" width="94" height="16" rx="8" fill="#061324"/>
+    <text x="210" y="262" text-anchor="middle" fill="#fffaf0" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="800">Parent A</text>
+    <rect x="117" y="294" width="186" height="58" rx="15" fill="#173c59" stroke="#d6b45f"/><text x="138" y="320" fill="#f5d989" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="750">THIS WEEK’S PLAN</text><text x="138" y="342" fill="#afbed0" font-family="Inter,Arial,sans-serif" font-size="13">2 of 6 tried</text>
+    <rect x="117" y="370" width="186" height="50" rx="14" fill="#173c59"/><circle cx="139" cy="395" r="9" fill="#f0cb73"/><text x="159" y="401" fill="#e9eef4" font-family="Inter,Arial,sans-serif" font-size="14">Egg mash</text>
+    <rect x="117" y="434" width="186" height="50" rx="14" fill="#173c59"/><circle cx="139" cy="459" r="9" fill="none" stroke="#72879c" stroke-width="2"/><text x="159" y="465" fill="#e9eef4" font-family="Inter,Arial,sans-serif" font-size="14">Lentil bowl</text>
+    <rect x="117" y="512" width="186" height="42" rx="21" fill="#13283f" stroke="#ed9c7c"/><text x="210" y="539" text-anchor="middle" fill="#edb19a" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700">saved on this phone</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="850" y="164" width="280" height="450" rx="34" fill="#0b2038" stroke="#d6b45f" stroke-width="2"/>
+    <rect x="874" y="190" width="232" height="394" rx="25" fill="#102e4d"/>
+    <rect x="943" y="202" width="94" height="16" rx="8" fill="#061324"/>
+    <text x="990" y="262" text-anchor="middle" fill="#fffaf0" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="800">Parent B</text>
+    <rect x="897" y="294" width="186" height="58" rx="15" fill="#173c59" stroke="#d6b45f"/><text x="918" y="320" fill="#f5d989" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="750">THIS WEEK’S PLAN</text><text x="918" y="342" fill="#afbed0" font-family="Inter,Arial,sans-serif" font-size="13">not generated</text>
+    <rect x="897" y="370" width="186" height="114" rx="16" fill="#10263e" stroke="#405b72" stroke-dasharray="7 7"/><text x="990" y="417" text-anchor="middle" fill="#afbed0" font-family="Inter,Arial,sans-serif" font-size="14">No plan or basket</text><text x="990" y="440" text-anchor="middle" fill="#afbed0" font-family="Inter,Arial,sans-serif" font-size="14">arrived here</text>
+    <rect x="897" y="512" width="186" height="42" rx="21" fill="#13283f" stroke="#ed9c7c"/><text x="990" y="539" text-anchor="middle" fill="#edb19a" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700">separate local state</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="410" y="204" width="380" height="348" rx="32" fill="#12364d" stroke="#69c4ad" stroke-width="2"/>
+    <circle cx="600" cy="270" r="42" fill="url(#mint)"/><path d="M582 271h36m-25-13l-13 13 13 13m14-26l13 13-13 13" fill="none" stroke="#07182d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="600" y="338" text-anchor="middle" fill="#fffaf0" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800">Shared child record</text>
+    <text x="600" y="373" text-anchor="middle" fill="#b8c8d6" font-family="Inter,Arial,sans-serif" font-size="16">stable IDs · date · food · response</text>
+    <rect x="452" y="406" width="296" height="96" rx="20" fill="#0d263d" stroke="#68c4ad"/>
+    <text x="478" y="438" fill="#9be4d1" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="750">SOLIDS LOG</text>
+    <text x="478" y="468" fill="#eef4f7" font-family="Inter,Arial,sans-serif" font-size="16">Egg omelette · Loved it</text>
+    <text x="478" y="491" fill="#d9b95f" font-family="Inter,Arial,sans-serif" font-size="14">egg · 24 April · 12:10</text>
+  </g>
+
+  <path d="M350 454h60" stroke="#69c4ad" stroke-width="5" stroke-linecap="round"/><path d="M397 441l15 13-15 13" fill="none" stroke="#69c4ad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M790 454h60" stroke="#69c4ad" stroke-width="5" stroke-linecap="round"/><path d="M803 441l-15 13 15 13" fill="none" stroke="#69c4ad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="124" y="656" width="952" height="82" rx="24" fill="#0c2138" stroke="#3d5870"/>
+    <text x="600" y="688" text-anchor="middle" fill="#fffaf0" font-size="18" font-weight="750">Shared after sync</text>
+    <text x="600" y="716" text-anchor="middle" fill="#9be4d1" font-size="17">food journal · logged allergens · reactions · progress · refreshed suggestions</text>
+  </g>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1160" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba detects a rise in daytime milk</title>
+  <desc id="desc">A five-stage diagram showing fourteen completed days, qualifying daytime milk amounts, two measured-week averages, the twenty percent and sixty millilitre thresholds, and the limits of the result.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff9f5"/>
+      <stop offset="0.55" stop-color="#f5fbfa"/>
+      <stop offset="1" stop-color="#f7f0fb"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#58cfc4"/>
+      <stop offset="1" stop-color="#79d9cf"/>
+    </linearGradient>
+    <linearGradient id="rise" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#6bcfc6"/>
+      <stop offset="1" stop-color="#b989d9"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#493b4f" flood-opacity=".12"/>
+    </filter>
+    <style>
+      .eyebrow{font:800 15px Inter,Arial,sans-serif;letter-spacing:2.2px;fill:#388f89}
+      .head{font:700 38px Georgia,serif;fill:#302639}
+      .sub{font:400 18px Inter,Arial,sans-serif;fill:#706679}
+      .step{font:800 14px Inter,Arial,sans-serif;letter-spacing:1.6px;fill:#388f89}
+      .ct{font:700 22px Inter,Arial,sans-serif;fill:#302639}
+      .body{font:400 16px Inter,Arial,sans-serif;fill:#706679}
+      .small{font:700 14px Inter,Arial,sans-serif;fill:#706679}
+      .num{font:800 20px Inter,Arial,sans-serif;fill:white}
+      .metric{font:800 25px Inter,Arial,sans-serif;fill:#302639}
+    </style>
+  </defs>
+  <rect width="800" height="1160" rx="42" fill="url(#bg)"/>
+  <circle cx="694" cy="102" r="62" fill="#eddff4"/>
+  <path d="M660 122V89h22v-24h22v-20h22" fill="none" stroke="url(#rise)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M713 45h13v13" fill="none" stroke="#a36fc6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="68" class="eyebrow">INSIDE THE FLUTTER LOGIC</text>
+  <text x="58" y="116" class="head">What does “milk is up” mean?</text>
+  <text x="58" y="150" class="sub">A measured trend must clear every gate.</text>
+
+  <g filter="url(#shadow)"><rect x="50" y="194" width="700" height="132" rx="24" fill="white" stroke="#dcecea"/></g>
+  <circle cx="91" cy="236" r="22" fill="url(#mint)"/><text x="85" y="243" class="num">1</text>
+  <text x="130" y="229" class="step">CLOSE THE WINDOW</text>
+  <text x="130" y="261" class="ct">Use the previous 14 complete days</text>
+  <text x="130" y="293" class="body">Yesterday + 13 earlier days. Today stays out.</text>
+
+  <path d="M400 326v30" stroke="#71cec7" stroke-width="4" stroke-linecap="round"/><path d="M392 349l8 10 8-10" fill="none" stroke="#71cec7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)"><rect x="50" y="364" width="700" height="172" rx="24" fill="white" stroke="#eadff0"/></g>
+  <circle cx="91" cy="406" r="22" fill="#aa7bc7"/><text x="85" y="413" class="num">2</text>
+  <text x="130" y="399" class="step">KEEP ONLY MEASURED DAYTIME MILK</text>
+  <text x="130" y="431" class="ct">Positive amount the baby drank</text>
+  <rect x="130" y="456" width="154" height="39" rx="19.5" fill="#e4f7f4"/><text x="153" y="481" class="small">✓ Bottle milk</text>
+  <rect x="296" y="456" width="126" height="39" rx="19.5" fill="#f8ecee"/><text x="319" y="481" class="small">× Pump</text>
+  <rect x="434" y="456" width="126" height="39" rx="19.5" fill="#f8ecee"/><text x="457" y="481" class="small">× Solids</text>
+  <rect x="572" y="456" width="131" height="39" rx="19.5" fill="#f8ecee"/><text x="590" y="481" class="small">× Night</text>
+  <text x="130" y="518" class="body">No qualifying amount? That date is unknown, not zero.</text>
+
+  <path d="M400 536v30" stroke="#71cec7" stroke-width="4" stroke-linecap="round"/><path d="M392 559l8 10 8-10" fill="none" stroke="#71cec7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)"><rect x="50" y="574" width="700" height="210" rx="24" fill="white" stroke="#e8dfec"/></g>
+  <circle cx="91" cy="616" r="22" fill="#ee9a7e"/><text x="85" y="623" class="num">3</text>
+  <text x="130" y="609" class="step">AVERAGE TWO WEEKLY GROUPS</text>
+  <text x="130" y="641" class="ct">Need ≥4 measured days on each side</text>
+  <line x1="190" y1="741" x2="648" y2="741" stroke="#ded7e1" stroke-width="2"/>
+  <rect x="260" y="688" width="112" height="53" rx="12" fill="#8fdad3"/>
+  <rect x="466" y="657" width="112" height="84" rx="12" fill="url(#rise)"/>
+  <text x="282" y="706" class="small">Earlier</text><text x="278" y="735" class="metric">700ml</text>
+  <text x="493" y="678" class="small">Recent</text><text x="484" y="724" class="metric">960ml</text>
+
+  <path d="M400 784v30" stroke="#71cec7" stroke-width="4" stroke-linecap="round"/><path d="M392 807l8 10 8-10" fill="none" stroke="#71cec7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)"><rect x="50" y="822" width="700" height="160" rx="24" fill="white" stroke="#efdcd7"/></g>
+  <circle cx="91" cy="864" r="22" fill="#e57e8f"/><text x="85" y="871" class="num">4</text>
+  <text x="130" y="857" class="step">CLEAR BOTH RISE GATES</text>
+  <text x="130" y="889" class="ct">Large enough relatively and absolutely</text>
+  <rect x="130" y="915" width="246" height="45" rx="15" fill="#e5f6f3"/><text x="158" y="945" class="metric">≥ 20%</text>
+  <rect x="394" y="915" width="309" height="45" rx="15" fill="#f4e8f7"/><text x="423" y="945" class="metric">≥ 60ml/day</text>
+
+  <path d="M400 982v30" stroke="#71cec7" stroke-width="4" stroke-linecap="round"/><path d="M392 1005l8 10 8-10" fill="none" stroke="#71cec7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="50" y="1018" width="700" height="96" rx="24" fill="#352b3d"/>
+  <text x="80" y="1053" style="font:800 19px Inter,Arial,sans-serif;fill:#fffaf6">Result: logged daytime volume rose</text>
+  <text x="80" y="1083" style="font:500 16px Inter,Arial,sans-serif;fill:#ded5e3">Not proof of total intake, growth cause or better sleep.</text>
+</svg>

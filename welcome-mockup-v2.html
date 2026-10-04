@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OBubba Welcome — Day & Night</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; display:flex; gap:12px; padding:12px; background:#111; overflow-x:auto; }
+
+.phone {
+  width:390px; min-width:390px; height:844px;
+  border-radius:40px; overflow:hidden; position:relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* ═══════════════════════════════════════════
+   SHARED STYLES
+   ═══════════════════════════════════════════ */
+.welcome {
+  width:100%; height:100%;
+  display:flex; flex-direction:column; align-items:center;
+  padding:52px 24px 40px; position:relative; overflow:hidden;
+}
+
+/* Floating particles */
+@keyframes drift1 { 0%{transform:translate(0,0) scale(1)} 50%{transform:translate(12px,-18px) scale(1.1)} 100%{transform:translate(0,0) scale(1)} }
+@keyframes drift2 { 0%{transform:translate(0,0) scale(1)} 50%{transform:translate(-15px,12px) scale(0.9)} 100%{transform:translate(0,0) scale(1)} }
+@keyframes drift3 { 0%{transform:translate(0,0)} 50%{transform:translate(8px,14px)} 100%{transform:translate(0,0)} }
+@keyframes gentleFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+@keyframes borderFlow { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+@keyframes softPulse { 0%,100%{opacity:0.4} 50%{opacity:0.7} }
+@keyframes fadeIn { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+
+.orb {
+  position:absolute; border-radius:50%; pointer-events:none; filter:blur(40px);
+}
+
+/* Mascot */
+.mascot-wrap { position:relative; z-index:1; margin-bottom:22px; animation:gentleFloat 5s ease-in-out infinite; }
+.mascot-frame {
+  width:148px; height:148px; border-radius:36px; padding:3px;
+  background:linear-gradient(135deg, #d4a855, #c9705a, #b070b8, #c9705a, #d4a855);
+  background-size:300% 300%; animation:borderFlow 8s ease infinite;
+}
+.mascot-img-wrap { width:100%; height:100%; border-radius:33px; overflow:hidden; }
+.mascot-img-wrap img { width:100%; height:100%; object-fit:cover; display:block; }
+
+/* Brand */
+.brand { font-family:'Playfair Display',serif; font-size:38px; font-weight:800; letter-spacing:-0.5px; z-index:1; margin-bottom:3px; -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.tagline { font-size:13.5px; letter-spacing:0.8px; z-index:1; margin-bottom:30px; }
+
+/* Headline */
+.headline { font-family:'Playfair Display',serif; font-size:26px; font-weight:700; text-align:center; line-height:1.3; z-index:1; margin-bottom:12px; max-width:300px; letter-spacing:-0.3px; }
+.headline em { font-style:normal; background:linear-gradient(135deg,#c9705a,#d4a855); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+
+/* Description */
+.desc { font-size:14px; line-height:1.6; text-align:center; max-width:320px; z-index:1; margin-bottom:26px; }
+
+/* Feature pills */
+.pills { display:flex; flex-direction:column; gap:7px; width:100%; max-width:342px; z-index:1; margin-bottom:24px; }
+.pill-row { display:flex; gap:7px; }
+.pill {
+  flex:1; display:flex; align-items:center; gap:8px;
+  padding:9px 11px; border-radius:14px;
+  backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+  transition: transform 0.15s;
+}
+.pill:active { transform:scale(0.97); }
+.pill-icon { font-size:16px; flex-shrink:0; }
+.pill-label { font-size:11.5px; font-weight:600; line-height:1.3; }
+.pill-sub { font-size:9.5px; font-weight:400; margin-top:1px; }
+
+/* Trust */
+.trust { font-size:11.5px; text-align:center; z-index:1; margin-bottom:22px; line-height:1.5; max-width:280px; }
+
+/* CTA */
+.cta {
+  width:100%; max-width:300px; padding:15px; border:none; border-radius:99px;
+  font-size:16px; font-weight:700; color:white; cursor:pointer; z-index:1;
+  background:linear-gradient(135deg,#c9705a,#a85a44);
+  font-family:'DM Sans',sans-serif; margin-bottom:10px;
+  transition: transform 0.12s;
+}
+.cta:active { transform:scale(0.97); }
+.link { font-size:12px; z-index:1; cursor:pointer; border:none; background:none; font-family:'DM Sans',sans-serif; }
+
+
+/* ═══════════════════════════════════════════
+   DARK MODE (NIGHT)
+   ═══════════════════════════════════════════ */
+.dark .welcome {
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(80,50,120,0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(140,70,90,0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(30,20,55,0.5) 0%, transparent 70%),
+    linear-gradient(175deg, #110a1f 0%, #1a1030 30%, #201540 55%, #18102e 80%, #0e081a 100%);
+}
+
+.dark .orb.o1 { top:5%; left:15%; width:200px; height:200px; background:rgba(160,100,200,0.12); animation:drift1 12s ease-in-out infinite; }
+.dark .orb.o2 { top:55%; right:5%; width:180px; height:180px; background:rgba(201,112,90,0.1); animation:drift2 14s ease-in-out infinite; }
+.dark .orb.o3 { bottom:15%; left:30%; width:150px; height:150px; background:rgba(80,168,136,0.08); animation:drift3 16s ease-in-out infinite; }
+
+/* Subtle star field */
+.dark .stars {
+  position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 28% 72%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1.2px 1.2px at 52% 8%, rgba(255,220,180,0.7) 0%, transparent 100%),
+    radial-gradient(0.8px 0.8px at 68% 35%, rgba(255,255,255,0.35) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 75%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(0.8px 0.8px at 40% 55%, rgba(255,200,180,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 88%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1.2px 1.2px at 75% 12%, rgba(255,220,200,0.5) 0%, transparent 100%),
+    radial-gradient(0.6px 0.6px at 92% 48%, rgba(255,255,255,0.25) 0%, transparent 100%),
+    radial-gradient(0.8px 0.8px at 5% 42%, rgba(200,180,255,0.35) 0%, transparent 100%);
+  animation: softPulse 6s ease-in-out infinite;
+}
+
+.dark .mascot-frame { box-shadow: 0 0 28px rgba(180,130,200,0.2), 0 0 56px rgba(201,112,90,0.1), 0 10px 32px rgba(0,0,0,0.4); }
+.dark .mascot-img-wrap { background:#1a1030; }
+.dark .brand { background:linear-gradient(135deg, #f0ddd0, #ffffff, #eed0c5); }
+.dark .tagline { color:rgba(255,255,255,0.45); }
+.dark .headline { color:rgba(255,255,255,0.92); }
+.dark .desc { color:rgba(255,255,255,0.55); }
+.dark .pill { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); }
+.dark .pill-label { color:rgba(255,255,255,0.82); }
+.dark .pill-sub { color:rgba(255,255,255,0.38); }
+.dark .trust { color:rgba(255,255,255,0.38); }
+.dark .trust strong { color:rgba(255,255,255,0.6); }
+.dark .cta { box-shadow: 0 4px 20px rgba(201,112,90,0.35), 0 0 50px rgba(201,112,90,0.1); }
+.dark .link { color:rgba(255,255,255,0.38); }
+
+
+/* ═══════════════════════════════════════════
+   LIGHT MODE (DAY)
+   ═══════════════════════════════════════════ */
+.light .welcome {
+  background:
+    radial-gradient(ellipse at 25% 15%, rgba(252,220,205,0.5) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 75%, rgba(220,210,240,0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 45%, rgba(255,245,238,0.6) 0%, transparent 60%),
+    linear-gradient(175deg, #fef8f4 0%, #fdf2ec 30%, #fceee6 55%, #faf5f2 80%, #fefcfa 100%);
+}
+
+.light .orb.o1 { top:5%; left:10%; width:220px; height:220px; background:rgba(252,210,195,0.3); animation:drift1 12s ease-in-out infinite; }
+.light .orb.o2 { top:50%; right:0; width:200px; height:200px; background:rgba(210,200,235,0.25); animation:drift2 14s ease-in-out infinite; }
+.light .orb.o3 { bottom:10%; left:25%; width:170px; height:170px; background:rgba(200,230,215,0.2); animation:drift3 16s ease-in-out infinite; }
+
+/* Soft bokeh for light mode */
+.light .stars {
+  position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(8px 8px at 15% 25%, rgba(201,112,90,0.06) 0%, transparent 100%),
+    radial-gradient(12px 12px at 35% 70%, rgba(180,160,220,0.05) 0%, transparent 100%),
+    radial-gradient(6px 6px at 55% 15%, rgba(212,168,85,0.06) 0%, transparent 100%),
+    radial-gradient(10px 10px at 78% 45%, rgba(201,112,90,0.04) 0%, transparent 100%),
+    radial-gradient(8px 8px at 88% 80%, rgba(180,200,170,0.05) 0%, transparent 100%),
+    radial-gradient(14px 14px at 25% 85%, rgba(220,200,240,0.04) 0%, transparent 100%);
+}
+
+.light .mascot-frame { box-shadow: 0 0 20px rgba(212,168,85,0.15), 0 0 40px rgba(201,112,90,0.08), 0 8px 28px rgba(0,0,0,0.06); }
+.light .mascot-img-wrap { background:#fef8f4; }
+.light .brand { background:linear-gradient(135deg, #c9705a, #a85a44, #c9705a); }
+.light .tagline { color:#b0a098; }
+.light .headline { color:#3a2e2e; }
+.light .desc { color:#8a7a72; }
+.light .pill { background:rgba(255,255,255,0.65); border:1px solid rgba(201,112,90,0.1); box-shadow: 0 1px 6px rgba(0,0,0,0.03); }
+.light .pill-label { color:#4a3e3e; }
+.light .pill-sub { color:#b0a098; }
+.light .trust { color:#b0a098; }
+.light .trust strong { color:#5a4e4e; }
+.light .cta { box-shadow: 0 4px 18px rgba(201,112,90,0.25), 0 0 0 1px rgba(201,112,90,0.08); }
+.light .link { color:#b0a098; }
+
+/* Label */
+.label { position:absolute; top:14px; left:50%; transform:translateX(-50%); font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; z-index:10; padding:4px 16px; border-radius:99px; }
+.dark .label { background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.5); }
+.light .label { background:rgba(201,112,90,0.08); color:#c9705a; }
+</style>
+</head>
+<body>
+
+<!-- ═══ DARK / NIGHT ═══ -->
+<div class="phone dark">
+  <div class="welcome">
+    <div class="label">Night Mode</div>
+    <div class="stars"></div>
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+
+    <div class="mascot-wrap">
+      <div class="mascot-frame">
+        <div class="mascot-img-wrap">
+          <img src="obubba-happy.png" alt="OBubba" onerror="this.parentNode.style.background='#1a1030';this.style.display='none';this.parentNode.innerHTML='<div style=font-size:64px;display:flex;align-items:center;justify-content:center;height:100%>🍼</div>';">
+        </div>
+      </div>
+    </div>
+
+    <div class="brand">OBubba</div>
+    <div class="tagline">Parenthood in your pocket</div>
+    <h1 class="headline">Take the guesswork out of <em>parenting.</em></h1>
+    <p class="desc">Personalised sleep, feeding, and growth guidance — combining your baby's real patterns with medical recommendations.</p>
+
+    <div class="pills">
+      <div class="pill-row">
+        <div class="pill"><span class="pill-icon">🔮</span><div><div class="pill-label">Sleep predictions</div><div class="pill-sub">Naps, bedtime & wake</div></div></div>
+        <div class="pill"><span class="pill-icon">🧩</span><div><div class="pill-label">Schedule maker</div><div class="pill-sub">Build days around events</div></div></div>
+      </div>
+      <div class="pill-row">
+        <div class="pill"><span class="pill-icon">📊</span><div><div class="pill-label">Rhythm learning</div><div class="pill-sub">Gets smarter every day</div></div></div>
+        <div class="pill"><span class="pill-icon">🛡️</span><div><div class="pill-label">Regression alerts</div><div class="pill-sub">4mo, 8mo, 12mo, 18mo</div></div></div>
+      </div>
+      <div class="pill-row">
+        <div class="pill"><span class="pill-icon">🍼</span><div><div class="pill-label">One-tap tracking</div><div class="pill-sub">Feed, nappy & sleep</div></div></div>
+        <div class="pill"><span class="pill-icon">👨‍👩‍👧</span><div><div class="pill-label">Partner sync</div><div class="pill-sub">Real-time cloud sharing</div></div></div>
+      </div>
+    </div>
+
+    <div class="trust">Built with <strong>NHS</strong>, <strong>AASM</strong>, and <strong>WHO</strong> guidelines, recommendations, and research.</div>
+    <button class="cta">Start Tracking →</button>
+    <button class="link">See how it works →</button>
+  </div>
+</div>
+
+<!-- ═══ LIGHT / DAY ═══ -->
+<div class="phone light">
+  <div class="welcome">
+    <div class="label">Day Mode</div>
+    <div class="stars"></div>
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+
+    <div class="mascot-wrap">
+      <div class="mascot-frame">
+        <div class="mascot-img-wrap">
+          <img src="obubba-happy.png" alt="OBubba" onerror="this.parentNode.style.background='#fef8f4';this.style.display='none';this.parentNode.innerHTML='<div style=font-size:64px;display:flex;align-items:center;justify-content:center;height:100%>🍼</div>';">
+        </div>
+      </div>
+    </div>
+
+    <div class="brand">OBubba</div>
+    <div class="tagline">Parenthood in your pocket</div>
+    <h1 class="headline">Take the guesswork out of <em>parenting.</em></h1>
+    <p class="desc">Personalised sleep, feeding, and growth guidance — combining your baby's real patterns with medical recommendations.</p>
+
+    <div class="pills">
+      <div class="pill-row">
+        <div class="pill"><span class="pill-icon">🔮</span><div><div class="pill-label">Sleep predictions</div><div class="pill-sub">Naps, bedtime & wake</div></div></div>
+        <div class="pill"><span class="pill-icon">🧩</span><div><div class="pill-label">Schedule maker</div><div class="pill-sub">Build days around events</div></div></div>
+      </div>
+      <div class="pill-row">
+        <div class="pill"><span class="pill-icon">📊</span><div><div class="pill-label">Rhythm learning</div><div class="pill-sub">Gets smarter every day</div></div></div>
+        <div class="pill"><span class="pill-icon">🛡️</span><div><div class="pill-label">Regression alerts</div><div class="pill-sub">4mo, 8mo, 12mo, 18mo</div></div></div>
+      </div>
+      <div class="pill-row">
+        <div class="pill"><span class="pill-icon">🍼</span><div><div class="pill-label">One-tap tracking</div><div class="pill-sub">Feed, nappy & sleep</div></div></div>
+        <div class="pill"><span class="pill-icon">👨‍👩‍👧</span><div><div class="pill-label">Partner sync</div><div class="pill-sub">Real-time cloud sharing</div></div></div>
+      </div>
+    </div>
+
+    <div class="trust">Built with <strong>NHS</strong>, <strong>AASM</strong>, and <strong>WHO</strong> guidelines, recommendations, and research.</div>
+    <button class="cta">Start Tracking →</button>
+    <button class="link">See how it works →</button>
+  </div>
+</div>
+
+</body>
+</html>

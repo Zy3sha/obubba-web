@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">What OBubba's Adjust Schedule choices currently change</title>
+  <desc id="desc">A diagram showing how bedtime, nap-count, preferred-wake and off-day controls flow through the current OBubba Flutter app.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9f6ff"/><stop offset="1" stop-color="#fff8f2"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#24304b" flood-opacity=".10"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7b6ba8"/></marker>
+    <style>
+      .serif{font-family:Georgia,'Times New Roman',serif;fill:#1e2942}.sans{font-family:Inter,Arial,sans-serif;fill:#44506a}.eyebrow{font:700 15px Inter,Arial,sans-serif;letter-spacing:2px;fill:#7b6ba8}.h1{font:700 38px Georgia,'Times New Roman',serif}.h2{font:700 22px Georgia,'Times New Roman',serif}.body{font:16px Inter,Arial,sans-serif}.small{font:14px Inter,Arial,sans-serif}.pill{font:700 14px Inter,Arial,sans-serif}.line{stroke:#7b6ba8;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="900" rx="36" fill="url(#bg)"/>
+  <text x="70" y="70" class="eyebrow">THE CURRENT FLUTTER PATH</text>
+  <text x="70" y="120" class="serif h1">What “Adjust schedule” really changes</text>
+  <text x="70" y="154" class="sans body">Four controls look alike on screen, but they do not yet have equal reach.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="205" width="245" height="178" rx="24" fill="#fff" stroke="#d7cdea"/>
+    <rect x="335" y="205" width="245" height="178" rx="24" fill="#fff" stroke="#f0b6a8"/>
+    <rect x="600" y="205" width="245" height="178" rx="24" fill="#fff" stroke="#b7ddd0"/>
+    <rect x="865" y="205" width="265" height="178" rx="24" fill="#fff" stroke="#c9c1e4"/>
+  </g>
+  <circle cx="110" cy="248" r="19" fill="#eee8fa"/><text x="110" y="254" text-anchor="middle" class="serif h2">W</text>
+  <text x="140" y="255" class="serif h2">Preferred wake</text>
+  <text x="95" y="300" class="sans body">Saved and shown again</text><text x="95" y="327" class="sans body">in this sheet.</text>
+  <rect x="95" y="342" width="174" height="27" rx="14" fill="#f8dcd6"/><text x="182" y="361" text-anchor="middle" class="pill" fill="#8b4134">NOT WIRED TO PLAN</text>
+
+  <circle cx="375" cy="248" r="19" fill="#fde2db"/><text x="375" y="254" text-anchor="middle" class="serif h2">B</text>
+  <text x="405" y="255" class="serif h2">Bedtime</text>
+  <text x="360" y="300" class="sans body">Feeds the shared bedtime</text><text x="360" y="327" class="sans body">resolver and its outputs.</text>
+  <rect x="360" y="342" width="139" height="27" rx="14" fill="#e8f5f0"/><text x="430" y="361" text-anchor="middle" class="pill" fill="#28624f">CONNECTED</text>
+
+  <circle cx="640" cy="248" r="19" fill="#daf0e8"/><text x="640" y="254" text-anchor="middle" class="serif h2">N</text>
+  <text x="670" y="255" class="serif h2">Nap count</text>
+  <text x="625" y="300" class="sans body">Auto or 0–6 drives nap</text><text x="625" y="327" class="sans body">prediction and the day plan.</text>
+  <rect x="625" y="342" width="139" height="27" rx="14" fill="#e8f5f0"/><text x="695" y="361" text-anchor="middle" class="pill" fill="#28624f">CONNECTED</text>
+
+  <circle cx="905" cy="248" r="19" fill="#eee8fa"/><text x="905" y="254" text-anchor="middle" class="serif h2">O</text>
+  <text x="935" y="255" class="serif h2">Off day</text>
+  <text x="890" y="300" class="sans body">Applies one generic 0.8</text><text x="890" y="327" class="sans body">wake-window multiplier.</text>
+  <rect x="890" y="342" width="184" height="27" rx="14" fill="#eee8fa"/><text x="982" y="361" text-anchor="middle" class="pill" fill="#5d4c86">3 ACTIVE DAYS</text>
+
+  <path d="M458 383V445H640" class="line"/><path d="M722 383V445H640" class="line"/><path d="M998 383V445H775" class="line"/>
+  <g filter="url(#shadow)"><rect x="265" y="455" width="670" height="140" rx="28" fill="#252f4a"/></g>
+  <text x="600" y="500" text-anchor="middle" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#fff">Shared live schedule</text>
+  <text x="600" y="536" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" fill="#dcd8ec">clock · day plan · bedtime and nap predictors</text>
+  <text x="600" y="568" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" fill="#dcd8ec">reminders · home widget / Live Activity</text>
+  <path d="M600 595V645" class="line"/>
+
+  <g filter="url(#shadow)"><rect x="70" y="660" width="330" height="142" rx="24" fill="#fff" stroke="#f0b6a8"/><rect x="435" y="660" width="330" height="142" rx="24" fill="#fff" stroke="#d7cdea"/><rect x="800" y="660" width="330" height="142" rx="24" fill="#fff" stroke="#b7ddd0"/></g>
+  <text x="95" y="700" class="serif h2">Just today</text><text x="95" y="735" class="sans body">Wake and bedtime expire.</text><text x="95" y="762" class="sans body">Nap count keeps applying</text><text x="95" y="789" class="sans body">until Auto or Reset.</text>
+  <text x="460" y="700" class="serif h2">Gradually</text><text x="460" y="735" class="sans body">One third of the total</text><text x="460" y="762" class="sans body">wake/bed shift per day;</text><text x="460" y="789" class="sans body">target reached on day 3.</text>
+  <text x="825" y="700" class="serif h2">Every day</text><text x="825" y="735" class="sans body">Wake, bedtime and nap</text><text x="825" y="762" class="sans body">choices persist from their</text><text x="825" y="789" class="sans body">start date until changed.</text>
+  <rect x="70" y="835" width="1060" height="38" rx="19" fill="#e9e4f5"/>
+  <text x="600" y="860" text-anchor="middle" class="sans small">Overrides steer future predictions. They do not rewrite completed sleep logs.</text>
+</svg>

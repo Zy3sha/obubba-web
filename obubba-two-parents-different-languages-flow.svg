@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Two carers can use OBubba in different languages while sharing one baby record</title>
+  <desc id="desc">Parent A chooses Spanish on one phone and Parent B chooses English on another. Each interface preference remains on its own device, while factual baby logs flow into one shared child record. Free-text notes remain in the language entered.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071a36"/>
+      <stop offset="1" stop-color="#102b55"/>
+    </linearGradient>
+    <linearGradient id="phoneA" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f6b39c"/>
+      <stop offset="1" stop-color="#c790db"/>
+    </linearGradient>
+    <linearGradient id="phoneB" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f0cc7e"/>
+      <stop offset="1" stop-color="#7ebfe6"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#efd18f"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" rx="42" fill="url(#bg)"/>
+  <g opacity=".42" fill="#f2d58b">
+    <circle cx="84" cy="91" r="3"/><circle cx="181" cy="146" r="2"/><circle cx="1055" cy="102" r="3"/><circle cx="1110" cy="228" r="2"/><circle cx="91" cy="589" r="2"/><circle cx="1080" cy="615" r="3"/>
+  </g>
+  <text x="600" y="78" text-anchor="middle" fill="#f8edda" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="750">Two phones. Two interface languages. One baby record.</text>
+  <text x="600" y="116" text-anchor="middle" fill="#b8c9df" font-family="Inter, Arial, sans-serif" font-size="20">The language choice stays with each installation; connected care facts can still be shared.</text>
+
+  <g transform="translate(110 172)">
+    <rect width="255" height="396" rx="42" fill="#051326" stroke="url(#phoneA)" stroke-width="4"/>
+    <rect x="20" y="47" width="215" height="310" rx="24" fill="#132b50"/>
+    <rect x="91" y="17" width="74" height="8" rx="4" fill="#365273"/>
+    <circle cx="128" cy="92" r="28" fill="#f2b6a4"/>
+    <path d="M107 91c7-20 35-21 43 0-7-6-13-9-22-9s-15 3-21 9z" fill="#3b251d"/>
+    <text x="128" y="139" text-anchor="middle" fill="#f8edda" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Mamá</text>
+    <rect x="42" y="162" width="171" height="48" rx="14" fill="#a579bd" opacity=".35"/>
+    <text x="128" y="192" text-anchor="middle" fill="#f5d9ff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Siesta · 42 min</text>
+    <rect x="42" y="225" width="171" height="32" rx="12" fill="#203d67"/>
+    <text x="128" y="247" text-anchor="middle" fill="#d5e4f5" font-family="Inter, Arial, sans-serif" font-size="14">Pañal · Leche</text>
+    <rect x="42" y="273" width="171" height="52" rx="15" fill="url(#phoneA)" opacity=".85"/>
+    <text x="128" y="305" text-anchor="middle" fill="#14203a" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">Añadir registro</text>
+    <text x="128" y="390" text-anchor="middle" fill="#f0c9f8" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Español</text>
+  </g>
+
+  <g transform="translate(835 172)">
+    <rect width="255" height="396" rx="42" fill="#051326" stroke="url(#phoneB)" stroke-width="4"/>
+    <rect x="20" y="47" width="215" height="310" rx="24" fill="#132b50"/>
+    <rect x="91" y="17" width="74" height="8" rx="4" fill="#365273"/>
+    <circle cx="128" cy="92" r="28" fill="#8a563e"/>
+    <path d="M104 88c2-24 45-25 48 0-11-5-19-7-24-7s-14 2-24 7z" fill="#171315"/>
+    <text x="128" y="139" text-anchor="middle" fill="#f8edda" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Dad</text>
+    <rect x="42" y="162" width="171" height="48" rx="14" fill="#d7b65f" opacity=".26"/>
+    <text x="128" y="192" text-anchor="middle" fill="#f8e5b3" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Nap · 42 min</text>
+    <rect x="42" y="225" width="171" height="32" rx="12" fill="#203d67"/>
+    <text x="128" y="247" text-anchor="middle" fill="#d5e4f5" font-family="Inter, Arial, sans-serif" font-size="14">Nappy · Milk</text>
+    <rect x="42" y="273" width="171" height="52" rx="15" fill="url(#phoneB)" opacity=".9"/>
+    <text x="128" y="305" text-anchor="middle" fill="#14203a" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">Add log</text>
+    <text x="128" y="390" text-anchor="middle" fill="#f4d998" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">English</text>
+  </g>
+
+  <path d="M375 352 C445 352 451 363 497 376" fill="none" stroke="#efd18f" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M825 352 C755 352 749 363 703 376" fill="none" stroke="#efd18f" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M497 438 C451 452 445 462 375 462" fill="none" stroke="#79bfdc" stroke-width="3" stroke-dasharray="8 8" marker-end="url(#arrow)"/>
+  <path d="M703 438 C749 452 755 462 825 462" fill="none" stroke="#79bfdc" stroke-width="3" stroke-dasharray="8 8" marker-end="url(#arrow)"/>
+
+  <g transform="translate(468 244)" filter="url(#glow)">
+    <circle cx="132" cy="150" r="118" fill="#172f58" stroke="#efd18f" stroke-width="3"/>
+    <circle cx="132" cy="112" r="42" fill="#efbd86"/>
+    <path d="M95 116c5-48 71-49 76 0-12-13-24-19-38-19-15 0-27 6-38 19z" fill="#5c3728"/>
+    <path d="M65 208c8-45 43-68 67-68s59 23 67 68" fill="#8ab8da"/>
+    <text x="132" y="254" text-anchor="middle" fill="#fff1d5" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">Shared child record</text>
+    <text x="132" y="282" text-anchor="middle" fill="#bcd0e6" font-family="Inter, Arial, sans-serif" font-size="14">sleep · feeds · nappies · solids</text>
+  </g>
+
+  <g transform="translate(173 611)">
+    <rect width="854" height="65" rx="20" fill="#0c2141" stroke="#38567c"/>
+    <circle cx="38" cy="32" r="16" fill="#efc97e"/><text x="38" y="38" text-anchor="middle" fill="#14213b" font-family="Arial" font-size="18" font-weight="800">i</text>
+    <text x="70" y="28" fill="#f8edda" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="750">Typed notes are shared as typed.</text>
+    <text x="70" y="50" fill="#b8c9df" font-family="Inter, Arial, sans-serif" font-size="14">“Tomó 120 ml” does not become “Had 120 ml” automatically.</text>
+  </g>
+</svg>

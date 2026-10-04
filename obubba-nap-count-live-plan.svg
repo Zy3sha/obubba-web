@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="980" viewBox="0 0 720 980" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba turns an age-based nap shape into a live day plan</title>
+  <desc id="desc">A vertical flow showing that age and corrected age supply a starting shape, the real day updates it, and the parent can keep Auto or correct the plan.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffaf6"/><stop offset="1" stop-color="#f1efff"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#493760" flood-opacity=".11"/></filter>
+  </defs>
+  <rect width="720" height="980" rx="34" fill="url(#bg)"/>
+  <text x="360" y="58" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="700" fill="#332841">A nap count is a starting shape</text>
+  <text x="360" y="94" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="700" fill="#332841">— not a score.</text>
+  <text x="360" y="128" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="19" fill="#6c6076">The day keeps moving, so the plan should too.</text>
+  <g filter="url(#shadow)">
+    <rect x="56" y="166" width="608" height="178" rx="27" fill="#fff"/>
+    <rect x="56" y="395" width="608" height="268" rx="27" fill="#fff"/>
+    <rect x="56" y="714" width="608" height="178" rx="27" fill="#fff"/>
+  </g>
+  <circle cx="112" cy="221" r="28" fill="#eee5ff"/>
+  <path d="M99 223c8-16 23-16 29 0M105 212c4-8 12-8 16 0" fill="none" stroke="#7355a7" stroke-width="4" stroke-linecap="round"/>
+  <text x="158" y="216" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#8a6cb7">STARTING SHAPE</text>
+  <text x="158" y="251" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700" fill="#493760">Age opens the plan</text>
+  <text x="96" y="298" font-family="Inter, Arial, sans-serif" font-size="21" fill="#453b4e">age + corrected age when available + broad nap profile</text>
+  <path d="M360 353v30" stroke="#b89bcf" stroke-width="5" stroke-linecap="round"/><path d="M348 374l12 12 12-12" fill="none" stroke="#b89bcf" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="112" cy="450" r="28" fill="#e4f3ef"/>
+  <path d="M99 452h26M104 441v22M114 437v30M124 445v14" stroke="#4a8c80" stroke-width="4" stroke-linecap="round"/>
+  <text x="158" y="445" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#4a8c80">LIVE DAY</text>
+  <text x="158" y="480" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700" fill="#493760">Reality updates the shape</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="21" fill="#453b4e">
+    <circle cx="102" cy="530" r="5.5" fill="#74a9a0"/><text x="126" y="538">real morning wake</text>
+    <circle cx="102" cy="569" r="5.5" fill="#74a9a0"/><text x="126" y="577">completed and running naps</text>
+    <circle cx="102" cy="608" r="5.5" fill="#74a9a0"/><text x="126" y="616">learned nap lengths + day-sleep total</text>
+    <circle cx="102" cy="647" r="5.5" fill="#74a9a0"/><text x="126" y="655">next nap still fits — or bedtime wins</text>
+  </g>
+  <path d="M360 672v30" stroke="#d7a08a" stroke-width="5" stroke-linecap="round"/><path d="M348 693l12 12 12-12" fill="none" stroke="#d7a08a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="112" cy="769" r="28" fill="#fde9e3"/>
+  <path d="M99 769h26M112 756v26" stroke="#b96f62" stroke-width="4" stroke-linecap="round"/>
+  <text x="158" y="764" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#b96f62">PARENT CONTROL</text>
+  <text x="158" y="799" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700" fill="#493760">Auto is optional</text>
+  <text x="96" y="846" font-family="Inter, Arial, sans-serif" font-size="21" fill="#453b4e">keep Auto · choose 0–6 · mark an off day · reset anytime</text>
+  <rect x="93" y="919" width="534" height="38" rx="19" fill="#493760"/>
+  <text x="360" y="945" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">The useful answer: another nap, a bridge, or bedtime</text>
+</svg>

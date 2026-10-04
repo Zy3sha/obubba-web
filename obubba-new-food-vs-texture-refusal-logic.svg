@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1560" viewBox="0 0 1000 1560" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba separates new-food refusal from texture-linked refusal</title>
+  <desc id="desc">A vertical flow showing the three-meal evidence gate, texture clues, new-food clues, the general refusal fallback and reasons the app stays quiet.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff8f2"/>
+      <stop offset="0.55" stop-color="#f8f1ff"/>
+      <stop offset="1" stop-color="#eef8f4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#382d48" flood-opacity="0.11"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#7b6b8e"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="1560" rx="48" fill="url(#bg)"/>
+
+  <circle cx="94" cy="92" r="36" fill="#ef8f7c"/>
+  <path d="M76 93c10-20 26-20 36 0-10 14-26 14-36 0z" fill="#fff"/>
+  <text x="150" y="82" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#9a5a50" letter-spacing="2">INSIDE THE APP</text>
+  <text x="70" y="157" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#292239">New food—or texture?</text>
+  <text x="70" y="205" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#625b72">OBubba waits before choosing the advice.</text>
+
+  <g filter="url(#shadow)"><rect x="70" y="255" width="860" height="235" rx="34" fill="#fff"/></g>
+  <rect x="105" y="287" width="252" height="54" rx="27" fill="#eee5ff"/>
+  <text x="231" y="324" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#72599a">EVIDENCE GATE</text>
+  <text x="105" y="391" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800" fill="#292239">3 recent refused meals</text>
+  <text x="105" y="445" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#514a5f">within 7 days · latest no more than 4 days old</text>
+
+  <path d="M500 490 L500 555" stroke="#7b6b8e" stroke-width="7" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)"><rect x="70" y="575" width="860" height="245" rx="34" fill="#fff1eb"/></g>
+  <circle cx="125" cy="630" r="34" fill="#ef8f7c"/>
+  <text x="125" y="642" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34">🥄</text>
+  <text x="180" y="641" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" fill="#8a4b42">Texture clues?</text>
+  <text x="105" y="702" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#5f4b49">lumpy · gagging · chunky · too big</text>
+  <rect x="105" y="737" width="650" height="55" rx="27" fill="#fff"/>
+  <text x="430" y="774" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="800" fill="#8a4b42">“The texture might not be quite right”</text>
+
+  <path d="M500 820 L500 885" stroke="#7b6b8e" stroke-width="7" marker-end="url(#arrow)"/>
+  <rect x="430" y="843" width="140" height="50" rx="25" fill="#7b6b8e"/>
+  <text x="500" y="877" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800" fill="#fff">IF NOT</text>
+
+  <g filter="url(#shadow)"><rect x="70" y="905" width="860" height="245" rx="34" fill="#eef8f3"/></g>
+  <circle cx="125" cy="960" r="34" fill="#80bba6"/>
+  <text x="125" y="973" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" fill="#fff">+</text>
+  <text x="180" y="971" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" fill="#397663">New-food clues?</text>
+  <text x="105" y="1032" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#426e61">first try · never had · exact food unseen</text>
+  <rect x="105" y="1067" width="540" height="55" rx="27" fill="#fff"/>
+  <text x="375" y="1104" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#397663">“New foods take a few goes”</text>
+
+  <path d="M500 1150 L500 1215" stroke="#7b6b8e" stroke-width="7" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)"><rect x="70" y="1235" width="860" height="135" rx="32" fill="#fff"/></g>
+  <text x="105" y="1289" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="800" fill="#594e69">Neither dominates?</text>
+  <text x="105" y="1336" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#292239">“A run of refused meals”</text>
+
+  <g filter="url(#shadow)"><rect x="70" y="1410" width="860" height="100" rx="30" fill="#322b45"/></g>
+  <text x="500" y="1454" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="800" fill="#f7d28b">STAYS QUIET</text>
+  <text x="500" y="1491" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#fff">1 meal · sparse · stale · refusal notes missing</text>
+
+  <text x="500" y="1540" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#70687f">Pattern support, not a feeding assessment · OBubba</text>
+</svg>

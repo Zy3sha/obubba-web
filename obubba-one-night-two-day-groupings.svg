@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">One physical night, two display choices</title>
+  <desc id="desc">Calendar day places a 2:05am wake on Tuesday. Wake to wake places the same wake after Monday bedtime. Both are joined into one night for analysis.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#07172d"/><stop offset=".54" stop-color="#172850"/><stop offset="1" stop-color="#123d45"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#f08e79"/><stop offset=".5" stop-color="#f2c66d"/><stop offset="1" stop-color="#8fd6c4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#020817" flood-opacity=".36"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" rx="34" fill="url(#bg)"/>
+  <circle cx="1090" cy="90" r="155" fill="#f2c66d" opacity=".055"/>
+  <circle cx="90" cy="685" r="180" fill="#8fd6c4" opacity=".045"/>
+  <text x="600" y="60" text-anchor="middle" fill="#f7f0e7" font-family="Nunito,Arial,sans-serif" font-size="32" font-weight="900">ONE PHYSICAL NIGHT · TWO DISPLAY CHOICES</text>
+  <text x="600" y="94" text-anchor="middle" fill="#bec9dd" font-family="Nunito,Arial,sans-serif" font-size="18">The timestamp stays honest. Only the way the log reads changes.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="55" y="135" width="510" height="468" rx="28" fill="#fff" fill-opacity=".055" stroke="#b79be8" stroke-opacity=".55"/>
+    <rect x="635" y="135" width="510" height="468" rx="28" fill="#fff" fill-opacity=".055" stroke="#8fd6c4" stroke-opacity=".55"/>
+  </g>
+
+  <g font-family="Nunito,Arial,sans-serif">
+    <text x="95" y="185" fill="#d8c8f4" font-size="24" font-weight="900">CALENDAR DAY</text>
+    <text x="95" y="214" fill="#b8c2d5" font-size="16">Midnight starts a new date card</text>
+    <line x1="115" y1="272" x2="115" y2="520" stroke="#8a79c7" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="115" cy="280" r="10" fill="#f08e79"/>
+    <text x="145" y="275" fill="#f7f0e7" font-size="19" font-weight="800">MON · 7:30pm</text><text x="145" y="301" fill="#bfc8da" font-size="16">Bedtime</text>
+    <circle cx="115" cy="355" r="10" fill="#f2c66d"/>
+    <text x="145" y="350" fill="#f7f0e7" font-size="19" font-weight="800">MON · 11:15pm</text><text x="145" y="376" fill="#bfc8da" font-size="16">Night wake</text>
+    <rect x="88" y="409" width="410" height="2" fill="#b79be8" opacity=".6"/>
+    <text x="498" y="402" text-anchor="end" fill="#b79be8" font-size="14" font-weight="900">MIDNIGHT</text>
+    <circle cx="115" cy="452" r="10" fill="#8fd6c4"/>
+    <text x="145" y="447" fill="#f7f0e7" font-size="19" font-weight="800">TUE · 2:05am</text><text x="145" y="473" fill="#bfc8da" font-size="16">Night wake + feed</text>
+    <circle cx="115" cy="527" r="10" fill="#91a8ed"/>
+    <text x="145" y="522" fill="#f7f0e7" font-size="19" font-weight="800">TUE · 6:50am</text><text x="145" y="548" fill="#bfc8da" font-size="16">Woke for the day</text>
+
+    <text x="675" y="185" fill="#b8eddf" font-size="24" font-weight="900">WAKE TO WAKE</text>
+    <text x="675" y="214" fill="#b8cbd2" font-size="16">The whole night follows the day it began</text>
+    <path d="M700 276v246" stroke="url(#gold)" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="700" cy="280" r="10" fill="#f08e79"/>
+    <text x="730" y="275" fill="#f7f0e7" font-size="19" font-weight="800">MON · 7:30pm</text><text x="730" y="301" fill="#c1d0d4" font-size="16">Bedtime</text>
+    <circle cx="700" cy="355" r="10" fill="#f2c66d"/>
+    <text x="730" y="350" fill="#f7f0e7" font-size="19" font-weight="800">MON · 11:15pm</text><text x="730" y="376" fill="#c1d0d4" font-size="16">Night wake</text>
+    <circle cx="700" cy="430" r="10" fill="#8fd6c4"/>
+    <text x="730" y="425" fill="#f7f0e7" font-size="19" font-weight="800">TUE · 2:05am</text><text x="730" y="451" fill="#c1d0d4" font-size="16">Night wake + feed · shown with Monday night</text>
+    <circle cx="700" cy="505" r="10" fill="#91a8ed"/>
+    <text x="730" y="500" fill="#f7f0e7" font-size="19" font-weight="800">TUE · 6:50am</text><text x="730" y="526" fill="#c1d0d4" font-size="16">New care day begins</text>
+  </g>
+
+  <g transform="translate(145 638)" font-family="Nunito,Arial,sans-serif">
+    <rect width="910" height="76" rx="24" fill="#f2c66d" fill-opacity=".10" stroke="#f2c66d" stroke-opacity=".46"/>
+    <circle cx="42" cy="38" r="18" fill="#f2c66d"/>
+    <path d="m34 38 6 6 11-14" fill="none" stroke="#11223b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="76" y="34" fill="#f7f0e7" font-size="19" font-weight="900">SAME ANALYSIS IN BOTH MODES</text>
+    <text x="76" y="57" fill="#cbd1dc" font-size="16">Bedtime + 11:15pm + 2:05am + morning wake are joined into one night, counted once.</text>
+  </g>
+</svg>

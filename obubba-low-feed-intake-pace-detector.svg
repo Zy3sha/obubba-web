@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1080" viewBox="0 0 720 1080" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba decides when to show Feed intake low today</title>
+  <desc id="desc">The current Flutter detector needs measured bottle history, no breast or combination feed today, at least six hours since morning wake, and a positive daytime bottle total below half its pace-adjusted age reference. It excludes night milk, solids and pumping and does not diagnose dehydration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf4ec"/><stop offset="1" stop-color="#eee8f2"/></linearGradient>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#26324c"/><stop offset="1" stop-color="#4d476a"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#45394d" flood-opacity=".11"/></filter>
+  </defs>
+  <rect width="720" height="1080" rx="34" fill="url(#bg)"/>
+  <circle cx="645" cy="80" r="78" fill="#d9c5dc" opacity=".48"/><circle cx="60" cy="1020" r="110" fill="#cbdacb" opacity=".52"/>
+
+  <text x="52" y="67" fill="#a55442" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">A PACE CHECK, NOT A PRESCRIPTION</text>
+  <text x="52" y="119" fill="#2e2b3a" font-family="Georgia, serif" font-size="39" font-weight="700">A low bottle total is a clue.</text>
+  <text x="52" y="163" fill="#2e2b3a" font-family="Georgia, serif" font-size="39" font-weight="700">Not a number to chase.</text>
+  <text x="52" y="202" fill="#665f6d" font-family="Arial, sans-serif" font-size="18">The Flutter rule only runs when the day looks measurable.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="235" width="636" height="132" rx="24" fill="#fffdf9"/>
+    <circle cx="91" cy="286" r="27" fill="#e7d7c0"/><text x="91" y="293" text-anchor="middle" fill="#905b49" font-family="Arial, sans-serif" font-size="20" font-weight="700">1</text>
+    <text x="134" y="278" fill="#302e3b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Prove bottles are the normal record</text>
+    <text x="134" y="312" fill="#68616e" font-family="Arial, sans-serif" font-size="17">At least 3 positive measured bottles in the prior 7 days.</text>
+    <g transform="translate(134 330)"><rect width="92" height="22" rx="11" fill="#d58a73"/><rect x="104" width="92" height="22" rx="11" fill="#d58a73"/><rect x="208" width="92" height="22" rx="11" fill="#d58a73"/><text x="336" y="17" fill="#4f765c" font-family="Arial, sans-serif" font-size="15" font-weight="700">HISTORY GATE ✓</text></g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="391" width="636" height="138" rx="24" fill="#fffdf9"/>
+    <circle cx="91" cy="442" r="27" fill="#d7e3d4"/><text x="91" y="449" text-anchor="middle" fill="#4c705a" font-family="Arial, sans-serif" font-size="20" font-weight="700">2</text>
+    <text x="134" y="434" fill="#302e3b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Today must be fully measurable</text>
+    <text x="134" y="468" fill="#68616e" font-family="Arial, sans-serif" font-size="17">Any breast or “both” feed stops the bottle-only judgment.</text>
+    <g transform="translate(134 489)" font-family="Arial, sans-serif" font-size="14" font-weight="700"><rect width="116" height="25" rx="13" fill="#dbe7d8"/><text x="58" y="18" text-anchor="middle" fill="#456954">BOTTLE ML</text><text x="136" y="18" fill="#968d98">✓</text><rect x="169" width="98" height="25" rx="13" fill="#eee5dc"/><text x="218" y="18" text-anchor="middle" fill="#7c747f">BREAST</text><text x="281" y="18" fill="#b75f54">×</text><rect x="314" width="80" height="25" rx="13" fill="#eee5dc"/><text x="354" y="18" text-anchor="middle" fill="#7c747f">BOTH</text><text x="409" y="18" fill="#b75f54">×</text></g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="553" width="636" height="137" rx="24" fill="#fffdf9"/>
+    <circle cx="91" cy="604" r="27" fill="#ddd3ea"/><text x="91" y="611" text-anchor="middle" fill="#675380" font-family="Arial, sans-serif" font-size="20" font-weight="700">3</text>
+    <text x="134" y="596" fill="#302e3b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Start at morning wake, then wait 6h</text>
+    <text x="134" y="630" fill="#68616e" font-family="Arial, sans-serif" font-size="17">Earliest daytime wake; 6am fallback if no wake is logged.</text>
+    <g transform="translate(134 652)"><circle cx="8" cy="0" r="8" fill="#8276a1"/><path d="M23 0h316" stroke="#c5b9cb" stroke-width="6" stroke-linecap="round"/><path d="M23 0h158" stroke="#8276a1" stroke-width="6" stroke-linecap="round"/><circle cx="181" cy="0" r="9" fill="#c97b67"/><text x="201" y="6" fill="#9a5d43" font-family="Arial, sans-serif" font-size="15" font-weight="700">CHECK CAN BEGIN</text></g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="714" width="636" height="164" rx="24" fill="#fffdf9"/>
+    <circle cx="91" cy="765" r="27" fill="#f0d7ca"/><text x="91" y="772" text-anchor="middle" fill="#9a5d43" font-family="Arial, sans-serif" font-size="20" font-weight="700">4</text>
+    <text x="134" y="757" fill="#302e3b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Positive daytime ml &lt; half the pace line</text>
+    <text x="134" y="791" fill="#68616e" font-family="Arial, sans-serif" font-size="17">Age bucket × waking-day fraction. Strictly below 50%.</text>
+    <rect x="134" y="820" width="430" height="16" rx="8" fill="#e6dfe8"/><rect x="134" y="820" width="165" height="16" rx="8" fill="#c97b67"/><line x1="349" y1="809" x2="349" y2="849" stroke="#8a6e96" stroke-width="3"/><text x="349" y="866" text-anchor="middle" fill="#675380" font-family="Arial, sans-serif" font-size="14" font-weight="700">50% SPEAKING LINE</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="902" width="636" height="126" rx="24" fill="url(#navy)"/>
+    <text x="68" y="940" fill="#f1ca83" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="1.4">NOT ADDED TO THIS TOTAL</text>
+    <text x="68" y="976" fill="#fff" font-family="Arial, sans-serif" font-size="19" font-weight="700">Night milk · breast minutes · pump output · solids</text>
+    <text x="68" y="1005" fill="#ded9e5" font-family="Arial, sans-serif" font-size="16">Wet-nappy dehydration checks live in a separate safety engine.</text>
+  </g>
+
+  <text x="360" y="1058" text-anchor="middle" fill="#635c68" font-family="Arial, sans-serif" font-size="15">Check the log. Offer by cues. Never force a bottle to cross a line.</text>
+</svg>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="robots" content="noindex, nofollow"/>
+<meta charset="utf-8">
+<title>OBubba Share Card Preview</title>
+<style>
+body { background: #1a1a2e; margin: 0; padding: 20px; font-family: sans-serif; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+canvas { border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); max-height: 480px; cursor: pointer; }
+h1 { color: white; width: 100%; text-align: center; }
+.label { color: #aaa; text-align: center; font-size: 14px; margin-top: 8px; }
+.card-wrap { display: flex; flex-direction: column; align-items: center; }
+</style>
+</head>
+<body>
+<h1>OBubba Share Cards Preview</h1>
+
+<script>
+const babyName = "Oliver";
+
+function _wrapText(ctx, text, maxW) {
+  const words = text.split(" "); const lines = []; let line = "";
+  words.forEach(w => {
+    const test = line ? line + " " + w : w;
+    if (ctx.measureText(test).width > maxW && line) { lines.push(line); line = w; }
+    else line = test;
+  });
+  if (line) lines.push(line);
+  return lines;
+}
+
+async function renderCard(cardType, title, milestone) {
+  const W = 1080, H = 1920;
+  const canvas = document.createElement("canvas"); canvas.width = W; canvas.height = H;
+  const ctx = canvas.getContext("2d");
+  const name = babyName;
+
+  // Background gradient
+  const grad = ctx.createLinearGradient(0, 0, W, H);
+  grad.addColorStop(0, "#C8BFE8"); grad.addColorStop(0.3, "#BDB4E0");
+  grad.addColorStop(0.5, "#D0C8EC"); grad.addColorStop(0.7, "#C4BBE4");
+  grad.addColorStop(1, "#B8B0DC");
+  ctx.fillStyle = grad; ctx.fillRect(0, 0, W, H);
+
+  // Warm pink overlay
+  const warmTop = ctx.createRadialGradient(W * 0.3, 0, 0, W * 0.3, 0, W * 0.8);
+  warmTop.addColorStop(0, "rgba(230,200,220,0.4)"); warmTop.addColorStop(1, "transparent");
+  ctx.fillStyle = warmTop; ctx.fillRect(0, 0, W, H);
+
+  // Golden glow
+  const goldGlow = ctx.createRadialGradient(W * 0.6, H * 0.12, 0, W * 0.6, H * 0.12, 400);
+  goldGlow.addColorStop(0, "rgba(255,230,180,0.15)"); goldGlow.addColorStop(1, "transparent");
+  ctx.fillStyle = goldGlow; ctx.fillRect(0, 0, W, H);
+
+  // Sparkles
+  for (let i = 0; i < 120; i++) {
+    const x = Math.random() * W, y = Math.random() * H;
+    const r = Math.random() * 3 + 0.3;
+    const alpha = Math.random() * 0.6 + 0.15;
+    const isGold = Math.random() > 0.75;
+    ctx.fillStyle = isGold ? `rgba(255,220,160,${alpha})` : `rgba(255,255,255,${alpha})`;
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+    if (r > 2.5) {
+      ctx.strokeStyle = `rgba(255,255,255,${alpha * 0.5})`; ctx.lineWidth = 0.8;
+      ctx.beginPath(); ctx.moveTo(x - r * 2.5, y); ctx.lineTo(x + r * 2.5, y); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(x, y - r * 2.5); ctx.lineTo(x, y + r * 2.5); ctx.stroke();
+    }
+  }
+
+  // Glow orbs
+  [[W*0.15,H*0.06,300,"rgba(220,200,255,0.25)"],[W*0.85,H*0.1,220,"rgba(255,220,200,0.2)"],
+   [W*0.5,H*0.9,400,"rgba(200,190,240,0.15)"],[W*0.1,H*0.75,250,"rgba(230,210,240,0.2)"]].forEach(([gx,gy,gr,gc])=>{
+    const g=ctx.createRadialGradient(gx,gy,0,gx,gy,gr);
+    g.addColorStop(0,gc);g.addColorStop(1,"transparent");
+    ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+  });
+
+  // Mascot
+  try {
+    const mascotImg = new Image();
+    await new Promise((res, rej) => { mascotImg.onload = res; mascotImg.onerror = rej; mascotImg.src = "public/obubba-happy.png"; setTimeout(rej, 5000); });
+    ctx.drawImage(mascotImg, 20, 30, 340, 340);
+  } catch(e) {
+    // Draw placeholder
+    ctx.fillStyle = "rgba(255,255,255,0.3)";
+    ctx.beginPath(); ctx.arc(190, 200, 150, 0, Math.PI * 2); ctx.fill();
+    ctx.font = "100px serif"; ctx.textAlign = "center"; ctx.fillText("\u{1F476}", 190, 230);
+  }
+
+  // OBubba logo
+  ctx.textAlign = "center";
+  ctx.font = "bold 120px Georgia,serif";
+  ctx.fillStyle = "rgba(180,170,220,0.5)"; ctx.fillText("OBubba", W/2+80, 200);
+  ctx.fillStyle = "#E8E0F0"; ctx.fillText("OBubba", W/2+78, 198);
+
+  // CELEBRATING
+  ctx.font = "bold 32px sans-serif";
+  ctx.fillStyle = "#D4A855";
+  ctx.fillText("C E L E B R A T I N G", W/2, 370);
+
+  // Card-type content
+  if (cardType === "sleepwin") {
+    ctx.font = "bold 64px Georgia,serif"; ctx.fillStyle = "#3A3050";
+    const headLines = _wrapText(ctx, title || "A beautiful little win", W - 140);
+    let hy = 440; headLines.forEach(l => { ctx.fillText(l, W/2, hy); hy += 78; });
+    const cardX=80,cardY=hy+40,cardW=W-160,cardH=700,cardR=32;
+    ctx.shadowColor="rgba(0,0,0,0.06)";ctx.shadowBlur=30;ctx.shadowOffsetY=8;
+    ctx.fillStyle="rgba(255,255,255,0.88)";
+    ctx.beginPath();ctx.roundRect(cardX,cardY,cardW,cardH,cardR);ctx.fill();
+    ctx.shadowColor="transparent";ctx.shadowBlur=0;ctx.shadowOffsetY=0;
+    ctx.strokeStyle="rgba(255,255,255,0.5)";ctx.lineWidth=2;
+    ctx.beginPath();ctx.roundRect(cardX+3,cardY+3,cardW-6,cardH-6,cardR-2);ctx.stroke();
+    const details = milestone || {};
+    ctx.font="bold 40px Georgia,serif";ctx.fillStyle="#4A3F55";
+    const msgLines=_wrapText(ctx,details.message||name+"'s sleep rhythm is getting stronger!",cardW-80);
+    let my=cardY+80;msgLines.forEach(l=>{ctx.fillText(l,W/2,my);my+=50;});
+    if(details.stat){
+      ctx.font="bold 72px Georgia,serif";ctx.fillStyle="#7A6AAA";ctx.fillText(details.stat,W/2,my+80);
+      ctx.font="24px sans-serif";ctx.fillStyle="#8A7888";ctx.fillText(details.statLabel||"",W/2,my+120);
+    }
+    ctx.font="22px sans-serif";ctx.fillStyle="#A098B0";
+    ctx.fillText(new Date().toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"}),W/2,cardY+cardH-40);
+
+  } else if (cardType === "village" || cardType === "referral") {
+    ctx.font="bold 64px Georgia,serif";ctx.fillStyle="#3A3050";
+    ctx.fillText(cardType==="village"?"It takes a village":"Pass it on to a friend",W/2,460);
+    if(cardType==="referral"){ctx.font="26px sans-serif";ctx.fillStyle="#6A5A80";ctx.fillText("Refer a friend",W/2,420);}
+    const cardX=80,cardY=520,cardW=W-160,cardH=750,cardR=32;
+    ctx.shadowColor="rgba(0,0,0,0.06)";ctx.shadowBlur=30;ctx.shadowOffsetY=8;
+    ctx.fillStyle="rgba(255,255,255,0.88)";
+    ctx.beginPath();ctx.roundRect(cardX,cardY,cardW,cardH,cardR);ctx.fill();
+    ctx.shadowColor="transparent";ctx.shadowBlur=0;ctx.shadowOffsetY=0;
+    ctx.font="32px sans-serif";ctx.fillStyle="#5A5068";
+    const bodyLines=(cardType==="village"
+      ?"Invite friends to OBubba\nand you both get a week\nfree of OBubba Pro!"
+      :"Share this referral pass\nwith a friend and give them\na free week of OBubba.").split("\n");
+    let by=cardY+120;bodyLines.forEach(l=>{ctx.fillText(l,W/2,by);by+=48;});
+    if(cardType==="referral"){
+      const tX=W/2-200,tY=by+40,tW=400,tH=140;
+      ctx.fillStyle="rgba(240,228,200,0.9)";ctx.beginPath();ctx.roundRect(tX,tY,tW,tH,16);ctx.fill();
+      ctx.strokeStyle="rgba(180,150,100,0.3)";ctx.lineWidth=2;ctx.beginPath();ctx.roundRect(tX,tY,tW,tH,16);ctx.stroke();
+      ctx.font="bold 28px Georgia,serif";ctx.fillStyle="#8A6A30";ctx.fillText("Referral Pass",W/2,tY+50);
+      ctx.font="bold 36px Georgia,serif";ctx.fillStyle="#C44A20";ctx.fillText("1 FREE WEEK!",W/2,tY+100);
+    }
+    const btnY=cardY+cardH-160;
+    if(cardType==="village"){
+      [[W/2-200,"Refer a friend"],[W/2+40,"Join the village"]].forEach(([bx,label],idx)=>{
+        ctx.fillStyle=idx===0?"#c9705a":"#7A6AAA";
+        ctx.beginPath();ctx.roundRect(bx,btnY,220,56,28);ctx.fill();
+        ctx.font="bold 22px sans-serif";ctx.fillStyle="white";ctx.fillText(label,bx+110,btnY+36);
+      });
+    } else {
+      ctx.fillStyle="#c9705a";ctx.beginPath();ctx.roundRect(W/2-160,btnY,320,60,30);ctx.fill();
+      ctx.font="bold 26px sans-serif";ctx.fillStyle="white";ctx.fillText("Invite a friend",W/2,btnY+40);
+    }
+
+  } else if (cardType === "rhythm") {
+    ctx.font="bold 58px Georgia,serif";ctx.fillStyle="#3A3050";ctx.fillText(name+"'s Week",W/2,460);
+    const cardX=80,cardY=510,cardW=W-160,cardH=820,cardR=32;
+    ctx.shadowColor="rgba(0,0,0,0.06)";ctx.shadowBlur=30;ctx.shadowOffsetY=8;
+    ctx.fillStyle="rgba(255,255,255,0.88)";
+    ctx.beginPath();ctx.roundRect(cardX,cardY,cardW,cardH,cardR);ctx.fill();
+    ctx.shadowColor="transparent";ctx.shadowBlur=0;ctx.shadowOffsetY=0;
+    const stats = milestone || {};
+    [["2","avg naps/day"],["10h 20m","avg night sleep"],["3h 15m","avg day sleep"],["5h 40m","longest stretch"]].forEach((s,i)=>{
+      const col=i%2,row=Math.floor(i/2);const colW2=(cardW-60)/2;
+      const sx=cardX+30+col*colW2+colW2/2,sy=cardY+80+row*200;
+      ctx.fillStyle="rgba(200,190,230,0.2)";ctx.beginPath();ctx.arc(sx,sy+40,60,0,Math.PI*2);ctx.fill();
+      ctx.font="bold 48px Georgia,serif";ctx.fillStyle="#5A4A80";ctx.fillText(s[0],sx,sy+55);
+      ctx.font="22px sans-serif";ctx.fillStyle="#8A7898";ctx.fillText(s[1],sx,sy+110);
+    });
+    ctx.font="bold 36px Georgia,serif";ctx.fillStyle="#5A4A80";ctx.fillText("\u{1F31F} Finding their groove",W/2,cardY+cardH-120);
+    ctx.font="22px sans-serif";ctx.fillStyle="#A098B0";ctx.fillText("This week's rhythm vibe",W/2,cardY+cardH-80);
+
+  } else if (cardType === "badnight") {
+    ctx.font="bold 64px Georgia,serif";ctx.fillStyle="#3A3050";ctx.fillText("Survived the night",W/2,460);
+    ctx.font="28px sans-serif";ctx.fillStyle="#6A5A80";ctx.fillText("and you're still here. That counts.",W/2,510);
+    ctx.fillStyle="rgba(255,255,255,0.15)";ctx.beginPath();ctx.arc(W/2,750,180,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle="rgba(200,190,230,0.25)";ctx.beginPath();ctx.arc(W/2,750,150,0,Math.PI*2);ctx.fill();
+    ctx.font="120px serif";ctx.fillText("\u{1F3C5}",W/2,790);
+    const cardX=80,cardY=980,cardW=W-160,cardH=500,cardR=32;
+    ctx.fillStyle="rgba(255,255,255,0.85)";ctx.beginPath();ctx.roundRect(cardX,cardY,cardW,cardH,cardR);ctx.fill();
+    ctx.font="bold 36px Georgia,serif";ctx.fillStyle="#4A3F55";
+    const msgLines=_wrapText(ctx,"Last night was rough. You showed up anyway. That\u2019s everything.",cardW-80);
+    let my=cardY+80;msgLines.forEach(l=>{ctx.fillText(l,W/2,my);my+=48;});
+    ctx.font="bold 56px Georgia,serif";ctx.fillStyle="#7A6AAA";ctx.fillText("4 wakes",W/2,my+60);
+    ctx.font="22px sans-serif";ctx.fillStyle="#A098B0";ctx.fillText("and you handled every one",W/2,my+100);
+
+  } else {
+    // Milestone
+    ctx.font="bold 64px Georgia,serif";ctx.fillStyle="#3A3050";
+    const headLines=_wrapText(ctx,title||"A special milestone",W-140);
+    let hy=440;headLines.forEach(l=>{ctx.fillText(l,W/2,hy);hy+=78;});
+    const cardX=80,cardY=hy+40,cardW=W-160,cardH=800,cardR=32;
+    ctx.shadowColor="rgba(0,0,0,0.06)";ctx.shadowBlur=30;ctx.shadowOffsetY=8;
+    ctx.fillStyle="rgba(255,255,255,0.88)";
+    ctx.beginPath();ctx.roundRect(cardX,cardY,cardW,cardH,cardR);ctx.fill();
+    ctx.shadowColor="transparent";ctx.shadowBlur=0;ctx.shadowOffsetY=0;
+    ctx.strokeStyle="rgba(255,255,255,0.5)";ctx.lineWidth=2;
+    ctx.beginPath();ctx.roundRect(cardX+3,cardY+3,cardW-6,cardH-6,cardR-2);ctx.stroke();
+    // Browser dots
+    [cardX+30,cardX+52,cardX+74].forEach(dx=>{
+      ctx.fillStyle="rgba(180,170,200,0.4)";ctx.beginPath();ctx.arc(dx,cardY+30,6,0,Math.PI*2);ctx.fill();
+    });
+    [cardX+cardW-30,cardX+cardW-52,cardX+cardW-74].forEach(dx=>{
+      ctx.fillStyle="rgba(180,170,200,0.4)";ctx.beginPath();ctx.arc(dx,cardY+30,6,0,Math.PI*2);ctx.fill();
+    });
+    // Mascot inside card
+    try {
+      const img = new Image();
+      await new Promise((res, rej) => { img.onload = res; img.onerror = rej; img.src = "public/obubba-celebration.png"; setTimeout(rej, 5000); });
+      ctx.drawImage(img, W/2-150, cardY+80, 300, 300);
+    } catch(e) {
+      ctx.font = "120px serif"; ctx.fillText("\u{1F476}\u{1F451}", W/2, cardY+260);
+    }
+    const titleY=cardY+420;
+    ctx.font="bold 40px Georgia,serif";ctx.fillStyle="#3A3050";
+    const titleLines=_wrapText(ctx,(title||"A special milestone")+" \u{1f389}",cardW-80);
+    let ty=titleY;titleLines.forEach(l=>{ctx.fillText(l,W/2,ty);ty+=50;});
+    ctx.font="24px sans-serif";ctx.fillStyle="#A098B0";
+    ctx.fillText(new Date().toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"}),W/2,ty+20);
+    const divY=ty+60;
+    ctx.strokeStyle="rgba(180,170,200,0.2)";ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.moveTo(cardX+80,divY);ctx.lineTo(cardX+cardW-80,divY);ctx.stroke();
+    ctx.font="28px sans-serif";ctx.fillStyle="#5A5068";
+    ctx.fillText("Proud parent moment! Look who reached a",W/2,divY+45);
+    ctx.fillText("special milestone. \u{1f389}\u{1f476}",W/2,divY+83);
+    // Share button
+    const btnY2=cardY+cardH-80;
+    ["\u{1F4F7}","\u{1F4F1}","\u{1F517}"].forEach((icon,i)=>{
+      ctx.fillStyle="rgba(180,170,200,0.5)";ctx.beginPath();ctx.arc(cardX+80+i*55,btnY2,22,0,Math.PI*2);ctx.fill();
+      ctx.font="22px sans-serif";ctx.fillText(icon,cardX+80+i*55,btnY2+8);
+    });
+    ctx.fillStyle="rgba(220,215,235,0.7)";ctx.beginPath();ctx.roundRect(cardX+cardW-200,btnY2-26,160,52,26);ctx.fill();
+    ctx.font="bold 24px sans-serif";ctx.fillStyle="#5A4A80";ctx.fillText("Share",cardX+cardW-120,btnY2+8);
+  }
+
+  // Bottom branding
+  ctx.textAlign="center";
+  ctx.font="bold 28px sans-serif";ctx.fillStyle="rgba(255,255,255,0.7)";ctx.fillText("Tracked with OBubba",W/2,H-120);
+  ctx.font="20px sans-serif";ctx.fillStyle="rgba(255,255,255,0.5)";ctx.fillText("The baby app that learns your baby's rhythm",W/2,H-85);
+  ctx.font="bold 22px sans-serif";ctx.fillStyle="rgba(212,168,85,0.7)";ctx.fillText("obubba.com",W/2,H-50);
+
+  return canvas;
+}
+
+async function init() {
+  const cards = [
+    ["milestone", "Baby's first birthday \u{1F382}"],
+    ["sleepwin", "A well-rested win", { message: "Oliver slept through the night for the first time!", stat: "11h 20m", statLabel: "longest sleep ever" }],
+    ["rhythm", "Oliver's Week", { avgNaps: "2", avgNight: "10h 20m", avgDay: "3h 15m", longestStretch: "5h 40m", vibe: "\u{1F31F} Finding their groove" }],
+    ["badnight", "Survived the night"],
+    ["village", "It takes a village"],
+    ["referral", "Pass it on to a friend"],
+  ];
+
+  for (const [type, title, data] of cards) {
+    const wrap = document.createElement("div");
+    wrap.className = "card-wrap";
+    const canvas = await renderCard(type, title, data);
+    canvas.style.maxHeight = "480px";
+    canvas.title = "Click to download";
+    canvas.onclick = () => {
+      const a = document.createElement("a");
+      a.href = canvas.toDataURL("image/png");
+      a.download = `obubba-${type}-card.png`;
+      a.click();
+    };
+    wrap.appendChild(canvas);
+    const label = document.createElement("div");
+    label.className = "label";
+    label.textContent = type.charAt(0).toUpperCase() + type.slice(1) + " Card";
+    wrap.appendChild(label);
+    document.body.appendChild(wrap);
+  }
+}
+
+init();
+</script>
+</body>
+</html>

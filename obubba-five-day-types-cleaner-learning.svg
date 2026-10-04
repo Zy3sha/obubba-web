@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1540" viewBox="0 0 1000 1540" role="img" aria-labelledby="title desc">
+  <title id="title">OBubba day types protect personalised learning</title>
+  <desc id="desc">Five day type cards lead through factual logging, contextual labelling, baseline protection and cautious away-day comparison.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#15152d"/><stop offset="1" stop-color="#3b203f"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6d6aa"/><stop offset="1" stop-color="#e7a488"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#090814" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1000" height="1540" rx="48" fill="url(#bg)"/>
+  <circle cx="885" cy="130" r="205" fill="#6d4969" opacity=".25"/><circle cx="70" cy="1440" r="235" fill="#254658" opacity=".27"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="70" y="104" fill="#eab69a" font-size="23" font-weight="700" letter-spacing="3">OBUBBA • TODAY TYPE</text>
+    <text x="70" y="172" fill="#fffaf4" font-size="52" font-weight="800">One day. Five contexts.</text>
+    <text x="70" y="232" fill="#fffaf4" font-size="52" font-weight="800">Cleaner learning.</text>
+    <text x="70" y="280" fill="#d5cddb" font-size="23">Keep the real day. Tell the app how to read it.</text>
+
+    <g filter="url(#shadow)">
+      <rect x="54" y="342" width="172" height="232" rx="28" fill="#fffaf4"/>
+      <rect x="234" y="342" width="172" height="232" rx="28" fill="#f6eef3"/>
+      <rect x="414" y="342" width="172" height="232" rx="28" fill="#fffaf4"/>
+      <rect x="594" y="342" width="172" height="232" rx="28" fill="#f6eef3"/>
+      <rect x="774" y="342" width="172" height="232" rx="28" fill="#fffaf4"/>
+    </g>
+    <g text-anchor="middle">
+      <circle cx="140" cy="406" r="30" fill="#dceee5"/><text x="140" y="417" font-size="31">⌂</text>
+      <text x="140" y="470" fill="#2d273d" font-size="25" font-weight="800">HOME</text><text x="140" y="507" fill="#6d6574" font-size="17">normal baseline</text><text x="140" y="543" fill="#2f7658" font-size="17" font-weight="700">LEARN</text>
+      <circle cx="320" cy="406" r="30" fill="#eadde8"/><text x="320" y="417" font-size="28">▦</text>
+      <text x="320" y="470" fill="#2d273d" font-size="25" font-weight="800">DAYCARE</text><text x="320" y="507" fill="#6d6574" font-size="17">nursery context</text><text x="320" y="543" fill="#885575" font-size="17" font-weight="700">KEEP, FILTER</text>
+      <circle cx="500" cy="406" r="30" fill="#f4dfce"/><text x="500" y="417" font-size="28">♡</text>
+      <text x="500" y="470" fill="#2d273d" font-size="25" font-weight="800">GRAND</text><text x="500" y="507" fill="#6d6574" font-size="17">family care</text><text x="500" y="543" fill="#885575" font-size="17" font-weight="700">KEEP, FILTER</text>
+      <circle cx="680" cy="406" r="30" fill="#dce8ef"/><text x="680" y="417" font-size="27">→</text>
+      <text x="680" y="470" fill="#2d273d" font-size="25" font-weight="800">TRAVEL</text><text x="680" y="507" fill="#6d6574" font-size="17">out of routine</text><text x="680" y="543" fill="#885575" font-size="17" font-weight="700">KEEP, FILTER</text>
+      <circle cx="860" cy="406" r="30" fill="#f2d9dc"/><text x="860" y="417" font-size="27">+</text>
+      <text x="860" y="470" fill="#2d273d" font-size="25" font-weight="800">SICK</text><text x="860" y="507" fill="#6d6574" font-size="17">health confounder</text><text x="860" y="543" fill="#885575" font-size="17" font-weight="700">KEEP, FILTER</text>
+    </g>
+
+    <text x="70" y="660" fill="#eab69a" font-size="22" font-weight="700" letter-spacing="2">THE FOUR-LAYER RECORD</text>
+    <g filter="url(#shadow)">
+      <rect x="54" y="702" width="892" height="142" rx="28" fill="#fffaf4"/>
+      <rect x="54" y="862" width="892" height="142" rx="28" fill="#f5ebf2"/>
+      <rect x="54" y="1022" width="892" height="142" rx="28" fill="#fffaf4"/>
+      <rect x="54" y="1182" width="892" height="142" rx="28" fill="url(#gold)"/>
+    </g>
+    <g>
+      <circle cx="120" cy="773" r="38" fill="#2e2940"/><text x="120" y="783" text-anchor="middle" fill="#fffaf4" font-size="28" font-weight="800">1</text>
+      <text x="184" y="758" fill="#2d273d" font-size="28" font-weight="800">LOG WHAT HAPPENED</text><text x="184" y="797" fill="#6d6574" font-size="20">Real feeds, naps, wakes, nappies and notes stay visible.</text>
+      <circle cx="120" cy="933" r="38" fill="#6b4262"/><text x="120" y="943" text-anchor="middle" fill="#fffaf4" font-size="28" font-weight="800">2</text>
+      <text x="184" y="918" fill="#2d273d" font-size="28" font-weight="800">LABEL WHY IT WAS DIFFERENT</text><text x="184" y="957" fill="#6d6574" font-size="20">Add setting or illness context—even to a past date.</text>
+      <circle cx="120" cy="1093" r="38" fill="#2e5e4b"/><text x="120" y="1103" text-anchor="middle" fill="#fffaf4" font-size="28" font-weight="800">3</text>
+      <text x="184" y="1078" fill="#2d273d" font-size="28" font-weight="800">PROTECT THE HOME BASELINE</text><text x="184" y="1117" fill="#6d6574" font-size="20">Comparable days teach timing; off-days do not distort it.</text>
+      <circle cx="120" cy="1253" r="38" fill="#624052"/><text x="120" y="1263" text-anchor="middle" fill="#fffaf4" font-size="28" font-weight="800">4</text>
+      <text x="184" y="1238" fill="#39283b" font-size="28" font-weight="800">COMPARE AWAY NIGHTS—LATER</text><text x="184" y="1277" fill="#5b4657" font-size="20">4 away + 4 home nights; speak only at a ≥1-wake gap.</text>
+    </g>
+
+    <rect x="54" y="1373" width="892" height="105" rx="26" fill="#ffffff" opacity=".09" stroke="#ffffff" stroke-opacity=".17"/>
+    <text x="88" y="1417" fill="#fffaf4" font-size="22" font-weight="800">DAY TYPE ≠ ADJUST SCHEDULE</text>
+    <text x="88" y="1453" fill="#d5cddb" font-size="19">Label context here. Use Adjust schedule for an intentional timing change.</text>
+    <text x="70" y="1514" fill="#bdb3c5" font-size="16">Flutter implementation reviewed 8 March 2027 • Labels are per baby and device-local.</text>
+  </g>
+</svg>

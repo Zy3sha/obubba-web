@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <!-- OpenAI conversion pixel -->
+  <script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"RKX5Fn2RCayB9tU3QFxiF9",debug:true});</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OBubba — Privacy Policy</title>
+<meta name="description" content="Read how OBubba handles baby tracking data, family sharing, cloud backup, website analytics and optional deeper Luna AI answers.">
+<link rel="canonical" href="https://obubba.com/privacy.html">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'allow_google_signals', false);
+    gtag('set', 'allow_ad_personalization_signals', false);
+    gtag('js', new Date());
+    gtag('config', 'G-Y7CHSL1YHZ');
+    document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener('click', (event) => {
+        const anchor = event.target.closest('a[href]');
+        if (!anchor) return;
+        let target;
+        try { target = new URL(anchor.href, window.location.href); } catch { return; }
+        const store = target.hostname === 'apps.apple.com'
+          ? 'ios'
+          : target.hostname === 'play.google.com' ? 'android' : null;
+        if (!store) return;
+        gtag('event', 'store_click', {
+          store,
+          page_path: window.location.pathname,
+          transport_type: 'beacon'
+        });
+      });
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7CHSL1YHZ"></script>
+  <style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 24px 20px; color: #5B4F5F; line-height: 1.7; background: #FBF5F3; }
+  h1 { font-family: 'Playfair Display', Georgia, serif; color: #5B4F5F; font-size: 28px; }
+  h2 { color: #C07088; font-size: 18px; margin-top: 28px; }
+  a { color: #C07088; }
+  .updated { font-size: 13px; color: #9B8F94; margin-bottom: 24px; }
+</style>
+</head>
+<body>
+<h1>Privacy Policy</h1>
+<div class="updated">Last updated: 20 August 2026</div>
+
+<p>OBubba ("we", "us", "our") is a baby tracking and parenting companion app built by parents, for parents. We take your privacy and your family's data seriously.</p>
+
+<h2>1. Data We Collect</h2>
+<p><strong>Baby tracking data:</strong> Feeds, naps, nappies, weight, milestones, activities, and notes you log. This data is stored on your device and optionally synced to our cloud backup (Firebase/Firestore) if you create an account.</p>
+<p><strong>Account information:</strong> If you sign up, we store your display name, email (if provided), and a family backup code. We use Firebase Authentication.</p>
+<p><strong>Contact email (optional, opt-in):</strong> You can choose to give us a contactable email address so we can reach you about your account and important updates (for example, a critical fix that affects your backup). This is opt-in and off by default, is separate from any recovery email, and you can unsubscribe at any time. We only use it to contact you as described, never for third-party advertising, and it is deleted when you delete your account.</p>
+<p><strong>Location data (optional):</strong> If you grant permission, we use your location solely to calculate travel time to appointments you've added (e.g. GP visits, health visitor appointments). We use Apple MapKit for route calculation. Your location is used in real time only, sent to Apple's routing services for that calculation, and never stored or sent to OBubba servers. You can deny location access and manually set travel times instead.</p>
+<p><strong>Photos (optional):</strong> Photos you add (e.g. milestone photos, care guide profile picture) are stored on your device. If you generate a share card with a photo, the card image is created locally and only shared if you explicitly tap Share.</p>
+<p><strong>Usage analytics:</strong> We use Firebase Analytics to understand how the app is used (e.g. which features are popular). We also use Google Analytics on the public website. Analytics runs cookieless by default; we set an analytics cookie only if you choose Accept on our cookie banner, and you can Decline to keep the site completely cookieless. Advertising storage stays denied at all times. Measurements can include technical request data, the page path, store choice and approved campaign labels. No personal baby, care, contact or account data is included in analytics.</p>
+<p><strong>AI coach answers (optional, off by default):</strong> Our in-app coach ("Luna") can give deeper, conversational answers using Google's Gemini AI. This is off until you turn it on, and we ask your explicit permission the first time. If you enable it, the question you type plus the relevant details from your baby's logs (such as recent sleep and feed times and age) are sent to Google's Gemini AI, via Firebase AI, to generate the reply. Your name, contact details and account are never sent. See "Data Sharing" below.</p>
+
+<h2>2. How We Use Your Data</h2>
+<ul>
+  <li>To provide baby tracking, predictions, and insights</li>
+  <li>To sync data between your devices and with your partner</li>
+  <li>To calculate travel time to appointments (location, when permitted)</li>
+  <li>To send local notifications (nap reminders, bedtime alerts, appointment reminders)</li>
+  <li>To email you about your account and important updates, only if you opt in (see "Contact email" above)</li>
+  <li>To improve the app experience through anonymous usage analytics</li>
+</ul>
+
+<h2>3. Data Sharing</h2>
+<p>We do <strong>not</strong> sell or rent your personal data or your baby's data, and we never share it for advertising or track you across other apps.</p>
+<p>Your data is shared only in these limited cases:</p>
+<ul>
+  <li><strong>Partner sync:</strong> If you share a family code with your partner, they can access the same tracking data.</li>
+  <li><strong>Cloud infrastructure:</strong> Data is stored on Google Firebase (Firestore, Authentication, Storage) which is governed by Google's data processing terms.</li>
+  <li><strong>Website analytics:</strong> The public website sends limited usage and store-route measurements to Google Analytics. Measurement is cookieless until you accept analytics cookies on our banner; advertising storage is denied at all times. Google may process technical request data to provide this measurement under <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. We do not include baby, care, contact or account data.</li>
+  <li><strong>Luna's AI answers (optional, off by default):</strong> If you turn on AI answers in our in-app coach, the question you type plus the relevant details from your baby's logs (such as recent sleep and feed times and age) are sent to Google's Gemini AI, via Firebase AI, to generate the reply. We ask your explicit permission before this happens the first time, and you can turn it off anytime in the app (Account → Preferences → Privacy). Your name, contact details and account are never sent. Google processes this data under <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> to return the answer. If you don't turn it on, nothing is sent to Google's AI and the coach uses only its built-in knowledge.</li>
+</ul>
+
+<h2>4. Data Storage & Security</h2>
+<p>Your data is stored locally on your device using SQLite and localStorage. If you enable cloud backup, data is encrypted in transit (TLS) and stored in Firebase's secure infrastructure. We do not have access to your passwords.</p>
+
+<h2>5. Location Services</h2>
+<p>OBubba requests "When In Use" location permission only. We use your location exclusively to calculate driving time to appointments using Apple MapKit. Your coordinates are sent to Apple's routing API and are subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. We never store or log your location, and we do not send it to OBubba servers.</p>
+
+<h2>6. Children's Privacy</h2>
+<p>OBubba is designed for parents/carers to track their baby's care. We do not knowingly collect data from children. All data is entered by the parent/carer. Baby names, dates of birth, and tracking data are stored solely for the parent's use.</p>
+
+<h2>7. Your Rights</h2>
+<p>You can:</p>
+<ul>
+  <li><strong>Export</strong> all your data from the Account tab</li>
+  <li><strong>Delete</strong> your account and all cloud data at any time</li>
+  <li><strong>Revoke</strong> location permissions in your device Settings</li>
+  <li><strong>Disable</strong> cloud sync and use the app offline only</li>
+</ul>
+
+<h2>8. Cookies & Tracking</h2>
+<p>By default the public website is cookieless. We set one analytics cookie (Google Analytics) only if you choose Accept on our cookie banner; choose Decline and no analytics cookies are set and measurement stays cookieless. Advertising storage, advertising user data and advertising personalisation are denied at all times, whichever you choose. We do not use this measurement to track you across other apps or websites, and you can withdraw consent at any time by clearing this site's data in your browser.</p>
+
+<h2>9. Changes to This Policy</h2>
+<p>We may update this policy from time to time. We'll notify you in the app if any material changes are made.</p>
+
+<h2>10. Contact Us</h2>
+<p>Questions about your privacy? Email us at <a href="mailto:hello@obubba.com">hello@obubba.com</a></p>
+
+<p style="margin-top: 32px; font-size: 13px; color: #9B8F94; text-align: center;">© 2026 OBubba. Made with 💛 by a tired mum.</p>
+</body>
+</html>

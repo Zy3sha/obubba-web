@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1050" viewBox="0 0 720 1050" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba notices that a baby's longest sleep stretch has shortened</title>
+  <desc id="desc">A four-step explanation: rebuild complete nights, find each night's longest unbroken sleep block, compare two medians, and speak only after a meaningful drop. The app cannot diagnose the cause.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbf5ed"/>
+      <stop offset="1" stop-color="#f1e7ef"/>
+    </linearGradient>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#25314f"/>
+      <stop offset="1" stop-color="#5d557c"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#44394d" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <rect width="720" height="1050" rx="34" fill="url(#bg)"/>
+  <circle cx="643" cy="85" r="74" fill="#dec6d5" opacity=".45"/>
+  <circle cx="82" cy="975" r="110" fill="#c9d7c6" opacity=".48"/>
+
+  <text x="56" y="75" fill="#a55542" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">WHAT OBUBBA ACTUALLY CHECKS</text>
+  <text x="56" y="126" fill="#2d2b3a" font-family="Georgia, serif" font-size="40" font-weight="700">One shorter stretch is data.</text>
+  <text x="56" y="171" fill="#2d2b3a" font-family="Georgia, serif" font-size="40" font-weight="700">A trend needs more.</text>
+  <text x="56" y="211" fill="#655e6c" font-family="Arial, sans-serif" font-size="19">The Flutter app waits, compares medians, then speaks gently.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="44" y="250" width="632" height="148" rx="24" fill="#fffdf9"/>
+    <circle cx="94" cy="302" r="26" fill="#e7d8c1"/>
+    <text x="94" y="309" text-anchor="middle" fill="#8d5747" font-family="Arial, sans-serif" font-size="20" font-weight="700">1</text>
+    <text x="136" y="293" fill="#302e3b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Build complete nights</text>
+    <text x="136" y="324" fill="#68616e" font-family="Arial, sans-serif" font-size="17">Both bedtime and morning wake must exist.</text>
+    <line x1="137" y1="353" x2="600" y2="353" stroke="url(#night)" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="137" cy="353" r="8" fill="#cf8069"/>
+    <circle cx="600" cy="353" r="8" fill="#e9bd77"/>
+    <text x="136" y="380" fill="#8a7f88" font-family="Arial, sans-serif" font-size="14">bedtime</text>
+    <text x="548" y="380" fill="#8a7f88" font-family="Arial, sans-serif" font-size="14">morning</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="44" y="420" width="632" height="154" rx="24" fill="#fffdf9"/>
+    <circle cx="94" cy="472" r="26" fill="#d8e3d5"/>
+    <text x="94" y="479" text-anchor="middle" fill="#4e715b" font-family="Arial, sans-serif" font-size="20" font-weight="700">2</text>
+    <text x="136" y="463" fill="#302e3b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Find each night’s longest block</text>
+    <text x="136" y="494" fill="#68616e" font-family="Arial, sans-serif" font-size="17">Logged awake time separates one sleep block from the next.</text>
+    <rect x="136" y="522" width="195" height="16" rx="8" fill="#65729c"/>
+    <rect x="341" y="522" width="45" height="16" rx="8" fill="#d99079"/>
+    <rect x="396" y="522" width="142" height="16" rx="8" fill="#9483ae"/>
+    <rect x="548" y="522" width="72" height="16" rx="8" fill="#d7c8dc"/>
+    <text x="136" y="557" fill="#6c6470" font-family="Arial, sans-serif" font-size="14">longest unbroken sleep</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="44" y="596" width="632" height="190" rx="24" fill="#fffdf9"/>
+    <circle cx="94" cy="648" r="26" fill="#ddd3ea"/>
+    <text x="94" y="655" text-anchor="middle" fill="#675381" font-family="Arial, sans-serif" font-size="20" font-weight="700">3</text>
+    <text x="136" y="639" fill="#302e3b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Compare the middle, not one night</text>
+    <text x="136" y="670" fill="#68616e" font-family="Arial, sans-serif" font-size="17">Up to 14 recent complete nights vs up to 14 before.</text>
+    <text x="136" y="718" fill="#8a7f88" font-family="Arial, sans-serif" font-size="15" font-weight="700">EARLIER MEDIAN</text>
+    <text x="337" y="718" fill="#302e3b" font-family="Georgia, serif" font-size="30" font-weight="700">5h 10m</text>
+    <path d="M445 708h39" stroke="#bf735f" stroke-width="3" stroke-linecap="round"/>
+    <path d="m475 699 10 9-10 9" fill="none" stroke="#bf735f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="501" y="718" fill="#8a7f88" font-family="Arial, sans-serif" font-size="15" font-weight="700">RECENT</text>
+    <text x="501" y="755" fill="#a55542" font-family="Georgia, serif" font-size="30" font-weight="700">4h 05m</text>
+    <text x="136" y="756" fill="#68616e" font-family="Arial, sans-serif" font-size="16">Medians soften one-off rough nights.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="44" y="808" width="632" height="134" rx="24" fill="#2c344e"/>
+    <circle cx="94" cy="859" r="26" fill="#f0c985"/>
+    <text x="94" y="866" text-anchor="middle" fill="#4b3b2b" font-family="Arial, sans-serif" font-size="20" font-weight="700">4</text>
+    <text x="136" y="851" fill="#fffaf4" font-family="Arial, sans-serif" font-size="22" font-weight="700">Speak only when the signal is clear</text>
+    <text x="136" y="882" fill="#ddd9e5" font-family="Arial, sans-serif" font-size="17">14 recent nights + at least 5 earlier (19+ total)</text>
+    <text x="136" y="912" fill="#f0c985" font-family="Arial, sans-serif" font-size="18" font-weight="700">and a recent median drop of 45+ minutes</text>
+  </g>
+
+  <text x="360" y="984" text-anchor="middle" fill="#3d3945" font-family="Arial, sans-serif" font-size="17" font-weight="700">It notices direction. It does not diagnose the cause.</text>
+  <text x="360" y="1013" text-anchor="middle" fill="#746c77" font-family="Arial, sans-serif" font-size="15">Not measured: illness · hunger · pain · sleep need · parenting</text>
+</svg>

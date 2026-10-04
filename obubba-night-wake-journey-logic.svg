@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1080" viewBox="0 0 640 1080" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba decides a night-wake journey is worth celebrating</title>
+  <desc id="desc">A vertical mobile-first flow showing a 21-day minimum span, early and recent non-overlapping windows, three bedtime nights on each side, and both a 0.4 wake and 20 percent reduction before the progress card appears.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101936"/>
+      <stop offset="1" stop-color="#281e4d"/>
+    </linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7fd893"/>
+      <stop offset="1" stop-color="#edc875"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#080c1e" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="640" height="1080" rx="32" fill="url(#bg)"/>
+  <circle cx="566" cy="78" r="78" fill="#7656d9" opacity=".13"/>
+  <circle cx="72" cy="1016" r="110" fill="#edc875" opacity=".08"/>
+
+  <text x="54" y="70" fill="#edc875" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">OBUBBA SLEEP INTELLIGENCE</text>
+  <text x="54" y="113" fill="#fffaf0" font-family="Georgia, serif" font-size="31" font-weight="700">When progress earns</text>
+  <text x="54" y="151" fill="#fffaf0" font-family="Georgia, serif" font-size="31" font-weight="700">a celebration</text>
+  <text x="54" y="185" fill="#c9cbe0" font-family="Arial, sans-serif" font-size="16">Each baby is compared only with their own history.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="222" width="556" height="126" rx="22" fill="#1b2850" stroke="#6e78a5" stroke-opacity=".55"/>
+    <circle cx="94" cy="285" r="28" fill="#7656d9"/>
+    <text x="94" y="294" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="23">1</text>
+    <text x="140" y="270" fill="#fffaf0" font-family="Arial, sans-serif" font-size="20" font-weight="700">A real history</text>
+    <text x="140" y="299" fill="#c9cbe0" font-family="Arial, sans-serif" font-size="16">First and last bedtime nights span</text>
+    <text x="140" y="325" fill="#edc875" font-family="Arial, sans-serif" font-size="18" font-weight="700">at least 21 calendar days</text>
+  </g>
+
+  <path d="M320 348v34" stroke="#878daf" stroke-width="3" stroke-linecap="round"/>
+  <path d="M312 374l8 10 8-10" fill="none" stroke="#878daf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="391" width="556" height="212" rx="22" fill="#1b2850" stroke="#6e78a5" stroke-opacity=".55"/>
+    <circle cx="94" cy="454" r="28" fill="#7656d9"/>
+    <text x="94" y="463" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="23">2</text>
+    <text x="140" y="441" fill="#fffaf0" font-family="Arial, sans-serif" font-size="20" font-weight="700">Two clean windows</text>
+    <text x="140" y="470" fill="#c9cbe0" font-family="Arial, sans-serif" font-size="16">Early and recent groups never overlap</text>
+    <rect x="70" y="511" width="230" height="62" rx="14" fill="#332962"/>
+    <text x="91" y="536" fill="#c9cbe0" font-family="Arial, sans-serif" font-size="13" font-weight="700">EARLY</text>
+    <text x="91" y="559" fill="#fffaf0" font-family="Arial, sans-serif" font-size="17" font-weight="700">≥ 3 bedtime nights</text>
+    <rect x="340" y="511" width="230" height="62" rx="14" fill="#244a4b"/>
+    <text x="361" y="536" fill="#a9d9c7" font-family="Arial, sans-serif" font-size="13" font-weight="700">RECENT</text>
+    <text x="361" y="559" fill="#fffaf0" font-family="Arial, sans-serif" font-size="17" font-weight="700">≥ 3 bedtime nights</text>
+  </g>
+
+  <path d="M320 603v34" stroke="#878daf" stroke-width="3" stroke-linecap="round"/>
+  <path d="M312 629l8 10 8-10" fill="none" stroke="#878daf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="647" width="556" height="205" rx="22" fill="#1b2850" stroke="#6e78a5" stroke-opacity=".55"/>
+    <circle cx="94" cy="710" r="28" fill="#7656d9"/>
+    <text x="94" y="719" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="23">3</text>
+    <text x="140" y="697" fill="#fffaf0" font-family="Arial, sans-serif" font-size="20" font-weight="700">A meaningful fall in wakes</text>
+    <text x="140" y="726" fill="#c9cbe0" font-family="Arial, sans-serif" font-size="16">Both guardrails must pass</text>
+    <rect x="70" y="765" width="230" height="57" rx="14" fill="#2b365f"/>
+    <text x="185" y="800" text-anchor="middle" fill="#fffaf0" font-family="Arial, sans-serif" font-size="18" font-weight="700">≥ 0.4 fewer / night</text>
+    <text x="320" y="800" text-anchor="middle" fill="#edc875" font-family="Arial, sans-serif" font-size="21" font-weight="700">+</text>
+    <rect x="340" y="765" width="230" height="57" rx="14" fill="#2b365f"/>
+    <text x="455" y="800" text-anchor="middle" fill="#fffaf0" font-family="Arial, sans-serif" font-size="18" font-weight="700">≥ 20% lower</text>
+  </g>
+
+  <path d="M320 852v34" stroke="#9ac9a8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M312 878l8 10 8-10" fill="none" stroke="#9ac9a8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="895" width="556" height="135" rx="24" fill="url(#win)"/>
+    <text x="72" y="932" fill="#193328" font-family="Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="1.5">LOOK HOW FAR YOU’VE COME</text>
+    <text x="72" y="970" fill="#132820" font-family="Georgia, serif" font-size="26" font-weight="700">3.0  →  1.0 wakes a night</text>
+    <text x="72" y="1002" fill="#1e4937" font-family="Arial, sans-serif" font-size="17" font-weight="700">67% fewer · flat or harder trends stay quiet</text>
+  </g>
+  <text x="320" y="1059" text-anchor="middle" fill="#aeb1cd" font-family="Arial, sans-serif" font-size="13">A personal pattern, not a sleep grade or prediction.</text>
+</svg>

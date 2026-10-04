@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1180" viewBox="0 0 960 1180" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba decides that the longest sleep stretch is growing</title>
+  <desc id="desc">A confidence ladder from complete nights to early and mature median comparisons. The graphic explains the 30-minute growth threshold, the 45-minute shortening threshold, and the detector's limits.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fbf5ed"/><stop offset="1" stop-color="#eee9f7"/></linearGradient>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#122c55"/><stop offset="1" stop-color="#35275f"/></linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f28e7d"/><stop offset="1" stop-color="#efc86f"/></linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="10" flood-color="#332c45" flood-opacity=".11"/></filter>
+    <style>
+      .eyebrow{font:700 17px Arial,sans-serif;letter-spacing:2px;fill:#9f594c}.head{font:700 44px Georgia,serif;fill:#292a3b}.sub{font:19px Arial,sans-serif;fill:#686272}.label{font:700 15px Arial,sans-serif;letter-spacing:1px;fill:#746b7a}.step{font:700 24px Arial,sans-serif;fill:#2c2d3d}.body{font:18px Arial,sans-serif;fill:#676170}.white{fill:#fffaf3}.small{font:16px Arial,sans-serif}.number{font:700 20px Arial,sans-serif;fill:#5d4a73}.pill{font:700 16px Arial,sans-serif}.foot{font:700 17px Arial,sans-serif;fill:#444050}
+    </style>
+  </defs>
+  <rect width="960" height="1180" rx="38" fill="url(#bg)"/>
+  <circle cx="868" cy="92" r="90" fill="#d9c8ed" opacity=".48"/><circle cx="82" cy="1092" r="124" fill="#cfe0d1" opacity=".55"/>
+  <text x="68" y="78" class="eyebrow">THE FLUTTER CONFIDENCE LADDER</text>
+  <text x="68" y="137" class="head">A growing stretch earns its glow.</text>
+  <text x="68" y="178" class="sub">Not from one lucky night—from the middle of a pattern.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="220" width="852" height="154" rx="27" fill="#fffdf9"/>
+    <circle cx="108" cy="273" r="28" fill="#e5d8ef"/><text x="108" y="280" text-anchor="middle" class="number">1</text>
+    <text x="153" y="266" class="step">Keep only complete nights</text>
+    <text x="153" y="298" class="body">Both bedtime and morning wake must be present.</text>
+    <line x1="154" y1="333" x2="790" y2="333" stroke="#283a67" stroke-width="13" stroke-linecap="round"/>
+    <circle cx="154" cy="333" r="9" fill="#ef927d"/><circle cx="790" cy="333" r="9" fill="#efc86f"/>
+    <text x="154" y="358" class="label">BEDTIME</text><text x="704" y="358" class="label">MORNING</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="400" width="852" height="164" rx="27" fill="#fffdf9"/>
+    <circle cx="108" cy="454" r="28" fill="#d8e4d9"/><text x="108" y="461" text-anchor="middle" class="number">2</text>
+    <text x="153" y="447" class="step">Measure every unbroken sleep block</text>
+    <text x="153" y="479" class="body">Logged awake intervals separate the blocks; the longest wins.</text>
+    <rect x="153" y="516" width="244" height="18" rx="9" fill="#6876a7"/><rect x="409" y="516" width="78" height="18" rx="9" fill="#ef9a86"/>
+    <rect x="499" y="516" width="176" height="18" rx="9" fill="#9b86bd"/><rect x="687" y="516" width="110" height="18" rx="9" fill="#d8cfe3"/>
+    <text x="153" y="551" class="label">LONGEST BLOCK</text><text x="424" y="551" class="label">AWAKE</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="590" width="402" height="292" rx="27" fill="#fffdf9"/>
+    <rect x="76" y="614" width="118" height="31" rx="15" fill="#e9ddf5"/><text x="135" y="635" text-anchor="middle" class="pill" fill="#644e80">EARLY READ</text>
+    <text x="82" y="688" class="step">6–18 valid nights</text>
+    <text x="82" y="725" class="body">Split into equal recent</text><text x="82" y="751" class="body">and earlier halves.</text>
+    <text x="82" y="798" class="label">NEEDS BOTH</text>
+    <text x="82" y="832" class="step" fill="#397162">+30 min</text>
+    <text x="228" y="832" class="body">and recent</text>
+    <text x="82" y="860" class="body">median of at least 2 hours.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="504" y="590" width="402" height="292" rx="27" fill="#fffdf9"/>
+    <rect x="526" y="614" width="141" height="31" rx="15" fill="#d8e4f2"/><text x="596" y="635" text-anchor="middle" class="pill" fill="#365778">MATURE READ</text>
+    <text x="532" y="688" class="step">19–28 valid nights</text>
+    <text x="532" y="725" class="body">Up to 14 recent vs up to</text><text x="532" y="751" class="body">14 earlier; at least 5 each.</text>
+    <text x="532" y="798" class="label">COMPARE MEDIANS</text>
+    <text x="532" y="832" class="step" fill="#397162">+30 min</text>
+    <text x="532" y="860" class="body">earns the growing card.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="908" width="852" height="148" rx="27" fill="url(#night)"/>
+    <text x="82" y="946" class="label white">THE QUIET ZONE IS PART OF THE DESIGN</text>
+    <rect x="82" y="972" width="242" height="52" rx="26" fill="#8a789d"/><text x="203" y="1005" text-anchor="middle" class="pill white">−45 min → shortened</text>
+    <rect x="346" y="972" width="235" height="52" rx="26" fill="#4a5270"/><text x="463" y="1005" text-anchor="middle" class="pill white">−44 to +29 → quiet</text>
+    <rect x="603" y="972" width="275" height="52" rx="26" fill="url(#win)"/><text x="740" y="1005" text-anchor="middle" class="pill" fill="#34271f">+30 min → growing</text>
+  </g>
+
+  <text x="480" y="1104" text-anchor="middle" class="foot">Valid nights are not always consecutive calendar nights.</text>
+  <text x="480" y="1135" text-anchor="middle" class="sub">The median resists one rough night. It does not prove the cause.</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1450" viewBox="0 0 1200 1450" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba detects growing awake stamina</title>
+  <desc id="desc">A three-step visual explaining the first wake window measurement, the comparison of two calendar fortnights, and the dual 20 minute and 15 percent threshold.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fcf8f1"/>
+      <stop offset="1" stop-color="#f1ebf9"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#172340" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1450" rx="44" fill="url(#bg)"/>
+  <circle cx="1070" cy="105" r="170" fill="#e8def4" opacity=".72"/>
+  <circle cx="80" cy="1325" r="190" fill="#dcecdf" opacity=".70"/>
+
+  <text x="80" y="90" fill="#172340" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="3">AWAKE STAMINA IS GROWING</text>
+  <text x="80" y="158" fill="#172340" font-family="Georgia, serif" font-size="53" font-weight="700">Two fortnights.</text>
+  <text x="80" y="218" fill="#172340" font-family="Georgia, serif" font-size="53" font-weight="700">One careful trend.</text>
+
+  <g filter="url(#shadow)"><rect x="70" y="275" width="1060" height="275" rx="34" fill="#ffffff"/></g>
+  <circle cx="140" cy="350" r="42" fill="#172340"/>
+  <text x="140" y="361" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="30" font-weight="700">1</text>
+  <text x="210" y="340" fill="#172340" font-family="Arial" font-size="29" font-weight="700">MEASURE ONE MORNING</text>
+  <text x="210" y="386" fill="#536078" font-family="Arial" font-size="25">earliest non-night wake</text>
+  <path d="M495 378h118" stroke="#a984d0" stroke-width="9" stroke-linecap="round"/>
+  <path d="M597 360l23 18-23 18" fill="none" stroke="#a984d0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="650" y="386" fill="#536078" font-family="Arial" font-size="25">first completed nap</text>
+  <rect x="210" y="430" width="560" height="72" rx="22" fill="#f5efe4"/>
+  <text x="490" y="476" text-anchor="middle" fill="#655741" font-family="Arial" font-size="26" font-weight="700">keep gaps from 45 min to 7 hours</text>
+
+  <g filter="url(#shadow)"><rect x="70" y="590" width="1060" height="455" rx="34" fill="#ffffff"/></g>
+  <circle cx="140" cy="665" r="42" fill="#172340"/>
+  <text x="140" y="676" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="30" font-weight="700">2</text>
+  <text x="210" y="655" fill="#172340" font-family="Arial" font-size="29" font-weight="700">COMPARE CALENDAR FORTNIGHTS</text>
+  <text x="210" y="701" fill="#536078" font-family="Arial" font-size="24">Missing mornings remain gaps—not zeroes.</text>
+
+  <text x="150" y="780" fill="#74558f" font-family="Arial" font-size="25" font-weight="700">PRIOR · DAYS 14–27</text>
+  <g fill="#e5d8f2">
+    <circle cx="170" cy="835" r="22"/><circle cx="225" cy="835" r="22"/><circle cx="280" cy="835" r="22"/><circle cx="335" cy="835" r="22"/><circle cx="390" cy="835" r="22"/><circle cx="445" cy="835" r="22"/><circle cx="500" cy="835" r="22"/>
+    <circle cx="170" cy="890" r="22"/><circle cx="225" cy="890" r="22"/><circle cx="280" cy="890" r="22"/><circle cx="335" cy="890" r="22"/><circle cx="390" cy="890" r="22"/><circle cx="445" cy="890" r="22"/><circle cx="500" cy="890" r="22"/>
+  </g>
+  <path d="M555 858h82" stroke="#d2b9e8" stroke-width="9" stroke-linecap="round"/>
+  <path d="M621 840l23 18-23 18" fill="none" stroke="#d2b9e8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="685" y="780" fill="#376147" font-family="Arial" font-size="25" font-weight="700">RECENT · DAYS 0–13</text>
+  <g fill="#cfe5d5">
+    <circle cx="705" cy="835" r="22"/><circle cx="760" cy="835" r="22"/><circle cx="815" cy="835" r="22"/><circle cx="870" cy="835" r="22"/><circle cx="925" cy="835" r="22"/><circle cx="980" cy="835" r="22"/><circle cx="1035" cy="835" r="22"/>
+    <circle cx="705" cy="890" r="22"/><circle cx="760" cy="890" r="22"/><circle cx="815" cy="890" r="22"/><circle cx="870" cy="890" r="22"/><circle cx="925" cy="890" r="22"/><circle cx="980" cy="890" r="22"/><circle cx="1035" cy="890" r="22"/>
+  </g>
+  <text x="150" y="967" fill="#536078" font-family="Arial" font-size="25">Need at least 5 usable days in each group.</text>
+  <text x="150" y="1008" fill="#536078" font-family="Arial" font-size="25">Sort each side and choose its middle logged value.</text>
+
+  <g filter="url(#shadow)"><rect x="70" y="1085" width="1060" height="255" rx="34" fill="#172340"/></g>
+  <circle cx="140" cy="1160" r="42" fill="#d7b46d"/>
+  <text x="140" y="1171" text-anchor="middle" fill="#172340" font-family="Arial" font-size="30" font-weight="700">3</text>
+  <text x="210" y="1150" fill="#ffffff" font-family="Arial" font-size="28" font-weight="700">BOTH CHANGE GATES MUST PASS</text>
+  <rect x="210" y="1192" width="285" height="62" rx="31" fill="#a984d0"/>
+  <text x="352" y="1232" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="27" font-weight="700">+20 minutes</text>
+  <text x="520" y="1232" fill="#ffffff" font-family="Arial" font-size="26" font-weight="700">AND</text>
+  <rect x="590" y="1192" width="250" height="62" rx="31" fill="#8fbd9e"/>
+  <text x="715" y="1232" text-anchor="middle" fill="#172340" font-family="Arial" font-size="27" font-weight="700">+15 percent</text>
+  <text x="210" y="1305" fill="#f2d99f" font-family="Georgia" font-size="29" font-weight="700">Timing shows direction—not comfort or cause.</text>
+
+  <text x="80" y="1404" fill="#536078" font-family="Arial" font-size="22">Age gate: 8–78 weeks · positive lengthening only · low urgency</text>
+</svg>

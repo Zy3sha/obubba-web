@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Four OBubba sleep systems become one calm answer</title>
+  <desc id="desc">A priority funnel shows disruption first, then an active plan, a multi-day consultation and last night. The first live tier supplies one action; lower items stay on the radar. If no tier is live, nothing changes tonight.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111a3c"/>
+      <stop offset="1" stop-color="#362d5d"/>
+    </linearGradient>
+    <linearGradient id="funnel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3a08c"/>
+      <stop offset=".34" stop-color="#c39ee8"/>
+      <stop offset=".7" stop-color="#8e77cf"/>
+      <stop offset="1" stop-color="#6e5bb4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#070b20" flood-opacity=".32"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="1500" rx="48" fill="url(#bg)"/>
+  <circle cx="910" cy="95" r="180" fill="#b99ee4" opacity=".12"/>
+  <circle cx="80" cy="1435" r="220" fill="#f08e79" opacity=".09"/>
+
+  <text x="70" y="104" fill="#faf7ff" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="800">Four systems. One calm answer.</text>
+  <text x="70" y="158" fill="#d7d0ec" font-family="Inter, Arial, sans-serif" font-size="28">The first live tier leads. Everything below waits.</text>
+
+  <g filter="url(#shadow)">
+    <path d="M90 230 H910 L825 980 H175 Z" fill="#ffffff" opacity=".08" stroke="#d8cdf4" stroke-width="2"/>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="120" y="265" width="760" height="150" rx="30" fill="#fff2ee"/>
+    <circle cx="176" cy="340" r="36" fill="#dd6651"/>
+    <text x="176" y="351" text-anchor="middle" fill="white" font-size="30" font-weight="800">1</text>
+    <text x="235" y="326" fill="#59271f" font-size="38" font-weight="800">Disrupted week?</text>
+    <text x="235" y="371" fill="#774941" font-size="28">Hold optional changes. Steady + comfort.</text>
+
+    <rect x="152" y="444" width="696" height="150" rx="30" fill="#f6efff"/>
+    <circle cx="208" cy="519" r="36" fill="#a27bd1"/>
+    <text x="208" y="530" text-anchor="middle" fill="white" font-size="30" font-weight="800">2</text>
+    <text x="267" y="505" fill="#30214d" font-size="38" font-weight="800">Plan already active?</text>
+    <text x="267" y="550" fill="#625273" font-size="28">Repeat its one step. Protect the test.</text>
+
+    <rect x="184" y="623" width="632" height="150" rx="30" fill="#f3f0fc"/>
+    <circle cx="240" cy="698" r="36" fill="#836bc2"/>
+    <text x="240" y="709" text-anchor="middle" fill="white" font-size="30" font-weight="800">3</text>
+    <text x="299" y="684" fill="#272144" font-size="36" font-weight="800">Longer pattern ready?</text>
+    <text x="299" y="729" fill="#5b5672" font-size="27">Use the strongest ranked finding.</text>
+
+    <rect x="216" y="802" width="568" height="150" rx="30" fill="#eeebf9"/>
+    <circle cx="272" cy="877" r="36" fill="#6553a8"/>
+    <text x="272" y="888" text-anchor="middle" fill="white" font-size="30" font-weight="800">4</text>
+    <text x="331" y="863" fill="#24203d" font-size="36" font-weight="800">Only last night?</text>
+    <text x="331" y="908" fill="#59556f" font-size="27">Offer one small nudge.</text>
+  </g>
+
+  <path d="M500 952 V1040" stroke="#c5b2ef" stroke-width="8" stroke-linecap="round"/>
+  <path d="M470 1012 L500 1045 L530 1012" fill="none" stroke="#c5b2ef" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="142" y="1050" width="716" height="190" rx="42" fill="url(#funnel)"/>
+    <circle cx="225" cy="1145" r="48" fill="#ffffff" opacity=".22"/>
+    <path d="M225 1116 A29 29 0 1 0 253 1153 A24 24 0 0 1 225 1116Z" fill="#fffaf5"/>
+    <text x="306" y="1127" fill="#1d1737" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="750">TONIGHT, IN ONE GLANCE</text>
+    <text x="306" y="1180" fill="#17122d" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="850">One understandable action</text>
+  </g>
+
+  <rect x="142" y="1270" width="716" height="94" rx="28" fill="#ffffff" opacity=".10" stroke="#d8cdf4" stroke-width="2"/>
+  <text x="500" y="1307" text-anchor="middle" fill="#f7f2ff" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="760">Lower-priority observations stay on the radar</text>
+  <text x="500" y="1341" text-anchor="middle" fill="#cec5e6" font-family="Inter, Arial, sans-serif" font-size="23">Deferred, not forgotten.</text>
+
+  <text x="500" y="1415" text-anchor="middle" fill="#f5b7a7" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Nothing live? “Nothing to change tonight.”</text>
+  <text x="500" y="1453" text-anchor="middle" fill="#d2cae7" font-family="Inter, Arial, sans-serif" font-size="23">A quiet answer is still an answer.</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba detects a nap settling-time trend</title>
+  <desc id="desc">A diagram showing the four settle-time buttons and stored values, the ten-calendar-day scan, the comparison of three recent logged days with older logged days, and the different gates for slower and easier settling.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffaf5"/><stop offset="1" stop-color="#f0edf8"/></linearGradient>
+    <linearGradient id="peach" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4aa98"/><stop offset="1" stop-color="#da7d7a"/></linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#cbe9df"/><stop offset="1" stop-color="#8fc8b8"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#604c56" flood-opacity=".12"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#b18a79"/></marker>
+  </defs>
+  <rect width="1200" height="820" rx="40" fill="url(#bg)"/>
+  <circle cx="1102" cy="85" r="120" fill="#eadff2" opacity=".65"/><circle cx="70" cy="760" r="135" fill="#fae0d8" opacity=".72"/>
+  <g font-family="Arial,sans-serif">
+    <text x="64" y="72" fill="#2d2528" font-family="Georgia,serif" font-size="42" font-weight="700">What “taking longer” actually reads</text>
+    <text x="64" y="108" fill="#74666c" font-size="19">A trend from parent-chosen nap estimates—not a hidden stopwatch.</text>
+
+    <g filter="url(#shadow)">
+      <rect x="54" y="150" width="1092" height="150" rx="28" fill="#fff"/>
+    </g>
+    <text x="82" y="187" fill="#a4645d" font-size="14" font-weight="700" letter-spacing="2">1 · LOG ONE SETTLE-TIME BUCKET</text>
+    <g transform="translate(82 208)" text-anchor="middle">
+      <g><rect width="230" height="64" rx="18" fill="#fbefec"/><text x="115" y="27" fill="#2d2528" font-size="17" font-weight="700">Under 5m</text><text x="115" y="50" fill="#a4645d" font-size="14">stored as 3</text></g>
+      <g transform="translate(252)"><rect width="230" height="64" rx="18" fill="#faf3e2"/><text x="115" y="27" fill="#2d2528" font-size="17" font-weight="700">5–15m</text><text x="115" y="50" fill="#8b6a29" font-size="14">stored as 10</text></g>
+      <g transform="translate(504)"><rect width="230" height="64" rx="18" fill="#f1ecf7"/><text x="115" y="27" fill="#2d2528" font-size="17" font-weight="700">15–30m</text><text x="115" y="50" fill="#765d86" font-size="14">stored as 22</text></g>
+      <g transform="translate(756)"><rect width="230" height="64" rx="18" fill="#e9f5f1"/><text x="115" y="27" fill="#2d2528" font-size="17" font-weight="700">30m+</text><text x="115" y="50" fill="#4e7d72" font-size="14">stored as 40</text></g>
+    </g>
+
+    <path d="M600 308v38" stroke="#b18a79" stroke-width="4" marker-end="url(#arrow)"/>
+    <g filter="url(#shadow)"><rect x="54" y="358" width="1092" height="172" rx="28" fill="#fff"/></g>
+    <text x="82" y="395" fill="#8b6a29" font-size="14" font-weight="700" letter-spacing="2">2 · SCAN 10 CALENDAR DAYS</text>
+    <g transform="translate(82 420)">
+      <g font-size="13" text-anchor="middle">
+        <g><circle cx="30" cy="30" r="29" fill="#f4aa98"/><text x="30" y="26" fill="#fff" font-weight="700">30</text><text x="30" y="43" fill="#fff">today</text></g>
+        <g transform="translate(78)"><circle cx="30" cy="30" r="29" fill="#eda18f"/><text x="30" y="26" fill="#fff" font-weight="700">26</text><text x="30" y="43" fill="#fff">-1d</text></g>
+        <g transform="translate(156)"><circle cx="30" cy="30" r="29" fill="#e58f84"/><text x="30" y="26" fill="#fff" font-weight="700">22</text><text x="30" y="43" fill="#fff">-2d</text></g>
+        <g transform="translate(234)"><circle cx="30" cy="30" r="29" fill="#e8e1e5"/><text x="30" y="26" fill="#8c7c82" font-weight="700">—</text><text x="30" y="43" fill="#8c7c82">-3d</text></g>
+        <g transform="translate(312)"><circle cx="30" cy="30" r="29" fill="#ead8ad"/><text x="30" y="26" fill="#665025" font-weight="700">12</text><text x="30" y="43" fill="#665025">-4d</text></g>
+        <g transform="translate(390)"><circle cx="30" cy="30" r="29" fill="#ead8ad"/><text x="30" y="26" fill="#665025" font-weight="700">11</text><text x="30" y="43" fill="#665025">-5d</text></g>
+        <g transform="translate(468)"><circle cx="30" cy="30" r="29" fill="#ead8ad"/><text x="30" y="26" fill="#665025" font-weight="700">10</text><text x="30" y="43" fill="#665025">-6d</text></g>
+        <g transform="translate(546)"><circle cx="30" cy="30" r="29" fill="#e8e1e5"/><text x="30" y="26" fill="#8c7c82" font-weight="700">—</text><text x="30" y="43" fill="#8c7c82">-7d</text></g>
+        <g transform="translate(624)"><circle cx="30" cy="30" r="29" fill="#ead8ad"/><text x="30" y="26" fill="#665025" font-weight="700">10</text><text x="30" y="43" fill="#665025">-8d</text></g>
+        <g transform="translate(702)"><circle cx="30" cy="30" r="29" fill="#e8e1e5"/><text x="30" y="26" fill="#8c7c82" font-weight="700">—</text><text x="30" y="43" fill="#8c7c82">-9d</text></g>
+      </g>
+      <rect x="810" y="0" width="210" height="61" rx="18" fill="#f6f2f5"/>
+      <text x="915" y="25" text-anchor="middle" fill="#2d2528" font-size="15" font-weight="700">Blank day stays blank</text>
+      <text x="915" y="46" text-anchor="middle" fill="#74666c" font-size="13">its calendar gap is kept</text>
+      <text x="0" y="93" fill="#74666c" font-size="15">Each circle is that day’s average across qualifying daytime naps. At least four filled days are required.</text>
+    </g>
+
+    <path d="M600 538v36" stroke="#b18a79" stroke-width="4" marker-end="url(#arrow)"/>
+    <g filter="url(#shadow)">
+      <rect x="54" y="586" width="528" height="174" rx="28" fill="#fff"/>
+      <rect x="618" y="586" width="528" height="174" rx="28" fill="#fff"/>
+    </g>
+    <g transform="translate(82 616)">
+      <rect width="54" height="27" rx="14" fill="url(#peach)"/><text x="27" y="19" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">SLOWER</text>
+      <text x="0" y="67" fill="#2d2528" font-size="19" font-weight="700">Recent 3 mean ≥ older mean + 3m</text>
+      <text x="0" y="98" fill="#2d2528" font-size="17">AND two adjacent daily rises &gt; 1m</text>
+      <text x="0" y="131" fill="#a4645d" font-size="14" font-weight="700">A calendar gap breaks the worsening run.</text>
+    </g>
+    <g transform="translate(646 616)">
+      <rect width="52" height="27" rx="14" fill="url(#mint)"/><text x="26" y="19" text-anchor="middle" fill="#315f55" font-size="13" font-weight="700">EASIER</text>
+      <text x="0" y="67" fill="#2d2528" font-size="19" font-weight="700">Recent 3 mean ≤ older mean − 3m</text>
+      <text x="0" y="98" fill="#2d2528" font-size="17">No consecutive-day gate</text>
+      <text x="0" y="131" fill="#4e7d72" font-size="14" font-weight="700">Easier is allowed to celebrate sooner.</text>
+    </g>
+    <text x="600" y="797" text-anchor="middle" fill="#74666c" font-size="15">The trend can prove a change in the log—not whether the next nap should move earlier or later.</text>
+  </g>
+</svg>

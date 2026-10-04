@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1050" viewBox="0 0 1200 1050" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba chooses the pregnancy week story</title>
+  <desc id="desc">OBubba starts with the estimated due date on the child profile, calculates completed gestational weeks using date-only arithmetic, opens one of 37 stories from weeks 4 to 40, and lets the parent browse other weeks without changing the true current week. Clinical dating remains with the maternity team.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbf7f2"/>
+      <stop offset="1" stop-color="#f1edf9"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ce9179"/>
+      <stop offset="1" stop-color="#8872bd"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#574b65" flood-opacity=".11"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1050" rx="42" fill="url(#bg)"/>
+  <circle cx="1100" cy="90" r="90" fill="#e6daf2" opacity=".5"/>
+  <circle cx="80" cy="970" r="116" fill="#eed9cf" opacity=".42"/>
+  <text x="68" y="82" fill="#332b3e" font-family="Georgia, serif" font-size="45" font-weight="700">How OBubba chooses “this week”</text>
+  <text x="68" y="126" fill="#675e70" font-family="Inter, Arial, sans-serif" font-size="25">One date drives the countdown, current week and weekly story.</text>
+
+  <path d="M327 354 H431" stroke="url(#line)" stroke-width="9" stroke-linecap="round"/>
+  <path d="M415 337 L439 354 L415 371" fill="none" stroke="#a47fab" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M768 354 H872" stroke="url(#line)" stroke-width="9" stroke-linecap="round"/>
+  <path d="M856 337 L880 354 L856 371" fill="none" stroke="#8872bd" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="52" y="182" width="310" height="344" rx="30" fill="#fff"/>
+    <circle cx="104" cy="234" r="27" fill="#f1d8cd"/>
+    <text x="104" y="244" text-anchor="middle" fill="#6e4c3e" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">1</text>
+    <text x="148" y="244" fill="#332b3e" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Due date</text>
+    <text x="84" y="308" fill="#564e5e" font-family="Inter, Arial, sans-serif" font-size="25">The expected date saved</text>
+    <text x="84" y="344" fill="#564e5e" font-family="Inter, Arial, sans-serif" font-size="25">on the bump profile is the</text>
+    <text x="84" y="380" fill="#564e5e" font-family="Inter, Arial, sans-serif" font-size="25">single calendar anchor.</text>
+    <rect x="84" y="421" width="246" height="62" rx="18" fill="#fbf2ed"/>
+    <text x="207" y="460" text-anchor="middle" fill="#875c4b" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">ESTIMATE, NOT DEADLINE</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="445" y="182" width="310" height="344" rx="30" fill="#fff"/>
+    <circle cx="497" cy="234" r="27" fill="#e2d8f0"/>
+    <text x="497" y="244" text-anchor="middle" fill="#5e4878" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">2</text>
+    <text x="541" y="244" fill="#332b3e" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Date-only maths</text>
+    <text x="477" y="308" fill="#564e5e" font-family="Inter, Arial, sans-serif" font-size="25">Days remaining are counted</text>
+    <text x="477" y="344" fill="#564e5e" font-family="Inter, Arial, sans-serif" font-size="25">at calendar midnight, avoiding</text>
+    <text x="477" y="380" fill="#564e5e" font-family="Inter, Arial, sans-serif" font-size="25">a daylight-saving week flip.</text>
+    <rect x="477" y="421" width="246" height="62" rx="18" fill="#f3eef8"/>
+    <text x="600" y="448" text-anchor="middle" fill="#66517e" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800">COMPLETED WEEKS</text>
+    <text x="600" y="476" text-anchor="middle" fill="#66517e" font-family="Inter, Arial, sans-serif" font-size="20">from a 280-day anchor</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="838" y="182" width="310" height="344" rx="30" fill="#fff"/>
+    <circle cx="890" cy="234" r="27" fill="#dbe8db"/>
+    <text x="890" y="244" text-anchor="middle" fill="#46604a" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">3</text>
+    <text x="934" y="244" fill="#332b3e" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">One story opens</text>
+    <text x="870" y="308" fill="#564e5e" font-family="Inter, Arial, sans-serif" font-size="25">Weeks 4–40 each have</text>
+    <text x="870" y="344" fill="#564e5e" font-family="Inter, Arial, sans-serif" font-size="25">their own artwork, baby</text>
+    <text x="870" y="380" fill="#564e5e" font-family="Inter, Arial, sans-serif" font-size="25">context, body context and</text>
+    <text x="870" y="416" fill="#564e5e" font-family="Inter, Arial, sans-serif" font-size="25">small together moment.</text>
+    <rect x="870" y="450" width="246" height="42" rx="20" fill="#eff6ef"/>
+    <text x="993" y="478" text-anchor="middle" fill="#4e6c53" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800">37 COMPLETE STORIES</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="52" y="586" width="1096" height="202" rx="30" fill="#fff"/>
+    <circle cx="104" cy="638" r="27" fill="#f3dfb7"/>
+    <text x="104" y="648" text-anchor="middle" fill="#785c25" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">4</text>
+    <text x="148" y="648" fill="#332b3e" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="800">Browse ahead without moving “today”</text>
+    <text x="84" y="704" fill="#564e5e" font-family="Inter, Arial, sans-serif" font-size="25">Swipe through weeks 4–40 to explore the journey. OBubba keeps the real current</text>
+    <text x="84" y="741" fill="#564e5e" font-family="Inter, Arial, sans-serif" font-size="25">week separate, so looking at week 36 cannot make a keepsake say baby is nearly here.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="52" y="838" width="1096" height="142" rx="30" fill="#18233f"/>
+    <circle cx="106" cy="909" r="31" fill="#f0bd66"/>
+    <path d="M92 909 l10 10 19-23" fill="none" stroke="#18233f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="158" y="891" fill="#fff8ea" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="800">The boundary that matters</text>
+    <text x="158" y="932" fill="#d8d2e3" font-family="Inter, Arial, sans-serif" font-size="24">OBubba tells a weekly story. Your dating scan and maternity team establish clinical gestation.</text>
+  </g>
+  <text x="600" y="1020" text-anchor="middle" fill="#716879" font-family="Inter, Arial, sans-serif" font-size="20">The chosen storybook baby is a companion, not a prediction of appearance.</text>
+</svg>

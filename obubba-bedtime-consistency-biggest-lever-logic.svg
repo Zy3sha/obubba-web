@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1160" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba finds a bedtime consistency pattern</title>
+  <desc id="desc">A five-step diagram showing fourteen recent nights, at least nine usable bedtimes, a circular usual bedtime, tightest and loosest thirds, two evidence thresholds, and a correlation-not-causation reminder.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07152f"/>
+      <stop offset="0.55" stop-color="#111d46"/>
+      <stop offset="1" stop-color="#291947"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#172850"/>
+      <stop offset="1" stop-color="#1d2148"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#77dfda"/>
+      <stop offset="1" stop-color="#ba8cff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="13" flood-color="#030817" flood-opacity=".35"/>
+    </filter>
+    <style>
+      .eyebrow{font:700 16px Inter,Arial,sans-serif;letter-spacing:2.5px;text-transform:uppercase;fill:#8be2dd}
+      .heading{font:700 38px Georgia,serif;fill:#fffaf4}
+      .sub{font:400 18px Inter,Arial,sans-serif;fill:#c9cee1}
+      .step{font:800 14px Inter,Arial,sans-serif;letter-spacing:1.8px;fill:#8be2dd}
+      .ct{font:700 23px Inter,Arial,sans-serif;fill:#fffaf4}
+      .body{font:400 17px Inter,Arial,sans-serif;fill:#cbd1e3}
+      .small{font:600 15px Inter,Arial,sans-serif;fill:#aeb7d1}
+      .pill{font:800 15px Inter,Arial,sans-serif;fill:#07152f}
+      .num{font:800 22px Inter,Arial,sans-serif;fill:#fff}
+    </style>
+  </defs>
+  <rect width="800" height="1160" rx="42" fill="url(#bg)"/>
+  <circle cx="695" cy="105" r="66" fill="#b98bff" opacity=".08"/>
+  <circle cx="705" cy="95" r="40" fill="none" stroke="#f5ca7b" stroke-width="7" opacity=".9"/>
+  <circle cx="688" cy="78" r="45" fill="#101c43"/>
+  <text x="64" y="74" class="eyebrow">Inside the Flutter logic</text>
+  <text x="64" y="124" class="heading">When does OBubba speak?</text>
+  <text x="64" y="158" class="sub">A pattern must clear every gate below.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="52" y="204" width="696" height="142" rx="24" fill="url(#card)" stroke="#6fd9d4" stroke-opacity=".25"/>
+  </g>
+  <circle cx="94" cy="246" r="22" fill="#62d6d0"/><text x="87" y="254" class="num">1</text>
+  <text x="132" y="240" class="step">COLLECT</text>
+  <text x="132" y="274" class="ct">Up to 14 recent night summaries</text>
+  <text x="132" y="305" class="body">Each contributes bedtime + de-duplicated wake count.</text>
+  <rect x="132" y="317" width="262" height="29" rx="14.5" fill="#8be2dd"/><text x="151" y="337" class="pill">Need ≥9 recorded bedtimes</text>
+
+  <path d="M400 346v34" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M392 373l8 10 8-10" fill="none" stroke="#9ee4df" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="52" y="386" width="696" height="146" rx="24" fill="url(#card)" stroke="#9d81ef" stroke-opacity=".3"/>
+  </g>
+  <circle cx="94" cy="428" r="22" fill="#9877e8"/><text x="87" y="436" class="num">2</text>
+  <text x="132" y="422" class="step">CENTRE THE CLOCK</text>
+  <text x="132" y="456" class="ct">Find the circular “usual bedtime”</text>
+  <text x="132" y="487" class="body">11:50pm and 12:10am stay 20 minutes apart.</text>
+  <g transform="translate(618 459)">
+    <circle r="43" fill="#0c1734" stroke="#d6b2ff" stroke-width="3"/>
+    <path d="M0-31V0l22 12" fill="none" stroke="#f6ce7f" stroke-width="5" stroke-linecap="round"/>
+    <circle r="5" fill="#f6ce7f"/>
+  </g>
+
+  <path d="M400 532v34" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M392 559l8 10 8-10" fill="none" stroke="#9ee4df" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="52" y="572" width="696" height="178" rx="24" fill="url(#card)" stroke="#f2c977" stroke-opacity=".28"/>
+  </g>
+  <circle cx="94" cy="614" r="22" fill="#e4b85e"/><text x="87" y="622" class="num">3</text>
+  <text x="132" y="608" class="step">RANK + SPLIT</text>
+  <text x="132" y="642" class="ct">Compare only the clearest contrasts</text>
+  <rect x="132" y="670" width="223" height="54" rx="16" fill="#173f4b" stroke="#67dbd5" stroke-opacity=".7"/>
+  <text x="153" y="694" class="small">Tightest third</text><text x="153" y="716" class="body">closest to usual</text>
+  <text x="377" y="704" class="ct">vs</text>
+  <rect x="432" y="670" width="245" height="54" rx="16" fill="#392a58" stroke="#b98bff" stroke-opacity=".75"/>
+  <text x="453" y="694" class="small">Loosest third</text><text x="453" y="716" class="body">furthest from usual</text>
+
+  <path d="M400 750v34" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M392 777l8 10 8-10" fill="none" stroke="#9ee4df" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="52" y="790" width="696" height="188" rx="24" fill="url(#card)" stroke="#ef8299" stroke-opacity=".3"/>
+  </g>
+  <circle cx="94" cy="832" r="22" fill="#e37691"/><text x="87" y="840" class="num">4</text>
+  <text x="132" y="826" class="step">CLEAR TWO THRESHOLDS</text>
+  <text x="132" y="860" class="ct">Timing contrast and wake payoff</text>
+  <rect x="132" y="886" width="255" height="58" rx="17" fill="#172f48"/>
+  <text x="153" y="910" class="small">Average deviation gap</text>
+  <text x="153" y="934" class="ct">≥ 30 minutes</text>
+  <rect x="408" y="886" width="269" height="58" rx="17" fill="#332747"/>
+  <text x="429" y="910" class="small">Average wake-count gap</text>
+  <text x="429" y="934" class="ct">≥ 1.0 wake</text>
+
+  <path d="M400 978v34" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M392 1005l8 10 8-10" fill="none" stroke="#9ee4df" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="52" y="1018" width="696" height="96" rx="24" fill="#f8e8c6"/>
+  <text x="82" y="1053" style="font:800 19px Inter,Arial,sans-serif;fill:#412d45">Result: a useful family pattern—not proof of cause</text>
+  <text x="82" y="1083" style="font:500 16px Inter,Arial,sans-serif;fill:#634f66">Test a flexible window; keep naps, feeds and unusual days in view.</text>
+</svg>

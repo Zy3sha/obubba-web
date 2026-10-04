@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1380" viewBox="0 0 900 1380" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba chooses four first tastes</title>
+  <desc id="desc">A four-step diagram showing corrected-age gating, recent food and lifetime reaction filtering, two candidate pools, and an alternating four-food shortlist.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf7"/>
+      <stop offset="0.54" stop-color="#f8f2fb"/>
+      <stop offset="1" stop-color="#edf8f3"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e77778"/>
+      <stop offset="1" stop-color="#f0a07f"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#352947"/>
+      <stop offset="1" stop-color="#51406c"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#372944" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1380" rx="46" fill="url(#bg)"/>
+  <circle cx="782" cy="82" r="102" fill="#f8d6cf" opacity=".78"/>
+  <circle cx="56" cy="1300" r="122" fill="#ddd2fa" opacity=".72"/>
+
+  <text x="64" y="72" fill="#df6e70" font-family="Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="2.1">INSIDE THE FLUTTER APP</text>
+  <text x="64" y="126" fill="#33283f" font-family="Georgia, serif" font-size="48" font-weight="700">How four first tastes</text>
+  <text x="64" y="181" fill="#33283f" font-family="Georgia, serif" font-size="48" font-weight="700">reach the card</text>
+  <text x="64" y="218" fill="#716879" font-family="Arial, sans-serif" font-size="18">A shortlist from recorded facts—not a feeding prescription.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="270" width="792" height="188" rx="28" fill="#ffffff"/>
+  </g>
+  <circle cx="99" cy="317" r="23" fill="#f8d6cf"/>
+  <text x="99" y="325" text-anchor="middle" fill="#b94f59" font-family="Arial, sans-serif" font-size="20" font-weight="800">1</text>
+  <text x="137" y="325" fill="#33283f" font-family="Arial, sans-serif" font-size="24" font-weight="800">Open only when age allows</text>
+  <text x="84" y="371" fill="#6e6476" font-family="Arial, sans-serif" font-size="18">The screen uses corrected whole months.</text>
+  <rect x="84" y="397" width="732" height="39" rx="19.5" fill="#f9eee9"/>
+  <text x="450" y="423" text-anchor="middle" fill="#9d5260" font-family="Arial, sans-serif" font-size="16" font-weight="700">All 34 current catalogue foods begin at about 6 months</text>
+
+  <path d="M450 458 V493" stroke="#cdb7dc" stroke-width="5" stroke-linecap="round"/>
+  <path d="M439 485 L450 499 L461 485" fill="none" stroke="#cdb7dc" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="506" width="792" height="248" rx="28" fill="#ffffff"/>
+  </g>
+  <circle cx="99" cy="553" r="23" fill="#e4d8fb"/>
+  <text x="99" y="561" text-anchor="middle" fill="#67518b" font-family="Arial, sans-serif" font-size="20" font-weight="800">2</text>
+  <text x="137" y="561" fill="#33283f" font-family="Arial, sans-serif" font-size="24" font-weight="800">Remove what should not lead</text>
+
+  <rect x="82" y="596" width="350" height="126" rx="20" fill="#faf7fc" stroke="#ded1eb" stroke-width="2"/>
+  <text x="105" y="630" fill="#705b86" font-family="Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="1">RECENT FOOD NAMES</text>
+  <text x="105" y="666" fill="#44384e" font-family="Arial, sans-serif" font-size="18" font-weight="700">Remove exact-name matches</text>
+  <text x="105" y="698" fill="#716879" font-family="Arial, sans-serif" font-size="15">about 120 days · case-insensitive</text>
+
+  <rect x="468" y="596" width="350" height="126" rx="20" fill="#fff5f3" stroke="#f0c7c2" stroke-width="2"/>
+  <text x="491" y="630" fill="#b4545a" font-family="Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="1">LIFETIME REACTIONS</text>
+  <text x="491" y="666" fill="#44384e" font-family="Arial, sans-serif" font-size="18" font-weight="700">Remove recognised allergens</text>
+  <text x="491" y="698" fill="#716879" font-family="Arial, sans-serif" font-size="15">only when a Reaction was logged</text>
+
+  <path d="M450 754 V789" stroke="#cdb7dc" stroke-width="5" stroke-linecap="round"/>
+  <path d="M439 781 L450 795 L461 781" fill="none" stroke="#cdb7dc" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="802" width="792" height="238" rx="28" fill="url(#ink)"/>
+  </g>
+  <circle cx="99" cy="849" r="23" fill="#f2c78b"/>
+  <text x="99" y="857" text-anchor="middle" fill="#4b385e" font-family="Arial, sans-serif" font-size="20" font-weight="800">3</text>
+  <text x="137" y="857" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="800">Build two candidate pools</text>
+
+  <rect x="82" y="894" width="350" height="114" rx="20" fill="#ffffff" fill-opacity=".12" stroke="#f1c879" stroke-width="2"/>
+  <text x="105" y="929" fill="#f6d590" font-family="Arial, sans-serif" font-size="16" font-weight="800">NEW ALLERGEN</text>
+  <text x="105" y="962" fill="#ffffff" font-family="Arial, sans-serif" font-size="17">One food per unseen group</text>
+  <text x="105" y="989" fill="#ddd5e8" font-family="Arial, sans-serif" font-size="15">iron-labelled choices move up</text>
+
+  <rect x="468" y="894" width="350" height="114" rx="20" fill="#ffffff" fill-opacity=".12" stroke="#9edbc7" stroke-width="2"/>
+  <text x="491" y="929" fill="#abe3d1" font-family="Arial, sans-serif" font-size="16" font-weight="800">VARIETY</text>
+  <text x="491" y="962" fill="#ffffff" font-family="Arial, sans-serif" font-size="17">No allergen, or already introduced</text>
+  <text x="491" y="989" fill="#ddd5e8" font-family="Arial, sans-serif" font-size="15">iron-labelled choices move up</text>
+
+  <path d="M450 1040 V1075" stroke="#cdb7dc" stroke-width="5" stroke-linecap="round"/>
+  <path d="M439 1067 L450 1081 L461 1067" fill="none" stroke="#cdb7dc" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="1088" width="792" height="206" rx="28" fill="#ffffff"/>
+  </g>
+  <circle cx="99" cy="1135" r="23" fill="#d8efe6"/>
+  <text x="99" y="1143" text-anchor="middle" fill="#3b806d" font-family="Arial, sans-serif" font-size="20" font-weight="800">4</text>
+  <text x="137" y="1143" fill="#33283f" font-family="Arial, sans-serif" font-size="24" font-weight="800">Alternate up to four ideas</text>
+
+  <g font-family="Arial, sans-serif" font-size="15" font-weight="800" text-anchor="middle">
+    <rect x="82" y="1182" width="164" height="64" rx="18" fill="#fae4df"/>
+    <text x="164" y="1208" fill="#a74c57">1 · allergen</text><text x="164" y="1229" fill="#796b78" font-size="12">if available</text>
+    <rect x="266" y="1182" width="164" height="64" rx="18" fill="#e6f3ed"/>
+    <text x="348" y="1220" fill="#397867">2 · variety</text>
+    <rect x="450" y="1182" width="164" height="64" rx="18" fill="#fae4df"/>
+    <text x="532" y="1220" fill="#a74c57">3 · allergen</text>
+    <rect x="634" y="1182" width="164" height="64" rx="18" fill="#e6f3ed"/>
+    <text x="716" y="1220" fill="#397867">4 · variety</text>
+  </g>
+
+  <rect x="54" y="1322" width="792" height="32" rx="16" fill="#33283f"/>
+  <text x="450" y="1344" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="13" font-weight="700">Parent checks readiness, the real ingredients, safe preparation and the baby’s plan.</text>
+</svg>

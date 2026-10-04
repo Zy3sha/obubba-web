@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1320" viewBox="0 0 900 1320" role="img" aria-labelledby="title desc">
+  <title id="title">How a baby sleep pattern earns an OBubba insight card</title>
+  <desc id="desc">OBubba pairs each day with the following night, removes disrupted days, requires at least eight nights with data and meaningful comparison groups, then surfaces one strongest tendency. A testable pattern can become a one-change experiment.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fbf6ef"/><stop offset="1" stop-color="#eaf2ef"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#b58a49"/><stop offset="1" stop-color="#597d73"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="9" stdDeviation="13" flood-color="#24383e" flood-opacity=".09"/></filter>
+    <style>
+      .serif{font-family:Georgia,'Times New Roman',serif;fill:#20353d}.sans{font-family:Arial,Helvetica,sans-serif;fill:#586970}.eye{font:700 16px Arial,Helvetica,sans-serif;letter-spacing:3px;fill:#956e31}.step{font:700 16px Arial,Helvetica,sans-serif;letter-spacing:2px;fill:#956e31}.head{font:700 24px Arial,Helvetica,sans-serif;fill:#20353d}.body{font:400 19px Arial,Helvetica,sans-serif;fill:#5b6c72}.small{font:400 17px Arial,Helvetica,sans-serif;fill:#6b7b81}.white{font-family:Arial,Helvetica,sans-serif;fill:#fff}
+    </style>
+  </defs>
+  <rect width="900" height="1320" rx="42" fill="url(#bg)"/>
+  <circle cx="838" cy="65" r="155" fill="#e6d4a7" opacity=".27"/><circle cx="42" cy="1235" r="180" fill="#b8d1ca" opacity=".28"/>
+  <text x="450" y="64" text-anchor="middle" class="eye">BEFORE THE APP SAYS “PATTERN”</text>
+  <text x="450" y="119" text-anchor="middle" class="serif" font-size="42" font-weight="700">A clue has to earn the card.</text>
+  <text x="450" y="158" text-anchor="middle" class="sans" font-size="20">The current Flutter engine uses gates—not a memorable rough night.</text>
+
+  <path d="M140 237H760" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="140" cy="237" r="34" fill="#b58a49"/><circle cx="295" cy="237" r="34" fill="#a58955"/><circle cx="450" cy="237" r="34" fill="#8d8967"/><circle cx="605" cy="237" r="34" fill="#748276"/><circle cx="760" cy="237" r="34" fill="#597d73"/>
+  <text x="140" y="247" text-anchor="middle" class="white" font-size="25" font-weight="700">1</text><text x="295" y="247" text-anchor="middle" class="white" font-size="25" font-weight="700">2</text><text x="450" y="247" text-anchor="middle" class="white" font-size="25" font-weight="700">3</text><text x="605" y="247" text-anchor="middle" class="white" font-size="25" font-weight="700">4</text><text x="760" y="247" text-anchor="middle" class="white" font-size="25" font-weight="700">5</text>
+
+  <g filter="url(#shadow)">
+    <rect x="65" y="302" width="770" height="145" rx="28" fill="#fff"/>
+    <rect x="65" y="469" width="770" height="145" rx="28" fill="#fff"/>
+    <rect x="65" y="636" width="770" height="145" rx="28" fill="#fff"/>
+    <rect x="65" y="803" width="770" height="145" rx="28" fill="#fff"/>
+  </g>
+  <circle cx="133" cy="374" r="37" fill="#f2e7d4"/><path d="M115 356h36v36h-36zM133 356v36M115 374h36" fill="none" stroke="#956e31" stroke-width="5" stroke-linecap="round"/>
+  <text x="193" y="346" class="step">1 · BUILD THE RIGHT UNIT</text>
+  <text x="193" y="383" class="head">One logged day → the night that followed</text>
+  <text x="193" y="416" class="body">Nap timing, day sleep and bedtime stay attached to their outcome.</text>
+
+  <circle cx="133" cy="541" r="37" fill="#f2e8e5"/><path d="m115 541 12 12 24-28" fill="none" stroke="#a36e6c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="193" y="513" class="step">2 · CLEAN THE BASELINE</text>
+  <text x="193" y="550" class="head">Remove disrupted and unusable days</text>
+  <text x="193" y="583" class="body">Sick, fever, travel and childcare context do not define “normal”.</text>
+
+  <circle cx="133" cy="708" r="37" fill="#e8efed"/><text x="133" y="718" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="800" fill="#547b70">8+</text>
+  <text x="193" y="680" class="step">3 + 4 · DEMAND A REAL CONTRAST</text>
+  <text x="193" y="717" class="head">8+ nights · at least 3 on each side</text>
+  <text x="193" y="750" class="body">The average gap must reach 0.7 night wakes before it speaks.</text>
+
+  <circle cx="133" cy="875" r="37" fill="#edf0f5"/><path d="M112 886l16-17 12 10 16-22" fill="none" stroke="#596d88" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="156" cy="857" r="5" fill="#596d88"/>
+  <text x="193" y="847" class="step">5 · RANK, THEN SAY LESS</text>
+  <text x="193" y="884" class="head">Surface the single strongest tendency</text>
+  <text x="193" y="917" class="body">The card shows its real sample size and says “tends to”—not “caused”.</text>
+
+  <path d="M450 949v43" stroke="#bda25e" stroke-width="5" stroke-linecap="round"/><path d="m437 980 13 15 13-15" fill="none" stroke="#bda25e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)"><rect x="65" y="1000" width="770" height="225" rx="30" fill="#203f4a"/></g>
+  <text x="450" y="1044" text-anchor="middle" class="white" font-size="16" font-weight="700" letter-spacing="3">IF THE CLUE HAS ONE SAFE, MEASURABLE LEVER</text>
+  <g transform="translate(105 1082)">
+    <rect width="150" height="75" rx="20" fill="#fff" opacity=".12"/><text x="75" y="31" text-anchor="middle" class="white" font-size="16" font-weight="700">ONE CHANGE</text><text x="75" y="54" text-anchor="middle" class="white" font-size="15">not five tips</text>
+    <path d="M163 38h31" stroke="#d8bf80" stroke-width="4" stroke-linecap="round"/><path d="m184 29 11 9-11 9" fill="none" stroke="#d8bf80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="205" width="200" height="75" rx="20" fill="#fff" opacity=".12"/><text x="305" y="31" text-anchor="middle" class="white" font-size="16" font-weight="700">3 · 7 · 14 NIGHTS</text><text x="305" y="54" text-anchor="middle" class="white" font-size="15">measured checkpoints</text>
+    <path d="M418 38h31" stroke="#d8bf80" stroke-width="4" stroke-linecap="round"/><path d="m439 29 11 9-11 9" fill="none" stroke="#d8bf80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="460" width="225" height="75" rx="20" fill="#fff" opacity=".12"/><text x="572" y="31" text-anchor="middle" class="white" font-size="16" font-weight="700">REMEMBER RESULT</text><text x="572" y="54" text-anchor="middle" class="white" font-size="15">worked · unclear · worse</text>
+  </g>
+  <text x="450" y="1202" text-anchor="middle" class="white" font-size="18">Busy-day and tummy clues stay advice-only; the app does not invent a schedule test.</text>
+
+  <text x="450" y="1274" text-anchor="middle" class="serif" font-size="26" font-weight="700">A pattern is a question worth testing—not a verdict on your baby.</text>
+</svg>

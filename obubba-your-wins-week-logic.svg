@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba decides whether to show Your wins this week</title>
+  <desc id="desc">A two-week comparison leads through three possible evidence paths: night wakes need two nights in each week and a drop of half a wake, day sleep needs two nap days in each week and a rise of twenty minutes, and total sleep needs five complete days in each week and a rise of thirty minutes. Missing logs never count as zero.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071a35"/>
+      <stop offset="0.55" stop-color="#102b4d"/>
+      <stop offset="1" stop-color="#241d48"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173a5d" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#142a4a" stop-opacity="0.98"/>
+    </linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c6b7ff"/>
+      <stop offset="1" stop-color="#f2cf78"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000815" flood-opacity="0.36"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" rx="40" fill="url(#bg)"/>
+  <circle cx="1420" cy="104" r="210" fill="#8a7cff" opacity="0.09"/>
+  <circle cx="138" cy="786" r="260" fill="#f2cf78" opacity="0.06"/>
+
+  <text x="90" y="95" fill="#f7f2ff" font-family="Nunito, Arial, sans-serif" font-size="50" font-weight="800">A win needs two honest weeks</text>
+  <text x="90" y="140" fill="#b9c7db" font-family="Nunito, Arial, sans-serif" font-size="25">Latest 7 calendar days compared with the 7 before—using the same kind of real logs.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="190" width="660" height="114" rx="28" fill="#132f50" stroke="#8a7cff" stroke-width="2"/>
+    <rect x="850" y="190" width="660" height="114" rx="28" fill="#132f50" stroke="#f2cf78" stroke-width="2"/>
+  </g>
+  <text x="130" y="238" fill="#c6b7ff" font-family="Nunito, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="2">THIS WEEK</text>
+  <text x="130" y="276" fill="#ffffff" font-family="Nunito, Arial, sans-serif" font-size="27" font-weight="700">Today + previous 6 days</text>
+  <text x="890" y="238" fill="#f2cf78" font-family="Nunito, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="2">COMPARISON WEEK</text>
+  <text x="890" y="276" fill="#ffffff" font-family="Nunito, Arial, sans-serif" font-size="27" font-weight="700">The 7 days before that</text>
+  <path d="M750 247 H850" stroke="#8293ab" stroke-width="4" stroke-linecap="round" stroke-dasharray="7 12"/>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="350" width="440" height="300" rx="30" fill="url(#card)" stroke="#6fd8c3" stroke-width="2"/>
+    <rect x="580" y="350" width="440" height="300" rx="30" fill="url(#card)" stroke="#9f91ff" stroke-width="2"/>
+    <rect x="1070" y="350" width="440" height="300" rx="30" fill="url(#card)" stroke="#f2cf78" stroke-width="2"/>
+  </g>
+
+  <circle cx="145" cy="408" r="27" fill="#6fd8c3" opacity="0.2"/>
+  <path d="M131 408h28M145 394v28" stroke="#8de8d4" stroke-width="5" stroke-linecap="round"/>
+  <text x="188" y="419" fill="#ffffff" font-family="Nunito, Arial, sans-serif" font-size="31" font-weight="800">Night wakes</text>
+  <text x="130" y="486" fill="#b9c7db" font-family="Nunito, Arial, sans-serif" font-size="24">At least 2 real nights</text>
+  <text x="130" y="521" fill="#b9c7db" font-family="Nunito, Arial, sans-serif" font-size="24">in each week</text>
+  <rect x="130" y="557" width="350" height="58" rx="18" fill="#6fd8c3" opacity="0.14"/>
+  <text x="305" y="594" text-anchor="middle" fill="#9af1df" font-family="Nunito, Arial, sans-serif" font-size="25" font-weight="900">↓ 0.5 wake/night</text>
+
+  <circle cx="635" cy="408" r="27" fill="#9f91ff" opacity="0.2"/>
+  <path d="M621 413c10-24 21-24 29 0 7-15 18-15 26 0" fill="none" stroke="#c6b7ff" stroke-width="5" stroke-linecap="round"/>
+  <text x="678" y="419" fill="#ffffff" font-family="Nunito, Arial, sans-serif" font-size="31" font-weight="800">Day sleep</text>
+  <text x="620" y="486" fill="#b9c7db" font-family="Nunito, Arial, sans-serif" font-size="24">At least 2 nap days</text>
+  <text x="620" y="521" fill="#b9c7db" font-family="Nunito, Arial, sans-serif" font-size="24">in each week</text>
+  <rect x="620" y="557" width="350" height="58" rx="18" fill="#9f91ff" opacity="0.15"/>
+  <text x="795" y="594" text-anchor="middle" fill="#d7cdff" font-family="Nunito, Arial, sans-serif" font-size="25" font-weight="900">↑ 20 min/day</text>
+
+  <circle cx="1125" cy="408" r="27" fill="#f2cf78" opacity="0.18"/>
+  <path d="M1112 410a13 13 0 1 0 26 0 13 13 0 1 0-26 0" fill="none" stroke="#f6db94" stroke-width="5"/>
+  <text x="1168" y="419" fill="#ffffff" font-family="Nunito, Arial, sans-serif" font-size="31" font-weight="800">Total sleep</text>
+  <text x="1110" y="486" fill="#b9c7db" font-family="Nunito, Arial, sans-serif" font-size="24">At least 5 complete</text>
+  <text x="1110" y="521" fill="#b9c7db" font-family="Nunito, Arial, sans-serif" font-size="24">night + nap days each</text>
+  <rect x="1110" y="557" width="350" height="58" rx="18" fill="#f2cf78" opacity="0.14"/>
+  <text x="1285" y="594" text-anchor="middle" fill="#f8df9d" font-family="Nunito, Arial, sans-serif" font-size="25" font-weight="900">↑ 30 min/day</text>
+
+  <path d="M310 650 C310 704 580 710 702 744M800 650V735M1290 650C1290 704 1020 710 898 744" fill="none" stroke="#7f90a9" stroke-width="4" stroke-linecap="round"/>
+  <rect x="515" y="724" width="570" height="104" rx="30" fill="#182f50" stroke="url(#win)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="800" y="770" text-anchor="middle" fill="#f2cf78" font-family="Nunito, Arial, sans-serif" font-size="23" font-weight="900" letter-spacing="1.8">YOUR WINS THIS WEEK</text>
+  <text x="800" y="806" text-anchor="middle" fill="#ffffff" font-family="Nunito, Arial, sans-serif" font-size="25" font-weight="700">Shown only when at least one path clears its gate</text>
+
+  <rect x="90" y="730" width="360" height="98" rx="24" fill="#0b203c" stroke="#516982"/>
+  <text x="120" y="770" fill="#ffffff" font-family="Nunito, Arial, sans-serif" font-size="24" font-weight="800">Missing ≠ zero</text>
+  <text x="120" y="804" fill="#aebdd1" font-family="Nunito, Arial, sans-serif" font-size="20">No comparable logs? Stay quiet.</text>
+
+  <rect x="1150" y="730" width="360" height="98" rx="24" fill="#0b203c" stroke="#516982"/>
+  <text x="1180" y="770" fill="#ffffff" font-family="Nunito, Arial, sans-serif" font-size="24" font-weight="800">No score. No streak.</text>
+  <text x="1180" y="804" fill="#aebdd1" font-family="Nunito, Arial, sans-serif" font-size="20">Up to 3 concrete win lines.</text>
+</svg>

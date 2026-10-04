@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.obubba.app",
+    "sha256_cert_fingerprints": [
+      "91:38:B8:6D:67:A7:69:D4:D7:35:5E:DC:56:0F:34:E4:CF:CE:8D:D8:3B:05:AC:17:45:BB:BD:B8:3E:30:C0:6B"
+    ]
+  }
+}]

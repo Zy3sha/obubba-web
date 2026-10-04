@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <!-- OpenAI conversion pixel -->
+  <script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"RKX5Fn2RCayB9tU3QFxiF9",debug:true});</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="apple-itunes-app" content="app-id=6760968757"/>
+  <title>How Does OBubba Know When to Say ‘Start Wind-Down’? | OBubba</title>
+  <meta name="description" content="Inside OBubba’s bedtime nudge: how tonight’s predicted bedtime becomes a Track button, an in-app prompt and a reminder—and where the timings still disagree."/>
+  <meta name="robots" content="index, follow, max-image-preview:large"/>
+  <link rel="canonical" href="https://obubba.com/blog/how-obubba-knows-when-start-wind-down.html"/>
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+  <link rel="sitemap" type="application/xml" href="/image-sitemap.xml"/>
+  <link rel="alternate" type="application/rss+xml" title="OBubba Blog" href="/feed.xml"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <link rel="icon" type="image/png" href="/obubba-baby-tracker-app-icon-crowned-baby.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/obubba-baby-tracker-app-icon-crowned-baby.png"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="https://obubba.com/blog/how-obubba-knows-when-start-wind-down.html"/>
+  <meta property="og:title" content="How Does OBubba Know When to Say ‘Start Wind-Down’? | OBubba"/>
+  <meta property="og:description" content="Inside OBubba’s bedtime nudge: how tonight’s predicted bedtime becomes a Track button, an in-app prompt and a reminder—and where the timings still disagree."/>
+  <meta property="og:image" content="https://obubba.com/obubba-start-wind-down-timing.jpg"/>
+  <meta property="og:site_name" content="OBubba"/>
+  <meta property="og:locale" content="en_GB"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="How Does OBubba Know When to Say ‘Start Wind-Down’? | OBubba"/>
+  <meta name="twitter:description" content="Inside OBubba’s bedtime nudge: how tonight’s predicted bedtime becomes a Track button, an in-app prompt and a reminder—and where the timings still disagree."/>
+  <meta name="twitter:image" content="https://obubba.com/obubba-start-wind-down-timing.jpg"/>
+  <meta name="theme-color" content="#fffcf9"/>
+  <link rel="preload" href="/Parisienne-Regular.ttf" as="font" type="font/truetype" crossorigin/>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    var __obConsent = 'denied';
+    try { if (localStorage.getItem('ob_analytics_consent') === 'granted') __obConsent = 'granted'; } catch (e) {}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: __obConsent
+    });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'allow_ad_personalization_signals', false);
+    gtag('js', new Date());
+    gtag('config', 'G-Y7CHSL1YHZ');
+    document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener('click', function (event) {
+        var anchor = event.target.closest('a[href]');
+        if (!anchor) return;
+        var target;
+        try { target = new URL(anchor.href, window.location.href); } catch (e) { return; }
+        var store = target.hostname === 'apps.apple.com' ? 'ios'
+          : (target.hostname === 'play.google.com' ? 'android' : null);
+        if (!store) return;
+        gtag('event', 'store_click', { store: store, page_path: window.location.pathname, transport_type: 'beacon' });
+      });
+      var stored = null;
+      try { stored = localStorage.getItem('ob_analytics_consent'); } catch (e) {}
+      if (stored === 'granted' || stored === 'denied') return;
+      var bar = document.createElement('div');
+      bar.className = 'ob-consent';
+      bar.setAttribute('role', 'dialog');
+      bar.setAttribute('aria-label', 'Analytics cookie choice');
+      bar.innerHTML = '<p>We use privacy-first analytics to understand how families find OBubba. Accept analytics cookies, or decline and the site stays completely cookieless. See our <a href="/privacy.html">Privacy Policy</a>.</p><div class="ob-consent-btns"><button type="button" data-ob-decline>Decline</button><button type="button" data-ob-accept>Accept</button></div>';
+      document.body.appendChild(bar);
+      function choose(v) {
+        try { localStorage.setItem('ob_analytics_consent', v); } catch (e) {}
+        gtag('consent', 'update', { analytics_storage: v });
+        bar.remove();
+      }
+      bar.querySelector('[data-ob-accept]').addEventListener('click', function () { choose('granted'); });
+      bar.querySelector('[data-ob-decline]').addEventListener('click', function () { choose('denied'); });
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7CHSL1YHZ"></script>
+  <style>
+    .ob-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:#fff;color:#2b2030;border:1px solid rgba(80,50,80,.18);border-radius:14px;box-shadow:0 18px 50px rgba(55,38,56,.22);padding:16px 18px;font:14px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+    .ob-consent p{margin:0 0 12px}
+    .ob-consent a{color:#b8618f;text-decoration:underline}
+    .ob-consent-btns{display:flex;gap:10px;justify-content:flex-end}
+    .ob-consent button{cursor:pointer;border-radius:10px;padding:9px 18px;font:600 14px Inter,system-ui,sans-serif;border:1px solid rgba(80,50,80,.25);background:#f4eef3;color:#2b2030}
+    .ob-consent [data-ob-accept]{background:#b8618f;color:#fff;border-color:#b8618f}
+    @media (prefers-color-scheme:dark){.ob-consent{background:#241b28;color:#f3e9f0;border-color:rgba(255,255,255,.14)}.ob-consent button{background:#3a2c40;color:#f3e9f0}.ob-consent [data-ob-accept]{background:#d98cb6;color:#241019;border-color:#d98cb6}}
+  </style>
+  <style>
+  :root {
+    --cream: #fffcf9;
+    --paper: #fff8f2;
+    --ink: #2f2635;
+    --muted: #6f6471;
+    --rose: #c07088;
+    --rose-dark: #9d4e67;
+    --mint: #5f9b8e;
+    --gold: #c8943e;
+    --lavender: #74639e;
+    --line: rgba(77, 56, 77, 0.15);
+    --shadow: 0 22px 60px rgba(55, 38, 56, 0.12);
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--cream); color: var(--ink); scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    letter-spacing: 0;
+  }
+  @font-face {
+    font-family: "OBubba Script";
+    src: url("/Parisienne-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  .skip-link {
+    position: absolute;
+    left: 16px;
+    top: -80px;
+    z-index: 10;
+    background: var(--ink);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .skip-link:focus { top: 16px; }
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 14px clamp(18px, 5vw, 52px);
+    background: rgba(255, 252, 249, 0.92);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(18px);
+  }
+  .brand {
+    font-family: "OBubba Script", Georgia, serif;
+    font-size: 32px;
+    text-decoration: none;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(10px, 2vw, 20px);
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--muted);
+  }
+  .nav-links a:hover,
+  .nav-links a:focus { color: var(--rose-dark); }
+  .button,
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: var(--rose);
+    color: white !important;
+    text-decoration: none;
+    font-weight: 800;
+    box-shadow: 0 10px 28px rgba(192, 112, 136, 0.25);
+  }
+  .button.secondary {
+    background: white;
+    color: var(--ink) !important;
+    border-color: var(--line);
+    box-shadow: none;
+  }
+  .button.store { min-width: 156px; }
+  .hero {
+    position: relative;
+    display: grid;
+    align-items: end;
+    min-height: 78vh;
+    padding: clamp(88px, 12vh, 132px) clamp(20px, 6vw, 72px) clamp(52px, 8vh, 92px);
+    background-image:
+      linear-gradient(90deg, rgba(47, 38, 53, 0.82), rgba(47, 38, 53, 0.48) 46%, rgba(255, 252, 249, 0.12)),
+      var(--hero-image);
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  .hero-inner {
+    width: min(850px, 100%);
+  }
+  .eyebrow {
+    margin: 0 0 14px;
+    color: #f1d0aa;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+  h1, h2, h3 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.05;
+    letter-spacing: 0;
+  }
+  h1 {
+    max-width: 840px;
+    font-size: clamp(44px, 8vw, 92px);
+  }
+  .hero p {
+    max-width: 710px;
+    margin: 20px 0 0;
+    font-size: clamp(18px, 2.1vw, 24px);
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .visual-identity .hero {
+    background-image:
+      linear-gradient(90deg, rgba(20, 15, 28, 0.9), rgba(20, 15, 28, 0.66) 54%, rgba(20, 15, 28, 0.28)),
+      var(--hero-image);
+    background-position: center 64%;
+  }
+  .visual-identity .hero h1 {
+    max-width: 980px;
+    font-size: clamp(42px, 7vw, 78px);
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
+  }
+  .section {
+    padding: clamp(50px, 8vw, 92px) clamp(20px, 6vw, 72px);
+  }
+  .section.alt { background: #f8f0e8; }
+  .section-inner {
+    width: min(1160px, 100%);
+    margin: 0 auto;
+  }
+  .narrow { width: min(850px, 100%); }
+  .section h2 {
+    font-size: clamp(30px, 4.5vw, 54px);
+    color: var(--ink);
+  }
+  .section-lede {
+    max-width: 760px;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 16px 0 0;
+  }
+  .ai-answer {
+    border-left: 6px solid var(--mint);
+    background: white;
+    padding: clamp(22px, 4vw, 34px);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+  .ai-answer h2 { font-size: clamp(26px, 4vw, 40px); }
+  .ai-answer p,
+  .ai-answer li,
+  .rich-text p,
+  .rich-text li {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.75;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 30px;
+  }
+  .panel {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 22px;
+    box-shadow: 0 14px 40px rgba(55, 38, 56, 0.08);
+  }
+  .panel .kicker {
+    color: var(--rose-dark);
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+  }
+  .panel h3 {
+    margin-top: 10px;
+    font-size: 24px;
+  }
+  .panel p,
+  .panel li,
+  .comparison td,
+  .comparison th {
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  .feature-split {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(24px, 5vw, 54px);
+    align-items: center;
+  }
+  .feature-split img {
+    width: min(430px, 100%);
+    margin: 0 auto;
+    filter: drop-shadow(0 24px 42px rgba(47, 38, 53, 0.18));
+  }
+  .comparison-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: white;
+    margin-top: 26px;
+  }
+  .comparison {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+  }
+  .comparison th,
+  .comparison td {
+    text-align: left;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .comparison th {
+    color: var(--ink);
+    background: #fff8f2;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .comparison tr:last-child td { border-bottom: 0; }
+  .faq {
+    display: grid;
+    gap: 12px;
+    margin-top: 26px;
+  }
+  details {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px 20px;
+  }
+  summary {
+    cursor: pointer;
+    color: var(--ink);
+    font-size: 18px;
+    font-weight: 800;
+  }
+  details p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+  .blog-hero {
+    padding: clamp(70px, 10vw, 126px) clamp(20px, 6vw, 72px) clamp(46px, 7vw, 80px);
+    background:
+      linear-gradient(115deg, rgba(255, 248, 242, 0.95), rgba(231, 241, 237, 0.92)),
+      url("/obubba-thinking.png") right 8% bottom / min(340px, 44vw) auto no-repeat;
+    border-bottom: 1px solid var(--line);
+  }
+  .blog-hero h1 {
+    color: var(--ink);
+    font-size: clamp(42px, 7vw, 80px);
+  }
+  .blog-hero p {
+    max-width: 690px;
+    color: var(--muted);
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .post-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 26px;
+  }
+  .post-card {
+    display: grid;
+    align-content: start;
+    gap: 12px;
+    min-height: 260px;
+    padding: clamp(24px, 4vw, 36px);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background:
+      radial-gradient(circle at 92% 8%, rgba(192, 112, 136, 0.16), transparent 26%),
+      white;
+    text-decoration: none;
+    box-shadow: 0 18px 48px rgba(55, 38, 56, 0.09);
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  }
+  .post-card:hover,
+  .post-card:focus-visible {
+    transform: translateY(-4px);
+    border-color: rgba(192, 112, 136, 0.4);
+    box-shadow: 0 24px 60px rgba(55, 38, 56, 0.14);
+  }
+  .post-card.featured {
+    grid-column: 1 / -1;
+    min-height: 320px;
+    padding-right: min(38%, 420px);
+    background:
+      linear-gradient(105deg, rgba(47, 38, 53, 0.98), rgba(47, 38, 53, 0.9) 58%, rgba(47, 38, 53, 0.38)),
+      var(--card-image) right center / min(420px, 42%) auto no-repeat,
+      var(--ink);
+    color: white;
+  }
+  .post-card.featured .meta { color: #f1d0aa; }
+  .post-card.featured h2 { color: white; }
+  .post-card.featured p { color: rgba(255,255,255,0.82); }
+  .post-card .read-link {
+    margin-top: auto;
+    color: var(--rose-dark);
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .post-card.featured .read-link { color: #f1d0aa; }
+  .post-card .read-link::after { content: " →"; }
+  .post-card h2 {
+    font-size: clamp(26px, 3vw, 38px);
+    line-height: 1.12;
+  }
+  .post-card p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+  }
+  .visual-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 30px;
+  }
+  .visual-card {
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 14px 40px rgba(55, 38, 56, 0.08);
+  }
+  .visual-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: #07112a;
+  }
+  .visual-card.featured {
+    grid-column: span 2;
+  }
+  .visual-card.featured img {
+    aspect-ratio: 853 / 1100;
+    object-position: center 66%;
+  }
+  .visual-card figcaption {
+    padding: 16px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .visual-card strong {
+    display: block;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .meta {
+    color: var(--rose-dark);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .article {
+    width: min(850px, 100%);
+    margin: 0 auto;
+  }
+  .article-header {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(72px, 10vw, 124px) clamp(20px, 6vw, 72px) clamp(58px, 8vw, 92px);
+    background:
+      radial-gradient(circle at 84% 18%, rgba(192, 112, 136, 0.2), transparent 25%),
+      radial-gradient(circle at 68% 88%, rgba(95, 155, 142, 0.2), transparent 30%),
+      linear-gradient(135deg, #fff8f2 0%, #f7eee9 46%, #eaf3ef 100%);
+    border-bottom: 1px solid var(--line);
+  }
+  .article-header::after {
+    content: "";
+    position: absolute;
+    right: clamp(-64px, 1vw, 20px);
+    bottom: clamp(-92px, -6vw, -42px);
+    width: min(430px, 38vw);
+    aspect-ratio: 1;
+    background: var(--hero-image) center / contain no-repeat;
+    filter: drop-shadow(0 28px 45px rgba(55, 38, 56, 0.14));
+    opacity: 0.92;
+    pointer-events: none;
+  }
+  .article-header .article {
+    position: relative;
+    z-index: 1;
+    width: min(1160px, 100%);
+    margin: 0 auto;
+    padding-right: min(34vw, 390px);
+  }
+  .article-kicker-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 16px;
+    margin-bottom: 16px;
+  }
+  .read-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 11px;
+    border: 1px solid rgba(77, 56, 77, 0.14);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.68);
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .read-time::before { content: "☾"; color: var(--rose-dark); }
+  .article-header h1 {
+    color: var(--ink);
+    max-width: 820px;
+    font-size: clamp(42px, 5.4vw, 68px);
+    text-wrap: balance;
+  }
+  .article-header p {
+    max-width: 720px;
+    color: var(--muted);
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.65;
+  }
+  .rich-text {
+    margin-top: clamp(36px, 6vw, 68px);
+    margin-bottom: clamp(54px, 8vw, 96px);
+    padding: clamp(26px, 5vw, 58px);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    background: rgba(255,255,255,0.92);
+    box-shadow: 0 24px 70px rgba(55, 38, 56, 0.1);
+  }
+  .blog-post main { background: linear-gradient(180deg, #fffcf9 0%, #f8f0e8 58%, #fffcf9 100%); }
+  .rich-text > p:first-child {
+    margin-top: 0;
+    padding: 22px 24px;
+    border-left: 5px solid var(--rose);
+    border-radius: 0 16px 16px 0;
+    background: #fff8f2;
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(20px, 2.5vw, 25px);
+    line-height: 1.6;
+  }
+  .rich-text h2,
+  .rich-text h3,
+  .rich-text h4 {
+    margin-top: 48px;
+    margin-bottom: 16px;
+    text-wrap: balance;
+  }
+  .rich-text h2 {
+    position: relative;
+    padding-top: 18px;
+    font-size: clamp(30px, 4vw, 42px);
+  }
+  .rich-text h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 54px;
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--rose), var(--gold));
+  }
+  .rich-text h3 { font-size: 26px; }
+  .rich-text a { color: var(--rose-dark); font-weight: 800; }
+  .rich-text ul,
+  .rich-text ol {
+    display: grid;
+    gap: 10px;
+    margin: 22px 0 28px;
+    padding: 22px 24px 22px 46px;
+    border: 1px solid rgba(95, 155, 142, 0.2);
+    border-radius: 18px;
+    background: rgba(231, 241, 237, 0.58);
+  }
+  .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text figure {
+    margin: 30px 0;
+  }
+  .rich-text figure img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: white;
+    box-shadow: 0 16px 42px rgba(55, 38, 56, 0.1);
+  }
+  .rich-text figure figcaption {
+    margin: 10px 6px 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .tag {
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+    background: white;
+  }
+  .related-guides {
+    display: grid;
+    gap: 12px;
+    margin-top: 44px;
+    padding: clamp(22px, 4vw, 32px);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background:
+      radial-gradient(circle at 92% 16%, rgba(200, 148, 62, 0.16), transparent 24%),
+      #fff8f2;
+  }
+  .related-guides h2 {
+    font-size: clamp(26px, 4vw, 40px);
+  }
+  .related-guides p {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.65;
+    margin: 0;
+  }
+  .related-guides .tags { margin-top: 8px; }
+  .cta-band {
+    display: grid;
+    gap: 14px;
+    justify-items: start;
+    background:
+      radial-gradient(circle at 90% 20%, rgba(200, 148, 62, 0.25), transparent 26%),
+      linear-gradient(135deg, #2f2635, #4c3d57);
+    color: white;
+    border-radius: 22px;
+    padding: clamp(26px, 5vw, 46px);
+  }
+  .cta-band h2 { color: white; }
+  .cta-band p {
+    max-width: 720px;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.7;
+    margin: 0;
+  }
+  .site-footer {
+    padding: 34px clamp(20px, 6vw, 72px);
+    background: #2f2635;
+    color: rgba(255, 255, 255, 0.78);
+  }
+  .footer-inner {
+    width: min(1160px, 100%);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .footer-inner a { color: white; text-decoration: none; font-weight: 700; }
+  @media (max-width: 820px) {
+    .site-nav { align-items: flex-start; }
+    .nav-links { flex-wrap: wrap; font-size: 13px; }
+    .hero { min-height: 76vh; background-position: center; }
+    .grid,
+    .post-list,
+    .feature-split,
+    .visual-grid { grid-template-columns: 1fr; }
+    .post-card.featured {
+      grid-column: auto;
+      min-height: 360px;
+      padding-right: 24px;
+      padding-bottom: 160px;
+      background:
+        linear-gradient(180deg, rgba(47, 38, 53, 0.96), rgba(47, 38, 53, 0.86) 62%, rgba(47, 38, 53, 0.44)),
+        var(--card-image) right bottom / 190px auto no-repeat,
+        var(--ink);
+    }
+    .article-header::after {
+      right: -64px;
+      bottom: -48px;
+      width: 230px;
+      opacity: 0.25;
+    }
+    .article-header .article { padding-right: 0; }
+    .visual-card.featured { grid-column: auto; }
+    .blog-hero { background-size: 210px auto; background-position: right -28px bottom -24px; }
+  }
+  @media (max-width: 560px) {
+    .site-nav { align-items: center; gap: 10px; padding: 12px 16px; }
+    .brand { font-size: 28px; }
+    .nav-links { min-width: 0; flex-wrap: nowrap; }
+    .nav-links a:not(.nav-cta) { display: none; }
+    .nav-cta { min-height: 40px; padding: 10px 14px; font-size: 12px; white-space: nowrap; }
+    .hero-actions .button { width: 100%; }
+    .section { padding-left: 16px; padding-right: 16px; }
+    .article-header { padding-left: 18px; padding-right: 18px; }
+    .article-header h1 { font-size: 42px; line-height: 1.02; }
+    .rich-text {
+      width: calc(100% - 24px);
+      margin-left: 12px;
+      margin-right: 12px;
+      padding: 24px 18px;
+      border-radius: 22px;
+    }
+    .rich-text ul,
+    .rich-text ol { padding-left: 38px; padding-right: 16px; }
+  }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How Does OBubba Know When to Say ‘Start Wind-Down’?",
+  "description": "Inside OBubba’s bedtime nudge: how tonight’s predicted bedtime becomes a Track button, an in-app prompt and a reminder—and where the timings still disagree.",
+  "datePublished": "2026-09-19",
+  "dateModified": "2026-09-19",
+  "author": {
+    "@type": "Organization",
+    "name": "OBubba"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "OBubba",
+    "url": "https://obubba.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://obubba.com/obubba-baby-tracker-app-icon-crowned-baby.png",
+      "contentUrl": "https://obubba.com/obubba-baby-tracker-app-icon-crowned-baby.png",
+      "creditText": "OBubba",
+      "copyrightNotice": "Copyright 2026 OBubba. All rights reserved.",
+      "license": "https://obubba.com/obubba-visual-identity.html#image-licensing",
+      "acquireLicensePage": "https://obubba.com/obubba-visual-identity.html#image-licensing",
+      "creator": {
+        "@id": "https://obubba.com/#organization"
+      }
+    }
+  },
+  "mainEntityOfPage": "https://obubba.com/blog/how-obubba-knows-when-start-wind-down.html",
+  "image": "https://obubba.com/obubba-start-wind-down-timing.jpg",
+  "keywords": "OBubba start wind-down, baby bedtime reminder app, when start baby bedtime routine, predicted baby bedtime, baby bedtime routine reminder, bedtime wind down timer, OBubba bedtime ritual, baby sleep schedule reminder, baby bedtime app, guided baby bedtime routine, personalised bedtime reminder, baby sleep app UK"
+}
+</script>
+</head>
+<body class="blog-post" style="--hero-image: url('/obubba-start-wind-down-timing.jpg')">
+<!-- Generated by tools/render-seo.mjs. Edit content/blog/*.md or the template in that script. -->
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand" href="/">OBubba</a>
+    <div class="nav-links">
+      <a href="/best-baby-tracker.html">Baby tracker guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/llms.txt">AI facts</a>
+      <a class="nav-cta" href="https://apps.apple.com/app/obubba-baby-sleep-tracker/id6760968757">Download</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="article-header">
+      <div class="article">
+        <div class="article-kicker-row">
+          <div class="meta">2026-09-19 / OBubba</div>
+          <span class="read-time">13 min read</span>
+        </div>
+        <h1>How Does OBubba Know When to Say ‘Start Wind-Down’?</h1>
+        <p>Inside OBubba’s bedtime nudge: how tonight’s predicted bedtime becomes a Track button, an in-app prompt and a reminder—and where the timings still disagree.</p>
+        <div class="tags"><span class="tag">OBubba start wind-down</span><span class="tag">baby bedtime reminder app</span><span class="tag">when start baby bedtime routine</span><span class="tag">predicted baby bedtime</span><span class="tag">baby bedtime routine reminder</span></div>
+      </div>
+    </header>
+    <article class="section rich-text article">
+      <p>At 6:12pm, OBubba says bedtime looks like 7:02. At 6:31, the final nap is corrected by ten minutes and bedtime moves. Then a <strong>Start wind-down</strong> card appears under the clock.</p>
+<p>Is that card following a fixed bedtime, a generic 30-minute alarm or the baby’s real day?</p>
+<p>The current Flutter answer is more interesting: OBubba first resolves tonight’s bedtime from the same engine used by its clock, plan, reminder and widget. It then surfaces that one result through <strong>three different nudge windows</strong>—a Track button, an in-app message and an operating-system reminder.</p>
+<p>We traced the complete path through `track_home.dart`, the shared schedule signals, reminder planner, guided Bedtime ritual, per-child settings and 25 focused tests. The architecture gets the hardest part right: a manual bedtime, consultation plan or skipped nap can move the reminder along with the clock. The experience still has avoidable contradictions: <strong>the default routine totals 42 minutes, while the two proactive nudges arrive about 30 minutes before bed; the clearest button is behind the premium readiness gate; and neither reminder opens the ritual directly.</strong></p>
+<h2>The short answer</h2>
+<p>| Surface | Current Flutter timing | What happens | |---|---|---| | <strong>Start wind-down button</strong> | From 90 minutes before predicted bedtime until 30 minutes after it | Opens the editable Bedtime ritual from the Track readiness panel | | <strong>In-app message</strong> | Once per child per day, when bedtime is 22–32 minutes away | Shows a snackbar suggesting bath, dim lights and calm | | <strong>OS reminder</strong> | Exactly 30 minutes before predicted bedtime | Shows the predicted bedtime, a generic routine suggestion and the engine’s reason | | <strong>Widget / Live Activity</strong> | Counts down to bedtime itself | Uses the bedtime display time, not the earlier reminder time |</p>
+<figure><img src="/obubba-start-wind-down-timeline.svg" alt="A timeline showing how live schedule inputs feed one resolved bedtime, which then creates a 90-minute Track button, a 30-minute reminder and a 32-to-22-minute in-app message." loading="lazy"/><figcaption>The current Flutter app shares one bedtime calculation, then applies three different presentation windows. The guided routine is editable and separate from the sleep log.</figcaption></figure>
+<p>The crucial distinction is <strong>prediction versus notification</strong>. There is one resolved bedtime target, but the app decides separately when and where to bring it to the parent’s attention.</p>
+<h2>What moves the predicted bedtime first</h2>
+<p>The wind-down system does not own another independent bedtime calculator. Its reminder planner can receive the same `ScheduleSignals` used by the Track clock.</p>
+<p>Those signals currently include:</p>
+<ul><li>today’s naps and the final awake period</li><li>age, using corrected age where available</li><li>a manual bedtime override</li><li>the active Sleep Consultation bedtime and nap times</li><li>the parent’s <strong>Skip this nap and bring bedtime earlier</strong> choice</li><li>nap-count overrides</li><li>day-type and disruption context</li><li>a learned latest-nap boundary</li></ul>
+<p>The app passes that context into the shared bedtime resolver. That is why changing a manual bedtime can reschedule the 30-minute wind-down reminder, and why skipping a refused final nap can bring both bedtime and the reminder earlier. The focused reminder tests protect both cases.</p>
+<p>This is the right foundation. Parents lose trust quickly when the clock says 7:10, the widget says 7:30 and a notification arrives for 8:00. One source allows all of those surfaces to move together.</p>
+<p>It also means the wind-down time may change as the day changes. If a late nap is added, corrected or skipped, the previous reminder plan is replaced. OBubba is not declaring that the first estimate was a promise; it is recalculating from a fresher day.</p>
+<h2>Layer one: the Track button starts early</h2>
+<p>When the baby is awake and bedtime is the next predicted event, the Track panel calculates a real `DateTime` for tonight. If that time is no more than 90 minutes ahead—and not more than 30 minutes overdue—it can show <strong>Start wind-down</strong> above the live readiness meter.</p>
+<p>That wide window is sensible. The built-in routine is much longer than half an hour, and some families need time for a feed, medicine, siblings or a bath. A button appearing early is an invitation, not a command to begin immediately.</p>
+<p>There is a current access mismatch. The code returns the premium/trial readiness lock <strong>before</strong> adding the Start wind-down button. The old permanent Care tile has been removed, and the app’s own help copy directs parents to this Track button. So although the Bedtime ritual screen itself has no premium check, the advertised route is effectively hidden from a free user.</p>
+<p>At the same time, the bedtime reminder remains enabled by default outside that display gate. A free parent can therefore be told to start a routine that the main Track path does not let them open.</p>
+<p>The clean product choice is one of these:</p>
+<ul><li>keep the editable ritual free and render Start wind-down above the readiness paywall, or</li><li>label the notification and route as a premium feature before the reminder is enabled</li></ul>
+<p>The first option is much more consistent with OBubba’s promise to reduce parental load.</p>
+<h2>Layer two: the in-app message has a ten-minute catch window</h2>
+<p>The live app watches the bedtime resolver once per minute. When bedtime is between 22 and 32 minutes away, it shows a snackbar once for that child and date.</p>
+<p>The ten-minute band makes the trigger resilient. If the app misses the exact 30-minute tick because the screen rebuilt late, it still has several chances to speak. A SharedPreferences flag prevents the same message repeating all evening.</p>
+<p>The message currently says to start the bath, dim the lights and keep things calm. It does not read the family’s customised routine. A parent who removed baths because they excite the baby still receives bath copy.</p>
+<p>Nor is the snackbar an action button. It does not open Bedtime ritual when tapped. It is a line of guidance that can disappear, not a handoff into the thing it recommends.</p>
+<p>There is another difference from the OS reminder: the in-app provider suppresses itself if <strong>any</strong> sleep-type entry exists in today’s bucket, while the reminder planner specifically looks for an open evening bedtime. Usually those produce the same outcome; unusual imported or corrected records can make them disagree.</p>
+<h2>Layer three: the OS reminder is exactly 30 minutes before bed</h2>
+<p>The notification planner schedules <strong>Wind-down time for [name]</strong> at bedtime minus 30 minutes. Its body includes:</p>
+<ul><li>the current predicted bedtime</li><li>generic bath, dim-light and story suggestions</li><li>the resolver’s explanation for that bedtime</li></ul>
+<p>It will not schedule an evening reminder after the night has already started. A late open nap does not suppress it, because the planner deliberately distinguishes a daytime nap from an open sleep entry beginning at or after 5pm. Tests protect both sides of that boundary.</p>
+<p>The reminder is on by default, including for older saved settings that predate the toggle. It is stored separately for each child and can be switched off under <strong>Account → Reminders → Bedtime routine (30 min before)</strong>. Quiet Hours can mute it because it is a predicted nudge rather than an explicit appointment or custom reminder.</p>
+<p>OBubba does not immediately request notification permission during onboarding. The current bridge waits until the family has logged something, then asks once. That is a thoughtful value-before-permission design.</p>
+<p>The notification’s action field is empty. Tapping it opens the app but does not deep-link into Bedtime ritual. The code already supports canonical actions for feed and sleep-log reminders; wind-down needs its own `open_bedtime_routine` action.</p>
+<h2>The real guided Bedtime ritual</h2>
+<figure><img src="/obubba-bedtime-ritual-current.jpg" alt="The current OBubba Flutter Bedtime ritual showing a six-step, 42-minute evening path, the current Bath time step and a Start routine button." loading="lazy"/><figcaption>A genuine current iOS Flutter screen using a fictional six-month-old profile. The routine is presented one step at a time, and its names, notes, order and durations can be customised per child.</figcaption></figure>
+<p>The screen behind Start wind-down is not a timer that marks the baby asleep. It is a step-by-step guide.</p>
+<p>The default has six steps:</p>
+<ol><li>Bath time — 10 minutes</li><li>Nappy and pyjamas — 5 minutes</li><li>Optional massage — 5 minutes</li><li>Final feed — 15 minutes</li><li>Story or song — 5 minutes</li><li>Into bed — 2 minutes</li></ol>
+<p>That totals <strong>42 minutes</strong>. Parents can tap any position, move forwards and back, open the story library from a story step and expand one rotating sleep idea.</p>
+<p>Under <strong>Customise routine</strong>, a family can:</p>
+<ul><li>rename a step</li><li>change its emoji, duration and note</li><li>move it up or down</li><li>remove it, provided at least one step remains</li><li>add a new step between 1 and 120 minutes</li><li>reset the built-in example</li></ul>
+<p>The list is saved in SharedPreferences under a child-scoped key, so twins or siblings can have different routines on the same device. Customisation affects the screen’s total and sequence. It does <strong>not</strong> currently change the reminder time or its bath-story copy.</p>
+<h2>The 42-minute routine and 30-minute reminder do not fit</h2>
+<p>This is the clearest timing contradiction.</p>
+<p>If a parent starts the six-step default when the proactive reminder arrives, the guide itself ends around 12 minutes after the predicted bedtime. That does not make a 42-minute routine wrong or mean a baby must be asleep at the predicted minute. It does mean the app cannot truthfully present the notification as the start time for its own default path.</p>
+<p>The button’s 90-minute window gives enough notice when the parent happens to see it. The in-app snackbar and OS reminder do not.</p>
+<p>The reminder should work backwards from the family’s saved total, with a modest cap and a clear preview. For example:</p>
+<p>&gt; Bedtime looks like 7:15pm. Your saved routine is about 18 minutes, so start around 6:57pm.</p>
+<p>If the routine is 42 minutes, the parent should be able to choose whether to receive a 42-minute alert or keep a simpler 30-minute nudge. Predicted bedtime can still move; the lead should move with it.</p>
+<h2>Finishing the ritual does not claim the baby is asleep</h2>
+<p>On the last step, <strong>Done · goodnight</strong> resets the wizard to step one, closes the screen and shows this instruction: tap <strong>start bedtime</strong> on the clock when the baby is down.</p>
+<p>That separation is excellent. Completing bath, feed and story is not evidence that sleep began. The live bedtime timer creates the actual sleep entry and can start the running notification and Live Activity. A parent may complete the routine, offer another cuddle and begin the sleep record later.</p>
+<p>The routine also does not save a completion history, duration actually spent or which steps were skipped. It is a guide, not another source of sleep data. That keeps logging lightweight, although a tiny optional <strong>routine began</strong> timestamp would make reminder quality measurable without pretending the checklist was followed perfectly.</p>
+<h2>“Tonight’s one gentle idea” is not personalised</h2>
+<p>The screen selects one of 30 `SleepTip` objects by day-of-year. Consecutive days rotate through the list; after 30 entries it wraps. The choice does not currently consider age, feeding method, prematurity, medical context, parent preference, the active plan or the baby’s logs.</p>
+<p>Several tips are friendly and low-risk, such as dimming lights or using a familiar story. Others are written too absolutely for a generic daily rotation.</p>
+<p>The strongest example is feeding. The built-in routine calls the final feed <strong>“the biggest feed of the day”</strong>, and one tip claims that a bigger full feed means a longer first stretch. NHS responsive-feeding guidance says the opposite: follow hunger and fullness cues, never force a bottle to be finished, and a big feed does not mean a baby will go longer between feeds.</p>
+<p>Other universal phrases—<strong>“drowsy but awake, the golden rule”</strong>, <strong>“leave the room”</strong>, resist a rescue nap after 4pm, or one parent must always run one exact routine—need age, context and choice. They can turn a flexible guide into a test the family did not agree to take.</p>
+<p>These tips should be reviewed as a clinical-content system, not merely a carousel:</p>
+<ul><li>remove unsupported promises</li><li>make feeding copy explicitly responsive</li><li>age-gate advice</li><li>honour the family’s sleep-approach preference</li><li>never imply that comfort, feeding or shared caregiving is a failure</li><li>attach a source and review date to safety-sensitive guidance</li></ul>
+<p>Until that happens, treat the rotating idea as optional general copy—not as a personalised recommendation from the sleep engine.</p>
+<h2>A bedtime reminder is not a deadline</h2>
+<p>NHS guidance says a simple, soothing bedtime routine may help a baby settle, while also emphasising that babies vary and their patterns change. Start when it is useful, shorten it when the evening is late and feed responsively.</p>
+<p>Do not keep a hungry baby waiting because the notification has not arrived. Do not force a large feed to chase a longer stretch. Do not rush through prescribed care or leave a distressed baby because the 42 minutes are “up”. A predicted bedtime is a planning estimate, not a biological appointment.</p>
+<p>For every sleep, keep the safer-sleep foundation unchanged. NHS Best Start in Life advises a cot or Moses basket with a firm, flat mattress, baby placed on their back, and the same room as a parent for the first six months. Keep pillows, cot bumpers, nests, toys and loose bedding out of the sleep space.</p>
+<h2>How OBubba can make Start wind-down best-in-class</h2>
+<p>The shared bedtime spine is already the difficult engineering win. The next improvements are unusually concrete:</p>
+<ol><li><strong>Calculate lead time from the saved routine.</strong> Use the family’s total, not a fixed 30 minutes.</li><li><strong>Put the button above the premium readiness lock.</strong> A reminder should always lead somewhere the recipient can open.</li><li><strong>Deep-link both nudges.</strong> One tap should open the current routine and correct child.</li><li><strong>Use the customised first steps in copy.</strong> Do not tell a bath-free family to start the bath.</li><li><strong>Unify suppression rules.</strong> The in-app and OS layers should agree on what counts as “night already started”.</li><li><strong>Audit every rotating tip.</strong> Add age, feeding and preference gates plus sources and review dates.</li><li><strong>Show why the time moved.</strong> A small receipt—late nap, manual bedtime, plan or skip—would make recalculation feel intelligent instead of erratic.</li><li><strong>Let the parent choose the nudge style.</strong> 15, 30, saved-routine length or off, separately for each child.</li></ol>
+<p>That combination would be hard to replace: one bedtime that follows the real day, one family-owned routine, one useful alert and no pressure to perform it perfectly.</p>
+<p><strong><a href="/app.html">Let OBubba help close the day calmly →</a></strong> — see tonight’s live bedtime, build a repeatable family ritual and keep the actual sleep record separate from the plan.</p>
+<h2>Frequently asked questions</h2>
+<h3>When does Start wind-down appear in OBubba?</h3>
+<p>In the current Track readiness panel, it can appear when predicted bedtime is within 90 minutes and remains eligible until 30 minutes after that time, provided the baby is awake and bedtime is the next event.</p>
+<h3>Why did the wind-down reminder move?</h3>
+<p>It uses the shared bedtime resolver. A corrected nap, manual bedtime, active consultation plan, nap-count choice, disruption or skipped final nap can change tonight’s target and therefore the reminder.</p>
+<h3>Is the bedtime reminder on automatically?</h3>
+<p>Yes. It defaults on, including when older settings do not contain the newer field. It can be switched off separately for each child in Reminders.</p>
+<h3>Does tapping the reminder open Bedtime ritual?</h3>
+<p>Not currently. The reminder has no dedicated action payload, so it opens the app rather than deep-linking straight to the ritual.</p>
+<h3>Why does OBubba remind me 30 minutes before a 42-minute routine?</h3>
+<p>The reminder uses a fixed 30-minute lead and does not read the customised routine total. The earlier Track button offers more notice, but the proactive timing should be made consistent.</p>
+<h3>Does completing the routine start the sleep timer?</h3>
+<p>No. OBubba closes the guide and asks the parent to start bedtime separately when the baby is actually down.</p>
+<h3>Are the nightly sleep tips personalised?</h3>
+<p>No. One of 30 fixed tips is selected by the calendar day. It is not chosen from the baby’s logs, age or feeding context.</p>
+<h2>Sources and further reading</h2>
+<ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Feeding on demand</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Safer sleep advice for babies</a></li></ul>
+
+      <section class="related-guides" aria-label="Related baby tracking guides">
+        <h2>Related baby tracking guides</h2>
+        <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
+        <div class="tags"><a class="tag" href="/blog/what-should-baby-wear-to-sleep.html">What Should Baby Wear to Sleep? TOG &amp; Temperature</a><a class="tag" href="/blog/when-can-i-stop-sterilising-baby-bottles.html">When Can I Stop Sterilising Baby Bottles?</a><a class="tag" href="/blog/babys-first-day-at-nursery-calm-checklist.html">Baby&#39;s First Day at Nursery: A Calm Checklist</a><a class="tag" href="/blog/iron-rich-foods-for-babies-weaning.html">Iron-Rich Foods for Babies: A Simple Weaning Guide</a><a class="tag" href="/blog/baby-not-waving-bye-bye-yet.html">Baby Not Waving Bye-Bye Yet? What to Watch and Try</a><a class="tag" href="/blog/how-much-water-baby-starting-solids.html">How Much Water Should My Baby Drink When Starting Solids?</a></div>
+      </section>
+      <div class="cta-band" style="margin-top: 44px;">
+        <h2>Ready to try OBubba?</h2>
+        <p>Use OBubba to track feeds, sleep, naps, nappies, growth, milestones and family handovers in one calm baby tracker app.</p>
+
+        <div class="hero-actions">
+          <a class="button store" href="https://apps.apple.com/app/obubba-baby-sleep-tracker/id6760968757">Download for iPhone</a>
+          <a class="button secondary store" href="https://play.google.com/store/apps/details?id=com.obubba.app&amp;referrer=utm_source%3Downed_search%26utm_medium%3Dseo%26utm_campaign%3Dfrom_bump_to_baby_auto%26utm_content%3Dauto_20260816_owned_blog_how-obubba-knows-when-start-wind-down">Get it on Android</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>OBubba - baby tracking, parenting rhythm and calmer handovers.</div>
+      <div>
+	        <a href="/privacy.html">Privacy</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/terms.html">Terms</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/obubba-visual-identity.html">Brand images</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/for-professionals.html">For professionals</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/feed.xml">RSS</a>
+	      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

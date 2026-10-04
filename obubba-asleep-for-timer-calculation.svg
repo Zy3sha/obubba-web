@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">How OBubba calculates the live asleep-for timer</title>
+  <desc id="desc">A timeline from 7:30pm to midnight contains a 30-minute awake interval. Four hours thirty minutes of elapsed night minus thirty minutes awake equals four hours asleep.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071a38"/>
+      <stop offset="1" stop-color="#132959"/>
+    </linearGradient>
+    <linearGradient id="sleep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#65e0d2"/>
+      <stop offset="1" stop-color="#a978f1"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#010817" flood-opacity=".30"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" rx="42" fill="url(#bg)"/>
+  <circle cx="1080" cy="80" r="160" fill="#a978f1" opacity=".08"/>
+  <circle cx="110" cy="676" r="170" fill="#65e0d2" opacity=".055"/>
+  <g fill="#fff" opacity=".55">
+    <circle cx="74" cy="82" r="2"/><circle cx="1122" cy="278" r="2"/><circle cx="1010" cy="660" r="3"/><circle cx="232" cy="150" r="2"/>
+  </g>
+
+  <text x="64" y="82" fill="#bd96ff" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="3">LIVE NIGHT TIMER</text>
+  <text x="64" y="132" fill="#ffffff" font-family="Georgia,serif" font-size="42" font-weight="700">Bedtime stays fixed. Known awake time comes out.</text>
+  <text x="64" y="169" fill="#b9c6df" font-family="Inter,Arial,sans-serif" font-size="20">A worked example from 7:30pm to midnight</text>
+
+  <g transform="translate(74 242)">
+    <text x="0" y="-28" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800">7:30pm</text>
+    <text x="678" y="-28" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800">10:15</text>
+    <text x="786" y="-28" fill="#f39aaa" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800">10:45</text>
+    <text x="1052" y="-28" text-anchor="end" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800">12:00am</text>
+    <rect x="0" y="0" width="1052" height="70" rx="22" fill="#ffffff" opacity=".08"/>
+    <rect x="0" y="0" width="678" height="70" rx="22" fill="url(#sleep)"/>
+    <rect x="678" y="0" width="108" height="70" fill="#f17685"/>
+    <rect x="786" y="0" width="266" height="70" rx="22" fill="url(#sleep)"/>
+    <rect x="764" y="0" width="44" height="70" fill="#a978f1"/>
+    <text x="339" y="44" text-anchor="middle" fill="#071a38" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="900">ASLEEP · 2h 45m</text>
+    <text x="732" y="44" text-anchor="middle" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="900">AWAKE</text>
+    <text x="919" y="44" text-anchor="middle" fill="#071a38" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="900">ASLEEP · 1h 15m</text>
+    <line x1="678" y1="-8" x2="678" y2="84" stroke="#ffffff" stroke-opacity=".38"/>
+    <line x1="786" y1="-8" x2="786" y2="84" stroke="#ffffff" stroke-opacity=".38"/>
+  </g>
+
+  <g transform="translate(72 392)" filter="url(#shadow)">
+    <rect width="1056" height="188" rx="30" fill="#10284f" stroke="#a978f1" stroke-opacity=".34"/>
+    <g transform="translate(34 32)">
+      <text x="0" y="22" fill="#b9c6df" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700">ELAPSED NIGHT SPAN</text>
+      <text x="0" y="76" fill="#ffffff" font-family="Georgia,serif" font-size="39" font-weight="700">4h 30m</text>
+      <text x="215" y="71" fill="#f5c96b" font-family="Inter,Arial,sans-serif" font-size="42" font-weight="500">−</text>
+      <text x="278" y="22" fill="#b9c6df" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700">KNOWN AWAKE</text>
+      <text x="278" y="76" fill="#f39aaa" font-family="Georgia,serif" font-size="39" font-weight="700">30m</text>
+      <text x="466" y="71" fill="#f5c96b" font-family="Inter,Arial,sans-serif" font-size="42" font-weight="500">=</text>
+      <text x="536" y="22" fill="#b9c6df" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700">OBUBBA “ASLEEP FOR”</text>
+      <text x="536" y="76" fill="#65e0d2" font-family="Georgia,serif" font-size="43" font-weight="700">4h 00m</text>
+      <text x="0" y="126" fill="#95a8ca" font-family="Inter,Arial,sans-serif" font-size="16">The original 7:30pm bedtime is preserved; the 30-minute pause changes only accumulated sleep.</text>
+    </g>
+  </g>
+
+  <g transform="translate(72 626)">
+    <rect width="1056" height="48" rx="16" fill="#ffffff" opacity=".07"/>
+    <circle cx="26" cy="24" r="10" fill="#f5c96b"/>
+    <text x="50" y="30" fill="#d9e1f0" font-family="Inter,Arial,sans-serif" font-size="17">Only recorded, timed awake periods can support an exact subtraction. Missing time is never guessed.</text>
+  </g>
+</svg>
