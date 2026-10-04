@@ -793,7 +793,7 @@
       <div class="article">
         <div class="article-kicker-row">
           <div class="meta">2026-09-19 / OBubba</div>
-          <span class="read-time">9 min read</span>
+          <span class="read-time">8 min read</span>
         </div>
         <h1>What Happens When You Tap ‘I Need Help’ in OBubba?</h1>
         <p>OBubba’s ‘I need help’ mood button is a private pause, not an SOS. See exactly what it does, what it saves and how to reach real support.</p>
@@ -801,7 +801,7 @@
       </div>
     </header>
     <article class="section rich-text article">
-      <p>If you tap <strong>“I need help”</strong> in OBubba’s Parent Room, the current Flutter app highlights that feeling, shows a kind response and points you towards a slow breath and the <strong>“You’re not alone”</strong> support section further down the page.</p>
+      <p>If you tap <strong>“I need help”</strong> in OBubba’s Parent Room, the current app highlights that feeling, shows a kind response and points you towards a slow breath and the <strong>“You’re not alone”</strong> support section further down the page.</p>
 <p>It does <strong>not</strong> call anyone, send a message, alert a clinician, notify a partner or save that quick choice to your wellbeing history.</p>
 <p>That distinction matters. “I need help” is a private way to admit how this moment feels. It is not an emergency button, and it should never be mistaken for one.</p>
 <p>&gt; <strong>If you or somebody else may be in danger, call 999 or go to A&amp;E now. In England, if you need urgent mental-health help but it is not an emergency, use NHS 111 online or call 111 and select the mental-health option. Do not wait for an app to respond.</strong></p>
@@ -810,9 +810,9 @@
 <p>When any of the four harder feelings is selected, OBubba says:</p>
 <p>&gt; Hard days are real and they’re not a failing. Try a slow breath below, and if this is most days, please reach out. Support is in “You’re not alone”.</p>
 <p>The selected face becomes brighter; the other faces soften. There is no score and no interrogation. The purpose is to lower the first barrier: naming the feeling.</p>
-<figure><img src="/obubba-parent-room-app.jpg" alt="The real OBubba Flutter Parent Room begins with a time-aware welcome, a kind word, recovery support and a private daily feeling check." loading="lazy"/><figcaption>Current OBubba Flutter Parent Room with fictional example profile data. The quick mood row is a screen-local pause, not an emergency alert or clinical record.</figcaption></figure>
+<figure><img src="/obubba-parent-room-app.jpg" alt="The real OBubba Parent Room begins with a time-aware welcome, a kind word, recovery support and a private daily feeling check." loading="lazy"/><figcaption>Current OBubba Parent Room with fictional example profile data. The quick mood row is a screen-local pause, not an emergency alert or clinical record.</figcaption></figure>
 <h2>What is private—and what is actually saved?</h2>
-<p>The quick “How are you today?” selection lives only in the Parent Room screen’s current state. The Flutter code does not write it to the baby’s timeline, the shared family record or the private EPDS score history.</p>
+<p>The quick “How are you today?” selection lives only in the Parent Room screen’s current state. The code does not write it to the baby’s timeline, the shared family record or the private EPDS score history.</p>
 <p>That means:</p>
 <ul><li>a co-parent does not receive a notification because you tapped it</li><li>a health professional cannot see it</li><li>OBubba cannot later prove that you were safe or unsafe</li><li>the app cannot follow up if you close it</li><li>tapping a brighter face does not cancel a need for help</li></ul>
 <p>Privacy can make honesty easier. But privacy also means the parent must deliberately move from the app to a person when support is needed.</p>
@@ -827,7 +827,7 @@
 <p>The separate <strong>“How are YOU doing?”</strong> card opens a private, two-minute EPDS wellbeing check. It asks ten questions one at a time about the previous week.</p>
 <p>This is a recognised screen, not a diagnosis. In OBubba’s implementation:</p>
 <ul><li>an unanswered question cannot silently count as the most reassuring answer</li><li>the result appears only after all ten answers are complete</li><li>completion time and total score are saved to an on-device wellbeing history</li><li>the ten individual answers are not added to the baby’s shared care timeline</li><li>any non-zero answer to the self-harm question opens the urgent support route, even if the total score is otherwise low</li><li>a concerning completed result can show region-correct, tap-to-call or tap-to-text support cards</li></ul>
-<figure><img src="/obubba-parent-wellbeing-checkin-app.jpg" alt="The real OBubba Flutter EPDS check shows one question at a time, a ten-step progress path and a plain privacy boundary." loading="lazy"/><figcaption>OBubba describes the EPDS as a screening tool rather than a diagnosis and saves a score only after the check is completed.</figcaption></figure>
+<figure><img src="/obubba-parent-wellbeing-checkin-app.jpg" alt="The real OBubba EPDS check shows one question at a time, a ten-step progress path and a plain privacy boundary." loading="lazy"/><figcaption>OBubba describes the EPDS as a screening tool rather than a diagnosis and saves a score only after the check is completed.</figcaption></figure>
 <p>Opening the check and backing out does not mark it complete. That prevents an unfinished screen from being treated as reassurance.</p>
 <h3>Door 3: connect to a human</h3>
 <p>The <strong>“You’re not alone”</strong> section in Parent Room displays support details that change with the app’s region. For a UK parent, that includes perinatal support, Samaritans, a crisis text route, a GP or health visitor and urgent services. Other supported regions receive their own local directory rather than UK numbers that may not work.</p>
@@ -849,7 +849,7 @@
 <p>Do not spend time completing a questionnaire first.</p>
 <h2>Why put parent support inside a baby tracker?</h2>
 <p>Feeds, naps, nappies and night wakes are not separate from the person recording them. A difficult night can leave a parent trying to make safety decisions with an exhausted brain. A baby-care app that only asks for more data can add to that load.</p>
-<p>OBubba’s current Flutter app takes a different approach:</p>
+<p>OBubba’s current app takes a different approach:</p>
 <ul><li>Parent Room lives inside <strong>Care</strong>, not buried in account settings</li><li>the greeting changes with the time of day, including the hard evening and late-night hours</li><li>weekly “wins” appear only when real family logs support them</li><li>several fully measured rough nights can prompt a gentle parent check-in</li><li>half-logged nights are not treated as a crisis</li><li>a recently completed wellbeing check suppresses repeat nudging for several days</li><li>parent-distress safety routes are authored and tested rather than handed to a generative reply</li></ul>
 <p>None of that allows OBubba to infer a diagnosis from baby sleep. It is a bridge from “the nights have been hard” to the question many trackers forget: <strong>how are you?</strong></p>
 <h2>A better five-minute support plan</h2>

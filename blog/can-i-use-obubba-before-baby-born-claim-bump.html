@@ -803,7 +803,7 @@
     <article class="section rich-text article">
       <p>Most baby trackers begin with a feed.</p>
 <p>But perhaps your baby is not here yet. You have an estimated due date, a private bump nickname and a head full of questions—but no bottles, nappies or naps to log. Opening a newborn dashboard now would feel like walking into the wrong chapter.</p>
-<p><strong>OBubba can begin during pregnancy.</strong> On the welcome screen, tap <strong>I&#39;m expecting</strong>. The current Flutter app opens a short setup called <strong>Claim your Bubba</strong>. It asks for only:</p>
+<p><strong>OBubba can begin during pregnancy.</strong> On the welcome screen, tap <strong>I&#39;m expecting</strong>. The current app opens a short setup called <strong>Claim your Bubba</strong>. It asks for only:</p>
 <ol><li>a name for the bump</li><li>an estimated due date</li><li>a storybook companion, if you want to choose a different one from the default</li></ol>
 <p>The first two are required. The illustrated companion is a gentle creative choice that can be changed later. Press <strong>Start your journey</strong> and OBubba creates one pregnancy profile rather than pretending a newborn already exists.</p>
 <p>That same profile can become the live feed, nappy and sleep tracker after birth. The useful idea is continuity: start with the story, then add the practical record when your baby arrives.</p>
@@ -812,7 +812,7 @@
 <p>New users see two clear paths on OBubba&#39;s welcome screen:</p>
 <ul><li>start tracking when the baby is already here</li><li>tap <strong>I&#39;m expecting</strong> to enter pregnancy mode</li></ul>
 <p>There is also a recovery route if someone begins the baby-onboarding flow by mistake. The first onboarding screen offers <strong>Set up your pregnancy</strong>, which replaces that route with the pregnancy setup instead of making the parent back out and restart.</p>
-<p>This matters more than it sounds. A pregnancy experience should not ask for a birth date that does not exist. A newborn tracker should not calculate a fictional age from a due date. The Flutter data model keeps those states separate: an expecting profile is marked as unborn and has an expected date, but no date of birth.</p>
+<p>This matters more than it sounds. A pregnancy experience should not ask for a birth date that does not exist. A newborn tracker should not calculate a fictional age from a due date. The data model keeps those states separate: an expecting profile is marked as unborn and has an expected date, but no date of birth.</p>
 <p>While that pregnancy flag is active, baby-age calculations and newborn insights are deliberately withheld. OBubba shows the pregnancy journey rather than fabricating feeds, wake windows or a seven-month-old development card for a baby who has not been born.</p>
 <h2>Why the setup is deliberately small</h2>
 <p>Pregnancy apps often ask for a long intake before showing any value: last menstrual period, cycle length, symptoms, health history, notification choices and marketing preferences.</p>
@@ -824,7 +824,7 @@
 <p>The first field says <strong>A name for the bump</strong> and suggests “Pip, Bean, or a chosen name”.</p>
 <p>This can be:</p>
 <ul><li>a nickname you already use</li><li>“Baby” plus a surname or initial</li><li>a chosen first name</li><li>something deliberately neutral while you decide</li></ul>
-<p>It is not a legal name and does not have to be final. In the Flutter record, the entry is saved both as the current child label and as the bump name used by pregnancy screens. It can be updated later.</p>
+<p>It is not a legal name and does not have to be final. In the record, the entry is saved both as the current child label and as the bump name used by pregnancy screens. It can be updated later.</p>
 <p>The practical benefit is small but lovely: a weekly card that says “Pip” feels less like generic pregnancy content than one addressed to “Fetus 1”. It also gives the profile a recognisable identity when appointments, preparation items and keepsakes begin to accumulate.</p>
 <p>If the pregnancy is private, use a label you are comfortable seeing on your phone screen. A nickname is enough.</p>
 <h2>Step 2: add the estimated due date</h2>
@@ -840,15 +840,15 @@
 <p>The picker states the boundary plainly: these are <strong>gentle storybook friends, not predictions</strong>. They do not predict skin tone, hair, sex, health or what an ultrasound will show. The illustration is closer to choosing a character in a keepsake book than customising a biological model.</p>
 <p>The choice can be changed later from the pregnancy experience. It travels through the weekly journey so the visual story feels consistent without pretending to represent the baby literally.</p>
 <p>That distinction makes the feature more emotionally useful. Imagination is welcome; false precision is not.</p>
-<figure><img src="/obubba-claim-bump-app.jpg" alt="The genuine OBubba Flutter Claim your Bubba screen showing a bump-name field, estimated due-date picker and optional storybook-baby choice." loading="lazy"/><figcaption>The real pregnancy entry screen asks for two required details and one changeable creative choice before opening the journey.</figcaption></figure>
+<figure><img src="/obubba-claim-bump-app.jpg" alt="The genuine OBubba Claim your Bubba screen showing a bump-name field, estimated due-date picker and optional storybook-baby choice." loading="lazy"/><figcaption>The real pregnancy entry screen asks for two required details and one changeable creative choice before opening the journey.</figcaption></figure>
 <h2>What happens when you tap “Start your journey”</h2>
-<p>The button becomes active when a bump name and due date are present. The Flutter flow then:</p>
+<p>The button becomes active when a bump name and due date are present. The flow then:</p>
 <ol><li>creates the child profile in pregnancy mode</li><li>stores the bump name and expected date</li><li>stores the chosen or default storybook companion</li><li>makes that profile the active child</li><li>adds it to the family&#39;s saved child roster</li><li>opens the pregnancy home</li></ol>
 <p>The button has a re-entry guard so a rapid double-tap cannot create two bumps. If profile creation succeeds but a later setup step fails, the screen remembers the profile code and resumes instead of creating another one on retry.</p>
 <p>If the connection or backend write fails, OBubba does not leave a dead button. It shows a calm “check your connection” message and lets the parent try again.</p>
 <p>These details are invisible when everything works—and that is exactly the point. An emotional starting moment should not produce duplicate profiles because of a slow network or an enthusiastic thumb.</p>
 <h2>What opens after setup</h2>
-<p>Pregnancy mode is more than a due-date counter. The current Flutter experience connects the same expecting profile to:</p>
+<p>Pregnancy mode is more than a due-date counter. The current experience connects the same expecting profile to:</p>
 <ul><li>a week-by-week story from weeks 4 to 40</li><li>a browsable pregnancy journey, including future-stage previews</li><li>preparation checklists</li><li>appointments and reminders</li><li>a kick counter and contraction timer</li><li>perineal-massage and “Good to know” guidance</li><li>mood and parent-support tools</li><li>letters and keepsakes for the future</li></ul>
 <p>Not every tool is appropriate at every stage. A contraction timer is not useful at six weeks, and a kick counter should never become a target that overrides concern about reduced movements. The pregnancy home groups tools into a journey rather than suggesting everything must be used immediately.</p>
 <p>Our <a href="/blog/how-many-weeks-pregnant-am-i-obubba-weekly-story.html">week-by-week pregnancy guide</a> explains how OBubba turns the EDD into a story without presenting its artwork as a scan. For practical maternity timing, use the guidance and contact numbers in your maternity notes.</p>
@@ -880,13 +880,13 @@
 <h3>Do I need to know my baby&#39;s name?</h3>
 <p>No. A bump nickname, “Baby” or any comfortable temporary label works. It can be changed later.</p>
 <h3>Is the storybook baby supposed to look like my baby?</h3>
-<p>No. The Flutter picker explicitly calls the six illustrations storybook friends, not predictions. Choose one for warmth, keep the default or change it later.</p>
+<p>No. The picker explicitly calls the six illustrations storybook friends, not predictions. Choose one for warmth, keep the default or change it later.</p>
 <h3>Does OBubba ask for my symptoms or medical history during setup?</h3>
 <p>Not on the Claim your Bubba screen. That entry flow asks only for a bump name, due date and creative companion choice.</p>
 <h3>Will pregnancy mode show newborn sleep predictions?</h3>
 <p>No. The data model returns no baby age while the profile is unborn, and newborn prediction providers short-circuit. Pregnancy has its own experience.</p>
 <h3>What happens if I tap the button twice?</h3>
-<p>The current Flutter screen blocks re-entry while creation is running, preventing a double-tap from creating duplicate profiles.</p>
+<p>The current screen blocks re-entry while creation is running, preventing a double-tap from creating duplicate profiles.</p>
 <h3>Will I need a new profile after birth?</h3>
 <p>No. Marking the baby as arrived converts the existing profile into the live tracker and records the actual birth date. Premature-birth handling can preserve the original due date for corrected-age use.</p>
 <h3>Is OBubba an NHS maternity-record app?</h3>

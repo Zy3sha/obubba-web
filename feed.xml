@@ -465,7 +465,7 @@
       <link>https://obubba.com/blog/can-baby-sleep-app-predict-night-wakes.html</link>
       <guid>https://obubba.com/blog/can-baby-sleep-app-predict-night-wakes.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>OBubba may say to expect roughly 1–2 wakes tonight. See the real Flutter calculation, what the range can help you plan and why it is never a promise.</description>
+      <description>OBubba may say to expect roughly 1–2 wakes tonight. See the real calculation, what the range can help you plan and why it is never a promise.</description>
     </item>
     <item>
       <title>Can Grandparents Use OBubba Without Downloading the App?</title>
@@ -493,7 +493,7 @@
       <link>https://obubba.com/blog/can-i-hide-obubba-advice-guidance-snooze.html</link>
       <guid>https://obubba.com/blog/can-i-hide-obubba-advice-guidance-snooze.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>What Got it, Hide this for a week and safety cards really do in OBubba’s Guidance library—verified against the current Flutter app.</description>
+      <description>What Got it, Hide this for a week and safety cards really do in OBubba’s Guidance library—verified against the current app.</description>
     </item>
     <item>
       <title>Can I Reheat Baby Food? A Fridge, Freezer and Leftovers Guide</title>
@@ -528,7 +528,7 @@
       <link>https://obubba.com/blog/can-obubba-plan-bath-time-around-nap-2.html</link>
       <guid>https://obubba.com/blog/can-obubba-plan-bath-time-around-nap-2.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>See how OBubba’s Flutter app places bath, meal, outing and care tasks around the baby’s predicted wake, naps or bedtime—and what happens when the rhythm changes.</description>
+      <description>See how OBubba’s app places bath, meal, outing and care tasks around the baby’s predicted wake, naps or bedtime—and what happens when the rhythm changes.</description>
     </item>
     <item>
       <title>Can OBubba Really Say ‘Safe to Give Now’ for Baby Medicine?</title>
@@ -724,7 +724,7 @@
       <link>https://obubba.com/blog/how-obubba-builds-seven-night-night-weaning-plan.html</link>
       <guid>https://obubba.com/blog/how-obubba-builds-seven-night-night-weaning-plan.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>We traced OBubba’s Flutter night-weaning engine: its five-night baseline, three readiness lights, bottle and breastfeeding branches, safeguards and current limits.</description>
+      <description>We traced OBubba’s night-weaning engine: its five-night baseline, three readiness lights, bottle and breastfeeding branches, safeguards and current limits.</description>
     </item>
     <item>
       <title>How Does OBubba Build ‘Tonight for Maya’?</title>
@@ -745,7 +745,7 @@
       <link>https://obubba.com/blog/how-obubba-chooses-todays-play.html</link>
       <guid>https://obubba.com/blog/how-obubba-chooses-todays-play.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>See how OBubba’s Flutter app ranks Today’s Play from corrected age, recent activities, emerging skills, milestones and live development context.</description>
+      <description>See how OBubba’s app ranks Today’s Play from corrected age, recent activities, emerging skills, milestones and live development context.</description>
     </item>
     <item>
       <title>How Does OBubba Decide a Baby Sleep Pattern Is Real?</title>
@@ -1018,14 +1018,14 @@
       <link>https://obubba.com/blog/what-does-obubba-baby-sleep-quality-score-mean.html</link>
       <guid>https://obubba.com/blog/what-does-obubba-baby-sleep-quality-score-mean.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>Why did OBubba give last week 67%? See the real Flutter formula, the four logged signals behind it, what missing nights do—and why the score is context, not a grade.</description>
+      <description>Why did OBubba give last week 67%? See the real formula, the four logged signals behind it, what missing nights do—and why the score is context, not a grade.</description>
     </item>
     <item>
       <title>What Does OBubba’s Development Map Actually Know?</title>
       <link>https://obubba.com/blog/what-does-obubba-development-map-know.html</link>
       <guid>https://obubba.com/blog/what-does-obubba-development-map-know.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>See how OBubba’s real Flutter Development Map separates age-based context from logged signals, uses corrected age and keeps milestones from becoming deadlines.</description>
+      <description>See how OBubba’s real Development Map separates age-based context from logged signals, uses corrected age and keeps milestones from becoming deadlines.</description>
     </item>
     <item>
       <title>What Should I Feed My Baby This Week? A Simple Weaning Meal Plan</title>
@@ -1102,7 +1102,7 @@
       <link>https://obubba.com/blog/when-obubba-nap-prediction-wrong-learns.html</link>
       <guid>https://obubba.com/blog/when-obubba-nap-prediction-wrong-learns.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>If your baby sleeps earlier or later than OBubba predicted, learn what to do now—and how the real Flutter app turns repeated first-nap misses into a safer correction.</description>
+      <description>If your baby sleeps earlier or later than OBubba predicted, learn what to do now—and how the real app turns repeated first-nap misses into a safer correction.</description>
     </item>
     <item>
       <title>When to Pack Your Hospital Bag: A Calm UK Checklist</title>
@@ -1242,7 +1242,7 @@
       <link>https://obubba.com/blog/why-obubba-says-brief-cycle-linked-stirs.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-brief-cycle-linked-stirs.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>See the exact Flutter rules behind OBubba’s reassuring sleep insight: at least two fully timed wakes, each 10 minutes or less, with no night feed.</description>
+      <description>See the exact rules behind OBubba’s reassuring sleep insight: at least two fully timed wakes, each 10 minutes or less, with no night feed.</description>
     </item>
     <item>
       <title>Why Does OBubba Say ‘Build a Sleep Song + Cot Routine’?</title>
@@ -1270,7 +1270,7 @@
       <link>https://obubba.com/blog/why-obubba-says-daytime-milk-up-this-week.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-daytime-milk-up-this-week.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>See the exact two-week Flutter calculation behind OBubba’s daytime-milk trend—and how to respond without chasing bottle totals or expecting better sleep.</description>
+      <description>See the exact two-week calculation behind OBubba’s daytime-milk trend—and how to respond without chasing bottle totals or expecting better sleep.</description>
     </item>
     <item>
       <title>Why Does OBubba Say ‘Evening Cluster Feeds Pay Off’?</title>
@@ -1291,7 +1291,7 @@
       <link>https://obubba.com/blog/why-obubba-says-feed-to-nap-gap.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-feed-to-nap-gap.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>The exact Flutter rules behind OBubba’s feed-to-nap insight, what its four timing bands measure, and how to test a gentler gap without delaying a hungry baby.</description>
+      <description>The exact rules behind OBubba’s feed-to-nap insight, what its four timing bands measure, and how to test a gentler gap without delaying a hungry baby.</description>
     </item>
     <item>
       <title>Why Does OBubba Say ‘Feeding Is Up, Likely a Growth Spurt’?</title>
@@ -1312,14 +1312,14 @@
       <link>https://obubba.com/blog/why-obubba-says-introduce-common-allergens.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-introduce-common-allergens.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>See the exact Flutter rule behind OBubba’s common-allergen reminder, which six foods it checks, what it remembers, and how to act on it safely.</description>
+      <description>See the exact rule behind OBubba’s common-allergen reminder, which six foods it checks, what it remembers, and how to act on it safely.</description>
     </item>
     <item>
       <title>Why Does OBubba Say ‘Language Is Bubbling Up’?</title>
       <link>https://obubba.com/blog/why-obubba-says-language-is-bubbling-up.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-language-is-bubbling-up.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>See exactly how OBubba’s Flutter app recognises a possible baby language burst from parent notes, explains its confidence and adapts Today’s Play.</description>
+      <description>See exactly how OBubba’s app recognises a possible baby language burst from parent notes, explains its confidence and adapts Today’s Play.</description>
     </item>
     <item>
       <title>Why Does OBubba Say ‘A Late-Afternoon Fussy Patch’?</title>
@@ -1333,7 +1333,7 @@
       <link>https://obubba.com/blog/why-obubba-says-late-nap-may-move-bedtime.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-late-nap-may-move-bedtime.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>See the exact Flutter rule behind OBubba’s late-nap bedtime card, how it calculates tonight’s earliest plausible bedtime, and what parents can do.</description>
+      <description>See the exact rule behind OBubba’s late-nap bedtime card, how it calculates tonight’s earliest plausible bedtime, and what parents can do.</description>
     </item>
     <item>
       <title>Why Does OBubba Say ‘Maya Is Learning to Resettle Alone’?</title>
@@ -1396,14 +1396,14 @@
       <link>https://obubba.com/blog/why-obubba-says-mixed-day-wins-few-tweaks.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-mixed-day-wins-few-tweaks.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>See exactly how OBubba’s Flutter Day Review turns last night, naps and care logs into grounded wins and compatible next steps—without judging the day too early.</description>
+      <description>See exactly how OBubba’s Day Review turns last night, naps and care logs into grounded wins and compatible next steps—without judging the day too early.</description>
     </item>
     <item>
       <title>Why Does OBubba Say ‘Mornings Are Settling Later’?</title>
       <link>https://obubba.com/blog/why-obubba-says-mornings-are-settling-later.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-mornings-are-settling-later.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>See how OBubba’s Flutter app compares up to 28 logged morning wakes, uses medians and stays deliberately quiet when a baby starts waking later.</description>
+      <description>See how OBubba’s app compares up to 28 logged morning wakes, uses medians and stays deliberately quiet when a baby starts waking later.</description>
     </item>
     <item>
       <title>Why Does OBubba Say ‘Mucousy Nappies Are Hanging Around’?</title>
@@ -1431,7 +1431,7 @@
       <link>https://obubba.com/blog/why-obubba-says-next-sleep-getting-overdue.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-next-sleep-getting-overdue.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>The exact Flutter rules behind OBubba’s live overdue-sleep card, its 45-minute grace period, what it reads, what it misses, and how to respond without forcing a nap.</description>
+      <description>The exact rules behind OBubba’s live overdue-sleep card, its 45-minute grace period, what it reads, what it misses, and how to respond without forcing a nap.</description>
     </item>
     <item>
       <title>Why Does OBubba Say ‘Night Feeds Are Dropping’?</title>
@@ -1445,7 +1445,7 @@
       <link>https://obubba.com/blog/why-obubba-says-one-breast-doing-most-work.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-one-breast-doing-most-work.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>The exact Flutter threshold behind OBubba’s one-sided breastfeeding alert, why minutes are not milk transfer, and what to do if a breast feels full or painful.</description>
+      <description>The exact threshold behind OBubba’s one-sided breastfeeding alert, why minutes are not milk transfer, and what to do if a breast feels full or painful.</description>
     </item>
     <item>
       <title>Why Does OBubba Say ‘A Possible Pattern with Dairy’?</title>
@@ -1466,14 +1466,14 @@
       <link>https://obubba.com/blog/why-obubba-says-promising-give-it-couple-more-nights.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-promising-give-it-couple-more-nights.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>See how OBubba’s Flutter Coach checks an early sleep-experiment win, why nights 3–4 can flatter a result, and what the app really means by keep going.</description>
+      <description>See how OBubba’s Coach checks an early sleep-experiment win, why nights 3–4 can flatter a result, and what the app really means by keep going.</description>
     </item>
     <item>
       <title>Why Does OBubba Say ‘Ready to Explore Solids?’</title>
       <link>https://obubba.com/blog/why-obubba-says-ready-to-explore-solids.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-ready-to-explore-solids.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>See the exact Flutter logic behind OBubba’s solids-readiness card, what it knows, what it cannot know, and the three checks to make before a first taste.</description>
+      <description>See the exact logic behind OBubba’s solids-readiness card, what it knows, what it cannot know, and the three checks to make before a first taste.</description>
     </item>
     <item>
       <title>Why Does OBubba Say ‘Ready to Move Past Purées’?</title>
@@ -1501,7 +1501,7 @@
       <link>https://obubba.com/blog/why-obubba-says-spacing-out-new-allergens.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-spacing-out-new-allergens.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>The exact Flutter rules behind OBubba’s allergen-pacing card, what counts as a new allergen, when it stays quiet, and how to introduce foods safely without chasing an app schedule.</description>
+      <description>The exact rules behind OBubba’s allergen-pacing card, what counts as a new allergen, when it stays quiet, and how to introduce foods safely without chasing an app schedule.</description>
     </item>
     <item>
       <title>Why Does OBubba Say It’s Still Learning My Baby?</title>
@@ -1515,7 +1515,7 @@
       <link>https://obubba.com/blog/why-obubba-says-taking-longer-to-settle-lately.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-taking-longer-to-settle-lately.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>The exact Flutter logic behind OBubba’s settling-time trend: which naps count, the 10-day comparison, why gaps matter and what to try without blaming yourself.</description>
+      <description>The exact logic behind OBubba’s settling-time trend: which naps count, the 10-day comparison, why gaps matter and what to try without blaming yourself.</description>
     </item>
     <item>
       <title>Why Does OBubba Say ‘Teething Comfort for Maya’?</title>
@@ -1536,14 +1536,14 @@
       <link>https://obubba.com/blog/why-obubba-says-unsettled-body-clock.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-unsettled-body-clock.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>See the real Flutter logic behind OBubba’s unsettled-body-clock insight: its 14-day bedtime range, confidence gates, safety holds and what the logs cannot prove.</description>
+      <description>See the real logic behind OBubba’s unsettled-body-clock insight: its 14-day bedtime range, confidence gates, safety holds and what the logs cannot prove.</description>
     </item>
     <item>
       <title>Why Does OBubba Say ‘Wakes and Night Feeds Tend to Travel Together’?</title>
       <link>https://obubba.com/blog/why-obubba-says-wakes-night-feeds-travel-together.html</link>
       <guid>https://obubba.com/blog/why-obubba-says-wakes-night-feeds-travel-together.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>See the real Flutter rules behind OBubba’s feed-associated waking insight, what it can and cannot know, and how to test the pattern without withholding a needed feed.</description>
+      <description>See the real rules behind OBubba’s feed-associated waking insight, what it can and cannot know, and how to test the pattern without withholding a needed feed.</description>
     </item>
     <item>
       <title>Why Does OBubba Say ‘Warm-Room Nights Have Averaged More Wakes’?</title>
@@ -1606,7 +1606,7 @@
       <link>https://obubba.com/blog/will-i-lose-baby-tracker-data-changing-phones.html</link>
       <guid>https://obubba.com/blog/will-i-lose-baby-tracker-data-changing-phones.html</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-      <description>See how OBubba’s Flutter family archive protects every baby, restores missing logs and preserves shared care when you move to a new phone.</description>
+      <description>See how OBubba’s family archive protects every baby, restores missing logs and preserves shared care when you move to a new phone.</description>
     </item>
     <item>
       <title>Will OBubba Tell Me to Sleep Train? You Choose the Approach</title>

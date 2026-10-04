@@ -803,15 +803,15 @@
     <article class="section rich-text article">
       <p>At 2am, almost every settling method feels slow. You may feed, rock, hold, pat, replace a dummy, pause, then forget which part took five minutes and which took twenty. After enough night-wake records, OBubba can surface a card such as:</p>
 <p>&gt; <strong>What settles Oliver fastest</strong> &gt; Self-settling gets Oliver back down in about 8 min, vs ~28 min with rocking/holding.</p>
-<p>That sounds unusually personal—and it is. The current Flutter app is comparing this baby’s own recorded settling times, not applying a universal sleep-training rule.</p>
+<p>That sounds unusually personal—and it is. The current app is comparing this baby’s own recorded settling times, not applying a universal sleep-training rule.</p>
 <p>But <strong>“fastest” needs careful translation</strong>. The calculation can mix per-method segments from detailed records with whole-wake durations from simpler records. It groups rocking, holding and patting together. It compares the quickest bucket with the slowest bucket, and it cannot prove that the winning method caused sleep.</p>
 <p>Used in proportion, the card answers a useful question: <strong>which recorded route has taken less time in this family’s recent night log?</strong> It does not answer which method is best, kindest, safest or appropriate for the next wake.</p>
 <h2>The short answer</h2>
 <p>The current insight needs all of the following:</p>
-<p>| Gate | Flutter rule | Why it matters | |---|---:|---| | Recent history | Up to <strong>14 reconstructed nights</strong> | One memorable wake is not enough | | Comparable methods | At least <strong>2 method buckets</strong> with positive time | There must be something to compare | | Evidence at both extremes | At least <strong>3 samples</strong> in the fastest and slowest buckets | A one-off win cannot become advice | | Meaningful separation | Slowest rounded average minus fastest rounded average is at least <strong>8 minutes</strong> | Near-ties stay quiet | | Contradiction guard | A winning feed can be suppressed when a feed-reduction insight is active | The same screen should not give opposite instructions |</p>
+<p>| Gate | rule | Why it matters | |---|---:|---| | Recent history | Up to <strong>14 reconstructed nights</strong> | One memorable wake is not enough | | Comparable methods | At least <strong>2 method buckets</strong> with positive time | There must be something to compare | | Evidence at both extremes | At least <strong>3 samples</strong> in the fastest and slowest buckets | A one-off win cannot become advice | | Meaningful separation | Slowest rounded average minus fastest rounded average is at least <strong>8 minutes</strong> | Near-ties stay quiet | | Contradiction guard | A winning feed can be suppressed when a feed-reduction insight is active | The same screen should not give opposite instructions |</p>
 <p>The card is low urgency. Its own final sentence says to follow hunger and comfort cues first.</p>
-<figure><img src="/obubba-what-settles-baby-fastest-logic.svg" alt="The exact route from OBubba’s night-wake records to the “What settles fastest” card." loading="lazy"/><figcaption>The Flutter engine scans up to fourteen recent nights, converts valid settling records into four broad buckets, compares rounded averages and speaks only when both extreme buckets have at least three samples and differ by eight minutes or more.</figcaption></figure>
-<h2>The exact Flutter data path</h2>
+<figure><img src="/obubba-what-settles-baby-fastest-logic.svg" alt="The exact route from OBubba’s night-wake records to the “What settles fastest” card." loading="lazy"/><figcaption>The engine scans up to fourteen recent nights, converts valid settling records into four broad buckets, compares rounded averages and speaks only when both extreme buckets have at least three samples and differ by eight minutes or more.</figcaption></figure>
+<h2>The exact data path</h2>
 <p>OBubba’s brain scans the latest reconstructed night and up to thirteen earlier nights. It keeps entries that are:</p>
 <ul><li>type <strong>Wake</strong>;</li><li>marked as a <strong>night</strong> event; and</li><li>attached to a positive settling time.</li></ul>
 <p>The code then takes one of two routes for each wake.</p>
@@ -832,7 +832,7 @@
 <p>If all three assisted samples were <strong>Patted</strong>, the current label can still say <strong>“rocking/holding”</strong>. If holding is quick but rocking is slow, combining them may hide the difference. “Other” currently means dummy rather than every possible alternative.</p>
 <p>The card is best read at bucket level: self, feed, hands-on soothing or dummy—not as a precise ranking of every technique.</p>
 <h2>How the winner is calculated</h2>
-<p>For every bucket with a positive sample, Flutter totals the minutes and divides by the sample count. Each average is rounded to a whole minute.</p>
+<p>For every bucket with a positive sample, totals the minutes and divides by the sample count. Each average is rounded to a whole minute.</p>
 <p>Imagine the recent records contain:</p>
 <p>| Bucket | Samples | Rounded average | |---|---|---:| | Self-settling | 7, 8, 9 min | <strong>8 min</strong> | | Feed | 13, 15, 17 min | <strong>15 min</strong> | | Rocking/holding | 26, 28, 30 min | <strong>28 min</strong> |</p>
 <p>The app sorts those averages. It names only the fastest and slowest:</p>
@@ -879,7 +879,7 @@
 <p>The result is a personal association in the log. It is not proof of cause, a measure of attachment or a verdict on parenting quality.</p>
 <h2>How to record a wake without turning it into homework</h2>
 <p>During a running night sleep, tap <strong>Pause</strong> when the baby is genuinely awake. Respond first. When sleep resumes, record the wake duration and the methods you actually used.</p>
-<figure><img src="/obubba-night-wake-pause-app.jpg" alt="OBubba’s genuine Flutter night clock keeps Pause close during a running sleep so a night wake stays distinct from the final morning Wake." loading="lazy"/><figcaption>The live Track screen separates a temporary night-wake pause from ending the night. The later settling comparison depends on those reconstructed night events and the methods attached to them.</figcaption></figure>
+<figure><img src="/obubba-night-wake-pause-app.jpg" alt="OBubba’s genuine night clock keeps Pause close during a running sleep so a night wake stays distinct from the final morning Wake." loading="lazy"/><figcaption>The live Track screen separates a temporary night-wake pause from ending the night. The later settling comparison depends on those reconstructed night events and the methods attached to them.</figcaption></figure>
 <p>For useful data:</p>
 <ol><li><strong>Choose what really happened.</strong> Fed, rocked, held, patted, dummy and self-settle are observations, not grades.</li><li><strong>Use the detailed breakdown when it is easy.</strong> Order and per-method minutes make the record more specific.</li><li><strong>Keep simple records honest.</strong> A rough whole-wake duration is better than invented precision.</li><li><strong>Do not log calm awake time as Self-settle unless that is genuinely how the recorded sequence ended.</strong></li><li><strong>Do not change care to make the chart prettier.</strong> The baby in front of you outranks the average.</li></ol>
 <p>The deeper value appears after several ordinary records. OBubba can remember a distinction an exhausted parent cannot reasonably calculate overnight.</p>
@@ -899,7 +899,7 @@
 <ul><li>fewer than two recognised method buckets have positive time;</li><li>one of the extreme buckets has fewer than three samples;</li><li>the rounded averages are fewer than eight minutes apart;</li><li>settle methods were left blank;</li><li>wake duration was missing or zero on simple records;</li><li>detailed breakdown segments had no positive minutes;</li><li>only one method is used consistently;</li><li>Feed would win while a compatible feed-reduction insight is active; or</li><li>the pattern is outside the visible or curated insight feed.</li></ul>
 <p>No card does not mean the app thinks settling is going badly. It means this particular comparison cannot make a sufficiently distinct claim from the available record—or that another message has priority.</p>
 <h2>Where the insight lives</h2>
-<p>Flutter classifies <strong>Settle method</strong> as a longer-term pattern. It belongs in <strong>What OBubba noticed</strong>, rather than behaving like a one-night warning.</p>
+<p>classifies <strong>Settle method</strong> as a longer-term pattern. It belongs in <strong>What OBubba noticed</strong>, rather than behaving like a one-night warning.</p>
 <p>Its dismissal identity is based on the insight title. Because the title includes the baby’s name but not the winning method, a changed ranking can retain the same identity. That reduces repetitive cards, though it can also make a newly changed winner less obvious after the earlier version was marked seen.</p>
 <p>The card reports low urgency, a sample size and a confidence label. It is designed to be useful context, not an alarm.</p>
 <h2>How this could become even more trustworthy</h2>

@@ -803,7 +803,7 @@
     <article class="section rich-text article">
       <p>You finally decide to test an earlier bedtime. Then a tooth appears, the baby feels warm or pulling to stand becomes the only activity they want to practise.</p>
 <p>OBubba replaces the start button with <strong>“Let’s hold off a few days.”</strong> Is the app abandoning the plan just when sleep is hardest?</p>
-<p>We traced the current Flutter Sleep Consultant, disruption context, coaching ladder and experiment-outcome code for this guide. The hold is not a verdict that the original idea was wrong. It is protection against a bad comparison: if temporary discomfort or development changes the nights, the app cannot fairly judge whether the sleep lever helped.</p>
+<p>We traced the current Sleep Consultant, disruption context, coaching ladder and experiment-outcome code for this guide. The hold is not a verdict that the original idea was wrong. It is protection against a bad comparison: if temporary discomfort or development changes the nights, the app cannot fairly judge whether the sleep lever helped.</p>
 <p>The principle is simple: <strong>hold the experiment, not the care.</strong></p>
 <figure><img src="/obubba-when-to-hold-sleep-change.svg" alt="How OBubba holds a new sleep change, freezes an active coaching rung and protects an experiment from a false failure." loading="lazy"/><figcaption>A current disruption can hold a new plan; during an existing plan the rung stays steady; at review, a disruption inside the test window prevents a rough result being stored as a clean failure.</figcaption></figure>
 <h2>The short answer</h2>
@@ -817,11 +817,11 @@
 <p>But the test did not isolate bedtime. It measured bedtime <strong>plus a teething week</strong>.</p>
 <p>This is called confounding: something outside the planned change affects the outcome. Family logs cannot eliminate every confounder, but an app can avoid treating the most visible ones as clean evidence.</p>
 <h2>OBubba uses two disruption gates</h2>
-<p>The current Flutter app does not rely on one generic “rough week” switch.</p>
+<p>The current app does not rely on one generic “rough week” switch.</p>
 <p>| Gate | What it asks | Why both are needed | |---|---|---| | <strong>Presence gate</strong> | Is an explicitly logged disruption active right now? | A sick or teething baby should not be pushed into a new plan merely because earlier nights happened to look calm. | | <strong>Rough-night diagnostic</strong> | Have nights already become unusually disrupted, and is a sufficiently strong cause ranked at the top? | A repeated sleep change can provide context even when there is no single current log carrying the whole story. |</p>
 <p>The presence gate is protective before a pattern becomes dramatic. The diagnostic gate explains a disturbance already visible in the sleep history.</p>
 <h2>What counts as an active presence signal</h2>
-<p>The shared Flutter context checks recent logs in a fixed priority order.</p>
+<p>The shared context checks recent logs in a fixed priority order.</p>
 <h3>1. Illness or fever comes first</h3>
 <p>The app can hold when the bedtime day or physical night contains a local <strong>sick</strong> tag, an actual fever reading or a recognised pain/fever medicine entry. A fever from the last two days can also keep the hold active.</p>
 <p>The code deliberately does not treat every temperature check as fever, and a routine vitamin D supplement does not become “illness” merely because it was stored in the medicine log.</p>
@@ -841,8 +841,8 @@
 <p>It then ranks possible causes. Confirmed or strongly supported disruption types clear the Sleep Consultant’s hold threshold; a soft keyword-only suspicion does not.</p>
 <p>For example, a note that merely contains a teething-like word can produce a gentle possible-teething clue, but that clue scores below the automatic training-hold line. An explicit current teething record is different: the presence gate can hold even before the nights are severe.</p>
 <p>The score-based route can also raise a recently introduced common allergen high enough to hold a plan when rough nights are present. That is a reason to <strong>stop treating sleep as the main question</strong>, not evidence that a food caused the wakes. Hives, facial swelling, repeated vomiting, breathing changes or another suspected reaction need appropriate medical help; an app experiment must not delay it.</p>
-<h2>The genuine Flutter insight surface</h2>
-<figure><img src="/obubba-noticed-teething-split-night-insights.jpg" alt="The genuine OBubba Flutter insight feed showing teething, a split night and an age-based regression window as separate pieces of context." loading="lazy"/><figcaption>The current Flutter feed can surface overlapping clues separately. The Sleep Consultant then uses the strongest sufficiently supported disruption to decide whether a new plan should wait.</figcaption></figure>
+<h2>The genuine insight surface</h2>
+<figure><img src="/obubba-noticed-teething-split-night-insights.jpg" alt="The genuine OBubba insight feed showing teething, a split night and an age-based regression window as separate pieces of context." loading="lazy"/><figcaption>The current feed can surface overlapping clues separately. The Sleep Consultant then uses the strongest sufficiently supported disruption to decide whether a new plan should wait.</figcaption></figure>
 <p>The screen above shows why priority matters. Teething, a long awake stretch and an age window may overlap. They are not interchangeable diagnoses.</p>
 <p>OBubba’s current architecture lets each detector build its own clue, then uses the strongest supported context when deciding whether a structured change should start. A single calm message reaches the parent, but the app does not pretend every card came from the same evidence rule.</p>
 <h2>Before a plan: “Let’s hold off a few days”</h2>
@@ -865,7 +865,7 @@
 <h2>How the app protects a possibly useful lever</h2>
 <p>Normally, a clean <strong>worse</strong> or <strong>no signal</strong> result can make OBubba stop proposing the same practical change for roughly 60 days. That prevents nagging a family with a lever they already tried.</p>
 <p>When a recognised disruption overlaps the trial, those negative verdicts are stored as <strong>missing data</strong> instead. The experiment can conclude, so it does not block every future suggestion, but the app does not poison the baby’s learning history with a false failure.</p>
-<p>This is one of the more valuable details in the Flutter implementation:</p>
+<p>This is one of the more valuable details in the implementation:</p>
 <p><strong>uncertain evidence is not negative evidence.</strong></p>
 <h2>How long should the hold last?</h2>
 <p>“A few days” is intentionally not a universal countdown.</p>
@@ -904,7 +904,7 @@
 <p>No. It is age-based context, not a dated cause or medical assessment. Check feeding, health, discomfort, the sleep record and the baby in front of you.</p>
 <h2>Holding steady is an active decision</h2>
 <p>Sleep apps are often designed to keep a parent doing something: change another time, advance another rung, collect another verdict.</p>
-<p>Sometimes the smarter action is to protect the comparison. OBubba’s current Flutter logic can hold a new plan, freeze a coaching rung and refuse to remember a confounded result as failure.</p>
+<p>Sometimes the smarter action is to protect the comparison. OBubba’s current logic can hold a new plan, freeze a coaching rung and refuse to remember a confounded result as failure.</p>
 <p>That restraint is useful only if it makes more room for care—not less.</p>
 <p>Comfort the baby. Keep sleep safe. Address illness, pain, feeding and hydration. Ask for help when something worries you. Then, when the nights are comparable again, return to the smallest question worth testing.</p>
 <h2>Sources and further reading</h2>

@@ -808,11 +808,11 @@
 <p>It is not therapy, diagnosis or live monitoring. It is a quiet place to notice what you need and, when an app is no longer enough, make the next human step easier.</p>
 <figure><img src="/obubba-parent-room-parent-wellbeing.jpg" alt="A new mother pauses for a slow breath while her baby sleeps safely in a clear cot nearby." loading="lazy"/><figcaption>A parent does not need to earn a pause by finishing the baby jobs first. Parent Room is designed to make a small check-in possible while care continues.</figcaption></figure>
 <h2>The short answer</h2>
-<p>Open <strong>Care → Parent Room</strong>. The current Flutter screen gives you four useful lanes:</p>
+<p>Open <strong>Care → Parent Room</strong>. The current screen gives you four useful lanes:</p>
 <ol><li><strong>Name the moment:</strong> tap a mood or read a rotating kind word.</li><li><strong>Reset for two minutes:</strong> use the animated breath, Grounding, One minute or Unclench.</li><li><strong>Notice a pattern:</strong> open Recovery &amp; healing for a private daily check-in and your own mood trend.</li><li><strong>Move to human support:</strong> read warning signs and use region-aware support contacts when the situation needs more than a calming tool.</li></ol>
 <p>Parent Room is not Premium-gated in the reviewed app. A free user can open it from Care without going through the sleep-coaching paywall.</p>
 <h2>What the real Parent Room looks like</h2>
-<figure><img src="/obubba-parent-room-current-app.jpg" alt="The genuine OBubba Flutter Parent Room with its quiet-place hero, rotating kind word, recovery card and private mood check-in." loading="lazy"/><figcaption>Genuine Flutter simulator capture using a fictional baby profile. Parent Room is a normal Care destination, not a hidden crisis-only screen.</figcaption></figure>
+<figure><img src="/obubba-parent-room-current-app.jpg" alt="The genuine OBubba Parent Room with its quiet-place hero, rotating kind word, recovery card and private mood check-in." loading="lazy"/><figcaption>Genuine simulator capture using a fictional baby profile. Parent Room is a normal Care destination, not a hidden crisis-only screen.</figcaption></figure>
 <p>The first screen is intentionally softer than a clinical questionnaire. It begins with a time-aware message—for example, acknowledging that you are still showing up late at night—then offers a rotating affirmation such as “You are exactly the parent your baby needs.”</p>
 <p>Tap the card and it cycles through eight plain, non-performative reminders. Some good days are joyful. Some are simply survived. The language does not require gratitude, perfect routines or a beautifully documented newborn phase.</p>
 <p>Below that are two different kinds of check-in, and they should not be confused.</p>
@@ -849,7 +849,7 @@
 <p>That is good product restraint. OBubba is not measuring the parent’s sleep and cannot know who handled each wake. It is using the baby record to ask a humane question, not inferring a mental-health condition.</p>
 <h2>What stays private—and what “private” means here</h2>
 <p>The Parent Room has three different storage behaviours:</p>
-<p>| Parent Room action | What the current Flutter build does | |---|---| | Quick six-face mood tap | Session-only screen state; not saved after leaving | | Recovery &amp; healing profile/check-ins | Stored locally on this phone in a dedicated maternal store | | Two-minute EPDS check-in | Completion time and score history are stored locally, scoped to the active baby, with the latest 24 retained |</p>
+<p>| Parent Room action | What the current build does | |---|---| | Quick six-face mood tap | Session-only screen state; not saved after leaving | | Recovery &amp; healing profile/check-ins | Stored locally on this phone in a dedicated maternal store | | Two-minute EPDS check-in | Completion time and score history are stored locally, scoped to the active baby, with the latest 24 retained |</p>
 <p>The dedicated maternal store is deliberately excluded from OBubba’s shared `child_syncs` record. That means delivery details, recovery tags and daily mood entries do not travel to the partner or carer baby timeline.</p>
 <p>“On this phone” has a trade-off. These records are not a cloud backup or a clinician record. Changing or losing the device may mean losing them. They should support a conversation, not be the only place important information exists.</p>
 <p>The app also does not silently transmit a low mood to a health professional. Privacy is not the same as supervision: you still need to contact a human when you want or need human help.</p>
@@ -870,7 +870,7 @@
 <p><strong><a href="/app.html">Open OBubba’s Care tools →</a></strong> — core tracking and Parent Room are available without asking you to upgrade before you can look after yourself.</p>
 <h2>Quick answers</h2>
 <h3>Is OBubba’s Parent Room free?</h3>
-<p>Yes in the reviewed Flutter build. The Care route opens Parent Room directly without the Premium gate used by Sleep Consultant.</p>
+<p>Yes in the reviewed build. The Care route opens Parent Room directly without the Premium gate used by Sleep Consultant.</p>
 <h3>Can my partner or carer see my mood entries?</h3>
 <p>Not through the shared baby record. Recovery &amp; healing data stays in a dedicated local store and is deliberately excluded from `child_syncs`.</p>
 <h3>Does tapping “I need help” contact anybody?</h3>
@@ -882,7 +882,7 @@
 <h3>Will my recovery history move to a new phone?</h3>
 <p>The current maternal store is on-device and outside shared sync, so do not rely on it as a transferable clinical record or cloud backup.</p>
 <h2>Product verification</h2>
-<ul><li>Current Flutter surfaces reviewed: Care routing, Parent Room, Recovery &amp; healing, the maternal local store, mood-trend logic, the EPDS screen, warning signs, regional contacts and proactive wellbeing prompts from completed nights.</li><li>92 focused Flutter tests passed on 14 May 2027, covering maternal warning signs, regional crisis contacts, self-harm escalation, low-day nudges, recovery rules, wellbeing scoring, Coach safety routing and compact iPhone rendering.</li><li>The app image above is a genuine repository simulator capture using a fictional baby profile. No production family or maternal data appears in it.</li></ul>
+<ul><li>Current surfaces reviewed: Care routing, Parent Room, Recovery &amp; healing, the maternal local store, mood-trend logic, the EPDS screen, warning signs, regional contacts and proactive wellbeing prompts from completed nights.</li><li>92 focused tests passed on 14 May 2027, covering maternal warning signs, regional crisis contacts, self-harm escalation, low-day nudges, recovery rules, wellbeing scoring, Coach safety routing and compact iPhone rendering.</li><li>The app image above is a genuine repository simulator capture using a fictional baby profile. No production family or maternal data appears in it.</li></ul>
 <p><em>This article describes the reviewed app build and links to UK guidance; support routes differ by country. OBubba offers tracking, education and signposting. It does not diagnose, monitor safety, provide emergency care or replace a GP, midwife, health visitor, perinatal mental-health team or local emergency service.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">

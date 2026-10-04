@@ -816,24 +816,24 @@
 <p>On Android, the active timer uses a live chronometer. If nothing is running, the widget can show the next valid prediction or the calmer <strong>All settled</strong> state. Tapping the main widget opens the Track tab; the care buttons take you to the relevant action.</p>
 <h3>Why the last feed does not disappear at midnight</h3>
 <p>Parents experience one continuous night. A phone sees a new calendar date at 12:00am.</p>
-<p>OBubba&#39;s Flutter widget snapshot checks the previous day for a recent feed during the early hours, so a 11:40pm bottle does not immediately become “No feed logged yet” at midnight. It also carries an open bedtime or nap across the date boundary and gives a resettling pause priority over a generic asleep state.</p>
+<p>OBubba&#39;s widget snapshot checks the previous day for a recent feed during the early hours, so a 11:40pm bottle does not immediately become “No feed logged yet” at midnight. It also carries an open bedtime or nap across the date boundary and gives a resettling pause priority over a generic asleep state.</p>
 <p>Those are small implementation details with a big practical effect: the glance should still make sense at 12:03am.</p>
 <h2>The running timer on the iPhone Lock Screen</h2>
 <p>Start a nap, bedtime or breastfeed timer in OBubba on a compatible iPhone and a Live Activity can keep it visible outside the app. On the Lock Screen it shows the baby&#39;s name, current state, elapsed time, any useful next-sleep context and one clear stop control.</p>
 <p>On supported iPhone models, the same activity also appears in the Dynamic Island. The compact view keeps the timer small; touch and hold it for the expanded view.</p>
-<figure><img src="/obubba-live-nap-timer.jpg" alt="The actual OBubba Flutter app showing Oliver’s nap timer running on the Track clock, with an awake prediction and pause-nap control." loading="lazy"/><figcaption>Current OBubba Flutter nap timer using fictional review data in the iPhone simulator.</figcaption></figure>
-<p>The screenshot above is the real Flutter timer that feeds the native Live Activity. It is not a redesigned marketing mockup.</p>
+<figure><img src="/obubba-live-nap-timer.jpg" alt="The actual OBubba app showing Oliver’s nap timer running on the Track clock, with an awake prediction and pause-nap control." loading="lazy"/><figcaption>Current OBubba nap timer using fictional review data in the iPhone simulator.</figcaption></figure>
+<p>The screenshot above is the real timer that feeds the native Live Activity. It is not a redesigned marketing mockup.</p>
 <h3>Settling time is not sleep time</h3>
 <p>If you mark a night wake while a sleep timer is active, OBubba pauses the running sleep total. The Live Activity freezes at that point and changes state while you resettle the baby. When sleep resumes, the start anchor shifts past the awake gap so the final duration does not jump forward as if the baby slept through it.</p>
 <p>That distinction is important when you later ask whether the night was fragmented. “Time since bedtime” and “time asleep” are not always the same number.</p>
 <h3>The Stop button knows which timer it belongs to</h3>
 <p>OBubba treats a feed timer and a sleep timer as different things. Stopping a breastfeed activity routes to the breastfeed ending flow; it does not accidentally call the sleep-stop action. A nap or bedtime activity uses its own stop path.</p>
-<p>The app also keeps one native timer activity as the owner at a time. After a cold restart, Flutter can re-adopt the activity iOS preserved instead of flashing a second one. If an old sleep activity needs cleaning up, the native bridge checks its real type so it does not kill a feed activity by mistake.</p>
+<p>The app also keeps one native timer activity as the owner at a time. After a cold restart, can re-adopt the activity iOS preserved instead of flashing a second one. If an old sleep activity needs cleaning up, the native bridge checks its real type so it does not kill a feed activity by mistake.</p>
 <p>You should not have to understand any of that at 3am. You should be able to trust that <strong>Stop</strong> means stop this timer.</p>
 <h2>What you can say to Siri</h2>
 <p>OBubba exposes a small set of focused iPhone shortcuts. Natural phrasing can vary, but useful examples include:</p>
 <p>| Try saying | What OBubba does | |---|---| | “Siri, start a nap timer in OBubba.” | Starts a timestamped nap timer without opening the app | | “Siri, stop the timer in OBubba.” | Queues a timestamped stop without opening the app | | “Siri, when&#39;s the next nap in OBubba?” | Speaks the current next-nap or bedtime answer | | “Siri, log a feed in OBubba.” | Opens OBubba at the feed action so you can add the details | | “Siri, log a nappy in OBubba.” | Opens OBubba at the nappy action | | “Siri, start a sleep timer in OBubba.” | Starts a timestamped bedtime timer without opening the app |</p>
-<p>Start and stop are deliberately timestamped at the moment you speak. The action is stored in a durable queue shared with the app, then Flutter drains it through the ordinary tracking repository. If OBubba was not on screen, it can still preserve when the request happened rather than substituting the later time when you next open the app.</p>
+<p>Start and stop are deliberately timestamped at the moment you speak. The action is stored in a durable queue shared with the app, then drains it through the ordinary tracking repository. If OBubba was not on screen, it can still preserve when the request happened rather than substituting the later time when you next open the app.</p>
 <p>The queue is bounded rather than allowed to grow forever. That protects the app from replaying an unlimited backlog after a long period offline.</p>
 <h3>Asking for the next nap</h3>
 <p>The <strong>next nap</strong> shortcut reads the latest shared widget snapshot. A running timer wins over a prediction, so Siri can say that the baby is currently napping or sleeping and when it began. If the predicted window has already opened, the answer says roughly how long ago; otherwise it gives the approximate upcoming time.</p>
@@ -882,7 +882,7 @@
 <h3>Can Siri log a whole feed without opening OBubba?</h3>
 <p>The feed shortcut opens the relevant OBubba action so you can enter and check the details. For several completed events in one sentence, use Quick Log and review its previews before saving.</p>
 <h3>What happens if I start a nap by Siri while the app is closed?</h3>
-<p>The iPhone intent stores a timestamped start in the app group&#39;s native queue. OBubba processes it through the normal Flutter tracking path, preserving when you spoke rather than when the app was later opened.</p>
+<p>The iPhone intent stores a timestamped start in the app group&#39;s native queue. OBubba processes it through the normal tracking path, preserving when you spoke rather than when the app was later opened.</p>
 <h3>Will the timer count a night wake as sleep?</h3>
 <p>Not when the sleep timer is put into its resettling pause. The Live Activity freezes during the pause and resumes after shifting past the awake gap.</p>
 <h3>Why does Siri ask me to open OBubba before answering the next nap?</h3>

@@ -819,9 +819,9 @@
 <ul><li>Are their eyes becoming bright and focused?</li><li>Are they staying awake after feeding or comfort?</li><li>Are you still using low light, quiet voices and a night-time response?</li><li>Does baby return to the sleep space and sleep again?</li><li>Have you actually begun the first daytime wake window?</li></ul>
 <p>The <a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/your-babys-sleep-patterns/" target="_blank" rel="noopener noreferrer">NHS says every baby has an individual waking and sleeping pattern</a>. It also recommends using light, ordinary activity and noise to distinguish day from a quieter, dimmer night. Those cues are more useful than pretending every family starts at 6am.</p>
 <p>If your family consistently begins at 5:15, that is a real morning. If baby sleeps from 5:30 until 7:00, the 5am episode sat inside the night.</p>
-<h2>What Night wake does in the actual Flutter app</h2>
-<p>The current OBubba Flutter app keeps a bedtime sleep as one open arc from bedtime to the final morning wake. When you tap the centre <strong>pause</strong> control during that live night, it does not silently guess what happened. It opens a chooser with two routes.</p>
-<figure><img src="/obubba-night-wake-pause-app.jpg" alt="The current OBubba Flutter Track screen with a running night sleep, pause control and separate Wake action." loading="lazy"/><figcaption>The actual OBubba Flutter night timer. Tapping pause asks whether this is a Night wake or Wake for the day instead of imposing a clock cut-off.</figcaption></figure>
+<h2>What Night wake does in the actual app</h2>
+<p>The current OBubba app keeps a bedtime sleep as one open arc from bedtime to the final morning wake. When you tap the centre <strong>pause</strong> control during that live night, it does not silently guess what happened. It opens a chooser with two routes.</p>
+<figure><img src="/obubba-night-wake-pause-app.jpg" alt="The current OBubba Track screen with a running night sleep, pause control and separate Wake action." loading="lazy"/><figcaption>The actual OBubba night timer. Tapping pause asks whether this is a Night wake or Wake for the day instead of imposing a clock cut-off.</figcaption></figure>
 <p>Choosing <strong>Night wake</strong> creates a night-wake entry marked as still being settled. The bedtime sleep remains open, but the live elapsed-sleep display freezes because baby is awake.</p>
 <p>When baby returns to sleep, tap <strong>Resume</strong>. OBubba then:</p>
 <ol><li>closes the awake interval</li><li>records its duration when that duration is plausible and known</li><li>lets you record how baby was resettled</li><li>resumes the same bedtime timer</li><li>deducts the awake interval from actual night sleep</li></ol>
@@ -854,7 +854,7 @@
 <p>Do not tap anything merely because the monitor became noisy. <a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/bonding-with-your-baby/understanding-your-baby/" target="_blank" rel="noopener noreferrer">NHS baby-state guidance</a> describes light sleep as active and easy to interrupt. Observe safely before turning a sleeping baby into an app event.</p>
 <h2>How OBubba protects the record between two carers</h2>
 <p>At 5am, both parents may open the app.</p>
-<p>The Flutter repository uses a shared child record and guards against two carers creating the same open pause. If both devices attempt to pause the same night wake, the app avoids treating that as two separate real wakings. Resume-side linked feeds use a deterministic ID so two simultaneous completions do not inflate the night-feed count.</p>
+<p>The repository uses a shared child record and guards against two carers creating the same open pause. If both devices attempt to pause the same night wake, the app avoids treating that as two separate real wakings. Resume-side linked feeds use a deterministic ID so two simultaneous completions do not inflate the night-feed count.</p>
 <p>Online writes use an atomic transaction and retry on contention. When the active child is already cached but the connection drops, the logging path can update the local view and queue the write for reconnection.</p>
 <p>No sync system can infer which parent is physically with the baby. A useful household rule is still:</p>
 <p>&gt; <strong>The person handling the wake controls the live sleep state; the other parent checks before tapping.</strong></p>
@@ -889,7 +889,7 @@
 <h3>Does Wake for the day affect the next nap?</h3>
 <p>Yes. The morning wake anchors the first wake window and feeds the next-nap and readiness calculations. Use the time the day genuinely began.</p>
 <h3>What if I forgot to Resume?</h3>
-<p>End the sleep when you notice and correct known times if needed. The Flutter implementation avoids blindly converting an implausibly long forgotten pause into hours of confirmed awake time.</p>
+<p>End the sleep when you notice and correct known times if needed. The implementation avoids blindly converting an implausibly long forgotten pause into hours of confirmed awake time.</p>
 <h3>Can both parents pause the same wake?</h3>
 <p>Both devices can see the shared child record, but the repository guards against duplicate open pauses and deterministic linked feeds. Agree that the parent handling the wake controls the live timer wherever possible.</p>
 <h2>Let the morning reveal itself</h2>

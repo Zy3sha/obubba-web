@@ -803,7 +803,7 @@
     <article class="section rich-text article">
       <p>A baby app can sound calm, polished and certain. That does not tell you whether its answer came from a trusted public-health source, a pattern in your baby’s own logs, a language model—or nowhere you can check.</p>
 <p>Parents deserve a better test than tone.</p>
-<p>OBubba’s Flutter app includes a <strong>Sources &amp; evidence</strong> library designed to make the foundations visible. It currently links to <strong>20 original sources across seven areas</strong>: sleep and safer sleep, feeding and weaning, allergens and first foods, illness and fever, growth and development, pregnancy, and parent wellbeing.</p>
+<p>OBubba’s app includes a <strong>Sources &amp; evidence</strong> library designed to make the foundations visible. It currently links to <strong>20 original sources across seven areas</strong>: sleep and safer sleep, feeding and weaning, allergens and first foods, illness and fever, growth and development, pregnancy, and parent wellbeing.</p>
 <p>But a source list is only useful when the app is also honest about what each answer <em>is</em>.</p>
 <p>&gt; <strong>A public-health recommendation, a pattern in your baby’s records and a medical diagnosis are three different things. OBubba should never blur them together.</strong></p>
 <h2>The 30-second answer</h2>
@@ -811,7 +811,7 @@
 <p>| Layer | What it uses | What it can reasonably say | What it must not imply | |---|---|---|---| | <strong>General guidance</strong> | Trusted health and research organisations | Broad safer-sleep, feeding, growth or wellbeing information | That an outside organisation endorses OBubba | | <strong>Your baby’s pattern</strong> | Sleep, feed, nappy, growth and care events your family recorded | A cautious observation such as “recent short naps often followed a longer wake” | That correlation is a diagnosis or a guarantee | | <strong>Safety routing</strong> | Built-in, deterministic red-flag rules | Stop normal coaching and point towards appropriate human help | A diagnosis, prescription or medicine dose | | <strong>Optional AI answer</strong> | The question and relevant baby context, after consent | A more conversational explanation inside the same scope | That AI is a clinician or the source of truth |</p>
 <p>The most trustworthy answer is not always the cleverest one. Sometimes it is a direct link to the original source. Sometimes it is “we do not have enough of your data yet.” Sometimes it is “please seek urgent help.”</p>
 <h2>Where to find the evidence library</h2>
-<p>In the current Flutter app, <strong>Sources &amp; evidence</strong> is available from <strong>Account</strong>. Bubba Coach also places a <strong>Sources &amp; safety</strong> link beside its advice, so the evidence is not buried in a legal page far away from the answer.</p>
+<p>In the current app, <strong>Sources &amp; evidence</strong> is available from <strong>Account</strong>. Bubba Coach also places a <strong>Sources &amp; safety</strong> link beside its advice, so the evidence is not buried in a legal page far away from the answer.</p>
 <p>The screen opens with the line <strong>“Trust, with receipts”</strong> and lets you move through seven subject shelves. Each source card explains what that organisation informs, then offers <strong>Open the original source</strong>.</p>
 <p>That last part matters. OBubba is not asking you to accept its summary as the final word; it gives you a route out to the organisation itself.</p>
 <h2>What is actually on the source shelf?</h2>
@@ -834,7 +834,7 @@
 <ol><li><strong>What data was used?</strong> For example, the last few naps and the current time awake.</li><li><strong>How much evidence is there?</strong> One unusual day should carry less confidence than a repeated pattern.</li><li><strong>What is the uncertainty?</strong> “May,” “often” and “worth trying” can be more accurate than “is.”</li><li><strong>What can the parent do next?</strong> A gentle, reversible step is more useful than a dramatic verdict.</li></ol>
 <p>Your logs can support an observation. They cannot diagnose reflux, an allergy, an infection or a developmental condition.</p>
 <h2>Layer three: safety should not depend on a persuasive chatbot</h2>
-<p>The app’s Flutter implementation deliberately keeps safety and wellbeing routing in a built-in rules layer rather than sending those questions to optional AI.</p>
+<p>The app’s implementation deliberately keeps safety and wellbeing routing in a built-in rules layer rather than sending those questions to optional AI.</p>
 <p>The tested red-flag routes include situations such as a baby not breathing, active choking, a seizure, blue or floppy presentation, a swallowed button battery and serious head injury wording. When those triggers appear, normal coaching stops and the app directs the parent towards emergency help appropriate to their region.</p>
 <p>The coach guardrails also reject AI text that tries to give medicine dosing or promotes leaving a baby to cry through methods the product does not support. Its prompt is instructed not to diagnose, prescribe, invent baby data or state a condition as fact.</p>
 <p>That does not make OBubba a medical service. It makes the boundary clearer: the app can help organise information and recognise that the conversation belongs with a clinician, pharmacist, health visitor, NHS 111 or emergency service—not continue chatting as if everything is routine.</p>
@@ -866,7 +866,7 @@
 <h3>Are personalised observations medical advice?</h3>
 <p>No. They are informational patterns based on the care events available to the app. They can help a parent notice and prepare questions, not replace individual clinical assessment.</p>
 <h3>Can I use Bubba Coach without optional AI?</h3>
-<p>Yes. The current Flutter routing keeps built-in answers, app help, safety and wellbeing paths available. Optional AI is consent-gated and has a built-in fallback.</p>
+<p>Yes. The current routing keeps built-in answers, app help, safety and wellbeing paths available. Optional AI is consent-gated and has a built-in fallback.</p>
 <h3>Does Luna diagnose why my baby is crying or waking?</h3>
 <p>No. It can discuss common possibilities and relate them cautiously to logged context, but it is instructed not to diagnose or name a condition as fact.</p>
 <h3>Where should I verify safer-sleep or weaning advice?</h3>
@@ -874,7 +874,7 @@
 <h3>What if the app and my instincts disagree?</h3>
 <p>Trust your instincts and seek human help. A parent can see and feel things no tracker row contains. In urgent or emergency situations, use the appropriate health service immediately.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — bring sleep, feeds, nappies, growth, weaning and family care into one record, then get support that shows the difference between a source, your baby’s pattern and a safety handoff.</p>
-<p><em>This article describes the current OBubba Flutter implementation reviewed on 9 March 2027. OBubba provides informational support, not diagnosis or medical care. Features, source links and privacy choices can change; review the current app screens. In an emergency, contact local emergency services immediately.</em></p>
+<p><em>This article describes the current OBubba implementation reviewed on 9 March 2027. OBubba provides informational support, not diagnosis or medical care. Features, source links and privacy choices can change; review the current app screens. In an emergency, contact local emergency services immediately.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>

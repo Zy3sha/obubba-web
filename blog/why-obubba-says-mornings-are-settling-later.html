@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="apple-itunes-app" content="app-id=6760968757"/>
   <title>Why Does OBubba Say ‘Mornings Are Settling Later’? | OBubba</title>
-  <meta name="description" content="See how OBubba’s Flutter app compares up to 28 logged morning wakes, uses medians and stays deliberately quiet when a baby starts waking later."/>
+  <meta name="description" content="See how OBubba’s app compares up to 28 logged morning wakes, uses medians and stays deliberately quiet when a baby starts waking later."/>
   <meta name="robots" content="index, follow, max-image-preview:large"/>
   <link rel="canonical" href="https://obubba.com/blog/why-obubba-says-mornings-are-settling-later.html"/>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
@@ -19,13 +19,13 @@
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://obubba.com/blog/why-obubba-says-mornings-are-settling-later.html"/>
   <meta property="og:title" content="Why Does OBubba Say ‘Mornings Are Settling Later’? | OBubba"/>
-  <meta property="og:description" content="See how OBubba’s Flutter app compares up to 28 logged morning wakes, uses medians and stays deliberately quiet when a baby starts waking later."/>
+  <meta property="og:description" content="See how OBubba’s app compares up to 28 logged morning wakes, uses medians and stays deliberately quiet when a baby starts waking later."/>
   <meta property="og:image" content="https://obubba.com/obubba-mornings-settling-later.jpg"/>
   <meta property="og:site_name" content="OBubba"/>
   <meta property="og:locale" content="en_GB"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Why Does OBubba Say ‘Mornings Are Settling Later’? | OBubba"/>
-  <meta name="twitter:description" content="See how OBubba’s Flutter app compares up to 28 logged morning wakes, uses medians and stays deliberately quiet when a baby starts waking later."/>
+  <meta name="twitter:description" content="See how OBubba’s app compares up to 28 logged morning wakes, uses medians and stays deliberately quiet when a baby starts waking later."/>
   <meta name="twitter:image" content="https://obubba.com/obubba-mornings-settling-later.jpg"/>
   <meta name="theme-color" content="#fffcf9"/>
   <link rel="preload" href="/Parisienne-Regular.ttf" as="font" type="font/truetype" crossorigin/>
@@ -744,7 +744,7 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Why Does OBubba Say ‘Mornings Are Settling Later’?",
-  "description": "See how OBubba’s Flutter app compares up to 28 logged morning wakes, uses medians and stays deliberately quiet when a baby starts waking later.",
+  "description": "See how OBubba’s app compares up to 28 logged morning wakes, uses medians and stays deliberately quiet when a baby starts waking later.",
   "datePublished": "2026-09-19",
   "dateModified": "2026-09-19",
   "author": {
@@ -796,7 +796,7 @@
           <span class="read-time">11 min read</span>
         </div>
         <h1>Why Does OBubba Say ‘Mornings Are Settling Later’?</h1>
-        <p>See how OBubba’s Flutter app compares up to 28 logged morning wakes, uses medians and stays deliberately quiet when a baby starts waking later.</p>
+        <p>See how OBubba’s app compares up to 28 logged morning wakes, uses medians and stays deliberately quiet when a baby starts waking later.</p>
         <div class="tags"><span class="tag">Mornings are settling later OBubba</span><span class="tag">baby waking later in morning</span><span class="tag">baby early waking improving</span><span class="tag">baby morning wake time tracker</span><span class="tag">baby body clock sleep</span></div>
       </div>
     </header>
@@ -804,22 +804,22 @@
       <p>For weeks, the first sound came at 5:58am. Then the mornings began at 6:17, 6:28, 6:35—not every day, but often enough that the house felt different.</p>
 <p>OBubba may eventually surface a small positive card:</p>
 <p>&gt; <strong>Mornings are settling later</strong></p>
-<p>The current Flutter feature is deliberately uneventful. It does not announce a new schedule, prescribe a later bedtime or launch a seven-night experiment. It compares two groups of real morning-wake records, checks whether the newer median has moved later by at least 20 minutes and says the shift is worth noticing.</p>
+<p>The current feature is deliberately uneventful. It does not announce a new schedule, prescribe a later bedtime or launch a seven-night experiment. It compares two groups of real morning-wake records, checks whether the newer median has moved later by at least 20 minutes and says the shift is worth noticing.</p>
 <p>That is useful because baby apps often turn every observation into another job. Sometimes the correct product response is: <strong>this looks better; leave it alone.</strong></p>
 <p>Here is the exact calculation, why it needs more history than the code comment first suggests, what can create a false later trend and why a later clock time does not automatically mean more sleep.</p>
 <h2>The short answer</h2>
 <p>The positive card needs all of these conditions:</p>
-<p>| Gate | Current Flutter rule | |---|---| | History searched | Up to <strong>28 recent nights</strong> | | Valid wake time | Morning wake from <strong>3:00am through 11:00am</strong> | | Newer comparison | The <strong>14 most recent valid wakes</strong> | | Older comparison | The next <strong>6–14 valid wakes</strong> | | Statistic | Median wake time in each group | | Positive shift | Newer median is at least <strong>20 minutes later</strong> | | Stronger early-rising card | Must not already own the morning question | | Result | Low-urgency <strong>Mornings are settling later</strong> insight, with no experiment |</p>
-<p>Because Flutter fills the newer group with 14 valid wakes before it starts the older group, this detector actually needs at least <strong>20 valid morning wakes</strong>—14 newer and 6 older. It cannot fire from 12 mornings split six-versus-six.</p>
-<figure><img src="/obubba-mornings-settling-later-logic.svg" alt="The exact Flutter path behind OBubba’s Mornings are settling later card." loading="lazy"/><figcaption>OBubba keeps valid 3am-to-11am morning wakes from up to 28 nights, fills a 14-wake recent group, requires at least six older wakes, compares medians and celebrates a later shift of 20 minutes or more without launching an intervention.</figcaption></figure>
+<p>| Gate | Current rule | |---|---| | History searched | Up to <strong>28 recent nights</strong> | | Valid wake time | Morning wake from <strong>3:00am through 11:00am</strong> | | Newer comparison | The <strong>14 most recent valid wakes</strong> | | Older comparison | The next <strong>6–14 valid wakes</strong> | | Statistic | Median wake time in each group | | Positive shift | Newer median is at least <strong>20 minutes later</strong> | | Stronger early-rising card | Must not already own the morning question | | Result | Low-urgency <strong>Mornings are settling later</strong> insight, with no experiment |</p>
+<p>Because fills the newer group with 14 valid wakes before it starts the older group, this detector actually needs at least <strong>20 valid morning wakes</strong>—14 newer and 6 older. It cannot fire from 12 mornings split six-versus-six.</p>
+<figure><img src="/obubba-mornings-settling-later-logic.svg" alt="The exact path behind OBubba’s Mornings are settling later card." loading="lazy"/><figcaption>OBubba keeps valid 3am-to-11am morning wakes from up to 28 nights, fills a 14-wake recent group, requires at least six older wakes, compares medians and celebrates a later shift of 20 minutes or more without launching an intervention.</figcaption></figure>
 <h2>It reads a trajectory, not last night</h2>
 <p>Last night alone can be deceptive. A later wake might follow a late family event, a long resettle at dawn, an unlogged feed or a clock change. A single 7:10am does not mean a 5:45am baby has transformed.</p>
-<p>The Flutter Brain first asks for the child’s 28 recent night records. Each night is summarised by the same night-analysis layer used elsewhere in the app. The trend detector then takes only the morning-wake minute from each summary.</p>
+<p>The Brain first asks for the child’s 28 recent night records. Each night is summarised by the same night-analysis layer used elsewhere in the app. The trend detector then takes only the morning-wake minute from each summary.</p>
 <p>It does <strong>not</strong> use:</p>
 <ul><li>total night sleep;</li><li>bedtime;</li><li>number or length of night wakes;</li><li>naps from the previous day;</li><li>feeding;</li><li>settling method;</li><li>room light or temperature; or</li><li>the parent’s chosen target morning.</li></ul>
 <p>This makes the question narrow and inspectable: <strong>did the recorded morning endpoint move later?</strong> It also means the card cannot explain why.</p>
 <h2>Why only 3:00am to 11:00am counts</h2>
-<p>Flutter drops missing wake values and anything earlier than 3:00am or later than 11:00am.</p>
+<p>drops missing wake values and anything earlier than 3:00am or later than 11:00am.</p>
 <p>That protects the median from obvious day-grouping mistakes. A 1:20am event is more likely to be an overnight wake than the start of the day. A midday value may be a forgotten timer or a record assigned to the wrong night.</p>
 <p>The boundary is still a product rule, not a truth detector. A family working night shifts could genuinely start a baby’s day after 11am. An older child might sleep late after travel. Those records are excluded even when accurate.</p>
 <p>Conversely, 3:05am is technically valid for this function. The median usually prevents one extreme value from deciding the result, but several badly grouped night wakes can still move the comparison.</p>
@@ -841,7 +841,7 @@
 <p>There is no percentage gate and no requirement that the recent median pass 6:00am. A movement from 5:10am to 5:35am qualifies mathematically—unless the stronger established-early-rising analysis suppresses it first.</p>
 <h2>The early-rising diagnosis gets first refusal</h2>
 <p>The Brain does not show both “why the early waking keeps happening” and “mornings are settling later” for the same record.</p>
-<p>Before calling this trend detector, Flutter builds a more detailed early-rising analysis from up to 14 recent nights and their preceding days. From about 20 weeks, that path can activate when at least four of the last seven usable mornings began before 6:00am. It then looks for one practical lever such as day-sleep amount, first-nap timing, bedtime or fragmented nights.</p>
+<p>Before calling this trend detector, builds a more detailed early-rising analysis from up to 14 recent nights and their preceding days. From about 20 weeks, that path can activate when at least four of the last seven usable mornings began before 6:00am. It then looks for one practical lever such as day-sleep amount, first-nap timing, bedtime or fragmented nights.</p>
 <p>If that established pattern fires, the gentler week-over-week drift note is skipped.</p>
 <p>This ordering makes sense: a baby can improve from 5:05 to 5:30 and still have a persistent pre-6am problem the family wants help with. The app chooses the more actionable explanation instead of congratulating and correcting at once.</p>
 <p>For younger babies, the established early-rising diagnosis is age-gated off because early feeds and fragmented mornings are normal. The positive drift function itself has no explicit age gate, so a heavily logged young baby could still earn the later-morning note. Its “maturing body clock” explanation should be read as a possibility, not a developmental conclusion.</p>
@@ -850,7 +850,7 @@
 <ul><li>a low-urgency sleep label;</li><li>the child’s first name;</li><li>the recent median wake time;</li><li>the older median wake time;</li><li>a sample-size caption based on the valid mornings; and</li><li>the action <strong>Lovely</strong>.</li></ul>
 <p>It honours the app’s 12-hour or 24-hour clock preference when formatting the two medians.</p>
 <p>The insight is classified as a longer-term pattern, so it belongs in <strong>What OBubba’s noticed</strong> rather than repeating as a daily instruction card. Its dismissal key uses the stable title, not the rolling times in the body, so dismissing it does not make the same positive direction reappear whenever the median moves by another minute.</p>
-<figure><img src="/obubba-how-long-learn-insights-app.jpg" alt="A genuine OBubba Flutter What OBubba’s Noticed feed showing where longer-term sleep patterns are collected separately from tonight’s guidance." loading="lazy"/><figcaption>This genuine Flutter capture shows the pattern feed that hosts longer-term findings such as wake-time drift. The seeded example displays other insights; it demonstrates the destination rather than claiming to be a capture of this exact card.</figcaption></figure>
+<figure><img src="/obubba-how-long-learn-insights-app.jpg" alt="A genuine OBubba What OBubba’s Noticed feed showing where longer-term sleep patterns are collected separately from tonight’s guidance." loading="lazy"/><figcaption>This genuine capture shows the pattern feed that hosts longer-term findings such as wake-time drift. The seeded example displays other insights; it demonstrates the destination rather than claiming to be a capture of this exact card.</figcaption></figure>
 <h2>Why there is no seven-night experiment</h2>
 <p>Both directions share the same internal kind: wake-time drift.</p>
 <p>The negative sibling, <strong>Mornings are creeping earlier</strong>, carries an earlier-bedtime lever and can be mapped to an optional <strong>Anchor the morning</strong> experiment. The positive later-morning card carries no bedtime lever.</p>

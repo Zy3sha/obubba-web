@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="apple-itunes-app" content="app-id=6760968757"/>
   <title>Why Does OBubba Say ‘Daytime Milk Is Up This Week’? | OBubba</title>
-  <meta name="description" content="See the exact two-week Flutter calculation behind OBubba’s daytime-milk trend—and how to respond without chasing bottle totals or expecting better sleep."/>
+  <meta name="description" content="See the exact two-week calculation behind OBubba’s daytime-milk trend—and how to respond without chasing bottle totals or expecting better sleep."/>
   <meta name="robots" content="index, follow, max-image-preview:large"/>
   <link rel="canonical" href="https://obubba.com/blog/why-obubba-says-daytime-milk-up-this-week.html"/>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
@@ -19,13 +19,13 @@
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://obubba.com/blog/why-obubba-says-daytime-milk-up-this-week.html"/>
   <meta property="og:title" content="Why Does OBubba Say ‘Daytime Milk Is Up This Week’? | OBubba"/>
-  <meta property="og:description" content="See the exact two-week Flutter calculation behind OBubba’s daytime-milk trend—and how to respond without chasing bottle totals or expecting better sleep."/>
+  <meta property="og:description" content="See the exact two-week calculation behind OBubba’s daytime-milk trend—and how to respond without chasing bottle totals or expecting better sleep."/>
   <meta property="og:image" content="https://obubba.com/obubba-daytime-milk-up-this-week.jpg"/>
   <meta property="og:site_name" content="OBubba"/>
   <meta property="og:locale" content="en_GB"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Why Does OBubba Say ‘Daytime Milk Is Up This Week’? | OBubba"/>
-  <meta name="twitter:description" content="See the exact two-week Flutter calculation behind OBubba’s daytime-milk trend—and how to respond without chasing bottle totals or expecting better sleep."/>
+  <meta name="twitter:description" content="See the exact two-week calculation behind OBubba’s daytime-milk trend—and how to respond without chasing bottle totals or expecting better sleep."/>
   <meta name="twitter:image" content="https://obubba.com/obubba-daytime-milk-up-this-week.jpg"/>
   <meta name="theme-color" content="#fffcf9"/>
   <link rel="preload" href="/Parisienne-Regular.ttf" as="font" type="font/truetype" crossorigin/>
@@ -744,7 +744,7 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Why Does OBubba Say ‘Daytime Milk Is Up This Week’?",
-  "description": "See the exact two-week Flutter calculation behind OBubba’s daytime-milk trend—and how to respond without chasing bottle totals or expecting better sleep.",
+  "description": "See the exact two-week calculation behind OBubba’s daytime-milk trend—and how to respond without chasing bottle totals or expecting better sleep.",
   "datePublished": "2026-09-19",
   "dateModified": "2026-09-19",
   "author": {
@@ -796,14 +796,14 @@
           <span class="read-time">13 min read</span>
         </div>
         <h1>Why Does OBubba Say ‘Daytime Milk Is Up This Week’?</h1>
-        <p>See the exact two-week Flutter calculation behind OBubba’s daytime-milk trend—and how to respond without chasing bottle totals or expecting better sleep.</p>
+        <p>See the exact two-week calculation behind OBubba’s daytime-milk trend—and how to respond without chasing bottle totals or expecting better sleep.</p>
         <div class="tags"><span class="tag">daytime milk is up this week</span><span class="tag">baby drinking more milk</span><span class="tag">OBubba feeding insight</span><span class="tag">baby bottle intake increased</span><span class="tag">baby growth spurt feeding</span></div>
       </div>
     </header>
     <article class="section rich-text article">
       <p>OBubba says <strong>“Daytime milk is up this week.”</strong> Underneath, it may show that your baby averaged 960ml per measured day, up about 37% from 700ml the week before.</p>
 <p>Is that a growth spurt? Does it mean the baby needs larger bottles now? Will taking more by day reduce night feeds?</p>
-<p><strong>Not from this card alone.</strong> The current Flutter detector has found a real week-over-week rise in the daytime milk amounts that reached the log. It has not measured breast-milk transfer, checked growth, compared night sleep or decided how much the next bottle should contain.</p>
+<p><strong>Not from this card alone.</strong> The current detector has found a real week-over-week rise in the daytime milk amounts that reached the log. It has not measured breast-milk transfer, checked growth, compared night sleep or decided how much the next bottle should contain.</p>
 <p>That narrower result is still useful. It can reveal a change that is hard to see across dozens of individual feeds—as long as the family reads “measured daytime milk” rather than “everything my baby consumed”.</p>
 <h2>The short answer</h2>
 <p>When the card appears:</p>
@@ -811,7 +811,7 @@
 <p>The <a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS recommends responsive bottle feeding</a>: offer milk when the baby shows hunger cues, pace the feed, watch for pauses and never force the bottle to be finished. It also says a big feed does not mean a baby will go longer between feeds.</p>
 <p>| The card establishes | The card cannot establish | |---|---| | Logged daytime milk volume rose across two weekly groups | Total milk intake rose by the same amount | | Both the percentage and millilitre thresholds passed | A growth spurt caused the change | | At least four measured days exist in each week | Every included day was completely logged | | Pump output and night milk did not inflate the result | More daytime milk will improve tonight’s sleep |</p>
 <figure><img src="/obubba-daytime-milk-up-this-week-logic.svg" alt="The exact gates behind OBubba’s “Daytime milk is up this week” insight." loading="lazy"/><figcaption>The app compares fourteen completed day slots, keeps amount-bearing daytime milk feeds, requires at least four measured days in both weeks, and speaks only when the average rises by at least 20% and 60ml per measured day.</figcaption></figure>
-<h2>The exact Flutter calculation</h2>
+<h2>The exact calculation</h2>
 <p>The brain sends `daytimeMilkVolumeTrend` <strong>14 completed calendar days</strong>, most recent first. It starts with yesterday rather than today.</p>
 <p>Excluding today matters. At 10am, the current day might contain only one bottle. Comparing that partial total with last Tuesday’s finished day could create a false fall. Yesterday plus the 13 days before it gives the detector two closed seven-day slots.</p>
 <p>For each date, the function adds positive amounts from entries that are:</p>
@@ -845,10 +845,10 @@
 <p>The increase may reflect:</p>
 <ul><li>a genuine rise in overall intake;</li><li>more milk being delivered by bottle instead of breast;</li><li>nursery or another carer taking over daytime feeds;</li><li>more expressed-milk top-ups;</li><li>more complete amount logging; or</li><li>several changes at once.</li></ul>
 <p>That is why OBubba’s wider Feeding check-in is valuable beside the trend. It can name breast, bottle, wet-nappy, night-feed and growth context separately instead of letting one measured number dominate.</p>
-<figure><img src="/obubba-feeding-growth-spurt-check-in-app.jpg" alt="A genuine current OBubba Flutter Feeding check-in explaining that bottle millilitres are only the measured part of a mixed-feeding day." loading="lazy"/><figcaption>The app’s fuller feeding surface keeps breastfeeds and bottle amounts distinct, then brings nappies, night feeds and growth into the review before suggesting changes.</figcaption></figure>
+<figure><img src="/obubba-feeding-growth-spurt-check-in-app.jpg" alt="A genuine current OBubba Feeding check-in explaining that bottle millilitres are only the measured part of a mixed-feeding day." loading="lazy"/><figcaption>The app’s fuller feeding surface keeps breastfeeds and bottle amounts distinct, then brings nappies, night feeds and growth into the review before suggesting changes.</figcaption></figure>
 <h2>Is it a growth spurt?</h2>
 <p>Possibly—but the volume card cannot confirm that.</p>
-<p>The Flutter app has a separate current-day detector for <strong>“Feeding is up, likely a growth spurt.”</strong> That route compares feed frequency with the baby’s prior daily count. A strong one-day jump or two elevated days can trigger it. A separate cluster-feeding route looks for at least three daytime milk feeds inside roughly 90 minutes.</p>
+<p>The app has a separate current-day detector for <strong>“Feeding is up, likely a growth spurt.”</strong> That route compares feed frequency with the baby’s prior daily count. A strong one-day jump or two elevated days can trigger it. A separate cluster-feeding route looks for at least three daytime milk feeds inside roughly 90 minutes.</p>
 <p>If either of those cards already owns the “feeding is up” story in the current brain run, the two-week volume card is suppressed. Parents should not receive three overlapping explanations for the same busy feeding day.</p>
 <p>The surviving <strong>“Daytime milk is up this week”</strong> card therefore tells a different story: measured volume has stayed meaningfully higher across weekly groups, without a current cluster-feed or frequency-spurt card taking priority.</p>
 <p>It still does not inspect weight velocity, length, head growth, illness or a clinician’s feeding assessment. “Growth phase or bigger appetite” is a reasonable possibility, not the detected cause.</p>
@@ -885,7 +885,7 @@
 <ul><li>fewer than 14 completed day slots were supplied;</li><li>either weekly slot contains fewer than four days with measured daytime milk;</li><li>the rise is under 20%;</li><li>the rise is under 60ml per measured day;</li><li>the measured average is flat or falling;</li><li>feeds are breast-only with no amounts;</li><li>pump output is the only extra volume;</li><li>extra milk was logged only at night or as a dream feed; or</li><li>a current cluster-feeding or likely-growth-spurt card already owns the feeding-up message.</li></ul>
 <p>Silence does not mean intake is wrong. It means this particular amount-based comparison lacks enough data or a large enough change.</p>
 <h2>Where the insight lives—and why it can refresh</h2>
-<p>The Flutter UI classifies `daytimeMilkTrend` as a longer-term pattern insight, so it belongs in the <strong>What OBubba noticed</strong> analysis feed rather than only in today’s guidance.</p>
+<p>The UI classifies `daytimeMilkTrend` as a longer-term pattern insight, so it belongs in the <strong>What OBubba noticed</strong> analysis feed rather than only in today’s guidance.</p>
 <p>Its dismissal key includes the current day. The two weekly averages roll forward daily, so a new snapshot can be considered new the following day. That is different from slow-changing insight types whose dismissal persists until the direction changes.</p>
 <p>The benefit is freshness. The trade-off is potential repetition if the elevated pattern continues. A parent who has understood the change should be able to snooze or dismiss it without the app turning a reassuring trend into another task.</p>
 <h2>A useful product limitation</h2>
@@ -916,7 +916,7 @@
 <p>It does not mean “push bigger bottles”, “a growth spurt is proven” or “tonight will be better”. The helpful next move is to keep feeding responsively, review what became measurable and let nappies, wellbeing, growth and the baby’s cues provide the context.</p>
 <p><strong><a href="/baby-feed-tracker.html">Try OBubba’s baby feed tracker free →</a></strong> — keep bottles, breastfeeds, pumping, night feeds, nappies, growth and first foods connected without pretending every part can be reduced to millilitres.</p>
 <h2>Sources</h2>
-<ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Feeding on demand</a></li><li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/bottle-feeding/advice/" target="_blank" rel="noopener noreferrer">NHS: Bottle-feeding advice</a></li><li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/bottle-feeding/formula-milk-questions/" target="_blank" rel="noopener noreferrer">NHS: Formula milk—common questions</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/breastfeeding/breastfeeding-challenges/milk-supply/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Milk supply</a></li><li><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/bottle-feeding-resources/infant-formula-responsive-bottle-feeding-guide-for-parents/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly Initiative: Infant formula and responsive bottle feeding</a></li><li>OBubba Flutter source reviewed: `feed_insights.dart`, `brain.dart`, `brain_insight.dart`, `track_home.dart`, `baby_entry.dart`, `prefs.dart`, `log_sheet.dart`, `daytime_milk_trend_test.dart`, `feed_insights_test.dart` and `engine_integration_test.dart`.</li></ul>
+<ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Feeding on demand</a></li><li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/bottle-feeding/advice/" target="_blank" rel="noopener noreferrer">NHS: Bottle-feeding advice</a></li><li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/bottle-feeding/formula-milk-questions/" target="_blank" rel="noopener noreferrer">NHS: Formula milk—common questions</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/breastfeeding/breastfeeding-challenges/milk-supply/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Milk supply</a></li><li><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/bottle-feeding-resources/infant-formula-responsive-bottle-feeding-guide-for-parents/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly Initiative: Infant formula and responsive bottle feeding</a></li><li>OBubba source reviewed: `feed_insights.dart`, `brain.dart`, `brain_insight.dart`, `track_home.dart`, `baby_entry.dart`, `prefs.dart`, `log_sheet.dart`, `daytime_milk_trend_test.dart`, `feed_insights_test.dart` and `engine_integration_test.dart`.</li></ul>
 <p><em>OBubba is a record, pattern and education tool. It cannot measure breast-milk transfer, diagnose a growth spurt, establish nutritional adequacy or predict sleep from daytime milk. It does not replace individual advice from a midwife, health visitor, GP, paediatrician, dietitian, neonatal team or feeding specialist.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">

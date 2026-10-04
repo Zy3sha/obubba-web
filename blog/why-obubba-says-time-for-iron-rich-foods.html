@@ -804,9 +804,9 @@
       <p>You logged banana, carrot purée and apple with pear. OBubba then shows:</p>
 <p>&gt; <strong>Time for some iron-rich foods</strong></p>
 <p>Has the app decided your baby is short of iron? Does it know what was in the spoon? Should you add a supplement?</p>
-<p><strong>No.</strong> The current Flutter feature is a food-name reminder, not an iron-status assessment. It appears when a baby is at least around six corrected months old, the recent record contains at least three solids entries, and none of those food names contains one of OBubba’s recognised iron-food words.</p>
+<p><strong>No.</strong> The current feature is a food-name reminder, not an iron-status assessment. It appears when a baby is at least around six corrected months old, the recent record contains at least three solids entries, and none of those food names contains one of OBubba’s recognised iron-food words.</p>
 <p>The useful response is not panic or pressure. It is a quick check: <strong>has an iron-containing food been offered but logged vaguely, or would one fit naturally into an upcoming meal?</strong></p>
-<figure><img src="/obubba-iron-gap-what-app-sees.svg" alt="A visual explanation of how OBubba turns recent food names into an iron-rich-food reminder while staying unable to measure intake, absorption or blood iron." loading="lazy"/><figcaption>The current Flutter detector reads recent solids names through a fixed keyword list. It can remind; it cannot see the portion, recipe, milk intake, supplement plan or baby’s iron status.</figcaption></figure>
+<figure><img src="/obubba-iron-gap-what-app-sees.svg" alt="A visual explanation of how OBubba turns recent food names into an iron-rich-food reminder while staying unable to measure intake, absorption or blood iron." loading="lazy"/><figcaption>The current detector reads recent solids names through a fixed keyword list. It can remind; it cannot see the portion, recipe, milk intake, supplement plan or baby’s iron status.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current OBubba detector checks four things:</p>
 <ol><li><strong>Age:</strong> the baby is at least 26 corrected weeks when corrected age is available.</li><li><strong>Started solids:</strong> there are recent solids records rather than an empty weaning history.</li><li><strong>Enough examples:</strong> at least three solids entries appear in the latest roughly 22 calendar days.</li><li><strong>No recognised iron word:</strong> none of those entries has a food name matching the app’s fixed list.</li></ol>
@@ -819,7 +819,7 @@
 <ul><li>meat and fish</li><li>fortified breakfast cereals</li><li>dark green vegetables</li><li>beans and lentils</li></ul>
 <p>That is a direction for the overall diet, not a reason to judge one bowl. Early portions may be tiny. Food can be touched, mouthed, spat out or eaten in an amount no app can infer.</p>
 <p>Breast milk or first infant formula remains the main drink throughout the first year. First infant formula already contains added iron. OBubba’s notice deliberately looks only at the <strong>solids names</strong> in its recent weaning record, so it does not describe the baby’s total iron intake from milk, food or a prescribed supplement.</p>
-<h2>The exact Flutter trigger</h2>
+<h2>The exact trigger</h2>
 <p>OBubba’s Brain collects solids entries from today back through 21 previous calendar days. In practice, that is a rolling window of up to <strong>22 dates</strong>.</p>
 <p>Each qualifying entry becomes a small record containing:</p>
 <ul><li>day</li><li>food name</li><li>recognised allergens</li><li>note</li><li>meal response</li></ul>
@@ -861,7 +861,7 @@
 <p>The <strong>iron-rich meals</strong> tile on <strong>Care → Weaning</strong> analyses the solids history loaded by that screen—currently up to about 120 days. It counts every named meal containing a recognised word.</p>
 <p>This means a parent can have several historical iron-rich meals on the progress tile and still receive a recent-gap notice after a newer run of fruit and vegetable entries. That is not necessarily a contradiction:</p>
 <ul><li>the tile says <strong>this has appeared in the broader record</strong>;</li><li>the notice says <strong>it has not appeared in the recent window</strong>.</li></ul>
-<figure><img src="/obubba-iron-rich-weaning-progress-app.jpg" alt="The genuine current OBubba Flutter Weaning Progress screen showing an iron-rich-meal count beside texture stage, unique foods, the weekly plan and ranked recipes." loading="lazy"/><figcaption>Current OBubba Flutter capture with fictional example data. The five iron-rich meals are keyword-matched logged events, not measured portions or a clinical nutrition score.</figcaption></figure>
+<figure><img src="/obubba-iron-rich-weaning-progress-app.jpg" alt="The genuine current OBubba Weaning Progress screen showing an iron-rich-meal count beside texture stage, unique foods, the weekly plan and ranked recipes." loading="lazy"/><figcaption>Current OBubba capture with fictional example data. The five iron-rich meals are keyword-matched logged events, not measured portions or a clinical nutrition score.</figcaption></figure>
 <p>The screen also uses the same iron labels to rank recipe ideas and a six-meal weekly plan. Recipes marked iron-rich can move upward when the engine looks for gaps, new allergens and variety.</p>
 <p>That creates a useful loop:</p>
 <p><strong>notice a gap → choose a suitable idea → prepare it safely → log what actually happened → let the record update</strong></p>
@@ -916,7 +916,7 @@
 <p><strong><a href="/baby-weaning-tracker.html">Try OBubba’s weaning tracker free →</a></strong> — keep milk, first foods, textures, allergens, reactions and practical meal ideas in one record, while the app shows exactly what it can—and cannot—learn from the log.</p>
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s first solid foods</a></li><li><a href="https://www.gov.uk/government/publications/feeding-in-the-first-year-of-life-sacn-report" target="_blank" rel="noopener noreferrer">GOV.UK: SACN report on feeding in the first year of life</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/vitamins-for-children/" target="_blank" rel="noopener noreferrer">NHS: Vitamins for children</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/what-to-feed-young-children/" target="_blank" rel="noopener noreferrer">NHS: What to feed young children</a></li></ul>
-<p><em>This article gives general information for UK families and describes the OBubba Flutter implementation reviewed on 22 March 2027. OBubba cannot measure iron intake, diagnose deficiency, recommend supplements or replace advice from a health professional who knows the child.</em></p>
+<p><em>This article gives general information for UK families and describes the OBubba implementation reviewed on 22 March 2027. OBubba cannot measure iron intake, diagnose deficiency, recommend supplements or replace advice from a health professional who knows the child.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>

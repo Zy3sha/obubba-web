@@ -803,7 +803,7 @@
     <article class="section rich-text article">
       <p>The health visitor asks, <strong>“How has feeding been?”</strong></p>
 <p>You remember two tiny bottles yesterday, three excellent feeds on Monday and a difficult night somewhere in the middle. Your baby is wriggling, the Red Book is at the bottom of the changing bag, and the useful answer is buried beneath 70 individual logs.</p>
-<p>OBubba’s Reports screen is built for this moment. The current Flutter app can turn recent sleep, feeds, nappies, temperatures and growth entries into three different appointment views: a quick seven-day copy, a printable four-week clinic summary and a doctor-visit prep sheet that puts possible health flags first.</p>
+<p>OBubba’s Reports screen is built for this moment. The current app can turn recent sleep, feeds, nappies, temperatures and growth entries into three different appointment views: a quick seven-day copy, a printable four-week clinic summary and a doctor-visit prep sheet that puts possible health flags first.</p>
 <p>It does not create a medical record or decide whether your baby is well. It gives parent observations a calmer shape, so the appointment can begin with a pattern instead of a memory test.</p>
 <h2>The appointment bag in 30 seconds</h2>
 <p>Take:</p>
@@ -811,7 +811,7 @@
 <p>The NHS recommends taking the Red Book whenever you visit a baby clinic or GP. It holds official weights, heights, vaccinations and other important information. An OBubba export sits <strong>beside</strong> that record; it does not replace it.</p>
 <figure><img src="/obubba-appointment-report-three-views.svg" alt="A visual guide to OBubba&#39;s seven-day quick copy, four-week clinic PDF and doctor-visit prep sheet, with a reminder to bring the Red Book and personal questions." loading="lazy"/><figcaption>Choose the smallest report that answers the appointment: recent routine, a four-week pattern or facts worth raising. Missing data stays missing instead of becoming a false zero.</figcaption></figure>
 <h2>What the current OBubba app actually offers</h2>
-<p>We traced the production Flutter Reports screen, clinical PDF builder and visit-prep engine. The three clinic actions look similar, but they have different jobs.</p>
+<p>We traced the production Reports screen, clinical PDF builder and visit-prep engine. The three clinic actions look similar, but they have different jobs.</p>
 <h3>1. Copy report for your GP or health visitor</h3>
 <p>This is the quickest option. It creates a plain-text summary of the latest seven days that can be pasted into a message or note.</p>
 <p>Where the relevant data exists, it can include:</p>
@@ -826,7 +826,7 @@
 <p>This is the “what might I need to raise?” view. It scans the latest seven days and can place up to four health-category insights at the top, followed by:</p>
 <ul><li>the number of plausible temperature readings and the highest one;</li><li>the latest logged weight and its date;</li><li>recent feed averages; and</li><li>day-sleep, nap and night-wake figures where those categories were actually tracked.</li></ul>
 <p>The temperature check filters implausible values, so an entry such as `380` is not printed as 380°C. That protects the sheet from an obvious typing error; it does not verify that a real-looking reading was taken correctly.</p>
-<figure><img src="/obubba-clinic-report-tools-app.jpg" alt="The genuine Flutter Reports screen showing the carer handover and the three actions for copying a seven-day report, creating a four-week clinic PDF, or sharing a doctor-visit prep sheet." loading="lazy"/><figcaption>In the live app, clinic tools sit under Reports → More reports &amp; handovers. The parent chooses what to generate and where to share it.</figcaption></figure>
+<figure><img src="/obubba-clinic-report-tools-app.jpg" alt="The genuine Reports screen showing the carer handover and the three actions for copying a seven-day report, creating a four-week clinic PDF, or sharing a doctor-visit prep sheet." loading="lazy"/><figcaption>In the live app, clinic tools sit under Reports → More reports &amp; handovers. The parent chooses what to generate and where to share it.</figcaption></figure>
 <h2>The most important feature is what OBubba refuses to invent</h2>
 <p>An average of zero naps can mean two very different things:</p>
 <ol><li>your child genuinely had no naps; or</li><li>nobody tracked sleep.</li></ol>
@@ -870,7 +870,7 @@
 <h3>Does the OBubba PDF replace my baby’s Red Book?</h3>
 <p>No. The Red Book is the Personal Child Health Record used for official measurements, vaccinations and other important information. OBubba’s PDF is a parent-logged companion summary.</p>
 <h3>How far back does the clinic PDF look?</h3>
-<p>The current Flutter implementation examines the latest 28 calendar days. It prints how many days actually contain logs and the report date range.</p>
+<p>The current implementation examines the latest 28 calendar days. It prints how many days actually contain logs and the report date range.</p>
 <h3>Why is a row missing from my report?</h3>
 <p>OBubba omits some rows when the supporting category was not tracked. This prevents “not recorded” from being misrepresented as zero.</p>
 <h3>Are OBubba growth centiles official?</h3>

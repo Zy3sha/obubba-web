@@ -824,7 +824,7 @@
 <h2>What “protecting the baseline” means</h2>
 <p>OBubba learns from repeated days. It looks for useful relationships such as:</p>
 <ul><li>how long your baby was awake before a settled nap;</li><li>which nap timing tends to produce the best outcome;</li><li>typical nap count and daytime sleep;</li><li>feeding spacing;</li><li>catnap patterns;</li><li>bedtime and night-wake baselines; and</li><li>whether a change you are testing is genuinely helping.</li></ul>
-<p>The Flutter engine has one shared exclusion rule for baseline learning. A day labelled Sick, Travel, Daycare or Grand is excluded, as is a day containing a plausible fever temperature. This rule is threaded into the wake-window learners, nap calibration, adaptive sleep profile, bedtime resolver, reminders and intervention comparisons.</p>
+<p>The engine has one shared exclusion rule for baseline learning. A day labelled Sick, Travel, Daycare or Grand is excluded, as is a day containing a plausible fever temperature. This rule is threaded into the wake-window learners, nap calibration, adaptive sleep profile, bedtime resolver, reminders and intervention comparisons.</p>
 <p>That does <strong>not</strong> mean the day disappears. You can still see and review it. It means OBubba does not use an airport nap, an unwell contact-nap marathon or a nursery timetable to redefine what normally works at home.</p>
 <p>The distinction is especially useful when data is sparse. If four ordinary days and one travel day are mixed together, the travel day represents 20% of the apparent evidence. Labelling it prevents a short disruption from carrying too much weight.</p>
 <h2>OBubba can learn that away days affect the night</h2>
@@ -846,7 +846,7 @@
 <p>Some disruption context can soften predictions and reminders during recovery—Sick, Travel and Daycare have different recovery windows in the engine—but a label should not be treated as a command for an exact nap time. An explicit plan adjustment communicates intent more clearly.</p>
 <h2>Why the labels belong to one baby</h2>
 <p>Twins and siblings can have different days even when the adults share one calendar.</p>
-<p>One child may be at nursery while the other is home. One may be unwell while the other follows the ordinary routine. The Flutter app therefore stores day labels per active baby. A migration test specifically protects against an old device-wide label leaking from one twin into the other twin’s learning.</p>
+<p>One child may be at nursery while the other is home. One may be unwell while the other follows the ordinary routine. The app therefore stores day labels per active baby. A migration test specifically protects against an old device-wide label leaking from one twin into the other twin’s learning.</p>
 <p>That detail matters: the wrong Sick label would not merely show the wrong chip. It could remove a perfectly ordinary day from the other baby’s baseline.</p>
 <h2>The current cross-device limit</h2>
 <p>Today type is currently stored in the app’s local preferences for each baby. It survives restarts on that device, but it is not part of the shared child event record.</p>
@@ -882,9 +882,9 @@
 <h3>Can OBubba compare nursery nights with home nights?</h3>
 <p>Yes, but only after enough evidence: at least four away-day nights, four home-day nights and an average gap of at least one wake.</p>
 <h3>Are labels shared with my partner?</h3>
-<p>The current Flutter implementation keeps them per baby in local device preferences. Shared care events sync; the day label itself currently does not.</p>
+<p>The current implementation keeps them per baby in local device preferences. Shared care events sync; the day label itself currently does not.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — keep every real care day, add the missing context, and let personalised guidance learn from comparable evidence rather than a perfect-looking diary.</p>
-<p><em>This article describes the current OBubba Flutter implementation reviewed on 8 March 2027. Day labels organise app context; they are not medical assessments. Seek appropriate professional help when a baby is unwell, and urgent help in an emergency.</em></p>
+<p><em>This article describes the current OBubba implementation reviewed on 8 March 2027. Day labels organise app context; they are not medical assessments. Seek appropriate professional help when a baby is unwell, and urgent help in an emergency.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>

@@ -804,7 +804,7 @@
       <p>You log <strong>Warm</strong> at bedtime on several stuffy nights. A week later, OBubba says:</p>
 <p>&gt; <strong>Warm-room nights have averaged more wakes—a cooler room may help.</strong></p>
 <p>That is not a diagnosis, and it is not the app declaring that every wake was caused by heat.</p>
-<p><strong>The current Flutter app compares temperature-tagged nights from the previous 14 days. It needs at least three nights marked Warm, at least four marked Cool or Just right, and an average difference of 0.5 wakes or more before the insight can appear.</strong></p>
+<p><strong>The current app compares temperature-tagged nights from the previous 14 days. It needs at least three nights marked Warm, at least four marked Cool or Just right, and an average difference of 0.5 wakes or more before the insight can appear.</strong></p>
 <p>It only surfaces the actionable direction: warm nights looking worse. If warm nights are the same or better, OBubba stays quiet.</p>
 <h2>The exact rule in one picture</h2>
 <p>Here is a simple example:</p>
@@ -813,7 +813,7 @@
 <p>The 2.0-wake gap clears OBubba&#39;s minimum 0.5-wake display threshold, so the finding can appear.</p>
 <p>The app rounds each group average to one decimal place before presenting the comparison. It does not require every warm night to be bad; it asks whether the groups differ on average.</p>
 <h2>What counts as a Warm night?</h2>
-<p>When logging <strong>Bedtime</strong> in the Flutter tracker, parents can optionally record:</p>
+<p>When logging <strong>Bedtime</strong> in the tracker, parents can optionally record:</p>
 <ul><li><strong>Room temperature:</strong> Cool, Just right or Warm</li><li><strong>Light:</strong> Dark, Dim or Light</li><li><strong>Noise:</strong> Quiet, White noise or Noisy</li></ul>
 <p>For this particular detector, OBubba reads the <strong>Room temperature</strong> tag attached to the night. A night is in the Warm group if its resolved night entries contain a Warm tag. Cool and Just right become the comparison group.</p>
 <p>This is a category you selected, not a hidden thermometer reading. OBubba does not measure the nursery, infer a precise temperature from the weather or watch the baby through a sensor. If one parent thinks 21°C feels warm and another selects Just right, that inconsistency affects the comparison.</p>
@@ -825,7 +825,7 @@
 <p>Today is excluded because an in-progress day or night is not a fair comparison with completed nights.</p>
 <p>Untagged nights are also excluded from the temperature groups. Missing temperature information is not silently treated as Cool.</p>
 <h2>It compares the night—not a warm daytime nap</h2>
-<p>The Flutter provider deliberately reads temperature tags from the reconstructed <strong>night entries</strong>, not every event saved on that calendar day.</p>
+<p>The provider deliberately reads temperature tags from the reconstructed <strong>night entries</strong>, not every event saved on that calendar day.</p>
 <p>That prevents a warm living-room nap from relabelling a cool nursery night as Warm. It also keeps the wake count attached to the physical overnight sleep, even when bedtime and the morning wake sit on opposite sides of midnight.</p>
 <p>This is a small implementation detail with a big trust consequence: a correlation is only useful when the exposure and outcome belong to the same night.</p>
 <h2>Correlation is a clue, not a cause</h2>
@@ -843,8 +843,8 @@
 <ol><li><strong>Measure rather than guess.</strong> Place a simple room thermometer near the sleep space, away from direct sun, radiators and draughts.</li><li><strong>Check the baby directly.</strong> Feel the chest or back of the neck. Sweating or a hot chest suggests removing a layer; cool hands alone are not a reliable sign that the baby is cold.</li><li><strong>Use appropriate sleepwear.</strong> Follow the sleep-bag manufacturer&#39;s size and temperature guidance. Do not add a blanket on top of a sleeping bag.</li><li><strong>Keep the cot clear.</strong> Temperature changes do not replace the basics: baby on their back in a clear, flat, separate sleep space.</li><li><strong>Log consistently.</strong> Choose Cool, Just right or Warm from the measured room—not from the outdoor forecast.</li><li><strong>Change one lever.</strong> If the room has genuinely been warm, adjust temperature or layers safely rather than changing bedtime, feeds, white noise and settling all at once.</li></ol>
 <p>If the baby seems unwell or has a high body temperature, use appropriate medical guidance. A Warm room tag is not a fever measurement and OBubba&#39;s correlation is not a health assessment.</p>
 <h2>The separate Safe Sleep tool</h2>
-<p>OBubba also has a genuine Flutter <strong>Safe Sleep</strong> screen. It accepts an actual room-temperature value and offers a sleepwear-oriented room check, alongside safer-sleep essentials.</p>
-<figure><img src="/obubba-warm-room-safe-sleep-app.jpg" alt="The current OBubba Flutter Safe Sleep screen with a room-temperature field, Celsius or Fahrenheit choice and a visual cool-to-warm scale." loading="lazy"/><figcaption>The Safe Sleep screen uses an entered temperature; the warm-room correlation separately compares the optional Cool, Just right and Warm tags saved with bedtime logs.</figcaption></figure>
+<p>OBubba also has a genuine <strong>Safe Sleep</strong> screen. It accepts an actual room-temperature value and offers a sleepwear-oriented room check, alongside safer-sleep essentials.</p>
+<figure><img src="/obubba-warm-room-safe-sleep-app.jpg" alt="The current OBubba Safe Sleep screen with a room-temperature field, Celsius or Fahrenheit choice and a visual cool-to-warm scale." loading="lazy"/><figcaption>The Safe Sleep screen uses an entered temperature; the warm-room correlation separately compares the optional Cool, Just right and Warm tags saved with bedtime logs.</figcaption></figure>
 <p>These are related but different features:</p>
 <p>| Feature | Input | Purpose | |---|---|---| | Bedtime environment tag | Cool, Just right or Warm | Learn whether this baby&#39;s tagged warm nights coincide with more wakes | | Safe Sleep room check | A temperature entered in °C or °F | Help a parent think about sleepwear and the room tonight |</p>
 <p>Neither turns a phone into a room thermometer. Measure the room itself.</p>

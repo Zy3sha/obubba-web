@@ -804,17 +804,17 @@
       <p>At 2:10am you fed your baby, laid them back in the cot and watched them wriggle quietly before drifting off. Two nights later, you patted them, stopped when they seemed settled and they finished the journey themselves. Then OBubba showed a card:</p>
 <p><strong>“Maya is learning to resettle alone.”</strong></p>
 <p>It sounds like a milestone. But does “alone” mean the whole wake was unassisted? Is the app asking you to wait through crying? Has it decided feeding or rocking is a problem?</p>
-<p>No. We traced the current Flutter detector, the night-history caller and its tests for this guide. The card describes a precise change in the detailed wake logs: <strong>a larger share of recent recorded wakes ended with a Self-settle segment than an earlier group did.</strong> Feeding, holding, rocking or patting may still have happened first.</p>
+<p>No. We traced the current detector, the night-history caller and its tests for this guide. The card describes a precise change in the detailed wake logs: <strong>a larger share of recent recorded wakes ended with a Self-settle segment than an earlier group did.</strong> Feeding, holding, rocking or patting may still have happened first.</p>
 <p>That is why this can be one of OBubba’s loveliest insights—and why the wording needs careful interpretation.</p>
 <figure><img src="/obubba-learning-to-resettle-alone.jpg" alt="An awake, content baby lies on their back in a clear cot while a responsive parent stays close by." loading="lazy"/><figcaption>Self-settling can happen with a parent present and after comfort; it never requires leaving a crying or hungry baby unanswered.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current detector stays silent unless all of these are true:</p>
-<p>| Gate | Current Flutter rule | What it protects against | |---|---:|---| | Detailed evidence | At least <strong>6 night wakes</strong> have a non-empty ordered soothe breakdown | A few anecdotes are not called a trend | | Comparison groups | At least <strong>3 qualifying wakes</strong> fall in both the recent and earlier groups | Both sides need a minimum sample | | Recent level | At least <strong>40%</strong> of recent wakes end in Self-settle | A rise from a very low level is not enough | | Improvement | Recent share is at least <strong>20 percentage points higher</strong> | Tiny changes stay quiet |</p>
+<p>| Gate | Current rule | What it protects against | |---|---:|---| | Detailed evidence | At least <strong>6 night wakes</strong> have a non-empty ordered soothe breakdown | A few anecdotes are not called a trend | | Comparison groups | At least <strong>3 qualifying wakes</strong> fall in both the recent and earlier groups | Both sides need a minimum sample | | Recent level | At least <strong>40%</strong> of recent wakes end in Self-settle | A rise from a very low level is not enough | | Improvement | Recent share is at least <strong>20 percentage points higher</strong> | Tiny changes stay quiet |</p>
 <p>The caller supplies qualifying wakes from up to <strong>14 recent nights</strong>. For each wake, the detector reads only the <strong>last recorded soothe segment</strong>. If that final segment is Self-settle, the wake gets one “self-resolved” vote.</p>
-<figure><img src="/obubba-self-settle-progress-logic.svg" alt="The six-wake example and exact gates behind OBubba’s self-settle progress card." loading="lazy"/><figcaption>The current Flutter engine compares the final segment of detailed wake logs, requiring six wakes overall, three on each side, a recent share of at least 40% and a gain of at least 20 percentage points.</figcaption></figure>
+<figure><img src="/obubba-self-settle-progress-logic.svg" alt="The six-wake example and exact gates behind OBubba’s self-settle progress card." loading="lazy"/><figcaption>The current engine compares the final segment of detailed wake logs, requiring six wakes overall, three on each side, a recent share of at least 40% and a gain of at least 20 percentage points.</figcaption></figure>
 <p>These are product thresholds, not a medical definition of self-soothing and not a developmental target every baby should meet.</p>
 <h2>What a detailed soothe breakdown records</h2>
-<p>When a parent records a night wake in the current Flutter app, the detailed log can store a sequence of methods and minutes. The available methods are:</p>
+<p>When a parent records a night wake in the current app, the detailed log can store a sequence of methods and minutes. The available methods are:</p>
 <ul><li>Fed</li><li>Rocked</li><li>Held</li><li>Patted</li><li>Dummy</li><li>Self-settle</li></ul>
 <p>Order matters. A log might say:</p>
 <p><strong>Fed 8 minutes → Held 4 minutes → Self-settle 6 minutes</strong></p>
@@ -830,7 +830,7 @@
 <p>&gt; “More of the recent wakes you logged finished with a Self-settle step than the earlier wakes did.”</p>
 <p>That is still worth celebrating. It simply is not the same claim as “your baby now settles without you”.</p>
 <h2>A worked six-wake example</h2>
-<p>The positive test in the Flutter code uses this pattern:</p>
+<p>The positive test in the code uses this pattern:</p>
 <p>| Earlier recorded wakes | Final segment | Vote | |---|---|---:| | Patted 5m → Fed 15m | Fed | no | | Fed 20m | Fed | no | | Rocked 10m → Fed 12m | Fed | no |</p>
 <p>Earlier self-resolved share: <strong>0 out of 3 = 0%</strong>.</p>
 <p>| Recent recorded wakes | Final segment | Vote | |---|---|---:| | Fed 8m → Self-settle 25m | Self-settle | yes | | Patted 5m → Self-settle 20m | Self-settle | yes | | Self-settle 30m | Self-settle | yes |</p>
@@ -867,7 +867,7 @@
 <ul><li>how long the final Self-settle step lasted relative to the rest of the wake</li><li>why the baby woke</li><li>whether the baby cried or was calm</li><li>who provided care</li><li>whether sleep resumed immediately after the final segment</li><li>age or developmental change during the 14-night window</li><li>illness, teething, travel or changes in routine</li><li>unlogged wakes and simple wake entries</li><li>several wakes from one difficult night dominating the sample</li></ul>
 <p>It also cannot prove that a parent’s strategy caused the change. A baby may be maturing, waking for different reasons or simply having a calmer run of nights.</p>
 <p>For those reasons, the card is best treated as a <strong>personal progress prompt</strong>: something to review, smile at and keep in proportion.</p>
-<figure><img src="/obubba-night-wake-pause-app.jpg" alt="OBubba’s genuine Flutter night-sleep screen, showing the live sleep timer and quick access to the current record." loading="lazy"/><figcaption>The real app keeps the night record close at hand; the self-settle progress card is calculated later from ordered soothe details across several wakes.</figcaption></figure>
+<figure><img src="/obubba-night-wake-pause-app.jpg" alt="OBubba’s genuine night-sleep screen, showing the live sleep timer and quick access to the current record." loading="lazy"/><figcaption>The real app keeps the night record close at hand; the self-settle progress card is calculated later from ordered soothe details across several wakes.</figcaption></figure>
 <h2>Why this feature is more useful than a sleep timer</h2>
 <p>A basic tracker can tell you that a wake lasted 22 minutes. The ordered soothe log can preserve the shape of those 22 minutes: feed, cuddle, pause, resettle.</p>
 <p>Across enough records, OBubba can notice that the <strong>ending</strong> is changing even when the parent is too tired to see it. That is emotionally valuable. Exhausted parents often remember how many times they were needed, not the small portions the baby handled.</p>

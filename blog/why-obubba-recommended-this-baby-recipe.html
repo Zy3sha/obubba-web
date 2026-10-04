@@ -803,7 +803,7 @@
     <article class="section rich-text article">
       <p>OBubba opens with <strong>Egg &amp; Avocado Mash</strong> near the top of Recipe ideas for you. Yesterday it suggested lentils. Another family sees a different shortlist.</p>
 <p>Is the app prescribing what your baby should eat—or simply filling a random carousel?</p>
-<p>Neither. <strong>A recipe rises when it fits the baby&#39;s current weaning stage and helps fill a useful gap in the food history you have logged.</strong> The current Flutter app gives extra weight to one new allergen at a time, iron-rich food and a recipe not yet tried. It pushes recipes with several new allergens lower and removes any recipe containing an allergen recorded as reacted-to.</p>
+<p>Neither. <strong>A recipe rises when it fits the baby&#39;s current weaning stage and helps fill a useful gap in the food history you have logged.</strong> The current app gives extra weight to one new allergen at a time, iron-rich food and a recipe not yet tried. It pushes recipes with several new allergens lower and removes any recipe containing an allergen recorded as reacted-to.</p>
 <p>The result is a <strong>suggestion</strong>, not a nutrition assessment or a promise that every ingredient is safe in every form. The parent still checks readiness, texture, labels, preparation, appetite and the real food in front of them.</p>
 <figure><img src="/obubba-how-recipe-recommendation-works.svg" alt="A flow showing how OBubba first checks stage and reaction history, then ranks eligible recipes by one new allergen, iron and whether the recipe has been tried." loading="lazy"/><figcaption>A recipe is filtered for stage and reaction history before useful gaps affect its rank.</figcaption></figure>
 <h2>The short answer: it is trying to make the next choice useful, not perfect</h2>
@@ -812,7 +812,7 @@
 <ul><li><strong>Does it fit the corrected-age stage?</strong> Recipes unlock progressively rather than showing family meals to a brand-new eater.</li><li><strong>Does it contain an allergen with a recorded reaction?</strong> If yes, it is removed from suggestions.</li><li><strong>Does it introduce exactly one allergen not yet recorded?</strong> That receives the strongest positive ranking nudge.</li><li><strong>Is it iron-rich?</strong> Iron-rich options receive another positive nudge.</li><li><strong>Has this exact recipe name been logged before?</strong> An untried recipe gets a smaller variety nudge.</li><li><strong>Would it introduce two or more new allergens together?</strong> It is deliberately moved down rather than celebrated as an efficient shortcut.</li></ul>
 <p>That is why the first recommendation can change after a food log. Once dairy is recorded as introduced, a dairy recipe no longer needs a <strong>new: dairy</strong> boost. Once a recipe is tried, the <strong>tried</strong> badge can appear and another useful option may move above it.</p>
 <h2>The actual ranking, in plain English</h2>
-<p>The current Flutter scorer is deliberately compact:</p>
+<p>The current scorer is deliberately compact:</p>
 <p>| Signal | Ranking effect | Why it exists | |---|---:|---| | Exactly one new allergen | +3 | helps introduce allergens singly so a reaction is easier to identify | | Iron-rich recipe | +2 | keeps iron-containing choices visible from around six months | | Exact recipe not previously logged | +1 | encourages variety without making novelty the only goal | | Two or more new allergens | −2 | moves a complicated first exposure below clearer one-allergen options |</p>
 <p>These points choose order; they do not grade the baby’s diet. A score of six is not a nutritional quality score, and a lower-ranked recipe is not necessarily worse.</p>
 <p>The app also does not promise that the highest-ranked six recipes form a complete weekly diet. They are a decision-reducing shortlist to use alongside milk feeds, family foods, accepted favourites and professional advice where needed.</p>
@@ -844,13 +844,13 @@
 <p>This is a conservative app behaviour, not a diagnosis. A rash after a mixed meal does not prove which ingredient caused it, and removing a recipe does not establish an allergy. Follow the advice of the clinician assessing the reaction. Do not deliberately reintroduce a suspected or diagnosed allergen because another app screen seems reassuring.</p>
 <p>For severe breathing difficulty, swelling affecting the airway, collapse, marked floppiness or another life-threatening reaction, call 999.</p>
 <h2>What the badges on Recipe ideas for you mean</h2>
-<figure><img src="/obubba-weaning-progress-app.jpg" alt="The real OBubba Flutter Weaning progress screen showing the saved weekly plan and personalised Recipe ideas for you section." loading="lazy"/><figcaption>The current Flutter screen explains that recipe ideas are chosen for the stage and ranked around gaps, allergens, iron and untried foods.</figcaption></figure>
+<figure><img src="/obubba-weaning-progress-app.jpg" alt="The real OBubba Weaning progress screen showing the saved weekly plan and personalised Recipe ideas for you section." loading="lazy"/><figcaption>The current screen explains that recipe ideas are chosen for the stage and ranked around gaps, allergens, iron and untried foods.</figcaption></figure>
 <p>The live list can display three small explanations:</p>
 <ul><li><strong>iron-rich</strong> — the recipe carries the engine’s iron-rich signal</li><li><strong>new: egg</strong> or another allergen — this allergen has not been found in the food history</li><li><strong>tried</strong> — this exact recipe name already appears in the log</li></ul>
 <p>“Tried” is intentionally literal. If you logged “lentil pasta” and the library recipe is called “Soft Lentil Tomato Pasta”, the app may not know they are the same dish. Conversely, one log cannot prove a meaningful amount was swallowed.</p>
 <p>Use the badge as memory support, not a legal record of exposure.</p>
 <h2>Why a safety warning can still appear inside a recommended recipe</h2>
-<p>Open a recipe and the Flutter sheet shows ingredients, method, a baby-led-weaning option and detected allergens. It also runs the app’s live food-safety checks over the recipe name and ingredients.</p>
+<p>Open a recipe and the sheet shows ingredients, method, a baby-led-weaning option and detected allergens. It also runs the app’s live food-safety checks over the recipe name and ingredients.</p>
 <p>That can surface a preparation warning even though the recipe was recommended. This is not a contradiction:</p>
 <ul><li>ranking asks whether the recipe is a useful idea</li><li>the warning asks whether a named ingredient needs an age or preparation check</li><li>the parent verifies the actual cut, softness, temperature, label and serving</li></ul>
 <p>The NHS says to consider the size, shape and texture of food, avoid small round and firm pieces, seat baby safely upright and supervise throughout eating. A database entry cannot perform the finger-and-thumb squash test or see a bone in fish.</p>
@@ -886,7 +886,7 @@
 <h3>Why is a familiar recipe still marked untried?</h3>
 <p>The app compares the library recipe name with logged food text. Different wording can prevent an exact match. The recommendation is memory support, not a perfect semantic reconstruction of every family meal.</p>
 <h3>Will OBubba recommend a food my baby reacted to months ago?</h3>
-<p>The current Flutter screen passes a lifetime reacted-allergen set into both recipe ideas and weekly-plan generation. Recipes containing that detected allergen are filtered even when the original reaction is outside recent daily history.</p>
+<p>The current screen passes a lifetime reacted-allergen set into both recipe ideas and weekly-plan generation. Recipes containing that detected allergen are filtered even when the original reaction is outside recent daily history.</p>
 <h3>Is a recommended recipe automatically free from choking hazards?</h3>
 <p>No. The recipe sheet can show live wording-based warnings, but the app cannot see the food’s actual shape, firmness, bones, temperature or preparation. Follow current safe-weaning guidance every time.</p>
 <h3>Does Plan this week replace milk feeds?</h3>

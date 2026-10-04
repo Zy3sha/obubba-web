@@ -804,19 +804,19 @@
       <p>For months, the night had three feeding landmarks: midnight, 3am and 5am. Lately one has disappeared. Some nights there is only one feed. Then OBubba shows a card:</p>
 <p><strong>“Night feeds are dropping.”</strong></p>
 <p>It feels like progress. But has the app decided the baby is ready to night-wean? Does “one feed from done” mean you should resettle instead of feeding? Did starting solids cause the change?</p>
-<p>No. We traced the current Flutter trend detector, its caller, night resolver and tests for this guide. The card makes a narrower comparison: <strong>among sufficiently logged nights, the average number of qualifying night-feed entries in the latest seven night slots differs from the previous seven by at least 0.4 feeds per night.</strong> When the newer average is lower, the positive card appears.</p>
+<p>No. We traced the current trend detector, its caller, night resolver and tests for this guide. The card makes a narrower comparison: <strong>among sufficiently logged nights, the average number of qualifying night-feed entries in the latest seven night slots differs from the previous seven by at least 0.4 feeds per night.</strong> When the newer average is lower, the positive card appears.</p>
 <p>That can reveal a change an exhausted parent has not noticed. It does not establish that zero feeds is the right target.</p>
 <figure><img src="/obubba-night-feeds-dropping.jpg" alt="An awake caregiver holds a calm, alert baby upright after a night feed beside a clear cot." loading="lazy"/><figcaption>A falling night-feed count can happen naturally; responsive care and hunger cues still come before an app trend.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current detector needs all of these:</p>
-<p>| Gate | Flutter rule | Why it matters | |---|---:|---| | Window | Exactly <strong>14 night slots</strong> | Two seven-night periods must exist | | Logging coverage | At least <strong>4 non-empty nights in each week</strong> | Sparse logging is not treated as fewer feeds | | Qualifying event | Feed entry marked as <strong>night</strong>, excluding dream feeds and solids | Day feeds and planned dream feeds stay out | | Change | Absolute average difference of at least <strong>0.4 feeds per logged night</strong> | A flat or tiny shift stays quiet | | Direction | Newer average is lower | Produces “Night feeds are dropping” |</p>
+<p>| Gate | rule | Why it matters | |---|---:|---| | Window | Exactly <strong>14 night slots</strong> | Two seven-night periods must exist | | Logging coverage | At least <strong>4 non-empty nights in each week</strong> | Sparse logging is not treated as fewer feeds | | Qualifying event | Feed entry marked as <strong>night</strong>, excluding dream feeds and solids | Day feeds and planned dream feeds stay out | | Change | Absolute average difference of at least <strong>0.4 feeds per logged night</strong> | A flat or tiny shift stays quiet | | Direction | Newer average is lower | Produces “Night feeds are dropping” |</p>
 <p>If the newer average rises by at least 0.4 instead, the same detector can show <strong>“Night feeds have crept up.”</strong></p>
-<figure><img src="/obubba-night-feed-trend-logic.svg" alt="The exact two-week comparison, missing-night guard and 0.4-feed threshold behind OBubba’s night-feed trend." loading="lazy"/><figcaption>The current Flutter detector averages qualifying feed entries over logged nights in each seven-slot period; an unlogged night is excluded rather than counted as zero.</figcaption></figure>
+<figure><img src="/obubba-night-feed-trend-logic.svg" alt="The exact two-week comparison, missing-night guard and 0.4-feed threshold behind OBubba’s night-feed trend." loading="lazy"/><figcaption>The current detector averages qualifying feed entries over logged nights in each seven-slot period; an unlogged night is excluded rather than counted as zero.</figcaption></figure>
 <p>These are product rules, not a clinical night-weaning assessment.</p>
 <h2>What counts as a night feed</h2>
 <p>The trend counts a saved entry when:</p>
 <ul><li>its type is Feed</li><li>it is marked as a night event</li><li>it is not marked as a Dream feed</li><li>its feed type is not Solids</li></ul>
-<p>Breast and bottle feeds both contribute one count. A feed saved as part of resettling a logged night wake is still a real milk feed, so it contributes to this frequency trend. Pumping records are normalised to a separate Pump event in the current Flutter model and do not count as baby intake.</p>
+<p>Breast and bottle feeds both contribute one count. A feed saved as part of resettling a logged night wake is still a real milk feed, so it contributes to this frequency trend. Pumping records are normalised to a separate Pump event in the current model and do not count as baby intake.</p>
 <p>A dream feed is excluded because it is intentionally offered while the baby is asleep or not fully awake. Solids are excluded because grams of food are not a milk feed and should never inflate a night-milk measure.</p>
 <p>The app is counting <strong>events</strong>, not nutrition. It does not inspect bottle millilitres, minutes at the breast, swallowing, milk transfer or whether the feed was a snack or a full feed.</p>
 <h2>Two weeks means two sets of night slots</h2>
@@ -836,7 +836,7 @@
 <p>The previous week has seven logged nights with three feeds each:</p>
 <p><strong>21 feeds ÷ 7 logged nights = 3.0 feeds per night</strong></p>
 <p>The difference is <strong>−2.0</strong>, comfortably beyond the 0.4 threshold, so the positive card appears. The sample label reports 13 nights because the empty slot was not evidence.</p>
-<p>The Flutter test’s simplest positive example uses all 14 logged nights: seven recent nights at one feed and seven older nights at three. The body then displays <strong>1.0</strong> versus <strong>3.0</strong>, and the copy switches to its “nearly done” version because the recent average is no more than one.</p>
+<p>The test’s simplest positive example uses all 14 logged nights: seven recent nights at one feed and seven older nights at three. The body then displays <strong>1.0</strong> versus <strong>3.0</strong>, and the copy switches to its “nearly done” version because the recent average is no more than one.</p>
 <h2>Frequency can fall while milk intake does not</h2>
 <p>Three short comfort feeds becoming one substantial feed produces a falling count. So does three full feeds becoming one small snack. The detector treats both changes identically.</p>
 <p>It cannot tell whether:</p>
@@ -863,7 +863,7 @@
 <ul><li>age of roughly 6 months or more</li><li>at least three daytime feeds in the supplied record</li><li>night-feed data on at least two nights</li></ul>
 <p>Under one year, its volume-based plan retains a small-feed floor rather than automatically tapering to zero. That is more conservative than the trend card.</p>
 <p>But those green lights are still app signals, not medical clearance. Counting three daytime feed entries cannot verify intake, growth or hydration. Families with prematurity, faltering growth, feeding difficulties, medical conditions or a clinical feeding plan should use individual advice.</p>
-<figure><img src="/obubba-night-weaning-readiness-app.jpg" alt="OBubba’s genuine Flutter night-weaning screen separates age, daytime feeding and baseline-night checks from the simpler week-over-week trend." loading="lazy"/><figcaption>The real app’s plan has separate readiness lights; the ‘Night feeds are dropping’ card itself does not apply those gates.</figcaption></figure>
+<figure><img src="/obubba-night-weaning-readiness-app.jpg" alt="OBubba’s genuine night-weaning screen separates age, daytime feeding and baseline-night checks from the simpler week-over-week trend." loading="lazy"/><figcaption>The real app’s plan has separate readiness lights; the ‘Night feeds are dropping’ card itself does not apply those gates.</figcaption></figure>
 <h2>How to use the card safely</h2>
 <h3>If the reduction happened naturally</h3>
 <p>Keep following cues. Notice daytime milk feeds, wet nappies, alertness, growth and how the baby behaves at the remaining night feed. There is no need to push from one feed to zero simply to maintain the graph.</p>

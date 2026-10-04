@@ -770,7 +770,7 @@
   },
   "mainEntityOfPage": "https://obubba.com/blog/are-obubba-wake-windows-wrong-too-long-too-short.html",
   "image": "https://obubba.com/obubba-wake-window-feedback-parent.jpg",
-  "keywords": "OBubba wake windows wrong, baby wake window too long, baby wake window too short, change nap prediction, personalised baby sleep app, baby fights predicted nap, wake window feedback, adaptive nap tracker, OBubba Flutter app"
+  "keywords": "OBubba wake windows wrong, baby wake window too long, baby wake window too short, change nap prediction, personalised baby sleep app, baby fights predicted nap, wake window feedback, adaptive nap tracker, OBubba app"
 }
 </script>
 </head>
@@ -803,7 +803,7 @@
     <article class="section rich-text article">
       <p>OBubba says the next nap window is approaching. Your baby is still rolling happily across the floor, examining a wooden spoon as if it contains the secrets of the universe. This has happened for three days: the app looks early and your baby looks nowhere near sleep.</p>
 <p>Or perhaps the opposite keeps happening. By the time the window arrives, your baby is rubbing their eyes, becoming frantic and finding it hard to settle. The prediction seems late for the child in front of you.</p>
-<p>You do not need to wait a week, override every nap manually or prove that the app is “wrong”. In the current OBubba Flutter app, go to <strong>Account → Preferences → Wake windows</strong> and choose:</p>
+<p>You do not need to wait a week, override every nap manually or prove that the app is “wrong”. In the current OBubba app, go to <strong>Account → Preferences → Wake windows</strong> and choose:</p>
 <ul><li><strong>Too long</strong> when the suggested awake stretches repeatedly seem later than your baby can comfortably manage</li><li><strong>About right</strong> when the starting point feels broadly useful, or when you are not sure</li><li><strong>Too short</strong> when your baby repeatedly seems ready later than the suggested window</li></ul>
 <p>That one choice nudges the age-based starting range by <strong>25 minutes</strong> from the next prediction. It does not create an appointment, diagnose why a nap was difficult or tell you to ignore your baby.</p>
 <figure><img src="/obubba-wake-window-feedback-flow.svg" alt="How the Too long, About right and Too short choices affect OBubba&#39;s starting wake-window range before guardrails and learned history." loading="lazy"/><figcaption>Your observation changes the starting point; age-scaled product limits and repeated nap outcomes still shape the result.</figcaption></figure>
@@ -813,7 +813,7 @@
 <p>That is why the preference exists. The app begins with an age-aware range because a new account has no personal history. The parent can then say, in effect, “for this baby, that starting point has been landing early” or “we are usually struggling before we get there”.</p>
 <p>The aim is not to replace observation with an algorithm. It is to stop parents doing the same mental recalculation after every wake.</p>
 <h2>What each choice actually changes</h2>
-<p>The Flutter implementation maps the three labels to a signed timing bias:</p>
+<p>The implementation maps the three labels to a signed timing bias:</p>
 <p>| What you choose | What OBubba does to the starting range | A reasonable reason to try it | |---|---:|---| | <strong>Too long</strong> | shifts both ends <strong>25 minutes earlier</strong> | baby is repeatedly struggling before the displayed window | | <strong>About right</strong> | applies <strong>no parent-set shift</strong> | timing is broadly useful, the pattern is mixed or you are unsure | | <strong>Too short</strong> | shifts both ends <strong>25 minutes later</strong> | baby is repeatedly content at the window and settles better later |</p>
 <p>The wording describes the <strong>window</strong>, not the baby. “Too short” means “the suggested awake stretch seems too short”; it does not mean the nap was too short.</p>
 <p>That distinction matters. A parent whose baby takes 30-minute naps might instinctively tap <strong>Too short</strong>, but the cause may be an awake stretch that was already too long. Use the control only when the <em>timing before sleep</em> looks consistently early or late, not as a verdict on nap duration alone.</p>
@@ -835,9 +835,9 @@
 <p>That does not mean the next target will move by exactly 25 clock minutes in every situation. The final displayed prediction can also respond to:</p>
 <ul><li>the real morning wake or latest completed nap end</li><li>which nap is next</li><li>whether the previous nap was very short or unusually long</li><li>recent, comparable wake-window history</li><li>optional nap-review details such as settling and wake mood</li><li>a logged off-day, illness, teething, travel or daycare context</li><li>the remaining day-sleep budget and the distance to bedtime</li></ul>
 <p>The cleanest way to judge the preference is therefore not to compare two isolated clock times. Compare several ordinary, similarly structured days and ask whether the suggested wind-down is becoming more usable.</p>
-<figure><img src="/obubba-wake-window-preference-app.jpg" alt="The genuine OBubba Flutter Preferences screen showing the Wake windows section and the three choices Too long, About right and Too short." loading="lazy"/><figcaption>The control lives in Account → Preferences → Wake windows. About right is the neutral default.</figcaption></figure>
+<figure><img src="/obubba-wake-window-preference-app.jpg" alt="The genuine OBubba Preferences screen showing the Wake windows section and the three choices Too long, About right and Too short." loading="lazy"/><figcaption>The control lives in Account → Preferences → Wake windows. About right is the neutral default.</figcaption></figure>
 <h2>How the app learns after your first tap</h2>
-<p>The setting helps most when OBubba has little history. The Flutter comments describe it as the parent&#39;s read of their baby&#39;s awake tolerance, applied from the first nap rather than making a family endure several days of obviously unhelpful suggestions.</p>
+<p>The setting helps most when OBubba has little history. The comments describe it as the parent&#39;s read of their baby&#39;s awake tolerance, applied from the first nap rather than making a family endure several days of obviously unhelpful suggestions.</p>
 <p>As logs accumulate, OBubba can use actual outcomes. For a future first nap, for example, it looks for comparable first-nap wake windows in recent baseline days. More recent examples carry more weight. A wake window followed by a longer, more restorative nap carries more influence than one followed by a tiny catnap. Obvious outliers can be trimmed.</p>
 <p>Key personal layers require repeated usable samples before they affect a target. The Preferences screen describes the first week, or about eight naps, as a common learning period—not a promise that the eighth nap unlocks a perfect answer. A specific pattern can become informative sooner, while disrupted or inconsistent days may take longer.</p>
 <p>The parent preference and learned evidence are not competing votes where one suddenly deletes the other. The preference changes the age-based engine range and its boundaries; repeated history can increasingly drive the personal target within that live context.</p>
@@ -866,7 +866,7 @@
 <h3>Does “Too short” mean my baby&#39;s naps are too short?</h3>
 <p>No. It means the suggested <em>awake stretch</em> seems too short, so OBubba should start from a later range. Nap duration alone does not tell you which option to choose.</p>
 <h3>How big is the change?</h3>
-<p>The current Flutter app uses 25 minutes: Too long applies −25 minutes, About right applies zero, and Too short applies +25 minutes to the age-based starting range.</p>
+<p>The current app uses 25 minutes: Too long applies −25 minutes, About right applies zero, and Too short applies +25 minutes to the age-based starting range.</p>
 <h3>Will every displayed nap time move by exactly 25 minutes?</h3>
 <p>Not necessarily. The preference changes one layer. The latest wake, completed naps, personal history, disruption context and bedtime feasibility can also change the final window.</p>
 <h3>Does the setting affect the next nap or only future learning?</h3>

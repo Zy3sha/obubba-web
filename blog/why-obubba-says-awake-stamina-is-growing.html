@@ -803,13 +803,13 @@
     <article class="section rich-text article">
       <p>One morning your baby is happily rolling, reaching or babbling long after the time when you used to begin the first nap. The next morning is different. Then, after a few weeks of logging, OBubba surfaces a small sprout and says:</p>
 <p>&gt; <strong>Awake stamina is growing</strong></p>
-<p>This is not a wake-window chart being applied to your baby. The current Flutter feature looks only at your baby’s own logged mornings. It measures the gap from morning wake to the first completed daytime nap, compares two fixed 14-day periods and speaks only when the middle recent value has increased by at least 20 minutes <strong>and</strong> 15%.</p>
+<p>This is not a wake-window chart being applied to your baby. The current feature looks only at your baby’s own logged mornings. It measures the gap from morning wake to the first completed daytime nap, compares two fixed 14-day periods and speaks only when the middle recent value has increased by at least 20 minutes <strong>and</strong> 15%.</p>
 <p>That makes it a useful observation. It does not make it proof that your baby was comfortable, that every day should now stretch, or that a later nap caused better sleep.</p>
 <p>Here is exactly how OBubba earns the sentence—and how to use it as permission to notice rather than pressure to perform.</p>
 <h2>The short answer</h2>
 <p>Every gate below must pass:</p>
-<p>| Gate | Current Flutter rule | |---|---| | Age | <strong>8 through 78 weeks</strong>, inclusive | | Lookback | Up to <strong>28 calendar days</strong>, with today first | | Daily measurement | Earliest non-night wake → start of first completed daytime nap | | Plausible range | At least <strong>45 minutes</strong>, no more than <strong>7 hours</strong> | | Recent group | Calendar days 0–13; at least <strong>5 measurable days</strong> | | Prior group | Calendar days 14–27; at least <strong>5 measurable days</strong> | | Summary value | The sorted value at index `length ÷ 2` in each group | | Change needed | Recent value is at least <strong>20 minutes longer</strong> <strong>and</strong> at least <strong>15% longer</strong> | | Direction | Positive lengthening only; flat or shorter stays silent | | Card | Low urgency, shown as a long-term pattern in <strong>What OBubba noticed</strong> |</p>
-<figure><img src="/obubba-awake-stamina-detector.svg" alt="The exact Flutter decision path behind OBubba’s awake-stamina insight." loading="lazy"/><figcaption>OBubba measures each valid day from morning wake to the first completed daytime nap, compares the prior and recent calendar fortnights, requires at least five usable days in each, and surfaces the pattern only when the recent middle value is both 20 minutes and 15% longer. It measures timing, not comfort or cause.</figcaption></figure>
+<p>| Gate | Current rule | |---|---| | Age | <strong>8 through 78 weeks</strong>, inclusive | | Lookback | Up to <strong>28 calendar days</strong>, with today first | | Daily measurement | Earliest non-night wake → start of first completed daytime nap | | Plausible range | At least <strong>45 minutes</strong>, no more than <strong>7 hours</strong> | | Recent group | Calendar days 0–13; at least <strong>5 measurable days</strong> | | Prior group | Calendar days 14–27; at least <strong>5 measurable days</strong> | | Summary value | The sorted value at index `length ÷ 2` in each group | | Change needed | Recent value is at least <strong>20 minutes longer</strong> <strong>and</strong> at least <strong>15% longer</strong> | | Direction | Positive lengthening only; flat or shorter stays silent | | Card | Low urgency, shown as a long-term pattern in <strong>What OBubba noticed</strong> |</p>
+<figure><img src="/obubba-awake-stamina-detector.svg" alt="The exact decision path behind OBubba’s awake-stamina insight." loading="lazy"/><figcaption>OBubba measures each valid day from morning wake to the first completed daytime nap, compares the prior and recent calendar fortnights, requires at least five usable days in each, and surfaces the pattern only when the recent middle value is both 20 minutes and 15% longer. It measures timing, not comfort or cause.</figcaption></figure>
 <h2>One day contributes one very specific number</h2>
 <p>For each date, the detector tries to calculate:</p>
 <p>&gt; <strong>first daytime nap start − morning wake time</strong></p>
@@ -846,7 +846,7 @@
 <p>&gt; <strong>Oliver’s first wake window has stretched from about 1h 50m to 2h 30m over the last few weeks.</strong></p>
 <p>If the profile name is blank, it uses “Baby.” The card carries low urgency and the evidence count described above.</p>
 <p>This is classified as a long-term pattern. It folds into <strong>What OBubba noticed</strong>, rather than repeating as one of today’s guidance cards. That separation is sensible: maturation is context for the family’s evolving rhythm, not an instruction that must be completed today.</p>
-<figure><img src="/obubba-how-long-learn-insights-app.jpg" alt="A genuine OBubba Flutter screen showing the What OBubba noticed feed where longer-term patterns are collected rather than repeated as daily instructions." loading="lazy"/><figcaption>This genuine app screen shows the analysis home used for OBubba’s multi-day patterns. Awake-stamina growth belongs here because it is a retrospective comparison across weeks, not a command to extend today’s first wake window.</figcaption></figure>
+<figure><img src="/obubba-how-long-learn-insights-app.jpg" alt="A genuine OBubba screen showing the What OBubba noticed feed where longer-term patterns are collected rather than repeated as daily instructions." loading="lazy"/><figcaption>This genuine app screen shows the analysis home used for OBubba’s multi-day patterns. Awake-stamina growth belongs here because it is a retrospective comparison across weeks, not a command to extend today’s first wake window.</figcaption></figure>
 <h2>The useful interpretation: your old clock may be becoming less useful</h2>
 <p>The best reading is modest:</p>
 <p>&gt; Across enough logged mornings, the timing of the first nap has shifted later relative to morning wake.</p>
@@ -871,7 +871,7 @@
 <p>The calculation does not remove illness, travel or nursery days. A note can help you interpret the card later, even though the detector itself does not read that context here. If the two fortnights straddle a holiday or a childcare change, treat the trend as a prompt to investigate, not a clean experiment.</p>
 <p>You do not need a perfect 28-day diary. The feature is deliberately willing to work with five valid mornings on each side. You do need enough accurately anchored mornings for the middle values to mean what the title suggests.</p>
 <h2>Why the age gate deserves plain language</h2>
-<p>The current Flutter implementation accepts ages from 8 through 78 weeks inclusive. At 79 weeks it stays silent. The source comment describes this as “roughly the first year,” but 78 weeks is about 18 months, so the executable rule is broader than that comment.</p>
+<p>The current implementation accepts ages from 8 through 78 weeks inclusive. At 79 weeks it stays silent. The source comment describes this as “roughly the first year,” but 78 weeks is about 18 months, so the executable rule is broader than that comment.</p>
 <p>That is worth knowing because an eight-week-old and an eighteen-month-old have very different days. The same mathematical detector runs for both. The result should never override feeding needs, health advice, safe sleep or the caregiver’s knowledge of their child.</p>
 <p>If sleep is persistently difficult or you need help establishing a routine, the NHS advises speaking with a health visitor. For every nap, safer-sleep guidance still applies: for the first six months, the safest place is a cot or Moses basket, on the back, in the same room as the caregiver, with the sleep space clear and the mattress firm and flat (<a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS safer sleep advice</a>). No wake-window trend changes those basics.</p>
 <h2>A worked 28-day example</h2>
@@ -880,7 +880,7 @@
 <p>Its middle value is 110 minutes, or 1h 50m.</p>
 <p>The recent fortnight has six usable values:</p>
 <p>&gt; 125, 135, 145, <strong>150</strong>, 155, 165 minutes</p>
-<p>Because there are six values, Flutter chooses the upper middle: 150 minutes, or 2h 30m.</p>
+<p>Because there are six values, chooses the upper middle: 150 minutes, or 2h 30m.</p>
 <p>The gain is:</p>
 <p>&gt; 150 − 110 = <strong>40 minutes</strong></p>
 <p>The percentage gain is:</p>

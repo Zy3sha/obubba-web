@@ -804,13 +804,13 @@
       <p>Banana disappears. Porridge is welcomed. The same toast fingers are picked up without hesitation. Then a teaspoon of parsnip arrives and the mouth closes before it gets close.</p>
 <p>When that happens meal after meal, it is easy to decide that your baby is “picky”, hates vegetables or needs to be persuaded into one successful mouthful.</p>
 <p><strong>A better first response is to keep one familiar food, make the new exposure tiny, remove the pressure and repeat it on another day.</strong> A surprised face, touch, lick or spit-out taste can still be part of learning. But repeated gagging, coughing, pain or difficulty across textures needs a different response from ordinary new-food hesitation.</p>
-<p>OBubba’s current Flutter engine tries to preserve that distinction. It can separate a recent run that looks mostly <strong>new-food related</strong> from one whose notes point to a <strong>texture gap</strong>. It does not diagnose why a baby refused, and one difficult meal is deliberately not enough.</p>
+<p>OBubba’s current engine tries to preserve that distinction. It can separate a recent run that looks mostly <strong>new-food related</strong> from one whose notes point to a <strong>texture gap</strong>. It does not diagnose why a baby refused, and one difficult meal is deliberately not enough.</p>
 <h2>The short answer</h2>
 <p>At the next calm meal:</p>
 <ol><li>serve a small amount of one accepted food;</li><li>add one tiny, recognisable new food in a safe texture;</li><li>let your baby touch, smell, lick, hold or ignore it;</li><li>stop at repeated head turns, a closed mouth or distress;</li><li>record what was offered, how it was prepared and what actually happened; and</li><li>offer the same food again on another day without turning it into a test.</li></ol>
 <p>The <a href="https://www.nhs.uk/baby/weaning-and-feeding/help-your-baby-enjoy-new-foods/" target="_blank" rel="noopener noreferrer">NHS says a baby may need 10 or more attempts to accept a new food</a>. A funny face does not necessarily mean dislike, and it is more useful to consider eating across a week than to judge one meal.</p>
 <p>| What happened | More useful interpretation | Next step | |---|---|---| | Ate the familiar food, ignored the new one | Novelty may be the main barrier today | Keep the new amount tiny and repeat it later | | Touched or licked the new food, then stopped | Exploration, not a failed exposure | Count the contact; do not demand a bite | | Accepted smooth carrot but repeatedly gagged on lumpy carrot | Texture may matter more than flavour | Make the step smaller and review preparation | | Refused familiar and new foods while tired or unwell | This may be a general off-patch | Protect milk, comfort and hydration; try later | | Coughed, choked, sounded wet or seemed in pain | Not ordinary fussiness | Stop and seek appropriate professional advice | | Developed possible allergy symptoms | Not a “keep trying” situation | Stop the suspected food and get medical advice |</p>
-<figure><img src="/obubba-new-food-vs-texture-refusal-logic.svg" alt="How OBubba distinguishes a recent new-food refusal pattern from texture-linked refusal." loading="lazy"/><figcaption>The real Flutter logic requires three recent clustered refusals, then checks texture clues before new-food clues. One meal, sparse refusals and stale data stay quiet.</figcaption></figure>
+<figure><img src="/obubba-new-food-vs-texture-refusal-logic.svg" alt="How OBubba distinguishes a recent new-food refusal pattern from texture-linked refusal." loading="lazy"/><figcaption>The real logic requires three recent clustered refusals, then checks texture clues before new-food clues. One meal, sparse refusals and stale data stay quiet.</figcaption></figure>
 <h2>New does not mean disliked</h2>
 <p>A baby meets more than a flavour when food is unfamiliar. The colour, smell, temperature, shape, stickiness and movement in the mouth may all be new at once.</p>
 <p>That is why acceptance can look gradual:</p>
@@ -852,16 +852,16 @@
 <p>Even when a gag is protective, repeated gagging that prevents progress or causes significant distress deserves discussion with a health visitor or feeding professional. Do not put fingers blindly into a gagging baby’s mouth.</p>
 <p>Food should be prepared for the baby’s current ability. The <a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/preparing-food-safely/" target="_blank" rel="noopener noreferrer">NHS safer-weaning guide</a> advises considering size, shape and texture, avoiding firm and round foods, seating the baby safely upright and supervising every meal.</p>
 <h2>What to record in OBubba</h2>
-<p>The current Flutter path is:</p>
+<p>The current path is:</p>
 <p><strong>Track → Feed → Solids</strong></p>
 <p>The sheet records:</p>
 <ul><li>the time;</li><li><strong>What did they eat?</strong> as free text;</li><li>any allergens the food-text detector recognises; and</li><li><strong>How did they take it?</strong> as Loved it, Unsure or Reaction.</li></ul>
 <p>Specific descriptions create more useful history:</p>
 <ul><li>weak: `veg`;</li><li>better: `parsnip, first try`;</li><li>texture-aware: `parsnip, fine fork-mash`;</li><li>safety-relevant context: `soft chopped pasta; coughed twice and meal stopped`.</li></ul>
 <p>Use <strong>Reaction</strong> for a possible reaction, not as a general dislike button. A funny face, gag or refusal is not automatically an allergy.</p>
-<figure><img src="/obubba-weaning-progress-app.jpg" alt="The current OBubba Flutter Weaning progress screen brings texture stage, iron-rich meals, unique foods, days weaning, a weekly plan and personalised recipe ideas together." loading="lazy"/><figcaption>OBubba&#39;s real Flutter Weaning progress screen. It uses the food history for broader progress and planning; it cannot watch a baby eat or assess swallowing.</figcaption></figure>
-<h2>How the real Flutter refusal detector works</h2>
-<p>We traced `diagnoseWeaningPattern`, its tests and the data assembled by the current Flutter brain.</p>
+<figure><img src="/obubba-weaning-progress-app.jpg" alt="The current OBubba Weaning progress screen brings texture stage, iron-rich meals, unique foods, days weaning, a weekly plan and personalised recipe ideas together." loading="lazy"/><figcaption>OBubba&#39;s real Weaning progress screen. It uses the food history for broader progress and planning; it cannot watch a baby eat or assess swallowing.</figcaption></figure>
+<h2>How the real refusal detector works</h2>
+<p>We traced `diagnoseWeaningPattern`, its tests and the data assembled by the current brain.</p>
 <h3>First, it requires a real run</h3>
 <p>The detector examines the <strong>three most recent solids meals</strong>. All three notes must contain refusal wording such as refused, spat, turned away, no interest, pushed away, cried, gagged or threw.</p>
 <p>The three meals must also:</p>
@@ -879,9 +879,9 @@
 <p>Exact text comparison creates an important limitation: `carrot purée` and `smooth carrot` are different strings. The app may treat the second description as unseen even when the ingredient is familiar. Consistent naming improves the history.</p>
 <h3>Otherwise, it uses general refusal reassurance</h3>
 <p>If neither texture nor novelty is a convincing dominant explanation, the app uses its general <strong>“A run of refused meals”</strong> card. Teething, appetite, tiredness and distraction may all matter; the code does not pretend to know which one caused the run.</p>
-<h3>A current Flutter limitation worth knowing</h3>
-<p>The classifier depends on `SolidsLog.note`. However, the current Flutter <strong>Feed → Solids</strong> segment shows the food field and Loved/Unsure/Reaction chips but does <strong>not currently display the Note field</strong> that bottle and breast segments show.</p>
-<p>The underlying entry model can carry a note, including data written through another or synced entry route, and the engine will read it. But a solids meal entered only through the visible Flutter form may not contain the refusal words this classifier requires.</p>
+<h3>A current limitation worth knowing</h3>
+<p>The classifier depends on `SolidsLog.note`. However, the current <strong>Feed → Solids</strong> segment shows the food field and Loved/Unsure/Reaction chips but does <strong>not currently display the Note field</strong> that bottle and breast segments show.</p>
+<p>The underlying entry model can carry a note, including data written through another or synced entry route, and the engine will read it. But a solids meal entered only through the visible form may not contain the refusal words this classifier requires.</p>
 <p>So the card can stay silent even when the parent experienced three refusals. That is a product-input gap, not proof that the app judged the meals acceptable. OBubba should eventually expose an optional solids context note or structured refusal reason so this otherwise thoughtful detector is reachable without relying on hidden or synced data.</p>
 <h2>What OBubba can still do with the food history</h2>
 <p>Even without that refusal note, the current Weaning area uses recorded food history to support:</p>
@@ -902,11 +902,11 @@
 <h3>Should I mix the new food into a favourite?</h3>
 <p>You can combine foods as part of normal meals, but also keep occasional recognisable exposure so your baby can learn what the new food looks, smells and tastes like. Never hide a known or suspected allergen.</p>
 <h3>Why did OBubba stay quiet after three refused meals?</h3>
-<p>The real detector needs three trailing refusals within seven days, the latest no more than four days old, plus refusal words in each meal note. The current Flutter solids form does not visibly expose that Note field, so Flutter-only entries may not provide the required evidence. Silence is not a diagnosis.</p>
+<p>The real detector needs three trailing refusals within seven days, the latest no more than four days old, plus refusal words in each meal note. The current solids form does not visibly expose that Note field, so entries made in the new app may not provide the required evidence. Silence is not a diagnosis.</p>
 <h3>Can OBubba tell whether my baby has a texture problem?</h3>
 <p>No. It can group words in the history and offer a gentle prompt. It cannot inspect the food, observe oral movement, assess swallowing or diagnose sensory, developmental or medical causes.</p>
 <h2>Sources</h2>
-<ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/help-your-baby-enjoy-new-foods/" target="_blank" rel="noopener noreferrer">NHS: Help your baby enjoy new foods</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s first solid foods</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/choking-and-gagging-on-food/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Choking and gagging on food</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/preparing-food-safely/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Preparing food safely</a></li><li>OBubba Flutter source reviewed: `weaning_insights.dart`, `weaning_texture_readiness.dart`, `brain.dart`, `log_sheet.dart`, `weaning_insights_test.dart` and `weaning_texture_test.dart`</li></ul>
+<ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/help-your-baby-enjoy-new-foods/" target="_blank" rel="noopener noreferrer">NHS: Help your baby enjoy new foods</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s first solid foods</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/choking-and-gagging-on-food/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Choking and gagging on food</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/preparing-food-safely/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Preparing food safely</a></li><li>OBubba source reviewed: `weaning_insights.dart`, `weaning_texture_readiness.dart`, `brain.dart`, `log_sheet.dart`, `weaning_insights_test.dart` and `weaning_texture_test.dart`</li></ul>
 <p><em>OBubba is a record, pattern and education tool. It cannot assess swallowing, texture safety, dietary adequacy, growth, allergy or why a food was refused. It does not replace advice from a health visitor, paediatric dietitian, GP, feeding team, paediatrician, NHS 111 or emergency services.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">

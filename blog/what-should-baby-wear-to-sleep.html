@@ -892,10 +892,10 @@
 <p>A thermometer across the room may read 19°C while the cot beside a radiator is much warmer.</p>
 <h3>Assuming expensive “smart” products make sleep safe</h3>
 <p>No monitor, wearable or app replaces a clear, firm, flat sleep space and regular checks by a caregiver.</p>
-<figure><img src="/obubba-safe-sleep-room-temperature-app.jpg" alt="Current OBubba Flutter Safe Sleep screen using a fictional baby profile and an empty example room-temperature field" loading="lazy"/><figcaption>The current OBubba Flutter Safe Sleep tool shown with a fictional baby profile. It asks for the indoor room temperature before suggesting a TOG and fitted layers. Outdoor weather is shown only as context and never silently substituted for the nursery reading.</figcaption></figure>
-<h2>How the current OBubba Flutter app helps</h2>
+<figure><img src="/obubba-safe-sleep-room-temperature-app.jpg" alt="Current OBubba Safe Sleep screen using a fictional baby profile and an empty example room-temperature field" loading="lazy"/><figcaption>The current OBubba Safe Sleep tool shown with a fictional baby profile. It asks for the indoor room temperature before suggesting a TOG and fitted layers. Outdoor weather is shown only as context and never silently substituted for the nursery reading.</figcaption></figure>
+<h2>How the current OBubba app helps</h2>
 <p>OBubba’s <strong>Care → Safe Sleep</strong> screen brings the room check, sleepwear guide and safer-sleep essentials into one place.</p>
-<p>The current Flutter implementation:</p>
+<p>The current implementation:</p>
 <ul><li>accepts the nursery temperature in Celsius or Fahrenheit</li><li>remembers the last entered room temperature and unit on that device</li><li>offers contexts such as a usual night, warm night, heatwave, open window or cold snap</li><li>suggests a TOG range and fitted clothing as a starting point</li><li>displays the full temperature reference table</li><li>reminds parents to check the chest or back of the neck rather than hands and feet</li><li>warns against loose bedding, hats indoors, hot-water bottles and adding blankets over a sleeping bag</li><li>can check local outdoor weather when the parent asks</li></ul>
 <p>One implementation detail matters: <strong>OBubba never pre-fills the indoor temperature from the outdoor forecast.</strong> The app code treats local weather only as context because a 7°C street and a heated 20°C nursery require completely different sleepwear.</p>
 <p>The tool also does not claim to sense your baby&#39;s body temperature, know a sleeping bag’s exact construction or diagnose illness. It cannot see whether the neck opening fits. The parent still enters the room reading, checks the product label and feels the baby directly.</p>

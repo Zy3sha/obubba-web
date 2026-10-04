@@ -804,7 +804,7 @@
       <p>You log egg at breakfast for the third time. A new OBubba card appears:</p>
 <p><strong>“Looking good with Egg. Maya has had Egg 3 times now with no trouble.”</strong></p>
 <p>Is the app saying your baby is not allergic? Has egg been medically cleared? Should you keep serving it even if one meal felt uncertain?</p>
-<p>No. We traced the current Flutter insight, its 21-day food-history input and its lifetime reaction memory for this guide. The card means something narrower and more useful: <strong>the saved record contains enough reassuring repeat meals for a gentle keep-it-familiar nudge, with no recorded reaction that should block it.</strong></p>
+<p>No. We traced the current insight, its 21-day food-history input and its lifetime reaction memory for this guide. The card means something narrower and more useful: <strong>the saved record contains enough reassuring repeat meals for a gentle keep-it-familiar nudge, with no recorded reaction that should block it.</strong></p>
 <p>It is encouragement from a log—not a diagnosis, food challenge or guarantee about the next meal.</p>
 <figure><img src="/obubba-how-looking-good-card-works.svg" alt="The evidence gates behind OBubba’s Looking good with Egg card." loading="lazy"/><figcaption>The card requires three to eight calm recent meals, fewer than two Unsure meals, no recorded reaction in lifetime history and a recent introductory window.</figcaption></figure>
 <h2>The short answer</h2>
@@ -813,20 +813,20 @@
 <p>The card then shows the allergen with the strongest qualifying record. Underneath, the app is transparent about sample size: at three or four meals it says <strong>“early read · 3 meals”</strong> or <strong>“early read · 4 meals”;</strong> from five meals it says <strong>“from 5 meals.”</strong></p>
 <p>Those labels are not confidence percentages. They tell you how much of your own saved history produced the message.</p>
 <h2>What counts as a calm meal in the app</h2>
-<p>When a parent logs solids, the Flutter sheet asks <strong>“How did they take it?”</strong> with three optional choices:</p>
+<p>When a parent logs solids, the sheet asks <strong>“How did they take it?”</strong> with three optional choices:</p>
 <ul><li>😋 <strong>Loved it</strong></li><li>😐 <strong>Unsure</strong></li><li>⚠️ <strong>Reaction</strong></li></ul>
 <p>For this particular insight, an allergen-containing meal counts towards the calm total when the response is left blank or marked <strong>Loved it</strong>. An <strong>Unsure</strong> meal does not count as calm. A <strong>Reaction</strong> meal blocks the card.</p>
 <p>That is a software rule, not a clinical interpretation. <strong>Loved it describes the parent’s log choice; it does not prove that no delayed symptom occurred.</strong> If a symptom becomes apparent later, update the record and seek advice when appropriate instead of treating the earlier card as authoritative.</p>
 <p>One <strong>Unsure</strong> meal does not automatically suppress an otherwise consistent record. Two or more do. That boundary avoids letting one accidental tap or vague mealtime dominate the history, while refusing to describe repeated question marks as “no trouble.”</p>
 <h2>The old reaction that does not disappear</h2>
 <p>The visible insight reads recent meals, but its safety memory is longer.</p>
-<p>OBubba stores a lifetime set of allergens linked to meals marked <strong>Reaction</strong>. The Flutter caller passes that set into the confidence check after canonicalising the allergen names. So an egg reaction logged 25 days or several months ago still blocks a new <strong>Looking good with Egg</strong> card, even though that individual meal is no longer inside the 21-day working window.</p>
+<p>OBubba stores a lifetime set of allergens linked to meals marked <strong>Reaction</strong>. The caller passes that set into the confidence check after canonicalising the allergen names. So an egg reaction logged 25 days or several months ago still blocks a new <strong>Looking good with Egg</strong> card, even though that individual meal is no longer inside the 21-day working window.</p>
 <p>That is an important difference between “recent evidence” and “safety memory”:</p>
 <ul><li>recent meals decide whether there is enough repeat evidence for the card</li><li>lifetime reaction history decides whether reassurance is allowed at all</li></ul>
 <p>The safeguard is only as accurate as the record. OBubba cannot know about an unlogged reaction, a symptom entered only in another app, or a meal whose ingredients were described too vaguely.</p>
-<h2>The real Flutter Allergen Journey</h2>
+<h2>The real Allergen Journey</h2>
 <p>The current <strong>Care → Weaning</strong> screen keeps an Allergen Journey across the major groups it recognises or the parent marks manually. It distinguishes introduced groups from those still to try and can offer a next-up idea in a suitable form.</p>
-<figure><img src="/obubba-allergen-journey-app.jpg" alt="The genuine OBubba Flutter Allergen Journey showing introduced groups and egg as the next group to try." loading="lazy"/><figcaption>A genuine current app view: introduced allergens are checked, untried groups remain open and the next-up card suggests well-cooked egg in the morning.</figcaption></figure>
+<figure><img src="/obubba-allergen-journey-app.jpg" alt="The genuine OBubba Allergen Journey showing introduced groups and egg as the next group to try." loading="lazy"/><figcaption>A genuine current app view: introduced allergens are checked, untried groups remain open and the next-up card suggests well-cooked egg in the morning.</figcaption></figure>
 <p>Food text is re-checked when the recent history is assembled. A log such as “scrambled egg and toast” can therefore contribute recognised egg and gluten groups; allergens stored directly on a synced entry are included too.</p>
 <p>Recognition is helpful, not infallible. “Yellow breakfast” gives the engine nothing to identify. A packaged dish may contain ingredients the name does not reveal. Always read the label, record the actual components and correct the allergen selection when needed.</p>
 <h2>Why three meals—and why the card stops after eight</h2>
@@ -875,7 +875,7 @@
 <h3>If my baby loved the food, should I always choose Loved it?</h3>
 <p>Use <strong>Loved it</strong> for how the meal went, but do not let enthusiasm hide a symptom. If you are uncertain, choose <strong>Unsure</strong>, add a useful note and seek advice when needed.</p>
 <h3>Does dismissing the peanut card dismiss egg too?</h3>
-<p>No. The current Flutter insight has a separate identity for each allergen. Acknowledging peanut does not permanently mute a future egg card.</p>
+<p>No. The current insight has a separate identity for each allergen. Acknowledging peanut does not permanently mute a future egg card.</p>
 <h2>Reliable UK sources</h2>
 <ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/food-allergies-in-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Food allergies in babies and young children</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-allergies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Baby food allergies</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/foods-to-avoid-giving-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Foods to avoid giving babies and young children</a></li><li><a href="https://www.nhs.uk/conditions/food-allergy/" target="_blank" rel="noopener noreferrer">NHS: Food allergy</a></li></ul>
 <p><em>This article gives general information for UK families. It is not allergy diagnosis, treatment or an individual reintroduction plan, and OBubba is not a medical device. Follow advice from your baby’s own healthcare or allergy team.</em></p>

@@ -802,7 +802,7 @@
     </header>
     <article class="section rich-text article">
       <p>Your baby is upset. One person walks around the kitchen. Another reaches for a feed. Grandma remembers that fresh air worked last Tuesday. By the time something helps, nobody is sure which part made the difference—and the next caregiver starts the same guessing game again.</p>
-<p>OBubba’s Flutter app has a small learning loop for this exact handover problem.</p>
+<p>OBubba’s app has a small learning loop for this exact handover problem.</p>
 <p>After the moment has passed, tap <strong>What helped?</strong> inside <strong>Care → Crying Helper</strong>. OBubba remembers the response for this baby, waits until there is enough history before reordering the choices, then can carry the leading methods into a shareable <strong>Carer hand-off</strong>.</p>
 <p>&gt; <strong>The goal is not to label every cry. It is to stop the people who love your baby from starting at zero.</strong></p>
 <h2>The 30-second answer</h2>
@@ -826,7 +826,7 @@
 <figure><img src="/obubba-what-helped-shared-care-loop.svg" alt="A visual explainer showing how one soothing outcome becomes a cautious ranking and then a useful carer hand-off, while remaining separate from the cause of crying or a diagnosis." loading="lazy"/><figcaption>One useful outcome at a time: respond, record what helped, wait for repetition, then share the leading methods without turning them into a diagnosis.</figcaption></figure>
 <h2>Why OBubba waits for four outcomes</h2>
 <p>One successful walk should not immediately make <strong>Walk/fresh air</strong> look like the universal answer.</p>
-<p>The current Flutter UI keeps the original, neutral chip order while fewer than four total outcomes have been recorded. At four or more, it sorts the options by their success counts, moves the most-used response to the front and marks the leader with a star.</p>
+<p>The current UI keeps the original, neutral chip order while fewer than four total outcomes have been recorded. At four or more, it sorts the options by their success counts, moves the most-used response to the front and marks the leader with a star.</p>
 <p>That is a modest evidence gate, not statistical proof. Four taps can still reflect one unusual week, and an older baby may prefer something completely different from a newborn.</p>
 <p>The ranking should be read as:</p>
 <p>&gt; <strong>“This has helped most often among the outcomes we recorded.”</strong></p>
@@ -846,12 +846,12 @@
 <ul><li>the likely next nap and bedtime;</li><li>a plain-language line about last night;</li><li><strong>What settles [baby]</strong>;</li><li>known conditions and previous allergen reactions;</li><li>medicine names recorded recently;</li><li>current developmental context; and</li><li>one useful non-wellbeing insight.</li></ul>
 <p>When <strong>What helped?</strong> history exists, the hand-off ranks those counts and takes up to the top three responses. The raw internal keys are translated into human wording such as <strong>a feed</strong>, <strong>help getting to sleep</strong>, <strong>winding</strong>, <strong>a nappy change</strong>, <strong>calm / less stimulation</strong>, <strong>a cuddle</strong> or <strong>a walk / fresh air</strong>.</p>
 <p>If no What-helped history exists, the hand-off can fall back to up to two recent night-settling methods already recorded in sleep logs.</p>
-<figure><img src="/obubba-what-settles-carer-app.jpg" alt="An authentic OBubba Flutter capture showing the Carer hand-off page and its concise care constellation; the What settles section appears directly beneath this summary when soothing history is available." loading="lazy"/><figcaption>The Flutter Carer hand-off distils current care into one page. When outcome history exists, a What settles section follows the care constellation before the share controls.</figcaption></figure>
+<figure><img src="/obubba-what-settles-carer-app.jpg" alt="An authentic OBubba capture showing the Carer hand-off page and its concise care constellation; the What settles section appears directly beneath this summary when soothing history is available." loading="lazy"/><figcaption>The Carer hand-off distils current care into one page. When outcome history exists, a What settles section follows the care constellation before the share controls.</figcaption></figure>
 <p>The page can be copied or shared as plain text. That makes it useful for a partner taking the next shift, grandparents covering an afternoon or a babysitter arriving after bedtime has already moved.</p>
 <p>It is not medicine authorisation, an allergy action plan or a substitute for the childcare setting’s official records.</p>
 <h2>What happens when two parents use the app</h2>
 <p>The soothing counters belong to the baby’s shared record, not to one parent’s private notes. They are designed to persist across sessions and devices.</p>
-<p>The Flutter merge logic protects the higher known count for each method when family copies reconcile, so an older device copy should not simply replace a stronger history with a smaller number. That is sensible resilience, but these counters are not an audit-grade clinical record. Simultaneous offline taps and later syncing should not be treated as exact research data.</p>
+<p>The merge logic protects the higher known count for each method when family copies reconcile, so an older device copy should not simply replace a stronger history with a smaller number. That is sensible resilience, but these counters are not an audit-grade clinical record. Simultaneous offline taps and later syncing should not be treated as exact research data.</p>
 <p>The right promise is practical: the family retains a useful ordering of what has tended to help, even when care is shared.</p>
 <h2>Five real-life examples</h2>
 <h3>1. Evening crying settles after a feed</h3>
@@ -886,7 +886,7 @@
 <h3>Should a caregiver follow the top method every time?</h3>
 <p>No. Check the baby, the context and any health or safety concern first. The order is remembered experience, not a rule.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — remember what helps, keep the knowledge with your baby’s shared record, and give the next caregiver a calmer place to begin.</p>
-<p><em>This article describes the current OBubba Flutter implementation reviewed on 10 March 2027. OBubba provides tracking, organisation and informational support, not diagnosis or medical care. If a baby’s cry is unusual, constant or comes with worrying symptoms, seek appropriate professional help; call emergency services when necessary.</em></p>
+<p><em>This article describes the current OBubba implementation reviewed on 10 March 2027. OBubba provides tracking, organisation and informational support, not diagnosis or medical care. If a baby’s cry is unusual, constant or comes with worrying symptoms, seek appropriate professional help; call emergency services when necessary.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>

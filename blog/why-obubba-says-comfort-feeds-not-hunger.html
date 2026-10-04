@@ -804,11 +804,11 @@
       <p>Your baby woke at 12:40am, drank 30ml and went back to sleep. At 3:15am it happened again. In the morning OBubba says:</p>
 <p>&gt; <strong>Comfort feeds, not hunger</strong></p>
 <p>That title sounds much more certain than a sleep tracker can be. Can an app really know why a baby fed? Should you stop offering milk tonight?</p>
-<p><strong>No. Read the card as “small measured feeds at nearly every wake—comfort may be part of the pattern.”</strong> The current Flutter detector has found a narrow combination of logged wakes, night feeds and bottle amounts. It has not measured breast-milk transfer, examined your baby, checked hydration or growth, or proved that hunger was absent.</p>
+<p><strong>No. Read the card as “small measured feeds at nearly every wake—comfort may be part of the pattern.”</strong> The current detector has found a narrow combination of logged wakes, night feeds and bottle amounts. It has not measured breast-milk transfer, examined your baby, checked hydration or growth, or proved that hunger was absent.</p>
 <p>A feed can deliver milk, regulation, closeness and reassurance at the same time. Comfort feeding is real care, not manipulation or a bad habit. The useful next step is to look at age, daytime intake, feeding cues, nappies, growth, health and whether this pattern works for your family—not to withhold milk because a card used a decisive title.</p>
-<figure><img src="/obubba-comfort-night-feeds-detector.svg" alt="The exact gates and safety overrides behind OBubba’s Comfort feeds, not hunger night diagnosis." loading="lazy"/><figcaption>The current Flutter classifier needs an older baby, at least two qualifying night feeds, feeding at nearly every wake and a measured average under 40ml. It cannot prove that hunger was absent.</figcaption></figure>
+<figure><img src="/obubba-comfort-night-feeds-detector.svg" alt="The exact gates and safety overrides behind OBubba’s Comfort feeds, not hunger night diagnosis." loading="lazy"/><figcaption>The current classifier needs an older baby, at least two qualifying night feeds, feeding at nearly every wake and a measured average under 40ml. It cannot prove that hunger was absent.</figcaption></figure>
 <h2>The short answer</h2>
-<p>The current Flutter night analyser only reaches this title when all of these are true:</p>
+<p>The current night analyser only reaches this title when all of these are true:</p>
 <ol><li>baby is at least <strong>16 weeks</strong> old, because younger babies receive a newborn-appropriate night read instead;</li><li>the reconstructed night contains at least <strong>two qualifying night feeds</strong>;</li><li>the feed count is at least the wake count minus one—so feeding happened at almost every waking;</li><li>at least one qualifying night feed has a positive measured amount;</li><li>the average of those positive measured amounts is <strong>more than zero but under 40ml</strong>; and</li><li>a higher-priority explanation has not already won.</li></ol>
 <p>The body then says that, <strong>if the pattern keeps happening most nights</strong>, feeding may have become the route back to sleep. It suggests a brief reassurance before offering a feed and tells the parent to judge several nights, not one.</p>
 <p>That is a pattern hypothesis. “Not hunger” is not a clinical finding.</p>
@@ -854,7 +854,7 @@
 <p>The current <strong>Care → Night Weaning</strong> pathway is deliberately separate. It starts around six months rather than 16 weeks and presents three readiness lights:</p>
 <ul><li>age context;</li><li>daytime nourishment;</li><li>recent night pattern.</li></ul>
 <p>That screen begins with a baseline night—feed normally and log what happens—before any gradual change. A baby may be old enough for the comfort-feed classifier but far too young or not ready for night-weaning.</p>
-<figure><img src="/obubba-night-weaning-readiness-app.jpg" alt="OBubba’s current Flutter Night Weaning screen checks age, daytime nourishment and recent nights before suggesting a gradual plan." loading="lazy"/><figcaption>A genuine current Flutter screen: the Night Weaning pathway uses three readiness lights and remains separate from a one-night comfort-feed diagnosis.</figcaption></figure>
+<figure><img src="/obubba-night-weaning-readiness-app.jpg" alt="OBubba’s current Night Weaning screen checks age, daytime nourishment and recent nights before suggesting a gradual plan." loading="lazy"/><figcaption>A genuine current screen: the Night Weaning pathway uses three readiness lights and remains separate from a one-night comfort-feed diagnosis.</figcaption></figure>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — connect night wakes, measured bottles, breastfeeding, daytime feeds and growth without turning one small bottle into a rule.</p>
 <h2>What should I do at the next wake?</h2>
 <p>Use a cue-first ladder, not a no-feed rule.</p>
@@ -884,7 +884,7 @@
 <p>The safer-sleep setup does not change because a feed was small or because the app suggested reassurance first.</p>
 <h2>Frequently asked questions</h2>
 <h3>Does under 40ml mean a comfort feed?</h3>
-<p>No. It is the Flutter detector’s threshold for raising a possible pattern. Age, feed history, cues, health and the measured-versus-unmeasured record still matter.</p>
+<p>No. It is the detector’s threshold for raising a possible pattern. Age, feed history, cues, health and the measured-versus-unmeasured record still matter.</p>
 <h3>Why did OBubba show this after only one night?</h3>
 <p>The night diagnosis reads the last reconstructed night. The surrounding insight layer adds multi-night corroboration when available, but the title itself can appear from one qualifying night. Follow the body’s instruction to judge several nights.</p>
 <h3>Why did my breastfed baby get this card?</h3>
@@ -907,7 +907,7 @@
 <p><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a> — age-related night feeding and individual sleep patterns.</p>
 <p><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/relationship-building-resources/responsive-feeding-infosheet/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly: Responsive feeding infosheet</a> — feeding as nutrition, love, comfort and reassurance.</p>
 <p><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/sleep-and-night-time-resources-/caring-for-your-baby-at-night/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly: Caring for your baby at night</a> — night feeding, rest and safer sleep.</p>
-<p>OBubba Flutter source reviewed for this article: `lib/core/engine/night_analysis.dart`, `lib/core/engine/brain.dart`, `lib/core/engine/night_corroboration.dart`, `test/night_analysis_test.dart` and `test/night_corroboration_test.dart`.</p>
+<p>OBubba source reviewed for this article: `lib/core/engine/night_analysis.dart`, `lib/core/engine/brain.dart`, `lib/core/engine/night_corroboration.dart`, `test/night_analysis_test.dart` and `test/night_corroboration_test.dart`.</p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>

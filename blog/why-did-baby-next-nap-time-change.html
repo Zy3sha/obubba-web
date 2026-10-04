@@ -821,8 +821,8 @@
 <p>This is why one duration cannot diagnose a nap. Useful clues include:</p>
 <ul><li>how long baby had been awake beforehand</li><li>whether settling was quick or prolonged</li><li>whether baby woke happy, sleepy or distressed</li><li>whether the room, feed and health context were ordinary</li><li>whether the pattern repeats across comparable days</li></ul>
 <p>Our guide to <a href="/blog/baby-only-naps-30-minutes-short-naps.html">30-minute naps</a> explores those clues in more detail.</p>
-<h2>What the actual OBubba Flutter app recalculates</h2>
-<p>The current Flutter engine is not a static wake-window chart. Its `predictNextNap` path rebuilds the next window from the baby&#39;s current day, recent baseline days and the context the family has logged.</p>
+<h2>What the actual OBubba app recalculates</h2>
+<p>The current engine is not a static wake-window chart. Its `predictNextNap` path rebuilds the next window from the baby&#39;s current day, recent baseline days and the context the family has logged.</p>
 <h3>1. It looks for a trustworthy awake anchor</h3>
 <p>OBubba first uses a logged morning wake or the end of the latest completed nap. If the night ended in the previous calendar bucket, the Track screen can resolve the actual morning wake across midnight.</p>
 <p>If no real wake exists, the app only falls back to a typical recent morning wake when that baby has genuine wake history. It does not invent a blanket 7am wake for a family who has never tracked sleep. Without an anchor or history, no confident next nap is shown.</p>
@@ -849,11 +849,11 @@
 <p>The engine also protects young two-nap babies from being collapsed to one nap merely because the first nap was long. A tidy daily total is not useful if it strands the baby awake for an unrealistic stretch.</p>
 <h2>A plan can be overruled by real life</h2>
 <p>OBubba&#39;s Sleep Consultant can provide a planned nap time. The current engine honours that slot while the day remains reasonably on track.</p>
-<p>But suppose the plan expected a solid morning nap, and baby instead slept for 25 minutes. If the next fixed slot is now far beyond the live wake-window range, the Flutter engine rejects that stale slot and re-anchors from the real nap end.</p>
+<p>But suppose the plan expected a solid morning nap, and baby instead slept for 25 minutes. If the next fixed slot is now far beyond the live wake-window range, the engine rejects that stale slot and re-anchors from the real nap end.</p>
 <p>That is the right hierarchy:</p>
 <ol><li>the baby&#39;s actual sleep and wake history</li><li>today&#39;s health and disruption context</li><li>the personalised pattern</li><li>the prospective plan</li></ol>
 <p>A plan should support the baby in front of you, not force the baby to support yesterday&#39;s plan.</p>
-<figure><img src="/obubba-tomorrows-plan-nap-bedtime-prediction.jpg" alt="The genuine OBubba Flutter Tomorrow&#39;s plan screen, which labels the day as predicted and explains that it updates as the day unfolds." loading="lazy"/><figcaption>Tomorrow&#39;s plan is a gentle projection; live logs can re-anchor the next nap and bedtime.</figcaption></figure>
+<figure><img src="/obubba-tomorrows-plan-nap-bedtime-prediction.jpg" alt="The genuine OBubba Tomorrow&#39;s plan screen, which labels the day as predicted and explains that it updates as the day unfolds." loading="lazy"/><figcaption>Tomorrow&#39;s plan is a gentle projection; live logs can re-anchor the next nap and bedtime.</figcaption></figure>
 <h2>Why a prediction can disappear completely</h2>
 <p>Sometimes the clock stops showing a nap and begins counting toward bedtime. That can be correct when:</p>
 <ul><li>the expected naps are complete</li><li>day sleep has reached the baby&#39;s current range</li><li>another nap would begin too near bedtime</li><li>the projected final awake stretch after a late nap would become too short</li><li>a parent has explicitly selected a napless day or schedule override</li><li>night sleep has already begun</li></ul>
@@ -891,7 +891,7 @@
 <h3>Should I put baby down exactly at the predicted minute?</h3>
 <p>No. Treat the displayed range as a wind-down cue. Use it with your baby&#39;s behaviour, feeding needs and the practical day. If baby is ill, unusually sleepy or difficult to wake, seek appropriate medical advice.</p>
 <h3>Does the app use corrected age for a premature baby?</h3>
-<p>Yes, the current Flutter Track prediction uses corrected weeks when the baby&#39;s due date is available. Keep the profile information accurate, and follow individual neonatal or paediatric guidance where it differs.</p>
+<p>Yes, the current Track prediction uses corrected weeks when the baby&#39;s due date is available. Keep the profile information accurate, and follow individual neonatal or paediatric guidance where it differs.</p>
 <h3>Can I tell OBubba the windows feel wrong?</h3>
 <p>Yes. In Preferences, choose Too long, About right or Too short. That feedback nudges the next window rather than forcing an unlimited change.</p>
 <h2>Let the target move so the parent does not have to recalculate</h2>

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="apple-itunes-app" content="app-id=6760968757"/>
   <title>Why Does OBubba Say ‘Taking Longer to Settle Lately’?</title>
-  <meta name="description" content="The exact Flutter logic behind OBubba’s settling-time trend: which naps count, the 10-day comparison, why gaps matter and what to try without blaming yourself."/>
+  <meta name="description" content="The exact logic behind OBubba’s settling-time trend: which naps count, the 10-day comparison, why gaps matter and what to try without blaming yourself."/>
   <meta name="robots" content="index, follow, max-image-preview:large"/>
   <link rel="canonical" href="https://obubba.com/blog/why-obubba-says-taking-longer-to-settle-lately.html"/>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
@@ -19,13 +19,13 @@
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://obubba.com/blog/why-obubba-says-taking-longer-to-settle-lately.html"/>
   <meta property="og:title" content="Why Does OBubba Say ‘Taking Longer to Settle Lately’?"/>
-  <meta property="og:description" content="The exact Flutter logic behind OBubba’s settling-time trend: which naps count, the 10-day comparison, why gaps matter and what to try without blaming yourself."/>
+  <meta property="og:description" content="The exact logic behind OBubba’s settling-time trend: which naps count, the 10-day comparison, why gaps matter and what to try without blaming yourself."/>
   <meta property="og:image" content="https://obubba.com/obubba-taking-longer-to-settle.jpg"/>
   <meta property="og:site_name" content="OBubba"/>
   <meta property="og:locale" content="en_GB"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Why Does OBubba Say ‘Taking Longer to Settle Lately’?"/>
-  <meta name="twitter:description" content="The exact Flutter logic behind OBubba’s settling-time trend: which naps count, the 10-day comparison, why gaps matter and what to try without blaming yourself."/>
+  <meta name="twitter:description" content="The exact logic behind OBubba’s settling-time trend: which naps count, the 10-day comparison, why gaps matter and what to try without blaming yourself."/>
   <meta name="twitter:image" content="https://obubba.com/obubba-taking-longer-to-settle.jpg"/>
   <meta name="theme-color" content="#fffcf9"/>
   <link rel="preload" href="/Parisienne-Regular.ttf" as="font" type="font/truetype" crossorigin/>
@@ -744,7 +744,7 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Why Does OBubba Say ‘Taking Longer to Settle Lately’?",
-  "description": "The exact Flutter logic behind OBubba’s settling-time trend: which naps count, the 10-day comparison, why gaps matter and what to try without blaming yourself.",
+  "description": "The exact logic behind OBubba’s settling-time trend: which naps count, the 10-day comparison, why gaps matter and what to try without blaming yourself.",
   "datePublished": "2026-09-19",
   "dateModified": "2026-09-19",
   "author": {
@@ -770,7 +770,7 @@
   },
   "mainEntityOfPage": "https://obubba.com/blog/why-obubba-says-taking-longer-to-settle-lately.html",
   "image": "https://obubba.com/obubba-taking-longer-to-settle.jpg",
-  "keywords": "baby taking longer to settle, baby fighting naps, OBubba sleep insight, nap settling time, baby wake window too long, baby wake window too short, time to fall asleep baby, baby nap tracker, personalised baby sleep app, settling is getting easier, baby sleep trend, OBubba Flutter"
+  "keywords": "baby taking longer to settle, baby fighting naps, OBubba sleep insight, nap settling time, baby wake window too long, baby wake window too short, time to fall asleep baby, baby nap tracker, personalised baby sleep app, settling is getting easier, baby sleep trend, OBubba"
 }
 </script>
 </head>
@@ -796,7 +796,7 @@
           <span class="read-time">13 min read</span>
         </div>
         <h1>Why Does OBubba Say ‘Taking Longer to Settle Lately’?</h1>
-        <p>The exact Flutter logic behind OBubba’s settling-time trend: which naps count, the 10-day comparison, why gaps matter and what to try without blaming yourself.</p>
+        <p>The exact logic behind OBubba’s settling-time trend: which naps count, the 10-day comparison, why gaps matter and what to try without blaming yourself.</p>
         <div class="tags"><span class="tag">baby taking longer to settle</span><span class="tag">baby fighting naps</span><span class="tag">OBubba sleep insight</span><span class="tag">nap settling time</span><span class="tag">baby wake window too long</span></div>
       </div>
     </header>
@@ -805,10 +805,10 @@
 <p><strong>“Taking longer to settle lately.”</strong></p>
 <p>Is the app timing every minute? Has it decided your baby is overtired? Does it mean you need to start every nap 15 minutes earlier?</p>
 <p>Not quite.</p>
-<p>We traced the current Flutter detector, the nap logger that supplies it, its 10-day caller and its tests. <strong>The card compares the three most recent logged nap-settle days with the older logged days inside a 10-day window. It can identify a real change in the record; it cannot identify the cause from settling time alone.</strong></p>
+<p>We traced the current detector, the nap logger that supplies it, its 10-day caller and its tests. <strong>The card compares the three most recent logged nap-settle days with the older logged days inside a 10-day window. It can identify a real change in the record; it cannot identify the cause from settling time alone.</strong></p>
 <p>That final distinction matters. A baby may take longer to fall asleep because the wake window was too long, too short or simply different. Discomfort, noise, a developmental change, a new settling method or one unusually stimulating morning can all change the same number.</p>
 <h2>The short answer</h2>
-<p>| Question | Current Flutter behaviour | |---|---| | What does the detector read? | Completed <strong>daytime naps</strong> with a logged <strong>Time to fall asleep</strong> value | | How far back does it look? | Today plus the previous <strong>9 calendar days</strong> | | Does it use exact stopwatch minutes? | No. The four logger choices are stored as representative values: <strong>3, 10, 22 or 40 minutes</strong> | | How many logged days are needed? | At least <strong>4 days</strong> containing qualifying settle data | | What is “recent”? | The <strong>3 most recent logged days</strong>, not automatically the last 3 calendar days | | What is “before”? | Every older qualifying day remaining in that 10-day window | | When does “taking longer” appear? | Recent average is at least <strong>3 minutes higher</strong>, plus two step-by-step rises across calendar-adjacent days | | When does “getting easier” appear? | Recent average is at least <strong>3 minutes lower</strong> than the older average | | Does it prove overtiredness? | <strong>No.</strong> The current advice leans earlier, but the measured trend does not establish direction | | Where does the insight live? | As a longer-term pattern in <strong>What OBubba noticed</strong>, rather than only a one-day prompt |</p>
+<p>| Question | Current behaviour | |---|---| | What does the detector read? | Completed <strong>daytime naps</strong> with a logged <strong>Time to fall asleep</strong> value | | How far back does it look? | Today plus the previous <strong>9 calendar days</strong> | | Does it use exact stopwatch minutes? | No. The four logger choices are stored as representative values: <strong>3, 10, 22 or 40 minutes</strong> | | How many logged days are needed? | At least <strong>4 days</strong> containing qualifying settle data | | What is “recent”? | The <strong>3 most recent logged days</strong>, not automatically the last 3 calendar days | | What is “before”? | Every older qualifying day remaining in that 10-day window | | When does “taking longer” appear? | Recent average is at least <strong>3 minutes higher</strong>, plus two step-by-step rises across calendar-adjacent days | | When does “getting easier” appear? | Recent average is at least <strong>3 minutes lower</strong> than the older average | | Does it prove overtiredness? | <strong>No.</strong> The current advice leans earlier, but the measured trend does not establish direction | | Where does the insight live? | As a longer-term pattern in <strong>What OBubba noticed</strong>, rather than only a one-day prompt |</p>
 <figure><img src="/obubba-settle-trend-detector.svg" alt="The exact inputs and gates behind OBubba’s nap settling trend." loading="lazy"/><figcaption>OBubba reads bucketed nap-settle estimates across ten calendar days, compares the three most recent logged days with the older baseline and applies different gates to worsening and improving trends.</figcaption></figure>
 <h2>First: what did you actually log?</h2>
 <p>When a parent logs or edits a nap, OBubba offers a <strong>Time to fall asleep</strong> row with four choices:</p>
@@ -855,7 +855,7 @@
 <p>| What you see before and during settling | A reasonable hypothesis | Small test | |---|---|---| | Fussy, rubbing eyes, escalating quickly, previous nap short | Overtired or the wind-down started late | Begin the routine 10 minutes earlier once | | Calm, playful, chatting, repeatedly standing or rolling without distress | Not sleepy enough yet | Start 10 minutes later once | | Settling changed after illness, travel, nursery or a new skill | Temporary disruption | Keep the anchor steady while the disruption settles | | One particular nap is hard but the others are unchanged | Nap-position effect | Review that nap separately rather than moving the whole day | | The routine itself became longer | Measurement changed, not necessarily sleep pressure | Time from genuine sleep attempt, not from the first bath or book |</p>
 <p>Change one thing at a time. If you alter the window, room, song and settling method together, a better nap will not tell you which lever helped.</p>
 <p>OBubba’s own Preferences screen lets a parent say whether the wake windows feel <strong>Too long</strong>, <strong>About right</strong> or <strong>Too short</strong>. That feedback is valuable precisely because a trend detector cannot see the baby’s demeanour.</p>
-<figure><img src="/obubba-wake-window-preference-app.jpg" alt="The real OBubba Flutter wake-window preference asks the parent whether the suggested windows feel too long, about right or too short." loading="lazy"/><figcaption>The parent’s observation is an explicit input. A settle-time rise should inform this judgement, not replace it.</figcaption></figure>
+<figure><img src="/obubba-wake-window-preference-app.jpg" alt="The real OBubba wake-window preference asks the parent whether the suggested windows feel too long, about right or too short." loading="lazy"/><figcaption>The parent’s observation is an explicit input. A settle-time rise should inform this judgement, not replace it.</figcaption></figure>
 <h2>Make the input consistent enough to learn from</h2>
 <p>You do not need to log every nap forever. You do need the same answer to mean roughly the same thing from day to day.</p>
 <p>Choose a consistent start point for “time to fall asleep.” A useful one is the moment you genuinely begin the final sleep attempt—not when lunch ends, not when the bath starts and not when you first think “they look tired.”</p>

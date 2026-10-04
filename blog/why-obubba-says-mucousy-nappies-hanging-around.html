@@ -806,9 +806,9 @@
 <p>Is the app saying your baby has an allergy? Was it the yoghurt you introduced, a tummy bug or teething? Should you cut dairy out today?</p>
 <p><strong>No. The card means one narrow thing: a Mucousy texture was logged on at least three different days in the app’s latest seven-day window.</strong> It does not inspect the nappy, diagnose a cause or prove that a new food was responsible.</p>
 <p>The useful question is not “What diagnosis did the app find?” It is “Is this a repeated pattern, what else happened alongside it, and does my baby need advice now?”</p>
-<figure><img src="/obubba-mucousy-nappy-pattern-detector.svg" alt="How the current OBubba Flutter app counts mucousy-nappy days and keeps urgent stool warnings separate." loading="lazy"/><figcaption>Three distinct Mucousy-tagged days can produce the low-urgency trend. Multiple nappies on one day still count as one day, while blood, pale or very dark stools use a separate safety route.</figcaption></figure>
+<figure><img src="/obubba-mucousy-nappy-pattern-detector.svg" alt="How the current OBubba app counts mucousy-nappy days and keeps urgent stool warnings separate." loading="lazy"/><figcaption>Three distinct Mucousy-tagged days can produce the low-urgency trend. Multiple nappies on one day still count as one day, while blood, pale or very dark stools use a separate safety route.</figcaption></figure>
 <h2>The short answer</h2>
-<p>The current Flutter `giHealthTrend` engine:</p>
+<p>The current `giHealthTrend` engine:</p>
 <ol><li>needs at least <strong>four days of history</strong> before it says anything;</li><li>reads up to the <strong>seven most recent calendar days</strong>, newest first;</li><li>marks a day when any poo entry contains the exact texture tag <strong>Mucousy</strong>;</li><li>counts marked days, not individual nappies;</li><li>shows the card when at least <strong>three distinct days</strong> are marked; and</li><li>stays quiet if a higher-priority tummy pattern wins first.</li></ol>
 <p>The three days do not have to be consecutive. Three mucousy nappies on Tuesday still make Tuesday only one flagged day. And an unlogged day does not mean “normal”—it simply contributes no mucus flag.</p>
 <p>The card is deliberately low urgency. A separate same-day safety layer handles logged blood, pale stools, very dark stools after the newborn period and watery diarrhoea. That separation is the most important part of the design: a slow pattern reminder must not blur an acute warning sign.</p>
@@ -823,7 +823,7 @@
 <p>It means the parent selected that texture while logging a poo. The app is counting structured tags.</p>
 <p>OBubba does not currently analyse a photograph or look inside a nappy. It cannot decide whether what you saw was mucus, undigested food, a change in normal breastfed-baby stool, or something else. The quality of the insight depends on consistent, honest logging—not perfect certainty.</p>
 <p>Mucus is often described as a slippery, stringy or jelly-like coating or streak. Baby poo varies enormously with age, breast or formula feeding, illness and the start of solids, so a difficult-to-classify nappy is not unusual. If you are unsure, note what you saw in your own words rather than trying to satisfy the app’s label.</p>
-<figure><img src="/obubba-poo-colour-texture-log-app.jpg" alt="OBubba’s current Flutter poo logger lets a parent record colour and texture, including Mucousy, alongside the time and optional notes." loading="lazy"/><figcaption>A genuine current Flutter screen: the Poo entry records what the parent observed. OBubba counts those selections; it does not visually inspect or diagnose the nappy.</figcaption></figure>
+<figure><img src="/obubba-poo-colour-texture-log-app.jpg" alt="OBubba’s current poo logger lets a parent record colour and texture, including Mucousy, alongside the time and optional notes." loading="lazy"/><figcaption>A genuine current screen: the Poo entry records what the parent observed. OBubba counts those selections; it does not visually inspect or diagnose the nappy.</figcaption></figure>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — keep nappy texture, colour, feeds, new foods, symptoms and wet nappies in one calm timeline you can actually use.</p>
 <h2>Why three days rather than three nappies?</h2>
 <p>One busy bowel day can contain several similar nappies. Counting every nappy as an independent signal would make a short-lived episode look like a week-long pattern.</p>
@@ -843,7 +843,7 @@
 <p>This priority order is helpful, but it is not triage. Read the baby, not just the winning card.</p>
 <h2>The acute stool safety layer is separate</h2>
 <p>The rolling mucus card should never be used to “wait seven days” when a nappy contains a warning sign.</p>
-<p>Elsewhere in the Flutter engine, OBubba examines structured colour and texture entries from today and yesterday. A logged pale colour, very dark stool after the early newborn period, or blood-streaked texture can produce the high-urgency card <strong>A nappy worth showing someone</strong>. A watery nappy today can also produce a same-day hydration warning.</p>
+<p>Elsewhere in the engine, OBubba examines structured colour and texture entries from today and yesterday. A logged pale colour, very dark stool after the early newborn period, or blood-streaked texture can produce the high-urgency card <strong>A nappy worth showing someone</strong>. A watery nappy today can also produce a same-day hydration warning.</p>
 <p>Those rules are separate from the three-day mucus count. In the health detector, the structured pale/blood/dark warning ranks above the routine fever and watery-stool branches; only more immediately life-threatening signals such as a very high temperature or hypothermia can outrank it.</p>
 <p>The practical translation is simple:</p>
 <ul><li><strong>mucus only, baby otherwise well:</strong> record the pattern and seek advice if it persists or worries you;</li><li><strong>blood, pale/white/chalky poo, or black/tarry poo outside the first meconium nappies:</strong> contact a health professional promptly;</li><li><strong>repeated watery stools or vomiting:</strong> protect hydration and seek advice according to age and symptoms;</li><li><strong>baby looks seriously unwell:</strong> do not wait for another nappy or another app card.</li></ul>
@@ -900,7 +900,7 @@
 <p><a href="https://www.nhs.uk/baby/health/is-your-baby-or-toddler-seriously-ill/" target="_blank" rel="noopener noreferrer">NHS: Is your baby or toddler seriously ill?</a> — poor feeding, drier nappies, breathing, responsiveness, colour and routes to urgent help.</p>
 <p><a href="https://www.nhs.uk/conditions/dehydration/" target="_blank" rel="noopener noreferrer">NHS: Dehydration</a> — dehydration signs and urgent advice.</p>
 <p><a href="https://bwc.nhs.uk/news/how-a-snap-of-a-dirty-nappy-could-detect-lifethreatening-liver-condition-17254" target="_blank" rel="noopener noreferrer">Birmingham Women’s and Children’s NHS Foundation Trust: How a dirty-nappy photo could help detect liver disease</a> — why a pale stool in a young baby deserves prompt attention.</p>
-<p>OBubba Flutter source reviewed for this article: `lib/core/engine/gi_health.dart`, `lib/core/engine/health_insights.dart`, `lib/core/engine/brain.dart`, `test/gi_health_test.dart` and `test/health_insights_test.dart`.</p>
+<p>OBubba source reviewed for this article: `lib/core/engine/gi_health.dart`, `lib/core/engine/health_insights.dart`, `lib/core/engine/brain.dart`, `test/gi_health_test.dart` and `test/health_insights_test.dart`.</p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>

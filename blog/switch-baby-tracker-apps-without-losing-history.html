@@ -833,15 +833,15 @@
 <p>Look for <strong>Export</strong>, <strong>Reports</strong>, <strong>Download data</strong> or <strong>Share CSV</strong>. If you only see PDF, ask the app&#39;s support team whether a raw CSV export is available. Never upload a random database backup and hope it is equivalent.</p>
 <h2>How to import the CSV into OBubba</h2>
 <p>New parents can reach the import option while setting up OBubba. Returning parents can open <strong>Account → Import data</strong>.</p>
-<p>The current Flutter screen keeps the journey visible:</p>
+<p>The current screen keeps the journey visible:</p>
 <p>&gt; <strong>1 Export CSV → 2 Choose file → 3 Preview</strong></p>
-<figure><img src="/obubba-import-another-baby-tracker-app.jpg" alt="OBubba&#39;s current Flutter Import from another app screen listing Huckleberry, Baby Connect, Sprout, Glow and Baby Tracker, followed by Export CSV, Choose file and Preview steps." loading="lazy"/><figcaption>Current OBubba Flutter CSV migration screen. It asks for the baby’s name, date of birth and exported CSV.</figcaption></figure>
+<figure><img src="/obubba-import-another-baby-tracker-app.jpg" alt="OBubba&#39;s current Import from another app screen listing Huckleberry, Baby Connect, Sprout, Glow and Baby Tracker, followed by Export CSV, Choose file and Preview steps." loading="lazy"/><figcaption>Current OBubba CSV migration screen. It asks for the baby’s name, date of birth and exported CSV.</figcaption></figure>
 <p>Then:</p>
 <ol><li>enter the baby&#39;s name</li><li>choose the correct date of birth</li><li>tap <strong>Choose CSV file</strong>, or paste the CSV text</li><li>wait for the detection preview</li><li>check the detected format, ready-entry count and any skipped-row count</li><li>import only when the preview looks credible</li></ol>
 <p>OBubba asks for date of birth because CSV logs usually do not contain reliable profile metadata. The date lets age-banded sleep windows, milestones and weaning guidance match this baby rather than a generic age.</p>
 <p>The import creates a new baby profile. If you already made a blank profile while exploring OBubba, expect the migrated history to appear under the newly created profile rather than being merged silently into existing logs.</p>
 <p><strong><a href="/app.html?utm_source=switch_tracker_article&amp;utm_medium=owned_search&amp;utm_campaign=from_bump_to_baby_auto&amp;utm_content=auto_20260913_switch_tracker">Try OBubba free →</a></strong> — bring the history with you, preview what OBubba recognises and keep using the patterns you already worked to collect.</p>
-<h2>What the real Flutter importer does with the file</h2>
+<h2>What the real importer does with the file</h2>
 <p>The CSV text is read and parsed locally on the device first. OBubba identifies the header shape, translates recognised rows into its own entry types and shows a preview before saving the new profile.</p>
 <p>There are three levels of support:</p>
 <p>| File type | How OBubba handles it | |---|---| | OBubba CSV | Full round-trip mapping for OBubba&#39;s own structured fields | | Huckleberry CSV | Dedicated mapping for its known headers and event labels | | Baby Connect, Sprout, Glow, Baby Tracker and other recognisable CSVs | Header-driven best effort using common date, time, type, activity, category, amount and note columns |</p>
@@ -854,7 +854,7 @@
 <p>Some trackers export a broken night as several separate sleep sessions:</p>
 <p>| Exported row | Time | |---|---| | Sleep session 1 | 7:30pm–11:45pm | | Sleep session 2 | 12:10am–3:00am | | Sleep session 3 | 3:35am–6:25am |</p>
 <p>A literal row-for-row import would look like three unrelated sleeps. It could undercount total night sleep, hide the two awake gaps or attach part of the night to the wrong calendar day.</p>
-<p>For Huckleberry and generic foreign formats, OBubba&#39;s Flutter importer groups consecutive overnight sessions into one bedtime-to-morning sleep arc and creates explicit night-wake entries for the gaps. Daytime naps remain separate.</p>
+<p>For Huckleberry and generic foreign formats, OBubba&#39;s importer groups consecutive overnight sessions into one bedtime-to-morning sleep arc and creates explicit night-wake entries for the gaps. Daytime naps remain separate.</p>
 <p>That transformation lets the existing sleep engine read the migrated night in the same shape as a night tracked natively in OBubba. It is still an interpretation of the exported timestamps, so spot-check unusual nights—especially travel, sickness, split nights and very early bedtimes.</p>
 <h2>Units and dates: the quiet migration traps</h2>
 <h3>Millilitres and ounces</h3>
@@ -901,7 +901,7 @@
 <h3>Will my photos transfer?</h3>
 <p>Do not expect photos to arrive through a CSV activity export. Save important photos separately before leaving the old app.</p>
 <h3>Will OBubba merge the CSV into my existing baby?</h3>
-<p>The current Flutter import flow creates a new baby profile from the migrated history. It does not silently merge the file into a populated profile.</p>
+<p>The current import flow creates a new baby profile from the migrated history. It does not silently merge the file into a populated profile.</p>
 <h3>What does “rows skipped” mean?</h3>
 <p>Those rows did not contain a date, time or event label that OBubba could map safely. Review the source file and important dates instead of assuming every skipped row was irrelevant.</p>
 <h3>Should I cancel the old subscription immediately?</h3>

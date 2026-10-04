@@ -804,9 +804,9 @@
       <p>Yesterday your baby logged six milk feeds. Today the count reaches nine and OBubba says:</p>
 <p>&gt; <strong>Feeding is up, likely a growth spurt</strong></p>
 <p>Does the app know your baby is growing? Does nine feeds mean low supply? Should a bottle be made bigger so everyone gets more sleep?</p>
-<p><strong>No.</strong> The current Flutter feature has noticed that today contains substantially more <strong>milk-feed events</strong> than your baby’s own recently logged days. “Likely a growth spurt” is a gentle possible explanation, not a measurement of growth and not a diagnosis.</p>
+<p><strong>No.</strong> The current feature has noticed that today contains substantially more <strong>milk-feed events</strong> than your baby’s own recently logged days. “Likely a growth spurt” is a gentle possible explanation, not a measurement of growth and not a diagnosis.</p>
 <p>The helpful response is to follow feeding cues, protect the caregiver’s food and water, and watch the whole baby. Do not stretch a hungry baby to restore a tidy average, and do not pressure a bottle-fed baby to finish more milk because the app expects a busy day.</p>
-<figure><img src="/obubba-growth-spurt-feed-count-detector.svg" alt="A visual explanation of how OBubba compares today’s milk-feed count with a baby’s own recent baseline before showing its likely-growth-spurt card." loading="lazy"/><figcaption>The current Flutter detector compares logged milk-feed events, not calories or growth. Solids and pumping are kept out of the comparison.</figcaption></figure>
+<figure><img src="/obubba-growth-spurt-feed-count-detector.svg" alt="A visual explanation of how OBubba compares today’s milk-feed count with a baby’s own recent baseline before showing its likely-growth-spurt card." loading="lazy"/><figcaption>The current detector compares logged milk-feed events, not calories or growth. Solids and pumping are kept out of the comparison.</figcaption></figure>
 <h2>The short answer</h2>
 <p>OBubba’s current detector builds a personal feed-count baseline from up to seven previous calendar days. It then asks whether today is unusually busy.</p>
 <p>The growth-spurt card needs:</p>
@@ -827,7 +827,7 @@
 <p>The cleanest log is one real feeding occasion per entry. If one bottle is accidentally split into three entries, the day can look busier than it was. If several feeds are never logged, a genuine increase may be missed. OBubba turns the record back into a useful question; it cannot make incomplete data clinically complete.</p>
 <h2>Why solids do not count—even after weaning starts</h2>
 <p>Suppose an eight-month-old usually has six milk feeds. Today they have the same six milk feeds plus breakfast, lunch and tea. Counting every `feed` event would make the total nine and could falsely label an ordinary weaning day a growth spurt.</p>
-<p>The Flutter implementation explicitly removes solids from both today’s total and the recent milk baseline. That is why adding meals does not manufacture a “feeding is up” card.</p>
+<p>The implementation explicitly removes solids from both today’s total and the recent milk baseline. That is why adding meals does not manufacture a “feeding is up” card.</p>
 <p>It also reflects the wider feeding picture. The NHS says breast milk or first infant formula remains a baby’s main drink throughout the first year while complementary food expands gradually. A solids log can be useful for texture, allergens, response and variety, but it is not interchangeable with the milk-feed rhythm.</p>
 <h2>Why pumping does not count</h2>
 <p>A pumping session describes milk expressed by a parent. It does not prove that the baby drank that milk that day—or at all.</p>
@@ -836,7 +836,7 @@
 <p>OBubba therefore keeps pumping separate from baby milk feeds in this pattern. If expressed milk is later offered by bottle, the bottle feed is the consumption event.</p>
 <h2>Cluster feeding gets first refusal</h2>
 <p>“More feeds today” and “cluster feeding” are related patterns, but they are not the same calculation.</p>
-<p>The current Flutter feed detector checks for a cluster before it checks for the broader daily rise. Between roughly 8 and 40 weeks, three daytime milk feeds whose first-to-third span is no more than 90 minutes can form a cluster spell. Four overlapping feeds inside one continuous spell count as one cluster, not two.</p>
+<p>The current feed detector checks for a cluster before it checks for the broader daily rise. Between roughly 8 and 40 weeks, three daytime milk feeds whose first-to-third span is no more than 90 minutes can form a cluster spell. Four overlapping feeds inside one continuous spell count as one cluster, not two.</p>
 <p>If that more specific pattern qualifies, OBubba returns <strong>Looks like cluster feeding</strong> first rather than stacking a second growth-spurt explanation on top.</p>
 <p>The NHS describes cluster feeding as a period when a baby wants to feed much more frequently, sometimes almost constantly. It is particularly common in the first three to four months and may happen for a few days around growth. It can occur with breast or formula feeding.</p>
 <p>The distinction in the app is practical:</p>
@@ -860,7 +860,7 @@
 <p>Do not make every bottle larger simply because today’s count rose. A large feed does not guarantee a longer interval or better night, and forcing the last milk can be distressing. Prepare formula exactly as directed—never add extra powder or dilute it—and discard leftovers according to current safety guidance.</p>
 <h3>If combination feeding</h3>
 <p>The count can recognise both kinds of feed, but it cannot combine breast milk transfer with bottle millilitres into a trustworthy total. Keep following cues. If the family is protecting breast milk supply, individual advice from a feeding professional is more useful than trying to reverse-engineer a target from the card.</p>
-<figure><img src="/obubba-feeding-growth-spurt-check-in-app.jpg" alt="The genuine current OBubba Flutter Feeding check-in showing how the app keeps breastfeeds and measured bottle milk together without pretending bottle volume is the whole intake story." loading="lazy"/><figcaption>Current OBubba Flutter capture with fictional example data. Its combi-feeding read keeps breastfeeds, bottle milk, wet nappies, night feeds and growth distinct before suggesting a next step.</figcaption></figure>
+<figure><img src="/obubba-feeding-growth-spurt-check-in-app.jpg" alt="The genuine current OBubba Feeding check-in showing how the app keeps breastfeeds and measured bottle milk together without pretending bottle volume is the whole intake story." loading="lazy"/><figcaption>Current OBubba capture with fictional example data. Its combi-feeding read keeps breastfeeds, bottle milk, wet nappies, night feeds and growth distinct before suggesting a next step.</figcaption></figure>
 <h2>What about sleep tonight?</h2>
 <p>The growth-spurt card says to expect that sleep <strong>may</strong> be disrupted for a night or two. That is preparation, not a forecast.</p>
 <p>A baby who takes more feeds may wake to feed more. Another may take extra daytime milk and sleep exactly as usual. A third may be unsettled because of illness or development rather than growth. One busy feeding day cannot tell the difference.</p>

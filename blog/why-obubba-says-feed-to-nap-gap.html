@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="apple-itunes-app" content="app-id=6760968757"/>
   <title>Why Does OBubba Say ‘The Feed-to-Nap Gap That Helps Leo Nap Longest’?</title>
-  <meta name="description" content="The exact Flutter rules behind OBubba’s feed-to-nap insight, what its four timing bands measure, and how to test a gentler gap without delaying a hungry baby."/>
+  <meta name="description" content="The exact rules behind OBubba’s feed-to-nap insight, what its four timing bands measure, and how to test a gentler gap without delaying a hungry baby."/>
   <meta name="robots" content="index, follow, max-image-preview:large"/>
   <link rel="canonical" href="https://obubba.com/blog/why-obubba-says-feed-to-nap-gap.html"/>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
@@ -19,13 +19,13 @@
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://obubba.com/blog/why-obubba-says-feed-to-nap-gap.html"/>
   <meta property="og:title" content="Why Does OBubba Say ‘The Feed-to-Nap Gap That Helps Leo Nap Longest’?"/>
-  <meta property="og:description" content="The exact Flutter rules behind OBubba’s feed-to-nap insight, what its four timing bands measure, and how to test a gentler gap without delaying a hungry baby."/>
+  <meta property="og:description" content="The exact rules behind OBubba’s feed-to-nap insight, what its four timing bands measure, and how to test a gentler gap without delaying a hungry baby."/>
   <meta property="og:image" content="https://obubba.com/obubba-feed-to-nap-gap-personal-pattern.png"/>
   <meta property="og:site_name" content="OBubba"/>
   <meta property="og:locale" content="en_GB"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Why Does OBubba Say ‘The Feed-to-Nap Gap That Helps Leo Nap Longest’?"/>
-  <meta name="twitter:description" content="The exact Flutter rules behind OBubba’s feed-to-nap insight, what its four timing bands measure, and how to test a gentler gap without delaying a hungry baby."/>
+  <meta name="twitter:description" content="The exact rules behind OBubba’s feed-to-nap insight, what its four timing bands measure, and how to test a gentler gap without delaying a hungry baby."/>
   <meta name="twitter:image" content="https://obubba.com/obubba-feed-to-nap-gap-personal-pattern.png"/>
   <meta name="theme-color" content="#fffcf9"/>
   <link rel="preload" href="/Parisienne-Regular.ttf" as="font" type="font/truetype" crossorigin/>
@@ -744,7 +744,7 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Why Does OBubba Say ‘The Feed-to-Nap Gap That Helps Leo Nap Longest’?",
-  "description": "The exact Flutter rules behind OBubba’s feed-to-nap insight, what its four timing bands measure, and how to test a gentler gap without delaying a hungry baby.",
+  "description": "The exact rules behind OBubba’s feed-to-nap insight, what its four timing bands measure, and how to test a gentler gap without delaying a hungry baby.",
   "datePublished": "2026-09-19",
   "dateModified": "2026-09-19",
   "author": {
@@ -796,7 +796,7 @@
           <span class="read-time">12 min read</span>
         </div>
         <h1>Why Does OBubba Say ‘The Feed-to-Nap Gap That Helps Leo Nap Longest’?</h1>
-        <p>The exact Flutter rules behind OBubba’s feed-to-nap insight, what its four timing bands measure, and how to test a gentler gap without delaying a hungry baby.</p>
+        <p>The exact rules behind OBubba’s feed-to-nap insight, what its four timing bands measure, and how to test a gentler gap without delaying a hungry baby.</p>
         <div class="tags"><span class="tag">OBubba feed to nap gap</span><span class="tag">feed baby before nap</span><span class="tag">feeding to sleep baby</span><span class="tag">baby short naps after feeding</span><span class="tag">feed nap spacing</span></div>
       </div>
     </header>
@@ -806,12 +806,12 @@
 <p>The card may compare naps averaging 1 hour 10 minutes when a feed was logged 30–60 minutes beforehand with 32-minute naps when the feed sat within 15 minutes of sleep.</p>
 <p>Has the app proved that feeding close to sleep caused the short naps? Is 45 minutes now the “right” gap for every nap? Should a hungry baby wait so the chart stays tidy?</p>
 <p>No.</p>
-<p>We traced the current Flutter detector, its 21-day caller, feed and nap data model, baseline-day filter and automated tests. It is a useful personalised comparison with sensible silence thresholds—but the card currently sounds more certain than the calculation allows.</p>
+<p>We traced the current detector, its 21-day caller, feed and nap data model, baseline-day filter and automated tests. It is a useful personalised comparison with sensible silence thresholds—but the card currently sounds more certain than the calculation allows.</p>
 <p>The honest translation is:</p>
 <p>&gt; “Across the eligible logs available on this device, naps paired with one broad feed-timing band have run longer on average than naps in another band. If it fits your baby’s cues, you could test that spacing on one nap without withholding a feed.”</p>
 <h2>The short answer</h2>
-<p>| Question | Current Flutter behaviour | |---|---| | What does it pair? | Each completed daytime nap with the latest preceding daytime milk feed, provided it was within three hours | | What counts as milk? | Feed entries other than solids; breast, bottle and combination feeds can qualify | | Do solid meals count? | No | | Do night feeds count? | No | | How many pairs are required? | At least eight | | How are gaps compared? | Within 15 minutes, 15–30 minutes, 30–60 minutes and over one hour | | How well sampled must the comparison be? | At least two bands must contain three or more naps each | | How large must the difference be? | The best band’s average nap must beat the worst by at least 15 minutes | | Can it recommend feeding immediately before sleep? | No; the detector suppresses itself when “within 15 min” is the winning band | | Does it prove causation? | No; it is an association in the available logs |</p>
-<figure><img src="/obubba-feed-to-nap-gap-detector.svg" alt="The current OBubba feed-to-nap detector pairs eligible milk feeds and naps, sorts them into four timing bands and stays quiet until four evidence gates pass." loading="lazy"/><figcaption>The exact feed-to-nap pairing, bucket and silence rules in the current Flutter detector.</figcaption></figure>
+<p>| Question | Current behaviour | |---|---| | What does it pair? | Each completed daytime nap with the latest preceding daytime milk feed, provided it was within three hours | | What counts as milk? | Feed entries other than solids; breast, bottle and combination feeds can qualify | | Do solid meals count? | No | | Do night feeds count? | No | | How many pairs are required? | At least eight | | How are gaps compared? | Within 15 minutes, 15–30 minutes, 30–60 minutes and over one hour | | How well sampled must the comparison be? | At least two bands must contain three or more naps each | | How large must the difference be? | The best band’s average nap must beat the worst by at least 15 minutes | | Can it recommend feeding immediately before sleep? | No; the detector suppresses itself when “within 15 min” is the winning band | | Does it prove causation? | No; it is an association in the available logs |</p>
+<figure><img src="/obubba-feed-to-nap-gap-detector.svg" alt="The current OBubba feed-to-nap detector pairs eligible milk feeds and naps, sorts them into four timing bands and stays quiet until four evidence gates pass." loading="lazy"/><figcaption>The exact feed-to-nap pairing, bucket and silence rules in the current detector.</figcaption></figure>
 <h2>What the detector actually reads</h2>
 <p>The OBubba brain gathers up to 21 recent days for this comparison. It first removes days marked <strong>Sick, Travel, Daycare, Grand, Grandparents or Nursery</strong>, plus days containing a plausible logged fever.</p>
 <p>That means the model is deliberately learning from home-like baseline days. A disrupted illness day should not teach the app that a normal pre-nap feed gap produces a 14-minute nap. The trade-off is that a baby who takes most naps at nursery may build this insight more slowly—or not at all.</p>
@@ -853,7 +853,7 @@
 <h2>Feeding to sleep is not automatically a bad habit</h2>
 <p>Young babies often doze during feeds. The <a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS says that in the early weeks a breastfed baby may fall asleep for short periods during a feed</a> and parents can continue until the baby has finished or is fully asleep.</p>
 <p><a href="https://www.unicef.org.uk/babyfriendly/wp-content/uploads/sites/2/2017/12/Responsive-Feeding-Infosheet-Unicef-UK-Baby-Friendly-Initiative.pdf" target="_blank" rel="noopener noreferrer">UNICEF UK’s Baby Friendly Initiative describes responsive feeding</a> as responding to a baby’s needs, with feeding providing nutrition, comfort, love and reassurance—not obeying a rigid clock.</p>
-<p>The current Flutter detector has no explicit minimum-age gate. If enough eligible pairs exist and its thresholds pass, it can produce the card for a very young baby. That is another reason to treat the result as optional pattern information, not an instruction to separate every feed from sleep.</p>
+<p>The current detector has no explicit minimum-age gate. If enough eligible pairs exist and its thresholds pass, it can produce the card for a very young baby. That is another reason to treat the result as optional pattern information, not an instruction to separate every feed from sleep.</p>
 <p>Do not delay a feed for a hungry baby to preserve a nap experiment. The <a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS recommends responsive or on-demand feeding</a>: follow hunger and fullness cues rather than forcing a strict schedule.</p>
 <h2>Why solids are excluded</h2>
 <p>A solid meal is stored as a feed-type entry, but this detector deliberately removes it before pairing.</p>
@@ -865,7 +865,7 @@
 <h2>How to use the insight without chasing the clock</h2>
 <p>Treat the winning band as a hypothesis for one repeatable nap, not a prescription for the whole day.</p>
 <ol><li><strong>Check the raw times.</strong> Were feeds logged at the start, finish or an approximate moment? Correct obvious mistakes first.</li><li><strong>Choose one nap.</strong> The first nap or another relatively stable nap is easier to compare than changing every transition.</li><li><strong>Follow hunger cues.</strong> Feed when your baby needs milk. If the proposed gap clashes with hunger, the experiment loses.</li><li><strong>Add a tiny bridge.</strong> If appropriate for your baby, use a cuddle, nappy change, short story or song between feed and nap rather than stretching them awake.</li><li><strong>Keep the sleep space safe.</strong> Put your baby down in their usual clear, flat sleep space according to safer-sleep guidance.</li><li><strong>Watch several like-for-like attempts.</strong> Compare the same nap position across ordinary days, not one cot nap with one pram catnap during travel.</li><li><strong>Stop if it adds stress.</strong> A longer feed-to-nap gap is not a success when it creates hunger, distress or a missed nap.</li></ol>
-<figure><img src="/obubba-live-nap-timer.jpg" alt="The real OBubba Flutter nap timer records the sleep that actually happens; completed nap starts and ends are what allow later comparisons such as feed-to-nap spacing." loading="lazy"/><figcaption>The current Flutter nap-timer surface supplies the completed nap timing used by later personalised comparisons.</figcaption></figure>
+<figure><img src="/obubba-live-nap-timer.jpg" alt="The real OBubba nap timer records the sleep that actually happens; completed nap starts and ends are what allow later comparisons such as feed-to-nap spacing." loading="lazy"/><figcaption>The current nap-timer surface supplies the completed nap timing used by later personalised comparisons.</figcaption></figure>
 <h2>What to log—and what not to manufacture</h2>
 <p>The detector only needs two ordinary things recorded consistently:</p>
 <ul><li>the milk feed time;</li><li>the nap’s start and end.</li></ul>

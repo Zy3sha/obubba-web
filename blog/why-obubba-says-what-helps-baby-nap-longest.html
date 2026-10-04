@@ -803,24 +803,24 @@
     <article class="section rich-text article">
       <p>One nap began with a feed and lasted 32 minutes. Another began after rocking and ran for 75. A self-settled nap surprised everyone by crossing an hour. After enough completed naps, OBubba may surface:</p>
 <p>&gt; <strong>What helps Maya nap longest</strong></p>
-<p>The current Flutter feature does something genuinely personal: it groups recent naps by the settling method the parent logged and compares their average elapsed duration. It does not apply a universal rule that feeding, rocking or self-settling is best.</p>
+<p>The current feature does something genuinely personal: it groups recent naps by the settling method the parent logged and compares their average elapsed duration. It does not apply a universal rule that feeding, rocking or self-settling is best.</p>
 <p>But the word <strong>helps</strong> is stronger than the evidence. The detector finds an association inside the family’s record. It does not randomise nap methods, control for nap position or location, subtract every mid-nap waking, or prove why one group ran longer.</p>
 <p>Here is the exact calculation, what happens when you select more than one method, why some apparent winners are suppressed, and how to turn the card into a gentle experiment rather than a new sleep rule.</p>
 <h2>The short answer</h2>
 <p>Every basic gate below must pass:</p>
-<p>| Gate | Current Flutter rule | |---|---| | Lookback | Today plus the previous <strong>13 calendar days</strong> | | Excluded days | Sick, travel, daycare, nursery or grandparent day tags; days with a logged fever temperature | | Nap | Daytime `nap` entry with a start, end and recognised primary settling method | | Duration | <strong>5–240 minutes</strong>, inclusive | | Comparable methods | At least <strong>2 method buckets</strong> | | Samples | At least <strong>3 qualifying naps in each eligible bucket</strong> | | Comparison | Arithmetic mean elapsed nap duration for each bucket | | Difference | Best average is at least <strong>15 minutes</strong> longer than worst | | Result | Low-urgency <strong>What helps [first name] nap longest</strong> card |</p>
+<p>| Gate | Current rule | |---|---| | Lookback | Today plus the previous <strong>13 calendar days</strong> | | Excluded days | Sick, travel, daycare, nursery or grandparent day tags; days with a logged fever temperature | | Nap | Daytime `nap` entry with a start, end and recognised primary settling method | | Duration | <strong>5–240 minutes</strong>, inclusive | | Comparable methods | At least <strong>2 method buckets</strong> | | Samples | At least <strong>3 qualifying naps in each eligible bucket</strong> | | Comparison | Arithmetic mean elapsed nap duration for each bucket | | Difference | Best average is at least <strong>15 minutes</strong> longer than worst | | Result | Low-urgency <strong>What helps [first name] nap longest</strong> card |</p>
 <p>There is no age gate and no percentage threshold. A 45-minute versus 60-minute comparison qualifies, as does 120 versus 135, even though those changes have very different relative sizes.</p>
-<figure><img src="/obubba-nap-settle-method-detector.svg" alt="The exact Flutter path behind OBubba’s What helps baby nap longest card." loading="lazy"/><figcaption>OBubba takes completed 5-to-240-minute naps from eligible days, assigns one primary settling bucket, requires at least three naps in at least two buckets, compares average elapsed duration and speaks when the best beats the worst by 15 minutes. It finds an association, not a cause.</figcaption></figure>
+<figure><img src="/obubba-nap-settle-method-detector.svg" alt="The exact path behind OBubba’s What helps baby nap longest card." loading="lazy"/><figcaption>OBubba takes completed 5-to-240-minute naps from eligible days, assigns one primary settling bucket, requires at least three naps in at least two buckets, compares average elapsed duration and speaks when the best beats the worst by 15 minutes. It finds an association, not a cause.</figcaption></figure>
 <h2>First, OBubba turns the log into four buckets</h2>
 <p>The nap form asks <strong>How settled?</strong> and offers:</p>
 <ul><li>Self-settled</li><li>Fed to sleep</li><li>Rocked</li><li>Held</li><li>Patted</li><li>Dummy</li></ul>
-<p>The detector does not compare all six labels separately. Flutter maps the stored primary method into four groups:</p>
+<p>The detector does not compare all six labels separately. maps the stored primary method into four groups:</p>
 <p>| Stored primary method | Comparison bucket | Wording on the card | |---|---|---| | `independent` | `self` | self-settling | | `fed` | `fed` | a feed | | `rocked`, `held`, `patted` | `assisted` | rocking/holding | | `dummy` | `other` | a dummy |</p>
 <p>A missing or unfamiliar method is ignored. The classifier does not guess that an unlabelled nap was assisted.</p>
 <p>That is a strong honesty boundary. Six unlabelled naps cannot silently become six “rocked” naps and manufacture a result.</p>
 <p>The grouping also loses detail. Rocking, holding and patting become one assisted bucket even though a family may experience them very differently. The friendly label says <strong>rocking/holding</strong>, so a set made mostly from patting can be described without naming the action that actually dominated it.</p>
 <h2>If you select several methods, only one reaches this detector</h2>
-<p>The Flutter nap form supports multiple settling choices. A parent can record that a baby was fed and rocked, or held and patted.</p>
+<p>The nap form supports multiple settling choices. A parent can record that a baby was fed and rocked, or held and patted.</p>
 <p>The stored entry keeps the full list, but it also derives one primary method for older engine consumers. This nap comparison reads that single primary field—not the whole list.</p>
 <p>The rule is:</p>
 <p>&gt; If any support method was used, the first support method in the saved list becomes primary. Only a lone <strong>Self-settled</strong> choice counts as self-settling.</p>
@@ -853,10 +853,10 @@
 <p>The card requires at least two eligible buckets, so the smallest possible result uses six naps:</p>
 <ul><li>three self-settled naps; and</li><li>three fed-to-sleep naps.</li></ul>
 <p>Two self-settled naps and ten rocked naps stay silent because only one bucket has reached three. Three self, three fed and two dummy naps compare self with fed; the dummy group is ignored.</p>
-<p>If three or four buckets are eligible, Flutter compares the highest average with the lowest average. Any middle groups disappear from the sentence, although their naps are included in the <strong>from N naps</strong> evidence count.</p>
+<p>If three or four buckets are eligible, compares the highest average with the lowest average. Any middle groups disappear from the sentence, although their naps are included in the <strong>from N naps</strong> evidence count.</p>
 <p>That can make the caption wider than the comparison named in the body. “From 12 naps” might include four self-settled, three fed, three assisted and two ignored dummy naps—or three naps in each of all four eligible buckets. The label gives volume, not the group breakdown.</p>
 <h2>The 15-minute gate uses arithmetic averages</h2>
-<p>For every eligible group, Flutter adds the raw elapsed durations and divides by the number of naps.</p>
+<p>For every eligible group, adds the raw elapsed durations and divides by the number of naps.</p>
 <p>Suppose the recent record contains:</p>
 <p>| Method bucket | Durations | Average | |---|---|---:| | Self-settling | 62, 70, 78 min | 70 min | | A feed | 30, 36, 42 min | 36 min |</p>
 <p>The gap is:</p>
@@ -884,7 +884,7 @@
 <ul><li>self-settled naps may happen mostly as the naturally longer first nap;</li><li>rocking may be used mainly for overtired rescue naps;</li><li>feeding may occur closer to the start of a short late-afternoon nap;</li><li>one method may happen in the cot and another in a pram;</li><li>different carers may use different methods;</li><li>the baby may have matured across the 14-day window; or</li><li>a long mid-nap waking may remain inside the elapsed arc.</li></ul>
 <p>The function does not match Nap 1 with Nap 1, hold location constant or adjust for wake-window length. <strong>Helps</strong> should therefore be read as <strong>was associated with longer logged arcs in this sample</strong>.</p>
 <p>OBubba has separate detectors for nap position, location, wake mood and feed-to-nap spacing. Keeping those questions separate is useful. Combining them mentally is even more useful: if rocking “wins” only because every rocked nap was the first nap in a quiet cot, the method may not be the real lever.</p>
-<figure><img src="/obubba-sleep-quality-reports-app.jpg" alt="A genuine OBubba Flutter Insights overview showing how the app brings sleep, feeds and growth into a larger personal picture rather than treating one nap card as the whole story." loading="lazy"/><figcaption>This genuine app screen shows OBubba’s broader Insights overview. The settle-method comparison is one narrow read inside a larger sleep record; total sleep, night wakes, nap position and day context still matter.</figcaption></figure>
+<figure><img src="/obubba-sleep-quality-reports-app.jpg" alt="A genuine OBubba Insights overview showing how the app brings sleep, feeds and growth into a larger personal picture rather than treating one nap card as the whole story." loading="lazy"/><figcaption>This genuine app screen shows OBubba’s broader Insights overview. The settle-method comparison is one narrow read inside a larger sleep record; total sleep, night wakes, nap position and day context still matter.</figcaption></figure>
 <h2>How to use the finding without creating a new rule</h2>
 <p>Start by asking whether the result describes a choice you actually want.</p>
 <p>If the winning method works and is sustainable, the card can simply be useful confirmation. A fed or rocked nap is not a failed nap. The NHS notes that, particularly in the early weeks, babies may fall asleep only in a parent’s arms or with a parent by the cot (<a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a>).</p>

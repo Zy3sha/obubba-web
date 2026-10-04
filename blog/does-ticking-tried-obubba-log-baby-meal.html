@@ -803,16 +803,16 @@
     <article class="section rich-text article">
       <p>You planned lentil and sweet-potato mash. Your baby tasted two spoonfuls, squeezed one through their fingers and looked deeply suspicious of the broccoli. In OBubba’s weekly plan, you tap the circle beside the meal and it changes to <strong>tried</strong>.</p>
 <p>Has that meal now joined the food journal? Did the app remember its allergens? Will it change the next recipe suggestion?</p>
-<p><strong>In the current Flutter app, no. A plan tick and a solids log are two separate records.</strong> The tick remembers that you checked off a planned idea for this week. Only <strong>Log a food</strong> creates the dated feeding entry used by the journal, food response, allergen history, weaning analytics and recommendation engine.</p>
+<p><strong>In the current app, no. A plan tick and a solids log are two separate records.</strong> The tick remembers that you checked off a planned idea for this week. Only <strong>Log a food</strong> creates the dated feeding entry used by the journal, food response, allergen history, weaning analytics and recommendation engine.</p>
 <p>That distinction is useful once you know it, but the interface does not explain it well enough. We traced the path through the current `weaning_screen.dart`, `weaning_plan.dart`, feed log sheet, child history and recipe engine to show exactly what parents should tap—and how OBubba can make the handoff much better.</p>
 <h2>The short answer</h2>
 <p>| Action | What it saves now | What it does not save | |---|---|---| | Tap a meal in <strong>This week’s plan</strong> | that plan item’s `tried` tick for the current child and week | no date, time, amount, response, symptoms or solids feed | | Tick an item in <strong>Shopping list</strong> | whether that ingredient is “in the basket” | no evidence that it was cooked, offered or eaten | | Tap <strong>Log a food</strong> and choose Solids | a dated feed with the food name, detected allergens and optional Loved/Unsure/Reaction response | it cannot know the quantity swallowed or verify the real ingredients | | Manually mark an allergen introduced | a child-specific introduced-allergen tick on that device | no meal, date, response or clinical detail |</p>
-<figure><img src="/obubba-plan-tick-food-log-flow.svg" alt="A two-lane diagram showing that the weekly plan tick stays in a temporary checklist, while a solids log flows into the dated journal, allergen history, weaning analytics and future recipe suggestions." loading="lazy"/><figcaption>The current Flutter data flow: a plan tick and a food log are separate. Only the dated solids entry becomes evidence for the wider weaning experience.</figcaption></figure>
+<figure><img src="/obubba-plan-tick-food-log-flow.svg" alt="A two-lane diagram showing that the weekly plan tick stays in a temporary checklist, while a solids log flows into the dated journal, allergen history, weaning analytics and future recipe suggestions." loading="lazy"/><figcaption>The current data flow: a plan tick and a food log are separate. Only the dated solids entry becomes evidence for the wider weaning experience.</figcaption></figure>
 <p>The practical rule is simple:</p>
 <p>&gt; Use <strong>tried</strong> to manage the plan. Use <strong>Log a food</strong> to remember what actually happened.</p>
 <h2>What the weekly “tried” tick really does</h2>
 <p>OBubba’s planner generates six ideas from recipes available for the baby’s corrected-age stage. The recommendation engine gives weight to iron-rich choices, an appropriate single new allergen and foods whose exact recipe name has not already been logged. It filters recipes carrying an allergen in the child’s lifetime reaction record.</p>
-<p>When the parent creates a plan, Flutter saves three things for each idea:</p>
+<p>When the parent creates a plan, saves three things for each idea:</p>
 <ul><li>recipe name and emoji</li><li>detected allergen labels and an iron-rich flag</li><li>a `tried` Boolean, initially false</li></ul>
 <p>Tapping the row flips only that Boolean. The screen can then say <strong>2/6 tried</strong> or <strong>6/6 tried</strong>. It does not call the feed repository, add an entry to today or send the recipe’s allergen list into the child history.</p>
 <p>The plan is stored under a child-scoped key and tied to the Monday that begins the current week. The ticks survive closing and reopening the app during that week. A plan from a previous week is dropped, and regenerating the current plan replaces it after warning that meal and shopping ticks will be cleared.</p>
@@ -820,20 +820,20 @@
 <h2>What a real solids log adds</h2>
 <p>At the bottom of <strong>Care → Weaning</strong>, <strong>Log a food</strong> opens the same Feed sheet used by Track. Choose <strong>Solids</strong>, write what was offered and optionally select:</p>
 <ul><li>😋 Loved it</li><li>😐 Unsure</li><li>⚠️ Reaction</li></ul>
-<p>Saving creates a dated feed entry. The Flutter log sheet also scans the food text for recognised major allergens. A clear description such as <strong>“scrambled egg with oat toast”</strong> is more useful than <strong>“breakfast”</strong> because it gives the detector something real to work with.</p>
+<p>Saving creates a dated feed entry. The log sheet also scans the food text for recognised major allergens. A clear description such as <strong>“scrambled egg with oat toast”</strong> is more useful than <strong>“breakfast”</strong> because it gives the detector something real to work with.</p>
 <p>That one entry can then feed several parts of OBubba:</p>
 <ol><li><strong>Food journal.</strong> The meal appears with its relative date, response and recognised allergen tags.</li><li><strong>Allergen journey.</strong> Recognised or explicitly saved allergens join the child’s lifetime introduced set.</li><li><strong>Reaction safeguards.</strong> An allergen attached to a meal marked Reaction joins the lifetime reacted set and is excluded from later recipe suggestions.</li><li><strong>Weaning progress.</strong> Logged names and wording contribute to unique-food, iron-rich-meal, days-weaning and texture summaries.</li><li><strong>First-taste ideas.</strong> Recent exact food names can be removed from the next-tastes rotation.</li><li><strong>Recipe ranking.</strong> The engine can distinguish previously logged recipes and already introduced allergens from genuinely new ones.</li><li><strong>The wider day.</strong> Milk, nappies, sleep, growth and solids stay on the same child timeline for family handovers and summaries.</li></ol>
 <p>The app cannot infer any of that from a checklist tick alone. The dated entry is the evidence layer.</p>
-<figure><img src="/obubba-plan-vs-log-flutter.jpg" alt="The current OBubba Flutter Weaning screen showing the weekly plan and its tried counter. The checklist helps organise ideas, while the separate Log a food action creates the reusable history." loading="lazy"/><figcaption>A genuine current Flutter screen using fictional data. The plan counter and the food log are separate actions in the current build.</figcaption></figure>
+<figure><img src="/obubba-plan-vs-log-flutter.jpg" alt="The current OBubba Weaning screen showing the weekly plan and its tried counter. The checklist helps organise ideas, while the separate Log a food action creates the reusable history." loading="lazy"/><figcaption>A genuine current screen using fictional data. The plan counter and the food log are separate actions in the current build.</figcaption></figure>
 <h2>Why the current wording is confusing</h2>
-<p>Above the six plan rows, the current Flutter screen says:</p>
+<p>Above the six plan rows, the current screen says:</p>
 <p>&gt; “Tap a meal to mark it tried, allergens carry into the journey above.”</p>
 <p>The first half is accurate. The second half is not implemented by the tap.</p>
 <p>The allergen journey is rebuilt from two sources: allergens in actual solids history and allergens the parent manually marked as introduced. The weekly `PlanMeal.tried` field is not one of those sources.</p>
 <p>This matters because the app may display a reassuring checked meal carrying an <strong>egg</strong> or <strong>gluten</strong> badge while the allergen journey above remains unchanged. More importantly, future recipe ranking still treats that allergen as new unless it was already present elsewhere in the child’s history.</p>
 <p>The safest immediate copy would be:</p>
 <p>&gt; Tap to mark this plan idea tried. Log the food below to add it to the journal and allergen journey.</p>
-<p>That sentence tells the truth without making the parent understand Flutter state.</p>
+<p>That sentence tells the truth without making the parent understand state.</p>
 <h2>What should you log after a planned meal?</h2>
 <p>A useful record can be one line. You do not need a gram-by-gram diary.</p>
 <p>Try this format:</p>
@@ -872,7 +872,7 @@
 <p><strong><a href="/baby-weaning-tracker.html">Keep weaning plans and real food history together with OBubba →</a></strong> — plan stage-aware ideas, remember allergens and reactions, and keep solids beside sleep, milk, nappies and growth.</p>
 <h2>Frequently asked questions</h2>
 <h3>Does ticking a meal as tried add it to today’s timeline?</h3>
-<p>No. In the current Flutter build it changes only the saved weekly plan item. Use <strong>Log a food</strong> to create a dated solids entry.</p>
+<p>No. In the current build it changes only the saved weekly plan item. Use <strong>Log a food</strong> to create a dated solids entry.</p>
 <h3>Does the tried tick update the allergen journey?</h3>
 <p>No. Despite the current nearby copy, the allergen journey reads actual solids logs plus manual introduced-allergen ticks. It does not read the weekly plan’s tried state.</p>
 <h3>Will a tried meal change future recipe suggestions?</h3>

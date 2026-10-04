@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="apple-itunes-app" content="app-id=6760968757"/>
   <title>Why Does OBubba Say ‘Next Sleep Is Getting Overdue’?</title>
-  <meta name="description" content="The exact Flutter rules behind OBubba’s live overdue-sleep card, its 45-minute grace period, what it reads, what it misses, and how to respond without forcing a nap."/>
+  <meta name="description" content="The exact rules behind OBubba’s live overdue-sleep card, its 45-minute grace period, what it reads, what it misses, and how to respond without forcing a nap."/>
   <meta name="robots" content="index, follow, max-image-preview:large"/>
   <link rel="canonical" href="https://obubba.com/blog/why-obubba-says-next-sleep-getting-overdue.html"/>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
@@ -19,13 +19,13 @@
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://obubba.com/blog/why-obubba-says-next-sleep-getting-overdue.html"/>
   <meta property="og:title" content="Why Does OBubba Say ‘Next Sleep Is Getting Overdue’?"/>
-  <meta property="og:description" content="The exact Flutter rules behind OBubba’s live overdue-sleep card, its 45-minute grace period, what it reads, what it misses, and how to respond without forcing a nap."/>
+  <meta property="og:description" content="The exact rules behind OBubba’s live overdue-sleep card, its 45-minute grace period, what it reads, what it misses, and how to respond without forcing a nap."/>
   <meta property="og:image" content="https://obubba.com/obubba-next-sleep-overdue-hero.jpg"/>
   <meta property="og:site_name" content="OBubba"/>
   <meta property="og:locale" content="en_GB"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Why Does OBubba Say ‘Next Sleep Is Getting Overdue’?"/>
-  <meta name="twitter:description" content="The exact Flutter rules behind OBubba’s live overdue-sleep card, its 45-minute grace period, what it reads, what it misses, and how to respond without forcing a nap."/>
+  <meta name="twitter:description" content="The exact rules behind OBubba’s live overdue-sleep card, its 45-minute grace period, what it reads, what it misses, and how to respond without forcing a nap."/>
   <meta name="twitter:image" content="https://obubba.com/obubba-next-sleep-overdue-hero.jpg"/>
   <meta name="theme-color" content="#fffcf9"/>
   <link rel="preload" href="/Parisienne-Regular.ttf" as="font" type="font/truetype" crossorigin/>
@@ -744,7 +744,7 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Why Does OBubba Say ‘Next Sleep Is Getting Overdue’?",
-  "description": "The exact Flutter rules behind OBubba’s live overdue-sleep card, its 45-minute grace period, what it reads, what it misses, and how to respond without forcing a nap.",
+  "description": "The exact rules behind OBubba’s live overdue-sleep card, its 45-minute grace period, what it reads, what it misses, and how to respond without forcing a nap.",
   "datePublished": "2026-09-19",
   "dateModified": "2026-09-19",
   "author": {
@@ -770,7 +770,7 @@
   },
   "mainEntityOfPage": "https://obubba.com/blog/why-obubba-says-next-sleep-getting-overdue.html",
   "image": "https://obubba.com/obubba-next-sleep-overdue-hero.jpg",
-  "keywords": "OBubba next sleep overdue, baby nap overdue, baby awake too long, wake window app, baby overtired signs, baby refusing nap, when should baby nap, live baby sleep guidance, personalised nap tracker, baby nap prediction app, corrected age wake windows, OBubba Flutter sleep"
+  "keywords": "OBubba next sleep overdue, baby nap overdue, baby awake too long, wake window app, baby overtired signs, baby refusing nap, when should baby nap, live baby sleep guidance, personalised nap tracker, baby nap prediction app, corrected age wake windows, OBubba sleep"
 }
 </script>
 </head>
@@ -796,7 +796,7 @@
           <span class="read-time">12 min read</span>
         </div>
         <h1>Why Does OBubba Say ‘Next Sleep Is Getting Overdue’?</h1>
-        <p>The exact Flutter rules behind OBubba’s live overdue-sleep card, its 45-minute grace period, what it reads, what it misses, and how to respond without forcing a nap.</p>
+        <p>The exact rules behind OBubba’s live overdue-sleep card, its 45-minute grace period, what it reads, what it misses, and how to respond without forcing a nap.</p>
         <div class="tags"><span class="tag">OBubba next sleep overdue</span><span class="tag">baby nap overdue</span><span class="tag">baby awake too long</span><span class="tag">wake window app</span><span class="tag">baby overtired signs</span></div>
       </div>
     </header>
@@ -805,15 +805,15 @@
 <p><strong>“Next sleep is getting overdue.”</strong></p>
 <p>Has the app detected overtiredness? Does “overdue” mean the baby must sleep immediately? Is the card using the same personalised calculation as the next-nap clock?</p>
 <p>Not exactly.</p>
-<p>We traced the current Flutter live interpreter, its day-state caller, wake-window table, sleep-anchor helpers and automated tests. The card is a time-based prompt with a generous grace period. It does not watch the baby, diagnose a sleep problem or prove that staying awake caused the next difficult night.</p>
+<p>We traced the current live interpreter, its day-state caller, wake-window table, sleep-anchor helpers and automated tests. The card is a time-based prompt with a generous grace period. It does not watch the baby, diagnose a sleep problem or prove that staying awake caused the next difficult night.</p>
 <p>The honest translation is:</p>
 <p>&gt; “Since the latest completed nap or sleep anchor, the logged awake time has run more than 45 minutes beyond the current upper wake-window range. It is still before 6pm and the app has not seen sleep or bedtime. Consider a calm sleep opportunity, while following your baby’s cues and needs.”</p>
 <h2>The short answer</h2>
-<p>| Question | Current Flutter behaviour | |---|---| | What starts the timer? | Usually the end of the latest completed nap; otherwise a completed sleep or morning wake can provide the awake anchor | | Which range does it use? | A corrected-age wake-window range, with any parent-selected wake-window bias applied | | When does this exact card appear? | After at least one completed nap, when awake time is strictly more than the upper range plus 45 minutes and the clock is before 6pm | | When is it high priority? | When awake time is more than the upper range plus 75 minutes | | Does it read tired cues? | No | | Does it use the full personalised nap predictor? | No; that is a separate, richer pathway | | Does it account for illness, nursery, travel or feeding in this function? | No | | When does it stay quiet? | When baby is asleep, bedtime is logged, no anchor exists, a night wake is actively paused or the parent explicitly selected a napless day | | Is “overdue” an instruction to force sleep? | No |</p>
-<figure><img src="/obubba-next-sleep-overdue-detector.svg" alt="The current Flutter logic waits until a completed nap is more than 45 minutes beyond the upper wake-window range before showing Next sleep is getting overdue." loading="lazy"/><figcaption>The exact state, timing and urgency gates behind OBubba’s live overdue-sleep card.</figcaption></figure>
+<p>| Question | Current behaviour | |---|---| | What starts the timer? | Usually the end of the latest completed nap; otherwise a completed sleep or morning wake can provide the awake anchor | | Which range does it use? | A corrected-age wake-window range, with any parent-selected wake-window bias applied | | When does this exact card appear? | After at least one completed nap, when awake time is strictly more than the upper range plus 45 minutes and the clock is before 6pm | | When is it high priority? | When awake time is more than the upper range plus 75 minutes | | Does it read tired cues? | No | | Does it use the full personalised nap predictor? | No; that is a separate, richer pathway | | Does it account for illness, nursery, travel or feeding in this function? | No | | When does it stay quiet? | When baby is asleep, bedtime is logged, no anchor exists, a night wake is actively paused or the parent explicitly selected a napless day | | Is “overdue” an instruction to force sleep? | No |</p>
+<figure><img src="/obubba-next-sleep-overdue-detector.svg" alt="The current logic waits until a completed nap is more than 45 minutes beyond the upper wake-window range before showing Next sleep is getting overdue." loading="lazy"/><figcaption>The exact state, timing and urgency gates behind OBubba’s live overdue-sleep card.</figcaption></figure>
 <h2>“Overdue” starts after a grace period</h2>
 <p>The card does not appear as soon as the upper wake-window value passes.</p>
-<p>For the after-nap branch, Flutter requires:</p>
+<p>For the after-nap branch, requires:</p>
 <ol><li>at least one completed nap today;</li><li>a known end time for the last completed nap;</li><li>a current awake duration greater than the range maximum plus <strong>45 minutes</strong>;</li><li>a current time before <strong>6pm</strong>;</li><li>no active sleep and no bedtime already logged.</li></ol>
 <p>The comparison is strict. If the upper range is 200 minutes, 245 minutes awake is still quiet. The card becomes eligible at 246 minutes.</p>
 <p>Its urgency then follows the same range:</p>
@@ -839,12 +839,12 @@
 <ul><li>yawning, gaze aversion, rubbing eyes or escalating fussiness;</li><li>hunger or the time of the last milk feed;</li><li>fever, pain, teething or illness;</li><li>whether the family is travelling or at nursery;</li><li>light, noise, motion or the sleep location;</li><li>whether this particular baby usually thrives on a longer final window;</li><li>whether the parent has already tried and abandoned the nap.</li></ul>
 <p>It knows a corrected age, a range, the current time and a few logged state flags.</p>
 <p>The <a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS says babies have their own patterns of waking and sleeping</a> and that those patterns change as they grow. A timer can help a tired parent notice elapsed time; it cannot replace the child in front of them.</p>
-<p>The NHS’s <a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/bonding-with-your-baby/understanding-your-baby/" target="_blank" rel="noopener noreferrer">Understanding your baby</a> guidance describes cues such as yawning, turning away and closing the eyes as signs a baby may need a break, feed or sleep. Those observations are information the current Flutter function does not have.</p>
+<p>The NHS’s <a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/bonding-with-your-baby/understanding-your-baby/" target="_blank" rel="noopener noreferrer">Understanding your baby</a> guidance describes cues such as yawning, turning away and closing the eyes as signs a baby may need a break, feed or sleep. Those observations are information the current function does not have.</p>
 <h2>Why the app sometimes says nothing</h2>
 <p>Silence is deliberate in several states.</p>
 <h3>Baby is asleep</h3>
 <p>An open nap or sleep timer, or a sleep interval that spans the current time, suppresses the card. OBubba does not warn that a sleeping baby is overdue for sleep.</p>
-<figure><img src="/obubba-app-baby-sleep-clock-screenshot.jpg" alt="The genuine OBubba Flutter Track screen shows an active nap timer and predicted wake time. While the app considers baby asleep, the overdue-awake card is deliberately suppressed." loading="lazy"/><figcaption>A real current Flutter Track screen showing the live sleep state that keeps awake-window warnings quiet.</figcaption></figure>
+<figure><img src="/obubba-app-baby-sleep-clock-screenshot.jpg" alt="The genuine OBubba Track screen shows an active nap timer and predicted wake time. While the app considers baby asleep, the overdue-awake card is deliberately suppressed." loading="lazy"/><figcaption>A real current Track screen showing the live sleep state that keeps awake-window warnings quiet.</figcaption></figure>
 <h3>Bedtime is logged</h3>
 <p>Any sleep entry at or after 5pm is treated as bedtime for this gate. Once that exists, the live daytime interpreter returns nothing even before 6pm.</p>
 <h3>A night wake is actively paused</h3>

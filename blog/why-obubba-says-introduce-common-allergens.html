@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="apple-itunes-app" content="app-id=6760968757"/>
   <title>Why Does OBubba Say ‘Introduce the Common Allergens’?</title>
-  <meta name="description" content="See the exact Flutter rule behind OBubba’s common-allergen reminder, which six foods it checks, what it remembers, and how to act on it safely."/>
+  <meta name="description" content="See the exact rule behind OBubba’s common-allergen reminder, which six foods it checks, what it remembers, and how to act on it safely."/>
   <meta name="robots" content="index, follow, max-image-preview:large"/>
   <link rel="canonical" href="https://obubba.com/blog/why-obubba-says-introduce-common-allergens.html"/>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
@@ -19,13 +19,13 @@
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://obubba.com/blog/why-obubba-says-introduce-common-allergens.html"/>
   <meta property="og:title" content="Why Does OBubba Say ‘Introduce the Common Allergens’?"/>
-  <meta property="og:description" content="See the exact Flutter rule behind OBubba’s common-allergen reminder, which six foods it checks, what it remembers, and how to act on it safely."/>
+  <meta property="og:description" content="See the exact rule behind OBubba’s common-allergen reminder, which six foods it checks, what it remembers, and how to act on it safely."/>
   <meta property="og:image" content="https://obubba.com/obubba-introduce-common-allergens.jpg"/>
   <meta property="og:site_name" content="OBubba"/>
   <meta property="og:locale" content="en_GB"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Why Does OBubba Say ‘Introduce the Common Allergens’?"/>
-  <meta name="twitter:description" content="See the exact Flutter rule behind OBubba’s common-allergen reminder, which six foods it checks, what it remembers, and how to act on it safely."/>
+  <meta name="twitter:description" content="See the exact rule behind OBubba’s common-allergen reminder, which six foods it checks, what it remembers, and how to act on it safely."/>
   <meta name="twitter:image" content="https://obubba.com/obubba-introduce-common-allergens.jpg"/>
   <meta name="theme-color" content="#fffcf9"/>
   <link rel="preload" href="/Parisienne-Regular.ttf" as="font" type="font/truetype" crossorigin/>
@@ -744,7 +744,7 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Why Does OBubba Say ‘Introduce the Common Allergens’?",
-  "description": "See the exact Flutter rule behind OBubba’s common-allergen reminder, which six foods it checks, what it remembers, and how to act on it safely.",
+  "description": "See the exact rule behind OBubba’s common-allergen reminder, which six foods it checks, what it remembers, and how to act on it safely.",
   "datePublished": "2026-09-19",
   "dateModified": "2026-09-19",
   "author": {
@@ -796,24 +796,24 @@
           <span class="read-time">10 min read</span>
         </div>
         <h1>Why Does OBubba Say ‘Introduce the Common Allergens’?</h1>
-        <p>See the exact Flutter rule behind OBubba’s common-allergen reminder, which six foods it checks, what it remembers, and how to act on it safely.</p>
+        <p>See the exact rule behind OBubba’s common-allergen reminder, which six foods it checks, what it remembers, and how to act on it safely.</p>
         <div class="tags"><span class="tag">introduce common allergens OBubba</span><span class="tag">baby allergen tracker</span><span class="tag">introducing allergens baby UK</span><span class="tag">egg peanut baby weaning</span><span class="tag">baby food allergy app</span></div>
       </div>
     </header>
     <article class="section rich-text article">
-      <p>You have logged beef stew, chicken and rice, and lentil dahl. Your baby is past seven months. Then OBubba’s Flutter brain adds a gentle card:</p>
+      <p>You have logged beef stew, chicken and rice, and lentil dahl. Your baby is past seven months. Then OBubba’s brain adds a gentle card:</p>
 <p>&gt; <strong>Introduce the common allergens</strong></p>
 <p>It might list <strong>Egg, Peanut, Dairy, Gluten</strong> underneath.</p>
 <p>That is not a diagnosis, a deadline or proof that those foods are safe for your baby. It is a low-urgency memory prompt generated from the solids history the app can actually see.</p>
 <p>The exact rule is more interesting than the title. OBubba waits until its weaning age reaches 30 weeks, checks a six-allergen priority subset against all-time logged exposure, and shows the card only when at least four of those six still appear missing. It also stays quiet if a more immediate refusal or iron-rich-food insight wins first.</p>
 <p>Here is what the product is really saying—and how to use that information safely.</p>
-<h2>The exact Flutter rule</h2>
+<h2>The exact rule</h2>
 <p>The current `diagnoseWeaningPattern` function can return this card only when these conditions line up:</p>
-<p>| Product check | What Flutter requires | |---|---| | Weaning age | At least <strong>30 weeks</strong> | | Recent solids | At least one usable solids log in the roughly three-week window | | Priority set | At least <strong>4 of 6</strong> priority allergens still absent from all-time logged history | | Higher-priority weaning read | No current clustered refusal insight and no qualifying iron-gap insight |</p>
+<p>| Product check | What requires | |---|---| | Weaning age | At least <strong>30 weeks</strong> | | Recent solids | At least one usable solids log in the roughly three-week window | | Priority set | At least <strong>4 of 6</strong> priority allergens still absent from all-time logged history | | Higher-priority weaning read | No current clustered refusal insight and no qualifying iron-gap insight |</p>
 <p>The six labels, in their fixed detector order, are:</p>
 <ol><li>egg;</li><li>peanut;</li><li>dairy;</li><li>gluten;</li><li>fish; and</li><li>sesame.</li></ol>
 <p>If four or more are missing, the body displays the <strong>first four missing labels</strong> in that order. It does not list every possible allergenic food, and it does not rank a child’s personal medical risk.</p>
-<figure><img src="/obubba-introduce-common-allergens-logic.svg" alt="The exact Flutter path behind OBubba’s Introduce the common allergens card." loading="lazy"/><figcaption>The low-urgency card needs a weaning age of at least 30 weeks, a recent solids record and four or more missing labels from OBubba’s six-item priority subset. A current refusal streak or qualifying iron gap takes the single weaning-insight slot first. The result is a memory nudge, not medical clearance or a complete allergen checklist.</figcaption></figure>
+<figure><img src="/obubba-introduce-common-allergens-logic.svg" alt="The exact path behind OBubba’s Introduce the common allergens card." loading="lazy"/><figcaption>The low-urgency card needs a weaning age of at least 30 weeks, a recent solids record and four or more missing labels from OBubba’s six-item priority subset. A current refusal streak or qualifying iron gap takes the single weaning-insight slot first. The result is a memory nudge, not medical clearance or a complete allergen checklist.</figcaption></figure>
 <h2>Why the card starts at 30 weeks, not exactly six months</h2>
 <p>NHS guidance says solid foods usually begin from around six months. Foods that can trigger allergic reactions can be introduced from around that point, one at a time and in small amounts, so a reaction is easier to spot (<a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s first solid foods</a>).</p>
 <p>OBubba’s reminder does not appear at the first possible moment. Its age gate is 30 weeks—roughly seven months—so it behaves more like a catch-up prompt after weaning has begun.</p>
@@ -821,15 +821,15 @@
 <p>An age threshold is therefore a software condition, not an instruction to feed a particular food today.</p>
 <h2>What “missing” means to OBubba</h2>
 <p>The card does not ask the parent to complete a questionnaire. It builds its answer from logged solids.</p>
-<p>For each solids entry, Flutter combines:</p>
+<p>For each solids entry, combines:</p>
 <ul><li>allergens automatically recognised from the food name;</li><li>allergen labels stored directly on the entry; and</li><li>the lifetime summary retained when older daily logs leave the app’s fast working window.</li></ul>
 <p>That last layer matters. If egg was logged months ago, archiving older day data should not make egg look new again. OBubba unions its compact lifetime record with current day entries so an old introduction is not forgotten simply because it is no longer in the recent timeline.</p>
 <p>The food detector recognises ingredients such as egg, peanut, milk, wheat, toast, salmon and tahini, plus familiar dishes such as omelette, hummus, fish pie and pancakes. It canonicalises everyday wording into app labels: milk becomes `dairy`, wheat becomes `gluten`, and eggs becomes `egg`.</p>
-<p>It also guards against several dangerous little text mistakes. “Oat milk” should not create a dairy exposure, “peanut butter” should not create dairy because it contains the word butter, and “vegan pancakes” should not silently mark egg as tried. Those boundaries are covered by dedicated Flutter tests.</p>
+<p>It also guards against several dangerous little text mistakes. “Oat milk” should not create a dairy exposure, “peanut butter” should not create dairy because it contains the word butter, and “vegan pancakes” should not silently mark egg as tried. Those boundaries are covered by dedicated tests.</p>
 <p>But free text is never omniscient. A brand name or vague entry such as “pouch” may not reveal the ingredients. Check the pack and correct the allergen labels in the log when necessary. Our guide to <a href="/blog/why-obubba-did-not-detect-baby-food-allergen">what to do when OBubba does not detect a food allergen</a> explains that path.</p>
 <h2>Why it checks six when the journey shows 14</h2>
 <p>Open OBubba’s weaning journey and you will see the app’s friendly versions of the 14 UK-regulated allergens: dairy, gluten, egg, peanut, tree nuts, fish, crustaceans, molluscs, sesame, soya, mustard, celery, sulphites and lupin.</p>
-<figure><img src="/obubba-allergen-journey-app.jpg" alt="A genuine OBubba Flutter capture of the allergen journey, with 14 tracked labels and a next-up egg suggestion." loading="lazy"/><figcaption>This genuine Flutter capture shows the broader 14-label allergen journey. The six-item reminder engine is deliberately narrower, so the card should never be read as a complete medical or food-labelling checklist.</figcaption></figure>
+<figure><img src="/obubba-allergen-journey-app.jpg" alt="A genuine OBubba capture of the allergen journey, with 14 tracked labels and a next-up egg suggestion." loading="lazy"/><figcaption>This genuine capture shows the broader 14-label allergen journey. The six-item reminder engine is deliberately narrower, so the card should never be read as a complete medical or food-labelling checklist.</figcaption></figure>
 <p>The reminder engine uses only six of those. It leaves tree nuts, soya, crustaceans, molluscs, mustard, celery, sulphites and lupin out of this particular trigger.</p>
 <p>That is a product simplification. It makes a small card easier to earn and easier to read; it does <strong>not</strong> redefine the UK allergen list. The NHS parent-facing weaning guidance names cows’ milk, eggs, gluten-containing foods, nuts and peanuts, seeds, soya, fish and shellfish among foods that can trigger reactions (<a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-allergies/" target="_blank" rel="noopener noreferrer">NHS: Baby food allergies</a>).</p>
 <p>The labels are simplified too. OBubba’s `dairy` generally represents cows’ milk foods, while `gluten` groups foods containing gluten. Parents still need ingredient labels and clinical advice where relevant; the app’s category name is not a substitute for either.</p>
@@ -838,7 +838,7 @@
 <p>The brain reminder, however, reads the synced child’s all-time solids history. It does not currently receive the journey’s local manual-tick set.</p>
 <p>That means a family can see egg marked <strong>Introduced</strong> in the journey yet still receive a reminder whose missing list includes egg if no egg meal or allergen-tagged entry exists in the synced history.</p>
 <p>The practical fix is simple: log the meal or make sure the allergen is attached to its solids entry. This also gives future pattern tools a real date, food and response instead of a context-free tick.</p>
-<p>This is a genuine boundary in the current Flutter product, and it is worth stating plainly. A tracker earns trust by explaining when two screens use different evidence.</p>
+<p>This is a genuine boundary in the current product, and it is worth stating plainly. A tracker earns trust by explaining when two screens use different evidence.</p>
 <h2>What happens when a reaction was logged</h2>
 <p>A reacted-to allergen is still an allergen the baby was exposed to, so it enters the all-time “tried” set. The common-allergen reminder should therefore stop presenting that label as never introduced.</p>
 <p>Separately, OBubba keeps an all-time reacted-allergen set. In the dedicated weaning screen it hides the normal first-taste tip, shows <strong>Reaction logged</strong>, tells the parent to pause that allergen and check with their doctor before offering it again, and filters it out of generated weaning plans. That safety memory survives when an old reaction day is archived.</p>
@@ -852,7 +852,7 @@
 <p>So a 32-week-old baby can meet the allergen rule without seeing the card today. If the last three meals were recently refused, OBubba responds to that first. If at least three recent meals contain no recognised iron-rich food, the medium-urgency iron nudge outranks the low-urgency allergen prompt.</p>
 <p>This is not the app deciding iron “matters more” than allergy prevention in medicine. It is a display policy that limits one engine call to one weaning card. After the higher-priority pattern clears, the allergen card can become eligible again.</p>
 <h2>What the card’s wording can and cannot promise</h2>
-<p>The Flutter card says introducing allergens from around six months and “continuing weekly lowers the chance of developing an allergy”. The weaning journey elsewhere suggests offering a tolerated allergen about twice a week.</p>
+<p>The card says introducing allergens from around six months and “continuing weekly lowers the chance of developing an allergy”. The weaning journey elsewhere suggests offering a tolerated allergen about twice a week.</p>
 <p>Parents should read that as short product copy, not a personalised prevention guarantee or prescribed dose.</p>
 <p>The NHS wording is more careful: once an allergenic food has been introduced and tolerated, keep offering it as part of the baby’s usual diet to minimise the risk of allergy. It also notes evidence that delaying peanut and hens’ egg beyond 6 to 12 months may increase the risk of allergy (<a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-allergies/" target="_blank" rel="noopener noreferrer">NHS: Baby food allergies</a>).</p>
 <p>How much, how often and in what form can depend on the food, the baby and professional advice. The app does not calculate a clinically validated dose and does not know every risk factor.</p>

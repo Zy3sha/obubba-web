@@ -804,7 +804,7 @@
       <p>One pregnancy app says 12 weeks. Your maternity letter says 11 weeks and 5 days. A friend asks whether that means you are “in week 12” or “12 weeks pregnant”, and suddenly a small calendar question feels like an exam.</p>
 <p>OBubba’s answer is deliberately simple: it uses the <strong>estimated due date saved on the bump profile</strong> to calculate completed gestational weeks, then opens the matching weekly story.</p>
 <p>That story can make the wait feel warmer. It cannot date a pregnancy, measure a baby, replace a scan or predict what your baby will look like.</p>
-<p>We traced the current Flutter implementation—from the due-date calculation to all 37 week entries and the six storybook baby choices—to explain exactly what the screen knows, what it estimates and why your clinical dates always win.</p>
+<p>We traced the current implementation—from the due-date calculation to all 37 week entries and the six storybook baby choices—to explain exactly what the screen knows, what it estimates and why your clinical dates always win.</p>
 <h2>The short answer</h2>
 <p>OBubba calculates the pregnancy week like this:</p>
 <ol><li>It reads the estimated due date entered when the bump profile was created.</li><li>It treats that due date as the 40-week, 280-day point.</li><li>It counts calendar days between today and that date.</li><li>It converts elapsed days into <strong>completed weeks</strong>.</li><li>It opens one of 37 pregnancy stories covering weeks 4 through 40.</li></ol>
@@ -814,7 +814,7 @@
 <h2>Why pregnancy weeks sound one week apart</h2>
 <p>Gestational age is usually spoken in <strong>completed weeks plus days</strong>. If your maternity notes say 11+5, that means 11 completed weeks and 5 days—not 12 completed weeks.</p>
 <p>In ordinary conversation, someone may call that “the twelfth week” because you are five days into the next seven-day block. Both phrases can describe the same point, but they answer slightly different questions.</p>
-<p>OBubba’s Flutter model uses completed weeks. It divides the elapsed days by seven and rounds down. So 11 weeks and 6 days still opens the week 11 story; the week 12 story opens at 12+0.</p>
+<p>OBubba’s model uses completed weeks. It divides the elapsed days by seven and rounds down. So 11 weeks and 6 days still opens the week 11 story; the week 12 story opens at 12+0.</p>
 <p>That is also why a weekly app can appear one number behind an article that uses “in your twelfth week” language. The difference may be wording rather than a changed pregnancy.</p>
 <h2>How OBubba works out the number</h2>
 <p>The app does not attempt to infer conception or read health data. One date drives the pregnancy numbers.</p>
@@ -849,7 +849,7 @@
 <p>The important safeguard is that <strong>selected browsing week</strong> and <strong>true current week</strong> are separate values.</p>
 <p>If you look ahead from week 14 to week 30:</p>
 <ul><li>the journey artwork and story can preview week 30</li><li>the app can offer a route back to this week</li><li>the saved current gestation does not become week 30</li><li>the Keepsakes tab still receives the true week</li><li>looking ahead cannot make late-pregnancy copy appear as current fact elsewhere</li></ul>
-<p>The Flutter screen even rebuilds on a real week rollover, so if a profile moves into a new gestational week while still viewing “today”, the weekly hero can follow it instead of remaining stuck on last week’s illustration.</p>
+<p>The screen even rebuilds on a real week rollover, so if a profile moves into a new gestational week while still viewing “today”, the weekly hero can follow it instead of remaining stuck on last week’s illustration.</p>
 <p>That is thoughtful personalization: freedom to explore without corrupting the source of truth.</p>
 <h2>Why could OBubba differ from my midwife or scan?</h2>
 <h3>The saved due date may be an early estimate</h3>
@@ -882,7 +882,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/pregnancy/week-by-week-guide-to-pregnancy/" target="_blank" rel="noopener noreferrer">NHS: Week-by-week guide to pregnancy</a></li><li><a href="https://www.nhs.uk/pregnancy/finding-out/due-date-calculator/" target="_blank" rel="noopener noreferrer">NHS: Pregnancy due date calculator</a></li><li><a href="https://www.nhs.uk/pregnancy/your-pregnancy-care/ultrasound-scans/" target="_blank" rel="noopener noreferrer">NHS: Ultrasound scans in pregnancy</a></li><li><a href="https://www.nhs.uk/pregnancy/your-pregnancy-care/12-week-scan/" target="_blank" rel="noopener noreferrer">NHS: 12-week dating scan</a></li><li><a href="https://www.nhs.uk/pregnancy/your-pregnancy-care/your-antenatal-care-and-appointments/" target="_blank" rel="noopener noreferrer">NHS: Your antenatal care and appointments</a></li></ul>
 <h2>Quick questions</h2>
 <h3>Does OBubba calculate pregnancy from the last period?</h3>
-<p>Not directly. The current Flutter app calculates backwards from the expected due date stored on the bump profile. That due date may originally have been estimated from the last period or later refined through maternity care.</p>
+<p>Not directly. The current app calculates backwards from the expected due date stored on the bump profile. That due date may originally have been estimated from the last period or later refined through maternity care.</p>
 <h3>Why does the app show 19 weeks when I feel 20 weeks pregnant?</h3>
 <p>OBubba displays completed weeks. At 19 weeks and 6 days, 19 full weeks have passed and you are in the twentieth week. Check whether the other source uses “in week 20” language before assuming the dates conflict.</p>
 <h3>Can the app tell whether my baby is the stated size?</h3>

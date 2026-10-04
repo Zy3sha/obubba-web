@@ -804,13 +804,13 @@
       <p>It is 4:10pm. Two short naps have added up to less than an hour, but your baby’s normal bedtime still feels too far away.</p>
 <p>OBubba says: <strong>“A short bridge nap could save tonight.”</strong></p>
 <p>Does that mean forcing another full nap? Will a late catnap ruin bedtime? And how does the app know that 20–30 minutes is better than simply starting the night early?</p>
-<p>We traced the current Flutter live insight, bedtime predictor, day-sleep totals and conflict reconciler for this guide. The short answer is: <strong>a bridge nap is a small amount of sleep intended to soften an unusually long final awake stretch—not a replacement for the missed sleep and not a promise of a better night.</strong></p>
-<figure><img src="/obubba-how-bridge-nap-works.svg" alt="The two separate Flutter routes that can lead OBubba to mention a bridge nap." loading="lazy"/><figcaption>The live card uses today’s deficit and awake time; the bedtime planner separately checks whether the projected final wake window would become too long.</figcaption></figure>
+<p>We traced the current live insight, bedtime predictor, day-sleep totals and conflict reconciler for this guide. The short answer is: <strong>a bridge nap is a small amount of sleep intended to soften an unusually long final awake stretch—not a replacement for the missed sleep and not a promise of a better night.</strong></p>
+<figure><img src="/obubba-how-bridge-nap-works.svg" alt="The two separate routes that can lead OBubba to mention a bridge nap." loading="lazy"/><figcaption>The live card uses today’s deficit and awake time; the bedtime planner separately checks whether the projected final wake window would become too long.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current live card can appear only when every one of these gates passes:</p>
-<p>| Live-card check | Current Flutter rule | Why it matters | |---|---:|---| | Time of day | <strong>2:00pm–5:30pm</strong> | Keeps the prompt in the afternoon rescue window | | Nap history today | At least <strong>1 completed nap</strong> | No first nap yet is a different problem, not a bridge | | Current sleep state | <strong>No open nap timer</strong> | Avoids duplicating an active nap timer | | Day-sleep deficit | At least <strong>45 minutes</strong> below the corrected-age floor | Avoids reacting to a tiny shortfall | | Time awake | At least the corrected-age <strong>minimum wake window</strong> since the last completed nap | Avoids suggesting sleep before the baby is plausibly tired |</p>
+<p>| Live-card check | Current rule | Why it matters | |---|---:|---| | Time of day | <strong>2:00pm–5:30pm</strong> | Keeps the prompt in the afternoon rescue window | | Nap history today | At least <strong>1 completed nap</strong> | No first nap yet is a different problem, not a bridge | | Current sleep state | <strong>No open nap timer</strong> | Avoids duplicating an active nap timer | | Day-sleep deficit | At least <strong>45 minutes</strong> below the corrected-age floor | Avoids reacting to a tiny shortfall | | Time awake | At least the corrected-age <strong>minimum wake window</strong> since the last completed nap | Avoids suggesting sleep before the baby is plausibly tired |</p>
 <p>When those gates pass, the body says how far below the age-profile floor today’s completed naps sit, rounded to one decimal hour, and suggests a <strong>brief 20–30 minute nap</strong>.</p>
-<p>This insight has medium urgency and a <strong>protect day sleep</strong> direction. When Flutter reconciles competing advice, that live rescue signal can remove a lower-urgency historical card telling the parent to trim day sleep. The app should not say “add a nap now” and “cap naps” at the same time.</p>
+<p>This insight has medium urgency and a <strong>protect day sleep</strong> direction. When reconciles competing advice, that live rescue signal can remove a lower-urgency historical card telling the parent to trim day sleep. The app should not say “add a nap now” and “cap naps” at the same time.</p>
 <h2>A worked example</h2>
 <p>Imagine an eight-month-old whose corrected-age profile has a lower day-sleep reference of <strong>2 hours</strong>.</p>
 <p>Today’s completed naps are:</p>
@@ -838,7 +838,7 @@
 <ul><li>How close is your baby’s realistic bedtime?</li><li>Are they showing sleepy cues?</li><li>Would a nap begin promptly, or turn into a long struggle?</li><li>Has a late nap recently made bedtime much harder?</li><li>Is an earlier bedtime practical and appropriate tonight?</li></ul>
 <p>The app’s live gate narrows the question. The family’s actual evening answers it.</p>
 <h2>The bedtime planner uses a different bridge calculation</h2>
-<p>Elsewhere, Flutter’s bedtime predictor can also mark a bridge as needed. That branch <strong>does</strong> calculate a bedtime relationship.</p>
+<p>Elsewhere, the app’s bedtime predictor can also mark a bridge as needed. That branch <strong>does</strong> calculate a bedtime relationship.</p>
 <p>After the expected naps are complete, it compares:</p>
 <ol><li>the earliest age-appropriate bedtime boundary</li><li>the last nap end plus the contextual maximum final wake window</li></ol>
 <p>If the earliest allowable bedtime would still come after that maximum awake stretch, and no bridge is already scheduled, the planner can insert a short bridge before recomputing bedtime.</p>
@@ -846,9 +846,9 @@
 <p>| Corrected age | Planner’s bridge duration | |---|---:| | Under 22 weeks | <strong>25 minutes</strong> | | 22–38 weeks | <strong>20 minutes</strong> | | 39 weeks and older | <strong>15 minutes</strong> |</p>
 <p>After the bridge, the planner uses a shorter settling window—at least 30 minutes, or about 65% of the contextual minimum wake window—then checks that the new bedtime is coherent.</p>
 <p>These numbers belong to OBubba’s planning model. They are not universal clinical rules and do not mean every baby should be woken at exactly 15, 20 or 25 minutes.</p>
-<h2>What the real Flutter plan shows</h2>
+<h2>What the real plan shows</h2>
 <p>OBubba’s current <strong>Tomorrow’s plan</strong> lays wake time, naps and bedtime on one connected day and labels each item <strong>predicted</strong>. The plan explicitly says it updates as the day unfolds and offers an off-day adjustment for teething, illness or a day that simply is not normal.</p>
-<figure><img src="/obubba-tomorrows-plan-nap-bedtime-prediction.jpg" alt="The genuine OBubba Flutter Tomorrow’s plan showing predicted wake, nap and bedtime blocks that update with the child’s rhythm." loading="lazy"/><figcaption>A genuine current Flutter plan: predictions are presented as a gentle projection, not fixed appointments, and an off-day control lets families adjust unusual days.</figcaption></figure>
+<figure><img src="/obubba-tomorrows-plan-nap-bedtime-prediction.jpg" alt="The genuine OBubba Tomorrow’s plan showing predicted wake, nap and bedtime blocks that update with the child’s rhythm." loading="lazy"/><figcaption>A genuine current plan: predictions are presented as a gentle projection, not fixed appointments, and an off-day control lets families adjust unusual days.</figcaption></figure>
 <p>A bridge is not visible in this example because this day’s two naps already connect coherently to bedtime. That absence is useful proof: OBubba does not add a late catnap to every plan. It appears only when the day or final wake-window maths creates a gap that needs crossing.</p>
 <h2>Bridge nap or earlier bedtime?</h2>
 <p>Use the smallest intervention that fits the real evening.</p>

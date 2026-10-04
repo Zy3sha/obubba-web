@@ -803,7 +803,7 @@
     <article class="section rich-text article">
       <p>You started OBubba’s night timer at 7:30pm. It is now midnight. The ordinary clock says four and a half hours have passed—but OBubba says your baby has been asleep for four hours.</p>
 <p>That can be correct.</p>
-<p><strong>OBubba’s current Flutter app uses “asleep for” to mean elapsed time since the logged sleep start, minus night-wake pauses whose awake time is known.</strong> Bedtime remains 7:30pm. A recorded 30-minute waking stays inside the same physical night, but it is not counted as sleep.</p>
+<p><strong>OBubba’s current app uses “asleep for” to mean elapsed time since the logged sleep start, minus night-wake pauses whose awake time is known.</strong> Bedtime remains 7:30pm. A recorded 30-minute waking stays inside the same physical night, but it is not counted as sleep.</p>
 <p>The two numbers answer different questions:</p>
 <ul><li><strong>Time since bedtime:</strong> how long the overnight period has been open.</li><li><strong>Asleep for:</strong> how much of that period OBubba currently has evidence was sleep.</li></ul>
 <p>If the figures differ by the length of a wake you paused and resumed, the timer is doing useful subtraction—not losing part of the night.</p>
@@ -817,13 +817,13 @@
 <h2>Why the timer changed now</h2>
 <p>The live clock previously counted plain wall time from bedtime even after a parent had logged a settled night wake. Final sleep statistics could subtract the wake correctly, while the big “asleep for” number kept advancing as though baby had slept through it.</p>
 <p>That created an obvious trust problem. A parent could pause for 30 minutes, resume, then see the live timer disagree with the night total later.</p>
-<p>The current Flutter implementation now gives the clock one adjusted running anchor:</p>
+<p>The current implementation now gives the clock one adjusted running anchor:</p>
 <ol><li>find the original sleep start;</li><li>total the recorded night-wake pauses;</li><li>move the internal count-up anchor later by that total;</li><li>calculate the displayed elapsed time from the adjusted anchor.</li></ol>
 <p>The original bedtime entry is not rewritten. This is a display calculation, so OBubba can preserve <strong>since 7:30pm</strong> while showing <strong>4h asleep</strong>.</p>
 <p>The centre clock and the strip beneath it receive the same adjusted start. They should therefore stay in lockstep instead of performing two subtly different calculations.</p>
 <h2>What happens when you tap Pause</h2>
 <p>During a live night sleep, the centre control says <strong>pause</strong>. Tapping it begins a night-wake record marked as still being settled.</p>
-<figure><img src="/obubba-night-wake-pause-app.jpg" alt="The genuine OBubba Flutter night clock, showing a running night sleep, the “Oliver is asleep” elapsed counter and the centre Pause control." loading="lazy"/><figcaption>The real Flutter Track screen using fictional review data. Pause begins a night-wake interval without ending the full bedtime-to-morning record.</figcaption></figure>
+<figure><img src="/obubba-night-wake-pause-app.jpg" alt="The genuine OBubba night clock, showing a running night sleep, the “Oliver is asleep” elapsed counter and the centre Pause control." loading="lazy"/><figcaption>The real Track screen using fictional review data. Pause begins a night-wake interval without ending the full bedtime-to-morning record.</figcaption></figure>
 <p>While that pause is open:</p>
 <ul><li>the bedtime sleep remains open;</li><li>the clock changes from an asleep state to a woke/settling state;</li><li>the elapsed-sleep display stops growing;</li><li>the awake interval grows minute by minute;</li><li>the next action becomes Resume rather than starting a second night.</li></ul>
 <p>The wake does not yet have a stored final duration because baby is still awake. The helper therefore calculates the live gap from the pause time to now. If the pause began at 2:00am, it contributes 10 minutes at 2:10 and 60 minutes at 3:00. That moving subtraction is what holds the sleep total steady.</p>
@@ -898,7 +898,7 @@
 <h3>Does Pause end the night sleep?</h3>
 <p>No. It opens a night-wake interval inside the same bedtime record. Resume returns to that same night; Wake for the day closes it.</p>
 <h3>Does the timer keep counting while I am settling my baby?</h3>
-<p>The current Flutter logic counts the open pause’s live duration and stops adding it to sleep. The screen changes to a woke/settling state until Resume.</p>
+<p>The current logic counts the open pause’s live duration and stops adding it to sleep. The screen changes to a woke/settling state until Resume.</p>
 <h3>Why was my two-hour wake not fully deducted?</h3>
 <p>The current resume flow refuses to store a pause longer than 90 minutes as confidently measured awake time, because a forgotten Resume can look identical to a genuine long wake. Correct the record with the times you know.</p>
 <h3>Are night feeds automatically deducted from sleep?</h3>

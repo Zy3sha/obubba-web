@@ -857,8 +857,8 @@
 <p>The total becomes useful when it answers a decision.</p>
 <p>| Question | Better signal than one raw total | |---|---| | Is the night becoming more consolidated? | longest stretch and total awake time | | Is baby sleeping less overall? | night sleep plus naps across several days | | Are wakes shorter even if the count is unchanged? | wake duration by night | | Did bedtime move but sleep stay stable? | actual sleep onset and final wake | | Is the family getting more rest? | parent interventions and parent sleep, not baby total alone |</p>
 <p>Compare like with like. A night with complete bedtime, wake and morning anchors should not be compared as equal-quality data with a night where somebody forgot to stop the timer.</p>
-<h2>What the actual OBubba Flutter app calculates</h2>
-<p>The current Flutter app deliberately reports <strong>actual night sleep rather than raw bedtime-to-morning span</strong> when the evidence is available.</p>
+<h2>What the actual OBubba app calculates</h2>
+<p>The current app deliberately reports <strong>actual night sleep rather than raw bedtime-to-morning span</strong> when the evidence is available.</p>
 <h3>It reconstructs one physical night across midnight</h3>
 <p>Bedtime may be stored on Monday and a 2am wake on Tuesday. OBubba&#39;s `nightFor` logic brings the relevant entries together around the morning they belong to. Midnight does not split one real night into unrelated calendar fragments.</p>
 <h3>It merges overlapping sleep arcs</h3>
@@ -870,13 +870,13 @@
 <p>A wake without a duration remains part of the wake count, but the sleep calculation does not invent 5, 20 or 60 minutes to subtract. That means the result may be a slight overestimate, but it is traceable to known data rather than hidden assumptions.</p>
 <h3>A live Pause freezes the current sleep total</h3>
 <p>During a running night, <strong>Pause</strong> marks that baby is awake without ending the whole night. The live total stops growing while the pause is open. On <strong>Resume</strong>, OBubba stores the observed wake duration and asks how baby was resettled.</p>
-<figure><img src="/obubba-night-wake-pause-app.jpg" alt="The actual OBubba Flutter night-sleep screen, where Pause records a real wake without ending the overnight sleep." loading="lazy"/><figcaption>Pause freezes the live sleep total while baby is awake; Resume closes the interval when sleep returns.</figcaption></figure>
+<figure><img src="/obubba-night-wake-pause-app.jpg" alt="The actual OBubba night-sleep screen, where Pause records a real wake without ending the overnight sleep." loading="lazy"/><figcaption>Pause freezes the live sleep total while baby is awake; Resume closes the interval when sleep returns.</figcaption></figure>
 <p>An abandoned pause is not allowed to become a fabricated multi-hour split night. The app closes implausible stale intervals without trusting the whole gap as measured awake time.</p>
 <h3>Duplicate partner wakes are deducted once</h3>
 <p>If two carers log the same 2am waking within a few minutes, OBubba keeps the longer recorded duration for that event rather than subtracting both copies. Wake count and sleep minutes stay consistent.</p>
 <h3>Reports use complete nights</h3>
 <p>The current Reports screen only treats a night as logged for trend purposes when it has both a bedtime and a morning wake. Its <strong>Night sleep</strong> bars use the reconstructed sleep arcs minus logged awake time, then sit beside wake count and awake minutes.</p>
-<figure><img src="/obubba-reports-clinic-prep-app.jpg" alt="The actual OBubba Flutter Insights overview showing total sleep across each day and night-wake context rather than a single unexplained “time in bed” number." loading="lazy"/><figcaption>OBubba&#39;s current report keeps night sleep, naps and waking context visible across several days.</figcaption></figure>
+<figure><img src="/obubba-reports-clinic-prep-app.jpg" alt="The actual OBubba Insights overview showing total sleep across each day and night-wake context rather than a single unexplained “time in bed” number." loading="lazy"/><figcaption>OBubba&#39;s current report keeps night sleep, naps and waking context visible across several days.</figcaption></figure>
 <p>That restraint matters. A bedtime with no morning end is an unfinished record, not evidence of a perfect night.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — time the night once, pause meaningful wakes and let the app keep bedtime span, actual sleep, awake minutes, longest stretch and daily naps as separate signals.</p>
 <h2>A two-minute morning reconstruction</h2>

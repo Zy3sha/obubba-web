@@ -803,7 +803,7 @@
     <article class="section rich-text article">
       <p>It is 7.12am. You remember three wakes, half a cup of cold tea and very little else. The baby is cheerful. You are not sure whether today needs heroic nap repair, an earlier bedtime or simply fewer decisions.</p>
 <p>This is the moment OBubba’s <strong>Good morning</strong> briefing is designed for. On the fresh Bubba Coach screen, it can turn the completed overnight record into three short things: what last night looked like, today’s likely bedtime and one calm focus.</p>
-<p>We traced the current Flutter feature from the card parents see through the briefing engine, night reconstruction, day-plan calculation and automated tests. The useful part is its restraint: it will not call an unfinished night “slept through”. The part to read carefully is its confidence: labels such as “settled” and “routine worked” come from much less evidence than those phrases may suggest.</p>
+<p>We traced the current feature from the card parents see through the briefing engine, night reconstruction, day-plan calculation and automated tests. The useful part is its restraint: it will not call an unfinished night “slept through”. The part to read carefully is its confidence: labels such as “settled” and “routine worked” come from much less evidence than those phrases may suggest.</p>
 <h2>The short answer</h2>
 <p>| Briefing line | What the app actually uses | What it does not know | |---|---|---| | <strong>Last night</strong> | A completed bedtime-to-morning record, number of logged wakes and longest stretch | Whether an unlogged wake happened, how hard each wake felt or why the baby woke | | <strong>Today’s likely shape</strong> | Today’s entries, the current time and the baby’s known corrected age | A guaranteed bedtime or the baby’s future cues | | <strong>Worth knowing</strong> | A recent disruption note, otherwise the completed night’s wake count | Whether teething, illness or a regression caused the wakes | | <strong>Greeting</strong> | The carer name, when supplied, and the child profile | How rested the adult feels |</p>
 <p>The briefing only appears from <strong>5am up to—but not including—noon</strong>, using the device’s local time. It is not shown for a pregnancy profile, and it appears on a fresh premium Coach surface before a chat has begun.</p>
@@ -811,7 +811,7 @@
 <p>That separation is important. The app is not producing one all-knowing verdict. It is assembling three small answers from three overlapping—but different—sets of evidence.</p>
 <h2>First, OBubba checks whether the night is complete</h2>
 <p>The most trustworthy rule in the briefing is also the easiest to miss. OBubba only writes its confident night sentence when it can reconstruct <strong>both bedtime and morning wake</strong> for the relevant night.</p>
-<p>If a parent started a bedtime timer but forgot to log the morning, the app does not interpret the absence of wake entries as uninterrupted sleep. It falls back to asking for more logging. An automated Flutter test specifically protects this behaviour: a half-logged night must not produce either “slept through” or “routine worked”.</p>
+<p>If a parent started a bedtime timer but forgot to log the morning, the app does not interpret the absence of wake entries as uninterrupted sleep. It falls back to asking for more logging. An automated test specifically protects this behaviour: a half-logged night must not produce either “slept through” or “routine worked”.</p>
 <p>This prevents a common tracker error. No wake was recorded is not the same as no wake occurred.</p>
 <p>The record still depends on people. OBubba is not listening through the microphone, watching a cot or reading a wearable. A wake settled by a partner, a feed logged on paper or a nursery nap that never syncs will remain outside its evidence.</p>
 <h2>What “slept through”, “settled” and “broken” mean in the app</h2>
@@ -821,7 +821,7 @@
 <p>These are product labels, not developmental or medical judgments. Two ten-minute wakes and two ninety-minute wakes receive the same “settled” category here because the briefing does not use wake duration. Three brief resettles become “broken”, even if the parent felt reasonably rested. And “no wakes logged” remains a statement about the record—not sensor-confirmed continuous sleep.</p>
 <p>The NHS notes that babies have individual sleep patterns and that night waking can change with growth spurts, teething and illness. Read the label as a quick description of the log, then look at the baby and the family experience before deciding what today needs.</p>
 <h2>The real card, not a mock-up</h2>
-<figure><img src="/obubba-good-morning-briefing-app.jpg" alt="A real OBubba Coach screen showing a Good morning card with one wake, a 7 hour 18 minute longest stretch, a likely bedtime and a sleep-regression comfort note." loading="lazy"/><figcaption>A real current Flutter app screen: one completed night supplies the wake summary, today and age supply the bedtime, and a recent disruption supplies the highlighted focus.</figcaption></figure>
+<figure><img src="/obubba-good-morning-briefing-app.jpg" alt="A real OBubba Coach screen showing a Good morning card with one wake, a 7 hour 18 minute longest stretch, a likely bedtime and a sleep-regression comfort note." loading="lazy"/><figcaption>A real current app screen: one completed night supplies the wake summary, today and age supply the bedtime, and a recent disruption supplies the highlighted focus.</figcaption></figure>
 <p>In this real debug profile, Oliver’s card says there was one wake and a long 7h 18m stretch. It then gives a likely bedtime of 6.47pm. The highlighted note says Oliver is in a common sleep-regression window and recommends steadiness and comfort rather than changes.</p>
 <p>Notice the hierarchy: the app does not ask the parent to inspect a chart before breakfast. It returns a night sentence, a time and one humane emphasis. That is good product design for a depleted moment.</p>
 <p>It is also why the boundaries need to be visible. The polished card can make every sentence look equally established. They are not.</p>
@@ -834,7 +834,7 @@
 <p>The best personalised time is one that remains revisable.</p>
 <h2>An honest limitation: the broken night does not move that number</h2>
 <p>After three or more wakes, the briefing advises protecting naps and considering a calm, slightly earlier bedtime. That sounds as though last night has shifted the bedtime calculation earlier.</p>
-<p>In the current Flutter path, it has not.</p>
+<p>In the current path, it has not.</p>
 <p>The night wake count chooses the <strong>suggestion text</strong>, while the displayed bedtime is calculated separately from today’s entries and corrected age. This briefing does not pass a broken-night sleep-debt adjustment into the day-plan calculation.</p>
 <p>So a parent should translate the card as:</p>
 <p>&gt; “Last night’s record suggests keeping today gentle. The displayed time is today’s ordinary projection; use cues to decide whether bedtime needs to begin a little earlier.”</p>
@@ -865,7 +865,7 @@
 <p><strong><a href="/app.html">Open OBubba and build this morning’s calm plan →</a></strong> — keep sleep, feeds, nappies, first foods, medicines and disruptions in one shared family record, then let Coach return the smallest useful next step.</p>
 <h2>Frequently asked questions</h2>
 <h3>Does the Good morning briefing appear all day?</h3>
-<p>No. The current Flutter engine returns it from 5am until before noon in the device’s local time. It appears on a fresh Bubba Coach surface and is not shown once that Coach conversation already has turns.</p>
+<p>No. The current engine returns it from 5am until before noon in the device’s local time. It appears on a fresh Bubba Coach surface and is not shown once that Coach conversation already has turns.</p>
 <h3>Why did OBubba not say my baby slept through?</h3>
 <p>The app needs a completed bedtime-to-morning record before using its night labels. An open or half-logged night should not be treated as uninterrupted sleep.</p>
 <h3>What does “settled night” mean?</h3>

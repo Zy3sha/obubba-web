@@ -806,9 +806,9 @@
 <p>Does that mean 60ml is unsafe? Is the app telling you to make your baby finish the next bottle? Has it added breastfeeds, night milk or wet nappies into the calculation?</p>
 <p><strong>No. This card is a deliberately narrow daytime bottle-logging pace check.</strong> It appears only when OBubba has evidence of an established measured-bottle pattern, today’s intake appears fully measurable, at least six waking hours have passed, and the positive daytime bottle total is below half of an age-bucket pace line.</p>
 <p>It is not a prescribed daily allowance, a dehydration diagnosis or a reason to pressure-feed. Offer milk responsively, check whether the record is complete, and judge feeding alongside wet nappies, alertness, growth and how your baby looks.</p>
-<figure><img src="/obubba-low-feed-intake-pace-detector.svg" alt="The exact gates behind OBubba’s Feed intake low today card." loading="lazy"/><figcaption>The current Flutter detector requires an established measured-bottle history, no breast or combi feed today, at least six hours since the morning wake, and a positive daytime bottle total below half its age-bucket pace line. It is not a clinical target.</figcaption></figure>
+<figure><img src="/obubba-low-feed-intake-pace-detector.svg" alt="The exact gates behind OBubba’s Feed intake low today card." loading="lazy"/><figcaption>The current detector requires an established measured-bottle history, no breast or combi feed today, at least six hours since the morning wake, and a positive daytime bottle total below half its age-bucket pace line. It is not a clinical target.</figcaption></figure>
 <h2>The short answer</h2>
-<p>The current Flutter `diagnoseFeedPattern` engine reaches the main card only when all of these are true:</p>
+<p>The current `diagnoseFeedPattern` engine reaches the main card only when all of these are true:</p>
 <ol><li>baby is at least <strong>three days old</strong> according to the age value passed into the detector;</li><li>at least <strong>three positive measured bottle feeds</strong> were logged in the previous seven days;</li><li><strong>no breast or combination feed</strong> has been logged today;</li><li>at least <strong>six hours have passed since the earliest daytime morning-wake entry</strong>—or since 6am if no morning wake exists;</li><li>today contains at least one positive measured <strong>daytime milk bottle</strong>;</li><li>that daytime total is <strong>strictly below half</strong> the app’s pace-adjusted age-bucket reference; and</li><li>the low-intake branch is the first feeding pattern that qualifies.</li></ol>
 <p>Solids and pumping are excluded. Night feeds are not added to today’s total. A breastfeed is never converted from minutes into invented millilitres.</p>
 <p>If today is marked sick or travel, or OBubba’s shared disruption layer sees recent teething, the same mathematical dip gets the gentler title <strong>Intake lower than usual</strong> and low urgency. Without that context, the card uses medium urgency.</p>
@@ -828,11 +828,11 @@
 <p>The detector begins with today’s milk-feed entries. It removes:</p>
 <ul><li>solids;</li><li>pumping sessions;</li><li>feeds with no positive amount;</li><li>feeds marked as night for the daytime total.</li></ul>
 <p>It also declines to run if any breast or `both` feed appears today. That is because breastfeed minutes do not measure transferred milk, and a combi entry contains an unmeasured breast portion. Adding only the bottle top-up would make a well-fed combination-fed baby look artificially behind.</p>
-<figure><img src="/obubba-screen-feeding.jpg" alt="The current OBubba Flutter Feeding Check-in says bottle millilitres are only the measured part of a combination-feeding day." loading="lazy"/><figcaption>A genuine current Flutter screen: OBubba keeps breastfeeds, measured bottle milk, wet nappies, night feeds and growth separate instead of judging a combi-fed day from bottle volume alone.</figcaption></figure>
+<figure><img src="/obubba-screen-feeding.jpg" alt="The current OBubba Feeding Check-in says bottle millilitres are only the measured part of a combination-feeding day." loading="lazy"/><figcaption>A genuine current screen: OBubba keeps breastfeeds, measured bottle milk, wet nappies, night feeds and growth separate instead of judging a combi-fed day from bottle volume alone.</figcaption></figure>
 <p>That safeguard depends on today’s log being current. If breastfeeds have not been entered yet, the app can temporarily see a bottle-only day and overstate concern. Correct the log or dismiss the card; do not change feeding because the timeline is incomplete.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — connect daytime bottles, breastfeeds, pumping, solids, night milk and nappies without pretending every number belongs in one total.</p>
 <h2>Why the clock starts at morning wake</h2>
-<p>A noon clock-time check is unfair to a baby who woke at 10am. The Flutter engine therefore looks for the earliest non-night wake logged today and measures hours from there.</p>
+<p>A noon clock-time check is unfair to a baby who woke at 10am. The engine therefore looks for the earliest non-night wake logged today and measures hours from there.</p>
 <p>If no morning wake exists, it falls back to 6am. It then:</p>
 <ul><li>clamps elapsed time between zero and 18 hours;</li><li>maps the first 12 waking hours onto zero to 100% of the age-bucket reference;</li><li>waits until at least six waking hours have passed; and</li><li>asks whether the positive daytime bottle total is below half the resulting pace line.</li></ul>
 <p>After 12 waking hours, the reference stops increasing. If the morning-wake entry is missing, the 6am fallback can make a later-waking baby look further behind than they are. Logging the wake improves both feed pacing and sleep predictions.</p>
@@ -900,7 +900,7 @@
 <h3>Should I make a larger bedtime bottle to catch up?</h3>
 <p>No. Offer responsively and never force a baby to finish. The NHS notes that a big feed does not guarantee a longer gap before the next feed.</p>
 <h2>The takeaway</h2>
-<p><strong>Feed intake low today, worth an eye</strong> is a narrow Flutter pace check for an established, fully measured bottle-feeding day. It waits six waking hours, excludes breastfeeds, combination feeds, pumping, solids and night milk, and speaks only when a positive daytime total is below half its internal age-bucket line.</p>
+<p><strong>Feed intake low today, worth an eye</strong> is a narrow pace check for an established, fully measured bottle-feeding day. It waits six waking hours, excludes breastfeeds, combination feeds, pumping, solids and night milk, and speaks only when a positive daytime total is below half its internal age-bucket line.</p>
 <p>That precision is useful—but incomplete. It cannot prescribe milk, detect an unlogged feed, calculate breast transfer or diagnose dehydration.</p>
 <p>Use the card as a prompt to check the record, offer calmly, respect stop cues and watch the whole baby. Drier nappies, ongoing refusal, vomiting, unusual sleepiness or a baby who looks unwell matter more than crossing an app number.</p>
 <h2>Sources and further reading</h2>
@@ -910,7 +910,7 @@
 <p><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/breastfeeding-problems/enough-milk/" target="_blank" rel="noopener noreferrer">NHS: Breastfeeding—is my baby getting enough milk?</a> — swallowing, growth, wet nappies and skilled feeding support.</p>
 <p><a href="https://www.nhs.uk/baby/weaning-and-feeding/drinks-and-cups-for-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Drinks and cups for babies and young children</a> — milk alongside complementary foods and continuing breast milk or first infant formula until at least one year.</p>
 <p><a href="https://www.nhs.uk/baby/health/is-your-baby-or-toddler-seriously-ill/" target="_blank" rel="noopener noreferrer">NHS: Is your baby or toddler seriously ill?</a> — poor feeding, drier nappies, breathing, responsiveness, colour and routes to urgent help.</p>
-<p>OBubba Flutter source reviewed for this article: `lib/core/engine/feed_insights.dart`, `lib/core/engine/brain.dart`, `lib/core/engine/health_insights.dart`, `test/feed_insights_test.dart`, `test/feeding_signals_test.dart` and `test/health_insights_test.dart`.</p>
+<p>OBubba source reviewed for this article: `lib/core/engine/feed_insights.dart`, `lib/core/engine/brain.dart`, `lib/core/engine/health_insights.dart`, `test/feed_insights_test.dart`, `test/feeding_signals_test.dart` and `test/health_insights_test.dart`.</p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>

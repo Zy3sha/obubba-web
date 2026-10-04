@@ -803,11 +803,11 @@
     <article class="section rich-text article">
       <p>You have started solids. Broccoli happened yesterday, banana is now permanently woven into the high-chair straps, and every search result offers another enormous list.</p>
 <p>What should your baby actually try <strong>next</strong>?</p>
-<p>OBubba’s current Flutter app answers with a small <strong>“Try these next”</strong> card: four first-taste ideas chosen from the baby’s corrected age, recent food names, allergens already introduced and any recognised allergen linked to a logged reaction.</p>
+<p>OBubba’s current app answers with a small <strong>“Try these next”</strong> card: four first-taste ideas chosen from the baby’s corrected age, recent food names, allergens already introduced and any recognised allergen linked to a logged reaction.</p>
 <p>That sounds simple. Underneath, it is making several useful distinctions—and carrying several limitations every parent deserves to see.</p>
-<figure><img src="/obubba-how-first-tastes-work.svg" alt="How the current OBubba Flutter first-tastes chooser builds its four-item list." loading="lazy"/><figcaption>The app gates by corrected age, removes recent exact-name matches and recognised reacted allergens, then alternates a new allergen with variety where possible.</figcaption></figure>
+<figure><img src="/obubba-how-first-tastes-work.svg" alt="How the current OBubba first-tastes chooser builds its four-item list." loading="lazy"/><figcaption>The app gates by corrected age, removes recent exact-name matches and recognised reacted allergens, then alternates a new allergen with variety where possible.</figcaption></figure>
 <h2>The short answer</h2>
-<p>OBubba does <strong>not</strong> ask an AI to invent a meal. The first-tastes chooser is a deterministic Flutter function using a fixed catalogue of <strong>34 foods</strong>.</p>
+<p>OBubba does <strong>not</strong> ask an AI to invent a meal. The first-tastes chooser is a deterministic function using a fixed catalogue of <strong>34 foods</strong>.</p>
 <p>It:</p>
 <ol><li>waits until corrected age reaches the catalogue’s first-food range;</li><li>removes foods whose exact names appear in the recent solids history;</li><li>removes catalogue foods carrying a recognised allergen previously linked to a <strong>Reaction</strong> log;</li><li>separates the remaining foods into new-allergen ideas and variety ideas;</li><li>gives iron-labelled foods extra priority within those pools; and</li><li>alternates the two pools where possible until the app has four suggestions.</li></ol>
 <p>The result is a manageable shortlist, not a prescription, feeding schedule, readiness assessment or allergy plan.</p>
@@ -815,7 +815,7 @@
 <p>OBubba has two different food recommendation systems.</p>
 <p>| First-tastes chooser | Recipe engine | |---|---| | Suggests individual catalogue foods | Ranks complete recipe ideas | | Appears as <strong>Try these next</strong> | Appears under recipe ideas and the weekly plan | | Designed for early, traceable tastes | Designed for broader meal planning | | Uses corrected months and a 34-food catalogue | Uses corrected weeks, recipe stage and meal-history gaps | | Shows 4 ideas | Can build a 6-meal weekly plan |</p>
 <p>If the first-tastes card suggests <strong>Egg</strong>, it is not recommending a multi-ingredient omelette recipe. It is pointing to the catalogue entry, where the parent can open preparation, nutrient, allergen and safety information.</p>
-<figure><img src="/obubba-first-foods-guide-app.jpg" alt="The genuine OBubba Flutter First foods screen, with its searchable 34-food catalogue and serving guidance." loading="lazy"/><figcaption>The personalised card chooses from this catalogue. The catalogue explains preparation; it cannot inspect the food on the tray or confirm that a baby is ready.</figcaption></figure>
+<figure><img src="/obubba-first-foods-guide-app.jpg" alt="The genuine OBubba First foods screen, with its searchable 34-food catalogue and serving guidance." loading="lazy"/><figcaption>The personalised card chooses from this catalogue. The catalogue explains preparation; it cannot inspect the food on the tray or confirm that a baby is ready.</figcaption></figure>
 <h2>Gate 1: corrected age comes first</h2>
 <p>The Weaning screen passes `correctedMonths()` into the chooser. This matters for a baby born prematurely: the app does not simply use the birthday and quietly move first-food ideas forward.</p>
 <p>The pure selection function returns nothing below five months, but every food currently in the catalogue has `fromMonths: 6`. In practice, that means there are <strong>no available first-taste suggestions before six corrected months</strong>.</p>
@@ -848,7 +848,7 @@
 <p>A Reaction log for “red breakfast” cannot tell the app whether the meal contained egg, dairy, wheat or none of them. A symptom after strawberry does not automatically create a major-allergen exclusion because strawberry is not one of the recognised major allergen groups.</p>
 <p>If a reaction is suspected, stop relying on the suggestion list and follow the baby’s professional allergy plan. Call 999 for severe breathing difficulty, swelling affecting the airway, collapse, marked floppiness or another life-threatening reaction.</p>
 <h2>How OBubba builds the four suggestions</h2>
-<p>After filtering, the Flutter engine makes two pools.</p>
+<p>After filtering, the engine makes two pools.</p>
 <h3>Pool A: not-yet-recorded allergens</h3>
 <p>Foods whose catalogue allergen is not in the introduced set go into the new-allergen pool.</p>
 <p>Only one representative of each unseen allergen group is claimed for that round. Salmon and cod both carry fish, for example, so the card should not fill two precious slots with two supposedly new fish introductions.</p>

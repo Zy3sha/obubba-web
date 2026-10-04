@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="apple-itunes-app" content="app-id=6760968757"/>
   <title>Why Does OBubba Say ‘Ready to Explore Solids?’ | OBubba</title>
-  <meta name="description" content="See the exact Flutter logic behind OBubba’s solids-readiness card, what it knows, what it cannot know, and the three checks to make before a first taste."/>
+  <meta name="description" content="See the exact logic behind OBubba’s solids-readiness card, what it knows, what it cannot know, and the three checks to make before a first taste."/>
   <meta name="robots" content="index, follow, max-image-preview:large"/>
   <link rel="canonical" href="https://obubba.com/blog/why-obubba-says-ready-to-explore-solids.html"/>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
@@ -19,13 +19,13 @@
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://obubba.com/blog/why-obubba-says-ready-to-explore-solids.html"/>
   <meta property="og:title" content="Why Does OBubba Say ‘Ready to Explore Solids?’ | OBubba"/>
-  <meta property="og:description" content="See the exact Flutter logic behind OBubba’s solids-readiness card, what it knows, what it cannot know, and the three checks to make before a first taste."/>
+  <meta property="og:description" content="See the exact logic behind OBubba’s solids-readiness card, what it knows, what it cannot know, and the three checks to make before a first taste."/>
   <meta property="og:image" content="https://obubba.com/obubba-ready-to-explore-solids.jpg"/>
   <meta property="og:site_name" content="OBubba"/>
   <meta property="og:locale" content="en_GB"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Why Does OBubba Say ‘Ready to Explore Solids?’ | OBubba"/>
-  <meta name="twitter:description" content="See the exact Flutter logic behind OBubba’s solids-readiness card, what it knows, what it cannot know, and the three checks to make before a first taste."/>
+  <meta name="twitter:description" content="See the exact logic behind OBubba’s solids-readiness card, what it knows, what it cannot know, and the three checks to make before a first taste."/>
   <meta name="twitter:image" content="https://obubba.com/obubba-ready-to-explore-solids.jpg"/>
   <meta name="theme-color" content="#fffcf9"/>
   <link rel="preload" href="/Parisienne-Regular.ttf" as="font" type="font/truetype" crossorigin/>
@@ -744,7 +744,7 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Why Does OBubba Say ‘Ready to Explore Solids?’",
-  "description": "See the exact Flutter logic behind OBubba’s solids-readiness card, what it knows, what it cannot know, and the three checks to make before a first taste.",
+  "description": "See the exact logic behind OBubba’s solids-readiness card, what it knows, what it cannot know, and the three checks to make before a first taste.",
   "datePublished": "2026-09-19",
   "dateModified": "2026-09-19",
   "author": {
@@ -796,14 +796,14 @@
           <span class="read-time">13 min read</span>
         </div>
         <h1>Why Does OBubba Say ‘Ready to Explore Solids?’</h1>
-        <p>See the exact Flutter logic behind OBubba’s solids-readiness card, what it knows, what it cannot know, and the three checks to make before a first taste.</p>
+        <p>See the exact logic behind OBubba’s solids-readiness card, what it knows, what it cannot know, and the three checks to make before a first taste.</p>
         <div class="tags"><span class="tag">ready to explore solids OBubba</span><span class="tag">baby ready for solids</span><span class="tag">signs baby ready for weaning</span><span class="tag">when to start solids</span><span class="tag">corrected age weaning</span></div>
       </div>
     </header>
     <article class="section rich-text article">
       <p>OBubba opens with a question: <strong>“Ready to explore solids?”</strong></p>
 <p>It can feel oddly specific. Did the app notice your baby watching lunch? Did it decide that sitting is steady enough? Is this an instruction to start today?</p>
-<p><strong>No. The card is a timely invitation to check readiness, not a declaration that your baby is ready.</strong> The current Flutter engine shows it when the baby has reached OBubba’s six-month guidance gate and the family history contains no solids entry. It cannot see posture, hand-to-mouth coordination or swallowing. Those checks still belong to the parent, with professional advice when needed.</p>
+<p><strong>No. The card is a timely invitation to check readiness, not a declaration that your baby is ready.</strong> The current engine shows it when the baby has reached OBubba’s six-month guidance gate and the family history contains no solids entry. It cannot see posture, hand-to-mouth coordination or swallowing. Those checks still belong to the parent, with professional advice when needed.</p>
 <p>That difference is the useful part. Instead of a calendar notification saying “start weaning”, OBubba links age and food history to a three-sign checklist, safer-weaning guidance and a low-pressure first step.</p>
 <h2>The short answer</h2>
 <p>When the card appears, do not start with a shopping list. Start with four questions:</p>
@@ -812,7 +812,7 @@
 <p>| What the card knows | What it does not know | |---|---| | Corrected guidance age from the saved birth and due dates | Whether sitting and head control are stable today | | Whether any solids feed exists in current or archived history | Whether your baby can coordinate reaching and mouthing food | | Whether the date of birth is missing or invalid | Whether swallowing is developmentally or clinically safe | | That the family may need the “Before first tastes” tools | Whether today is calm, illness-free and practical |</p>
 <figure><img src="/obubba-ready-to-explore-solids-gates.svg" alt="The exact gates behind OBubba’s “Ready to explore solids?” card." loading="lazy"/><figcaption>The app waits for a known corrected age of at least 26 weeks and no solids anywhere in the history. The result opens a human readiness check; it does not certify readiness.</figcaption></figure>
 <h2>Why the card appeared now</h2>
-<p>The current Flutter path is deliberately small. `diagnoseWeaningPattern` first receives a developmental age and two different views of the solids history.</p>
+<p>The current path is deliberately small. `diagnoseWeaningPattern` first receives a developmental age and two different views of the solids history.</p>
 <p>The <strong>recent view</strong> scans the current day plus the preceding 21 calendar days. It includes entries whose type is feed and whose feed type is solids, provided there is a food name or note.</p>
 <p>The <strong>lifetime view</strong> asks whether solids have ever been logged. That answer combines the active day history with a compact lifetime summary, so an old first taste does not become “forgotten” when older daily records are archived out of the app’s hot data.</p>
 <p>The card needs all of these conditions:</p>
@@ -820,12 +820,12 @@
 <p>If an eight-month-old tried carrot three months ago and has logged nothing recently, OBubba does <strong>not</strong> return to “Ready to explore solids?”. The lifetime flag says the journey already began. With no current meals to analyse, this particular detector stays quiet rather than pretending the family is at day one again.</p>
 <p>The engine also has an early guard below 22 weeks, but that is not an earlier readiness window. The actual readiness card still requires 26 weeks. Between those ages it remains silent.</p>
 <h2>Corrected age is part of the gate</h2>
-<p>For a term baby, the developmental age normally matches chronological age. For a baby born at least three weeks early, the Flutter model can calculate corrected weeks using the birth date and due date.</p>
+<p>For a term baby, the developmental age normally matches chronological age. For a baby born at least three weeks early, the model can calculate corrected weeks using the birth date and due date.</p>
 <p>That corrected value drives the weaning gate. In practical terms, a baby who is 26 weeks from birth but eight weeks early may still be around 18 corrected weeks, so this card will wait.</p>
 <p>That is a sensible product safeguard, but it is not a complete clinical rule. The NHS tells parents of babies born prematurely to ask their health visitor or GP when to start. <a href="https://www.cuh.nhs.uk/patient-information/weaning-babies-born-prematurely/" target="_blank" rel="noopener noreferrer">Cambridge University Hospitals’ premature-weaning guidance</a> describes development and corrected age as parts of an individual decision and advises professional support where there is uncertainty.</p>
 <p>OBubba’s role is to avoid casually ageing a premature baby up. It cannot use birth history, growth, respiratory needs, oral-motor development and clinical feeding experience the way a neonatal or community team can.</p>
 <h2>Missing age makes the app wait—not guess</h2>
-<p>Elsewhere in the Flutter brain, some general guidance can fall back to an approximate six-month age when a date is unavailable. The weaning path explicitly refuses to use that shortcut.</p>
+<p>Elsewhere in the brain, some general guidance can fall back to an approximate six-month age when a date is unavailable. The weaning path explicitly refuses to use that shortcut.</p>
 <p>If the date of birth is blank, malformed or in the future, corrected age is unavailable and the readiness route falls back to the youngest conservative bucket. The card stays hidden.</p>
 <p>This matters. Treating “unknown” as 26 weeks could tell the parent of a newborn to explore solids. In a baby app, silence based on missing safety-critical context is better than confident-looking advice built on an invented age.</p>
 <p>If you expected the card but do not see it, check that the selected child’s birth and due-date details are accurate. Do not change a date simply to unlock a feature.</p>
@@ -834,7 +834,7 @@
 <p>OBubba’s actual <strong>Before first tastes</strong> screen uses the fuller three-part check:</p>
 <ul><li><strong>Sits steady</strong> — can stay sitting with minimal support and hold the head confidently;</li><li><strong>Reaches</strong> — can look, pick up and bring food towards the mouth; and</li><li><strong>Swallows</strong> — the tongue-thrust response has eased enough for food to move back rather than straight out.</li></ul>
 <p>Each sign can be marked only when the parent has seen it consistently. The ticks persist for that child, so readiness can emerge over several ordinary family meals instead of being judged from one excited reach.</p>
-<figure><img src="/obubba-solids-readiness-checklist-app.jpg" alt="A genuine current OBubba Flutter screen showing the three readiness observations checked for a baby aged six months and one week." loading="lazy"/><figcaption>The app holds age and the three parent-observed signs together. The checklist records observations; it is not a medical assessment of swallowing.</figcaption></figure>
+<figure><img src="/obubba-solids-readiness-checklist-app.jpg" alt="A genuine current OBubba screen showing the three readiness observations checked for a baby aged six months and one week." loading="lazy"/><figcaption>The app holds age and the three parent-observed signs together. The checklist records observations; it is not a medical assessment of swallowing.</figcaption></figure>
 <p>The button changes its framing too. All three ticks plus at least 26 corrected weeks produces <strong>Start weaning</strong>. If the signs are ticked earlier, the family can still open the educational tools, but the age-gated start language is withheld.</p>
 <h2>Why all three signs belong together</h2>
 <h3>Sitting and steady head control</h3>
@@ -869,7 +869,7 @@
 <p>Specific food wording helps the app recognise allergens, build the food history and later understand variety, iron-rich offers and texture progress. Use <strong>Loved</strong>, <strong>Unsure</strong> or <strong>Reaction</strong> for the food response; do not use Reaction as a dislike button.</p>
 <p>Once that entry saves, `everLoggedSolids` becomes true. The readiness card has done its job and should not keep treating the family as if the first taste never happened.</p>
 <h2>What OBubba can do next</h2>
-<p>The first log changes the app from readiness mode to history-informed support. Depending on age and what is recorded, the Flutter features can then help with:</p>
+<p>The first log changes the app from readiness mode to history-informed support. Depending on age and what is recorded, the features can then help with:</p>
 <ul><li>recognised allergens and the 14-group journey;</li><li>first-taste ideas that avoid foods already tried;</li><li>iron-rich meal visibility;</li><li>texture-stage context from preparation words;</li><li>gentle prompts when several meals point to refusal or a stalled texture;</li><li>recipes ranked by age stage, history, iron and allergen context; and</li><li>a saved six-meal plan with a derived shopping list.</li></ul>
 <p>This is where a connected tracker becomes more useful than a static checklist. The first broccoli taste sits beside milk, sleep, nappies and growth, while the app remembers that weaning has begun.</p>
 <p><strong><a href="/baby-weaning-tracker.html">Try OBubba’s weaning tracker free →</a></strong> — move from “might be ready” to a calm first-food record without losing the rest of your baby’s day.</p>
@@ -877,7 +877,7 @@
 <p>The current logic stays silent when:</p>
 <ul><li>corrected age is below 26 weeks;</li><li>birth data is missing or invalid;</li><li>any solids feed has ever been logged, even if it was months ago;</li><li>a recent solids entry already exists; or</li><li>the baby profile is still marked as expecting.</li></ul>
 <p>Silence does not mean “not ready”, just as the card does not mean “definitely ready”. It means the conditions for this particular low-urgency prompt are absent.</p>
-<p>There is another development-oriented Flutter signal that can mention solids readiness when age, a steady-sitting note and no recent solids align. Its wording is different and it looks for a sitting clue in recent notes. The <strong>“Ready to explore solids?”</strong> card explained here is the simpler weaning-journal route: age plus lifetime food history, followed by a human checklist.</p>
+<p>There is another development-oriented signal that can mention solids readiness when age, a steady-sitting note and no recent solids align. Its wording is different and it looks for a sitting clue in recent notes. The <strong>“Ready to explore solids?”</strong> card explained here is the simpler weaning-journal route: age plus lifetime food history, followed by a human checklist.</p>
 <h2>A useful product limitation</h2>
 <p>The engine does not read the three persisted checklist ticks before it creates the “Ready to explore solids?” card. It also does not claim to. The card is intentionally phrased as a question.</p>
 <p>That separation avoids a worse mistake: converting an age threshold into a readiness verdict. But it also means the app cannot know that sitting is not yet steady, that swallowing is under clinical review or that a neonatal dietitian supplied a different plan.</p>
@@ -888,7 +888,7 @@
 <h3>Does the card mean I should start solids today?</h3>
 <p>No. It means the app has a known corrected age of at least 26 weeks and no recorded solids history. Check all three developmental signs and any individual professional advice.</p>
 <h3>Why did it appear exactly at 26 weeks?</h3>
-<p>The current Flutter gate uses whole completed weeks and opens at 26. That is OBubba’s implementation of “around six months”, not a claim that every baby becomes ready on the same day.</p>
+<p>The current gate uses whole completed weeks and opens at 26. That is OBubba’s implementation of “around six months”, not a claim that every baby becomes ready on the same day.</p>
 <h3>Why did my premature baby not get the card at six chronological months?</h3>
 <p>OBubba uses corrected age for this developmental guidance. Premature weaning is individual, so ask your health visitor, GP, neonatal team, dietitian or feeding specialist when to begin.</p>
 <h3>Why did the card disappear after one tiny taste?</h3>
@@ -900,7 +900,7 @@
 <h3>Can the app assess swallowing?</h3>
 <p>No. It records parent observations and food history. Repeated coughing, choking, wet breathing, pain or significant difficulty needs professional assessment.</p>
 <h2>Sources</h2>
-<ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s first solid foods</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/what-to-feed-your-baby/from-around-6-months/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: From around 6 months</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/choking-and-gagging-on-food/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Choking and gagging on food</a></li><li><a href="https://www.cuh.nhs.uk/patient-information/weaning-babies-born-prematurely/" target="_blank" rel="noopener noreferrer">Cambridge University Hospitals: Weaning babies born prematurely</a></li><li>OBubba Flutter source reviewed: `weaning_insights.dart`, `brain.dart`, `child_sync_repository.dart`, `pre_weaning_screen.dart`, `dev_predict.dart`, `dev_predict_adapter.dart`, `weaning_insights_test.dart`, `engine_integration_test.dart`, `dev_predict_test.dart`, `day_trim_test.dart` and `lifetime_summary_test.dart`.</li></ul>
+<ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s first solid foods</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/what-to-feed-your-baby/from-around-6-months/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: From around 6 months</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/choking-and-gagging-on-food/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Choking and gagging on food</a></li><li><a href="https://www.cuh.nhs.uk/patient-information/weaning-babies-born-prematurely/" target="_blank" rel="noopener noreferrer">Cambridge University Hospitals: Weaning babies born prematurely</a></li><li>OBubba source reviewed: `weaning_insights.dart`, `brain.dart`, `child_sync_repository.dart`, `pre_weaning_screen.dart`, `dev_predict.dart`, `dev_predict_adapter.dart`, `weaning_insights_test.dart`, `engine_integration_test.dart`, `dev_predict_test.dart`, `day_trim_test.dart` and `lifetime_summary_test.dart`.</li></ul>
 <p><em>OBubba is a record, pattern and education tool. It cannot assess developmental readiness, posture, chewing, swallowing, nutrition or choking risk. It does not replace advice from a health visitor, GP, neonatal team, paediatric dietitian, speech and language therapist, paediatrician, NHS 111 or emergency services.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">

@@ -803,7 +803,7 @@
     <article class="section rich-text article">
       <p>OBubba says waving is <strong>“around 3 weeks away.”</strong> Then you log another little first and the estimate moves.</p>
 <p>Did the app change its mind? Does three weeks mean your baby should be waving by then? And how can software possibly know what a baby will learn next?</p>
-<p>We inspected the current Flutter <strong>Skill Forecast</strong> for this guide. Its answer is gentler than a countdown: OBubba starts with age-typical milestone timing, uses corrected age when applicable and—only after at least two credible dated firsts—shifts the next few chapters by the median pace in the child’s own record.</p>
+<p>We inspected the current <strong>Skill Forecast</strong> for this guide. Its answer is gentler than a countdown: OBubba starts with age-typical milestone timing, uses corrected age when applicable and—only after at least two credible dated firsts—shifts the next few chapters by the median pace in the child’s own record.</p>
 <p>It is a deterministic estimate from the information you logged. It is <strong>not</strong> an AI diagnosis, a developmental score or a promise that one skill will arrive before another.</p>
 <figure><img src="/obubba-how-skill-forecast-works.svg" alt="How OBubba turns age and credible dated milestones into a gentle next-skill forecast." loading="lazy"/><figcaption>The forecast starts with age-typical timing, learns a median timing shift after two credible dated firsts and shows the next chapters without making them deadlines.</figcaption></figure>
 <h2>The short answer</h2>
@@ -812,16 +812,16 @@
 <p>It does <strong>not</strong> mean:</p>
 <ul><li>the skill is due in exactly 21 days</li><li>this is the skill your baby must learn next</li><li>the app has observed the quality of your baby’s movement, hearing or communication</li><li>a later date means delay</li><li>an earlier date means advanced development</li></ul>
 <p>The number is a way to focus curiosity. It should help a parent notice an emerging chapter, not watch the calendar.</p>
-<h2>What the real Flutter screen shows</h2>
+<h2>What the real screen shows</h2>
 <p>The current screen is deliberately titled <strong>“What’s blooming next”</strong> and describes the results as the child’s <strong>“next little chapters.”</strong> Under the heading it says: <strong>“A forecast, not a deadline, [name] leads the way.”</strong></p>
-<figure><img src="/obubba-milestones-app.jpg" alt="The genuine OBubba Flutter Milestones screen, where a practising-window read leads to the child&#39;s next little chapters." loading="lazy"/><figcaption>The real Milestones screen says there is nothing to rush and opens Skill Forecast through the next-little-chapters action.</figcaption></figure>
+<figure><img src="/obubba-milestones-app.jpg" alt="The genuine OBubba Milestones screen, where a practising-window read leads to the child&#39;s next little chapters." loading="lazy"/><figcaption>The real Milestones screen says there is nothing to rush and opens Skill Forecast through the next-little-chapters action.</figcaption></figure>
 <p>The forecast brings three chapters into the main journey. A fourth sits behind <strong>“One more chapter is coming into view.”</strong> Each chapter belongs to social and emotional development, language, movement or thinking. Timing reads as:</p>
 <ul><li><strong>Could be any time now</strong> when the projected point is now or has just passed</li><li><strong>Coming into view</strong> when it is about one week away</li><li><strong>Around N weeks away</strong> when it is further ahead</li></ul>
 <p>Those phrases are interface language, not probability bands. The engine does not claim a 70% or 90% chance, and the word <strong>around</strong> matters.</p>
 <h2>Step 1: the forecast needs a fair age anchor</h2>
 <p>If no birthday is saved, OBubba does not invent a stage. The screen asks the parent to add one.</p>
 <p>For a term baby, milestone dates are read against age from the birth date. When a due date is available and the baby was born at least three weeks early, the current app can use corrected age while that correction remains relevant.</p>
-<p>The Flutter age engine keeps the full correction through the earlier period, then tapers it gradually over the final six months before about 24 months. That avoids a premature baby’s developmental context jumping forwards overnight on one calendar boundary.</p>
+<p>The age engine keeps the full correction through the earlier period, then tapers it gradually over the final six months before about 24 months. That avoids a premature baby’s developmental context jumping forwards overnight on one calendar boundary.</p>
 <p>UK neonatal guidance commonly describes corrected age as the age a premature baby would be from their due date, and NHS services often use it when discussing development into the second year. A baby’s own neonatal or paediatric plan should always take priority over a general app rule.</p>
 <h2>Step 2: at first, the forecast is age-typical—not personal</h2>
 <p>OBubba can still show useful chapters when there are fewer than two credible dated milestones. In that state, it uses its age-typical reference points without a personal shift.</p>
@@ -861,14 +861,14 @@
 <p>For eligible premature babies, the age correction gradually reduces near the end of the app’s correction window. That can alter weeks-away wording without anything suddenly changing about the child.</p>
 <h2>What a forecast can help a parent do</h2>
 <p>The useful question is not, “How do I make this happen by the date?” It is, “What ordinary opportunities might be enjoyable if this interest is emerging?”</p>
-<p>The Flutter screen looks for one genuine activity connected to the upcoming milestones. Its bridge is conservative: it deduplicates repeated activities and leaves a milestone without a suggestion when there is no honest match.</p>
+<p>The screen looks for one genuine activity connected to the upcoming milestones. Its bridge is conservative: it deduplicates repeated activities and leaves a milestone without a suggestion when there is no honest match.</p>
 <p>For an emerging reaching or object-exploration chapter, a useful invitation might be a few safe objects on the floor while an adult joins at the baby’s level. For an emerging communication chapter, it might be copying a sound and pausing. The baby can engage, change the game or stop.</p>
 <p>No activity is homework. Rest, feeds, cuddles, repetition and unstructured play are part of development too.</p>
 <p><strong><a href="/baby-milestone-tracker.html">Try OBubba free →</a></strong> — remember little firsts, see when the app has enough evidence to personalise the path and keep development beside sleep, feeds, growth and family context.</p>
 <h2>Skill Forecast and developmental surveillance are different systems</h2>
 <p>The forecast answers: <strong>what might be useful to notice next?</strong></p>
 <p>The milestone surveillance path answers a different question: <strong>is there a sufficiently supported pattern worth mentioning to a health visitor?</strong></p>
-<p>The current Flutter surveillance engine does not raise that suggestion for one missing skill. It looks for at least two genuinely past-window skills in the same category—and splits fine and gross movement into separate streams so one of each does not create a false cluster. It also requires enough completed and dated history, ignores old unlogged infant skills from a late-starting parent and suppresses an earlier skill when a later same-domain achievement already shows the child has moved beyond it.</p>
+<p>The current surveillance engine does not raise that suggestion for one missing skill. It looks for at least two genuinely past-window skills in the same category—and splits fine and gross movement into separate streams so one of each does not create a false cluster. It also requires enough completed and dated history, ignores old unlogged infant skills from a late-starting parent and suppresses an earlier skill when a later same-domain achievement already shows the child has moved beyond it.</p>
 <p>For example, a child with first steps recorded should not be nagged to prove that crawling happened first.</p>
 <p>These product safeguards reduce false alarms. They do not assess the child. Do not wait for an app flag if you are concerned.</p>
 <h2>When to speak to a health visitor or GP</h2>

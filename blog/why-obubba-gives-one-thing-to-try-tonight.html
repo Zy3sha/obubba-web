@@ -803,19 +803,19 @@
     <article class="section rich-text article">
       <p>Your baby woke four times. Yesterday’s nap ended late. A tooth may be moving. Bedtime has drifted. There is already a sleep plan in progress—and the app has three other observations waiting.</p>
 <p>Should you shorten the nap, move bedtime, reduce a feed, practise a new settling method or simply offer more comfort?</p>
-<p>OBubba’s current Flutter app is designed <strong>not</strong> to hand a tired parent five simultaneous jobs. Inside <strong>Coach → Sleep Consultant</strong>, its pinned <strong>“Tonight, in one glance”</strong> card gives one system precedence, shows one action and keeps lower-priority observations on a quiet radar.</p>
+<p>OBubba’s current app is designed <strong>not</strong> to hand a tired parent five simultaneous jobs. Inside <strong>Coach → Sleep Consultant</strong>, its pinned <strong>“Tonight, in one glance”</strong> card gives one system precedence, shows one action and keeps lower-priority observations on a quiet radar.</p>
 <p>The short version is:</p>
 <p>&gt; <strong>Stabilise a disrupted week first. Otherwise protect an active plan. If there is no plan, use the strongest longer pattern. If there is no longer pattern, make one small response to last night. If nothing deserves action, change nothing.</strong></p>
 <p>That is product prioritisation, not medical certainty. The app can decide which of its own suggestions should speak first. It cannot decide why a baby is unwell, whether they are hungry or what a family must do.</p>
 <h2>Where the card lives</h2>
 <p>Open <strong>Coach → Sleep Consultant</strong>. The page introduces a gentle 14-day plan shaped by the child’s sleep and the family’s chosen approach. The one-thing card is pinned directly beneath that introduction whenever a child profile is available.</p>
-<figure><img src="/obubba-sleep-consultant-app.jpg" alt="A genuine OBubba Flutter capture of the Sleep Consultant introduction, describing a path rather than a prescription." loading="lazy"/><figcaption>Genuine OBubba Flutter Sleep Consultant capture. In the current implementation, the live ‘Tonight, in one glance’ priority card sits immediately below this introduction and changes with the child’s record.</figcaption></figure>
+<figure><img src="/obubba-sleep-consultant-app.jpg" alt="A genuine OBubba capture of the Sleep Consultant introduction, describing a path rather than a prescription." loading="lazy"/><figcaption>Genuine OBubba Sleep Consultant capture. In the current implementation, the live ‘Tonight, in one glance’ priority card sits immediately below this introduction and changes with the child’s record.</figcaption></figure>
 <p>The card can look different depending on what wins. It might say:</p>
 <ul><li><strong>Tonight: ride it out, gently</strong></li><li><strong>Night 4 · Earlier bedtime test</strong></li><li><strong>Tonight, just one thing</strong></li><li><strong>A touch overtired</strong></li><li><strong>Nothing to change tonight</strong></li></ul>
 <p>Those are not five cards shown together. They are five possible outcomes from one priority order.</p>
 <h2>Four systems enter; one answer leaves</h2>
 <p>OBubba has several deterministic sleep engines. The orchestrator does not average their advice. It checks them in a strict sequence and stops at the first action strong enough to lead.</p>
-<figure><img src="/obubba-one-thing-tonight-funnel.svg" alt="Four OBubba sleep systems narrowing through a priority funnel into one focus for tonight, with lower-priority items held on the radar and an all-clear outcome when nothing is live." loading="lazy"/><figcaption>The current Flutter priority is disruption, then an active plan, then the strongest longer consultation pattern, then an actionable read of last night. If none applies, the app recommends no change.</figcaption></figure>
+<figure><img src="/obubba-one-thing-tonight-funnel.svg" alt="Four OBubba sleep systems narrowing through a priority funnel into one focus for tonight, with lower-priority items held on the radar and an all-clear outcome when nothing is live." loading="lazy"/><figcaption>The current priority is disruption, then an active plan, then the strongest longer consultation pattern, then an actionable read of last night. If none applies, the app recommends no change.</figcaption></figure>
 <h3>Priority 1: is this a disrupted week?</h3>
 <p>A stronger disruption outranks every optional sleep change. In the current app, that means the top disruption clue has crossed the same internal threshold that can hold a sleep plan. Examples include a sufficiently supported illness, developmental, teething or recently logged food context.</p>
 <p>The lead becomes: keep bedtime familiar, offer extra comfort and do not start a new experiment tonight. Existing plan steps and other sleep findings move onto the radar.</p>
@@ -828,7 +828,7 @@
 <p>Consistency does not mean rigidity. The NHS says every child is different and parents should use what feels suitable for their child; it also describes a calm, predictable bedtime routine as a useful starting point. <a href="https://www.nhs.uk/baby/health/sleep-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: sleep and young children</a>.</p>
 <h3>Priority 3: what is the strongest longer pattern?</h3>
 <p>With no disruption and no active plan, the app can use the highest-ranked unresolved finding from its Sleep Consultation.</p>
-<p>That consultation is not created from one morning. The Flutter implementation:</p>
+<p>That consultation is not created from one morning. The implementation:</p>
 <ul><li>looks back across up to 14 complete past days;</li><li>skips today in the live view because a partial day can distort naps and feeds;</li><li>includes a day only when it contains at least two entries;</li><li>requires at least five usable day profiles before producing a consultation; and</li><li>ranks findings such as day sleep, bedtime variation, wake-time variation, nap consistency, nap recovery, night feeds and the final wake window.</li></ul>
 <p>The top finding supplies the one action. Lower-ranked findings are not erased; they are deferred until the first lever has had a fair chance.</p>
 <p>Five usable profiles are a minimum for the app’s rule—not proof that the conclusion is correct. A family logging only naps, forgetting difficult nights or changing childcare arrangements may still create an incomplete picture.</p>
@@ -874,7 +874,7 @@
 <p>Safer-sleep practice also stays unchanged regardless of the lead card: place baby on their back in a clear, separate, firm and flat sleep space, and keep them in the same room as a parent for at least the first six months.</p>
 <h2>Quick answers</h2>
 <h3>Does OBubba use AI to choose the one thing?</h3>
-<p>The priority described here is deterministic Flutter logic. It checks fixed tiers in a fixed order. The card can be traced back to the disruption, active-plan, consultation or last-night engine that supplied it.</p>
+<p>The priority described here is deterministic logic. It checks fixed tiers in a fixed order. The card can be traced back to the disruption, active-plan, consultation or last-night engine that supplied it.</p>
 <h3>Why is my sleep-plan step not leading tonight?</h3>
 <p>A stronger supported disruption may have temporarily outranked it. The plan should remain on the radar rather than being silently discarded.</p>
 <h3>Why is last night’s advice being ignored?</h3>
@@ -886,7 +886,7 @@
 <h3>Do I have to follow the one thing?</h3>
 <p>No. The card is a decision aid. Family values, feeding needs, clinician advice and the actual baby always come first.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — turn sleep logs into one understandable focus, keep the other observations visible, and let “nothing to change” be a valid answer.</p>
-<p><em>This article gives general information for UK families and describes the current OBubba Flutter implementation reviewed on 3 March 2027. OBubba does not diagnose illness or the cause of sleep disruption, assess a baby in person or replace individual advice from a health visitor, GP or paediatric professional.</em></p>
+<p><em>This article gives general information for UK families and describes the current OBubba implementation reviewed on 3 March 2027. OBubba does not diagnose illness or the cause of sleep disruption, assess a baby in person or replace individual advice from a health visitor, GP or paediatric professional.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>

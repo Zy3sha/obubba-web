@@ -804,11 +804,11 @@
       <p>It is midday. Your baby last fed at 8:30am after usually asking for milk roughly every two hours. OBubba says:</p>
 <p><strong>“A longer gap between feeds than usual.”</strong></p>
 <p>Is that a late-feed alarm? Should you wake the baby, make a larger bottle or worry that something is wrong?</p>
-<p>Not from the card alone. We traced the current Flutter feed-rhythm detector, its caller and the separate next-feed prediction for this guide. The card means: <strong>today’s time since the last logged daytime milk feed has stretched well beyond this baby’s own recent average.</strong></p>
+<p>Not from the card alone. We traced the current feed-rhythm detector, its caller and the separate next-feed prediction for this guide. The card means: <strong>today’s time since the last logged daytime milk feed has stretched well beyond this baby’s own recent average.</strong></p>
 <p>It is a low-urgency prompt to look at the baby, the log and the wider care picture—not permission to replace responsive feeding with a clock.</p>
 <figure><img src="/obubba-how-longer-feed-gap-works.svg" alt="How OBubba compares a longer current milk-feed gap with the baby’s own recent rhythm." loading="lazy"/><figcaption>The current gap must be more than one and a half times the 14-day personal average and at least 45 minutes longer before the low-urgency card can appear.</figcaption></figure>
 <h2>The short answer</h2>
-<p>The current Flutter insight needs all of these conditions:</p>
+<p>The current insight needs all of these conditions:</p>
 <p>| Check | Current rule | What it prevents | |---|---:|---| | Personal history | At least <strong>10 valid daytime milk-feed gaps</strong> | A conclusion from a few scattered entries | | History window | Previous <strong>14 complete days</strong> | Comparing a partial today with complete past days | | Today’s anchor | At least <strong>2 daytime milk feeds</strong> logged today | Letting a single early entry define the whole day | | Relative stretch | Current gap is <strong>more than 1.5×</strong> the average | Flagging ordinary wobble | | Absolute stretch | Current gap is at least <strong>45 minutes longer</strong> | Overreacting when the usual gaps are short | | Timing sanity | Last logged feed is not in the future | A broken comparison after a mistimed entry |</p>
 <p>The result includes its evidence count. Because the threshold starts at 10, the caption reads <strong>“from 10 gaps”</strong>, <strong>“from 14 gaps”</strong> and so on—not a confidence percentage.</p>
 <h2>A worked example</h2>
@@ -834,22 +834,22 @@
 <ul><li>did someone else feed the baby?</li><li>is there an active breastfeeding timer that was not finished?</li><li>was a feed saved under the wrong day or time?</li><li>was a night feed accidentally marked as daytime—or the reverse?</li><li>did the baby have milk that was recorded only in a note?</li></ul>
 <p>OBubba can compare the shared record. It cannot observe an unlogged feed.</p>
 <h2>The forecast and the longer-gap card are different reads</h2>
-<p>The Flutter app also has a passive next-feed prediction. It is related, but not identical.</p>
+<p>The app also has a passive next-feed prediction. It is related, but not identical.</p>
 <p>| Feature | Next-feed forecast | Longer-gap insight | |---|---|---| | Job | Estimate when another milk feed may become likely | Notice when the current gap has become distinctly unusual | | Evidence minimum | 5 valid gaps | 10 valid gaps | | History | Previous 7 days | Previous 14 days | | Time-of-day handling | Uses a matching four-hour block when at least 3 matching gaps exist | Uses one average across valid daytime gaps | | After the estimate passes | The forecast goes quiet | The insight can appear only after both stretch gates pass |</p>
 <p>That hand-off is deliberate. A prediction is useful before the expected point. Once it is overdue, repeating “feed due” could sound like a rigid schedule. The separate insight waits for stronger evidence and uses gentler language about a personal change.</p>
 <p>One limitation is worth naming: the longer-gap detector’s average is not time-of-day matched. If a baby naturally has wide morning gaps and close evening feeds, the forecast can model that distinction more precisely than this drift card. Treat the number as a broad recent rhythm, not a perfect physiological clock.</p>
 <h2>Why OBubba does not flag every short gap</h2>
 <p>This detector only owns the <strong>stretching</strong> direction.</p>
-<p>Feeds moving closer together may be normal responsive feeding, cluster feeding or a growth-spurt pattern. Other Flutter insights already examine those possibilities. When a cluster-feed, growth-spurt or comfort-feeding card owns the current feeding story, the longer-gap card is suppressed so the app does not give competing explanations at once.</p>
+<p>Feeds moving closer together may be normal responsive feeding, cluster feeding or a growth-spurt pattern. Other insights already examine those possibilities. When a cluster-feed, growth-spurt or comfort-feeding card owns the current feeding story, the longer-gap card is suppressed so the app does not give competing explanations at once.</p>
 <p>That does not mean every close feed has a cause the app understands. Babies may feed for hunger, comfort, thirst, regulation or connection. A tracker sees entries, not intention.</p>
 <h2>The baby outranks the average</h2>
 <p>The NHS recommends responsive or on-demand feeding: offer milk when a baby shows hunger cues rather than waiting for a strict schedule. Early cues can include rooting, opening and closing the mouth, bringing hands to the mouth, wriggling or becoming more alert. Crying is a late cue.</p>
 <p>So when the card appears:</p>
 <ol><li><strong>Look at the baby.</strong> If they show hunger cues, offer a feed now. Do not wait for a predicted time.</li><li><strong>Check the record.</strong> Correct a missing or mistimed feed before treating the gap as real.</li><li><strong>Consider the day.</strong> A longer nap, travel, distraction or a naturally lighter day may explain one gap.</li><li><strong>Feed responsively.</strong> For a bottle, let the baby pace and stop; do not compensate by making them finish a larger amount.</li><li><strong>Check nappies and behaviour.</strong> The wider picture decides whether a timing change is reassuring.</li></ol>
 <p>A larger bottle does not guarantee a longer interval. Do not stretch the next gap to make the pattern look consistent.</p>
-<h2>The genuine Flutter Feeding Check-in</h2>
+<h2>The genuine Feeding Check-in</h2>
 <p>OBubba’s current <strong>Care → Feeding</strong> view separates the measured and unmeasured parts of a feeding day rather than pretending every family has a complete volume total.</p>
-<figure><img src="/obubba-screen-feeding.jpg" alt="The genuine OBubba Flutter Feeding Check-in explaining that bottle millilitres are only the measured part of a combination-feeding day." loading="lazy"/><figcaption>The current app combines breast, bottle and solids context, says both breastfeeds and measured bottle milk matter, and keeps the next step cue-led.</figcaption></figure>
+<figure><img src="/obubba-screen-feeding.jpg" alt="The genuine OBubba Feeding Check-in explaining that bottle millilitres are only the measured part of a combination-feeding day." loading="lazy"/><figcaption>The current app combines breast, bottle and solids context, says both breastfeeds and measured bottle milk matter, and keeps the next step cue-led.</figcaption></figure>
 <p>In a combination-feeding example, it says bottle millilitres are only the measured part and explicitly recommends choosing the next feed by cues. That same philosophy belongs behind the longer-gap insight: timing can make a change visible without pretending to measure hunger, milk transfer or hydration.</p>
 <p>The app can keep feed time, type, breast side, bottle amount, nappies, growth and carer entries together. It still cannot assess attachment, hear swallowing, examine a baby or know whether an omitted feed happened.</p>
 <h2>When a long gap needs more than a tracker</h2>

@@ -803,7 +803,7 @@
     <article class="section rich-text article">
       <p>Your baby tastes carrot, pulls a spectacular face, spits some out and reaches for the spoon again. Was that <strong>Loved it</strong> or <strong>Unsure</strong>?</p>
 <p>The next day they eat yoghurt happily, then develop a small rash while playing on the carpet. Is that <strong>Reaction</strong>, even when you do not know whether the food caused it?</p>
-<p>OBubba’s solids logger offers three optional responses: <strong>Loved it, Unsure and Reaction</strong>. They look like quick mood buttons, but the current Flutter app uses them differently across its weaning intelligence.</p>
+<p>OBubba’s solids logger offers three optional responses: <strong>Loved it, Unsure and Reaction</strong>. They look like quick mood buttons, but the current app uses them differently across its weaning intelligence.</p>
 <p><strong>Choose the response that best describes what you observed—not the answer you hope will produce. Loved it records a calm or positive meal, Unsure preserves ambiguity, and Reaction records a possible physical response worth keeping visible. None of the three diagnoses allergy, measures how much was swallowed or replaces urgent care.</strong></p>
 <figure><img src="/obubba-loved-unsure-reaction-new-food.jpg" alt="A parent watches their baby explore one soft new food before recording an honest response." loading="lazy"/><figcaption>Watch the baby first and tap second. An uncertain face can be normal food learning; the response field should preserve what happened without inventing certainty.</figcaption></figure>
 <h2>The short answer</h2>
@@ -813,7 +813,7 @@
 <figure><img src="/obubba-solids-response-paths.svg" alt="How Loved it, Unsure and Reaction travel through OBubba’s current weaning intelligence." loading="lazy"/><figcaption>Loved it can become calm evidence, Unsure stays neutral and Reaction can enter lifetime safety filters. All three remain parent observations rather than diagnoses.</figcaption></figure>
 <h2>Loved it means the meal went calmly—not “allergy cleared”</h2>
 <p>Choose <strong>Loved it</strong> when the baby’s response was positive or comfortably ordinary. They might swallow several spoonfuls, mouth a finger food, smile, reach for more or simply explore without concern.</p>
-<p>In the current Flutter app, Loved it can contribute <strong>calm evidence</strong> in specific detectors:</p>
+<p>In the current app, Loved it can contribute <strong>calm evidence</strong> in specific detectors:</p>
 <ul><li>a recognised allergen can count towards a recent “Looking good with Egg” style progress card;</li><li>a previous food reaction can be interpreted alongside truly calm earlier exposures; and</li><li>calm meals can soften—but never erase—a possible repeated allergen-group pattern.</li></ul>
 <p>The response does <strong>not</strong> record the dose. A lick and a bowlful can both be marked Loved it. It also does not prove that no delayed symptom appeared after the log was saved.</p>
 <p>For that reason, a useful entry might be:</p>
@@ -841,7 +841,7 @@
 <p>When it is safe to record the event, include:</p>
 <ol><li>exact food and all known ingredients;</li><li>approximate amount eaten;</li><li>time eaten;</li><li>symptom and where it appeared;</li><li>how quickly it began;</li><li>whether it changed or spread;</li><li>any separate illness, fever, vaccination or relevant medicine; and</li><li>the advice or treatment given.</li></ol>
 <p>If appropriate, a photograph of a visible skin change can help a clinician—but do not delay care to take one.</p>
-<h2>What Reaction changes inside the Flutter app</h2>
+<h2>What Reaction changes inside the app</h2>
 <p>We traced the solids model, lifetime summary, reaction-confidence engine, recipe ranking, first-tastes view and food journal.</p>
 <h3>1. It remains attached to the solids entry</h3>
 <p>The saved food, recognised allergen groups, note and Reaction code appear in <strong>Care → Weaning → Food journal</strong>. That creates a dated record for a later conversation with a health visitor, GP or allergy professional.</p>
@@ -860,7 +860,7 @@
 <ul><li>whether the food contains a recognised allergen;</li><li>truly calm earlier exposures to the same food;</li><li>a separate same-day fever or illness context; and</li><li>preparation wording in the specific case of egg.</li></ul>
 <p>It uses qualitative language rather than a fake percentage. A reaction more than nine days back is not repeatedly resurfaced as though it just happened.</p>
 <p>The engine cannot see the baby, verify the symptom, determine the culprit in a mixed meal or decide whether reintroduction is safe.</p>
-<figure><img src="/obubba-allergen-journey-app.jpg" alt="OBubba’s genuine Flutter Allergen journey keeps introduced foods visible and shows one next step without turning the checklist into a diagnosis." loading="lazy"/><figcaption>The response saved in the solids log can affect later allergen guidance, recipe filtering and cautious progress cards. Manual journey ticks and medical diagnosis remain different things.</figcaption></figure>
+<figure><img src="/obubba-allergen-journey-app.jpg" alt="OBubba’s genuine Allergen journey keeps introduced foods visible and shows one next step without turning the checklist into a diagnosis." loading="lazy"/><figcaption>The response saved in the solids log can affect later allergen guidance, recipe filtering and cautious progress cards. Manual journey ticks and medical diagnosis remain different things.</figcaption></figure>
 <h2>A meal refusal is not automatically a Reaction</h2>
 <p>Babies spit, gag, grimace, turn away and throw food for many non-allergic reasons. The texture may be unfamiliar, the bite may be too large, the baby may be tired or they may simply be finished.</p>
 <p>In OBubba, the separate refusal detector does <strong>not</strong> infer refusal from Loved it, Unsure or Reaction. It reads plain-language notes across the last three meals for words such as “refused”, “spat”, “turned away”, “no interest”, “gagged” or “too big”.</p>

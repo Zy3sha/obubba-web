@@ -793,7 +793,7 @@
       <div class="article">
         <div class="article-kicker-row">
           <div class="meta">2026-09-19 / OBubba</div>
-          <span class="read-time">12 min read</span>
+          <span class="read-time">11 min read</span>
         </div>
         <h1>Are My Baby’s Night Wakes Actually Getting Better?</h1>
         <p>A rough night can hide real progress. Learn how OBubba compares your baby with their own earlier nights—and only celebrates a meaningful fall in wake-ups.</p>
@@ -803,11 +803,11 @@
     <article class="section rich-text article">
       <p>Last night was rough: two wakes, one feed and a resettle that felt endless. Yet a month ago, two wakes would have been the best night of the week.</p>
 <p>That is the problem with judging baby sleep at 6am. The most recent night is vivid; the earlier pattern is a blur. A difficult night can feel like failure even when the longer direction is genuinely improving.</p>
-<p><strong>The useful question is not “Did my baby wake last night?” but “Are they waking meaningfully less often than they did in their own earlier record?”</strong> OBubba’s current Flutter app has a deliberately cautious answer. Its <strong>Look how far you’ve come</strong> card compares a baby only with themselves, requires at least three weeks of history and stays silent unless the improvement clears two separate thresholds.</p>
+<p><strong>The useful question is not “Did my baby wake last night?” but “Are they waking meaningfully less often than they did in their own earlier record?”</strong> OBubba’s current app has a deliberately cautious answer. Its <strong>Look how far you’ve come</strong> card compares a baby only with themselves, requires at least three weeks of history and stays silent unless the improvement clears two separate thresholds.</p>
 <figure><img src="/obubba-night-wakes-getting-better.jpg" alt="A parent quietly notices a run of gentler nights while their baby sleeps on their back in a clear cot." loading="lazy"/><figcaption>Progress can be real without every night being easy. OBubba compares a baby with their own earlier record, not another family’s sleep.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current sleep-journey calculation can appear only when all of these are true:</p>
-<p>| Guardrail | Current Flutter rule | Why it matters | |---|---:|---| | Real span | First and last qualifying nights are at least <strong>21 days apart</strong> | A good weekend is not called a journey | | Enough nights | At least <strong>3 bedtime nights</strong> in both the early and recent windows | Both averages need actual observations | | Measurable baseline | The earlier average is above <strong>0 wakes</strong> | A percentage drop from zero would be meaningless | | Absolute change | Recent average is at least <strong>0.4 wakes per night lower</strong> | Tiny numerical movement stays quiet | | Relative change | The reduction is at least <strong>20%</strong> | The change must also matter relative to the starting level | | Honest direction | Flat or harder nights return <strong>no card</strong> | OBubba does not invent progress or guilt a family |</p>
+<p>| Guardrail | Current rule | Why it matters | |---|---:|---| | Real span | First and last qualifying nights are at least <strong>21 days apart</strong> | A good weekend is not called a journey | | Enough nights | At least <strong>3 bedtime nights</strong> in both the early and recent windows | Both averages need actual observations | | Measurable baseline | The earlier average is above <strong>0 wakes</strong> | A percentage drop from zero would be meaningless | | Absolute change | Recent average is at least <strong>0.4 wakes per night lower</strong> | Tiny numerical movement stays quiet | | Relative change | The reduction is at least <strong>20%</strong> | The change must also matter relative to the starting level | | Honest direction | Flat or harder nights return <strong>no card</strong> | OBubba does not invent progress or guilt a family |</p>
 <p>When the result qualifies, the app can show a card such as:</p>
 <p>&gt; <strong>Maya’s nights have settled</strong> &gt; 3.0 → 1.0 wakes a night · 67% fewer</p>
 <p>That is a description of the logged pattern, not a promise that every future night will be easy.</p>
@@ -819,7 +819,7 @@
 <p>Imagine an early run of <strong>3, 4, 2, 3 and 3 wakes</strong>. Its average is 3.0. A recent run of <strong>1, 2, 1, 2 and 1 wakes</strong> averages 1.4. The latest two-wake night may feel disappointing beside yesterday’s one wake, but the larger comparison still shows 1.6 fewer wakes a night—about 53% below the early level.</p>
 <p>The card restores a kind of memory that exhaustion steals. It does not erase last night; it puts last night back inside the whole story.</p>
 <h2>How OBubba chooses the two comparison windows</h2>
-<p>We traced the current `computeNightWakeJourney` function, its Flutter screen and its focused regression tests.</p>
+<p>We traced the current `computeNightWakeJourney` function, its screen and its focused regression tests.</p>
 <p>First, the engine arranges every eligible night chronologically. A night is eligible when the record contains a saved bedtime; its wake count comes from OBubba’s normal night analysis, which joins the evening and early-morning events into the same night.</p>
 <p>The function then measures the calendar span between the first and last eligible nights. If that span is under 21 days, it returns nothing.</p>
 <p>For a long history, the early and recent windows are each capped at roughly 14 days. For a shorter qualifying history, each window contracts so the two sides do not overlap. This matters: counting the same middle night in both averages would make the comparison look more stable than it really is.</p>
@@ -841,7 +841,7 @@
 <h2>What counts as a wake in this journey</h2>
 <p>The card uses OBubba’s existing night model rather than counting every sound a baby makes.</p>
 <p>A saved bedtime anchors the night. Proper night-wake entries inside that overnight record contribute to its count. A wake for the day ends the night; a daytime nap does not become an overnight wake. OBubba’s Pause and Resume flow can preserve a meaningful awake interval without ending the whole sleep.</p>
-<figure><img src="/obubba-night-wake-pause-app.jpg" alt="OBubba’s genuine Flutter night screen keeps a running sleep open while Pause marks a real night wake." loading="lazy"/><figcaption>The current Flutter flow distinguishes a night-wake pause from waking for the day, helping the longer journey compare like with like.</figcaption></figure>
+<figure><img src="/obubba-night-wake-pause-app.jpg" alt="OBubba’s genuine night screen keeps a running sleep open while Pause marks a real night wake." loading="lazy"/><figcaption>The current flow distinguishes a night-wake pause from waking for the day, helping the longer journey compare like with like.</figcaption></figure>
 <p>Consistency matters more than perfection. If one week records every rustle and the next records only wakes that needed help, the apparent improvement may mostly reflect a changed logging habit.</p>
 <p>A practical convention is:</p>
 <ul><li>ignore brief sleepy sounds when the baby never properly wakes;</li><li>mark a wake when the baby is clearly awake or needs a response;</li><li>use the same definition as often as real life allows;</li><li>correct obvious duplicate or forgotten entries when you notice them.</li></ul>
@@ -874,7 +874,7 @@
 <h3>4. Keep responding to the baby you have tonight</h3>
 <p>A lower recent average does not mean tonight’s cry should be ignored. Feed, comfort and assess your baby according to their cues and individual advice.</p>
 <h3>5. Share the win, not private pressure</h3>
-<p>The Flutter card includes a <strong>Share our progress</strong> action. Share it if it feels affirming. Keep it private if public sleep milestones would create comparison or anxiety.</p>
+<p>The card includes a <strong>Share our progress</strong> action. Share it if it feels affirming. Keep it private if public sleep milestones would create comparison or anxiety.</p>
 <h2>Why this makes OBubba different from a basic timer</h2>
 <p>A basic baby tracker stores bedtime and wake entries. OBubba can turn those ordinary taps into a careful memory of change:</p>
 <ul><li>it compares the baby with themselves;</li><li>separates early and recent evidence;</li><li>avoids overlapping windows;</li><li>requires both an absolute and relative improvement;</li><li>withholds the card when the story is flat or harder;</li><li>changes the copy when older archive history makes “since you started” too strong; and</li><li>makes a real win shareable without turning every night into a grade.</li></ul>

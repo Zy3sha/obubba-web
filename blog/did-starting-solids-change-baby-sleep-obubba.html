@@ -810,9 +810,9 @@
 <p>Begin complementary feeding when the three readiness signs appear together from around six months—not because the night was difficult. A baby should be able to stay sitting with a steady head, coordinate eyes, hands and mouth, and swallow food rather than pushing it back out.</p>
 <p>There is research worth understanding. A 2018 secondary analysis of the EAT randomised trial found small average sleep differences between groups offered solids earlier and those following standard introduction advice. At the point of greatest difference, the early-introduction group slept about 16.6 minutes longer and woke 0.27 fewer times per night. That is an interesting group-level result, not a reason to start before your baby is ready and not a promise for one family. The NHS recommendation remains to begin at around six months when developmentally ready.</p>
 <p>So if OBubba shows fewer wakes after weaning began, read it as <strong>“the logged nights changed around this time”</strong>, not <strong>“solids fixed sleep.”</strong></p>
-<h2>What the Flutter app actually calculates</h2>
-<p>This is not a generic marketing chart. The current Flutter code builds the comparison from the same family record used by the sleep and weaning features.</p>
-<figure><img src="/obubba-solids-sleep-comparison-map.svg" alt="How OBubba divides measured nights around the first logged solid, requires five nights on each side and labels the average change" loading="lazy"/><figcaption>The exact current Flutter logic. It compares recorded wake averages; it does not calculate causation.</figcaption></figure>
+<h2>What the app actually calculates</h2>
+<p>This is not a generic marketing chart. The current code builds the comparison from the same family record used by the sleep and weaning features.</p>
+<figure><img src="/obubba-solids-sleep-comparison-map.svg" alt="How OBubba divides measured nights around the first logged solid, requires five nights on each side and labels the average change" loading="lazy"/><figcaption>The exact current logic. It compares recorded wake averages; it does not calculate causation.</figcaption></figure>
 <h3>1. It finds the earliest logged solid</h3>
 <p>The first dated solids entry becomes the dividing line. Nights before that date form one group; nights on or after it form the other.</p>
 <p>OBubba preserves the earliest-ever solids date in its lifetime summary, so “days weaning” can keep counting even after older detailed records move outside the app’s hot history window.</p>
@@ -830,7 +830,7 @@
 <p>The threshold prevents a tiny rounding wobble from being presented as a meaningful direction.</p>
 <h2>Where to find it in OBubba</h2>
 <p>Open <strong>Care → Weaning</strong>, then scroll to <strong>Weaning progress</strong>. The card appears after at least one solid has been logged. It combines the age-stage texture guide with iron-rich meals, unique foods, days since weaning began and, when there is enough sleep evidence, the before-and-after night-wake line.</p>
-<figure><img src="/obubba-weaning-progress-app.jpg" alt="The current OBubba Flutter Weaning Progress screen showing texture stage, iron-rich meals, unique foods and days weaning" loading="lazy"/><figcaption>A genuine current Flutter app screen with fictional example data. The night-wake line appears beneath these statistics only when at least five measured nights exist on each side of starting solids.</figcaption></figure>
+<figure><img src="/obubba-weaning-progress-app.jpg" alt="The current OBubba Weaning Progress screen showing texture stage, iron-rich meals, unique foods and days weaning" loading="lazy"/><figcaption>A genuine current app screen with fictional example data. The night-wake line appears beneath these statistics only when at least five measured nights exist on each side of starting solids.</figcaption></figure>
 <p>This is one reason a joined-up tracker can be more useful than separate food and sleep notes: the comparison is possible without asking an exhausted parent to rebuild two timelines from memory.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — log sleep, night wakes, milk and solids in one family timeline, then let the app surface the patterns with enough evidence to be worth checking.</p>
 <h2>If night wakes went down</h2>

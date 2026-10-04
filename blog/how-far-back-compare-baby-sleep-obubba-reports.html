@@ -802,7 +802,7 @@
     </header>
     <article class="section rich-text article">
       <p>One terrible Tuesday can make a whole month feel broken. One unusually long nap can make a new routine look solved.</p>
-<p>OBubba’s current Flutter app now lets parents open <strong>Care → Reports</strong> and choose <strong>1 week, 2 weeks, 1 month or 2 months</strong>. The tempting assumption is that the longest view must be the wisest. It is not.</p>
+<p>OBubba’s current app now lets parents open <strong>Care → Reports</strong> and choose <strong>1 week, 2 weeks, 1 month or 2 months</strong>. The tempting assumption is that the longest view must be the wisest. It is not.</p>
 <p><strong>The useful rule is: choose the shortest range that is long enough to contain the change you are trying to understand.</strong> Use one week for a quick check after a disrupted night; two weeks for a routine experiment; one month for a developing nap transition or nursery pattern; and two months only for broad context when enough recent data is actually available.</p>
 <p>Longer ranges smooth out noise, but they also mix together different ages, illnesses, travel, childcare days and routines. A cleaner graph is not automatically a more relevant answer.</p>
 <h2>The quick decision table</h2>
@@ -835,8 +835,8 @@
 <p>The app’s honest behaviour is to omit a headline delta when the earlier period has no usable data. That is preferable to inventing improvement. But the selected label can still suggest a broader evidence base than the cards actually contain.</p>
 <p>Use two months as a high-level retrospective only when you can see that the relevant weeks were logged and represented. Do not use it as the deciding view for a change that began five days ago; the other 55 days will mostly blur the question.</p>
 <h2>What changes when you tap a range in OBubba</h2>
-<p>The current Flutter Reports screen shows four chips above <strong>Insights overview</strong>.</p>
-<figure><img src="/obubba-reports-range-selector-app.jpg" alt="The genuine OBubba Flutter Reports screen with fictional review data. It shows the 1 week, 2 weeks, 1 month and 2 months chips above sleep, feeds and growth cards." loading="lazy"/><figcaption>A current Flutter simulator capture using fictional data. The selected range changes the headline comparison window; other report sections retain their own analysis periods.</figcaption></figure>
+<p>The current Reports screen shows four chips above <strong>Insights overview</strong>.</p>
+<figure><img src="/obubba-reports-range-selector-app.jpg" alt="The genuine OBubba Reports screen with fictional review data. It shows the 1 week, 2 weeks, 1 month and 2 months chips above sleep, feeds and growth cards." loading="lazy"/><figcaption>A current simulator capture using fictional data. The selected range changes the headline comparison window; other report sections retain their own analysis periods.</figcaption></figure>
 <p>Selecting a chip rebuilds the headline period and these calculations:</p>
 <ul><li><strong>Sleep value:</strong> average 24-hour sleep on qualifying days with both night sleep and at least one nap. If no complete 24-hour days qualify, the card falls back to average night sleep.</li><li><strong>Sleep delta:</strong> current average 24-hour sleep minus the previous period’s average, only when both are available.</li><li><strong>Feeds value:</strong> average milk feeds per logged day. Solids are deliberately excluded from this milk-feed number.</li><li><strong>Feed delta:</strong> current average milk feeds per day minus the previous period’s average when both periods contain data.</li><li><strong>Date label:</strong> “Last 7 days”, “Last 2 weeks”, “Last month” or “Last 2 months”, with calendar dates.</li></ul>
 <p>Today is excluded from per-day feed, nap and day-sleep averages when other logged days exist, because a half-finished morning would otherwise make the selected period look artificially low. Last night can still contribute as a completed night.</p>
@@ -847,7 +847,7 @@
 <p>| Reports component | Current basis | |---|---| | headline sleep and feed cards | selected 7, 14, 30 or 60 days | | growth card | latest weight vs previous weight measurement | | “Sleep across each day” chart | latest 7 points passed to the overview | | sleep-quality score and band | latest 7 nights | | longest stretch | best complete night in the latest 7 | | weekly digest | its own weekly rules | | nap rhythm | last 35 complete days, excluding today | | consistency | last 7 nights | | copied GP / health-visitor summary | last 7 days | | clinic PDF | its own 4-week summary |</p>
 <p>This design is not inherently wrong. A schedule-consistency score can be more useful over seven recent nights than across two developmental months. A clinical PDF should not silently change meaning because somebody tapped a chip above it.</p>
 <p>The problem is visual scope. The range control appears above the whole overview, so a parent can reasonably assume every card follows it. The app needs a small scope label on fixed-window cards: <strong>7-night quality</strong>, <strong>35-day nap rhythm</strong>, <strong>latest measurement</strong>, <strong>4-week PDF</strong>.</p>
-<p>There is also a visible inconsistency in the current Flutter source: the pill beside the “big picture” heading is hard-coded to <strong>7 days</strong>, even after the parent selects 2 weeks, 1 month or 2 months. The chips and date line update, but that pill does not. Until it is wired to the selected range, trust the highlighted chip and date line—not the pill.</p>
+<p>There is also a visible inconsistency in the current source: the pill beside the “big picture” heading is hard-coded to <strong>7 days</strong>, even after the parent selects 2 weeks, 1 month or 2 months. The chips and date line update, but that pill does not. Until it is wired to the selected range, trust the highlighted chip and date line—not the pill.</p>
 <h2>Why your comparison may disappear</h2>
 <p>No delta is often the most honest answer. It can mean:</p>
 <ol><li>the earlier period contains no relevant logs;</li><li>night and nap data were not both present for a 24-hour sleep average;</li><li>the selected range reaches beyond the recent history loaded by Reports;</li><li>feeds were logged on one side but not the other;</li><li>old days have been archived from the immediately readable store.</li></ol>
@@ -880,7 +880,7 @@
 <h3>Are days with no logs counted as zero sleep or zero feeds?</h3>
 <p>No. Empty days are excluded from the averages. That protects against false zeros, but it also means two periods can have different numbers of contributing days.</p>
 <h3>Does the selected range stay after I close the app?</h3>
-<p>Not currently. The Flutter provider is session-scoped and defaults to 1 week when rebuilt after relaunch.</p>
+<p>Not currently. The provider is session-scoped and defaults to 1 week when rebuilt after relaunch.</p>
 <h3>Can Reports diagnose a sleep regression or nap transition?</h3>
 <p>No. It can reveal a repeated pattern worth interpreting. Age, illness, feeding, development, environment and logging completeness still need human context.</p>
 <h2>Source and safety note</h2>

@@ -807,11 +807,11 @@
 <p><strong>The short answer:</strong> “Your wins this week” is a private, data-backed comparison of the latest seven calendar days with the seven before. It only appears when OBubba finds at least one change large enough to clear a fixed threshold with enough matching logs on both sides. It is not a streak, score, award or promise that sleep is solved.</p>
 <figure><img src="/obubba-your-wins-this-week-parent.jpg" alt="A tired parent quietly noticing progress on their phone while their baby sleeps on their back in a clear separate cot." loading="lazy"/><figcaption>A weekly win should feel like a quiet exhale, not a performance target.</figcaption></figure>
 <h2>Where the card appears</h2>
-<p>Open <strong>Care → Parent Room</strong>. When the current Flutter app can support a genuine positive comparison, <strong>Your wins this week</strong> appears near the top of the page, before <strong>A kind word</strong>.</p>
+<p>Open <strong>Care → Parent Room</strong>. When the current app can support a genuine positive comparison, <strong>Your wins this week</strong> appears near the top of the page, before <strong>A kind word</strong>.</p>
 <p>The position is deliberate. Reports is where a parent can inspect the wider numbers; Parent Room is where the app reflects back up to three concrete things that improved.</p>
-<figure><img src="/obubba-parent-room-app.jpg" alt="The real OBubba Flutter Parent Room with a time-aware welcome, kind word and private parent check-in. In this example no weekly win has cleared the display rules, so the wins card is absent." loading="lazy"/><figcaption>The current Flutter Parent Room does not reserve an empty or guilt-inducing space when there is no defensible weekly win.</figcaption></figure>
+<figure><img src="/obubba-parent-room-app.jpg" alt="The real OBubba Parent Room with a time-aware welcome, kind word and private parent check-in. In this example no weekly win has cleared the display rules, so the wins card is absent." loading="lazy"/><figcaption>The current Parent Room does not reserve an empty or guilt-inducing space when there is no defensible weekly win.</figcaption></figure>
 <p>Notice something useful in this real app capture: there is <strong>no blank wins panel</strong>. If there is too little data or no qualifying improvement, the widget shrinks away completely. OBubba does not turn “nothing to celebrate statistically” into “you failed this week”.</p>
-<h2>The exact Flutter logic behind a weekly win</h2>
+<h2>The exact logic behind a weekly win</h2>
 <p>OBubba builds two fixed windows:</p>
 <ul><li><strong>this week:</strong> today and the previous six calendar days</li><li><strong>the comparison week:</strong> the seven calendar days before that</li></ul>
 <p>It then calculates separate evidence gates for night wakes, daytime sleep and total 24-hour sleep. A general “two days logged” check allows the weekly digest to exist, but each win has stricter requirements of its own.</p>
@@ -829,7 +829,7 @@
 <p>That means opening the app at 10am—before later naps could happen—should not make today look like an abnormally short-sleep day.</p>
 <p>This line is descriptive, not a target. More daytime sleep is not automatically better for every age or situation; here it is simply one upward week-over-week movement the current digest labels as a win.</p>
 <h2>Why total sleep has the highest evidence bar</h2>
-<p>Total sleep combines night sleep and naps, so a half-logged day can distort it badly. The Flutter engine therefore requires at least <strong>five qualifying days in each week</strong>, and every qualifying day needs both:</p>
+<p>Total sleep combines night sleep and naps, so a half-logged day can distort it badly. The engine therefore requires at least <strong>five qualifying days in each week</strong>, and every qualifying day needs both:</p>
 <ul><li>real logged night sleep</li><li>at least one logged nap</li></ul>
 <p>Only an increase of about <strong>30 minutes a day or more</strong> creates the total-sleep win.</p>
 <p>An evening-to-morning sleep arc is not blindly treated as uninterrupted sleep. Where timed night wakes were logged inside that arc, the engine deducts their awake duration. Overlapping sleep arcs are merged so two parents recording the same stretch do not double the sleep total; near-simultaneous duplicate wake records are also de-duplicated.</p>
@@ -858,7 +858,7 @@
 <p>If you want the wider picture, open <strong>Care → Reports</strong>. If you want to understand why one rough night can hide progress, read <a href="/blog/is-baby-sleep-improving-compare-weeks-not-nights.html">Is my baby’s sleep actually improving? Compare weeks, not nights</a>.</p>
 <h2>What this feature says about OBubba</h2>
 <p>Many trackers are eager to congratulate. OBubba’s better choice is knowing when to stay quiet.</p>
-<p>The current Flutter implementation:</p>
+<p>The current implementation:</p>
 <ul><li>compares the baby with their own earlier week, not another baby</li><li>requires metric-specific data on both sides</li><li>treats absent logs as absent, not zero</li><li>ignores small movements below fixed thresholds</li><li>keeps the card out of view when no positive comparison is defensible</li><li>states the measured change without claiming a cause or diagnosis</li></ul>
 <p>That is the useful kind of encouragement: specific enough to trust, gentle enough not to become another standard a tired parent must meet.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — track sleep, feeds, nappies, weaning and development, then let the app surface the changes that are genuinely supported by your family’s own record.</p>
@@ -876,7 +876,7 @@
 <h3>Is the weekly win medical advice?</h3>
 <p>No. It is a private summary of home-entered logs. Seek professional advice if you are worried about your baby or about your own ability to cope, whatever the card says.</p>
 <h2>Source and product verification</h2>
-<ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li>OBubba Flutter source reviewed for this article: `weekly_digest.dart`, `day_metrics.dart`, `parent_room_screen.dart` and their focused tests, verified 5 May 2027.</li></ul>
+<ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li>OBubba source reviewed for this article: `weekly_digest.dart`, `day_metrics.dart`, `parent_room_screen.dart` and their focused tests, verified 5 May 2027.</li></ul>
 <p><em>OBubba is a tracking and education tool, not medical advice. A positive weekly comparison cannot assess whether a baby is well or prove that a routine caused the change.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">

@@ -803,7 +803,7 @@
     <article class="section rich-text article">
       <p>At 3am, the house can feel impossibly small. There is the baby in your arms, the clock doing something unhelpful, and the suspicion that every other family in the world is asleep.</p>
 <p>Open OBubba’s Track clock at night and tiny lights drift through the sky. They are <strong>fireflies: a symbol of other parents awake, and a reminder that this hour belongs to more than one household.</strong></p>
-<p>There is also an important technical truth. In the Flutter build reviewed for this article, <strong>live anonymous presence is temporarily paused</strong>. The lights you see now are a gently changing ambient scene, not a literal headcount of people online. The design meaning remains “you are not the only parent awake”; the current implementation should not be read as “every individual light equals one parent right now.”</p>
+<p>There is also an important technical truth. In the build reviewed for this article, <strong>live anonymous presence is temporarily paused</strong>. The lights you see now are a gently changing ambient scene, not a literal headcount of people online. The design meaning remains “you are not the only parent awake”; the current implementation should not be read as “every individual light equals one parent right now.”</p>
 <p>That distinction does not make the idea less lovely. It makes the promise clearer.</p>
 <figure><img src="/obubba-fireflies-3am.jpg" alt="A parent holds an awake baby in a dim nursery while small lights glow beyond the window." loading="lazy"/><figcaption>A difficult night can still be a shared human hour. OBubba’s fireflies are designed to offer warmth without turning another family’s private care into content.</figcaption></figure>
 <h2>The short answer</h2>
@@ -812,8 +812,8 @@
 <p>They do <strong>not</strong> show who is awake, where anybody lives, what their baby is doing or whether somebody can see you. They are not a chat, a map, a monitoring service or an emergency signal.</p>
 <p>In the current reviewed build, the clock displays between 50 and 72 ambient lights. No live-presence heartbeat is sent and no live-presence list is read. That is why an exact “parents online” interpretation would be misleading today.</p>
 <h2>Where the fireflies appear</h2>
-<figure><img src="/obubba-fireflies-current-app.jpg" alt="The genuine OBubba Flutter night clock with its firefly sky and message of hope." loading="lazy"/><figcaption>Genuine simulator capture from the current Flutter app using a fictional baby profile. The fireflies sit around the Track clock during night and twilight phases.</figcaption></figure>
-<p>The lights belong to the <strong>Track clock</strong>, not every screen in the app. The Flutter sky changes with the time of day:</p>
+<figure><img src="/obubba-fireflies-current-app.jpg" alt="The genuine OBubba night clock with its firefly sky and message of hope." loading="lazy"/><figcaption>Genuine simulator capture from the current app using a fictional baby profile. The fireflies sit around the Track clock during night and twilight phases.</figcaption></figure>
+<p>The lights belong to the <strong>Track clock</strong>, not every screen in the app. The sky changes with the time of day:</p>
 <ul><li>daylight uses the day scene without fireflies;</li><li>civil and astronomical twilight can bring the lights in;</li><li>deep night gives them their strongest visual role; and</li><li>moving to another main tab stops the clock from doing unnecessary presence work.</li></ul>
 <p>The app keeps a pool of 72 possible firefly positions. Individual lights fade in and out gradually and drift on a slow cycle, so the sky feels alive rather than flashing from one number to another. Density adjusts with the available space, and the positions stay stable enough that the scene does not jitter every time the interface rebuilds.</p>
 <p>Those details are small, but they explain why the effect feels calmer than confetti. The fireflies are part of the clock’s night language: navy sky, low contrast, warm points of gold.</p>
@@ -822,7 +822,7 @@
 <p>The emotional fact at 3am is often: <em>I feel like I am the only person here.</em></p>
 <p>OBubba cannot honestly promise to remove loneliness. It can avoid making the moment colder. The fireflies add a tiny piece of social imagination without creating another social network to manage. You do not need a profile picture, a post, a reply or a performance. You can notice the light, log what matters and put the phone down.</p>
 <p>One UK App Store reviewer described loving the fireflies because it was comforting to know another mum was awake. That is the human need the feature is trying to meet. The safest wording, while live presence is paused, is simpler: <strong>the fireflies are a symbol of parents awake tonight.</strong></p>
-<h2>What the current Flutter build actually does</h2>
+<h2>What the current build actually does</h2>
 <p>The presence service has a deliberate master switch. In the version reviewed on 13 May 2027, that switch is off as part of a temporary cost freeze.</p>
 <p>With it off:</p>
 <ul><li>the app performs zero presence writes;</li><li>the night clock performs zero presence reads;</li><li>a slowly changing number between 50 and 72 controls the ambient firefly density; and</li><li>the real online-parent count remains zero inside the provider.</li></ul>
@@ -862,7 +862,7 @@
 <p>The goal is not maximum data. It is less remembering while your hands are already full.</p>
 <h2>The honest bottom line</h2>
 <p>OBubba’s fireflies are one of the app’s most distinctive ideas because they are not another chart. They acknowledge something baby software often ignores: the person holding the phone may be tired, isolated and doing loving work nobody else can see.</p>
-<p>In the current reviewed Flutter build, the lights are ambient. Treat them as a <strong>symbol of hope and shared night care</strong>, not a live parent count. If anonymous live presence is re-enabled, the underlying design limits it to recent app activity, excludes the user themselves and keeps baby records and location completely outside the exchange.</p>
+<p>In the current reviewed build, the lights are ambient. Treat them as a <strong>symbol of hope and shared night care</strong>, not a live parent count. If anonymous live presence is re-enabled, the underlying design limits it to recent app activity, excludes the user themselves and keeps baby records and location completely outside the exchange.</p>
 <p>That is the promise worth keeping: a little light, with a firm boundary around your family.</p>
 <p><strong><a href="/app.html">See the OBubba night clock →</a></strong> — free core tracking, a calmer night interface and no need to make a difficult hour look tidy.</p>
 <h2>Quick answers</h2>
@@ -879,8 +879,8 @@
 <h3>Why might there be more lights than recent users?</h3>
 <p>The live design uses a minimum visual glow when the real count is below five or the query fails. This avoids a lonely near-empty sky and avoids presenting tiny exact groups. No factual count should be claimed while that floor is active.</p>
 <h2>Product verification</h2>
-<ul><li>Current Flutter surfaces reviewed: the app-wide presence heartbeat, night-clock count provider, Track clock visibility rules, sky phases, firefly animation and Luna’s curated firefly answer.</li><li>79 focused Flutter tests passed on 13 May 2027, covering presence filtering, the 15-minute window, self-exclusion, duplicate handling, quiet-count floors, sky phases, Coach answers and primary UI compilation.</li><li>The app image above is a genuine repository simulator capture using a fictional baby profile and a forced night-clock time. No production family data appears in it.</li></ul>
-<p><em>Feature behaviour and wording can change. This article documents the reviewed Flutter build, including its paused live-presence switch. OBubba is a tracking, planning and educational tool; it does not monitor your baby or replace a midwife, health visitor, GP or emergency service.</em></p>
+<ul><li>Current surfaces reviewed: the app-wide presence heartbeat, night-clock count provider, Track clock visibility rules, sky phases, firefly animation and Luna’s curated firefly answer.</li><li>79 focused tests passed on 13 May 2027, covering presence filtering, the 15-minute window, self-exclusion, duplicate handling, quiet-count floors, sky phases, Coach answers and primary UI compilation.</li><li>The app image above is a genuine repository simulator capture using a fictional baby profile and a forced night-clock time. No production family data appears in it.</li></ul>
+<p><em>Feature behaviour and wording can change. This article documents the reviewed build, including its paused live-presence switch. OBubba is a tracking, planning and educational tool; it does not monitor your baby or replace a midwife, health visitor, GP or emergency service.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>

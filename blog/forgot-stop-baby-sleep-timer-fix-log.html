@@ -852,9 +852,9 @@
 <ul><li>neither start nor end is credible</li><li>the entry belongs to the wrong baby</li><li>it duplicates another complete record</li><li>a pocket tap started a sleep that never happened</li><li>an abandoned timer is so old that nobody can reconstruct it responsibly</li></ul>
 <p>Keep a note only if it will help a handover or professional conversation. “Sleep unknown during car journey” may be more truthful than a guessed two-hour nap.</p>
 <p>Tracking should reduce cognitive load. It should not make a tired parent produce certainty they do not have.</p>
-<h2>How the actual OBubba Flutter timer repairs mistakes</h2>
-<p>OBubba&#39;s current Flutter sleep timer stores a live nap or bedtime as a start with no end. That open entry drives the on-screen count-up clock and the native running-timer surfaces. It is not considered a completed sleep until a real end is supplied.</p>
-<figure><img src="/obubba-app-baby-sleep-clock-screenshot.jpg" alt="The current OBubba Flutter Track screen showing a live nap timer, its original start time, a wake prediction, Edit start and Wake now controls." loading="lazy"/><figcaption>The real Flutter Track view keeps the active baby, viewed date and live sleep state visible. Edit start corrects when sleep began; Wake now finishes the existing arc rather than creating a second nap.</figcaption></figure>
+<h2>How the actual OBubba timer repairs mistakes</h2>
+<p>OBubba&#39;s current sleep timer stores a live nap or bedtime as a start with no end. That open entry drives the on-screen count-up clock and the native running-timer surfaces. It is not considered a completed sleep until a real end is supplied.</p>
+<figure><img src="/obubba-app-baby-sleep-clock-screenshot.jpg" alt="The current OBubba Track screen showing a live nap timer, its original start time, a wake prediction, Edit start and Wake now controls." loading="lazy"/><figcaption>The real Track view keeps the active baby, viewed date and live sleep state visible. Edit start corrects when sleep began; Wake now finishes the existing arc rather than creating a second nap.</figcaption></figure>
 <p>The implementation includes several recovery paths built around tired-parent mistakes:</p>
 <h3>1. Edit the start while the timer is running</h3>
 <p><strong>Edit start</strong> changes the stored start time and updates the visible count-up. Leaving the end empty keeps baby marked as still asleep; changing a note or start does not silently kill the live timer.</p>

@@ -817,7 +817,7 @@
 <p>| Option | What happens | Use it for | |---|---|---| | <strong>Connect — live sync</strong> | Both phones read and write the same baby&#39;s changing timeline | Partners, co-parents and regular shared care | | <strong>Import a separate copy instead</strong> | A new independent baby record is created on this phone | Private analysis, an offline snapshot or a deliberate fork |</p>
 <p>A separate copy is not family sharing. A feed logged into that copy will not appear on the original phone, and later changes on the original will not flow into the copy.</p>
 <p>If the goal is “we both need to know what happened today”, choose live sync.</p>
-<figure><img src="/obubba-connect-live-family-sync.jpg" alt="The real OBubba Flutter connection screen where a family member enters a sync code and chooses Connect — live sync or a separate one-time copy." loading="lazy"/><figcaption>Current OBubba Flutter Connect your account screen using an empty fictional code field.</figcaption></figure>
+<figure><img src="/obubba-connect-live-family-sync.jpg" alt="The real OBubba connection screen where a family member enters a sync code and chooses Connect — live sync or a separate one-time copy." loading="lazy"/><figcaption>Current OBubba Connect your account screen using an empty fictional code field.</figcaption></figure>
 <h2>What a connected carer can see and do</h2>
 <p>The current OBubba Family sharing card is per child. A person who joins Oliver&#39;s code can see and add logs for Oliver only. They do not automatically gain access to another child on the owner&#39;s account.</p>
 <p>That matters for blended families, co-parents with children in different households and relatives who help with one baby but not another.</p>
@@ -847,7 +847,7 @@
 <p>For medicine, uncertainty is different: confirm the actual product, amount and time before saving. Never use a shared log to calculate a dose. See <a href="/blog/baby-medicine-log-prevent-double-dosing.html">how to prevent double-dosing between carers</a>.</p>
 <h2>What happens when both phones log at once?</h2>
 <p>Simultaneous care is normal: one parent may stop a nap while the other logs a nappy.</p>
-<p>OBubba&#39;s Flutter sync path merges entries additively by their stable IDs. A phone working from an older snapshot should not erase a newer entry that exists only on the other phone. If both copies contain the same entry and one has a newer edit timestamp, the newer version can update that entry without replacing the whole day.</p>
+<p>OBubba&#39;s sync path merges entries additively by their stable IDs. A phone working from an older snapshot should not erase a newer entry that exists only on the other phone. If both copies contain the same entry and one has a newer edit timestamp, the newer version can update that entry without replacing the whole day.</p>
 <p>The same principle protects more than basic logs:</p>
 <ul><li>day plans and routine anchors are combined rather than replaced wholesale</li><li>milestone and tooth changes use deletion markers so an old device does not resurrect something deliberately removed</li><li>an entry moved across midnight is collapsed to one current copy rather than kept in both days</li><li>deleting a visible day does not remove a new partner entry that arrived after the screen loaded</li></ul>
 <p>These safeguards protect against technical conflicts. They cannot resolve a factual disagreement such as two carers independently logging the same unlabelled event. That is why the five household rules above still matter.</p>

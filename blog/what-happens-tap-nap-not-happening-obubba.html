@@ -805,7 +805,7 @@
 <p>Then OBubba shows <strong>Nap not happening?</strong> with four choices:</p>
 <ul><li>Try again in 15 min</li><li>Rescue nap (walk or drive)</li><li>Rest time (cot, no pressure)</li><li>Skip &amp; bring bedtime earlier</li></ul>
 <p>Which one does the app actually think fits—and what happens after you tap it?</p>
-<p><strong>The current Flutter app highlights one option using a small on-device decision engine.</strong> It looks at how overdue the predicted nap is, whether significant sleep debt is present, whether this is the final planned nap, how far bedtime is away and the maximum wake window for the baby’s age context. The AI coach is not making this choice.</p>
+<p><strong>The current app highlights one option using a small on-device decision engine.</strong> It looks at how overdue the predicted nap is, whether significant sleep debt is present, whether this is the final planned nap, how far bedtime is away and the maximum wake window for the baby’s age context. The AI coach is not making this choice.</p>
 <p>All four options remain tappable. The highlight is a suggestion, not an instruction, and the engine cannot see sleepy cues, illness, a childcare nap that was never logged or whether a travel sleep would be safe.</p>
 <h2>When the card appears</h2>
 <p>The card does not appear the instant a prediction reaches zero. In the current Track screen it needs all of these conditions:</p>
@@ -859,7 +859,7 @@
 <p>The current tests include a real-shape eight-month scenario where tapping Skip makes bedtime strictly earlier than the no-skip calculation. The same resolved bedtime also moves the wind-down reminder earlier, so the clock and notification do not disagree.</p>
 <h2>The real app context</h2>
 <p>The decision card sits below OBubba’s live Track clock. That clock is already deciding whether to count down to a future nap, show how overdue the next nap is or pivot towards bedtime.</p>
-<figure><img src="/obubba-live-nap-fallback-app.jpg" alt="The genuine current OBubba Flutter Track clock, where live nap and bedtime predictions lead into the Nap not happening fallback." loading="lazy"/><figcaption>The fallback is attached to the same live prediction surface. It does not create a second independent schedule.</figcaption></figure>
+<figure><img src="/obubba-live-nap-fallback-app.jpg" alt="The genuine current OBubba Track clock, where live nap and bedtime predictions lead into the Nap not happening fallback." loading="lazy"/><figcaption>The fallback is attached to the same live prediction surface. It does not create a second independent schedule.</figcaption></figure>
 <p>Once Skip is active, the nap is no longer treated as pending. This prevents the absurd combination of <strong>Nap overdue</strong> on the main clock and <strong>Heading to an earlier bedtime</strong> below it.</p>
 <p>The choice survives navigation and an app restart because it is stored locally, scoped to the active child and date. It resets naturally on a different calendar day. Switching children reads a separately scoped choice, so one child’s missed nap should not pull another child’s bedtime.</p>
 <h2>What the recommendation does not know</h2>

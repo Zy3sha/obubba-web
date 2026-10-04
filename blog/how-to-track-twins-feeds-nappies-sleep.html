@@ -843,10 +843,10 @@
 <p>One twin may show these signs before the other. The <a href="https://www.nhs.uk/baby/newborn-twins-and-multiples/feeding-twins-and-multiples/" target="_blank" rel="noopener noreferrer">NHS feeding twins guidance</a> explicitly notes that one baby may be ready for solids before their sibling.</p>
 <p>Keep each baby&#39;s food and allergen record separate. Log what that baby ate and any reaction. Never copy an allergen exposure, symptom or medicine entry to a sibling because they sat at the same meal.</p>
 <p>This is where individual records are more than organisation: they help you tell a clinician which baby had which food, when, and what followed.</p>
-<h2>How the actual OBubba Flutter app handles multiple babies</h2>
-<p>OBubba&#39;s current Flutter app stores a baby roster on the device and gives every child a stable identity. Two unnamed babies with the same birthday are not collapsed into one record just because their basic details match.</p>
+<h2>How the actual OBubba app handles multiple babies</h2>
+<p>OBubba&#39;s current app stores a baby roster on the device and gives every child a stable identity. Two unnamed babies with the same birthday are not collapsed into one record just because their basic details match.</p>
 <p>From <strong>Account → Babies</strong>, the active baby has a check mark. Tap <strong>Switch</strong> beside the other baby, or <strong>Add another baby</strong> to extend the family. The first baby is free; adding a second or more is part of Premium&#39;s unlimited-babies support.</p>
-<figure><img src="/obubba-multi-baby-account-app.jpg" alt="The current OBubba Flutter Account screen showing the family constellation, active example baby and family sync status." loading="lazy"/><figcaption>Captured from the current OBubba Flutter review build. Account keeps the active baby and connected family visible; additional babies are managed from the Babies panel.</figcaption></figure>
+<figure><img src="/obubba-multi-baby-account-app.jpg" alt="The current OBubba Account screen showing the family constellation, active example baby and family sync status." loading="lazy"/><figcaption>Captured from the current OBubba review build. Account keeps the active baby and connected family visible; additional babies are managed from the Babies panel.</figcaption></figure>
 <p>The app&#39;s real tracking behaviour is deliberately child-aware:</p>
 <ul><li>a live breastfeeding timer remains pinned to the baby who started it, even if you switch the active profile before saving</li><li>an event copied with <strong>Log for all</strong> becomes a separate entry for each baby rather than one ambiguous shared object</li><li>each copied event gets its own identity, so one can be corrected without silently rewriting the sibling&#39;s history</li><li>sleep and night context are recalculated for each child, because twins may be out of sync</li><li>Undo includes the sibling entries created by that action</li><li>one failed sibling save does not pretend the entire group failed and invite duplicate retries</li></ul>
 <p>The same boundary continues beyond the daily log. Day tags, sleep history, sleep plans, night-weaning work, weaning readiness, milestones, teeth, photos and reminders stay attached to the relevant child.</p>
@@ -881,7 +881,7 @@
 <h3>What if the twins have the same birthday and no names yet?</h3>
 <p>Give each a stable temporary label and colour, and use it consistently. OBubba uses a child identity behind the scenes, so siblings are not treated as the same baby merely because names or birth dates match.</p>
 <h3>Does OBubba keep a timer with the right baby if I switch profiles?</h3>
-<p>Yes. The current Flutter breastfeeding timer retains the child identity that started it. Profile switching does not silently move that running feed to the other baby.</p>
+<p>Yes. The current breastfeeding timer retains the child identity that started it. Profile switching does not silently move that running feed to the other baby.</p>
 <h3>Is a twin baby tracker a medical record?</h3>
 <p>No. It is a parent-held memory and handover tool. It cannot confirm intake, diagnose illness, verify a dose, assess safe sleep or replace neonatal, midwifery or medical advice.</p>
 <h2>Sources and further support</h2>

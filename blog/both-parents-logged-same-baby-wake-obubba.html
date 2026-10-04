@@ -802,7 +802,7 @@
     </header>
     <article class="section rich-text article">
       <p>It is 2am. One parent taps <strong>Wake</strong> while settling the baby. The other hears the crying, opens the shared tracker and records it too. In the morning there are two entries—2:00 and 2:02—for one physical waking.</p>
-<p><strong>OBubba&#39;s current Flutter sleep engine treats near-simultaneous night-wake entries within three minutes as one waking for its sleep calculations. It keeps the earliest time and the most useful resolved duration, so the wake count and actual-sleep total are not doubled.</strong></p>
+<p><strong>OBubba&#39;s current sleep engine treats near-simultaneous night-wake entries within three minutes as one waking for its sleep calculations. It keeps the earliest time and the most useful resolved duration, so the wake count and actual-sleep total are not doubled.</strong></p>
 <p>That is a calculation safeguard, not a silent eraser. The original timeline entries can still exist for you to inspect or correct. OBubba protects the analysis while leaving human meaning in human hands.</p>
 <h2>The 2am example</h2>
 <p>Suppose two connected carers record:</p>
@@ -811,7 +811,7 @@
 <ul><li><strong>one</strong> waking, not two</li><li><strong>2:00am</strong> as the event time</li><li><strong>25 minutes</strong> as the resolved awake duration</li><li>25 minutes deducted from sleep <strong>once</strong>, not 20 + 25</li></ul>
 <figure><img src="/obubba-shared-wake-dedup-logic.svg" alt="A mobile-readable diagram showing two carers&#39; near-simultaneous wake logs becoming one canonical wake, with awake time deducted once." loading="lazy"/><figcaption>Two entries remain inspectable, while OBubba&#39;s canonical sleep calculation treats the near-simultaneous pair as one physical waking.</figcaption></figure>
 <p>This keeps several answers in agreement: number of wakes, total awake minutes, longest stretch and actual night sleep. A duplicate should not make one difficult resettle look like two wakings or remove twice as much sleep.</p>
-<h2>The exact rule the Flutter app uses</h2>
+<h2>The exact rule the app uses</h2>
 <p>The current engine sorts night wakes chronologically, then compares each one with the growing set of accepted events.</p>
 <h3>Wakes within three minutes are grouped</h3>
 <p>The comparison is inclusive: zero, one, two or three minutes apart can be treated as the same waking. It also understands midnight correctly, so 11:59pm and 12:01am are two minutes apart—not 1,438 minutes apart.</p>
@@ -846,13 +846,13 @@
 <h2>Make shared night tracking calmer</h2>
 <p>The best de-duplication is still a simple household handover:</p>
 <ol><li>Use <strong>Connect—live sync</strong> so both phones share the same changing baby record.</li><li>Let the person doing the care log the event.</li><li>At shift change, check the last wake, feed, nappy and any running timer.</li><li>Before backfilling from memory, refresh the timeline.</li><li>Correct an existing event instead of creating a second candidate.</li></ol>
-<figure><img src="/obubba-shared-care-live-sync-app.jpg" alt="The genuine OBubba Flutter connection screen where a second carer chooses Connect—live sync to share the same changing baby record." loading="lazy"/><figcaption>OBubba Family Sharing connects another phone to the same live baby timeline; importing a separate copy is a different choice.</figcaption></figure>
+<figure><img src="/obubba-shared-care-live-sync-app.jpg" alt="The genuine OBubba connection screen where a second carer chooses Connect—live sync to share the same changing baby record." loading="lazy"/><figcaption>OBubba Family Sharing connects another phone to the same live baby timeline; importing a separate copy is a different choice.</figcaption></figure>
 <p>On the phone with the baby&#39;s existing history, open <strong>Account → Family sharing → Share with family</strong> and send the baby&#39;s sync code privately. On the second phone, choose <strong>Connect another device</strong>, enter that code and select <strong>Connect—live sync</strong>.</p>
 <p>Do not choose a separate imported copy when your aim is a shared household timeline. A separate copy is deliberately independent, so later changes do not flow between phones.</p>
 <p>For the full setup, privacy and access-removal details, read <a href="/blog/share-baby-tracker-with-partner-without-duplicate-logs.html">how to share a baby tracker with your partner without duplicate logs</a>. If you want to understand the actual-sleep arithmetic beyond duplicate events, see <a href="/blog/how-much-baby-actually-slept-last-night.html">how much your baby actually slept last night</a>.</p>
 <h2>The quiet promise behind shared care</h2>
 <p>A good two-parent tracker should not make carers coordinate perfectly at 2am before it can tell the truth in the morning.</p>
-<p>OBubba still encourages one clean timeline, but its Flutter engine is deliberately hardened for the messiness of real care: two phones, delayed sync, open timers, nested naps and one waking recorded twice by two attentive people.</p>
+<p>OBubba still encourages one clean timeline, but its engine is deliberately hardened for the messiness of real care: two phones, delayed sync, open timers, nested naps and one waking recorded twice by two attentive people.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — share one live baby timeline and get sleep answers designed not to punish a duplicate tap.</p>
 <h2>Quick answers</h2>
 <h3>Will OBubba delete my partner&#39;s duplicate wake?</h3>

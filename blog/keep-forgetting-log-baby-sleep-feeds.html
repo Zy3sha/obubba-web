@@ -842,9 +842,9 @@
 <p>Follow the baby first. The NHS recommends responsive feeding: offer milk in response to hunger cues and let the baby pause or finish, rather than feeding to a rigid app schedule.</p>
 <p>For bottles, log the milk type, time and <strong>amount taken</strong>. For direct breastfeeding, side and duration may help a handover, but they do not reveal the amount transferred. For either method, comfort, swallowing, responsive cues and the wider clinical picture matter more than a streak of completed fields.</p>
 <p>If intake, growth or hydration is a clinical concern, a casual partial record is not enough for reassurance. Follow the complete record your midwife, health visitor or feeding team asks for, and seek advice if your baby is feeding poorly or seems unwell.</p>
-<h2>How the real OBubba Flutter app handles imperfect history</h2>
+<h2>How the real OBubba app handles imperfect history</h2>
 <p>The current OBubba app does not require a perfect diary before it can help. Several of its sleep and feeding summaries are designed around the difference between <strong>no event</strong> and <strong>no evidence</strong>.</p>
-<figure><img src="/obubba-quick-voice-log-app-20261130.jpg" alt="The real OBubba Quick Log screen turns one plain-English sentence into separate entries for the parent to review before saving." loading="lazy"/><figcaption>OBubba&#39;s current Flutter Quick Log previews parsed baby-care entries before they are saved.</figcaption></figure>
+<figure><img src="/obubba-quick-voice-log-app-20261130.jpg" alt="The real OBubba Quick Log screen turns one plain-English sentence into separate entries for the parent to review before saving." loading="lazy"/><figcaption>OBubba&#39;s current Quick Log previews parsed baby-care entries before they are saved.</figcaption></figure>
 <h3>It can start with an age-based sleep baseline</h3>
 <p>With a known age and a current wake anchor, the nap predictor can begin from an expert age baseline while it learns this baby&#39;s rhythm. Personal history then changes the estimate and its confidence. No app can personalise from events it has never seen, but useful guidance does not have to wait for a month-long perfect streak.</p>
 <h3>A blank day does not become a zero day</h3>
@@ -852,7 +852,7 @@
 <h3>Thin evidence can end in not enough data</h3>
 <p>For experiments and several pattern checks, thin evidence can produce <strong>not enough data</strong> rather than a result. That safeguard does not make every explanation a diagnosis, and parents should treat pattern suggestions as possibilities rather than clinical conclusions.</p>
 <h3>Catch-up entries go to the day they actually happened</h3>
-<p>You can add a past event later. The current Flutter bucketing logic handles the easy-to-misplace early-hours case: a 2am wake entered while reviewing the previous evening is attached to the morning-after date. It also re-buckets an edited event when its corrected time crosses into another day.</p>
+<p>You can add a past event later. The current bucketing logic handles the easy-to-misplace early-hours case: a 2am wake entered while reviewing the previous evening is attached to the morning-after date. It also re-buckets an edited event when its corrected time crosses into another day.</p>
 <h3>Quick Log reduces the taps</h3>
 <p>Type or say one plain-English sentence, such as “fed 120ml at 2:15am, napped 1pm to 2:30pm”. Quick Log separates it into a preview list so you can check the types, times and amount before saving. If speech input is unavailable, typing still works.</p>
 <p>That preview matters. Fast logging should reduce friction without turning a misunderstood sentence into unquestioned history.</p>

@@ -819,7 +819,7 @@
 <p>The best setting is the one your exhausted brain can predict.</p>
 <h2>The three layers OBubba keeps separate</h2>
 <h3>1. Storage: the event keeps its real local date</h3>
-<p>The Flutter app stores a live 2:05am event under Tuesday&#39;s local calendar key. It does not pretend that the clock still says Monday. Local dates are used deliberately so the family does not inherit confusing UTC date shifts.</p>
+<p>The app stores a live 2:05am event under Tuesday&#39;s local calendar key. It does not pretend that the clock still says Monday. Local dates are used deliberately so the family does not inherit confusing UTC date shifts.</p>
 <p>This makes edits, exports and chronology honest. A 2am wake happened after midnight, even when the family describes it as part of Monday night.</p>
 <h3>2. Display: you choose how the log reads</h3>
 <p>Go to <strong>Account → Preferences → Your day → Day grouping</strong> and choose:</p>
@@ -849,9 +849,9 @@
 <p>An overnight sleep timer already belongs to the date on which the arc began. The display helper moves night-wake and night-feed moments, not complete sleep or nap arcs. This avoids copying or duplicating a block that already spans midnight correctly.</p>
 <h3>The next morning&#39;s wake stays with the new day</h3>
 <p>The 6:50am “woke for the day” entry is the boundary, not another tail event to pull backwards. The next care day begins there.</p>
-<h2>How the current Flutter screen represents the night</h2>
+<h2>How the current screen represents the night</h2>
 <p>The Track clock is designed as a continuous 24-hour dial, so a running bedtime can cross 12am without being visually chopped into two sleeps.</p>
-<figure><img src="/obubba-app-baby-sleep-clock-screenshot.jpg" alt="The real OBubba Flutter Track clock at 3:22am, still showing one continuous baby sleep and a date navigator above it." loading="lazy"/><figcaption>Current OBubba Flutter Track screen using a fictional baby profile. Day grouping changes date navigation and log presentation; the night clock and analysis still reconstruct the full physical night.</figcaption></figure>
+<figure><img src="/obubba-app-baby-sleep-clock-screenshot.jpg" alt="The real OBubba Track clock at 3:22am, still showing one continuous baby sleep and a date navigator above it." loading="lazy"/><figcaption>Current OBubba Track screen using a fictional baby profile. Day grouping changes date navigation and log presentation; the night clock and analysis still reconstruct the full physical night.</figcaption></figure>
 <p>In the screenshot, the phone clock reads 3:22am while the Track header still shows the evening-side date. That is the Wake-to-wake idea in practice: the family is still inside the night that began after that date&#39;s daytime care.</p>
 <p>The same night remains analytically complete in Calendar day mode. Only the visible date grouping changes.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — log one night naturally, choose the date view that makes sense to your family, and let the app do the midnight stitching underneath.</p>
@@ -870,7 +870,7 @@
 <h2>What happens when you add a forgotten 2am wake later?</h2>
 <p>Back-filling is where date confusion can become a real data bug.</p>
 <p>Suppose it is Tuesday morning and you open Monday to add the wake you forgot. A naive app might store “2:00am” on Monday because Monday is the selected screen. The night reader would then see an early-hours event on the wrong side of the bedtime boundary and could attach it to Sunday night—or drop it from Monday night entirely.</p>
-<p>OBubba&#39;s current Flutter repository corrects that. When a parent adds an early-hours night wake or night feed while reviewing a past evening, the app rolls the event forward to the morning-after calendar bucket. The timestamp still says 2am, and the Monday-night analysis then finds it where it physically belongs.</p>
+<p>OBubba&#39;s current repository corrects that. When a parent adds an early-hours night wake or night feed while reviewing a past evening, the app rolls the event forward to the morning-after calendar bucket. The timestamp still says 2am, and the Monday-night analysis then finds it where it physically belongs.</p>
 <p>The code also handles edits differently from new entries. An early-hours event already stored on Tuesday must not roll forward to Wednesday merely because the parent opens and saves it unchanged. Tests protect that no-op edit from moving the event twice.</p>
 <p>Date stepping uses calendar arithmetic rather than adding or subtracting a fixed 24 hours, so spring and autumn clock changes do not push the event onto the wrong day.</p>
 <h2>Why the morning cutoff is 11am</h2>

@@ -804,7 +804,7 @@
       <p>A small bend on a growth chart can make a parent’s stomach drop. Then OBubba may show a surprisingly calm card:</p>
 <p>&gt; <strong>Weight eased a band, but feeding looks solid.</strong> &gt; Weight moved from around the 50th to the 40th centile. Feeds averaged roughly 7/day — often just settling onto their own curve.</p>
 <p>What does that actually mean?</p>
-<p>The current Flutter app has joined two parts of your own record: <strong>the latest two valid weights</strong> and <strong>the frequency of recorded milk-feed events between them</strong>. It is not looking at a photo, listening to a feed or diagnosing growth faltering. “Looks solid” means the average on days with usable feed logs met an age-based product floor.</p>
+<p>The current app has joined two parts of your own record: <strong>the latest two valid weights</strong> and <strong>the frequency of recorded milk-feed events between them</strong>. It is not looking at a photo, listening to a feed or diagnosing growth faltering. “Looks solid” means the average on days with usable feed logs met an age-based product floor.</p>
 <p>That distinction matters. The card can be a proportionate antidote to panic after one centile boundary is crossed. It must not become false reassurance when a baby seems unwell, feeding is painful, nappies change, or a parent or professional is concerned.</p>
 <h2>The plain-English translation</h2>
 <p>When this exact low-urgency card appears, OBubba has found:</p>
@@ -849,11 +849,11 @@
 <p>These floors are <strong>OBubba product heuristics</strong>, not NHS feeding prescriptions or clinical thresholds. Feeding frequency varies with age, feeding method, milk supply, appetite, illness, solids and how a family records events. An older baby’s four large milk feeds cannot be directly compared with a newborn’s eight or more breastfeeds.</p>
 <p>There is also a timing limitation: the floor comes from the baby’s <strong>current</strong> age, not their age during each logged day. If the latest weight is old, a baby may have moved into a lower-frequency age band since the weigh-in window. That can tilt the current verdict towards reassurance. This is one reason to read the card as a retrospective pattern, not a live feeding assessment.</p>
 <h2>Why “feeding looks solid” is deliberately not “intake is good”</h2>
-<p>The Flutter card knows how many relevant feed records exist. It does not know:</p>
+<p>The card knows how many relevant feed records exist. It does not know:</p>
 <ul><li>how much milk the baby transferred at the breast;</li><li>the true volume taken from a bottle;</li><li>whether feeds were comfortable or effective;</li><li>whether there was persistent vomiting;</li><li>wet- and dirty-nappy changes;</li><li>alertness, tone, skin colour or hydration;</li><li>length or head-circumference trend;</li><li>measurement conditions; or</li><li>a health professional’s examination.</li></ul>
 <p>The insight is named Growth × Feeding because it connects two logged categories. It is not a substitute for combining growth, feeding behaviour, development and clinical context.</p>
 <p>The genuine Growth page makes that broader intention visible: weight sits alongside length and head circumference, with a WHO curve and the reminder that growth is “a constellation, not a competition.” This particular card, however, uses <strong>weight only</strong>.</p>
-<figure><img src="/obubba-growth-curve-app.jpg" alt="OBubba’s genuine Flutter Growth page presents weight, length and head circumference together with a WHO curve." loading="lazy"/><figcaption>The app’s Growth page is designed to show a wider constellation of measurements. The specific Growth × Feeding card described here calculates from weight entries and recorded milk-feed frequency only.</figcaption></figure>
+<figure><img src="/obubba-growth-curve-app.jpg" alt="OBubba’s genuine Growth page presents weight, length and head circumference together with a WHO curve." loading="lazy"/><figcaption>The app’s Growth page is designed to show a wider constellation of measurements. The specific Growth × Feeding card described here calculates from weight entries and recorded milk-feed frequency only.</figcaption></figure>
 <h2>A worked example</h2>
 <p>Consider a 16-week-old baby with these records:</p>
 <ul><li>6.30 kg on 1 March, calculated around the 52nd centile;</li><li>6.55 kg on 29 March, calculated around the 44th centile;</li><li>exactly one major line—the 50th—strictly crossed;</li><li>seven dates in that interval with milk-feed logs; and</li><li>42 qualifying feed events across those dates.</li></ul>
@@ -880,7 +880,7 @@
 <p>This insight can remain silent when:</p>
 <ul><li>sex is unknown for the selected growth standard;</li><li>there are fewer than two valid weight entries;</li><li>dates are invalid, reversed, under 5 days apart or over 90 days apart;</li><li>the latest weight is more than 90 days old;</li><li>corrected age is before the due date or the percentile age is over 24 months;</li><li>the centile decrease is under five points;</li><li>no major line was strictly crossed;</li><li>feeding history in the window is archived or incomplete at the storage layer;</li><li>fewer than three dates contain a qualifying milk-feed record; or</li><li>a separate low-supply pattern owns the message.</li></ul>
 <p>It may also show a different card because two lines were crossed or the feed-frequency average fell below the current age floor.</p>
-<p>No card is not an assessment. It only means this particular Flutter rule did not produce a message from the available data.</p>
+<p>No card is not an assessment. It only means this particular rule did not produce a message from the available data.</p>
 <h2>Where the insight lives—and when it can return</h2>
 <p>The card appears in <strong>What OBubba noticed</strong>, where the app combines recent records into longer-view patterns. Its route can open the relevant growth or feeding context, and the higher-urgency two-line version points towards health-visitor support.</p>
 <p>The dismissal identity includes a hash of the body text. Because the body changes with a new centile or feed average, the insight is designed to speak again when a new weigh-in changes the evidence, rather than repeating the same message every day.</p>

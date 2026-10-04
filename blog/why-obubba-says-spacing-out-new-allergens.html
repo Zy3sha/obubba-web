@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="apple-itunes-app" content="app-id=6760968757"/>
   <title>Why Does OBubba Say ‘Spacing Out New Allergens’? | OBubba</title>
-  <meta name="description" content="The exact Flutter rules behind OBubba’s allergen-pacing card, what counts as a new allergen, when it stays quiet, and how to introduce foods safely without chasing an app schedule."/>
+  <meta name="description" content="The exact rules behind OBubba’s allergen-pacing card, what counts as a new allergen, when it stays quiet, and how to introduce foods safely without chasing an app schedule."/>
   <meta name="robots" content="index, follow, max-image-preview:large"/>
   <link rel="canonical" href="https://obubba.com/blog/why-obubba-says-spacing-out-new-allergens.html"/>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
@@ -19,13 +19,13 @@
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://obubba.com/blog/why-obubba-says-spacing-out-new-allergens.html"/>
   <meta property="og:title" content="Why Does OBubba Say ‘Spacing Out New Allergens’? | OBubba"/>
-  <meta property="og:description" content="The exact Flutter rules behind OBubba’s allergen-pacing card, what counts as a new allergen, when it stays quiet, and how to introduce foods safely without chasing an app schedule."/>
+  <meta property="og:description" content="The exact rules behind OBubba’s allergen-pacing card, what counts as a new allergen, when it stays quiet, and how to introduce foods safely without chasing an app schedule."/>
   <meta property="og:image" content="https://obubba.com/obubba-spacing-new-allergens-hero.jpg"/>
   <meta property="og:site_name" content="OBubba"/>
   <meta property="og:locale" content="en_GB"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Why Does OBubba Say ‘Spacing Out New Allergens’? | OBubba"/>
-  <meta name="twitter:description" content="The exact Flutter rules behind OBubba’s allergen-pacing card, what counts as a new allergen, when it stays quiet, and how to introduce foods safely without chasing an app schedule."/>
+  <meta name="twitter:description" content="The exact rules behind OBubba’s allergen-pacing card, what counts as a new allergen, when it stays quiet, and how to introduce foods safely without chasing an app schedule."/>
   <meta name="twitter:image" content="https://obubba.com/obubba-spacing-new-allergens-hero.jpg"/>
   <meta name="theme-color" content="#fffcf9"/>
   <link rel="preload" href="/Parisienne-Regular.ttf" as="font" type="font/truetype" crossorigin/>
@@ -744,7 +744,7 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Why Does OBubba Say ‘Spacing Out New Allergens’?",
-  "description": "The exact Flutter rules behind OBubba’s allergen-pacing card, what counts as a new allergen, when it stays quiet, and how to introduce foods safely without chasing an app schedule.",
+  "description": "The exact rules behind OBubba’s allergen-pacing card, what counts as a new allergen, when it stays quiet, and how to introduce foods safely without chasing an app schedule.",
   "datePublished": "2026-09-19",
   "dateModified": "2026-09-19",
   "author": {
@@ -796,7 +796,7 @@
           <span class="read-time">11 min read</span>
         </div>
         <h1>Why Does OBubba Say ‘Spacing Out New Allergens’?</h1>
-        <p>The exact Flutter rules behind OBubba’s allergen-pacing card, what counts as a new allergen, when it stays quiet, and how to introduce foods safely without chasing an app schedule.</p>
+        <p>The exact rules behind OBubba’s allergen-pacing card, what counts as a new allergen, when it stays quiet, and how to introduce foods safely without chasing an app schedule.</p>
         <div class="tags"><span class="tag">OBubba spacing out new allergens</span><span class="tag">introduce allergens baby one at a time</span><span class="tag">baby allergen tracker</span><span class="tag">can baby have two allergens same day</span><span class="tag">weaning allergy app</span></div>
       </div>
     </header>
@@ -805,12 +805,12 @@
 <p><strong>“Spacing out new allergens.”</strong></p>
 <p>Does that mean the app saw an allergic reaction? Has it decided two allergens are unsafe together? Must every family wait exactly two days between foods?</p>
 <p>No.</p>
-<p>We traced the current Flutter detector, the history passed into it and its automated tests. The card is a pacing nudge about <strong>first logged introductions</strong>. It is not a reaction diagnosis, a readiness assessment or a universal waiting-period rule.</p>
+<p>We traced the current detector, the history passed into it and its automated tests. The card is a pacing nudge about <strong>first logged introductions</strong>. It is not a reaction diagnosis, a readiness assessment or a universal waiting-period rule.</p>
 <p>The honest translation is:</p>
 <p>&gt; “Your recent log shows either two allergens first appearing on the same calendar day, or at least three first appearing within the newest seven-day span. Introducing one new allergen at a time can make a reaction easier to attribute.”</p>
 <h2>The short answer</h2>
-<p>| Question | Current Flutter behaviour | |---|---| | What does it read? | Solid-food logs from today and the preceding 21 calendar days, plus memory of allergens logged earlier | | What counts as new? | A recognised allergen not found in the earlier history whose first recent appearance is within six days of the newest logged solids meal | | When can the card appear? | After at least three recent solids entries, if two or more new allergens first appear on one day, or three or more first appear within the newest seven-day window | | Does two on different days trigger it? | No—not unless a third new allergen enters that seven-day window | | Do several established allergens in one family meal trigger it? | No, provided the app’s history already recognises them | | Does “same day” mean close together? | The detector only knows the calendar day; breakfast and dinner count the same as one mixed meal | | Does it inspect reaction symptoms? | No | | Does it check that a baby is ready for solids? | No explicit age or readiness gate exists inside this detector | | How urgent is the card? | Low urgency; it is not the right surface to use during a suspected reaction |</p>
-<figure><img src="/obubba-allergen-pacing-detector.svg" alt="The current OBubba allergen-pacing detector combines recent solids with earlier history, then follows one of two exact trigger paths." loading="lazy"/><figcaption>The exact Flutter thresholds for OBubba’s Spacing out new allergens card.</figcaption></figure>
+<p>| Question | Current behaviour | |---|---| | What does it read? | Solid-food logs from today and the preceding 21 calendar days, plus memory of allergens logged earlier | | What counts as new? | A recognised allergen not found in the earlier history whose first recent appearance is within six days of the newest logged solids meal | | When can the card appear? | After at least three recent solids entries, if two or more new allergens first appear on one day, or three or more first appear within the newest seven-day window | | Does two on different days trigger it? | No—not unless a third new allergen enters that seven-day window | | Do several established allergens in one family meal trigger it? | No, provided the app’s history already recognises them | | Does “same day” mean close together? | The detector only knows the calendar day; breakfast and dinner count the same as one mixed meal | | Does it inspect reaction symptoms? | No | | Does it check that a baby is ready for solids? | No explicit age or readiness gate exists inside this detector | | How urgent is the card? | Low urgency; it is not the right surface to use during a suspected reaction |</p>
+<figure><img src="/obubba-allergen-pacing-detector.svg" alt="The current OBubba allergen-pacing detector combines recent solids with earlier history, then follows one of two exact trigger paths." loading="lazy"/><figcaption>The exact thresholds for OBubba’s Spacing out new allergens card.</figcaption></figure>
 <h2>What the detector actually reads</h2>
 <p>The OBubba brain supplies two kinds of information.</p>
 <p>First, it gathers solid-food entries for <strong>today and the previous 21 calendar days</strong>. For each meal it combines any allergens already stored on the entry with allergens it can recognise from the food description. It then normalises common aliases: “eggs” becomes <strong>egg</strong>, “milk” becomes <strong>dairy</strong>, “wheat” becomes <strong>gluten</strong>, “soy” becomes <strong>soya</strong>, and “nuts” becomes <strong>tree nuts</strong>.</p>
@@ -821,7 +821,7 @@
 <ol><li>It is absent from the earlier allergen history.</li><li>Its earliest appearance in the recent window is no more than six calendar days before the newest logged solids day.</li></ol>
 <p>The seven-day span is anchored to the <strong>newest solids log</strong>, not necessarily today. If the latest logged meal was Wednesday, the detector looks back through the previous Thursday. The nine-day stale guard separately stops an old Wednesday from being treated as current forever.</p>
 <p>This design makes established foods quieter. A family pasta meal containing dairy, gluten and egg should not generate a pacing warning when all three are already recognised in the child’s history. The app is looking for first appearances, not counting every allergen in every bowl.</p>
-<figure><img src="/obubba-allergen-journey-app.jpg" alt="The real OBubba Weaning journey screen remembers completed allergens and suggests a single Next up food; that history helps later meals avoid being mistaken for first introductions." loading="lazy"/><figcaption>A genuine current OBubba Flutter Weaning journey screen showing completed allergens and egg as Next up.</figcaption></figure>
+<figure><img src="/obubba-allergen-journey-app.jpg" alt="The real OBubba Weaning journey screen remembers completed allergens and suggests a single Next up food; that history helps later meals avoid being mistaken for first introductions." loading="lazy"/><figcaption>A genuine current OBubba Weaning journey screen showing completed allergens and egg as Next up.</figcaption></figure>
 <h2>The two exact trigger paths</h2>
 <p>After the three-log activation gate, the current function can show the card in two ways.</p>
 <h3>Path A: two first introductions on one calendar day</h3>
@@ -854,7 +854,7 @@
 <p>That does not mean OBubba has approved starting solids. The <a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS says complementary feeding should begin from around 6 months</a>, when three readiness signs appear together: staying seated with a steady head, coordinating eyes, hands and mouth, and swallowing food rather than pushing it back out.</p>
 <p>Waking more at night is not a readiness sign, and starting solids does not make a baby more likely to sleep through. This is where weaning and sleep belong in the same honest story: new foods are a developmental step, not a sleep intervention.</p>
 <h2>What the food description can—and cannot—detect</h2>
-<p>Parents do not always tap an allergen chip. The Flutter caller also scans the food description for recognised ingredients and dishes. That makes entries such as “scrambled egg”, “peanut butter toast” or “yoghurt” more useful than an empty meal name.</p>
+<p>Parents do not always tap an allergen chip. The caller also scans the food description for recognised ingredients and dishes. That makes entries such as “scrambled egg”, “peanut butter toast” or “yoghurt” more useful than an empty meal name.</p>
 <p>But ingredient recognition has limits. A brand nickname, an unclear phrase such as “usual pouch”, or a mixed family dish without ingredients may not reveal what was inside. An allergen the app fails to recognise cannot enter the pacing calculation.</p>
 <p>For a first introduction, log the actual ingredient:</p>
 <ul><li>“well-cooked egg with familiar broccoli” is better than “lunch”;</li><li>“thin peanut butter mixed into porridge” is better than “breakfast”;</li><li>for a mixed meal, record the relevant ingredients or select the stored allergen tags;</li><li>note the time and any response without forcing certainty.</li></ul>

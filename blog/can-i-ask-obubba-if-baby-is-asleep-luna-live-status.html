@@ -802,21 +802,21 @@
     </header>
     <article class="section rich-text article">
       <p>You hand the baby over, walk into a meeting, then wonder: <strong>Did the nap finally happen?</strong> Or your partner is settling upstairs and you cannot remember whether the sleep timer was started.</p>
-<p>In OBubba’s current Flutter app, you can ask Luna:</p>
+<p>In OBubba’s current app, you can ask Luna:</p>
 <ul><li>“Is Oliver asleep?”</li><li>“Is she awake yet?”</li><li>“What’s my baby doing right now?”</li></ul>
 <p>Luna now answers from the selected baby’s live OBubba record. If a nap or night-sleep timer is open, the reply says the baby is asleep. If there is no open timer but a recent wake or completed sleep exists, Luna says the baby is awake and can place the elapsed awake time beside an age-aware starting wake window. With too little evidence, it refuses to guess.</p>
 <p>There is one essential translation:</p>
 <p>&gt; <strong>“Oliver is asleep” means “OBubba has an open sleep timer for Oliver.” It is a reading of the family’s log—not camera, microphone, wearable or medical confirmation.</strong></p>
 <p>That honest boundary is what makes the feature useful rather than creepy. Luna turns a scattered day log into a one-sentence handover, while leaving real-world observation and safer-sleep decisions with the carer.</p>
 <h2>The 30-second answer</h2>
-<p>| Parent asks | What the current Flutter app checks | |---|---| | “Is he asleep?” | Is there an open nap or night-sleep entry that has already started? | | “Is she awake?” | Is there no open sleep, plus a recent daytime wake or completed nap/sleep end? | | “How long awake?” | Phone-clock minutes since the latest eligible wake anchor today. | | “Why does Luna think that?” | Open timer status, last milk feed, completed nap count and calculated daytime sleep. | | Nothing useful logged | Luna says it cannot give a confident live read and asks for a wake or sleep log. | | Does Luna watch the nursery? | No. There is no camera or live-monitor signal in this implementation. | | Does generative AI decide? | No. This question uses a deterministic app rule and is never sent to the AI-answer path. |</p>
-<figure><img src="/obubba-luna-live-status-logic.svg" alt="How Luna answers a live-status question: safety language is checked first, then the app reads the selected baby’s current log and returns asleep, awake or not enough evidence without calling a generative model." loading="lazy"/><figcaption>The current Flutter decision path. Luna reads an open timer or today’s latest wake anchor; it does not observe the baby through a camera or infer an unseen state.</figcaption></figure>
+<p>| Parent asks | What the current app checks | |---|---| | “Is he asleep?” | Is there an open nap or night-sleep entry that has already started? | | “Is she awake?” | Is there no open sleep, plus a recent daytime wake or completed nap/sleep end? | | “How long awake?” | Phone-clock minutes since the latest eligible wake anchor today. | | “Why does Luna think that?” | Open timer status, last milk feed, completed nap count and calculated daytime sleep. | | Nothing useful logged | Luna says it cannot give a confident live read and asks for a wake or sleep log. | | Does Luna watch the nursery? | No. There is no camera or live-monitor signal in this implementation. | | Does generative AI decide? | No. This question uses a deterministic app rule and is never sent to the AI-answer path. |</p>
+<figure><img src="/obubba-luna-live-status-logic.svg" alt="How Luna answers a live-status question: safety language is checked first, then the app reads the selected baby’s current log and returns asleep, awake or not enough evidence without calling a generative model." loading="lazy"/><figcaption>The current decision path. Luna reads an open timer or today’s latest wake anchor; it does not observe the baby through a camera or infer an unseen state.</figcaption></figure>
 <h2>Where to ask Luna</h2>
 <p>Open <strong>Luna</strong> and type the question into <strong>Message Luna…</strong>. The new handler recognises several natural forms, including:</p>
 <ul><li>“What’s Oliver doing now?”</li><li>“What is she up to?”</li><li>“Is Oliver asleep?”</li><li>“Is she awake yet?”</li><li>“Is he down for a nap now?”</li><li>“What’s happening at the moment?”</li></ul>
 <p>The recognition is deliberately narrow. A question such as <strong>“Is she sleeping through the night?”</strong> is not treated as a request for the current timer state. Neither is <strong>“How many naps should he have?”</strong> Those remain pattern or advice questions.</p>
 <p>This prevents the word “sleeping” from swallowing every sleep question into a live-status answer.</p>
-<figure><img src="/obubba-luna-is-baby-asleep-app.jpg" alt="The genuine OBubba Flutter Luna screen answering “Is Oliver asleep?” with “Oliver is asleep right now — there’s an open sleep timer going.”" loading="lazy"/><figcaption>A current Flutter capture using fictional review data. The response states the evidence in the answer itself: an open sleep timer is running.</figcaption></figure>
+<figure><img src="/obubba-luna-is-baby-asleep-app.jpg" alt="The genuine OBubba Luna screen answering “Is Oliver asleep?” with “Oliver is asleep right now — there’s an open sleep timer going.”" loading="lazy"/><figcaption>A current capture using fictional review data. The response states the evidence in the answer itself: an open sleep timer is running.</figcaption></figure>
 <h2>What happens when an open timer exists</h2>
 <p>Luna scans today’s entries for either:</p>
 <ul><li>type `nap`, or</li><li>type `sleep`</li></ul>
@@ -863,7 +863,7 @@
 <p>That restraint is a real differentiator. A convincing fabricated answer would be worse than a useful refusal.</p>
 <h2>Why this answer does not call generative AI</h2>
 <p>Luna can use a richer model for some open-ended advice when the relevant configuration and parental consent allow it. Live status deliberately takes a different path.</p>
-<p>The Flutter intent is marked deterministic and excluded from model escalation. The app already has the evidence it needs:</p>
+<p>The intent is marked deterministic and excluded from model escalation. The app already has the evidence it needs:</p>
 <ol><li>open timer or no open timer;</li><li>latest wake anchor;</li><li>elapsed phone-clock time;</li><li>last milk feed;</li><li>completed naps and daytime sleep.</li></ol>
 <p>A model would not improve those facts. It could only paraphrase them, drift from them or claim certainty the log does not possess.</p>
 <p>This also means asking <strong>“Is Oliver asleep?”</strong> does not need to send that question and the baby’s current log context to a third-party generative model. The answer is constructed inside the app’s rule engine.</p>
@@ -923,7 +923,7 @@
 <ul><li><a href="/blog/is-baby-ready-nap-feed-obubba-live-readiness-meter.html">Is baby ready for a nap—or due a feed?</a></li><li><a href="/blog/forgot-stop-baby-sleep-timer-fix-log.html">Forgot to stop the baby sleep timer?</a></li><li><a href="/blog/why-did-baby-next-nap-time-change.html">Why did my baby’s next nap time change?</a></li><li><a href="/blog/can-two-parents-use-obubba-different-languages.html">Can two parents use OBubba in different languages?</a></li></ul>
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/your-babys-sleep-patterns/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Your baby’s sleep patterns</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Safer sleep advice for babies</a></li></ul>
-<p><em>This article describes the current OBubba Flutter implementation reviewed on 30 April 2027. Luna’s live-status answer reports logged app state; it is not a monitor, medical device, safer-sleep assessment or substitute for checking a baby directly.</em></p>
+<p><em>This article describes the current OBubba implementation reviewed on 30 April 2027. Luna’s live-status answer reports logged app state; it is not a monitor, medical device, safer-sleep assessment or substitute for checking a baby directly.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>

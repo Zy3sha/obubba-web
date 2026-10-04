@@ -805,11 +805,11 @@
 <p>&gt; <strong>“A month of love. Look what you gave Maya.”</strong></p>
 <p>Below it, five lights may show feeds given, sleep supported, naps held, wakes soothed and nappies changed.</p>
 <p>Is it measuring how good a parent you are? Does <strong>404 hours of sleep supported</strong> mean someone actively soothed for 404 hours? If two carers share the app, whose work is it counting?</p>
-<p>None of those. We traced the current Flutter provider, calculation and production card for this guide. The keepsake is a warm reflection built from a <strong>rolling 30-day family log</strong>. Its numbers are real counters, but its labels are deliberately emotional—not literal measurements of effort, love or who did the work.</p>
-<figure><img src="/obubba-what-month-of-love-counts.svg" alt="What each number on OBubba’s Month of Love card actually counts." loading="lazy"/><figcaption>The Flutter card uses a rolling 30-day record, requires at least 14 non-empty days and 20 feeds plus naps, and appears at most once per calendar month for each baby.</figcaption></figure>
+<p>None of those. We traced the current provider, calculation and production card for this guide. The keepsake is a warm reflection built from a <strong>rolling 30-day family log</strong>. Its numbers are real counters, but its labels are deliberately emotional—not literal measurements of effort, love or who did the work.</p>
+<figure><img src="/obubba-what-month-of-love-counts.svg" alt="What each number on OBubba’s Month of Love card actually counts." loading="lazy"/><figcaption>The card uses a rolling 30-day record, requires at least 14 non-empty days and 20 feeds plus naps, and appears at most once per calendar month for each baby.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current card can appear when:</p>
-<p>| Check | Flutter rule | Meaning | |---|---:|---| | Working window | Today + previous <strong>29 days</strong> | A rolling 30-day snapshot, not the first-to-last day of a calendar month | | Logged-day gate | At least <strong>14 non-empty days</strong> | The recap is not built from a very sparse record | | Activity gate | At least <strong>20 feeds + completed naps</strong> | There is enough repeat care for the moment to feel earned | | Repeat limit | Not already dismissed this calendar month | It appears at most once per month for this baby | | Baby scope | Active baby only | Dismissing one child’s card does not suppress another child’s |</p>
+<p>| Check | rule | Meaning | |---|---:|---| | Working window | Today + previous <strong>29 days</strong> | A rolling 30-day snapshot, not the first-to-last day of a calendar month | | Logged-day gate | At least <strong>14 non-empty days</strong> | The recap is not built from a very sparse record | | Activity gate | At least <strong>20 feeds + completed naps</strong> | There is enough repeat care for the moment to feel earned | | Repeat limit | Not already dismissed this calendar month | It appears at most once per month for this baby | | Baby scope | Active baby only | Dismissing one child’s card does not suppress another child’s |</p>
 <p>The gate does not check whether every day is complete. One saved event makes a day non-empty. Nappies and night wakes help populate the final card, but only feeds plus naps satisfy the 20-event activity gate.</p>
 <p>This is recognition, not assessment. There is no target, percentage, parent ranking or “good month” threshold.</p>
 <h2>It is a rolling month, not this calendar month</h2>
@@ -819,7 +819,7 @@
 <h2>Exactly what each light counts</h2>
 <h3>Feeds given</h3>
 <p>The counter uses every saved entry whose type is `feed`.</p>
-<p>It does not inspect who offered it, how demanding it felt or how much milk transferred. Because the Flutter model commonly stores solids and pumping as feed entries with a feed subtype, those can also contribute when they are represented as `feed`. A standalone legacy `pump` type would not.</p>
+<p>It does not inspect who offered it, how demanding it felt or how much milk transferred. Because the model commonly stores solids and pumping as feed entries with a feed subtype, those can also contribute when they are represented as `feed`. A standalone legacy `pump` type would not.</p>
 <p>So <strong>76 feeds given</strong> means 76 qualifying feed records—not 76 bottles, 76 breastfeeds or 76 feeds completed by the person looking at the screen.</p>
 <h3>Sleep supported</h3>
 <p>This is the total calculated daytime nap sleep plus night sleep across the window, divided by 60 and rounded to the nearest whole hour.</p>
@@ -828,7 +828,7 @@
 <p>The warm phrase <strong>sleep supported</strong> does not mean an adult was awake, holding or settling throughout those hours. It means that amount of baby sleep is represented by the recent log.</p>
 <h3>Naps held</h3>
 <p>This label is especially important to read gently.</p>
-<p>The underlying number is the count of completed logged naps after Flutter’s normalisation. A nap needs a start and end and must last at least five minutes. Overlapping duplicate naps are merged, and an evening bedtime that was clearly mis-logged as a nap can be reinterpreted before counting.</p>
+<p>The underlying number is the count of completed logged naps after the app’s normalisation. A nap needs a start and end and must last at least five minutes. Overlapping duplicate naps are merged, and an evening bedtime that was clearly mis-logged as a nap can be reinterpreted before counting.</p>
 <p>The engine does not check nap location or settling method here. A cot nap, pram nap, nursery nap and contact nap can all add one. <strong>Naps held</strong> is affectionate copy, not proof that someone physically held every nap.</p>
 <h3>Wakes soothed</h3>
 <p>The night counter consolidates near-duplicate night wakes and can fold night feeds into the same waking episode. A qualifying night feed with no matching wake can itself contribute a wake-like event. Dream feeds, solids and pump entries are excluded from that feed path.</p>
@@ -858,8 +858,8 @@
 <p>Common explanations include:</p>
 <ul><li>fewer than 14 recent days contain any entry;</li><li>the recent record has fewer than 20 feeds and completed naps combined;</li><li>the card has already been thanked or dismissed this calendar month;</li><li>you switched to a different baby profile;</li><li>some data has not synced into the active child record; or</li><li>a nap is still open and therefore does not count as completed.</li></ul>
 <p>Silence is not a verdict on care. It only means the display conditions were not met.</p>
-<h2>The real Flutter artwork and sharing path</h2>
-<p>The production card surrounds its counters with a starlit care illustration and the line <strong>“Every light is a moment you showed up.”</strong> This is the exact artwork bundled in the current Flutter screen:</p>
+<h2>The real artwork and sharing path</h2>
+<p>The production card surrounds its counters with a starlit care illustration and the line <strong>“Every light is a moment you showed up.”</strong> This is the exact artwork bundled in the current screen:</p>
 <p>The <strong>Keep / share</strong> control is optional. It opens a branded keepsake card containing the non-zero summary lines, baby’s first name, the current month label and a referral code/QR when one exists. OBubba does not automatically post the recap.</p>
 <p>Before sharing, consider whether you want your baby’s name and routine totals visible. A keepsake can stay private.</p>
 <h2>A better conversation than “who did more?”</h2>

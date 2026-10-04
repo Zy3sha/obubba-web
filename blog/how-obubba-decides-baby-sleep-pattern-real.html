@@ -804,7 +804,7 @@
       <p>The night after a long afternoon nap has four wakes. Two days later, another long-nap day ends with one peaceful stretch.</p>
 <p>A tired parent remembers the four-wake night. A responsible app has to remember <strong>both</strong>.</p>
 <p>That is the question behind OBubba’s <strong>What OBubba’s noticed</strong> feed: when is a coincidence strong enough to become a pattern card—and when should the app stay quiet?</p>
-<p>We inspected the current Flutter correlation and intervention engines for this guide. OBubba does not label two memorable nights a cause. It pairs each logged day with the physical night that followed, removes disrupted baseline days, waits for enough comparable records, requires a meaningful difference and surfaces only the strongest tendency. If that tendency has one clean, measurable lever, the parent can choose to test it. The result then becomes part of the baby’s history.</p>
+<p>We inspected the current correlation and intervention engines for this guide. OBubba does not label two memorable nights a cause. It pairs each logged day with the physical night that followed, removes disrupted baseline days, waits for enough comparable records, requires a meaningful difference and surfaces only the strongest tendency. If that tendency has one clean, measurable lever, the parent can choose to test it. The result then becomes part of the baby’s history.</p>
 <figure><img src="/obubba-how-a-sleep-pattern-earns-a-card.svg" alt="A five-stage explanation of the gates a day-to-night relationship must pass before OBubba surfaces it as a sleep pattern." loading="lazy"/><figcaption>A pattern needs usable day-to-night pairs, enough nights on both sides and a meaningful difference before one strongest tendency appears.</figcaption></figure>
 <h2>The short answer: an observation, a pattern and a cause are different things</h2>
 <p>OBubba treats them differently:</p>
@@ -812,7 +812,7 @@
 <p>This is more than careful wording. The current code uses numeric gates that stop a small or flat dataset producing a confident-sounding insight.</p>
 <h2>First, the app builds the right day-to-night pair</h2>
 <p>The unit is not a calendar square in isolation. It is <strong>one day joined to the night that began after it</strong>.</p>
-<p>For each of up to 21 recent days, the current Flutter builder can assemble:</p>
+<p>For each of up to 21 recent days, the current builder can assemble:</p>
 <ul><li>the longest awake stretch</li><li>when the final nap ended</li><li>total completed daytime sleep</li><li>evening bottle or expressed-milk volume when logged</li><li>a count of logged play or activity sessions</li><li>whether a concerning stool texture was recorded</li><li>the number of wakes in the following physical night</li></ul>
 <p>The physical-night link matters around midnight and daylight-saving changes. A 3am wake belongs to the bedtime-to-morning night, not to a new daytime routine simply because the date changed.</p>
 <p>The app also uses its canonical sleep calculations rather than naïvely adding every arc. Overlapping partner logs are merged, duplicate wakes are handled and a mid-nap awake period can be deducted from the sleep total. Otherwise a sync duplicate could manufacture “extra day sleep” and then appear to explain a rough night.</p>
@@ -829,7 +829,7 @@
 <h2>Why the engine splits by value, not by date order</h2>
 <p>This small implementation detail protects against a surprisingly convincing false pattern.</p>
 <p>Imagine a parent logs one bath every evening. Every day therefore has the same activity count: one. If the app simply divided the most recent four days from the older four, it could mistake natural improvement over time for an effect of “more activities”—even though the activity value never changed.</p>
-<p>The current Flutter engine splits by the actual value and insists on populated groups on both sides. If every value is tied, one group is empty and no correlation is produced.</p>
+<p>The current engine splits by the actual value and insists on populated groups on both sides. If every value is tied, one group is empty and no correlation is produced.</p>
 <p>In other words, the factor itself has to vary. A baby merely getting older cannot masquerade as evidence that the identical bedtime bath suddenly changed the nights.</p>
 <h2>Which relationships can the app examine?</h2>
 <p>The general day-to-night engine currently checks six questions:</p>
@@ -838,7 +838,7 @@
 <p>OBubba also has specialised, separately gated checks for relationships such as room temperature, medicine days and recorded allergen exposures. Those remain correlations. A medicine log cannot tell the app whether the underlying illness, the medicine, timing or another change affected the night.</p>
 <p>Never change a prescribed medicine, feeding plan or allergy plan because of an app pattern. Discuss concerning or repeated symptoms with the relevant clinician.</p>
 <h2>“What helps good nights?” uses a different comparison</h2>
-<p>Another Flutter feature asks a more positive question: what tended to happen on days before the baby’s better nights?</p>
+<p>Another feature asks a more positive question: what tended to happen on days before the baby’s better nights?</p>
 <p>It looks across up to 13 recent day-to-night pairs and divides them into:</p>
 <ul><li><strong>good nights:</strong> one wake or fewer</li><li><strong>harder nights:</strong> two wakes or more</li></ul>
 <p>Before speaking, it requires at least three nights in each group. It then needs a meaningful average difference: at least 20 minutes in total nap time or 15 minutes in bedtime.</p>
@@ -848,8 +848,8 @@
 <p>Eight factors on one screen would feel scientific while making the next decision harder.</p>
 <p>The current general engine ranks the passing relationships by the difference in night wakes and surfaces the strongest. Its evidence label uses the sample size for that specific factor—not the size of the whole history window. If 18 nights exist but only eight include an evening volume, the card should not imply an 18-night feeding comparison.</p>
 <p>The card also receives a stable identity based on its underlying lever. That allows the app to recognise a genuinely new pattern later instead of treating every card with the generic title <strong>A pattern in baby’s sleep</strong> as the same old notice.</p>
-<h2>The genuine Flutter insight surface</h2>
-<figure><img src="/obubba-noticed-teething-split-night-insights.jpg" alt="The genuine OBubba Flutter What OBubba&#39;s noticed screen, showing several separately reasoned sleep and developmental insights above Tonight&#39;s Guidance." loading="lazy"/><figcaption>The current Flutter insight feed keeps the headline concise while each card can open into the observation, reasoning and next action.</figcaption></figure>
+<h2>The genuine insight surface</h2>
+<figure><img src="/obubba-noticed-teething-split-night-insights.jpg" alt="The genuine OBubba What OBubba&#39;s noticed screen, showing several separately reasoned sleep and developmental insights above Tonight&#39;s Guidance." loading="lazy"/><figcaption>The current insight feed keeps the headline concise while each card can open into the observation, reasoning and next action.</figcaption></figure>
 <p>The screen above contains different kinds of insight—recent event interpretation, developmental context and multi-day patterns. They share one feed, but they do not share one evidence rule.</p>
 <p>A teething clue should not need the same history as a median-split day-sleep correlation. A prediction-confidence label should not be reused as a medical-confidence label. The current architecture routes each question through its own detector and evidence gate before the feed prioritises it.</p>
 <p>That distinction is part of the product: one calm surface, several purpose-built engines underneath.</p>

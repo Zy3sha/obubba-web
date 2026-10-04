@@ -809,10 +809,10 @@
 <h2>What the warning levels mean</h2>
 <p>| What OBubba shows | What it means | Best next action | |---|---|---| | <strong>Red danger</strong> | typed wording may describe a choking hazard or honey for a baby under one | stop before serving; change the food, shape, texture or ingredient | | <strong>Amber caution</strong> | age, cooking, mercury or salt needs checking | verify the real product and preparation; choose a safer option where needed | | <strong>No warning</strong> | no supported phrase was detected | still inspect size, shape, texture, temperature, bones and ingredients yourself |</p>
 <p>No warning does <strong>not</strong> mean “approved”. The detector is intentionally small and explainable rather than pretending to certify every meal.</p>
-<h2>What the actual Flutter safety engine recognises</h2>
-<p>OBubba&#39;s current Flutter `foodSafetyWarnings` function checks the free text typed into <strong>Track → Feed → Solids</strong>. The warning appears live above allergen recognition, so a possible preparation hazard is seen before a food is saved.</p>
+<h2>What the actual safety engine recognises</h2>
+<p>OBubba&#39;s current `foodSafetyWarnings` function checks the free text typed into <strong>Track → Feed → Solids</strong>. The warning appears live above allergen recognition, so a possible preparation hazard is seen before a food is saved.</p>
 <h3>Honey before the first birthday</h3>
-<p>“Honey” and “honeycomb” trigger a red warning when the baby&#39;s age is unknown or under 12 months. The Flutter screen deliberately floors age in months, so a 50-week-old is not rounded up and treated as one too early.</p>
+<p>“Honey” and “honeycomb” trigger a red warning when the baby&#39;s age is unknown or under 12 months. The screen deliberately floors age in months, so a 50-week-old is not rounded up and treated as one too early.</p>
 <p>The NHS says honey should be completely avoided until 12 months because it can contain bacteria that lead to infant botulism. This includes honey in cooked or baked food.</p>
 <h3>Whole nuts</h3>
 <p>Whole almonds, peanuts, cashews and other nuts trigger a red choking warning. Wording such as <strong>smooth peanut butter</strong>, <strong>ground hazelnut</strong> or <strong>crushed nuts</strong> does not, because those are different forms.</p>
@@ -824,7 +824,7 @@
 <p>Raw carrot, raw apple or pear, whole carrot and phrases such as “apple chunks” can trigger a red warning. Preparation words such as cooked, steamed, mashed, grated or soft prevent the warning when they describe that food.</p>
 <p>The engine evaluates meal fragments separately. “Grapes and mashed banana” still warns about the grapes: <strong>mashed</strong> belongs to the banana and must not accidentally clear a different food&#39;s hazard.</p>
 <h3>Popcorn, marshmallows and hard sweets</h3>
-<p>These trigger a red choking warning. NHS guidance also lists raw jelly cubes, chewing gum, ice cubes and peanut butter by itself as choking hazards; the current Flutter text checker does not recognise every item on that wider list.</p>
+<p>These trigger a red choking warning. NHS guidance also lists raw jelly cubes, chewing gum, ice cubes and peanut butter by itself as choking hazards; the current text checker does not recognise every item on that wider list.</p>
 <h3>Mercury, raw shellfish or egg, rice drinks and salt</h3>
 <p>Amber cautions cover:</p>
 <ul><li>shark, swordfish and marlin, because of mercury</li><li>text explicitly saying raw shellfish or raw egg, because cooking guidance must be checked</li><li>rice milk or rice drink, which the NHS says to avoid under five because of arsenic</li><li>salt, stock, gravy, soy sauce, bacon, ham and salted foods</li></ul>
@@ -839,9 +839,9 @@
 <ul><li>A vague entry such as “lunch” contains nothing to inspect.</li><li>A brand name does not reveal its full ingredients or salt content.</li><li>The detector cannot see whether food is truly soft enough to squash.</li><li>It cannot find an unmentioned bone, stone, pip, skin or hard casing.</li><li>It cannot measure temperature or portion size.</li><li>It cannot tell whether a baby is alert, upright and supervised.</li><li>It does not cover every food in NHS guidance.</li></ul>
 <p>That is why the UI presents a warning—not a green “safe to serve” certificate.</p>
 <h2>The warning order is deliberate</h2>
-<p>A long meal description can match several rules. Flutter removes duplicate titles and displays no more than five cards, but it puts <strong>danger</strong> warnings before cautions. A whole-grape choking warning is therefore not pushed out by earlier amber matches for stock, rice drink or fish.</p>
+<p>A long meal description can match several rules. removes duplicate titles and displays no more than five cards, but it puts <strong>danger</strong> warnings before cautions. A whole-grape choking warning is therefore not pushed out by earlier amber matches for stock, rice drink or fish.</p>
 <p>This priority is valuable in a tired-parent interface: the most immediate preparation change should be visible first.</p>
-<figure><img src="/obubba-weaning-safety-app.jpg" alt="OBubba&#39;s genuine Flutter pre-weaning guide, including readiness, gagging versus choking and foods to avoid." loading="lazy"/><figcaption>The live warning sits beside a wider pre-weaning safety guide; neither replaces supervision or first-aid knowledge.</figcaption></figure>
+<figure><img src="/obubba-weaning-safety-app.jpg" alt="OBubba&#39;s genuine pre-weaning guide, including readiness, gagging versus choking and foods to avoid." loading="lazy"/><figcaption>The live warning sits beside a wider pre-weaning safety guide; neither replaces supervision or first-aid knowledge.</figcaption></figure>
 <p>The app also runs the same safety checker against the name and ingredients of its recipe suggestions. Its <strong>Before you start</strong> guide links readiness, safer preparation, gagging versus choking and foods to avoid. That makes the warning part of a wider safety journey, not a pop-up with no explanation.</p>
 <h2>What to do when a warning appears</h2>
 <ol><li><strong>Pause before serving.</strong> Read the full card, not only its colour.</li><li><strong>Check the real food.</strong> Look at age, ingredients, label, shape, texture and cooking.</li><li><strong>Change what needs changing.</strong> Remove, replace, soften, cook, grate, squash or quarter lengthways.</li><li><strong>Edit the log precisely.</strong> Record the preparation that was actually used.</li><li><strong>Use the basics anyway.</strong> Baby should be alert, upright in a secure highchair and supervised within arm&#39;s reach.</li></ol>

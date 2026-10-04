@@ -846,12 +846,12 @@
 <p>Consider the whole transition:</p>
 <ul><li>Was the room kept quiet and the family still trying to continue the nap?</li><li>Did baby return to sleep soon after feeding?</li><li>Was there sustained alert play in between?</li><li>Was the feed expected because the previous milk interval was long?</li></ul>
 <p>Feeding to resettle is not a tracking mistake or a moral failure. The record should describe what happened without turning the method into a judgement.</p>
-<h2>What the actual OBubba Flutter app does</h2>
-<p>The current Flutter app has a specific mid-nap state because <strong>a stir, a wake and the end of a nap are not the same event</strong>.</p>
+<h2>What the actual OBubba app does</h2>
+<p>The current app has a specific mid-nap state because <strong>a stir, a wake and the end of a nap are not the same event</strong>.</p>
 <p>While a nap timer is running, the central control says <strong>pause nap</strong>. Tapping it creates a separate, pending mid-nap wake without ending the nap or starting the next wake window. If baby returns to sleep, <strong>resume nap</strong> closes that awake interval and lets the parent record how the baby was settled.</p>
 <p>Under the hood, OBubba deliberately stores this as a `napwake`, not a normal morning or night wake. That prevents a mid-nap stir from:</p>
 <ul><li>becoming the day&#39;s morning-wake anchor</li><li>ending the ongoing nap prematurely</li><li>triggering a next-nap prediction while baby is still being resettled</li><li>appearing as a night wake</li><li>changing the baby&#39;s wake-window clock by mistake</li></ul>
-<figure><img src="/obubba-live-nap-timer.jpg" alt="The actual OBubba Flutter live nap screen, where the central pause-nap control can mark a real stir without ending the whole nap." loading="lazy"/><figcaption>OBubba keeps the nap open while a parent pauses for a stir, then resumes it if baby returns to sleep.</figcaption></figure>
+<figure><img src="/obubba-live-nap-timer.jpg" alt="The actual OBubba live nap screen, where the central pause-nap control can mark a real stir without ending the whole nap." loading="lazy"/><figcaption>OBubba keeps the nap open while a parent pauses for a stir, then resumes it if baby returns to sleep.</figcaption></figure>
 <h3>Actual sleep, not just elapsed timer time</h3>
 <p>Suppose the nap runs from 12:40 to 2:03 with a confirmed 12-minute awake interval. OBubba keeps the nap as one continuous event but deducts the 12 awake minutes from total daytime sleep. Its day review also knows the nap was interrupted, so it does not call the full 83-minute arc an unbroken consolidated nap.</p>
 <p>If the parent never timed the stir, the engine does not guess a duration. If both carers accidentally log the same stir within a few minutes, the calculation de-duplicates it rather than subtracting the awake time twice.</p>

@@ -832,12 +832,12 @@
 <p>Likewise, do not force extra milk at 5am in the hope that baby will sleep longer. UNICEF UK&#39;s Baby Friendly guidance recommends responsive bottle feeding and says not to force a baby to take more than they need in an attempt to lengthen sleep.</p>
 <p>The label comes <strong>after the observation</strong>:</p>
 <ol><li>meet the baby&#39;s need</li><li>see whether sleep continues</li><li>record the feed in the context that actually occurred</li></ol>
-<h2>What the actual OBubba Flutter app does</h2>
-<p>The current Flutter app does not decide that every feed before 6am is a night feed. Its live logger uses the baby&#39;s sleep state.</p>
+<h2>What the actual OBubba app does</h2>
+<p>The current app does not decide that every feed before 6am is a night feed. Its live logger uses the baby&#39;s sleep state.</p>
 <h3>A feed during an open night sleep is marked as night</h3>
 <p>When a bedtime sleep session is still open and you log a new feed, OBubba automatically saves it with the night flag. The app checks both today&#39;s entries and the previous night&#39;s carried-over sleep in the early hours.</p>
 <p>That means a feed logged during a continuing 7:30pm-to-morning sleep is kept out of daytime feeding statistics and included in night-feed analysis. The logic follows the open night, not a simplistic 5am cutoff.</p>
-<figure><img src="/obubba-night-wake-pause-app.jpg" alt="The actual OBubba Flutter Track screen showing an open night-sleep session. A feed logged while this bedtime sleep remains open is treated as a night feed." loading="lazy"/><figcaption>OBubba uses the open overnight sleep context when a live feed is logged.</figcaption></figure>
+<figure><img src="/obubba-night-wake-pause-app.jpg" alt="The actual OBubba Track screen showing an open night-sleep session. A feed logged while this bedtime sleep remains open is treated as a night feed." loading="lazy"/><figcaption>OBubba uses the open overnight sleep context when a live feed is logged.</figcaption></figure>
 <h3>A 5am daytime feed is not stolen by the previous night</h3>
 <p>The app&#39;s wake-to-wake grouping tests explicitly protect an early feed that is <strong>not</strong> marked as night. A 5:30am morning feed stays with the new day rather than being pulled backwards merely because it happened early.</p>
 <p>This matters for families whose day really does begin before 6am. OBubba follows the recorded context instead of rewriting the family&#39;s morning.</p>
@@ -846,7 +846,7 @@
 <ul><li><strong>Calendar day:</strong> a 2am event displays under its actual new date.</li><li><strong>Wake to wake:</strong> bedtime and all marked night wakes and feeds stay visually with the day on which that night began.</li></ul>
 <p>This changes how the log is displayed. It does not change the physical event, its time or the underlying sleep analysis. The app&#39;s night analysis remains wake-to-wake whichever display option you choose, so midnight cannot split one night into two misleading sleep stories.</p>
 <h3>Editing does not silently relabel history</h3>
-<p>When an existing feed is edited, the Flutter logger preserves its original night status rather than asking whether a later bedtime happens to be open now. This prevents a daytime feed from being turned into a night feed simply because you corrected the note after baby went to bed.</p>
+<p>When an existing feed is edited, the logger preserves its original night status rather than asking whether a later bedtime happens to be open now. This prevents a daytime feed from being turned into a night feed simply because you corrected the note after baby went to bed.</p>
 <p>That small safeguard is the point of analysing a real app rather than writing vague tracker copy: trustworthy patterns depend on what the logger does in awkward edge cases.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — log the feed once and let sleep context, night analysis and your chosen timeline view do the organising.</p>
 <h2>Why the label is useful</h2>

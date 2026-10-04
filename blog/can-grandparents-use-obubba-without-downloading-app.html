@@ -770,7 +770,7 @@
   },
   "mainEntityOfPage": "https://obubba.com/blog/can-grandparents-use-obubba-without-downloading-app.html",
   "image": "https://obubba.com/obubba-grandparent-no-download-care-link.jpg",
-  "keywords": "OBubba for grandparents, baby tracker without app, Bubba Care link, babysitter baby tracker, grandparent baby care app, baby care handover app, share baby routine with grandparents, nanny baby log, no login baby tracker, temporary baby care link, carer handover, OBubba Flutter"
+  "keywords": "OBubba for grandparents, baby tracker without app, Bubba Care link, babysitter baby tracker, grandparent baby care app, baby care handover app, share baby routine with grandparents, nanny baby log, no login baby tracker, temporary baby care link, carer handover, OBubba"
 }
 </script>
 </head>
@@ -803,13 +803,13 @@
     <article class="section rich-text article">
       <p>Your parent has agreed to watch the baby. They know the bedtime song, where the bottles are and exactly which cuddle usually works. The awkward part is technology: do they now need to download your baby tracker, create another password and learn an entire app before you can leave the house?</p>
 <p><strong>No. A grandparent, babysitter or nanny can use OBubba’s Bubba Care link in an ordinary phone browser. They do not need to install OBubba or create a carer account.</strong></p>
-<p>The parent prepares the care guide in the Flutter app, then shares a private link or shows a QR code. The carer opens a calm page with the baby’s current essentials and large, simple controls for feeds, nappies and naps. Those entries flow back to the parent’s OBubba timeline during the active session.</p>
+<p>The parent prepares the care guide in the app, then shares a private link or shows a QR code. The carer opens a calm page with the baby’s current essentials and large, simple controls for feeds, nappies and naps. Those entries flow back to the parent’s OBubba timeline during the active session.</p>
 <p>This is deliberately different from permanent Family Sharing. Bubba Care is the lighter handoff for somebody who needs today’s care context, not the family’s whole app.</p>
 <h2>The short answer</h2>
-<p>| Question | What Bubba Care does | |---|---| | Must the carer download OBubba? | <strong>No.</strong> The care page opens in a browser | | Must they make an account or remember a password? | <strong>No.</strong> The private link is the access credential | | How can the parent share it? | QR code, share sheet, copied link or a saved PDF guide | | What can the parent include? | Contacts, comfort and routine notes, feeding details and current care context | | Can the carer add updates? | Yes: simple feed, nappy and nap logging during the live session | | Do those updates reach the parent? | Yes. The Flutter app listens for carer activity and merges it into the baby’s timeline | | Is it the same as Family Sharing? | No. Family Sharing is for trusted, ongoing co-care inside the full app | | What happens afterwards? | <strong>End care session</strong> saves the session’s logs, clears the carer page and stops the session |</p>
+<p>| Question | What Bubba Care does | |---|---| | Must the carer download OBubba? | <strong>No.</strong> The care page opens in a browser | | Must they make an account or remember a password? | <strong>No.</strong> The private link is the access credential | | How can the parent share it? | QR code, share sheet, copied link or a saved PDF guide | | What can the parent include? | Contacts, comfort and routine notes, feeding details and current care context | | Can the carer add updates? | Yes: simple feed, nappy and nap logging during the live session | | Do those updates reach the parent? | Yes. The app listens for carer activity and merges it into the baby’s timeline | | Is it the same as Family Sharing? | No. Family Sharing is for trusted, ongoing co-care inside the full app | | What happens afterwards? | <strong>End care session</strong> saves the session’s logs, clears the carer page and stops the session |</p>
 <figure><img src="/obubba-no-download-carer-flow.svg" alt="A Bubba Care handoff moves from the parent’s app to one private browser page, then returns the carer’s simple updates to the parent’s timeline." loading="lazy"/><figcaption>The parent prepares and controls the session in OBubba. The carer only needs the private browser page for the care period.</figcaption></figure>
 <h2>What the parent does in the OBubba app</h2>
-<p>We traced the current Flutter implementation before writing this guide. The path is <strong>Care → Bubba Care → Start a session</strong>.</p>
+<p>We traced the current implementation before writing this guide. The path is <strong>Care → Bubba Care → Start a session</strong>.</p>
 <p>Before creating the link, the parent can add the information a carer is most likely to need:</p>
 <ul><li>emergency contacts and their relationship to the baby</li><li>comfort and routine notes</li><li>feeding details, including a parent-entered amount or instruction when the normal log is not enough</li><li>other practical notes for this particular care period</li></ul>
 <p>The app saves those details as they are typed and syncs them with the child record. Starting a session is then a deliberate commit point: OBubba refreshes the browser guide before it produces the shareable link. If that preparation cannot complete, the screen shows an error rather than presenting a link that looks ready but is not.</p>
@@ -819,9 +819,9 @@
 <p>The parent remains the session manager. The carer does not need to navigate the rest of OBubba or change account settings.</p>
 <h2>What the grandparent or babysitter sees</h2>
 <p>The shared page is a care surface, not a mini version of the entire app.</p>
-<p>The Flutter screen describes it plainly: the link “opens in any browser, with big, simple buttons.” The handoff is designed for a person who may be perfectly confident with a baby but less confident installing unfamiliar software.</p>
+<p>The screen describes it plainly: the link “opens in any browser, with big, simple buttons.” The handoff is designed for a person who may be perfectly confident with a baby but less confident installing unfamiliar software.</p>
 <p>The page can bring together the immediate context the parent has prepared, while simple logging lets the carer record ordinary events without starting a second diary. The parent’s app shows a live carer feed so they can see what has been logged as it happens.</p>
-<figure><img src="/obubba-carer-handoff-app.jpg" alt="The real OBubba Flutter Carer hand-off distils current bedtime, recent-night and developmental context into one scan-friendly page." loading="lazy"/><figcaption>OBubba prepares a focused carer briefing from the baby’s current record instead of asking a grandparent to learn every screen in the app.</figcaption></figure>
+<figure><img src="/obubba-carer-handoff-app.jpg" alt="The real OBubba Carer hand-off distils current bedtime, recent-night and developmental context into one scan-friendly page." loading="lazy"/><figcaption>OBubba prepares a focused carer briefing from the baby’s current record instead of asking a grandparent to learn every screen in the app.</figcaption></figure>
 <p>This reduced interface is a feature, not a limitation. A one-evening babysitter generally does not need growth charts, subscription settings, pregnancy content, long-term reports or the parent’s wellbeing tools. They need a clear answer to “what matters for this baby right now?” and a quick way to record what happened.</p>
 <h2>A five-minute setup before you leave</h2>
 <p>Do not send the link for the first time as you close the front door. A short rehearsal is kinder to everybody.</p>
@@ -844,11 +844,11 @@
 <p>The smallest access surface that completes the job is usually the easiest to explain and the easiest to end.</p>
 <h2>What “New carer” and “End care session” actually do</h2>
 <p>These two buttons solve different handoff moments.</p>
-<p>Choose <strong>New carer (fresh link)</strong> when one person’s care period is over and a different person needs access. The current Flutter flow first pulls unmerged carer entries into the baby’s record, clears the old portal entries and creates a brand-new session link for the next person. The parent shares that new link rather than casually forwarding the previous one.</p>
+<p>Choose <strong>New carer (fresh link)</strong> when one person’s care period is over and a different person needs access. The current flow first pulls unmerged carer entries into the baby’s record, clears the old portal entries and creates a brand-new session link for the next person. The parent shares that new link rather than casually forwarding the previous one.</p>
 <p>Choose <strong>End care session</strong> when the handoff is finished and nobody else needs a new link. The app:</p>
 <ol><li>reads the remaining carer entries;</li><li>merges entries that have not already reached the parent timeline;</li><li>preserves a still-running carer nap as a finished timeline event;</li><li>clears the session page’s entries;</li><li>marks the session ended and revokes its token.</li></ol>
 <p>The browser page listens for that ended state. If it is still open, it changes to a locked “Session ended” screen instead of continuing to show the baby’s care guide.</p>
-<p>There is also a backstop: current Flutter sessions are minted for 29 days, within the backend’s 30-day maximum. That is an expiry ceiling, not a recommendation to leave a babysitter link open for four weeks. End the session when the care period ends.</p>
+<p>There is also a backstop: current sessions are minted for 29 days, within the backend’s 30-day maximum. That is an expiry ceiling, not a recommendation to leave a babysitter link open for four weeks. End the session when the care period ends.</p>
 <h2>What happens to a nap that is still running?</h2>
 <p>This is the kind of edge case that separates a real handoff system from a pretty share card.</p>
 <p>Suppose Grandma taps to start a nap, then the parent returns before she records the wake. Ending the care session asks the merge layer to finalise that open carer nap rather than silently dropping it. The resulting timeline still needs the parent’s normal review—especially if the recorded time is wrong—but the event is not abandoned merely because the browser session ended.</p>
@@ -881,7 +881,7 @@
 <h3>Should I send the same link to the next babysitter?</h3>
 <p>Use <strong>New carer (fresh link)</strong>. It saves the current carer’s remaining entries, clears their session page and creates a new link for the next person.</p>
 <h3>How long does a Bubba Care link last?</h3>
-<p>The current Flutter app mints a session token for 29 days, inside a 30-day backend limit. Parents should still end the session as soon as the care period is finished rather than relying on automatic expiry.</p>
+<p>The current app mints a session token for 29 days, inside a 30-day backend limit. Parents should still end the session as soon as the care period is finished rather than relying on automatic expiry.</p>
 <h3>What if the carer has no internet connection?</h3>
 <p>Treat Bubba Care as an online handoff. Prepare and open the link while connected, and keep essential contacts and safety instructions available offline. The PDF guide can be a useful static backup.</p>
 <h3>Is Bubba Care a medical record?</h3>

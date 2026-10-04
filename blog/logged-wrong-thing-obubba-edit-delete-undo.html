@@ -804,7 +804,7 @@
       <p>You meant to log a 2:10am feed and tapped 2:10pm. You chose the right bottle amount but the wrong baby. Your partner had already logged the wake. Or one exhausted thumb turned a short nap into an all-day sleep.</p>
 <p>The useful response is not to defend the data. It is to make the correction easy.</p>
 <p>&gt; <strong>In OBubba, fix the event that is wrong. Do not add a second invented event to “balance” it.</strong></p>
-<p>The current Flutter app lets a parent tap a real timeline entry, reopen the appropriate form, update or delete it, and undo a deletion for four seconds. Behind that simple interaction are protections for overnight day boundaries, linked wake-and-feed records, twins, shared care and stale partner copies.</p>
+<p>The current app lets a parent tap a real timeline entry, reopen the appropriate form, update or delete it, and undo a deletion for four seconds. Behind that simple interaction are protections for overnight day boundaries, linked wake-and-feed records, twins, shared care and stale partner copies.</p>
 <p>This guide explains what the app actually does—and what to do when the mistake involves medicine rather than merely a record.</p>
 <h2>The 30-second answer</h2>
 <p>| Mistake | Best correction | |---|---| | Wrong time, amount, side, note or sleep detail | Tap the existing entry and update it | | Wrong baby | Delete it from the wrong baby, then log it once for the correct baby | | Duplicate entry | Keep the most complete version and delete the other | | Accidental new entry | Tap <strong>Undo</strong> on the “saved” message within four seconds | | Accidental deletion | Tap <strong>Undo</strong> on the “deleted” message within four seconds | | Whole day is test data or clearly wrong | Use <strong>Clear this day</strong>, confirm, then use Undo if needed | | Very old archived day | OBubba currently explains that the day cannot be edited there | | Medicine was actually given incorrectly | Correcting the log is not enough—follow the medicine leaflet and seek clinical advice |</p>
@@ -817,7 +817,7 @@
 <p>Medicine, temperature and general notes use a smaller editor with the relevant time and fields. A real stored entry has an ID and is editable; sample or seed content without an ID is not presented as a real record to change.</p>
 <h2>What happens when you change the time</h2>
 <p>A timestamp is not just text on a card. It can decide which day and which night the event belongs to.</p>
-<p>Imagine a bedtime entered at <strong>1:05am</strong> and later corrected to <strong>10:15pm</strong>. Leaving it in the morning’s calendar bucket would separate the bedtime from the night it started. OBubba’s Flutter repository therefore has a dedicated edit-and-move operation:</p>
+<p>Imagine a bedtime entered at <strong>1:05am</strong> and later corrected to <strong>10:15pm</strong>. Leaving it in the morning’s calendar bucket would separate the bedtime from the night it started. OBubba’s repository therefore has a dedicated edit-and-move operation:</p>
 <ol><li>apply the corrected fields;</li><li>move the entry to the correct day when required;</li><li>preserve the same entry ID; and</li><li>write the patch and move atomically.</li></ol>
 <p>“Atomically” matters here. It means the app does not delete the old row first and hope a second network call successfully creates the new one. A connection failure between those two actions could otherwise lose the event.</p>
 <p>The overnight rule also works in the other direction. Correcting a retrospective night wake from 11:30pm to 2:10am files it with the morning-after side of that night without rolling an already-correct early-hours event forward a second day.</p>
@@ -841,7 +841,7 @@
 <p>That is a technical detail parents should never have to think about, but it is a trust feature: <strong>delete should mean delete, and undo should mean restore.</strong></p>
 <h2>What if two parents log at the same time?</h2>
 <p>A shared tracker should not make one caregiver afraid to correct anything.</p>
-<p>The current Flutter paths include several safeguards:</p>
+<p>The current paths include several safeguards:</p>
 <ul><li>a corrected entry keeps its ID, so it remains one shared event rather than becoming a duplicate;</li><li>newer edits carry a modification time for merge decisions;</li><li>explicit field clearing is recorded, so a stale copy cannot silently refill a field the parent intentionally removed;</li><li>deleting a known entry writes its deletion marker;</li><li>clearing a day removes only the entries visible to the person who confirmed the action; and</li><li>a partner entry added concurrently but absent from that person’s snapshot is preserved.</li></ul>
 <p>When <strong>Log for all babies</strong> creates sibling copies, the “saved” Undo removes every copy created by that action, not just the active child’s row.</p>
 <p>These rules cannot prevent two humans from describing the same real event differently. They do make repair safer when devices are briefly out of step.</p>
@@ -863,7 +863,7 @@
 <p>Use it sparingly. When only one event is wrong, correct that one event. Wiping a day removes useful context as well as the mistake.</p>
 <h2>Why an old day may be read-only</h2>
 <p>OBubba keeps recent days in its active data and can archive older days into colder storage. The current edit and delete operations work against the active record, not those archived shards.</p>
-<p>Rather than showing a false “updated” message for a change that did not persist, the Flutter UI says:</p>
+<p>Rather than showing a false “updated” message for a change that did not persist, the UI says:</p>
 <p>&gt; “This day is archived and can’t be edited here.”</p>
 <p>That is a present limitation. A trustworthy product should expose it plainly. If an old record matters for a clinical conversation, describe the correction separately rather than assuming the archived row changed.</p>
 <h2>Medicine logs need a different safety rule</h2>
@@ -889,11 +889,11 @@
 <h3>Can I move a log to another baby?</h3>
 <p>Not by editing. Delete it from the wrong baby, switch babies and log the real event under the correct child.</p>
 <h3>Why can’t I edit a very old day?</h3>
-<p>The current Flutter editor blocks archived-day changes because its live update path does not write to cold archived storage. It tells the parent instead of pretending the edit succeeded.</p>
+<p>The current editor blocks archived-day changes because its live update path does not write to cold archived storage. It tells the parent instead of pretending the edit succeeded.</p>
 <h3>Does fixing one bad nap immediately fix every prediction?</h3>
 <p>It gives the engines better current input. Personalised patterns still need repeated evidence and should remain guides, not promises.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — track the real day, correct tired-parent taps without shame, and keep one shared story the whole family can trust.</p>
-<p><em>This article gives general information for UK families and describes the current OBubba Flutter implementation reviewed on 6 March 2027. OBubba is a record and guidance tool, not a medical dosing system. For medicine mistakes, follow the medicine information and seek professional advice; call 999 in an emergency.</em></p>
+<p><em>This article gives general information for UK families and describes the current OBubba implementation reviewed on 6 March 2027. OBubba is a record and guidance tool, not a medical dosing system. For medicine mistakes, follow the medicine information and seek professional advice; call 999 in an emergency.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>

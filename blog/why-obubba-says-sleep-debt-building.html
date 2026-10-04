@@ -810,11 +810,11 @@
 <p>For healthy infants aged 4 to 12 months, the American Academy of Sleep Medicine recommends <strong>12 to 16 hours in 24 hours, including naps</strong>. The range is 11 to 14 hours for children aged 1 to 2 and 10 to 13 hours for ages 3 to 5. These are population recommendations for regular sleep—not a daily pass mark for an individual child.</p>
 <p>There is no equivalent evidence-based duration recommendation for babies under 4 months in that consensus statement because sleep is especially variable in the newborn period. OBubba reflects that uncertainty by not surfacing its proactive sleep-debt card before 16 weeks.</p>
 <p>So a 7-month-old logging 11 hours 50 minutes once has not “failed sleep”. A pattern below the lower guideline can be worth reviewing, but the baby’s behaviour, health, feeding and normal baseline still matter.</p>
-<h2>What the current Flutter app actually counts</h2>
+<h2>What the current app actually counts</h2>
 <p>OBubba uses the same core shortfall calculation in two places:</p>
 <ul><li>the proactive <strong>“A sleep debt is building”</strong> insight looks across up to seven prior days</li><li>the expanded Track guidance can show <strong>“Catching up on sleep”</strong> from up to four prior days</li></ul>
 <p>Both begin with the same question: <strong>is this day complete enough to count?</strong></p>
-<figure><img src="/obubba-sleep-debt-detector-map.svg" alt="The exact current Flutter sleep-debt gates, from complete day–night pairs through the two-day and 90-minute thresholds" loading="lazy"/><figcaption>OBubba’s current sleep-shortfall heuristic. Missing logs are skipped rather than counted as zero sleep.</figcaption></figure>
+<figure><img src="/obubba-sleep-debt-detector-map.svg" alt="The exact current sleep-debt gates, from complete day–night pairs through the two-day and 90-minute thresholds" loading="lazy"/><figcaption>OBubba’s current sleep-shortfall heuristic. Missing logs are skipped rather than counted as zero sleep.</figcaption></figure>
 <h3>1. The app pairs a day’s naps with the night that followed</h3>
 <p>For each prior calendar day, OBubba combines:</p>
 <ul><li>the bedtime-to-morning span for the night following that day</li><li>the completed nap time logged during that day</li></ul>
@@ -829,7 +829,7 @@
 <h3>4. Night sleep is a broad span</h3>
 <p>For this calculation, the app uses the reconstructed bedtime-to-morning span. It does not subtract every logged awake minute from that span.</p>
 <p>That choice tends to <strong>understate</strong>, rather than inflate, the calculated shortfall. A 10-hour night containing a 45-minute split wake still enters as roughly 10 hours here. Use the separate night analysis for actual awake duration and interrupted sleep quality.</p>
-<figure><img src="/obubba-sleep-debt-track-app.jpg" alt="A genuine current OBubba Flutter Track screen showing the overnight clock and the night record that supplies bedtime and morning context" loading="lazy"/><figcaption>Current OBubba Flutter Track surface with fictional example data. The sleep-debt calculation needs completed day and night records; this screen is the source timeline, not a medical monitor.</figcaption></figure>
+<figure><img src="/obubba-sleep-debt-track-app.jpg" alt="A genuine current OBubba Track screen showing the overnight clock and the night record that supplies bedtime and morning context" loading="lazy"/><figcaption>Current OBubba Track surface with fictional example data. The sleep-debt calculation needs completed day and night records; this screen is the source timeline, not a medical monitor.</figcaption></figure>
 <h2>The exact age floors</h2>
 <p>The current engine counts only minutes below the lower edge of these 24-hour ranges:</p>
 <p>| Corrected or chronological age used by the engine | OBubba range | Shortfall starts below | |---|---:|---:| | 4–11 months | 12–16 hours | 12 hours | | 1–2 years | 11–14 hours | 11 hours | | 2 years and over | 10–13 hours | 10 hours |</p>
@@ -839,7 +839,7 @@
 <p>| Day | Logged total | 7-month floor | Added shortfall | |---|---:|---:|---:| | Monday | 11h 20m | 12h | 40m | | Tuesday | 12h 35m | 12h | 0m | | Wednesday | 11h 5m | 12h | 55m |</p>
 <p>The running total is 95 minutes. The normal Tuesday stays normal; it does not become a 35-minute “credit”.</p>
 <h2>Why one terrible day does not trigger the card</h2>
-<p>The current Flutter logic requires <strong>both</strong>:</p>
+<p>The current logic requires <strong>both</strong>:</p>
 <ol><li>at least two genuinely short days, and</li><li>at least 90 minutes of accumulated shortfall</li></ol>
 <p>One extremely short day can exceed 90 minutes on its own and still remain silent. This prevents a vaccination day, journey, illness wobble or unusually bad night from becoming a premium-feeling alarm.</p>
 <p>Two days that are each 20 minutes short also remain silent because the total does not reach 90 minutes.</p>

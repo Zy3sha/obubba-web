@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="apple-itunes-app" content="app-id=6760968757"/>
   <title>Why Does OBubba Say ‘A Late Nap May Move Bedtime’? | OBubba</title>
-  <meta name="description" content="See the exact Flutter rule behind OBubba’s late-nap bedtime card, how it calculates tonight’s earliest plausible bedtime, and what parents can do."/>
+  <meta name="description" content="See the exact rule behind OBubba’s late-nap bedtime card, how it calculates tonight’s earliest plausible bedtime, and what parents can do."/>
   <meta name="robots" content="index, follow, max-image-preview:large"/>
   <link rel="canonical" href="https://obubba.com/blog/why-obubba-says-late-nap-may-move-bedtime.html"/>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
@@ -19,13 +19,13 @@
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://obubba.com/blog/why-obubba-says-late-nap-may-move-bedtime.html"/>
   <meta property="og:title" content="Why Does OBubba Say ‘A Late Nap May Move Bedtime’? | OBubba"/>
-  <meta property="og:description" content="See the exact Flutter rule behind OBubba’s late-nap bedtime card, how it calculates tonight’s earliest plausible bedtime, and what parents can do."/>
+  <meta property="og:description" content="See the exact rule behind OBubba’s late-nap bedtime card, how it calculates tonight’s earliest plausible bedtime, and what parents can do."/>
   <meta property="og:image" content="https://obubba.com/obubba-late-nap-may-move-bedtime.jpg"/>
   <meta property="og:site_name" content="OBubba"/>
   <meta property="og:locale" content="en_GB"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Why Does OBubba Say ‘A Late Nap May Move Bedtime’? | OBubba"/>
-  <meta name="twitter:description" content="See the exact Flutter rule behind OBubba’s late-nap bedtime card, how it calculates tonight’s earliest plausible bedtime, and what parents can do."/>
+  <meta name="twitter:description" content="See the exact rule behind OBubba’s late-nap bedtime card, how it calculates tonight’s earliest plausible bedtime, and what parents can do."/>
   <meta name="twitter:image" content="https://obubba.com/obubba-late-nap-may-move-bedtime.jpg"/>
   <meta name="theme-color" content="#fffcf9"/>
   <link rel="preload" href="/Parisienne-Regular.ttf" as="font" type="font/truetype" crossorigin/>
@@ -744,7 +744,7 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Why Does OBubba Say ‘A Late Nap May Move Bedtime’?",
-  "description": "See the exact Flutter rule behind OBubba’s late-nap bedtime card, how it calculates tonight’s earliest plausible bedtime, and what parents can do.",
+  "description": "See the exact rule behind OBubba’s late-nap bedtime card, how it calculates tonight’s earliest plausible bedtime, and what parents can do.",
   "datePublished": "2026-09-19",
   "dateModified": "2026-09-19",
   "author": {
@@ -796,7 +796,7 @@
           <span class="read-time">10 min read</span>
         </div>
         <h1>Why Does OBubba Say ‘A Late Nap May Move Bedtime’?</h1>
-        <p>See the exact Flutter rule behind OBubba’s late-nap bedtime card, how it calculates tonight’s earliest plausible bedtime, and what parents can do.</p>
+        <p>See the exact rule behind OBubba’s late-nap bedtime card, how it calculates tonight’s earliest plausible bedtime, and what parents can do.</p>
         <div class="tags"><span class="tag">late nap may move bedtime OBubba</span><span class="tag">baby late nap bedtime</span><span class="tag">last nap ended late</span><span class="tag">baby bedtime calculator</span><span class="tag">baby wake window app</span></div>
       </div>
     </header>
@@ -804,14 +804,14 @@
       <p>The last nap ended at 4:30pm. At 5:15pm your baby looks cheerful, dinner is still happening and OBubba adds a low-key card:</p>
 <p>&gt; <strong>A late nap may move bedtime</strong></p>
 <p>Underneath, it might say bedtime may sit closer to 6:50pm tonight.</p>
-<p>That is not the app choosing a new permanent schedule. It is Flutter doing one small piece of live time maths: the nap finished at 4:30pm, this baby’s current minimum age-based awake window is 2 hours 20 minutes, and 4:30pm plus 2h 20m is 6:50pm.</p>
+<p>That is not the app choosing a new permanent schedule. It is doing one small piece of live time maths: the nap finished at 4:30pm, this baby’s current minimum age-based awake window is 2 hours 20 minutes, and 4:30pm plus 2h 20m is 6:50pm.</p>
 <p>The word <strong>may</strong> matters. The card identifies the earliest plausible edge created by a completed late nap. It does not know exactly when your baby will fall asleep, and it is not identical to the fuller bedtime prediction elsewhere in OBubba.</p>
-<h2>The exact Flutter rule</h2>
+<h2>The exact rule</h2>
 <p>The current `diagnoseAwakeWindow` function returns this card when all of these conditions are true:</p>
-<p>| Live input | Flutter requirement | |---|---| | Baby’s state | Awake now, with a real awake-time anchor | | Bedtime | No bedtime sleep logged yet | | Nap plan | The parent has not explicitly selected a zero-nap day | | Last completed nap | Ended at or after <strong>4:00pm</strong> | | Current clock | Before <strong>8:00pm</strong> | | More pressing live read | No earlier overdue-sleep branch won first |</p>
+<p>| Live input | requirement | |---|---| | Baby’s state | Awake now, with a real awake-time anchor | | Bedtime | No bedtime sleep logged yet | | Nap plan | The parent has not explicitly selected a zero-nap day | | Last completed nap | Ended at or after <strong>4:00pm</strong> | | Current clock | Before <strong>8:00pm</strong> | | More pressing live read | No earlier overdue-sleep branch won first |</p>
 <p>The output is a <strong>low-urgency</strong> sleep insight. It appears in today’s guidance rather than OBubba’s longer-term pattern feed, and its dismissal key is specific to that calendar day and title.</p>
-<figure><img src="/obubba-late-nap-may-move-bedtime-logic.svg" alt="The exact Flutter route behind OBubba’s A late nap may move bedtime card." loading="lazy"/><figcaption>OBubba first checks that the baby is awake, a bedtime has not been logged and the last completed nap ended at or after 4pm. If the current time is before 8pm and a more urgent overdue-sleep message did not win first, Flutter adds at least the age-based minimum awake window—never less than 60 minutes—to the nap end and presents the result as a low-urgency possibility, not a fixed bedtime.</figcaption></figure>
-<h2>The worked example in the Flutter test</h2>
+<figure><img src="/obubba-late-nap-may-move-bedtime-logic.svg" alt="The exact route behind OBubba’s A late nap may move bedtime card." loading="lazy"/><figcaption>OBubba first checks that the baby is awake, a bedtime has not been logged and the last completed nap ended at or after 4pm. If the current time is before 8pm and a more urgent overdue-sleep message did not win first, adds at least the age-based minimum awake window—never less than 60 minutes—to the nap end and presents the result as a low-urgency possibility, not a fixed bedtime.</figcaption></figure>
+<h2>The worked example in the test</h2>
 <p>OBubba’s dedicated unit test creates this day:</p>
 <ul><li>age used by the test: about seven months;</li><li>age-based awake range supplied to the detector: 2h 20m to 3h 20m;</li><li>last nap ended: 4:30pm;</li><li>current time: 5:15pm;</li><li>time awake so far: 45 minutes; and</li><li>two naps completed.</li></ul>
 <p>Because 4:30pm is after the 4pm threshold and bedtime has not been logged, the late-nap branch qualifies.</p>
@@ -825,7 +825,7 @@
 <p>The live awake-window interpreter returns only its most pressing message. Its order is:</p>
 <ol><li>first nap overdue;</li><li>next sleep overdue after a nap;</li><li>late nap may move bedtime;</li><li>excess day sleep may justify a slightly later bedtime; then</li><li>a day-sleep deficit may justify an earlier bedtime.</li></ol>
 <p>That order creates an important boundary.</p>
-<p>Before 6pm, if your baby has already been awake for more than the age-based maximum plus 45 minutes, Flutter returns <strong>Next sleep is getting overdue</strong> instead of the late-nap card. The same 4:30pm nap can therefore produce different guidance at 5:15pm and 5:55pm if the age window is short enough.</p>
+<p>Before 6pm, if your baby has already been awake for more than the age-based maximum plus 45 minutes, returns <strong>Next sleep is getting overdue</strong> instead of the late-nap card. The same 4:30pm nap can therefore produce different guidance at 5:15pm and 5:55pm if the age window is short enough.</p>
 <p>After 6pm, the “next sleep overdue” branch stops running, while the late-nap branch remains eligible until 8pm. This avoids calling an evening bedtime a missing daytime nap, but it also means the title alone does not reveal the branch order.</p>
 <p>The card also stays silent while the baby is asleep, after bedtime has been logged, during an open night-wake pause, when no reliable awake anchor exists, or when an older child’s explicit plan says zero naps.</p>
 <h2>Four o’clock is a product threshold, not a biological law</h2>
@@ -845,7 +845,7 @@
 <p>The live card uses a deliberately narrow calculation. OBubba’s full bedtime predictor can consider more of the day, including:</p>
 <ul><li>the last completed nap and its duration;</li><li>total day sleep;</li><li>whether day sleep looks meaningfully above or below the age range;</li><li>recent sleep debt;</li><li>the age-aware final wake window;</li><li>selected personal recommendations; and</li><li>a hard latest bound so a very late nap cannot push an absurd bedtime indefinitely.</li></ul>
 <p>The day-plan assembler also protects coherence: predicted bedtime cannot appear before the final nap shown in the plan has ended plus a short wind-down. When a genuine late nap pushes bedtime beyond the usual soft age ceiling, the plan is allowed to follow the nap rather than display the impossible sequence “bedtime before nap ends”.</p>
-<figure><img src="/obubba-tomorrows-plan-nap-bedtime-prediction.jpg" alt="A genuine OBubba Flutter Tomorrow’s plan screen showing a late second nap ending at 4:51pm and the connected predicted bedtime near 8pm." loading="lazy"/><figcaption>This genuine Flutter capture shows how nap timing and bedtime stay connected in the wider day plan. It is not a fabricated screenshot of the exact live card: the planned second nap ends at 4:51pm and bedtime remains downstream near 8pm.</figcaption></figure>
+<figure><img src="/obubba-tomorrows-plan-nap-bedtime-prediction.jpg" alt="A genuine OBubba Tomorrow’s plan screen showing a late second nap ending at 4:51pm and the connected predicted bedtime near 8pm." loading="lazy"/><figcaption>This genuine capture shows how nap timing and bedtime stay connected in the wider day plan. It is not a fabricated screenshot of the exact live card: the planned second nap ends at 4:51pm and bedtime remains downstream near 8pm.</figcaption></figure>
 <p>The live card’s “closer to” time is therefore best understood as a transparent minimum-gap explanation. The main clock may later show a different prediction as the day, logs and personal model update.</p>
 <h2>What OBubba is suggesting for tonight</h2>
 <p>The card does not tell you to force your baby awake until the displayed minute. It says the recent nap may have shifted the realistic settling zone.</p>
@@ -853,7 +853,7 @@
 <ol><li><strong>Let the nap count.</strong> Do not pretend it did not happen and repeatedly attempt the old bedtime from scratch.</li><li><strong>Watch the baby, not only the clock.</strong> Sleepy cues, mood, feeding and illness still matter.</li><li><strong>Keep the wind-down familiar.</strong> Dim lights and repeat the ordinary bedtime steps; there is no need to create a second elaborate routine.</li><li><strong>If bedtime must remain earlier, change a future nap—not the past.</strong> OBubba’s own copy suggests keeping the last nap short and aiming for it to end with enough awake time before bed.</li><li><strong>Do not stretch a distressed or exhausted baby to satisfy an app interval.</strong> The card is low urgency because a family can respond flexibly.</li></ol>
 <p>Sometimes the best answer is a later bedtime. Sometimes it is a very short bridge nap followed by the usual routine. Sometimes an unexpectedly sleepy baby is unwell and the schedule is no longer the important question.</p>
 <h2>It is not permission to cut needed day sleep</h2>
-<p>“Late nap” and “too much day sleep” are separate Flutter branches.</p>
+<p>“Late nap” and “too much day sleep” are separate branches.</p>
 <p>This card can appear because of nap timing even when the day-sleep total is ordinary or low. Cutting naps aggressively may replace an under-tired bedtime with an overtired one. The engine’s later surplus branch requires day sleep to exceed the age ceiling by more than 30 minutes before it recommends holding bedtime later and trimming tomorrow.</p>
 <p>Likewise, its deficit branch can recommend an earlier bedtime when naps are essentially finished and total day sleep is more than 30 minutes under the age floor.</p>
 <p>In plain English:</p>
@@ -872,7 +872,7 @@
 <p>Do not keep a baby asleep in a car seat after the journey ends merely to preserve the nap or bedtime calculation. Move them to an appropriate flat sleep space when you arrive, following current safer-sleep guidance.</p>
 <h2>The honest translation</h2>
 <p>The most accurate version of <strong>A late nap may move bedtime</strong> is:</p>
-<p>&gt; <strong>OBubba can see a completed nap ending at or after 4pm. The baby is awake, bedtime is not logged, it is before 8pm and no more pressing overdue-sleep message won first. Flutter added at least the current age-based minimum awake interval to the nap end and displayed that clock time as a low-urgency possibility. The 4pm gate is fixed; the interval is age-adjusted; neither is a guarantee of when this baby will sleep.</strong></p>
+<p>&gt; <strong>OBubba can see a completed nap ending at or after 4pm. The baby is awake, bedtime is not logged, it is before 8pm and no more pressing overdue-sleep message won first. added at least the current age-based minimum awake interval to the nap end and displayed that clock time as a low-urgency possibility. The 4pm gate is fixed; the interval is age-adjusted; neither is a guarantee of when this baby will sleep.</strong></p>
 <p>That is useful information at 5:15pm: specific enough to stop a futile early bedtime battle, modest enough to change when the baby or the evening says otherwise.</p>
 <p>OBubba connects live nap timing, corrected-age sleep ranges, coherent day plans, bedtime predictions and optional one-change experiments in the same record. <a href="/#download">Explore OBubba</a> if you want a tracker that not only moves the clock, but shows you the exact nap that moved it.</p>
 

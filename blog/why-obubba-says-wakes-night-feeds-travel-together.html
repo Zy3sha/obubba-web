@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="apple-itunes-app" content="app-id=6760968757"/>
   <title>Why Does OBubba Say ‘Wakes and Night Feeds Tend to Travel Together’?</title>
-  <meta name="description" content="See the real Flutter rules behind OBubba’s feed-associated waking insight, what it can and cannot know, and how to test the pattern without withholding a needed feed."/>
+  <meta name="description" content="See the real rules behind OBubba’s feed-associated waking insight, what it can and cannot know, and how to test the pattern without withholding a needed feed."/>
   <meta name="robots" content="index, follow, max-image-preview:large"/>
   <link rel="canonical" href="https://obubba.com/blog/why-obubba-says-wakes-night-feeds-travel-together.html"/>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
@@ -19,13 +19,13 @@
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://obubba.com/blog/why-obubba-says-wakes-night-feeds-travel-together.html"/>
   <meta property="og:title" content="Why Does OBubba Say ‘Wakes and Night Feeds Tend to Travel Together’?"/>
-  <meta property="og:description" content="See the real Flutter rules behind OBubba’s feed-associated waking insight, what it can and cannot know, and how to test the pattern without withholding a needed feed."/>
+  <meta property="og:description" content="See the real rules behind OBubba’s feed-associated waking insight, what it can and cannot know, and how to test the pattern without withholding a needed feed."/>
   <meta property="og:image" content="https://obubba.com/obubba-wakes-night-feeds-travel-together.jpg"/>
   <meta property="og:site_name" content="OBubba"/>
   <meta property="og:locale" content="en_GB"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Why Does OBubba Say ‘Wakes and Night Feeds Tend to Travel Together’?"/>
-  <meta name="twitter:description" content="See the real Flutter rules behind OBubba’s feed-associated waking insight, what it can and cannot know, and how to test the pattern without withholding a needed feed."/>
+  <meta name="twitter:description" content="See the real rules behind OBubba’s feed-associated waking insight, what it can and cannot know, and how to test the pattern without withholding a needed feed."/>
   <meta name="twitter:image" content="https://obubba.com/obubba-wakes-night-feeds-travel-together.jpg"/>
   <meta name="theme-color" content="#fffcf9"/>
   <link rel="preload" href="/Parisienne-Regular.ttf" as="font" type="font/truetype" crossorigin/>
@@ -744,7 +744,7 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Why Does OBubba Say ‘Wakes and Night Feeds Tend to Travel Together’?",
-  "description": "See the real Flutter rules behind OBubba’s feed-associated waking insight, what it can and cannot know, and how to test the pattern without withholding a needed feed.",
+  "description": "See the real rules behind OBubba’s feed-associated waking insight, what it can and cannot know, and how to test the pattern without withholding a needed feed.",
   "datePublished": "2026-09-19",
   "dateModified": "2026-09-19",
   "author": {
@@ -796,7 +796,7 @@
           <span class="read-time">11 min read</span>
         </div>
         <h1>Why Does OBubba Say ‘Wakes and Night Feeds Tend to Travel Together’?</h1>
-        <p>See the real Flutter rules behind OBubba’s feed-associated waking insight, what it can and cannot know, and how to test the pattern without withholding a needed feed.</p>
+        <p>See the real rules behind OBubba’s feed-associated waking insight, what it can and cannot know, and how to test the pattern without withholding a needed feed.</p>
         <div class="tags"><span class="tag">baby wakes and night feeds</span><span class="tag">feed to sleep association</span><span class="tag">baby waking every two hours to feed</span><span class="tag">OBubba night feeds</span><span class="tag">night weaning app</span></div>
       </div>
     </header>
@@ -807,7 +807,7 @@
 <p><strong>No. The card means that feeds and wakes repeatedly appear together in the nights you logged, while your baby’s longest stretch is shorter than OBubba’s age-aware benchmark.</strong> It is a cautious pattern flag—not a diagnosis, a hunger detector or an instruction to withhold milk.</p>
 <p>That distinction matters. A baby may wake because they are hungry and then feed. They may wake for another reason and find feeding the easiest route back to sleep. Both may be true on different nights. A parent-entered log can show co-occurrence; it cannot prove which explanation came first.</p>
 <h2>The short answer</h2>
-<p>The current Flutter app keeps this card hidden unless all of these conditions are met:</p>
+<p>The current app keeps this card hidden unless all of these conditions are met:</p>
 <p>| Gate | Current rule | |---|---| | Parenting preference | The card is suppressed for <strong>Follow my baby’s lead</strong>, the app’s minimal-intervention style | | Age | At least <strong>26 corrected weeks</strong>, roughly six months | | Complete data | At least <strong>5 nights</strong> have both bedtime and morning wake | | Repeated pattern | On at least <strong>60%</strong> of usable nights, there are 2+ wakes, 2+ night feeds and feeds on all or all but one wake | | Consolidation | The average longest stretch is more than 30 minutes below the app’s age-normal benchmark |</p>
 <p>The Brain currently checks the latest seven nights, so a card shown there is based on five, six or seven usable nights and is labelled an <strong>early signal</strong>.</p>
 <figure><img src="/obubba-feed-associated-waking-detector.svg" alt="The five gates behind OBubba’s feed-associated waking insight, plus the important things the log cannot know." loading="lazy"/><figcaption>OBubba checks parenting preference, corrected age, complete nights, a repeated feed-with-wake pattern and the average longest stretch before showing the card. The detector cannot know hunger, milk transfer, growth, daytime intake or causality.</figcaption></figure>
@@ -853,9 +853,9 @@
 <p>Watch the next few nights rather than judging one attempt. The intervention’s success metric is a longer unbroken stretch, not “zero feeds”. Illness, teething, travel or a growth spurt can make any experiment unhelpful; pause it without treating that as failure.</p>
 <h2>The card and Night Weaning are two different systems</h2>
 <p>The insight card only identifies a candidate pattern. <strong>Care → Night Weaning</strong> performs a second readiness check before building a plan.</p>
-<p>The current Flutter screen shows three green lights:</p>
+<p>The current screen shows three green lights:</p>
 <ul><li><strong>AGE:</strong> known corrected age of at least 26 weeks;</li><li><strong>DAY:</strong> at least three daytime feeds logged on the best of the last five calendar days; and</li><li><strong>NIGHTS:</strong> night feeds present on at least two of the last five completed nights, enough to form a baseline.</li></ul>
-<figure><img src="/obubba-feed-association-night-weaning-app.jpg" alt="The genuine OBubba Flutter Night Weaning screen showing its age, daytime-feeding and recent-night readiness lights." loading="lazy"/><figcaption>OBubba’s live Night Weaning screen requires three readiness lights before starting a personalized seven-night plan. These log-based checks support a conversation; they do not replace a growth or feeding assessment.</figcaption></figure>
+<figure><img src="/obubba-feed-association-night-weaning-app.jpg" alt="The genuine OBubba Night Weaning screen showing its age, daytime-feeding and recent-night readiness lights." loading="lazy"/><figcaption>OBubba’s live Night Weaning screen requires three readiness lights before starting a personalized seven-night plan. These log-based checks support a conversation; they do not replace a growth or feeding assessment.</figcaption></figure>
 <p>“Daytime feeds are solid” is app wording. Technically, the green light counts logged feeds; it cannot verify milk volume, transfer, calories or growth. If any of those are uncertain, the light is not clinical clearance—ask your health visitor or feeding professional.</p>
 <p>When all three lights are green, the plan uses the baby’s real recent baseline. Bottle-fed plans taper logged volume gradually. Breastfed or no-volume plans use time and comfort steps. For babies under 12 months, the volume plan keeps a small feed rather than marching to zero; the screen repeatedly says a feed can still be appropriate.</p>
 <h2>Why “Follow my baby’s lead” changes the result</h2>
@@ -883,7 +883,7 @@
 <h3>Is feeding to sleep bad?</h3>
 <p>No. Feeding is a powerful, normal way to nourish and settle a baby. It becomes a practical question only when the family wants a change and the baby is ready. A logged association is not a parenting failure.</p>
 <h2>Sources and further reading</h2>
-<ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Responsive bottle feeding</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/22616943/" target="_blank" rel="noopener noreferrer">Ramamurthy et al., <em>Journal of Developmental &amp; Behavioral Pediatrics</em> (PubMed)</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/37980699/" target="_blank" rel="noopener noreferrer">Norwegian 6–12-month breastfeeding and sleep study (PubMed)</a></li><li>OBubba Flutter source reviewed: `feed_association.dart`, `brain.dart`, `day_metrics.dart`, `night_analysis.dart`, `adaptive_profile.dart`, `intervention.dart`, `night_weaning.dart`, `night_weaning_screen.dart` and their focused tests</li></ul>
+<ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Responsive bottle feeding</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/22616943/" target="_blank" rel="noopener noreferrer">Ramamurthy et al., <em>Journal of Developmental &amp; Behavioral Pediatrics</em> (PubMed)</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/37980699/" target="_blank" rel="noopener noreferrer">Norwegian 6–12-month breastfeeding and sleep study (PubMed)</a></li><li>OBubba source reviewed: `feed_association.dart`, `brain.dart`, `day_metrics.dart`, `night_analysis.dart`, `adaptive_profile.dart`, `intervention.dart`, `night_weaning.dart`, `night_weaning_screen.dart` and their focused tests</li></ul>
 <p><em>OBubba is a tracking, planning and education tool, not a medical device. Its feed-associated waking insight is a deterministic summary of parent-entered logs. It cannot assess hunger, milk intake, growth, illness or feeding safety. Never withhold a needed feed to improve an app pattern; seek individualized advice when feeding, growth or health is uncertain.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">

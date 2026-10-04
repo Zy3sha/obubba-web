@@ -804,15 +804,15 @@
       <p>You have only just started logging. Then OBubba says:</p>
 <p>&gt; <strong>“Maya’s longest sleep so far.”</strong></p>
 <p>It can feel like a milestone—or a promise that the difficult nights are ending. But what does <strong>so far</strong> cover? Did the app compare every night since birth? Does one long stretch mean the baby is sleeping through?</p>
-<p>No. We traced the current Flutter function and the exact seven calendar-day slice passed into it. The card is a deliberately small, early reward: <strong>the longest qualifying nap or sleep in the recent record while OBubba is still learning.</strong></p>
-<figure><img src="/obubba-longest-sleep-early-read-ladder.svg" alt="How the current Flutter engine chooses one early rhythm card in priority order." loading="lazy"/><figcaption>The longest-sleep celebration comes first; daytime feed spacing and wake windows are fallbacks. The early read only runs with 3 to 25 recent loggable moments.</figcaption></figure>
+<p>No. We traced the current function and the exact seven calendar-day slice passed into it. The card is a deliberately small, early reward: <strong>the longest qualifying nap or sleep in the recent record while OBubba is still learning.</strong></p>
+<figure><img src="/obubba-longest-sleep-early-read-ladder.svg" alt="How the current engine chooses one early rhythm card in priority order." loading="lazy"/><figcaption>The longest-sleep celebration comes first; daytime feed spacing and wake windows are fallbacks. The early read only runs with 3 to 25 recent loggable moments.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current app can show the longest-sleep celebration when all of these are true:</p>
-<p>| Check | Current Flutter rule | What it means | |---|---:|---| | Early-use window | <strong>3–25</strong> loggable moments | There is enough activity for a first observation, but the activation card has not retired | | Calendar window | <strong>Today + previous 6 days</strong> | “So far” means this supplied seven-day snapshot—not lifetime history | | Entry type | A saved <strong>nap or sleep</strong> | Both daytime and night sleep can qualify | | Complete arc | Start and end are present | An open timer cannot produce a duration | | Notable duration | At least <strong>2h 30m</strong> | Short naps do not earn the celebration | | Plausibility cap | No more than <strong>16h</strong> | Very long timer arcs are rejected |</p>
+<p>| Check | Current rule | What it means | |---|---:|---| | Early-use window | <strong>3–25</strong> loggable moments | There is enough activity for a first observation, but the activation card has not retired | | Calendar window | <strong>Today + previous 6 days</strong> | “So far” means this supplied seven-day snapshot—not lifetime history | | Entry type | A saved <strong>nap or sleep</strong> | Both daytime and night sleep can qualify | | Complete arc | Start and end are present | An open timer cannot produce a duration | | Notable duration | At least <strong>2h 30m</strong> | Short naps do not earn the celebration | | Plausibility cap | No more than <strong>16h</strong> | Very long timer arcs are rejected |</p>
 <p>If several sleeps qualify, the engine chooses the longest duration. It formats the result plainly—such as <strong>“7h 35m”</strong>—and labels it a low-urgency celebration.</p>
 <p>The card is factual about one saved timer arc. It is not a sleep score, developmental grade or forecast.</p>
 <h2>“So far” is seven days, not all time</h2>
-<p>The early-read function could accept any sequence of days. In the real Flutter caller, it receives exactly seven local calendar buckets:</p>
+<p>The early-read function could accept any sequence of days. In the real caller, it receives exactly seven local calendar buckets:</p>
 <ul><li>today;</li><li>yesterday; and</li><li>the five days before that.</li></ul>
 <p>That makes the title warmer than “longest sleep in the current seven-day activation window,” but the technical meaning is the latter.</p>
 <p>A longer stretch from two weeks ago is outside this calculation. A stretch saved to the wrong calendar day may not be where a parent expects. And because today is included, the window is partly unfinished.</p>
@@ -829,7 +829,7 @@
 <p>The first matching result returns immediately. So a 3-hour nap can make the sleep celebration appear even when the same record also contains enough feeds for a first spacing average.</p>
 <p>This does <strong>not</strong> mean sleep is medically more important than feeding. It is a product choice: a notable stretch is the most emotionally legible early observation, while the other reads remain available when no long sleep qualifies.</p>
 <h2>What the duration calculation actually does</h2>
-<p>For each nap or sleep with two endpoints, Flutter subtracts the start minute from the end minute. If the answer is negative, it adds 24 hours so an overnight arc can cross midnight.</p>
+<p>For each nap or sleep with two endpoints, subtracts the start minute from the end minute. If the answer is negative, it adds 24 hours so an overnight arc can cross midnight.</p>
 <p>Examples:</p>
 <p>| Saved arc | Calculated duration | Result | |---|---:|---| | 09:10–10:00 | 50m | Too short for this card | | 13:00–15:30 | 2h 30m | Qualifies at the boundary | | 20:00–02:45 | 6h 45m | Qualifies after midnight wrap | | 19:00–12:00 | 17h | Rejected above the 16h cap |</p>
 <p>The cap is a useful corruption guard, not proof that every duration below it is accurate. A forgotten timer stopped 15 hours later can still fit inside the function’s allowed range.</p>
@@ -866,7 +866,7 @@
 <p><strong><a href="/baby-sleep-tracker.html">Explore OBubba’s baby sleep tracker →</a></strong> — time sleeps, correct missed endpoints and let early observations give way to patterns built from your own baby’s real days.</p>
 <h2>Frequently asked questions</h2>
 <h3>Does “longest sleep so far” mean since birth?</h3>
-<p>No. In the current Flutter caller, it means the longest qualifying nap or sleep in today plus the previous six local calendar days.</p>
+<p>No. In the current caller, it means the longest qualifying nap or sleep in today plus the previous six local calendar days.</p>
 <h3>Why did a nap beat the night sleep?</h3>
 <p>The detector treats both `nap` and `sleep` entries as candidates. Whichever qualifying complete arc is longer wins.</p>
 <h3>Why did no card appear after a 2-hour sleep?</h3>

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="apple-itunes-app" content="app-id=6760968757"/>
   <title>How Does OBubba Build Its 7-Night Night-Weaning Plan?</title>
-  <meta name="description" content="We traced OBubba’s Flutter night-weaning engine: its five-night baseline, three readiness lights, bottle and breastfeeding branches, safeguards and current limits."/>
+  <meta name="description" content="We traced OBubba’s night-weaning engine: its five-night baseline, three readiness lights, bottle and breastfeeding branches, safeguards and current limits."/>
   <meta name="robots" content="index, follow, max-image-preview:large"/>
   <link rel="canonical" href="https://obubba.com/blog/how-obubba-builds-seven-night-night-weaning-plan.html"/>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
@@ -19,13 +19,13 @@
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://obubba.com/blog/how-obubba-builds-seven-night-night-weaning-plan.html"/>
   <meta property="og:title" content="How Does OBubba Build Its 7-Night Night-Weaning Plan?"/>
-  <meta property="og:description" content="We traced OBubba’s Flutter night-weaning engine: its five-night baseline, three readiness lights, bottle and breastfeeding branches, safeguards and current limits."/>
+  <meta property="og:description" content="We traced OBubba’s night-weaning engine: its five-night baseline, three readiness lights, bottle and breastfeeding branches, safeguards and current limits."/>
   <meta property="og:image" content="https://obubba.com/obubba-seven-night-night-weaning-plan.jpg"/>
   <meta property="og:site_name" content="OBubba"/>
   <meta property="og:locale" content="en_GB"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="How Does OBubba Build Its 7-Night Night-Weaning Plan?"/>
-  <meta name="twitter:description" content="We traced OBubba’s Flutter night-weaning engine: its five-night baseline, three readiness lights, bottle and breastfeeding branches, safeguards and current limits."/>
+  <meta name="twitter:description" content="We traced OBubba’s night-weaning engine: its five-night baseline, three readiness lights, bottle and breastfeeding branches, safeguards and current limits."/>
   <meta name="twitter:image" content="https://obubba.com/obubba-seven-night-night-weaning-plan.jpg"/>
   <meta name="theme-color" content="#fffcf9"/>
   <link rel="preload" href="/Parisienne-Regular.ttf" as="font" type="font/truetype" crossorigin/>
@@ -744,7 +744,7 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "How Does OBubba Build Its 7-Night Night-Weaning Plan?",
-  "description": "We traced OBubba’s Flutter night-weaning engine: its five-night baseline, three readiness lights, bottle and breastfeeding branches, safeguards and current limits.",
+  "description": "We traced OBubba’s night-weaning engine: its five-night baseline, three readiness lights, bottle and breastfeeding branches, safeguards and current limits.",
   "datePublished": "2026-09-19",
   "dateModified": "2026-09-19",
   "author": {
@@ -770,7 +770,7 @@
   },
   "mainEntityOfPage": "https://obubba.com/blog/how-obubba-builds-seven-night-night-weaning-plan.html",
   "image": "https://obubba.com/obubba-seven-night-night-weaning-plan.jpg",
-  "keywords": "OBubba night weaning plan, how to reduce night feeds, seven night night weaning, baby night feed tracker, bottle night weaning, breastfeeding night weaning, night weaning 6 months, night weaning 12 months, gradual night weaning, personalised baby sleep app, responsive feeding, OBubba Flutter"
+  "keywords": "OBubba night weaning plan, how to reduce night feeds, seven night night weaning, baby night feed tracker, bottle night weaning, breastfeeding night weaning, night weaning 6 months, night weaning 12 months, gradual night weaning, personalised baby sleep app, responsive feeding, OBubba"
 }
 </script>
 </head>
@@ -796,7 +796,7 @@
           <span class="read-time">12 min read</span>
         </div>
         <h1>How Does OBubba Build Its 7-Night Night-Weaning Plan?</h1>
-        <p>We traced OBubba’s Flutter night-weaning engine: its five-night baseline, three readiness lights, bottle and breastfeeding branches, safeguards and current limits.</p>
+        <p>We traced OBubba’s night-weaning engine: its five-night baseline, three readiness lights, bottle and breastfeeding branches, safeguards and current limits.</p>
         <div class="tags"><span class="tag">OBubba night weaning plan</span><span class="tag">how to reduce night feeds</span><span class="tag">seven night night weaning</span><span class="tag">baby night feed tracker</span><span class="tag">bottle night weaning</span></div>
       </div>
     </header>
@@ -804,10 +804,10 @@
       <p>Two babies can both wake twice for milk and need completely different help.</p>
 <p>One is 8 months old, takes measured bottles and averages about 180ml overnight. Another breastfeeds, has never had milk measured in millilitres and sometimes needs milk for hunger, sometimes for comfort and sometimes for both. A useful plan should not pretend those records are interchangeable.</p>
 <p>So what does OBubba actually do when you open <strong>Night Weaning</strong> and see three readiness lights?</p>
-<p>We traced the current Flutter screen, its calculation engine, local storage and automated tests. <strong>OBubba builds the plan from the last five completed nights, requires at least two nights containing genuine night feeds, checks age and daytime logging, then chooses either a millilitre taper or a time-and-comfort sequence.</strong></p>
+<p>We traced the current screen, its calculation engine, local storage and automated tests. <strong>OBubba builds the plan from the last five completed nights, requires at least two nights containing genuine night feeds, checks age and daytime logging, then chooses either a millilitre taper or a time-and-comfort sequence.</strong></p>
 <p>That is more personal than a generic “drop one feed tonight” checklist. But it is not a medical assessment, and there are a few details—especially for breastfeeding and mixed feeding—that parents deserve to understand before treating the targets as instructions.</p>
 <h2>The short answer</h2>
-<p>| Question | Current Flutter behaviour | |---|---| | What history does it use? | The last <strong>5 completed nights</strong> | | Which feeds count? | Logged night milk feeds that are not scheduled dream feeds; breast, bottle and wake-linked feeds can count | | Which feeds do not count? | Day feeds, dream feeds and solids | | How much data is enough? | At least <strong>2 nights containing a qualifying night feed</strong> | | What are the three green lights? | Corrected age of at least <strong>26 weeks</strong>, at least <strong>3 daytime feeds on one of the last 5 days</strong>, and enough night-feed data | | What happens with measured milk? | A seven-night total-volume taper is calculated from the logged average | | What happens with unmeasured breastfeeding? | The plan uses shorter feeds, soothing first and gradually dropping a feed, with no ml target | | Does an under-one bottle plan reach zero? | No. It retains a small final-night allowance; at 52 weeks or older it can reach zero | | Can the plan be completed in one sitting? | No. The night counter cannot advance faster than elapsed calendar nights | | Does the starting target stay fixed? | <strong>Not currently.</strong> The baseline is recalculated from a rolling five-night window, so targets can change during the plan | | Is “ready” medical approval? | <strong>No.</strong> It means the three software conditions passed, not that night-weaning is right for this baby |</p>
+<p>| Question | Current behaviour | |---|---| | What history does it use? | The last <strong>5 completed nights</strong> | | Which feeds count? | Logged night milk feeds that are not scheduled dream feeds; breast, bottle and wake-linked feeds can count | | Which feeds do not count? | Day feeds, dream feeds and solids | | How much data is enough? | At least <strong>2 nights containing a qualifying night feed</strong> | | What are the three green lights? | Corrected age of at least <strong>26 weeks</strong>, at least <strong>3 daytime feeds on one of the last 5 days</strong>, and enough night-feed data | | What happens with measured milk? | A seven-night total-volume taper is calculated from the logged average | | What happens with unmeasured breastfeeding? | The plan uses shorter feeds, soothing first and gradually dropping a feed, with no ml target | | Does an under-one bottle plan reach zero? | No. It retains a small final-night allowance; at 52 weeks or older it can reach zero | | Can the plan be completed in one sitting? | No. The night counter cannot advance faster than elapsed calendar nights | | Does the starting target stay fixed? | <strong>Not currently.</strong> The baseline is recalculated from a rolling five-night window, so targets can change during the plan | | Is “ready” medical approval? | <strong>No.</strong> It means the three software conditions passed, not that night-weaning is right for this baby |</p>
 <figure><img src="/obubba-seven-night-weaning-plan-logic.svg" alt="How OBubba turns recent night-feed logs into one of two seven-night plan branches." loading="lazy"/><figcaption>Five completed nights are filtered into a real-feed baseline, checked against three readiness gates and routed to either a measured-volume taper or a time-and-comfort plan.</figcaption></figure>
 <h2>Step 1: OBubba reads five completed nights</h2>
 <p>The screen asks the baby profile for the last five <strong>completed night windows</strong>, not simply five calendar-day buckets. That matters when a bedtime starts before midnight and the next feed happens after it.</p>

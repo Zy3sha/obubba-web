@@ -804,7 +804,7 @@
       <p>The first year asks, <strong>When did they feed? How long did they sleep? Is this nappy different?</strong></p>
 <p>Then the questions change. <strong>Why is every boundary enormous? Are they ready for a potty? How do we keep the same words between home and nursery?</strong></p>
 <p>Parents should not have to pretend the first chapter never happened in order to get help with the second.</p>
-<p>That is the idea behind the current Flutter implementation of OBubba’s <strong>OBuddy handoff</strong>. From around 22 months, an eligible family can see a quiet graduation card in <strong>Grow</strong>. If the parent chooses to continue, a private OBubba code opens a companion onboarding path that can carry the child’s basics and a compact memory of recent baby-care rhythms into OBuddy.</p>
+<p>That is the idea behind the current implementation of OBubba’s <strong>OBuddy handoff</strong>. From around 22 months, an eligible family can see a quiet graduation card in <strong>Grow</strong>. If the parent chooses to continue, a private OBubba code opens a companion onboarding path that can carry the child’s basics and a compact memory of recent baby-care rhythms into OBuddy.</p>
 <p>It is not an automatic migration. It is not a clinical two-year assessment. And 22 months is <strong>OBubba’s product threshold</strong>, not a claim that every child becomes a toddler on the same Tuesday.</p>
 <p>The useful promise is smaller and better:</p>
 <p>&gt; <strong>When the questions change, the family can change tools without throwing away the context they worked to build.</strong></p>
@@ -814,7 +814,7 @@
 <ul><li><strong>Bring the child to OBuddy</strong></li><li><strong>Not yet</strong></li></ul>
 <p>“Not yet” is real. The current app stores that dismissal locally and does not keep nagging. If the parent does nothing, nothing moves.</p>
 <p>The card also stays hidden when the child is under 22 months, while the profile is still expecting, or when OBubba cannot find a backup or child-sync code. That last rule matters: the app does not offer a beautiful button that leads to a broken transfer.</p>
-<figure><img src="/obubba-obuddy-one-story-two-chapters.svg" alt="The exact product gates in OBubba’s current handoff: age eligibility and a usable private code reveal an optional card; the parent can dismiss it or choose a selective import into OBuddy." loading="lazy"/><figcaption>One child story, two chapters. The current Flutter bridge waits until at least 22 months, requires a code and leaves the decision with the parent.</figcaption></figure>
+<figure><img src="/obubba-obuddy-one-story-two-chapters.svg" alt="The exact product gates in OBubba’s current handoff: age eligibility and a usable private code reveal an optional card; the parent can dismiss it or choose a selective import into OBuddy." loading="lazy"/><figcaption>One child story, two chapters. The current bridge waits until at least 22 months, requires a code and leaves the decision with the parent.</figcaption></figure>
 <h2>What crosses into OBuddy—and what does not</h2>
 <p>“Carry the history” could sound as if every bottle amount, wake time and note will be recreated as a toddler diary. The receiving code is more selective than that.</p>
 <p>With a readable OBubba family backup or live child record, OBuddy currently maps:</p>
@@ -854,7 +854,7 @@
 <p>Copy it directly into the receiving app. Do not use a public message or screenshot as temporary storage.</p>
 <h2>What happens in common edge cases</h2>
 <h3>My child is 21 months</h3>
-<p>The card should not appear yet. Nothing is wrong and nothing needs unlocking. The threshold is at least 22 months in the current Flutter logic.</p>
+<p>The card should not appear yet. Nothing is wrong and nothing needs unlocking. The threshold is at least 22 months in the current logic.</p>
 <h3>My child is old enough, but there is no card</h3>
 <p>The app may not have a usable family backup or child-sync code. It also hides the handoff for an expecting profile. Check the correct child profile and the <strong>Account → Share &amp; Sync</strong> route rather than repeatedly refreshing Grow.</p>
 <h3>I tapped “Not yet”</h3>
@@ -886,7 +886,7 @@
 <h3>Does this replace my child’s two-year review?</h3>
 <p>No. The NHS 2-to-2½-year review is a health and development review. OBuddy is a parenting support tool.</p>
 <p><strong><a href="/app.html">Start the story in OBubba →</a></strong> — track the baby days, understand the patterns and keep a thoughtful route open for the questions that come next.</p>
-<p><em>This article gives general information for UK families and describes the OBubba sender and OBuddy receiver Flutter implementations reviewed on 4 March 2027. Product availability and behaviour can change. Neither app diagnoses developmental, behavioural or health conditions or replaces advice from a health visitor, GP or paediatric professional.</em></p>
+<p><em>This article gives general information for UK families and describes the OBubba sender and OBuddy receiver implementations reviewed on 4 March 2027. Product availability and behaviour can change. Neither app diagnoses developmental, behavioural or health conditions or replaces advice from a health visitor, GP or paediatric professional.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>

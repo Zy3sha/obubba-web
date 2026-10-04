@@ -802,13 +802,13 @@
     </header>
     <article class="section rich-text article">
       <p>A baby has had a broken night. Their feeds feel different. A temperature has been logged. The sleep chart could explain the tiredness—but this is the moment when a baby app needs to know that sleep analysis is no longer the priority.</p>
-<p>In the current OBubba Flutter app, a separate safety scan reads the health details a parent has already recorded. If it finds a concerning temperature, nappy or note, it can place one high-priority card above ordinary sleep, feeding and weaning patterns.</p>
+<p>In the current OBubba app, a separate safety scan reads the health details a parent has already recorded. If it finds a concerning temperature, nappy or note, it can place one high-priority card above ordinary sleep, feeding and weaning patterns.</p>
 <p><strong>It does not diagnose, continuously monitor a baby or decide that everything is fine. It makes a handoff: from app pattern to human help.</strong></p>
 <p>And if a baby is blue, struggling to breathe, unresponsive or having a first seizure, do not open OBubba to log it. Call 999 now.</p>
 <h2>The safety handoff at a glance</h2>
 <figure><img src="/obubba-health-safety-handoff.svg" alt="A decision path showing that an acutely unwell baby needs immediate human help, while OBubba can check health details that have already been logged." loading="lazy"/><figcaption>Immediate symptoms bypass the app. Existing logs may create one prioritised safety card; missing data never means all clear.</figcaption></figure>
 <p>That distinction is the whole design. <strong>A symptom happening now outranks the phone. A detail already logged may help OBubba point the parent towards the right kind of help. No log is not reassurance.</strong></p>
-<h2>What the Flutter app actually checks</h2>
+<h2>What the app actually checks</h2>
 <p>OBubba builds one compact health signal from the baby record. It looks at:</p>
 <ul><li>the highest and lowest valid temperature logged today;</li><li>wet nappies across the last 24 hours, including the spacing between them;</li><li>whether nappy logging has been consistent enough for a low count to mean anything;</li><li>watery nappies today and concerning colours or blood recorded today or yesterday; and</li><li>words in today’s notes that may describe an urgent sign, such as “unresponsive”, “floppy”, “seizure”, “choking” or “blue”.</li></ul>
 <p>The scanner is deterministic: the same logs produce the same result. It does not ask a generative model to improvise medical advice, infer a diagnosis or fill gaps with a confident story.</p>
@@ -856,12 +856,12 @@
 <h3>Can I hide a health warning?</h3>
 <p>You can acknowledge the current card, but the reviewed app does not offer its normal week-long snooze for high-urgency or other meaningful health-safety guidance. A new, different health sign can surface separately.</p>
 <h3>Does OBubba use AI to diagnose symptoms from my notes?</h3>
-<p>No. The reviewed Flutter build uses a deterministic phrase scan and ordered safety rules. It may miss different wording, spelling or an unlogged symptom, so it must never be used as a symptom checker.</p>
+<p>No. The reviewed build uses a deterministic phrase scan and ordered safety rules. It may miss different wording, spelling or an unlogged symptom, so it must never be used as a symptom checker.</p>
 <h3>What if the app and my instincts disagree?</h3>
 <p>Trust your instincts and seek medical help. The NHS explicitly says that parents know what is different or worrying in their child. For an immediate emergency in the UK, call 999; for urgent advice, use NHS 111 or your GP as appropriate.</p>
 <h2>Product verification</h2>
-<ul><li>Current Flutter implementation reviewed: health-signal construction, health red-flag detector, temperature conversion and plausibility guards, nappy reliability gate, insight priority, snooze protection, Track preview curation and visit-preparation summary.</li><li>93 focused Flutter tests passed on 16 May 2027, including fever and low-temperature handling, typo rejection, dehydration false-alarm protection, competing-sign priority, safety-card curation, unit conversion, visit preparation and compact-phone UI construction.</li><li>The hero is an editorial illustration made for this article, not a clinical scene or product screenshot. No family data is shown.</li></ul>
-<p><em>This article describes the reviewed Flutter build and uses UK NHS routes. OBubba is a tracking and education tool; it does not monitor a baby, diagnose illness, provide an all-clear or replace personalised clinical advice. If a baby seems seriously unwell, get medical help now.</em></p>
+<ul><li>Current implementation reviewed: health-signal construction, health red-flag detector, temperature conversion and plausibility guards, nappy reliability gate, insight priority, snooze protection, Track preview curation and visit-preparation summary.</li><li>93 focused tests passed on 16 May 2027, including fever and low-temperature handling, typo rejection, dehydration false-alarm protection, competing-sign priority, safety-card curation, unit conversion, visit preparation and compact-phone UI construction.</li><li>The hero is an editorial illustration made for this article, not a clinical scene or product screenshot. No family data is shown.</li></ul>
+<p><em>This article describes the reviewed build and uses UK NHS routes. OBubba is a tracking and education tool; it does not monitor a baby, diagnose illness, provide an all-clear or replace personalised clinical advice. If a baby seems seriously unwell, get medical help now.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>

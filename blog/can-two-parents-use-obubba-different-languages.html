@@ -793,7 +793,7 @@
       <div class="article">
         <div class="article-kicker-row">
           <div class="meta">2026-09-19 / OBubba</div>
-          <span class="read-time">12 min read</span>
+          <span class="read-time">11 min read</span>
         </div>
         <h1>Can Two Parents Use OBubba in Different Languages?</h1>
         <p>Yes. Each parent can choose a different OBubba interface language while connected to the same baby. See what translates, what stays shared and what does not.</p>
@@ -803,23 +803,23 @@
     <article class="section rich-text article">
       <p>One parent wants <strong>Español</strong>. The other wants <strong>English</strong>. Grandma is most comfortable reading <strong>বাংলা</strong>. Everyone still needs to know when the baby last slept, fed or had a nappy change.</p>
 <p>Do they have to choose one household language?</p>
-<p><strong>No. In the current OBubba Flutter app, the interface-language choice is saved on each phone, not inside the shared baby record.</strong> Two connected parents can therefore open the same child while one phone shows OBubba in Spanish and the other shows it in English. Changing the language on one installation does not rewrite the other parent’s setting.</p>
+<p><strong>No. In the current OBubba app, the interface-language choice is saved on each phone, not inside the shared baby record.</strong> Two connected parents can therefore open the same child while one phone shows OBubba in Spanish and the other shows it in English. Changing the language on one installation does not rewrite the other parent’s setting.</p>
 <p>There is an important limit: <strong>built-in interface labels can change language; text a person types does not get automatically translated.</strong> If Dad logs a note in English, Mum’s Spanish interface receives that same English note. OBubba does not silently guess a translation for family-written care information.</p>
 <p>&gt; <strong>Same baby facts. Each carer’s own interface. Original notes preserved.</strong></p>
 <h2>The 30-second answer</h2>
 <p>| Question | Current OBubba behavior | |---|---| | Can two connected parents choose different app languages? | <strong>Yes.</strong> The preference is local to each installation. | | Do both phones still use the same connected baby record? | <strong>Yes.</strong> Language selection and child sharing are separate systems. | | Does changing my language change my partner’s phone? | <strong>No.</strong> Their saved preference is not overwritten. | | Do built-in buttons and headings translate? | Yes, where that string has a translation; untranslated material can fall back to English. | | Are my typed notes translated for another carer? | <strong>No.</strong> They remain exactly as entered. | | Are baby names or custom food names translated? | No. They are family-entered data, not interface copy. | | Can the app follow the phone’s language automatically? | Yes. <strong>Automatic (device language)</strong> is the default option. | | Can language and region be chosen separately? | Yes. Language controls interface copy; region controls local terms, health wording and emergency-number context. |</p>
 <figure><img src="/obubba-two-parents-different-languages-flow.svg" alt="Two phones showing the same shared baby record with Spanish on one interface and English on the other." loading="lazy"/><figcaption>Each OBubba installation keeps its own language preference. Connected baby logs can still flow through one child record, while free-text notes remain in the language entered.</figcaption></figure>
 <h2>Which languages can you choose?</h2>
-<p>The current Flutter registry contains <strong>15 selectable locale entries across 12 language families</strong>:</p>
+<p>The current registry contains <strong>15 selectable locale entries across 12 language families</strong>:</p>
 <ul><li>English</li><li>Spanish for Spain</li><li>Spanish for Mexico</li><li>Spanish for Latin America</li><li>Simplified Chinese</li><li>Traditional Chinese</li><li>Japanese</li><li>Korean</li><li>Portuguese (Brazil)</li><li>German</li><li>French</li><li>Italian</li><li>Dutch</li><li>Indonesian</li><li>Bengali</li></ul>
 <p>There is also <strong>Automatic (device language)</strong>. If the phone reports a supported locale, OBubba resolves to the closest registered option. If it does not, the app falls back safely rather than presenting an unregistered language.</p>
 <p>Chinese handling is more deliberate than a single generic `zh` switch. The resolver prefers the exact script and maps devices from Taiwan, Hong Kong and Macau to Traditional Chinese even when Android supplies a regional locale without an explicit script tag. Mainland China and a bare Chinese locale resolve to Simplified Chinese.</p>
 <p>The Spanish choices share a translated foundation while allowing regional wording to differ. That is why the picker distinguishes Spain, Mexico and Latin America instead of treating every Spanish-speaking household as linguistically identical.</p>
 <h2>What the real picker looks like</h2>
-<figure><img src="/obubba-language-picker-flutter.jpg" alt="The current OBubba Flutter language picker showing automatic device language, English, three Spanish choices, Simplified and Traditional Chinese, Japanese, Korean, Portuguese and German, with more languages available by scrolling." loading="lazy"/><figcaption>A genuine capture from the current Flutter app. The sheet uses each language’s native name, adds an English clarification where useful and discloses that some translations are machine-assisted.</figcaption></figure>
+<figure><img src="/obubba-language-picker-flutter.jpg" alt="The current OBubba language picker showing automatic device language, English, three Spanish choices, Simplified and Traditional Chinese, Japanese, Korean, Portuguese and German, with more languages available by scrolling." loading="lazy"/><figcaption>A genuine capture from the current app. The sheet uses each language’s native name, adds an English clarification where useful and discloses that some translations are machine-assisted.</figcaption></figure>
 <p>The picker is available from <strong>Account → Help &amp; settings → Preferences → Language</strong>. It also appears on the welcome screen, so a new user can choose a readable interface before completing the rest of setup.</p>
 <p>Each row leads with the language’s native name: <strong>Español</strong>, <strong>简体中文</strong>, <strong>日本語</strong>, <strong>한국어</strong>, <strong>Bahasa Indonesia</strong> or <strong>বাংলা</strong>. An English description sits beneath it when that helps distinguish a region or script. This matters because a language menu written only in the app’s current language can be difficult to escape from after an accidental choice.</p>
-<p>Tap a row and the whole app rebuilds into the chosen locale immediately. Choosing Automatic removes the explicit override and lets Flutter resolve the device language again.</p>
+<p>Tap a row and the whole app rebuilds into the chosen locale immediately. Choosing Automatic removes the explicit override and lets resolve the device language again.</p>
 <h2>Why connected parents do not need matching settings</h2>
 <p>OBubba stores its app preferences as a local JSON value in `SharedPreferences`. That value includes the chosen language alongside controls such as theme, 12- or 24-hour clock, haptics and quiet hours.</p>
 <p>The shared baby record uses a different path. Connected carers join the same child and exchange dated care entries through that record: sleep, wakes, feeds, nappies, solids and other logged events.</p>
@@ -845,7 +845,7 @@
 <ol><li>Use short shared terms everyone understands: “120 ml”, “wet nappy”, “egg—no reaction”.</li><li>Put both languages in the note when the distinction matters.</li><li>Keep urgent medicine, allergy and clinical instructions in the exact agreed wording from the relevant professional; do not rely on app translation.</li></ol>
 <p>The app should eventually make the boundary more visible with an <strong>Original note</strong> label and an optional, clearly marked on-demand translation—not an invisible rewrite.</p>
 <h2>Language is not the same as region</h2>
-<p>The Flutter settings keep <strong>Language</strong> and <strong>Region</strong> as separate values.</p>
+<p>The settings keep <strong>Language</strong> and <strong>Region</strong> as separate values.</p>
 <p>Language answers:</p>
 <p>&gt; Which translation should the interface show?</p>
 <p>Region answers:</p>
@@ -856,7 +856,7 @@
 <h2>Will 12- or 24-hour time match between phones?</h2>
 <p>Not necessarily—and that is useful.</p>
 <p>Clock format sits in the same local settings object as language. One parent can use <strong>19:30</strong> while another sees <strong>7:30pm</strong>. The underlying event still represents the same logged time.</p>
-<p>Locale-aware formatting also changes details such as decimal separators and the placement of am/pm markers. The Flutter tests specifically check Spanish decimal commas and the natural placement of Japanese, Chinese and Korean day-period markers.</p>
+<p>Locale-aware formatting also changes details such as decimal separators and the placement of am/pm markers. The tests specifically check Spanish decimal commas and the natural placement of Japanese, Chinese and Korean day-period markers.</p>
 <p>This is another example of separating fact from presentation:</p>
 <ul><li>shared fact: the feed happened at a particular time</li><li>Mum’s display: `19:30`</li><li>Dad’s display: `7:30pm`</li><li>Japanese display: a locale-appropriate form such as `午後7:30`</li></ul>
 <p>Nobody has edited the record merely by changing how their phone reads it.</p>
@@ -897,7 +897,7 @@
 <p>Treat it as a device preference and check it after setup. Restoring or joining the child record is a separate process from choosing the interface language.</p>
 <h2>Related OBubba guides</h2>
 <ul><li><a href="/blog/share-baby-tracker-with-partner-without-duplicate-logs.html">Share a baby tracker with your partner without duplicate logs</a></li><li><a href="/blog/will-obubba-weaning-plan-sync-partner-phone.html">Will OBubba’s weaning plan sync with my partner’s phone?</a></li><li><a href="/blog/how-to-split-newborn-night-shifts.html">How to split newborn night shifts without both parents running on empty</a></li></ul>
-<p><em>This article describes the current OBubba Flutter implementation reviewed on 27 April 2027. It is product guidance, not medical advice. Translation can contain errors; preserve and verify original wording for medicine, allergy, emergency and clinical instructions.</em></p>
+<p><em>This article describes the current OBubba implementation reviewed on 27 April 2027. It is product guidance, not medical advice. Translation can contain errors; preserve and verify original wording for medicine, allergy, emergency and clinical instructions.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>

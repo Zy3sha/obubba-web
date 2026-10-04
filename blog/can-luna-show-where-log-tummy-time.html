@@ -803,7 +803,7 @@
     <article class="section rich-text article">
       <p>You know the action exists. You have a baby on the floor, one free thumb and no interest in opening every tab to find it.</p>
 <p>So you ask Luna: <strong>“Where do I log tummy time?”</strong></p>
-<p>In OBubba’s current Flutter app, that kind of question follows a deliberately different route from open-ended baby advice. Luna searches a curated catalogue of app instructions and can return the exact path, the steps and useful follow-up questions without asking a generative model to invent where a button might be.</p>
+<p>In OBubba’s current app, that kind of question follows a deliberately different route from open-ended baby advice. Luna searches a curated catalogue of app instructions and can return the exact path, the steps and useful follow-up questions without asking a generative model to invent where a button might be.</p>
 <p><strong>The short answer:</strong> for a live tummy-time stopwatch, Luna should direct you to <strong>Grow → Activities → Log activity → Tummy time → Start live timer instead</strong>. When you finish, tap <strong>Stop &amp; log</strong> on the timer pill at the top of Activities.</p>
 <p>The surprising part is not the answer. It is the product decision underneath it: OBubba’s assistant knows how to use OBubba.</p>
 <figure><img src="/obubba-luna-find-tummy-time.jpg" alt="A parent briefly checks a phone while staying beside an awake baby doing supervised floor play." loading="lazy"/><figcaption>The useful assistant moment is small: find one action quickly, put the phone back down and return attention to the baby.</figcaption></figure>
@@ -816,7 +816,7 @@
 <ol><li>Open <strong>Grow</strong> and tap <strong>Activities</strong>.</li><li>Tap the gold <strong>Log activity</strong> button.</li><li>Choose <strong>Tummy time</strong>, then <strong>Start live timer instead</strong>.</li><li>When finished, tap <strong>Stop &amp; log</strong> on the timer pill.</li></ol>
 <p>That route matters because tummy time does <strong>not</strong> begin from the Track tab in the current interface. Two focused tests explicitly protect <strong>Grow → Activities</strong> from being replaced with the wrong path.</p>
 <h2>How Luna decides this is an app question</h2>
-<figure><img src="/obubba-luna-app-help-routing.svg" alt="The current Flutter routing path from a natural question to fixed app help, data-grounded care guidance or an honest fallback." loading="lazy"/><figcaption>Precise app questions retrieve a curated route and stay off the generative-AI path. Advice, safety and live-status questions have different handlers so similar words do not force the wrong kind of answer.</figcaption></figure>
+<figure><img src="/obubba-luna-app-help-routing.svg" alt="The current routing path from a natural question to fixed app help, data-grounded care guidance or an honest fallback." loading="lazy"/><figcaption>Precise app questions retrieve a curated route and stay off the generative-AI path. Advice, safety and live-status questions have different handlers so similar words do not force the wrong kind of answer.</figcaption></figure>
 <p>The current code keeps several kinds of question separate.</p>
 <p>| What the parent asks | Intended route | |---|---| | “Where do I log tummy time?” | Curated app-help card | | “How do I turn on the sound machine?” | Curated app-help card | | “Where did my 2am wake go?” | Curated day-grouping explanation | | “Is white noise safe?” | Sleep or safety guidance, not sound-machine controls | | “How do I get my baby to sleep?” | Sleep support, not an app tutorial | | “Is my baby asleep right now?” | Live-status read from the family’s current log | | An infant or parent emergency phrase | Vetted safety response before ordinary retrieval |</p>
 <p>For app help, Luna looks for common action phrases such as <strong>how do I</strong>, <strong>where is</strong>, <strong>find</strong>, <strong>turn on</strong>, <strong>change</strong> and <strong>set up</strong>, plus specific feature names. It then searches the app-help catalogue using keyword relevance.</p>
@@ -824,7 +824,7 @@
 <ul><li>starting or correcting sleep, nap and night-wake records</li><li>logging feeds, nappies, medicine, pumping and crying</li><li>finding weaning, first-food and allergen tools</li><li>opening the Sound Machine, Parent Room or Sleep Consultant</li><li>changing units, clock format, haptics and other preferences</li><li>exporting data, restoring purchases and understanding family sync</li><li>finding Activities, milestones, developmental Waves and tummy-time controls</li></ul>
 <p>This is retrieval, not screen vision. Luna does not inspect the interface live or watch where the parent taps. It selects the best matching hand-authored instruction from the catalogue shipped with the app.</p>
 <h2>Why this answer does not need third-party AI</h2>
-<p>The Flutter router deliberately keeps precise app-help cards deterministic. The reason is written plainly in the source: exact in-app paths are the kind of detail a generated model could get wrong.</p>
+<p>The router deliberately keeps precise app-help cards deterministic. The reason is written plainly in the source: exact in-app paths are the kind of detail a generated model could get wrong.</p>
 <p>For the tummy-time question:</p>
 <ul><li>the answer is already stored inside the app</li><li>the route and numbered steps are fixed</li><li>the reply is not marked as an AI response</li><li>the normal “send to Gemini for a richer answer” escalation is disabled for a confident app-help card</li><li>the first-use third-party AI consent dialog is therefore not needed for this answer</li></ul>
 <p>That does not mean every Luna conversation is fully offline or never uses optional AI. Open-ended sleep, crying, feeding and development questions can be offered a richer AI path when it is configured and the parent has consented. The app sends nothing to that third-party path after a decline and falls back to its built-in response.</p>
@@ -878,7 +878,7 @@
 <p><strong><a href="/app.html">Try OBubba and ask Luna where to begin →</a></strong> — find the right sleep, feeding, weaning, care or development tool without memorising the whole app first.</p>
 <h2>Frequently asked questions</h2>
 <h3>Is the tummy-time timer in Track?</h3>
-<p>No. The current Flutter path is <strong>Grow → Activities → Log activity → Tummy time → Start live timer instead</strong>.</p>
+<p>No. The current path is <strong>Grow → Activities → Log activity → Tummy time → Start live timer instead</strong>.</p>
 <h3>Does asking this send my baby’s data to Gemini?</h3>
 <p>A confident app-help card does not escalate to the optional third-party AI route. Other open-ended Luna questions may use that route only when it is configured and the parent has consented.</p>
 <h3>Can Luna take me directly to the screen?</h3>
@@ -890,7 +890,7 @@
 <h3>Is Luna’s app help free?</h3>
 <p>The current Bubba Coach/Luna screen is premium-gated, including its deterministic app-help answers.</p>
 <h2>Sources and product verification</h2>
-<ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-moves/" target="_blank" rel="noopener noreferrer">NHS: Baby moves</a></li><li><a href="https://www.nhs.uk/baby/babys-development/play-and-learning/keep-baby-or-toddler-active/" target="_blank" rel="noopener noreferrer">NHS: How to keep your baby or toddler active</a></li><li>OBubba Flutter source reviewed for this article: `coach_kb.dart`, `bubba_coach.dart`, `bubba_coach_screen.dart`, `coach_retrieval.dart` and the Activities/tummy-time route.</li><li>77 focused Flutter tests passed on 9 May 2027 across app-help routing, tummy-time location, knowledge retrieval, collision protection and translated-content behavior.</li></ul>
+<ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-moves/" target="_blank" rel="noopener noreferrer">NHS: Baby moves</a></li><li><a href="https://www.nhs.uk/baby/babys-development/play-and-learning/keep-baby-or-toddler-active/" target="_blank" rel="noopener noreferrer">NHS: How to keep your baby or toddler active</a></li><li>OBubba source reviewed for this article: `coach_kb.dart`, `bubba_coach.dart`, `bubba_coach_screen.dart`, `coach_retrieval.dart` and the Activities/tummy-time route.</li><li>77 focused tests passed on 9 May 2027 across app-help routing, tummy-time location, knowledge retrieval, collision protection and translated-content behavior.</li></ul>
 <p><em>OBubba provides tracking, navigation help and general educational support. Luna cannot observe a baby, confirm that an activity is safe for an individual child, diagnose a concern or replace advice from a health visitor, GP, physiotherapist or other qualified professional.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">

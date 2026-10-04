@@ -804,7 +804,7 @@
       <p>Your baby sleeps for 75 minutes in your arms but wakes furious. The pram nap lasts only 42 minutes, yet they open their eyes smiling. A cot nap lands somewhere between the two.</p>
 <p>Which one was the “best” nap?</p>
 <p>Duration matters, but it is not the whole outcome. A nap can rescue the day without being long. A long nap can end because hunger, discomfort or noise arrived at waking. Location can also be tangled with time of day: the cot gets the first nap while the pram gets the difficult final one.</p>
-<p><strong>OBubba’s current Flutter app keeps two separate reads: where naps run longest and where the baby wakes happiest. It needs repeated naps in at least two places and a clear difference before either card appears. The result is a personal pattern—not permission to use an unsafe sleep place and not a verdict that every nap must happen there.</strong></p>
+<p><strong>OBubba’s current app keeps two separate reads: where naps run longest and where the baby wakes happiest. It needs repeated naps in at least two places and a clear difference before either card appears. The result is a personal pattern—not permission to use an unsafe sleep place and not a verdict that every nap must happen there.</strong></p>
 <h2>The short answer</h2>
 <p>The best nap place is the one that is:</p>
 <ol><li><strong>safe for that sleep and situation;</strong></li><li><strong>workable for the family;</strong></li><li><strong>restorative enough for what the baby needs;</strong> and</li><li><strong>repeatably associated with a useful outcome.</strong></li></ol>
@@ -822,7 +822,7 @@
 <ul><li>contact naps may run longest while cot naps produce the happiest wakes;</li><li>pram naps may be shorter but reliably bridge the afternoon;</li><li>cot and pram duration may be similar, so only the mood card appears; or</li><li>no difference may be clear enough, so the app says nothing.</li></ul>
 <p>Silence means the records do not support a useful distinction yet—not that the logging was wasted.</p>
 <h2>What to record after a nap</h2>
-<p>In the current Flutter nap logger, the optional outcome fields include:</p>
+<p>In the current nap logger, the optional outcome fields include:</p>
 <ul><li><strong>How woke:</strong> Happy, Sleepy or Fussy;</li><li><strong>Nap quality:</strong> Good, OK or Rough;</li><li><strong>Where:</strong> Cot, Contact, Pram, Carrier, Car or Other; and</li><li><strong>Moved to:</strong> an optional second location when the nap changed place partway.</li></ul>
 <p>For the location insights, the most important facts are the real start and end, the place and—if you want the happiness comparison—how the baby woke.</p>
 <p>Use the labels consistently:</p>
@@ -832,10 +832,10 @@
 <p>Suppose six recent naps look like this:</p>
 <p>| Location | Length | How baby woke | |---|---:|---| | Cot | 82 min | Happy | | Cot | 88 min | Happy | | Cot | 91 min | Sleepy | | Pram | 46 min | Fussy | | Pram | 52 min | Fussy | | Pram | 44 min | Sleepy |</p>
 <p>The cot average is 87 minutes and the pram average is about 47 minutes—a 40-minute gap. Two of three cot wakes were Happy, while none of the three pram wakes were.</p>
-<p>Both Flutter detectors have enough evidence to speak:</p>
+<p>Both detectors have enough evidence to speak:</p>
 <ul><li>the duration card can identify cot naps as longer; and</li><li>the mood card can identify cot naps as the happier-wake location.</li></ul>
 <p>Now change the pram moods to Happy, Happy and Sleepy. Cot naps still run longer, but the pram can become the happier-wake winner. That is a useful distinction: choose the cot when you most need length and the pram when a shorter, cheerful on-the-go nap suits the day—provided the setup is appropriate and safe.</p>
-<h2>What the real Flutter detectors require</h2>
+<h2>What the real detectors require</h2>
 <p>We traced the nap logger, the 14-day training window, both location detectors and the contradiction guard in the current app.</p>
 <h3>The duration detector</h3>
 <p>`napLocationInsight`:</p>
@@ -848,7 +848,7 @@
 <h3>Unusual days do not train the comparison</h3>
 <p>The brain gathers up to 14 recent days but excludes days labelled Sick, Travel, Daycare, Nursery, Grand or Grandparents, as well as days carrying a plausible fever reading.</p>
 <p>This keeps a fever week or one unusual nursery timetable from silently defining “normal”. It also means nursery naps are not part of this particular personal location baseline, even though they remain in the day history and can support other day-type insights.</p>
-<figure><img src="/obubba-personalised-nap-prediction-app.jpg" alt="The genuine OBubba Flutter sleep screen keeps the live nap prediction, awake time and sleepy-cue guidance together instead of treating one nap as an isolated event." loading="lazy"/><figcaption>Current OBubba Flutter sleep experience. The location and wake-mood fields are recorded inside the nap log; later insights use repeated eligible naps rather than this screen alone.</figcaption></figure>
+<figure><img src="/obubba-personalised-nap-prediction-app.jpg" alt="The genuine OBubba sleep screen keeps the live nap prediction, awake time and sleepy-cue guidance together instead of treating one nap as an isolated event." loading="lazy"/><figcaption>Current OBubba sleep experience. The location and wake-mood fields are recorded inside the nap log; later insights use repeated eligible naps rather than this screen alone.</figcaption></figure>
 <h2>The contradiction guard matters</h2>
 <p>OBubba also has a separate <strong>Most naps need holding or movement</strong> insight. It can appear when at least eight located naps exist and 70% or more happened through contact, pram, carrier or car.</p>
 <p>If that card is actively helping a family move towards one cot nap, the app suppresses a motion location from being crowned the “longest” or “happiest” winner at the same time. Otherwise a parent could see:</p>

@@ -803,7 +803,7 @@
     <article class="section rich-text article">
       <p>The baby is finally asleep. You have put the phone face down. Then, at 10:43pm, a parenting app announces that a nap window is approaching.</p>
 <p>That is not helpful personalisation. It is a product failing to understand the cost of interruption.</p>
-<p>OBubba’s current Flutter app has a more deliberate answer: <strong>quiet hours mute its predicted nudges, while reminders the parent explicitly scheduled are allowed through.</strong> The distinction matters because “silence everything” can hide an appointment reminder, while “send everything” turns useful guidance into noise.</p>
+<p>OBubba’s current app has a more deliberate answer: <strong>quiet hours mute its predicted nudges, while reminders the parent explicitly scheduled are allowed through.</strong> The distinction matters because “silence everything” can hide an appointment reminder, while “send everything” turns useful guidance into noise.</p>
 <p>The short version:</p>
 <p>&gt; <strong>Quiet hours protect you from OBubba’s guesses. They do not automatically cancel commitments you deliberately asked it to remember.</strong></p>
 <p>There are exceptions, device settings still have the final say, and OBubba should never be treated as a baby monitor or a guaranteed medical alarm. Here is the exact behaviour behind the switch.</p>
@@ -818,7 +818,7 @@
 <ul><li><strong>Same-day window:</strong> 1pm–3pm mutes from 1:00pm up to, but not including, 3:00pm.</li><li><strong>Overnight window:</strong> 7pm–7am mutes from 7:00pm through midnight and up to, but not including, 7:00am.</li></ul>
 <p>The start is included; the end is not. A 7am nudge is therefore outside a window that ends at 7am.</p>
 <p>This filter is applied before OBubba hands its planned nudges to the operating system. It is not the same as iPhone Focus, Android Do Not Disturb, silent mode or notification-summary settings. Those phone-level controls can still delay or silence a notification that OBubba decided to schedule.</p>
-<figure><img src="/obubba-quiet-hours-two-lanes.svg" alt="OBubba quiet hours split reminders into two lanes: predicted nudges are muted, while parent-set commitments and the morning close-the-night rescue stay scheduled." loading="lazy"/><figcaption>The current Flutter routing rule: quiet hours mute predicted nap, feed, bedtime, log and development nudges. Explicit appointments, custom plan reminders and the 8am close-the-night rescue are exempt; an active timer uses a separate ongoing status.</figcaption></figure>
+<figure><img src="/obubba-quiet-hours-two-lanes.svg" alt="OBubba quiet hours split reminders into two lanes: predicted nudges are muted, while parent-set commitments and the morning close-the-night rescue stay scheduled." loading="lazy"/><figcaption>The current routing rule: quiet hours mute predicted nap, feed, bedtime, log and development nudges. Explicit appointments, custom plan reminders and the 8am close-the-night rescue are exempt; an active timer uses a separate ongoing status.</figcaption></figure>
 <h2>What quiet hours mute</h2>
 <p>Quiet hours suppress five kinds of <strong>predicted or app-initiated</strong> reminder when their planned firing time falls inside the window.</p>
 <h3>Nap-window nudges</h3>
@@ -839,7 +839,7 @@
 <p>OBubba can offer one gentle development note at 10am: a recent milestone celebration, a current development signal or a nearby developmental wave. The engine returns nothing when it has nothing worth saying.</p>
 <p>Quiet hours can mute that note too. This makes daytime protection useful for parents sleeping after a night shift or recovering while another caregiver is on duty.</p>
 <h2>What quiet hours deliberately do not mute</h2>
-<p>Three reminder paths are exempt in the current Flutter provider.</p>
+<p>Three reminder paths are exempt in the current provider.</p>
 <h3>Appointments the parent scheduled</h3>
 <p>An appointment or one-off reminder under <strong>Reminders &amp; Appointments</strong> is an explicit commitment. If a parent asks for a reminder one hour before an 8am vaccination appointment, a 10pm–7:30am quiet window does not silently swallow the 7am lead time.</p>
 <p>This does not guarantee an audible or exact alarm. The phone may withhold permission, apply Focus/Do Not Disturb, delay background delivery or fall back to inexact scheduling. Use the phone’s clock or the care team’s instructions for anything where a missed minute could be unsafe.</p>
@@ -897,7 +897,7 @@
 <h3>Can OBubba replace a medicine alarm or baby monitor?</h3>
 <p>No. Notifications can be delayed, muted or denied by the operating system. Use dedicated safety tools and individual clinical instructions.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — keep the reminders that earn their place, quiet the predictions that do not, and let available sleep stay available.</p>
-<p><em>This article gives general information for UK families and describes the current OBubba Flutter implementation reviewed on 5 March 2027. Notification behaviour varies by device, permissions and operating-system settings. OBubba is not a baby monitor, emergency alert system or guaranteed medical alarm.</em></p>
+<p><em>This article gives general information for UK families and describes the current OBubba implementation reviewed on 5 March 2027. Notification behaviour varies by device, permissions and operating-system settings. OBubba is not a baby monitor, emergency alert system or guaranteed medical alarm.</em></p>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>

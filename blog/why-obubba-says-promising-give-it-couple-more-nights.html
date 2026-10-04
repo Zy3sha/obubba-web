@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="apple-itunes-app" content="app-id=6760968757"/>
   <title>Why Does OBubba Say ‘Promising, but Give It a Couple More Nights’?</title>
-  <meta name="description" content="See how OBubba’s Flutter Coach checks an early sleep-experiment win, why nights 3–4 can flatter a result, and what the app really means by keep going."/>
+  <meta name="description" content="See how OBubba’s Coach checks an early sleep-experiment win, why nights 3–4 can flatter a result, and what the app really means by keep going."/>
   <meta name="robots" content="index, follow, max-image-preview:large"/>
   <link rel="canonical" href="https://obubba.com/blog/why-obubba-says-promising-give-it-couple-more-nights.html"/>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
@@ -19,13 +19,13 @@
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://obubba.com/blog/why-obubba-says-promising-give-it-couple-more-nights.html"/>
   <meta property="og:title" content="Why Does OBubba Say ‘Promising, but Give It a Couple More Nights’?"/>
-  <meta property="og:description" content="See how OBubba’s Flutter Coach checks an early sleep-experiment win, why nights 3–4 can flatter a result, and what the app really means by keep going."/>
+  <meta property="og:description" content="See how OBubba’s Coach checks an early sleep-experiment win, why nights 3–4 can flatter a result, and what the app really means by keep going."/>
   <meta property="og:image" content="https://obubba.com/obubba-promising-couple-more-nights.jpg"/>
   <meta property="og:site_name" content="OBubba"/>
   <meta property="og:locale" content="en_GB"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Why Does OBubba Say ‘Promising, but Give It a Couple More Nights’?"/>
-  <meta name="twitter:description" content="See how OBubba’s Flutter Coach checks an early sleep-experiment win, why nights 3–4 can flatter a result, and what the app really means by keep going."/>
+  <meta name="twitter:description" content="See how OBubba’s Coach checks an early sleep-experiment win, why nights 3–4 can flatter a result, and what the app really means by keep going."/>
   <meta name="twitter:image" content="https://obubba.com/obubba-promising-couple-more-nights.jpg"/>
   <meta name="theme-color" content="#fffcf9"/>
   <link rel="preload" href="/Parisienne-Regular.ttf" as="font" type="font/truetype" crossorigin/>
@@ -744,7 +744,7 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Why Does OBubba Say ‘Promising, but Give It a Couple More Nights’?",
-  "description": "See how OBubba’s Flutter Coach checks an early sleep-experiment win, why nights 3–4 can flatter a result, and what the app really means by keep going.",
+  "description": "See how OBubba’s Coach checks an early sleep-experiment win, why nights 3–4 can flatter a result, and what the app really means by keep going.",
   "datePublished": "2026-09-19",
   "dateModified": "2026-09-19",
   "author": {
@@ -796,7 +796,7 @@
           <span class="read-time">10 min read</span>
         </div>
         <h1>Why Does OBubba Say ‘Promising, but Give It a Couple More Nights’?</h1>
-        <p>See how OBubba’s Flutter Coach checks an early sleep-experiment win, why nights 3–4 can flatter a result, and what the app really means by keep going.</p>
+        <p>See how OBubba’s Coach checks an early sleep-experiment win, why nights 3–4 can flatter a result, and what the app really means by keep going.</p>
         <div class="tags"><span class="tag">promising give it a couple more nights OBubba</span><span class="tag">baby sleep experiment</span><span class="tag">baby sleep improving</span><span class="tag">seven night sleep test</span><span class="tag">baby sleep tracker results</span></div>
       </div>
     </header>
@@ -807,17 +807,17 @@
 <p>&gt; <strong>Promising, but give it a couple more nights</strong></p>
 <p>That is not the app losing confidence. It is the app separating two questions:</p>
 <ol><li><strong>Has the chosen outcome moved far enough to count as improvement?</strong></li><li><strong>Has the experiment run long enough that one lucky night is less likely to own the story?</strong></li></ol>
-<p>The current Flutter app lets its deterministic experiment engine answer the first question from night three. A separate deterministic supervisor inside the premium Coach answers the second. If the result says `working` before five calendar nights have elapsed, the Coach advises keeping the same change going towards roughly seven nights before treating it as established.</p>
+<p>The current app lets its deterministic experiment engine answer the first question from night three. A separate deterministic supervisor inside the premium Coach answers the second. If the result says `working` before five calendar nights have elapsed, the Coach advises keeping the same change going towards roughly seven nights before treating it as established.</p>
 <p>This is an unusually valuable feature because baby apps are rewarded for delivering certainty quickly. Parents are better served by an app that can be excited <strong>and</strong> sceptical at the same time.</p>
-<h2>The exact Flutter rule</h2>
+<h2>The exact rule</h2>
 <p>The note appears only when all three conditions are true:</p>
 <p>| Supervisor input | Required value | |---|---| | Active experiment | Yes | | Live verdict | Exactly <strong>working</strong> | | Calendar nights elapsed | Fewer than <strong>5</strong> |</p>
 <p>Because the experiment engine cannot return `working` before three elapsed nights, the practical window is <strong>night 3 or night 4</strong>.</p>
 <p>The note names the experiment, reports the elapsed-night number and recommends continuing to approximately seven nights before counting the win.</p>
-<figure><img src="/obubba-promising-couple-more-nights-logic.svg" alt="The exact Flutter path behind OBubba’s Promising, but give it a couple more nights note." loading="lazy"/><figcaption>The experiment engine may call a metric improved from night three when enough outcomes clear a meaningful-change threshold. The Coach then checks that the experiment is active, the verdict is working and fewer than five calendar nights have elapsed before recommending a steadier run towards seven nights.</figcaption></figure>
+<figure><img src="/obubba-promising-couple-more-nights-logic.svg" alt="The exact path behind OBubba’s Promising, but give it a couple more nights note." loading="lazy"/><figcaption>The experiment engine may call a metric improved from night three when enough outcomes clear a meaningful-change threshold. The Coach then checks that the experiment is active, the verdict is working and fewer than five calendar nights have elapsed before recommending a steadier run towards seven nights.</figcaption></figure>
 <h2>The first verdict is real—but deliberately sensitive</h2>
 <p>Every OBubba sleep experiment has one outcome metric. The engine does not judge every change by wake count:</p>
-<p>| What the family is testing | Outcome Flutter watches | “Working” threshold | |---|---|---:| | Earlier bedtime or a smaller evening bottle | Night wakes | At least <strong>0.5 fewer</strong> per night | | Dropping a dream feed | Night feeds | At least <strong>0.5 fewer</strong> per night | | Anchoring the morning | Morning wake | At least <strong>15 minutes later</strong> | | Day-sleep cap, earlier last nap, wake-window tuning, steadier bedtime or the gentle feed–sleep-link test | Longest unbroken stretch | At least <strong>30 minutes longer</strong> |</p>
+<p>| What the family is testing | Outcome watches | “Working” threshold | |---|---|---:| | Earlier bedtime or a smaller evening bottle | Night wakes | At least <strong>0.5 fewer</strong> per night | | Dropping a dream feed | Night feeds | At least <strong>0.5 fewer</strong> per night | | Anchoring the morning | Morning wake | At least <strong>15 minutes later</strong> | | Day-sleep cap, earlier last nap, wake-window tuning, steadier bedtime or the gentle feed–sleep-link test | Longest unbroken stretch | At least <strong>30 minutes longer</strong> |</p>
 <p>The direction changes with the metric. Fewer wakes and feeds are improvement; a later morning endpoint or longer stretch is improvement.</p>
 <p>These are product thresholds, not clinical definitions. They give the app a consistent line for its first read. A 29-minute stretch gain is not biologically different from a 30-minute gain, and half a wake is an average rather than an event one can observe.</p>
 <h2>Why “night 3” can mean only two usable outcomes</h2>
@@ -829,9 +829,9 @@
 <p>That distinction is precisely why the extra caution is worthwhile.</p>
 <h2>How the baseline is built</h2>
 <p>An improvement needs a before figure.</p>
-<p>For wake-count experiments, Flutter stores an average from up to seven nights before the test. It needs at least two usable pre-test nights. Nights affected by illness, travel or daycare context can be excluded from that baseline when the relevant day tags or entries are available.</p>
+<p>For wake-count experiments, stores an average from up to seven nights before the test. It needs at least two usable pre-test nights. Nights affected by illness, travel or daycare context can be excluded from that baseline when the relevant day tags or entries are available.</p>
 <p>For morning-wake, night-feed and longest-stretch experiments, the status provider reconstructs the relevant metric from the seven dates before the start. Again, fewer than two usable values means there is no honest baseline and the verdict becomes <strong>Need a few more logged nights</strong>.</p>
-<p>After the test begins, Flutter watches a trailing window capped at 14 elapsed nights. A long-running experiment therefore does not let forgotten logs from the beginning dilute the current result forever.</p>
+<p>After the test begins, watches a trailing window capped at 14 elapsed nights. A long-running experiment therefore does not let forgotten logs from the beginning dilute the current result forever.</p>
 <p>The maths is straightforward and inspectable. What it cannot remove is natural night-to-night variation.</p>
 <h2>Why a good night or two can flatter a result</h2>
 <p>Infant sleep is not a controlled laboratory signal. The same baby can have different nights because of feeding, development, noise, temperature, illness, teething, travel, childcare, parental response and ordinary variation.</p>
@@ -841,14 +841,14 @@
 <ul><li>night 1: 5h 38m;</li><li>night 2: not logged; and</li><li>night 3: 5h 10m.</li></ul>
 <p>The average of the two usable nights is 5h 24m—34 minutes above baseline—so the engine can call `working`. The change is real in the available records. It may also shrink when nights four through seven arrive.</p>
 <h2>The Coach is not generating this opinion</h2>
-<p>Despite appearing inside the AI Coach area, this particular note comes from a pure Flutter function called `auditBrain`.</p>
+<p>Despite appearing inside the AI Coach area, this particular note comes from a pure function called `auditBrain`.</p>
 <p>It receives primitive facts from the live providers:</p>
 <ul><li>the baby’s first name;</li><li>whether an experiment is active;</li><li>its title;</li><li>the verdict name;</li><li>elapsed nights;</li><li>whether a new test is being proposed;</li><li>disruption context; and</li><li>any old failed lever that may now be worth revisiting.</li></ul>
 <p>The function applies fixed, golden-tested rules and returns zero or more notes. No language model decides whether an early win deserves caution. A future AI pass can sit above this layer for novel cases, but the safeguard itself is deterministic.</p>
 <p>That matters for trust: the same inputs produce the same correction.</p>
 <h2>Where the note appears</h2>
 <p>The note is a premium Coach feature. On a fresh Coach visit—before the parent starts a chat—it can appear in the horizontally swipeable <strong>Your calm plan</strong> deck as a card labelled <strong>Coach’s read</strong>.</p>
-<figure><img src="/obubba-bubba-coach-night-diagnosis.jpg" alt="A genuine OBubba Flutter Coach screen showing the premium Coach surface where deterministic Coach’s read cards appear." loading="lazy"/><figcaption>This genuine Flutter capture shows the Coach’s personalised, log-grounded surface. The seeded example contains a night diagnosis rather than this exact early-win note; it demonstrates where the supervising Coach lives without presenting a fabricated screenshot.</figcaption></figure>
+<figure><img src="/obubba-bubba-coach-night-diagnosis.jpg" alt="A genuine OBubba Coach screen showing the premium Coach surface where deterministic Coach’s read cards appear." loading="lazy"/><figcaption>This genuine capture shows the Coach’s personalised, log-grounded surface. The seeded example contains a night diagnosis rather than this exact early-win note; it demonstrates where the supervising Coach lives without presenting a fabricated screenshot.</figcaption></figure>
 <p>There are several important visibility limits:</p>
 <ul><li>free or expired-trial users see the Coach paywall, not the note;</li><li>the proactive note is hidden once conversation turns are already on screen;</li><li>it appears only while the experiment is active; and</li><li>if the rest of the brain looks sound, the supervisor returns nothing rather than filling the screen with reassurance.</li></ul>
 <p>This is a useful safeguard, but it is not a universal modal that every parent must acknowledge.</p>
