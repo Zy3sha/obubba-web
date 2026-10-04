@@ -28,8 +28,8 @@
   <link rel="sitemap" type="application/xml" href="/image-sitemap.xml"/>
   <link rel="alternate" type="application/rss+xml" title="OBubba Blog" href="/feed.xml"/>
   <link rel="manifest" href="/manifest.json"/>
-  <link rel="icon" type="image/png" href="/obubba-baby-tracker-app-icon-crowned-baby.png"/>
-  <link rel="apple-touch-icon" sizes="180x180" href="/obubba-baby-tracker-app-icon-crowned-baby.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
   <link rel="preload" href="/Parisienne-Regular.ttf" as="font" type="font/ttf" crossorigin/>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -296,6 +296,7 @@
     .device-frame{position:relative;border-radius:42px;padding:11px;background:linear-gradient(150deg,#26365f,#0a1430);box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.06),inset 0 0 0 1px rgba(255,255,255,.04)}
     .device-shot{display:block;width:100%;height:auto;border-radius:32px;background:#041026}
     .poster-link{display:block;border-radius:32px;overflow:hidden}
+    .hero picture{display:block}
     .poster-full{display:block;width:100%;height:auto;border-radius:32px}
     .phone-row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,4vw,46px);margin-top:46px}
     .phone-item{text-align:center}
@@ -578,7 +579,7 @@
         <div class="device">
           <div class="device-frame">
             <a class="poster-link js-store-cta" href="https://apps.apple.com/app/obubba-baby-sleep-tracker/id6760968757" aria-label="Download OBubba">
-              <img class="poster-full" src="/obubba-download-landing.png" alt="OBubba app welcome screen: Understand your baby's rhythm, Download now, and the glowing baby sleep clock with fireflies"/>
+              <picture><source type="image/webp" srcset="/obubba-download-landing-640.webp 640w, /obubba-download-landing.webp 853w" sizes="(max-width: 700px) 92vw, 420px"/><img class="poster-full" src="/obubba-download-landing.png" width="853" height="1844" fetchpriority="high" alt="OBubba app welcome screen: Understand your baby's rhythm, Download now, and the glowing baby sleep clock with fireflies"/></picture>
             </a>
           </div>
         </div>
