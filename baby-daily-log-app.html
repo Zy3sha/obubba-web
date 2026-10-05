@@ -510,6 +510,11 @@
     opacity: 0.92;
     pointer-events: none;
   }
+  .blog-post.gradient-only .article-header::after { display: none; }
+  .blog-post.gradient-only .article-header .article {
+    width: min(980px, 100%);
+    padding-right: 0;
+  }
   .article-header .article {
     position: relative;
     z-index: 1;
