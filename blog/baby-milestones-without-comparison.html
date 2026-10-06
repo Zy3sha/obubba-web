@@ -510,6 +510,18 @@
     opacity: 0.92;
     pointer-events: none;
   }
+  .blog-post.hero-accessible .article-header::after { display: none; }
+  .article-hero-art {
+    position: absolute;
+    right: clamp(-64px, 1vw, 20px);
+    bottom: clamp(-92px, -6vw, -42px);
+    width: min(430px, 38vw);
+    height: min(430px, 38vw);
+    aspect-ratio: 1;
+    object-fit: contain;
+    filter: drop-shadow(0 28px 45px rgba(55, 38, 56, 0.14));
+    pointer-events: none;
+  }
   .blog-post.gradient-only .article-header::after { display: none; }
   .blog-post.gradient-only .article-header .article {
     width: min(980px, 100%);
@@ -719,6 +731,13 @@
       width: 230px;
       opacity: 0.25;
     }
+    .article-hero-art {
+      right: -64px;
+      bottom: -48px;
+      width: 230px;
+      height: 230px;
+      opacity: 0.25;
+    }
     .article-header .article { padding-right: 0; }
     .visual-card.featured { grid-column: auto; }
     .blog-hero { background-size: 210px auto; background-position: right -28px bottom -24px; }
@@ -732,6 +751,14 @@
     .hero-actions .button { width: 100%; }
     .section { padding-left: 16px; padding-right: 16px; }
     .article-header { padding-left: 18px; padding-right: 18px; }
+    .blog-post.hero-accessible .article-header { padding-bottom: 150px; }
+    .blog-post.hero-accessible .article-hero-art {
+      right: 12px;
+      bottom: 0;
+      width: 150px;
+      height: 150px;
+      opacity: 0.95;
+    }
     .article-header h1 { font-size: 42px; line-height: 1.02; }
     .rich-text {
       width: calc(100% - 24px);
@@ -795,6 +822,7 @@
 
   <main id="main">
     <header class="article-header">
+
       <div class="article">
         <div class="article-kicker-row">
           <div class="meta">2026-08-25 / OBubba</div>

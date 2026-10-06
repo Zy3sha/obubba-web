@@ -510,6 +510,18 @@
     opacity: 0.92;
     pointer-events: none;
   }
+  .blog-post.hero-accessible .article-header::after { display: none; }
+  .article-hero-art {
+    position: absolute;
+    right: clamp(-64px, 1vw, 20px);
+    bottom: clamp(-92px, -6vw, -42px);
+    width: min(430px, 38vw);
+    height: min(430px, 38vw);
+    aspect-ratio: 1;
+    object-fit: contain;
+    filter: drop-shadow(0 28px 45px rgba(55, 38, 56, 0.14));
+    pointer-events: none;
+  }
   .blog-post.gradient-only .article-header::after { display: none; }
   .blog-post.gradient-only .article-header .article {
     width: min(980px, 100%);
@@ -719,6 +731,13 @@
       width: 230px;
       opacity: 0.25;
     }
+    .article-hero-art {
+      right: -64px;
+      bottom: -48px;
+      width: 230px;
+      height: 230px;
+      opacity: 0.25;
+    }
     .article-header .article { padding-right: 0; }
     .visual-card.featured { grid-column: auto; }
     .blog-hero { background-size: 210px auto; background-position: right -28px bottom -24px; }
@@ -732,6 +751,14 @@
     .hero-actions .button { width: 100%; }
     .section { padding-left: 16px; padding-right: 16px; }
     .article-header { padding-left: 18px; padding-right: 18px; }
+    .blog-post.hero-accessible .article-header { padding-bottom: 150px; }
+    .blog-post.hero-accessible .article-hero-art {
+      right: 12px;
+      bottom: 0;
+      width: 150px;
+      height: 150px;
+      opacity: 0.95;
+    }
     .article-header h1 { font-size: 42px; line-height: 1.02; }
     .rich-text {
       width: calc(100% - 24px);
@@ -795,6 +822,7 @@
 
   <main id="main">
     <header class="article-header">
+
       <div class="article">
         <div class="article-kicker-row">
           <div class="meta">2026-09-19 / OBubba</div>
@@ -888,7 +916,7 @@
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
-        <div class="tags"><a class="tag" href="/blog/1-month-old-sleep-schedule-wake-windows.html">1 Month Old Sleep Schedule, Wake Windows and Naps</a><a class="tag" href="/blog/10-month-old-sleep-schedule-wake-windows.html">10 Month Old Sleep Schedule, Wake Windows and Naps</a><a class="tag" href="/blog/11-month-old-sleep-schedule-wake-windows.html">11 Month Old Sleep Schedule, Wake Windows and Naps</a><a class="tag" href="/blog/12-month-old-sleep-schedule-wake-windows.html">12 Month Old Sleep Schedule, Wake Windows and Naps</a><a class="tag" href="/blog/2-month-old-sleep-schedule-wake-windows.html">2 Month Old Sleep Schedule, Wake Windows and Naps</a><a class="tag" href="/blog/3-month-old-sleep-schedule-wake-windows.html">3 Month Old Sleep Schedule, Wake Windows and Naps</a></div>
+        <div class="tags"><a class="tag" href="/blog/turning-one-bottle-to-cup-gentle-switch.html">Turning One and Still Using a Bottle? A Gentle Cup Switch</a><a class="tag" href="/blog/1-month-old-sleep-schedule-wake-windows.html">1 Month Old Sleep Schedule, Wake Windows and Naps</a><a class="tag" href="/blog/10-month-old-sleep-schedule-wake-windows.html">10 Month Old Sleep Schedule, Wake Windows and Naps</a><a class="tag" href="/blog/11-month-old-sleep-schedule-wake-windows.html">11 Month Old Sleep Schedule, Wake Windows and Naps</a><a class="tag" href="/blog/12-month-old-sleep-schedule-wake-windows.html">12 Month Old Sleep Schedule, Wake Windows and Naps</a><a class="tag" href="/blog/2-month-old-sleep-schedule-wake-windows.html">2 Month Old Sleep Schedule, Wake Windows and Naps</a></div>
       </section>
       <div class="cta-band" style="margin-top: 44px;">
         <h2>Ready to try OBubba?</h2>
