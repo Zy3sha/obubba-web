@@ -510,6 +510,18 @@
     opacity: 0.92;
     pointer-events: none;
   }
+  .blog-post.hero-accessible .article-header::after { display: none; }
+  .article-hero-art {
+    position: absolute;
+    right: clamp(-64px, 1vw, 20px);
+    bottom: clamp(-92px, -6vw, -42px);
+    width: min(430px, 38vw);
+    height: min(430px, 38vw);
+    aspect-ratio: 1;
+    object-fit: contain;
+    filter: drop-shadow(0 28px 45px rgba(55, 38, 56, 0.14));
+    pointer-events: none;
+  }
   .blog-post.gradient-only .article-header::after { display: none; }
   .blog-post.gradient-only .article-header .article {
     width: min(980px, 100%);
@@ -719,6 +731,13 @@
       width: 230px;
       opacity: 0.25;
     }
+    .article-hero-art {
+      right: -64px;
+      bottom: -48px;
+      width: 230px;
+      height: 230px;
+      opacity: 0.25;
+    }
     .article-header .article { padding-right: 0; }
     .visual-card.featured { grid-column: auto; }
     .blog-hero { background-size: 210px auto; background-position: right -28px bottom -24px; }
@@ -732,6 +751,14 @@
     .hero-actions .button { width: 100%; }
     .section { padding-left: 16px; padding-right: 16px; }
     .article-header { padding-left: 18px; padding-right: 18px; }
+    .blog-post.hero-accessible .article-header { padding-bottom: 150px; }
+    .blog-post.hero-accessible .article-hero-art {
+      right: 12px;
+      bottom: 0;
+      width: 150px;
+      height: 150px;
+      opacity: 0.95;
+    }
     .article-header h1 { font-size: 42px; line-height: 1.02; }
     .rich-text {
       width: calc(100% - 24px);
@@ -757,6 +784,14 @@
     "url": "https://obubba.com"
   },
   "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Turning One and Still Using a Bottle? A Gentle Cup Switch",
+      "url": "https://obubba.com/blog/turning-one-bottle-to-cup-gentle-switch.html",
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-06",
+      "description": "Your baby's first birthday is not a bottle deadline. Try one calm cup change at a time while keeping milk, comfort and toothbrushing in view."
+    },
     {
       "@type": "BlogPosting",
       "headline": "1 Month Old Sleep Schedule, Wake Windows and Naps",
@@ -3267,7 +3302,14 @@
       <div class="section-inner">
         <div class="post-list">
 
-      <a class="post-card featured" href="/blog/1-month-old-sleep-schedule-wake-windows.html" style="--card-image: url('/obubba-baby-sleep-timer-fireflies.png')">
+      <a class="post-card featured" href="/blog/turning-one-bottle-to-cup-gentle-switch.html" style="--card-image: url('/obubba-bottle-to-cup-transition-20261006.png')">
+        <div class="meta">2026-10-06 / OBubba</div>
+        <h2>Turning One and Still Using a Bottle? A Gentle Cup Switch</h2>
+        <p>Your baby&#39;s first birthday is not a bottle deadline. Try one calm cup change at a time while keeping milk, comfort and toothbrushing in view.</p>
+        <span class="read-link">Read the guide</span>
+      </a>
+
+      <a class="post-card" href="/blog/1-month-old-sleep-schedule-wake-windows.html">
         <div class="meta">2026-10-05 / OBubba</div>
         <h2>1 Month Old Sleep Schedule, Wake Windows and Naps</h2>
         <p>A 1 month old sleep schedule: wake windows, how many naps, nap length and bedtime, with a sample day and gentle tips from OBubba.</p>
