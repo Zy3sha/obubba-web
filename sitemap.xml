@@ -202,7 +202,7 @@
   </url>
   <url>
     <loc>https://obubba.com/blog/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -224,6 +224,11 @@
     <loc>https://obubba.com/resources/obubba-baby-care-handover-sheet.pdf</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://obubba.com/blog/sending-expressed-breast-milk-to-nursery.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://obubba.com/blog/baby-only-settles-for-one-parent-bedtime.html</loc>
