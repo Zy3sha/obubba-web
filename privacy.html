@@ -51,7 +51,7 @@
 </head>
 <body>
 <h1>Privacy Policy</h1>
-<div class="updated">Last updated: 20 August 2026</div>
+<div class="updated">Last updated: 13 October 2026</div>
 
 <p>OBubba ("we", "us", "our") is a baby tracking and parenting companion app built by parents, for parents. We take your privacy and your family's data seriously.</p>
 
@@ -59,7 +59,9 @@
 <p><strong>Baby tracking data:</strong> Feeds, naps, nappies, weight, milestones, activities, and notes you log. This data is stored on your device and optionally synced to our cloud backup (Firebase/Firestore) if you create an account.</p>
 <p><strong>Account information:</strong> If you sign up, we store your display name, email (if provided), and a family backup code. We use Firebase Authentication.</p>
 <p><strong>Contact email (optional, opt-in):</strong> You can choose to give us a contactable email address so we can reach you about your account and important updates (for example, a critical fix that affects your backup). This is opt-in and off by default, is separate from any recovery email, and you can unsubscribe at any time. We only use it to contact you as described, never for third-party advertising, and it is deleted when you delete your account.</p>
-<p><strong>Location data (optional):</strong> If you grant permission, we use your location solely to calculate travel time to appointments you've added (e.g. GP visits, health visitor appointments). We use Apple MapKit for route calculation. Your location is used in real time only, sent to Apple's routing services for that calculation, and never stored or sent to OBubba servers. You can deny location access and manually set travel times instead.</p>
+<p><strong>Location data (optional):</strong> If you grant permission, OBubba takes one approximate reading of where you are, only while the app is open, for two things: the local weather (so it can suggest what to dress your baby in) and finding baby-friendly places near you on the map. For the weather, your position is rounded to about 1 km and sent to Open-Meteo, a weather service. For the map, it is sent to our server to look up nearby places, and map images come from OpenStreetMap. Your location is never tracked in the background and is not added to your account or your baby's records. You can say no and type the temperature yourself.</p>
+<p><strong>Cycle and pregnancy data (optional):</strong> If you use the cycle tracker, the period dates, symptoms, moods, notes and check-ins you log stay on your phone. They are not added to your baby's shared records, so a partner or carer cannot see them. If you track a pregnancy, details such as your due date and pregnancy week are kept with your family's records so the app can work across your devices.</p>
+<p><strong>Health data from Apple Health or Health Connect (optional, read only):</strong> If you choose to connect, OBubba reads resting heart rate, heart rate variability, sleep, body or wrist temperature and period dates from Apple Health (iPhone) or Health Connect (Android). We use them only to show and predict your cycle inside the app, for example filling in your temperature chart from a ring or watch. This data stays on your phone. We never use it for advertising, never sell it, never send it to analytics or to Luna's AI answers, and never store it in iCloud. OBubba does not write anything to Apple Health or Health Connect. You can turn access off at any time in the Health app or in Health Connect.</p>
 <p><strong>Photos (optional):</strong> Photos you add (e.g. milestone photos, care guide profile picture) are stored on your device. If you generate a share card with a photo, the card image is created locally and only shared if you explicitly tap Share.</p>
 <p><strong>Usage analytics:</strong> We use Firebase Analytics to understand how the app is used (e.g. which features are popular). We also use Google Analytics on the public website. Analytics runs cookieless by default; we set an analytics cookie only if you choose Accept on our cookie banner, and you can Decline to keep the site completely cookieless. Advertising storage stays denied at all times. Measurements can include technical request data, the page path, store choice and approved campaign labels. No personal baby, care, contact or account data is included in analytics.</p>
 <p><strong>AI coach answers (optional, off by default):</strong> Our in-app coach ("Luna") can give deeper, conversational answers using Google's Gemini AI. This is off until you turn it on, and we ask your explicit permission the first time. If you enable it, the question you type plus the relevant details from your baby's logs (such as recent sleep and feed times and age) are sent to Google's Gemini AI, via Firebase AI, to generate the reply. Your name, contact details and account are never sent. See "Data Sharing" below.</p>
@@ -79,16 +81,21 @@
 <p>Your data is shared only in these limited cases:</p>
 <ul>
   <li><strong>Partner sync:</strong> If you share a family code with your partner, they can access the same tracking data.</li>
+  <li><strong>Cycle and pregnancy sharing (optional, off by default):</strong> You can choose to share your cycle or your pregnancy with your partner. For your cycle, only dates are shared: your last twelve period start dates, your typical cycle length and the predicted next period, ovulation and fertile window. Symptoms, moods, notes and anything read from Apple Health or Health Connect are never shared. For a pregnancy, your week, due date and appointments are shared. Turning sharing off deletes the shared copy from our servers.</li>
+  <li><strong>Weather and maps:</strong> If you allow location, an approximate position goes to Open-Meteo for the local weather, and map images are loaded from OpenStreetMap. Neither receives your name, your account or your baby's data.</li>
   <li><strong>Cloud infrastructure:</strong> Data is stored on Google Firebase (Firestore, Authentication, Storage) which is governed by Google's data processing terms.</li>
   <li><strong>Website analytics:</strong> The public website sends limited usage and store-route measurements to Google Analytics. Measurement is cookieless until you accept analytics cookies on our banner; advertising storage is denied at all times. Google may process technical request data to provide this measurement under <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. We do not include baby, care, contact or account data.</li>
   <li><strong>Luna's AI answers (optional, off by default):</strong> If you turn on AI answers in our in-app coach, the question you type plus the relevant details from your baby's logs (such as recent sleep and feed times and age) are sent to Google's Gemini AI, via Firebase AI, to generate the reply. We ask your explicit permission before this happens the first time, and you can turn it off anytime in the app (Account → Preferences → Privacy). Your name, contact details and account are never sent. Google processes this data under <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> to return the answer. If you don't turn it on, nothing is sent to Google's AI and the coach uses only its built-in knowledge.</li>
 </ul>
 
 <h2>4. Data Storage & Security</h2>
-<p>Your data is stored locally on your device using SQLite and localStorage. If you enable cloud backup, data is encrypted in transit (TLS) and stored in Firebase's secure infrastructure. We do not have access to your passwords.</p>
+<p>Your data is stored on your device. If you create an account, your family's records are backed up to Google Firebase, encrypted in transit (TLS) and at rest. Cycle data and anything read from Apple Health or Health Connect stay on your device only, unless you turn on cycle sharing as described above. We do not have access to your passwords or PIN.</p>
 
 <h2>5. Location Services</h2>
-<p>OBubba requests "When In Use" location permission only. We use your location exclusively to calculate driving time to appointments using Apple MapKit. Your coordinates are sent to Apple's routing API and are subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. We never store or log your location, and we do not send it to OBubba servers.</p>
+<p>OBubba only uses your location while the app is open, and only after you allow it. We use it for the local weather (rounded to about 1 km and sent to Open-Meteo) and for finding baby-friendly places near you on the map. We never track your location in the background, and we do not add it to your account or your baby's records. You can turn location off at any time in your device Settings and enter the temperature yourself.</p>
+
+<h2>5a. Health Data</h2>
+<p>OBubba's use of information received from Apple HealthKit and Health Connect is limited to providing the cycle features you see in the app. Health data is read only after you give permission, is kept on your device, and is never used for advertising, marketing or data mining, never sold, never shared with third parties and never used to train AI. The cycle tracker is not a form of contraception or a medical device. You can revoke access at any time in the Health app (iPhone) or Health Connect (Android), and deleting OBubba removes what it has stored on your device.</p>
 
 <h2>6. Children's Privacy</h2>
 <p>OBubba is designed for parents/carers to track their baby's care. We do not knowingly collect data from children. All data is entered by the parent/carer. Baby names, dates of birth, and tracking data are stored solely for the parent's use.</p>
@@ -99,6 +106,8 @@
   <li><strong>Export</strong> all your data from the Account tab</li>
   <li><strong>Delete</strong> your account and all cloud data at any time</li>
   <li><strong>Revoke</strong> location permissions in your device Settings</li>
+  <li><strong>Revoke</strong> Apple Health or Health Connect access at any time</li>
+  <li><strong>Stop sharing</strong> your cycle or pregnancy with your partner, which deletes the shared copy</li>
   <li><strong>Disable</strong> cloud sync and use the app offline only</li>
 </ul>
 
