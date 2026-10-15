@@ -205,6 +205,7 @@
   .guide-card img{width:34px;height:34px;object-fit:contain}
   .guide-card strong{display:block;font-size:13px;color:var(--care-ink);line-height:1.2}
   .guide-card span{display:block;font-size:10.5px;color:#6E645C;line-height:1.3;margin-top:2px}
+  .guide-door{display:block;width:100%;text-align:left;font:inherit;cursor:pointer}
   .guide-more{margin-top:11px;text-align:center;font-size:12px;font-weight:700;color:#8A6A1F}
   .guide[open] .guide-more{display:none}
   .card-head{font-family:"Playfair Display",Georgia,serif;font-size:19px;font-weight:700;
@@ -229,9 +230,10 @@
   .hero-row{display:flex;align-items:center;gap:14px}
   .hero-photo{width:76px;height:76px;border-radius:50%;object-fit:cover;flex:none;
     border:3px solid rgba(237,195,109,.65);box-shadow:0 6px 18px rgba(0,0,0,.35)}
-  .hero-pill{display:inline-flex;align-items:center;gap:6px;margin-top:9px;padding:5px 13px;
+  .hero-pill{display:inline-flex;align-items:center;gap:6px;margin-top:9px;padding:5px 12px;
     border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(237,195,109,.35);
-    font-size:12px;color:#f3e6c8;font-weight:600;white-space:nowrap}
+    font-size:11.5px;color:#f3e6c8;font-weight:600;max-width:100%;
+    white-space:normal;line-height:1.3}
   .caring-banner .hero-row>div{min-width:0}
 
   /* A row inside a two-column grid is tight at 390px, so everything that can
@@ -273,9 +275,8 @@
     text-decoration:none!important;box-sizing:border-box}
   .big-btn.call{background:linear-gradient(145deg,#d6f3e4,#a8e3c6);color:#14402e!important;
     border-color:rgba(20,64,46,.18)}
-  .emerg-link{display:block;text-align:center;padding:11px 10px;margin:-2px 0 12px;
-    font-size:14px;font-weight:700;color:#f0b9ad!important;text-decoration:none!important}
-  .emerg-link:active{opacity:.6}
+  .big-btn.emerg{background:#16213F;color:#FFD4CA!important;
+    border-color:rgba(240,140,120,.55)}
 
   
   /* ── TWO SURFACES, NOT ONE SCROLL ───────────────────────────────────────
@@ -1102,7 +1103,7 @@ document.addEventListener("click", (ev) => {
   }
   // "Help & emergency numbers" and the little guide both live on the Guide
   // surface now, so the things that point at them have to switch surface.
-  const jump = ev.target.closest && ev.target.closest('a[href="#emergency"], .guide summary');
+  const jump = ev.target.closest && ev.target.closest('a[href="#emergency"], .guide summary, .guide-door');
   if (jump) {
     _careView = "guide";
     _applyView();
@@ -1271,16 +1272,20 @@ function _renderHtml() {
         <div class="glance-sub">${_t.lastFeed ? escapeHtml(fmtAgo(_lastFeedAgo)) + (safePositiveNumber(_t.lastFeed.amount)?" · "+safePositiveNumber(_t.lastFeed.amount)+"ml":"") : ""}</div>
       </div>
       <div class="glance-cell">
-        <img class="care-icon" src="./care-assets/sleep.webp" alt="" style="width:44px;height:44px;margin:0 auto 4px"/>
-        <div class="glance-label">Last nap</div>
-        <div class="glance-value">${_t.lastNap ? escapeHtml(fmt12(_t.lastNap.end || _t.lastNap.start)) : "--"}</div>
-        <div class="glance-sub">${_t.lastNap ? escapeHtml(fmtAgo(_lastNapAgo)) : ""}</div>
-      </div>
-      <div class="glance-cell">
         <img class="care-icon" src="./care-assets/nappy.webp" alt="" style="width:44px;height:44px;margin:0 auto 4px"/>
         <div class="glance-label">Last nappy</div>
         <div class="glance-value">${_t.lastPoop && _t.lastPoop.time ? escapeHtml(fmt12(_t.lastPoop.time)) : "--"}</div>
         <div class="glance-sub">${(_t.nappyCount||0)} today${_t.wetCount ? " · "+_t.wetCount+" wet" : ""}</div>
+      </div>
+      ${/* ⚠️ Three backward-looking columns. The concept's third is "Next nap
+           around 2:05", because the question a carer has at a glance is what
+           is coming, not only what has been. The nappy count moves into the
+           cell above it, which had room. */""}
+      <div class="glance-cell">
+        <img class="care-icon" src="./care-assets/sleep.webp" alt="" style="width:44px;height:44px;margin:0 auto 4px"/>
+        <div class="glance-label">Next nap</div>
+        <div class="glance-value">${(familyContext.prediction||{}).nextPrediction ? escapeHtml(fmt12(String((familyContext.prediction||{}).nextPrediction))) : (_napWindowStr ? escapeHtml(fmt12(_napWindowStr.split("–")[0].trim())) : "--")}</div>
+        <div class="glance-sub">${(familyContext.prediction||{}).display ? escapeHtml(String((familyContext.prediction||{}).display)) : ""}</div>
       </div>
     </div>
     ${/* Hide own feed/nap calcs when parent prediction is live — prevents dual-display conflict */
@@ -1340,7 +1345,10 @@ function _renderHtml() {
              was on the screen twice, forty pixels apart. The hero is where the
              reference puts it and where it is big enough to be a face rather
              than a bullet. */""}
-        <div>
+        ${/* ⚠️ The concept's header is the wordmark and a moon, nothing else.
+             The baby's name is the hero's job, and it was being said twice,
+             sixty pixels apart. */""}
+        <div hidden>
           <div class="header-name">${escapeHtml(_name)}</div>
           <div class="header-age">${_ageStr||"Baby"}</div>
         </div>
@@ -1359,7 +1367,9 @@ function _renderHtml() {
                is a greeting, not information. The one thing a carer wants
                confirmed when they open the link is that they are in the right
                place, looking after the right baby, with the parent watching. */""}
-          <div class="text">You're caring for ${escapeHtml(_name)}. Anything you log appears on their parent's phone straight away.</div>
+          <div class="text">You're caring for ${escapeHtml(_name)}.</div>
+          ${/* Short enough for one line. "updates live" is already said by
+               the status card directly below this one. */""}
           <div class="hero-pill">🔒 Shared by their parent</div>
         </div>
       </div>
@@ -1446,17 +1456,17 @@ function _renderHtml() {
             nextAction = "All naps done. Calm play until bedtime."+(_feedOverdue?" Offer a feed before bed.":"");
           }
         } else if (awakeMin >= _ww.max && !_napsAreDone) {
-          statusIcon="😫"; statusText=_name+" is getting overtired ("+fmtAgo(awakeMin)+" awake)"; statusColor="#E8937A"; statusBg="rgba(232,147,122,0.08)";
+          statusIcon="😫"; statusText=_name+" is getting overtired (awake "+fmtSince(awakeMin*60)+")"; statusColor="#E8937A"; statusBg="rgba(232,147,122,0.08)";
           nextAction = "Try settling "+_name+" for a nap now. Dark room, gentle rocking or shushing. If they fight it for 15+ minutes, try a pram walk or car ride.";
         } else if (awakeMin >= _ww.min && !_napsAreDone) {
-          statusIcon="🥱"; statusText=_name+" is getting sleepy ("+fmtAgo(awakeMin)+" awake)"; statusColor="#D4A855"; statusBg="rgba(212,168,85,0.08)";
+          statusIcon="🥱"; statusText=_name+" is getting sleepy (awake "+fmtSince(awakeMin*60)+")"; statusColor="#D4A855"; statusBg="rgba(212,168,85,0.08)";
           nextAction = "Watch for sleepy cues: yawning, eye rubbing, looking away. Start the nap routine, dark room, sleeping bag, white noise.";
         } else if (_napsAreDone) {
           // Naps done but bedtime not imminent — show "all naps done" status
-          statusText = _name+" is awake · all naps done ("+fmtAgo(awakeMin)+")";
+          statusText = _name+" is awake · all naps done (awake "+fmtSince(awakeMin*60)+")";
           nextAction = "Play time until bedtime."+(_feedOverdue?" Offer a feed now — it's been "+fmtAgo(_lastFeedAgo)+" since the last one.":((_nextFeedStr && _lastFeedAgo > 90)?" Feed coming up around "+_nextFeedStr+".":""));
         } else {
-          statusText = _name+" is awake and happy ("+fmtAgo(awakeMin)+")";
+          statusText = _name+" is awake and happy (awake "+fmtSince(awakeMin*60)+")";
           const minsToNap = _ww.min - awakeMin;
           nextAction = "Play time! "+_name+" has about "+minsToNap+" minutes before they'll start getting sleepy."+(_feedOverdue?" Offer a feed now — it's been "+fmtAgo(_lastFeedAgo)+" since the last one.":((_nextFeedStr && _lastFeedAgo > 90)?" Feed coming up around "+_nextFeedStr+".":""));
         }
@@ -1597,6 +1607,10 @@ function _renderHtml() {
 
 
 
+    ${/* The concept puts the glance above the buttons: you read where the
+         baby is up to, then you act. */""}
+    ${_babyStatsHtml}
+
     <div class="card" style="padding:14px">
       ${_nightWakePausedAt && _isNightSleep ? `
       <div style="text-align:center;font-size:12px;color:#655E68;font-weight:600;margin-bottom:10px">How did ${escapeHtml(_name)} settle?</div>
@@ -1681,7 +1695,6 @@ function _renderHtml() {
       </div>`}
     </div>
 
-    ${_babyStatsHtml}
 
     ${/* Medicine banner — shows today's doses so carers know what's been given */
       (familyContext.todayMeds||[]).length ? `<div class="card" style="border-color:rgba(212,168,85,0.3);background:linear-gradient(135deg,rgba(212,168,85,0.06),rgba(212,168,85,0.02))">
@@ -1711,15 +1724,18 @@ function _renderHtml() {
     ${_notesHtml}
     ${_comfortHtml}
 
-    ${/* ── SOOTHING PLAYBOOK ── */""}
-    ${familyContext.carerComfort ? `<div class="card" style="border-color:rgba(139,126,200,0.3)">
-      <div class="card-head">${escapeHtml(_name)}'s Soothing Playbook</div>
-      <div style="font-size:13px;color:#4A3B35;line-height:1.7;white-space:pre-line">${escapeHtml(familyContext.carerComfort)}</div>
-      <div style="font-size:10px;color:#6E645C;margin-top:8px;font-style:italic">Written by ${escapeHtml(_name)}'s parents, these are what work specifically for ${escapeHtml(_name)}.</div>
-    </div>` : `<div class="card" style="border-color:rgba(212,168,85,0.3)">
-      <div class="card-head">Soothing Playbook</div>
-      <div style="font-size:13px;color:#6A584E;line-height:1.6">Parents haven't added soothing techniques yet. If ${escapeHtml(_name)} is upset, try: gentle rocking, shushing, offering a dummy, or a walk in the pram.</div>
-    </div>`}
+    ${/* The concept has the little guide ON THE HOME: three named cards that
+         tell a carer what is in there. The reading itself lives on the Guide
+         surface, so this is the door rather than the room. */""}
+    <button type="button" class="card guide-door" data-view="guide">
+      <div class="card-head">${escapeHtml(_name)}'s little guide</div>
+      <div class="guide-cards">
+        <div class="guide-card"><img src="./care-assets/v2/feed-ui.webp" alt=""/><div><strong>Milk</strong><span>How much, how often</span></div></div>
+        <div class="guide-card"><img src="./care-assets/v2/nappy-ui.webp" alt=""/><div><strong>Nappies</strong><span>What to expect</span></div></div>
+        <div class="guide-card"><img src="./care-assets/safe-sleep.webp" alt=""/><div><strong>Safe sleep</strong><span>A few gentle reminders</span></div></div>
+      </div>
+      <div class="guide-more">Tap to read it all ›</div>
+    </button>
 
     ${(() => {
       const first = (familyContext.emergencyContacts || [])
@@ -1729,7 +1745,7 @@ function _renderHtml() {
       ${/* ⚠️ This sat the same size and weight as "Call Mum" but only scrolls
            the page, so two very different things competed for the same tap.
            It reads as the quiet link it is. */""}
-      <a class="emerg-link" href="#emergency">🛟 Help &amp; emergency numbers</a>`;
+      <a class="big-btn emerg" href="#emergency">🛟 Help &amp; emergency</a>`;
     })()}
 
     ${/* ⚠️ SEVENTEEN BLOCKS AND SIX THOUSAND PIXELS OF SCROLL. The concept is
@@ -1743,6 +1759,16 @@ function _renderHtml() {
          A tab bar, the way an app does it. */""}
     </section>
     <section class="v v-guide" hidden>
+    ${/* ── SOOTHING PLAYBOOK ── */""}
+    ${familyContext.carerComfort ? `<div class="card" style="border-color:rgba(139,126,200,0.3)">
+      <div class="card-head">${escapeHtml(_name)}'s Soothing Playbook</div>
+      <div style="font-size:13px;color:#4A3B35;line-height:1.7;white-space:pre-line">${escapeHtml(familyContext.carerComfort)}</div>
+      <div style="font-size:10px;color:#6E645C;margin-top:8px;font-style:italic">Written by ${escapeHtml(_name)}'s parents, these are what work specifically for ${escapeHtml(_name)}.</div>
+    </div>` : `<div class="card" style="border-color:rgba(212,168,85,0.3)">
+      <div class="card-head">Soothing Playbook</div>
+      <div style="font-size:13px;color:#6A584E;line-height:1.6">Parents haven't added soothing techniques yet. If ${escapeHtml(_name)} is upset, try: gentle rocking, shushing, offering a dummy, or a walk in the pram.</div>
+    </div>`}
+
     ${/* ⚠️ SAFE SLEEP AND WHAT TO DO WHEN THE BABY CRIES WERE BEHIND A TAP.
          They sat inside the collapsed "Full Care Guide" with the feeding
          averages and the nappy reference, which is material you look up. These
@@ -1791,13 +1817,6 @@ function _renderHtml() {
     <details class="guide" style="margin-bottom:14px">
       <summary>
         <div class="guide-title">${escapeHtml(_name)}'s little guide</div>
-        ${/* ⚠️ These three named what the guide does NOT contain. "Comfort" is
-             the soothing playbook, which is its own card, and "Safe sleep" is
-             printed in full further down the page, so the guide was promising
-             things a carer could already see and hiding the things they could
-             not. These are the three sections actually inside it. */""}
-        <div class="guide-cards">
-          <div class="guide-card"><img src="./care-assets/v2/feed-ui.webp" alt=""/><div><strong>Milk</strong><span>How much, how often</span></div></div>
           <div class="guide-card"><img src="./care-assets/v2/nappy-ui.webp" alt=""/><div><strong>Nappies</strong><span>What to expect</span></div></div>
           <div class="guide-card"><img src="./care-assets/v2/sleep-ui.webp" alt=""/><div><strong>Routine</strong><span>Naps and wake windows</span></div></div>
         </div>
