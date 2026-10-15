@@ -1077,9 +1077,16 @@ function openSheet(type) {
     // startMin, so a carer's bedtime ran no timer on the parent's clock, no
     // Live Activity, and never flipped the sleep state that pushes the mirror.
     // A nap from this page has always written `start`. Bedtime never did.
-    const _bedAt = nowTime();
-    logEntry({type:"sleep", night:false, start:_bedAt, time:_bedAt,
-              note:"Bedtime · logged by caregiver"});
+    // ⚠️ DO NOT ADD `start` HERE until the app ships the openSleepTimerOf change.
+    // It looks like the obvious fix (a nap from this page writes `start`, and the
+    // app needs startMin to run a timer) and it is actively harmful today:
+    // mergeCarerEntriesInto routes a 'sleep' WITH a start onto the nap-pairing
+    // stack to wait for a 'nap-end' that never comes for a bedtime, so the
+    // parent would not see it until End care finalised it hours later. A point
+    // bedtime is emitted straight into their day. Mirroring is fixed on the app
+    // side instead: isAsleepNow already reads a point bedtime, openSleepTimerOf
+    // and _sleepSignature must too.
+    logEntry({type:"sleep", night:false, note:"Bedtime · logged by caregiver"});
   } else if (type === "note") {
     inner = `
       <div class="sheet-inner">
