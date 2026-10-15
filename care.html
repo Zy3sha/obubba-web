@@ -182,7 +182,10 @@
   .sheet{background:rgba(2,10,24,.68);backdrop-filter:blur(6px)}.sheet-inner{background:var(--care-cream);border:1px solid #f0d7a1;border-radius:30px 30px 0 0;padding:25px 22px max(28px,env(safe-area-inset-bottom,28px));box-shadow:0 -18px 70px rgba(0,0,0,.35)}.sheet-title{font-size:27px;color:var(--care-ink)}.sheet-handle{width:54px;height:6px;background:#d4c8b8}.amount-display{font-size:62px;color:#192f55}.amt-btn,.opt-btn{min-height:58px;border-radius:16px;font-size:19px}.save-btn{min-height:60px;background:linear-gradient(135deg,#ffad90,#ef796d);font-size:20px;box-shadow:0 9px 20px rgba(239,121,109,.28),inset 0 1px rgba(255,255,255,.7)}.cancel-btn{min-height:52px;font-size:17px;color:#5f6e83}
   .sheet-art{display:block;width:116px;height:116px;object-fit:contain;margin:-8px auto 4px;filter:drop-shadow(0 12px 18px rgba(17,39,71,.2))}.sheet-art.note-art{width:96px;height:96px}
   .call-btn{min-height:58px;padding:14px 17px;border-radius:17px;background:#e8f8f1;color:var(--care-ink);font-size:17px}.fab-call{width:66px;height:66px;background:linear-gradient(145deg,#bcebd8,#69c8a7);border:2px solid rgba(255,255,255,.75);box-shadow:0 10px 28px rgba(0,0,0,.28)}
-  details>summary{min-height:58px!important;font-size:17px!important}.reassurance-item .q{font-size:16px}.reassurance-item .a{font-size:15px}.toast{font-size:16px;padding:15px 20px;background:#10294d;color:#fff;border:1px solid #f0cf83}
+  details>summary{min-height:58px!important;font-size:17px!important}.reassurance-item .q{font-size:16px}.reassurance-item .a{font-size:15px}.toast{font-size:16px;padding:13px 16px;background:#10294d;color:#fff;border:1px solid #f0cf83;display:flex;align-items:center;gap:4px;max-width:calc(100vw - 32px)}
+  .toast-undo{margin-left:10px;padding:6px 15px;border-radius:999px;border:1px solid #f0cf83;
+    background:rgba(240,207,131,.14);color:#f6e2b4;font:inherit;font-size:15px;font-weight:800;
+    cursor:pointer;flex:none}
   @media(max-width:370px){.action-btn{min-height:116px}.action-btn .label{font-size:16px}.caring-banner .title{font-size:21px}}
   @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
@@ -190,6 +193,37 @@
      Cream cards on the night sky (NOT dark panels — the cards are the paper
      you read, the sky is the room). Action tiles are a row: artwork, label,
      chevron. Plus the hand-back card the care scene was drawn for. */
+  .guide summary{list-style:none;cursor:pointer;-webkit-user-select:none;padding:16px 15px 13px;
+    border-radius:24px;background:rgba(255,250,241,.98);border:1px solid rgba(237,195,109,.44);
+    box-shadow:0 15px 38px rgba(0,0,0,.19)}
+  .guide summary::-webkit-details-marker{display:none}
+  .guide-title{font-family:"Playfair Display",Georgia,serif;font-size:21px;font-weight:700;
+    color:var(--care-ink);margin-bottom:11px}
+  .guide-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}
+  .guide-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;
+    padding:10px 5px;background:#FBF5F0;border-radius:14px;border:1px solid rgba(17,39,71,.05)}
+  .guide-card img{width:34px;height:34px;object-fit:contain}
+  .guide-card strong{display:block;font-size:13px;color:var(--care-ink);line-height:1.2}
+  .guide-card span{display:block;font-size:10.5px;color:#6E645C;line-height:1.3;margin-top:2px}
+  .guide-more{margin-top:11px;text-align:center;font-size:12px;font-weight:700;color:#8A6A1F}
+  .guide[open] .guide-more{display:none}
+  .glance-title{font-family:"Playfair Display",Georgia,serif;font-size:21px;font-weight:700;
+    color:var(--care-ink);margin-bottom:11px}
+  /* ⚠️ Three clock times across 320pt is the tightest row on the page, and at
+     19px "12:29pm" pushed the cells past the screen. Everything in here is
+     allowed to shrink, and the type steps down on a narrow phone. */
+  .glance-cell{text-align:center;padding:11px 3px 10px;background:#FBF5F0;border-radius:16px;
+    border:1px solid rgba(17,39,71,.05);min-width:0;overflow:hidden}
+  .glance-label{font-size:11px;color:#6E645C;letter-spacing:.02em}
+  .glance-value{font-size:19px;font-weight:800;color:var(--care-ink);margin-top:2px;
+    font-variant-numeric:tabular-nums;white-space:nowrap}
+  .glance-sub{font-size:11px;color:#6E645C;margin-top:2px;line-height:1.3}
+  @media(max-width:359px){
+    .glance-value{font-size:16px}
+    .glance-label,.glance-sub{font-size:10px}
+    .guide-card strong{font-size:12px}
+    .guide-card span{font-size:9.5px}
+  }
   .hero-row{display:flex;align-items:center;gap:14px}
   .hero-photo{width:76px;height:76px;border-radius:50%;object-fit:cover;flex:none;
     border:3px solid rgba(237,195,109,.65);box-shadow:0 6px 18px rgba(0,0,0,.35)}
@@ -1130,25 +1164,32 @@ function _renderHtml() {
   const _lastNapAgo = _lastNapForWindow && _lastNapForWindow.end ? agoMin(_lastNapForWindow.end) : (_t.lastNap && _t.lastNap.end ? agoMin(_t.lastNap.end) : null);
   const _lastNappyAgo = _t.lastPoop ? agoMin(_t.lastPoop.time) : null;
   // Build rich context cards
-  const _babyStatsHtml = `<div class="card" style="background:linear-gradient(135deg,rgba(212,168,133,0.06),rgba(155,184,168,0.04))">
-    <div class="section-label" style="margin-bottom:10px">👶 ${escapeHtml(_name)}${_ageStr?" · "+_ageStr:""}</div>
+  // ⚠️ THE CONCEPT ASKS A DIFFERENT QUESTION. This card used to answer "how
+  // long ago", which is the parent's question, with values like "1h 20m ago".
+  // A carer arriving at noon wants the CLOCK TIME: the parent told them the
+  // last feed was at twelve ten, and that is the number they are matching
+  // against. The relative age stays underneath, small, because it is still the
+  // faster read once you are in the day.
+  const _babyStatsHtml = `<div class="card">
+    <div class="glance-title">At a glance</div>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:${_napWindowStr||_nextFeedStr?10:0}px">
-      <div style="text-align:center;padding:10px 4px;background:#FBF5F0;border-radius:12px">
-        <img class="care-icon" src="./care-assets/feed.webp" alt="" style="width:46px;height:46px;margin:0 auto 3px"/>
-        <div style="font-size:10px;color:#6E645C;text-transform:uppercase;letter-spacing:0.05em">Last feed</div>
-        <div style="font-size:13px;font-weight:700;color:#4A3B35;margin-top:2px">${_t.lastFeed ? fmtAgo(_lastFeedAgo) : "--"}</div>
-        ${safePositiveNumber(_t.lastFeed&&_t.lastFeed.amount) ? `<div style="font-size:14px;color:#6A584E;margin-top:1px">${safePositiveNumber(_t.lastFeed.amount)}ml</div>` : ""}
+      <div class="glance-cell">
+        <img class="care-icon" src="./care-assets/feed.webp" alt="" style="width:44px;height:44px;margin:0 auto 4px"/>
+        <div class="glance-label">Last feed</div>
+        <div class="glance-value">${_t.lastFeed ? escapeHtml(fmt12(_t.lastFeed.time)) : "--"}</div>
+        <div class="glance-sub">${_t.lastFeed ? escapeHtml(fmtAgo(_lastFeedAgo)) + (safePositiveNumber(_t.lastFeed.amount)?" · "+safePositiveNumber(_t.lastFeed.amount)+"ml":"") : ""}</div>
       </div>
-      <div style="text-align:center;padding:10px 4px;background:#FBF5F0;border-radius:12px">
-        <img class="care-icon" src="./care-assets/sleep.webp" alt="" style="width:46px;height:46px;margin:0 auto 3px"/>
-        <div style="font-size:10px;color:#6E645C;text-transform:uppercase;letter-spacing:0.05em">Last nap</div>
-        <div style="font-size:13px;font-weight:700;color:#4A3B35;margin-top:2px">${_t.lastNap ? fmtAgo(_lastNapAgo) : "--"}</div>
+      <div class="glance-cell">
+        <img class="care-icon" src="./care-assets/sleep.webp" alt="" style="width:44px;height:44px;margin:0 auto 4px"/>
+        <div class="glance-label">Last nap</div>
+        <div class="glance-value">${_t.lastNap ? escapeHtml(fmt12(_t.lastNap.end || _t.lastNap.start)) : "--"}</div>
+        <div class="glance-sub">${_t.lastNap ? escapeHtml(fmtAgo(_lastNapAgo)) : ""}</div>
       </div>
-      <div style="text-align:center;padding:10px 4px;background:#FBF5F0;border-radius:12px">
-        <img class="care-icon" src="./care-assets/nappy.webp" alt="" style="width:46px;height:46px;margin:0 auto 3px"/>
-        <div style="font-size:10px;color:#6E645C;text-transform:uppercase;letter-spacing:0.05em">Nappies</div>
-        <div style="font-size:13px;font-weight:700;color:#4A3B35;margin-top:2px">${_t.nappyCount||0} today</div>
-        ${_t.wetCount ? `<div style="font-size:14px;color:#6A584E;margin-top:1px">${_t.wetCount} wet</div>` : ""}
+      <div class="glance-cell">
+        <img class="care-icon" src="./care-assets/nappy.webp" alt="" style="width:44px;height:44px;margin:0 auto 4px"/>
+        <div class="glance-label">Last nappy</div>
+        <div class="glance-value">${_t.lastPoop && _t.lastPoop.time ? escapeHtml(fmt12(_t.lastPoop.time)) : "--"}</div>
+        <div class="glance-sub">${(_t.nappyCount||0)} today${_t.wetCount ? " · "+_t.wetCount+" wet" : ""}</div>
       </div>
     </div>
     ${/* Hide own feed/nap calcs when parent prediction is live — prevents dual-display conflict */
@@ -1590,10 +1631,19 @@ function _renderHtml() {
     })()}
 
     <!-- ═══ DETAILED CARE GUIDE (collapsible) ═══ -->
-    <details style="margin-bottom:14px">
-      <summary style="padding:14px 16px;border-radius:14px;background:#FFFDFA;border:1.5px solid #E8DED3;cursor:pointer;font-size:15px;font-weight:700;color:#4A3B35;list-style:none;display:flex;align-items:center;justify-content:space-between;-webkit-user-select:none">
-        <span>📖 Full Care Guide</span>
-        <span style="font-size:12px;color:#6E645C">tap to expand ▼</span>
+    ${/* ⚠️ This was a single grey bar reading "Full Care Guide · tap to expand",
+         which tells a carer nothing about what is behind it, so most will never
+         open it. The concept shows three named cards instead: what is in there,
+         in the carer's language, as the thing you tap. */""}
+    <details class="guide" style="margin-bottom:14px">
+      <summary>
+        <div class="guide-title">${escapeHtml(_name)}'s little guide</div>
+        <div class="guide-cards">
+          <div class="guide-card"><img src="./care-assets/v2/feed-ui.webp" alt=""/><div><strong>Milk</strong><span>How much and when</span></div></div>
+          <div class="guide-card"><img src="./care-assets/v2/note-ui.webp" alt=""/><div><strong>Comfort</strong><span>What soothes ${escapeHtml(_name)}</span></div></div>
+          <div class="guide-card"><img src="./care-assets/safe-sleep.webp" alt=""/><div><strong>Safe sleep</strong><span>A few gentle reminders</span></div></div>
+        </div>
+        <div class="guide-more">Tap to read it all ▾</div>
       </summary>
 
     <div class="card" style="background:#FFF8F2;border:1px solid #F0D0C8;margin-top:10px">
