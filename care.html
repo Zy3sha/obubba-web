@@ -165,7 +165,7 @@
   .ready{margin-top:14px;padding-top:13px;border-top:1px solid #e8dcc9}
   .ready-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:9px}
   .ready-label{font-size:15px;font-weight:800;color:#112747}
-  .ready-detail{font-size:12px;color:#6A7A8C;text-align:right;flex:none}
+  .ready-detail{font-size:12px;color:#55657A;text-align:right;flex:none}
   .ready-bar{position:relative;height:16px;border-radius:999px;overflow:hidden;background:#ece3d6}
   .ready-zone{position:absolute;top:0;bottom:0}
   .ready-zone.green{background:linear-gradient(180deg,#9FD9B4,#7CC79B)}
@@ -174,7 +174,7 @@
   .ready-marker{position:absolute;top:-3px;bottom:-3px;width:4px;border-radius:3px;background:#112747;box-shadow:0 0 0 2px #FFFCF9;transition:left .6s linear}
   .ready-scale{display:flex;justify-content:space-between;margin-top:5px;font-size:11px;color:#655E68}
   .ready-note{margin-top:7px;font-size:11px;color:#6A626B}
-  .care-countdown{margin-top:15px;padding-top:14px;border-top:1px solid #e8dcc9}.care-countdown-title{font-size:12px;font-weight:800;letter-spacing:.13em;color:#785f80;text-transform:uppercase;margin-bottom:9px}.care-countdown-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:8px}.care-countdown-grid.two{grid-template-columns:1fr 1fr}.care-countdown-item{min-width:0;text-align:center;padding:11px 5px 10px;border-radius:16px;background:#f6efe5;border:1px solid #eadfce}.care-countdown-item.primary{background:linear-gradient(145deg,#f4efff,#ddd0ff);border-color:#cdb9ff}.care-countdown-item img{width:38px;height:38px;object-fit:contain}.care-countdown-item small{display:block;color:#667488;font-size:11px;line-height:1.2;margin-top:2px}.care-countdown-value{font-size:18px;font-weight:850;color:#112747;font-variant-numeric:tabular-nums;white-space:nowrap}.care-countdown-item.primary .care-countdown-value{font-size:21px}.care-countdown-clock{font-variant-numeric:tabular-nums}
+  .care-countdown{margin-top:15px;padding-top:14px;border-top:1px solid #e8dcc9}.care-countdown-title{font-size:12px;font-weight:800;letter-spacing:.13em;color:#785f80;text-transform:uppercase;margin-bottom:9px}.care-countdown-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:8px}.care-countdown-grid.two{grid-template-columns:1fr 1fr}.care-countdown-item{min-width:0;text-align:center;padding:11px 5px 10px;border-radius:16px;background:#f6efe5;border:1px solid #eadfce}.care-countdown-item.primary{background:linear-gradient(145deg,#f4efff,#ddd0ff);border-color:#cdb9ff}.care-countdown-item img{width:38px;height:38px;object-fit:contain}.care-countdown-item small{display:block;color:#55657A;font-size:11px;line-height:1.2;margin-top:2px}.care-countdown-value{font-size:18px;font-weight:850;color:#112747;font-variant-numeric:tabular-nums;white-space:nowrap}.care-countdown-item.primary .care-countdown-value{font-size:21px}.care-countdown-clock{font-variant-numeric:tabular-nums}
   .section-label{font-size:13px;color:#6f5874;letter-spacing:.12em}.parent-note{font-size:16px;border-radius:18px;padding:16px}.parent-note .pn-label{font-size:12px}
   .btn-grid{gap:12px}.action-btn{min-height:126px;padding:14px 10px;border:1px solid rgba(16,39,71,.12);border-radius:24px;color:var(--care-ink);background:linear-gradient(145deg,#fff6ed,#ffd0bd);box-shadow:0 10px 22px rgba(5,22,50,.12),inset 0 1px #fff;font-size:18px;justify-content:center}.action-btn:nth-child(2){background:linear-gradient(145deg,#f0fff9,#bcebd8)}.action-btn:nth-child(3){background:linear-gradient(145deg,#f6f0ff,#cdb9ff)}.action-btn:nth-child(4){background:linear-gradient(145deg,#fff9df,#f7d986)}.action-btn .icon{font-size:0;width:62px;height:62px}.action-btn .icon img,.care-icon{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 7px 8px rgba(16,39,71,.17))}.action-btn .label{font-size:18px;letter-spacing:0}.action-btn:focus-visible,.save-btn:focus-visible,.call-btn:focus-visible{outline:4px solid #76baff;outline-offset:3px}
   .action-btn.note-action{grid-column:1/-1;min-height:94px;flex-direction:row;background:linear-gradient(145deg,#fff9e7,#f7d986)}.action-btn.note-action .icon{width:54px;height:54px}
@@ -207,6 +207,8 @@
   .guide-card span{display:block;font-size:10.5px;color:#6E645C;line-height:1.3;margin-top:2px}
   .guide-more{margin-top:11px;text-align:center;font-size:12px;font-weight:700;color:#8A6A1F}
   .guide[open] .guide-more{display:none}
+  .card-head{font-family:"Playfair Display",Georgia,serif;font-size:19px;font-weight:700;
+    color:var(--care-ink);margin-bottom:10px;line-height:1.25}
   .glance-title{font-family:"Playfair Display",Georgia,serif;font-size:21px;font-weight:700;
     color:var(--care-ink);margin-bottom:11px}
   /* ⚠️ Three clock times across 320pt is the tightest row on the page, and at
@@ -239,12 +241,15 @@
     text-align:left;border-radius:22px!important;min-width:0;overflow:hidden}
   .action-btn .icon{width:40px!important;height:40px!important;flex:none}
   .action-btn .label{flex:1;min-width:0;font-size:16px!important;text-align:left;
-    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    white-space:normal;overflow-wrap:break-word;line-height:1.2}
   .action-btn:after{content:"›";font-size:22px;line-height:1;font-weight:700;opacity:.4;flex:none}
   .action-btn.note-action{min-height:78px!important}
   .action-btn.note-action .icon{width:44px!important;height:44px!important}
   .action-btn.note-action .label{font-size:17px!important}
-  @media(max-width:360px){.action-btn .label{font-size:15px!important}.action-btn .icon{width:36px!important;height:36px!important}}
+  @media(max-width:360px){.action-btn{gap:7px;padding:10px 10px!important}
+    .action-btn .label{font-size:14.5px!important}
+    .action-btn .icon{width:32px!important;height:32px!important}
+    .action-btn:after{display:none}}
 
   .handback{margin-bottom:14px;border-radius:24px;overflow:hidden;position:relative;
     border:1px solid rgba(237,195,109,.44);box-shadow:0 16px 38px rgba(0,0,0,.28)}
@@ -1137,6 +1142,7 @@ function _renderHtml() {
   );
   const _findActiveNap = (arr) => arr.find(e=>{
     if(e.type!=="nap"||!e.start||e.night) return false;
+    if(e._merged === true) return false;
     if(_parentClosedStarts.has(e.start)) return false;
     if(e.end && e.end !== e.start) return false;
     return true;
@@ -1319,6 +1325,7 @@ function _renderHtml() {
       // flag never outranks the parent's own closed nap.
       const activeNap = _napEndedLocally ? null : entries.find(e=>{
         if(e.type!=="nap"||!e.start||e.night) return false;
+        if(e._merged === true) return false;
         if(_parentClosedStarts.has(e.start)) return false;
         if(e.end && e.end !== e.start) return false;
         return true;
@@ -1352,7 +1359,7 @@ function _renderHtml() {
         else if (napElapsed < _longNapMin) nextAction = _name+" is having a good restorative nap. Keep the room dark and quiet.";
         else nextAction = "That's a long one! If "+_name+" is still asleep after "+Math.round(_longNapMin/30)*30+" minutes, you could gently wake them, very long naps can push bedtime late.";
       } else if (_lastFeedAgo !== null && _lastFeedAgo < 30) {
-        statusIcon="🍼"; statusText=_name+" was just fed ("+fmtAgo(_lastFeedAgo)+" ago)"; statusColor="#C07088"; statusBg="rgba(192,112,136,0.08)";
+        statusIcon="🍼"; statusText=_name+" was just fed ("+fmtAgo(_lastFeedAgo)+")"; statusColor="#C07088"; statusBg="rgba(192,112,136,0.08)";
         nextAction = "Keep "+_name+" upright for 15-20 min after feeding (reduces spit-up). Then some play time on a mat or your lap.";
       } else if (_lastNapAgo !== null && _lastNapAgo < 15) {
         statusIcon="🌤️"; statusText=_name+" just woke up"; statusColor="#D4A855"; statusBg="rgba(212,168,85,0.08)";
@@ -1527,7 +1534,7 @@ function _renderHtml() {
         ${_readyHtml}
         ${_countdownHtml}
         ${nextAction?`<div style="padding:10px 12px;background:rgba(255,255,255,0.5);border-radius:12px;font-size:13px;color:#4A3B35;line-height:1.6;margin-top:6px">
-          <div style="font-size:10px;font-weight:700;color:${statusColor};text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px">👉 What to do</div>
+          <div style="font-size:11px;font-weight:800;color:#8A4A60;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px">What to do</div>
           ${escapeHtml(nextAction)}
         </div>`:""}
       </div>`;
@@ -1614,7 +1621,7 @@ function _renderHtml() {
         `}
         <button class="action-btn note-action" data-action="note">
           <span class="icon"><img src="./care-assets/note.webp" alt=""/></span>
-          <span class="label">Add a note for the parents</span>
+          <span class="label">Add a note</span>
         </button>
       </div>`}
     </div>
@@ -1651,11 +1658,11 @@ function _renderHtml() {
 
     ${/* ── SOOTHING PLAYBOOK ── */""}
     ${familyContext.carerComfort ? `<div class="card" style="border-color:rgba(139,126,200,0.3)">
-      <div class="section-label" style="color:#8B7EC8;margin-bottom:8px">🧸 ${escapeHtml(_name)}'s Soothing Playbook</div>
+      <div class="card-head">${escapeHtml(_name)}'s Soothing Playbook</div>
       <div style="font-size:13px;color:#4A3B35;line-height:1.7;white-space:pre-line">${escapeHtml(familyContext.carerComfort)}</div>
       <div style="font-size:10px;color:#6E645C;margin-top:8px;font-style:italic">Written by ${escapeHtml(_name)}'s parents, these are what work specifically for ${escapeHtml(_name)}.</div>
     </div>` : `<div class="card" style="border-color:rgba(212,168,85,0.3)">
-      <div class="section-label" style="color:#8A6A1F;margin-bottom:6px">🧸 Soothing Playbook</div>
+      <div class="card-head">Soothing Playbook</div>
       <div style="font-size:13px;color:#6A584E;line-height:1.6">Parents haven't added soothing techniques yet. If ${escapeHtml(_name)} is upset, try: gentle rocking, shushing, offering a dummy, or a walk in the pram.</div>
     </div>`}
 
@@ -1682,7 +1689,7 @@ function _renderHtml() {
            one wearing a stock emoji while 32KB of artwork for it sat unused. -->
       <div style="display:flex;align-items:center;gap:9px;margin-bottom:6px">
         <img src="./care-assets/safe-sleep.webp" alt="" style="width:34px;height:34px;object-fit:contain;flex:none"/>
-        <div style="font-size:15px;font-weight:700;color:#C07088">Safe Sleep Essentials</div>
+        <div class="card-head" style="margin-bottom:0">Safe Sleep Essentials</div>
       </div>
       <div style="font-size:14px;font-style:italic;color:#42786A;margin-bottom:10px">Based on The Lullaby Trust safer sleep guidance</div>
       <div style="font-size:13px;color:#5B4F5F;line-height:1.8">
@@ -1699,7 +1706,7 @@ function _renderHtml() {
 
     <!-- ═══ IF BABY CRIES ═══ -->
     <div class="card" style="background:#FFF8F2;border:1px solid #F0D0C8">
-      <div style="font-size:15px;font-weight:700;color:#C07088;margin-bottom:10px">💝 If ${escapeHtml(_name)} Cries</div>
+      <div class="card-head">If ${escapeHtml(_name)} Cries</div>
       <div style="font-size:13px;color:#5B4F5F;line-height:1.8">
         1. <strong>Check basics</strong>, hungry? nappy? too hot/cold?<br>
         2. <strong>Tired?</strong>, check wake window above. Dim lights, quiet voice<br>
@@ -1718,16 +1725,21 @@ function _renderHtml() {
     <details class="guide" style="margin-bottom:14px">
       <summary>
         <div class="guide-title">${escapeHtml(_name)}'s little guide</div>
+        ${/* ⚠️ These three named what the guide does NOT contain. "Comfort" is
+             the soothing playbook, which is its own card, and "Safe sleep" is
+             printed in full further down the page, so the guide was promising
+             things a carer could already see and hiding the things they could
+             not. These are the three sections actually inside it. */""}
         <div class="guide-cards">
-          <div class="guide-card"><img src="./care-assets/v2/feed-ui.webp" alt=""/><div><strong>Milk</strong><span>How much and when</span></div></div>
-          <div class="guide-card"><img src="./care-assets/v2/note-ui.webp" alt=""/><div><strong>Comfort</strong><span>What soothes ${escapeHtml(_name)}</span></div></div>
-          <div class="guide-card"><img src="./care-assets/safe-sleep.webp" alt=""/><div><strong>Safe sleep</strong><span>A few gentle reminders</span></div></div>
+          <div class="guide-card"><img src="./care-assets/v2/feed-ui.webp" alt=""/><div><strong>Milk</strong><span>How much, how often</span></div></div>
+          <div class="guide-card"><img src="./care-assets/v2/nappy-ui.webp" alt=""/><div><strong>Nappies</strong><span>What to expect</span></div></div>
+          <div class="guide-card"><img src="./care-assets/v2/sleep-ui.webp" alt=""/><div><strong>Routine</strong><span>Naps and wake windows</span></div></div>
         </div>
         <div class="guide-more">Tap to read it all ▾</div>
       </summary>
 
     <div class="card" style="background:#FFF8F2;border:1px solid #F0D0C8;margin-top:10px">
-      <div style="font-size:15px;font-weight:700;color:#C07088;margin-bottom:10px">🍼 Feeding</div>
+      <div class="card-head">Feeding</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:13px;color:#5B4F5F;margin-bottom:10px">
         ${_t.avgMl ? `<div style="color:#6B6473">Typical amount</div><div style="font-weight:600">~${_t.avgMl}ml per feed</div>` : ""}
         ${_t.avgFeedsPerDay ? `<div style="color:#6B6473">Typical frequency</div><div style="font-weight:600">~${_t.avgFeedsPerDay} feeds/day</div>` : ""}
@@ -1739,7 +1751,7 @@ function _renderHtml() {
 
     <!-- ═══ NAPPIES SECTION ═══ -->
     <div class="card" style="background:#FFF8F2;border:1px solid #F0D0C8">
-      <div style="font-size:15px;font-weight:700;color:#C07088;margin-bottom:10px">👶 Nappies</div>
+      <div class="card-head">Nappies</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:13px;color:#5B4F5F;margin-bottom:10px">
         <div style="color:#6B6473">Today's nappies</div><div style="font-weight:600">${_t.nappyCount||0} (${_t.wetCount||0} wet)</div>
         ${_t.lastPoop ? `<div style="color:#6B6473">Last nappy</div><div style="font-weight:600">${fmt12(_t.lastPoop.time)}, ${escapeHtml(_t.lastPoop.poopType||"wet")}</div>` : ""}
@@ -1750,7 +1762,7 @@ function _renderHtml() {
 
     <!-- ═══ SLEEP & ROUTINE ═══ -->
     <div class="card" style="background:#F0FFF4;border:1px solid #D0E8D8">
-      <div style="font-size:15px;font-weight:700;color:#C07088;margin-bottom:10px">😴 Sleep & Routine</div>
+      <div class="card-head">Sleep & Routine</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:13px;color:#5B4F5F;margin-bottom:10px">
         ${_wakeEntry ? `<div style="color:#6B6473">Woke up today</div><div style="font-weight:600">${fmt12(_wakeEntry.time)}</div>` : ""}
         ${_ww ? `<div style="color:#6B6473">Wake window</div><div style="font-weight:600">${_ww.label} between sleeps${_wwIsPersonal?" <span style='font-size:10px;color:#42786A'>✓ personal</span>":""}</div>` : ""}
@@ -1761,7 +1773,7 @@ function _renderHtml() {
 
     <!-- ═══ IF YOU'RE OVERWHELMED ═══ -->
     <div class="card" style="background:#F5F0F8;border:1px solid #D4C4E0">
-      <div style="font-size:15px;font-weight:700;color:#8868A0;margin-bottom:10px">💜 If you're feeling overwhelmed</div>
+      <div class="card-head">If you're feeling overwhelmed</div>
       <div style="font-size:13px;color:#5B4F5F;line-height:1.7">
         Crying is hard to sit with. If you feel yourself getting tense, frustrated, or tearful, that's a signal, not a failure.
         <br><br>
@@ -1770,13 +1782,13 @@ function _renderHtml() {
         • Walk away for a minute or two, make a cup of tea, take a few breaths<br>
         • Come back when you feel steadier. ${escapeHtml(_name)} is safe in the cot.
         <br><br>
-        <strong style="color:#8868A0">Never shake a baby.</strong> Putting baby down and stepping away is always the right choice if you need a moment.
+        <strong style="color:#6E4E88">Never shake a baby.</strong> Putting baby down and stepping away is always the right choice if you need a moment.
       </div>
     </div>
 
     <!-- ═══ EMERGENCY & CONTACTS ═══ -->
     <div class="card" id="emergency" style="background:#f8f0f0;border:2px solid #E8B4C0">
-      <div style="font-size:15px;font-weight:700;color:#C07088;margin-bottom:10px">📞 Emergency & Contacts</div>
+      <div class="card-head">Emergency & Contacts</div>
       ${_contactsHtml ? `<div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #f0d0d0">${_contactsHtml}</div>` : ""}
       <div style="font-size:13px;color:#5B4F5F;line-height:1.8">
         <strong>Emergency:</strong> <span style="color:#C4301F;font-weight:700">${_emergNum}</span><br>
@@ -1787,7 +1799,7 @@ function _renderHtml() {
     </div>
 
     <div class="card">
-      <div class="section-label">If you're worried, read first, call if you need to</div>
+      <div class="card-head">If you're worried, read first, call if you need to</div>
 
       <details class="reassurance-item">
         <summary><div class="q">😴 Baby only napped 10-20 mins, is that OK?</div></summary>
@@ -1820,6 +1832,11 @@ function _renderHtml() {
       </details>
     </div>
     </details>
+    <div class="card">
+      <div class="card-head">Today so far</div>
+      <div id="recent-list"><div style="font-size:13px;color:#6E645C;text-align:center;padding:8px">Nothing logged yet</div></div>
+    </div>
+
     ${(() => {
       // ⚠️ THE CARE SCENE WAS DRAWN AND THEN REFERENCED NOWHERE. It is the one
       // piece of artwork in the set that is a SCENE rather than an object, and
@@ -1858,25 +1875,11 @@ function _renderHtml() {
         <img class="handback-art" src="./care-assets/v2/care-scene.webp" alt=""/>
         <div class="handback-cap">
           <h3>Ready to hand back?</h3>
-          <p>Here is ${escapeHtml(_name)}'s day, ready for their parent.</p>
+          <p>Everything above is already with ${escapeHtml(_name)}'s parent. Your access ends when they finish the session.</p>
         </div>
-      </div>
-      <div class="card">
-        <div class="timeline">${_rows}</div>
-        <div style="font-size:12px;color:#6B6473;margin-top:10px;line-height:1.5">Everything here is already with their parent. Your access ends when they finish the session.</div>
       </div>`;
     })()}
 
-    ${_contactsHtml ? `<div class="card">
-      <div class="section-label">Call parents anytime 💛</div>
-      ${_contactsHtml}
-    </div>` : ""}
-    <div class="card">
-      <div class="section-label">Today so far</div>
-      <div id="recent-list"><div style="font-size:13px;color:#6E645C;text-align:center;padding:8px">Nothing logged yet</div></div>
-    </div>
-    ${/* Floating call button */""}
-    ${(()=>{ const _href = safeTelHref((familyContext.emergencyContacts.find(c=>c&&c.phone)||{}).phone||""); return _href ? `<a class="fab-call" href="${escapeHtml(_href)}" title="Call parent">📞</a>` : ""; })()}
     `;
 
   // The portal uses its own commissioned BubbaCare art family. Keeping the
