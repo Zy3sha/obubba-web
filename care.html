@@ -277,6 +277,21 @@
     font-size:14px;font-weight:700;color:#f0b9ad!important;text-decoration:none!important}
   .emerg-link:active{opacity:.6}
 
+  
+  /* ── TWO SURFACES, NOT ONE SCROLL ───────────────────────────────────────
+     Today is what you do. Guide is what you look up. The page had grown to
+     seventeen blocks and six thousand pixels with both mixed together. */
+  .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:120;display:flex;
+    background:rgba(7,15,36,.94);backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);border-top:1px solid rgba(232,201,122,.22);
+    padding-bottom:env(safe-area-inset-bottom,0)}
+  .tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;
+    padding:9px 6px 8px;background:none;border:0;font:inherit;font-size:11px;
+    font-weight:700;color:rgba(244,239,230,.55);cursor:pointer}
+  .tab .tab-ico{font-size:19px;line-height:1}
+  .tab.is-on{color:#E8C97A}
+  body{padding-bottom:84px!important}
+
   </style>
 </head>
 <body>
@@ -1062,6 +1077,45 @@ function renderApp() {
   setInterval(()=>{ _debouncedRender(); }, 120000);
 }
 
+
+// ── the tab bar ───────────────────────────────────────────────────────────
+// Delegated, because _renderHtml replaces the whole tree on every re-render
+// and a listener bound to a button would die with it. The chosen view is kept
+// outside the markup for the same reason: a re-render must not throw a carer
+// back to Today while they are reading the guide.
+let _careView = "today";
+function _applyView() {
+  document.querySelectorAll(".v").forEach((el) => {
+    el.hidden = !el.classList.contains("v-" + _careView);
+  });
+  document.querySelectorAll(".tab").forEach((b) => {
+    b.classList.toggle("is-on", b.getAttribute("data-view") === _careView);
+  });
+}
+document.addEventListener("click", (ev) => {
+  const tab = ev.target.closest && ev.target.closest(".tab");
+  if (tab) {
+    _careView = tab.getAttribute("data-view") || "today";
+    _applyView();
+    window.scrollTo(0, 0);
+    return;
+  }
+  // "Help & emergency numbers" and the little guide both live on the Guide
+  // surface now, so the things that point at them have to switch surface.
+  const jump = ev.target.closest && ev.target.closest('a[href="#emergency"], .guide summary');
+  if (jump) {
+    _careView = "guide";
+    _applyView();
+    const target = document.getElementById("emergency");
+    if (jump.matches('a[href="#emergency"]') && target) {
+      ev.preventDefault();
+      setTimeout(() => target.scrollIntoView({ behavior: "smooth", block: "start" }), 30);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }
+});
+
 function _renderHtml() {
   const _name = familyContext.babyName;
   const _weeks = familyContext.ageWeeks;
@@ -1310,6 +1364,7 @@ function _renderHtml() {
         </div>
       </div>
     </div>
+    <section class="v v-today">
     ${_allergyBanner}
     ${_pinnedHtml}
 
@@ -1677,6 +1732,17 @@ function _renderHtml() {
       <a class="emerg-link" href="#emergency">🛟 Help &amp; emergency numbers</a>`;
     })()}
 
+    ${/* ⚠️ SEVENTEEN BLOCKS AND SIX THOUSAND PIXELS OF SCROLL. The concept is
+         seven blocks and a screen and a bit; this had grown into a single
+         endless page where the safe-sleep list, the feeding reference, the
+         nappy reference, the routine, the overwhelmed card, the contacts and a
+         875px reassurance accordion all sat below the things a carer actually
+         uses. Nothing was wrong with the content; it was all on one surface.
+
+         So: two surfaces. Today is what you do. Guide is what you look up.
+         A tab bar, the way an app does it. */""}
+    </section>
+    <section class="v v-guide" hidden>
     ${/* ⚠️ SAFE SLEEP AND WHAT TO DO WHEN THE BABY CRIES WERE BEHIND A TAP.
          They sat inside the collapsed "Full Care Guide" with the feeding
          averages and the nappy reference, which is material you look up. These
@@ -1832,6 +1898,8 @@ function _renderHtml() {
       </details>
     </div>
     </details>
+    </section>
+    <section class="v v-today">
     <div class="card">
       <div class="card-head">Today so far</div>
       <div id="recent-list"><div style="font-size:13px;color:#6E645C;text-align:center;padding:8px">Nothing logged yet</div></div>
@@ -1879,8 +1947,18 @@ function _renderHtml() {
         </div>
       </div>`;
     })()}
+    </section>
 
+    <nav class="tabbar" role="tablist">
+      <button type="button" class="tab is-on" data-view="today">
+        <span class="tab-ico">☾</span><span>Today</span>
+      </button>
+      <button type="button" class="tab" data-view="guide">
+        <span class="tab-ico">📖</span><span>Guide</span>
+      </button>
+    </nav>
     `;
+  _applyView();
 
   // The portal uses its own commissioned BubbaCare art family. Keeping the
   // mapping here means every live state (including conditional sleep buttons)
