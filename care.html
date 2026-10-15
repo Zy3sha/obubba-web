@@ -156,24 +156,26 @@
   .header-photo{width:58px;height:58px;border:3px solid rgba(237,195,109,.85);box-shadow:0 0 0 4px rgba(255,255,255,.08),0 8px 26px rgba(0,0,0,.28)}
   .header-name{font-size:24px;color:#fff}.header-age{font-size:14px;color:#c7d3e7}.logo{font-size:31px;color:#f4d892}.sub{font-size:12px;color:#b9c9df;text-transform:uppercase;letter-spacing:.16em}
   .caring-banner{position:relative;overflow:hidden;text-align:left;padding:20px 20px 18px;border-radius:24px;background:linear-gradient(145deg,rgba(43,70,118,.97),rgba(15,39,77,.98));border:1px solid rgba(237,195,109,.48);box-shadow:0 16px 38px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.14)}
-  .caring-banner:after{content:"✦";position:absolute;right:18px;top:9px;color:#f4d892;font-size:31px;opacity:.85}.caring-banner .title{font-size:24px;color:#fff;font-style:normal}.caring-banner .text{font-size:16px;color:#d9e4f3}.caring-banner .text:last-child{font-size:13px;color:#aebed4!important}
+  .caring-banner:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 20%,rgba(255,214,127,.25),transparent 24%),radial-gradient(circle at 90% 75%,rgba(174,151,255,.22),transparent 29%);pointer-events:none}.caring-banner:after{content:"✦";position:absolute;right:18px;top:9px;color:#f4d892;font-size:31px;opacity:.85}.caring-banner .title,.caring-banner .text,.caring-banner .hero-pill{position:relative;z-index:2;max-width:62%}.caring-banner .title{font-size:24px;color:#fff;font-style:normal}.caring-banner .text{font-size:16px;color:#d9e4f3}.caring-banner .text:last-child{font-size:13px;color:#aebed4!important}.care-banner-art{position:absolute;right:-22px;bottom:-16px;width:212px;height:150px;object-fit:contain;z-index:1;filter:drop-shadow(0 12px 18px rgba(0,0,0,.24))}.hero-photo-badge{position:absolute;right:17px;bottom:14px;width:52px;height:52px;border-radius:50%;object-fit:cover;z-index:3;border:2px solid #f4d892;box-shadow:0 5px 16px rgba(0,0,0,.35)}
   .card,.status-bar{background:rgba(255,250,241,.98)!important;color:var(--care-ink);border:1px solid rgba(237,195,109,.44)!important;box-shadow:0 15px 38px rgba(0,0,0,.19),inset 0 1px #fff!important;border-radius:24px!important}
   .status-bar{position:relative;top:auto;margin:14px 0;padding:18px}.status-bar .status-row{gap:13px}.status-bar .status-icon{font-size:32px}.status-bar .status-text{font-size:18px;color:var(--care-ink)}.status-bar .status-sub{font-size:13px;color:var(--care-muted)}.status-bar .status-timer{font-size:36px}.status-bar [style*="font-size:13px"]{font-size:15px!important}
   /* The readiness meter, drawn from the app's own four zones. Same reading as
      the bar on the parent's clock: green is the window, amber is watch for
      cues, coral is past it. */
-  .ready{margin-top:14px;padding-top:13px;border-top:1px solid #e8dcc9}
-  .ready-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:9px}
-  .ready-label{font-size:15px;font-weight:800;color:#112747}
-  .ready-detail{font-size:12px;color:#55657A;text-align:right;flex:none}
-  .ready-bar{position:relative;height:16px;border-radius:999px;overflow:hidden;background:#ece3d6}
+  .ready{position:relative;margin-top:15px;padding:16px 15px 14px;border:1px solid rgba(129,106,189,.28);border-radius:20px;background:linear-gradient(145deg,#f8f3ff,#eee5ff 56%,#fff4e6);box-shadow:inset 0 1px #fff,0 9px 22px rgba(72,52,116,.10);overflow:hidden}.ready:before{content:"";position:absolute;width:105px;height:105px;right:-35px;top:-48px;border-radius:50%;background:radial-gradient(circle,rgba(255,218,132,.40),transparent 70%);pointer-events:none}
+  .ready-head{position:relative;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:11px}
+  .ready-label{font-family:"Playfair Display",Georgia,serif;font-size:18px;font-weight:700;color:#172b50}.ready-label:before{content:"✦";display:inline-grid;place-items:center;width:27px;height:27px;margin-right:8px;border-radius:50%;background:linear-gradient(145deg,#6654a4,#ae8de2);color:#fff3c5;font-family:Georgia;box-shadow:0 5px 12px rgba(72,52,116,.20)}
+  .ready-detail{font-size:13px;font-weight:750;color:#65517d;text-align:right;flex:none}
+  .ready-target{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:-2px 1px 11px}.ready-target span{font-size:12px;font-weight:750;color:#72647e}.ready-target strong{font-family:"Playfair Display",Georgia,serif;font-size:22px;line-height:1;color:#25375f;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .ready-bar{position:relative;height:18px;border-radius:999px;overflow:hidden;background:#dfe3ed;border:1px solid rgba(23,43,80,.10);box-shadow:inset 0 2px 5px rgba(24,36,67,.13)}
   .ready-zone{position:absolute;top:0;bottom:0}
   .ready-zone.green{background:linear-gradient(180deg,#9FD9B4,#7CC79B)}
   .ready-zone.amber{background:linear-gradient(180deg,#F2D08A,#E8BE68)}
   .ready-zone.coral{background:linear-gradient(180deg,#F3A68F,#EC8C72)}
-  .ready-marker{position:absolute;top:-3px;bottom:-3px;width:4px;border-radius:3px;background:#112747;box-shadow:0 0 0 2px #FFFCF9;transition:left .6s linear}
-  .ready-scale{display:flex;justify-content:space-between;margin-top:5px;font-size:11px;color:#655E68}
-  .ready-note{margin-top:7px;font-size:11px;color:#6A626B}
+  .ready-marker{position:absolute;top:-4px;bottom:-4px;width:5px;border-radius:4px;background:#fff;box-shadow:0 0 0 3px #273960,0 0 13px rgba(255,255,255,.9);transition:left .6s linear}
+  .ready-scale{display:flex;justify-content:space-between;margin-top:7px;font-size:11px;font-weight:650;color:#5c6172}
+  .ready-note{margin-top:8px;font-size:11px;color:#726c7d;font-style:italic}
+  .ready.awaiting{background:linear-gradient(145deg,#f8f3ff,#fff7e9)}.ready.awaiting .ready-bar{overflow:hidden;background:linear-gradient(90deg,#d9d0ef,#efe3ff 52%,#f5e6c7)}.ready.awaiting .ready-bar:after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 24%,rgba(255,255,255,.8) 44%,transparent 64%);animation:ready-shimmer 2.4s ease-in-out infinite}.ready-awaiting-copy{font-size:12px;line-height:1.45;color:#6a6177;margin:9px 0 2px}@keyframes ready-shimmer{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
   .care-countdown{margin-top:15px;padding-top:14px;border-top:1px solid #e8dcc9}.care-countdown-title{font-size:12px;font-weight:800;letter-spacing:.13em;color:#785f80;text-transform:uppercase;margin-bottom:9px}.care-countdown-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:8px}.care-countdown-grid.two{grid-template-columns:1fr 1fr}.care-countdown-item{min-width:0;text-align:center;padding:11px 5px 10px;border-radius:16px;background:#f6efe5;border:1px solid #eadfce}.care-countdown-item.primary{background:linear-gradient(145deg,#f4efff,#ddd0ff);border-color:#cdb9ff}.care-countdown-item img{width:38px;height:38px;object-fit:contain}.care-countdown-item small{display:block;color:#55657A;font-size:11px;line-height:1.2;margin-top:2px}.care-countdown-value{font-size:18px;font-weight:850;color:#112747;font-variant-numeric:tabular-nums;white-space:nowrap}.care-countdown-item.primary .care-countdown-value{font-size:21px}.care-countdown-clock{font-variant-numeric:tabular-nums}
   .section-label{font-size:13px;color:#6f5874;letter-spacing:.12em}.parent-note{font-size:16px;border-radius:18px;padding:16px}.parent-note .pn-label{font-size:12px}
   .btn-grid{gap:12px}.action-btn{min-height:126px;padding:14px 10px;border:1px solid rgba(16,39,71,.12);border-radius:24px;color:var(--care-ink);background:linear-gradient(145deg,#fff6ed,#ffd0bd);box-shadow:0 10px 22px rgba(5,22,50,.12),inset 0 1px #fff;font-size:18px;justify-content:center}.action-btn:nth-child(2){background:linear-gradient(145deg,#f0fff9,#bcebd8)}.action-btn:nth-child(3){background:linear-gradient(145deg,#f6f0ff,#cdb9ff)}.action-btn:nth-child(4){background:linear-gradient(145deg,#fff9df,#f7d986)}.action-btn .icon{font-size:0;width:62px;height:62px}.action-btn .icon img,.care-icon{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 7px 8px rgba(16,39,71,.17))}.action-btn .label{font-size:18px;letter-spacing:0}.action-btn:focus-visible,.save-btn:focus-visible,.call-btn:focus-visible{outline:4px solid #76baff;outline-offset:3px}
@@ -278,7 +280,7 @@
   .big-btn.emerg{background:#16213F;color:#FFD4CA!important;
     border-color:rgba(240,140,120,.55)}
 
-  
+
   /* ── TWO SURFACES, NOT ONE SCROLL ───────────────────────────────────────
      Today is what you do. Guide is what you look up. The page had grown to
      seventeen blocks and six thousand pixels with both mixed together. */
@@ -293,6 +295,46 @@
   .tab.is-on{color:#E8C97A}
   body{padding-bottom:84px!important}
 
+  /* ── BubbaCare premium visual pass ──────────────────────────────────────
+     The care portal should feel like the parent app: celestial, composed and
+     valuable, while remaining obvious enough to use without instructions. */
+  body{background:
+    radial-gradient(circle at 8% 5%,rgba(255,255,255,.9) 0 1px,transparent 2px),
+    radial-gradient(circle at 88% 8%,rgba(255,211,121,.95) 0 1.3px,transparent 2.5px),
+    radial-gradient(circle at 72% 19%,rgba(206,185,255,.75) 0 1px,transparent 2px),
+    radial-gradient(ellipse 100% 34% at 50% -5%,rgba(91,83,169,.54),transparent 68%),
+    linear-gradient(180deg,#06142d 0%,#0a2850 45%,#071a38 100%)}
+  .header{min-height:88px;padding:18px 5px 13px}.header-left{gap:12px}.header-photo{width:58px;height:58px;border-color:#f2d382;box-shadow:0 0 0 4px rgba(255,255,255,.1),0 0 24px rgba(206,185,255,.22),0 9px 24px rgba(0,0,0,.34)}.header-photo-fallback{display:grid;place-items:center;background:linear-gradient(145deg,#6e5bb2,#272d66);color:#ffe5a0;font-size:28px}.header-name{font:700 24px/1.1 "Playfair Display",Georgia,serif;color:#fff}.header-age{margin-top:4px;font-size:14px;font-weight:650;color:#d5deec}.logo{color:#f6d98f;text-shadow:0 0 18px rgba(246,217,143,.22)}.sub{color:#d3dcec;font-weight:700}
+  .caring-banner{min-height:174px;padding:24px 20px;background:radial-gradient(circle at 80% 12%,rgba(244,210,139,.22),transparent 24%),linear-gradient(145deg,#283c75 0%,#171b49 56%,#0c2043 100%);border:1.5px solid rgba(242,211,130,.67);box-shadow:0 18px 46px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.2),0 0 34px rgba(126,102,205,.12)}.caring-banner:after{content:"✦  ·  ✧";letter-spacing:7px;color:#ffe39a;font-size:19px;right:17px;top:12px}.caring-banner .title{font-size:27px;line-height:1.08;text-shadow:0 3px 14px rgba(0,0,0,.38)}.caring-banner .text{margin-top:7px;color:#f1f4fb;font-weight:650}.hero-pill{background:rgba(10,24,57,.56);border-color:rgba(255,225,153,.65);color:#fff4d6;box-shadow:inset 0 1px rgba(255,255,255,.12)}.care-banner-art{width:228px;height:168px;right:-24px;bottom:-13px;opacity:1}
+  .card,.status-bar{border:1.5px solid rgba(242,211,130,.64)!important;box-shadow:0 18px 44px rgba(0,0,0,.27),inset 0 1px #fff,0 0 0 1px rgba(255,255,255,.24)!important}.status-bar{padding:19px;background:linear-gradient(155deg,#fffdf8 0%,#fff7e8 100%)!important}.status-bar:before{content:"";position:absolute;inset:0;border-radius:24px;pointer-events:none;background:radial-gradient(circle at 90% 5%,rgba(212,183,255,.22),transparent 27%),radial-gradient(circle at 8% 100%,rgba(255,203,161,.16),transparent 26%)}.status-bar>*{position:relative}.status-bar .status-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:16px;background:linear-gradient(145deg,#efe8ff,#d9c9ff);box-shadow:inset 0 1px #fff,0 8px 18px rgba(70,54,121,.16);font-size:27px}.status-bar .status-text{font:700 20px/1.2 "Playfair Display",Georgia,serif;color:#102544}.status-bar .status-sub{margin-top:3px;color:#465872;font-weight:650}.status-bar .status-timer{color:#273b68!important;text-shadow:0 2px #fff}
+  .ready{border:1.5px solid rgba(103,78,160,.34);box-shadow:inset 0 1px #fff,0 12px 28px rgba(72,52,116,.14)}.ready-label{color:#13294c}.ready-detail{color:#523f70}.ready-target span,.ready-awaiting-copy{color:#554c63}.ready-scale{color:#4c5161}.ready-note{color:#595264}.care-countdown-title{color:#674b72}.care-countdown-item small{color:#40516b;font-weight:700}.care-countdown-value{color:#0d2343}
+  .section-label{color:#f0ddff;font-weight:850}.parent-note{background:linear-gradient(145deg,#fffaf1,#f4edff)!important;border:1.5px solid rgba(242,211,130,.62)!important;color:#172b4d!important;box-shadow:0 13px 30px rgba(0,0,0,.22),inset 0 1px #fff;font-size:17px;line-height:1.55}.parent-note .pn-label{color:#73520f!important;font-weight:900}.parent-note[style*="232,87,74"]{background:linear-gradient(145deg,#fff5f2,#ffe1db)!important;border-color:#e89a8d!important}.parent-note[style*="232,87,74"] .pn-label{color:#9b2f2f!important}.entry{color:#13294c}.entry .time{color:#4d5c70}.entry .label{color:#172b4d}.entry .emoji{width:38px;height:38px;display:block;object-fit:contain;filter:drop-shadow(0 5px 7px rgba(17,39,71,.14))}.glance-label,.glance-sub,.guide-card span{color:#514b48}.guide-more{color:#6f5011}.card-head,.glance-title,.guide-title{color:#102544}
+  .btn-grid{gap:13px}.card:has(.btn-grid){padding:15px!important;background:linear-gradient(155deg,rgba(255,250,241,.99),rgba(245,237,255,.98))!important}.action-btn{position:relative;min-height:112px!important;flex-direction:column!important;justify-content:center!important;gap:4px!important;padding:13px 8px!important;text-align:center!important;border:1.5px solid rgba(83,66,121,.22)!important;box-shadow:inset 0 1px rgba(255,255,255,.95),0 11px 23px rgba(13,29,61,.15)!important;overflow:hidden}.action-btn:before{content:"";position:absolute;width:66px;height:66px;right:-23px;top:-28px;border-radius:50%;background:rgba(255,255,255,.28)}.action-btn:nth-child(1){background:linear-gradient(145deg,#fff6f0,#ffc5ad)}.action-btn:nth-child(2){background:linear-gradient(145deg,#f1fff9,#b8ead6)}.action-btn:nth-child(3){background:linear-gradient(145deg,#f7f2ff,#cbb9ff)}.action-btn:nth-child(4){background:linear-gradient(145deg,#fff9df,#f5d57e)}.action-btn .icon{width:58px!important;height:58px!important;z-index:1}.action-btn .label{flex:0 1 auto;min-width:0;font:750 17px/1.2 "Playfair Display",Georgia,serif!important;text-align:center;color:#102544;z-index:1;white-space:normal}.action-btn:after{position:absolute;right:12px;bottom:8px;color:#423a5c;opacity:.48}.action-btn.note-action{min-height:88px!important;flex-direction:row!important;padding:12px 18px!important}.action-btn.note-action .label{flex:1 1 auto!important;width:auto!important;text-align:left!important;white-space:nowrap!important}.action-btn.note-action .icon{width:54px!important;height:54px!important}
+  .action-btn.status-only{cursor:default;background:linear-gradient(145deg,#f4f0ff,#d7c9ff)!important;border-color:rgba(95,75,153,.28)!important}.action-btn.status-only:after{content:"•";color:#67549e;opacity:.7}.action-btn.status-only .label:after{content:" · timer above";font-family:-apple-system,"SF Pro Display",system-ui,sans-serif;font-size:11px;font-weight:700;color:#594f72}
+  .guide-card{background:linear-gradient(145deg,#fffaf3,#f4ecff);border-color:rgba(98,76,147,.12);box-shadow:inset 0 1px #fff}.guide-card strong{color:#102544}.call-btn{color:#102544}.big-btn.call{box-shadow:0 10px 25px rgba(78,173,133,.18),inset 0 1px #fff}.big-btn.emerg{box-shadow:0 12px 26px rgba(0,0,0,.24)}
+  .tabbar{background:linear-gradient(180deg,rgba(13,23,55,.96),rgba(5,15,38,.98));border-top-color:rgba(242,211,130,.45);box-shadow:0 -12px 35px rgba(0,0,0,.28)}.tab{color:#b9c5d8;font-size:12px}.tab.is-on{color:#ffe39a;text-shadow:0 0 12px rgba(255,227,154,.35)}
+  @media(max-width:370px){.caring-banner{min-height:164px}.care-banner-art{width:205px}.caring-banner .title,.caring-banner .text,.caring-banner .hero-pill{max-width:64%}.action-btn{min-height:105px!important}.action-btn .label{font-size:15.5px!important}}
+
+  /* Care Compass and storybook hand-back. All times remain the parent's
+     synced values; this layer changes presentation only. */
+  .care-countdown{position:relative;margin-top:16px;padding:16px 13px 13px;border:1.5px solid rgba(101,78,157,.28);border-radius:22px;background:radial-gradient(circle at 50% 4%,rgba(255,221,147,.35),transparent 29%),linear-gradient(145deg,#f8f2ff,#eee6ff 48%,#fff3e2);overflow:hidden;box-shadow:inset 0 1px #fff,0 12px 25px rgba(55,42,100,.12)}
+  .care-countdown:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 12% 18%,#fff 0 1px,transparent 2px),radial-gradient(circle at 88% 27%,#edc36d 0 1.5px,transparent 2.5px)}
+  .care-countdown-title{position:relative;text-align:center;margin:0;font:800 11px/1.2 -apple-system,"SF Pro Display",system-ui,sans-serif;letter-spacing:.16em;color:#67527e}
+  .care-compass-art{position:relative;display:block;width:154px;height:116px;object-fit:contain;margin:-3px auto -15px;filter:drop-shadow(0 10px 14px rgba(42,31,84,.19))}
+  .care-countdown-grid{position:relative;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.care-countdown-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .care-countdown-item{padding:10px 3px 9px;background:rgba(255,253,248,.82);border-color:rgba(83,65,126,.14);box-shadow:inset 0 1px #fff,0 6px 13px rgba(45,35,76,.08)}
+  .care-countdown-item img{width:34px;height:34px}.care-countdown-value{font-size:16px}.care-countdown-item.primary .care-countdown-value{font-size:18px}
+  .status-art-icon{width:44px;height:44px;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(32,31,70,.16))}
+  .story-card{overflow:hidden;background:linear-gradient(155deg,#fffdf8,#f8f0ff)!important}.story-kicker{font-size:11px;font-weight:900;letter-spacing:.15em;color:#705886;text-transform:uppercase;margin-bottom:3px}.story-title{font:700 25px/1.1 "Playfair Display",Georgia,serif;color:#102544;margin-bottom:13px}.story-empty{text-align:center;padding:17px 10px;color:#53627a;font-size:14px}.story-empty img{display:block;width:70px;height:70px;object-fit:contain;margin:0 auto 7px}.story-list{position:relative;padding-left:3px}.story-list:before{content:"";position:absolute;left:25px;top:27px;bottom:27px;width:2px;background:linear-gradient(#d9c8ff,#edc36d,#bcebd8);opacity:.8}.story-entry{position:relative;display:grid;grid-template-columns:46px 1fr auto;align-items:center;gap:10px;padding:9px 9px 9px 3px;margin-bottom:5px;border-radius:17px;background:rgba(255,255,255,.6);border:1px solid rgba(68,54,105,.09)}.story-entry:last-child{margin-bottom:0}.story-node{position:relative;z-index:1;width:44px;height:44px;padding:4px;border-radius:15px;background:linear-gradient(145deg,#fff8e9,#e8dcff);border:1px solid rgba(119,91,173,.18);box-shadow:0 6px 12px rgba(39,32,73,.11)}.story-node img{width:100%;height:100%;object-fit:contain}.story-label{display:block;font:700 16px/1.15 "Playfair Display",Georgia,serif;color:#13294c}.story-detail{display:block;font-size:12px;color:#5d6879;margin-top:2px}.story-time{font-size:13px;font-weight:850;color:#5a4773;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .handback{background:linear-gradient(155deg,#fffdf8,#f2eaff);border-width:1.5px}.handback-art-wrap{position:relative}.handback-badge{position:absolute;top:12px;left:12px;padding:6px 10px;border-radius:999px;background:rgba(8,22,52,.78);border:1px solid rgba(255,225,153,.58);color:#fff1c9;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;backdrop-filter:blur(8px)}.handback-summary{padding:15px 17px 16px}.handback-summary-title{font:700 21px/1.15 "Playfair Display",Georgia,serif;color:#102544;margin-bottom:3px}.handback-summary-copy{font-size:13px;color:#526178;line-height:1.45;margin-bottom:8px}.handback .timeline-row{padding:8px 0}.handback .timeline-row img{width:34px;height:34px}
+  .tab .tab-ico img{display:block;width:27px;height:27px;object-fit:contain;filter:grayscale(.25) opacity(.72)}.tab.is-on .tab-ico img{filter:drop-shadow(0 0 8px rgba(255,227,154,.38))}.tab .tab-ico{height:28px;display:grid;place-items:center}
+  .status-bar.is-sleeping{background:radial-gradient(circle at 84% 14%,rgba(255,215,125,.25),transparent 24%),linear-gradient(150deg,#263a75,#151a4a 56%,#0b2144)!important;border-color:rgba(246,215,139,.78)!important;box-shadow:0 18px 48px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.2),0 0 32px rgba(128,104,211,.18)!important}.status-bar.is-sleeping:before{background:radial-gradient(circle at 10% 16%,#fff 0 1px,transparent 2px),radial-gradient(circle at 91% 68%,#f6d98f 0 1.5px,transparent 2.5px)}.status-bar.is-sleeping .status-text{color:#fff}.status-bar.is-sleeping .status-sub{color:#d6e0ef}.status-bar.is-sleeping .status-icon{background:rgba(255,255,255,.12);border:1px solid rgba(246,215,139,.35)}.status-bar.is-sleeping .status-timer{color:#ffe39a!important;text-shadow:0 0 18px rgba(255,227,154,.28)}.status-bar.is-sleeping .care-countdown{background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(242,234,255,.96));border-color:rgba(255,225,153,.72)}.status-bar.is-sleeping>div[style*="background:rgba(255,255,255"]{background:rgba(255,255,255,.92)!important;color:#172b4d!important}
+  .care-tip{display:grid;grid-template-columns:52px 1fr;gap:11px;align-items:start;margin-top:12px;padding:12px 13px;border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(255,246,226,.96));border:1px solid rgba(237,195,109,.42);color:#172b4d;box-shadow:inset 0 1px #fff}.care-tip img{width:50px;height:50px;object-fit:contain;filter:drop-shadow(0 5px 7px rgba(30,36,73,.14))}.care-tip-label{font-size:10px;font-weight:900;color:#745719;text-transform:uppercase;letter-spacing:.13em;margin-bottom:3px}.care-tip-copy{font-size:14px;line-height:1.48;color:#33435a}
+  .pn-label{display:flex;align-items:center;gap:8px}.pn-label img{width:28px;height:28px;object-fit:contain}.call-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:14px;background:linear-gradient(145deg,#fff8dc,#edc36d);box-shadow:inset 0 1px #fff,0 6px 12px rgba(20,64,46,.12)}.call-mark svg{width:23px;height:23px;stroke:#173f32;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}.big-btn.emerg .emergency-mark{display:grid;place-items:center;width:32px;height:32px;border:2px solid #ffd4ca;border-radius:50%;font-size:20px;font-weight:900;line-height:1;color:#ffd4ca}
+  .btn-grid.sleep-actions .note-action{grid-column:auto;min-height:112px!important;flex-direction:column!important;padding:13px 8px!important}.btn-grid.sleep-actions .note-action .label{flex:0 1 auto!important;width:auto!important;text-align:center!important;white-space:normal!important}.btn-grid.sleep-actions .note-action .icon{width:58px!important;height:58px!important}
+  .guide-door.guide-cover{padding:0!important;overflow:hidden;background:linear-gradient(155deg,#fffdf8,#f3ebff)!important}.guide-cover-top{position:relative;display:flex;align-items:center;min-height:132px;padding:20px 148px 18px 19px;background:radial-gradient(circle at 80% 20%,rgba(255,221,145,.28),transparent 28%),linear-gradient(145deg,#293f78,#171b4a 58%,#0d2448);overflow:hidden}.guide-cover-kicker{font-size:10px;font-weight:900;letter-spacing:.15em;color:#f7d98d;text-transform:uppercase;margin-bottom:5px}.guide-cover-title{font:700 25px/1.08 "Playfair Display",Georgia,serif;color:#fff}.guide-cover-sub{font-size:12px;line-height:1.4;color:#d8e1ef;margin-top:7px}.guide-cover-art{position:absolute;right:-10px;bottom:-12px;width:166px;height:145px;object-fit:contain;filter:drop-shadow(0 12px 16px rgba(0,0,0,.3))}.guide-chapters{padding:10px 13px 7px}.guide-chapter{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:10px;padding:9px 5px;border-bottom:1px solid rgba(17,39,71,.09);text-align:left}.guide-chapter:last-child{border-bottom:0}.guide-chapter img{width:46px;height:46px;object-fit:contain;filter:drop-shadow(0 5px 7px rgba(17,39,71,.13))}.guide-chapter strong{display:block;font:700 17px/1.15 "Playfair Display",Georgia,serif;color:#102544}.guide-chapter span{display:block;margin-top:2px;font-size:12px;line-height:1.3;color:#536177}.guide-chapter b{font-size:22px;color:#80659c}.guide-cover .guide-more{margin:2px 14px 13px;padding:10px;border-radius:14px;background:linear-gradient(145deg,#fff7dc,#f4d27f);color:#5f4816;font-size:13px;box-shadow:inset 0 1px rgba(255,255,255,.8)}
+  .guide-hub-hero{position:relative;min-height:188px;margin:4px 0 14px;padding:24px 178px 20px 20px;border-radius:26px;overflow:hidden;background:radial-gradient(circle at 82% 13%,rgba(255,221,146,.28),transparent 25%),linear-gradient(145deg,#2b427d,#181b4b 58%,#0b2144);border:1.5px solid rgba(242,211,130,.7);box-shadow:0 18px 42px rgba(0,0,0,.3)}.guide-hub-hero:before{content:"✦ · ✧";position:absolute;top:13px;right:17px;color:#ffe39a;letter-spacing:5px}.guide-hub-kicker{font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:#f7d98d;margin-bottom:6px}.guide-hub-title{font:700 28px/1.08 "Playfair Display",Georgia,serif;color:#fff}.guide-hub-copy{font-size:13px;line-height:1.45;color:#dce5f2;margin-top:8px}.guide-hub-art{position:absolute;right:-17px;bottom:-10px;width:205px;height:170px;object-fit:contain;filter:drop-shadow(0 13px 19px rgba(0,0,0,.35))}.guide-feature{display:grid;grid-template-columns:70px 1fr;gap:12px;align-items:center}.guide-feature>img{width:68px;height:68px;object-fit:contain;filter:drop-shadow(0 8px 10px rgba(17,39,71,.16))}.guide-feature-label{font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:#775989}.guide-feature-title{font:700 21px/1.15 "Playfair Display",Georgia,serif;color:#102544;margin:2px 0 5px}.guide-feature-copy{font-size:14px;line-height:1.5;color:#40516a;white-space:pre-line}.guide-feature-foot{grid-column:1/-1;padding-top:9px;margin-top:2px;border-top:1px solid rgba(17,39,71,.09);font-size:11px;color:#687388;font-style:italic}.guide-safety{background:linear-gradient(155deg,#f4fff9,#dff5e9)!important}.guide-section-head{display:flex;align-items:center;gap:11px;margin-bottom:5px}.guide-section-head img{width:62px;height:62px;object-fit:contain}.guide-section-head .card-head{font-size:23px;margin:0}.guide-eyebrow{font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#3d7565}.safety-list{display:grid;gap:7px;margin-top:12px}.safety-item{display:grid;grid-template-columns:25px 1fr;gap:8px;align-items:start;padding:9px 10px;border-radius:14px;background:rgba(255,255,255,.72);color:#314c46;font-size:13px;line-height:1.42}.safety-mark{display:grid;place-items:center;width:23px;height:23px;border-radius:50%;background:#88cfac;color:#fff;font-size:13px;font-weight:900}.safety-item.never{background:rgba(255,240,236,.85);color:#69453f}.safety-item.never .safety-mark{background:#e99482}.calm-card{background:linear-gradient(155deg,#fffaf2,#f4eaff)!important}.calm-path{display:grid;gap:8px;margin-top:12px}.calm-step{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;padding:9px 10px;border-radius:15px;background:rgba(255,255,255,.7);font-size:13px;line-height:1.42;color:#40506a}.calm-step b:first-child{display:grid;place-items:center;width:31px;height:31px;border-radius:12px;background:linear-gradient(145deg,#8066bc,#b998e6);color:white;font-size:14px;box-shadow:0 5px 10px rgba(80,60,135,.18)}.calm-step strong{color:#172b4d}.everyday-guide summary{padding:0;overflow:hidden}.everyday-head{padding:17px 17px 12px;background:linear-gradient(145deg,#fffdf8,#f3ebff)}.everyday-head .guide-title{margin:0}.everyday-guide .guide-cards{padding:0 12px 11px;background:linear-gradient(145deg,#fffdf8,#f3ebff)}
+  @media(max-width:370px){.guide-hub-hero{padding-right:145px}.guide-hub-art{width:172px}.guide-hub-title{font-size:25px}}
   </style>
 </head>
 <body>
@@ -569,6 +611,70 @@ function isOpenNightSleep(entries, bedEntry, nowMins) {
   const bedtimeIsEvening = bedMins >= 16 * 60;
   const clockLooksOvernight = bedtimeIsEvening && (nowMins >= bedMins || nowMins < 12 * 60);
   return clockLooksOvernight || nowMins >= 18 * 60 || safeEntryList(entries).some(isSettledNightWakeEntry) || recentlySettledNightWake();
+}
+
+/// Minutes a carer's start time may differ from the parent's record of the same
+/// nap. Two people writing down one nap do not agree to the minute.
+const NAP_MATCH_TOLERANCE = 20;
+/// How long a CARER's un-ended nap may run before it is read as an unclosed log
+/// rather than a sleeping baby. 4h is the bound widget_bridge.dart already uses
+/// for a carried-over open nap, so the portal agrees with the one other place
+/// in the codebase that bounds one.
+const CARER_NAP_CEILING = 240;
+
+/// Is this nap entry still running right now?
+///
+/// ⚠️ A CARER'S OPEN NAP MUST NOT OUTLIVE THE PARENT'S OWN RECORD OF IT.
+///
+/// Owner, 15 Oct 2026: "why is bubbacare saying oliver is still napping?"
+/// The carer pressed Nap at 12:36. Mum logged that same nap in the app as
+/// 12:30 to 13:01 and ended it. The only test for "this nap is over" was an
+/// EXACT match on the start string, and 12:36 is not 12:30, so the carer's
+/// entry stayed open and the portal counted up for six hours while the app
+/// said awake. An exact match was never going to hold: the carer presses the
+/// button when she puts him down, the parent types the time she remembers.
+///
+/// The parent's app is the source of truth, so a nap is over the moment the
+/// parent's own day says it is: a finished sleep that covers it, a later sleep
+/// that replaced it, or a morning wake logged after it (the rule isAsleepNow
+/// and the home widget already use).
+function napIsOngoing(entry, parentEntries, nowMins, fromCarer) {
+  const e = entry;
+  if (!e || e.type !== "nap" || !e.start || e.night) return false;
+  if (e._merged === true) return false;
+  if (e.end && e.end !== e.start) return false; // an end is an end, no grace period
+  const startM = clockMins(e.start);
+  if (startM == null) return false;
+  for (const p of safeEntryList(parentEntries)) {
+    if (!p || p === e) continue;
+    const isSleep = p.type === "nap" || p.type === "sleep";
+    const pStart = clockMins(p.start);
+    if (isSleep && pStart != null) {
+      const pEnd = clockMins(p.end);
+      // A FINISHED sleep of the parent's that covers this start: same nap, ended.
+      if (pEnd != null && pEnd !== pStart && pEnd > pStart &&
+          startM >= pStart - NAP_MATCH_TOLERANCE && startM <= pEnd) return false;
+      // A sleep the parent STARTED after this one: this nap is a nap ago.
+      if (pStart > startM + NAP_MATCH_TOLERANCE) return false;
+    }
+    // A morning wake after it. Night stirs do not end sleep, so they are excluded.
+    if (p.type === "wake" && !p.night) {
+      const wakeM = clockMins(p.time);
+      if (wakeM != null && wakeM > startM) return false;
+    }
+  }
+  // Carer-only ceiling. day_metrics.dart deliberately keeps a PARENT's un-ended
+  // nap running ("coherence wins" — every surface must agree), so capping one
+  // here would recreate the contradiction that comment is about. A carer flag
+  // the app never renders carries no such risk.
+  if (fromCarer && nowMins != null && nowMins - startM > CARER_NAP_CEILING) return false;
+  return true;
+}
+
+/// Wall-clock minutes since midnight, for the paths that have no _nowMins in scope.
+function nowMinsLocal() {
+  const d = new Date();
+  return d.getHours() * 60 + d.getMinutes();
 }
 function resolveCareDayKey(child) {
   const today = todayStrLocal();
@@ -977,11 +1083,9 @@ function _mergeCarerEntries() {
       // parent has since closed was being kept alive here for the rest of the
       // day. If the parent's own entries show that nap closed, it is closed.
       if (e._merged && !e._active) return false;
-      if (e._active && e.type === "nap" && e.start) {
-        const _pc = (((familyContext.today || {}).entries) || []).some(
-          p => p && p.type === "nap" && p.start === e.start && p.end && p.end !== p.start
-        );
-        if (_pc) return false;
+      if (e._active && e.type === "nap" && e.start &&
+          !napIsOngoing(e, ((familyContext.today || {}).entries) || [], nowMinsLocal(), true)) {
+        return false;
       }
       if (e.date) return e.date === _careDay;
       const t = e.loggedAt || e.time || "";
@@ -1008,7 +1112,10 @@ function _mergeCarerEntries() {
       settleDuration: e.settleDuration,
       settleTime: e.settleTime || "",
       _activeNightWake: !!e._activeNightWake,
-      _active: !!e._active
+      _active: !!e._active,
+      // Unambiguous provenance. `_active` alone could not carry it: a pre-Flutter
+      // open nap of the parent's own can still hold that stale interop flag.
+      _carer: true
     }));
     familyContext.today = computeTodayStats(_childrenCache, childId, _todayPending, _careDay) || {};
   } catch(e) { console.warn("merge carer entries failed", e); }
@@ -1057,6 +1164,12 @@ function renderApp() {
         // carries the fine detail, so this says plainly how long is left.
         node.textContent = remaining <= 0 ? "Now" : "in " + fmtSince(remaining);
       });
+      document.querySelectorAll('[data-countdown-ms]').forEach(node => {
+        const targetMs = Number(node.getAttribute('data-countdown-ms'));
+        if (!Number.isFinite(targetMs)) return;
+        const remaining = Math.ceil((targetMs - Date.now()) / 1000);
+        node.textContent = remaining <= 0 ? "Ready now" : "in " + fmtSince(remaining);
+      });
       document.querySelectorAll('[data-ready-from]').forEach(bar => {
         const from = Number(bar.getAttribute('data-ready-from'));
         const span = Number(bar.getAttribute('data-ready-span'));
@@ -1088,6 +1201,9 @@ let _careView = "today";
 function _applyView() {
   document.querySelectorAll(".v").forEach((el) => {
     el.hidden = !el.classList.contains("v-" + _careView);
+  });
+  document.querySelectorAll(".today-only").forEach((el) => {
+    el.hidden = _careView !== "today";
   });
   document.querySelectorAll(".tab").forEach((b) => {
     b.classList.toggle("is-on", b.getAttribute("data-view") === _careView);
@@ -1190,20 +1306,12 @@ function _renderHtml() {
   // The parent's app is the source of truth. A nap it has closed is closed,
   // whatever a leftover flag on a carer log says, and an end time is an end
   // time with no grace period bolted onto it.
-  const _parentClosedStarts = new Set(
-    (_t.entries || [])
-      .filter(e => e && e.type === "nap" && !e.night && e.end && e.end !== e.start)
-      .map(e => e.start)
-  );
-  const _findActiveNap = (arr) => arr.find(e=>{
-    if(e.type!=="nap"||!e.start||e.night) return false;
-    if(e._merged === true) return false;
-    if(_parentClosedStarts.has(e.start)) return false;
-    if(e.end && e.end !== e.start) return false;
-    return true;
-  });
+  const _findActiveNap = (arr, fromCarer) =>
+    safeEntryList(arr).find(e => napIsOngoing(e, _allEntries, _nowMins, fromCarer || e._carer === true));
   // Prefer familyContext entries (parent-side, correct data), fall back to recentEntries
-  const activeNap = _napEndedLocally ? null : (_findActiveNap(_t.entries || []) || _findActiveNap(recentEntries));
+  const activeNap = _napEndedLocally
+    ? null
+    : (_findActiveNap(_allEntries, false) || _findActiveNap(recentEntries, true));
   const _isNightSleep = isOpenNightSleep(_allEntries, _bedEntry, _nowMins);
   const _bedtimeMins = 19*60; // 7pm, typical bedtime cutoff
   const _nightCutoff = 20*60; // 8pm, after this, baby is winding down; no more feed/nap suggestions
@@ -1305,7 +1413,7 @@ function _renderHtml() {
     ${_allergyNotes.map(n=>`<div>${escapeHtml(n.text||"")}</div>`).join("")}
   </div>` : "";
   const _pinnedHtml = _otherPinned.length ? `<div class="parent-note" style="background:rgba(232,87,74,0.06);border-color:rgba(232,87,74,0.25)"><div class="pn-label" style="color:#c04040">⚠️ Important</div>${_otherPinned.map(n=>`<div style="margin-bottom:4px">${escapeHtml(n.text||"")}</div>`).join("")}</div>` : "";
-  const _notesHtml = familyContext.carerNotes ? `<div class="parent-note"><div class="pn-label">📋 Notes from parents</div>${escapeHtml(familyContext.carerNotes)}</div>` : "";
+  const _notesHtml = familyContext.carerNotes ? `<div class="parent-note"><div class="pn-label"><img src="./care-assets/v2/note-ui.webp" alt="">Notes from parents</div>${escapeHtml(familyContext.carerNotes)}</div>` : "";
   // Note: carerComfort is already rendered in the Soothing Playbook card above, no duplicate here.
   const _comfortHtml = "";
   // Contacts → tel: buttons
@@ -1341,26 +1449,21 @@ function _renderHtml() {
   $app.innerHTML = `
     <div class="header">
       <div class="header-left">
-        ${/* ⚠️ The photo also sits in the hero card immediately below, so it
-             was on the screen twice, forty pixels apart. The hero is where the
-             reference puts it and where it is big enough to be a face rather
-             than a bullet. */""}
-        ${/* ⚠️ The concept's header is the wordmark and a moon, nothing else.
-             The baby's name is the hero's job, and it was being said twice,
-             sixty pixels apart. */""}
-        <div hidden>
-          <div class="header-name">${escapeHtml(_name)}</div>
-          <div class="header-age">${_ageStr||"Baby"}</div>
-        </div>
+        ${_babyPhotoSrc ? `<img class="header-photo" src="${escapeHtml(_babyPhotoSrc)}" alt="${escapeHtml(_name)}" data-hide-on-error="baby-photo"/>` : `<div class="header-photo header-photo-fallback">☾</div>`}
+        ${/* ⚠️ The name and age used to sit here, sixty pixels above a hero
+             that says "Today with <name>" in 27px type and then "You're caring
+             for <name>." underneath it. Three times on one screen is the
+             "repeated stuff everywhere" report. The photo is identity enough
+             at this size; the hero says who. */""}
       </div>
       <div style="text-align:right">
         <div class="logo">OBubba</div>
         <div class="sub">Care</div>
       </div>
     </div>
-    <div class="caring-banner">
+    <div class="caring-banner today-only has-care-art${_babyPhotoSrc ? " has-photo" : ""}">
+      <img class="care-banner-art" src="./care-assets/v2/care-scene.webp" alt=""/>
       <div class="hero-row">
-        ${_babyPhotoSrc ? `<img class="hero-photo" src="${escapeHtml(_babyPhotoSrc)}" alt="${escapeHtml(_name)}" data-hide-on-error="baby-photo"/>` : ""}
         <div style="min-width:0">
           <div class="title">Today with ${escapeHtml(_name)}</div>
           ${/* ⚠️ This was "Everything you need for a calm day together", which
@@ -1383,18 +1486,12 @@ function _renderHtml() {
       const entries = _t.entries || [];
       const nowM = _nowMins;
       const bedEntry = entries.find(e=>e.type==="sleep"&&!e.night);
-      // Active nap: explicit _active flag (authoritative), missing/equal end,
-      // OR end within last 12 min. Carer page updates every few minutes over network,
-      // so generous window prevents "just woke up" flicker while baby is still sleeping.
-      // Same rule as _findActiveNap above: ended is ended, and a stale carer
-      // flag never outranks the parent's own closed nap.
-      const activeNap = _napEndedLocally ? null : entries.find(e=>{
-        if(e.type!=="nap"||!e.start||e.night) return false;
-        if(e._merged === true) return false;
-        if(_parentClosedStarts.has(e.start)) return false;
-        if(e.end && e.end !== e.start) return false;
-        return true;
-      });
+      // One rule, shared with _findActiveNap above and with the merge filter:
+      // the parent's app decides whether the baby is asleep, and a carer's flag
+      // never outranks it. See napIsOngoing.
+      const activeNap = _napEndedLocally
+        ? null
+        : safeEntryList(entries).find(e => napIsOngoing(e, entries, nowM, e._carer === true));
       const _allNaps = [...(_t.naps||[]), ...recentEntries.filter(e=>e.type==="nap")];
       const lastCompletedNap = _allNaps.filter(n=>n.end&&n.start!==n.end).sort((a,b)=>napEndSortMins(a)-napEndSortMins(b)).pop();
       const wakeEntry = entries.find(e=>e.type==="wake"&&!e.night);
@@ -1522,10 +1619,12 @@ function _renderHtml() {
       // Absolute times mean the marker ticks client-side without refetching, so
       // the bar moves in the carer's hand exactly as it does in the parent's.
       let _readyHtml = "";
+      let _hasLiveReady = false;
       const _rd = familyContext.prediction || {};
       if (!activeNap && !_isNightSleep &&
           Number.isFinite(_rd.awakeSinceMs) && Number.isFinite(_rd.warnEndMs) &&
           Number.isFinite(_rd.windowStartMs) && Number.isFinite(_rd.windowEndMs)) {
+        _hasLiveReady = true;
         const _a = _rd.awakeSinceMs;
         // The bar runs from waking to a little past the amber edge, so the
         // coral zone is visible rather than falling off the end.
@@ -1542,11 +1641,17 @@ function _renderHtml() {
           const d = new Date(ms);
           return fmt12(String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0"));
         };
+        const _targetMs = Number(_rd.targetMs);
+        const _targetText = Number.isFinite(_targetMs)
+          ? (_targetMs <= Date.now() ? "Ready now" : "in " + fmtSince(Math.ceil((_targetMs - Date.now()) / 1000)))
+          : "";
+        const _targetLabel = String(_rd.type || "") === "bedtime" ? "Bedtime readiness" : "Next nap readiness";
         _readyHtml = `<div class="ready">
           <div class="ready-head">
             <div class="ready-label">${escapeHtml(String(_rd.label || _stateLabel || "Readiness"))}</div>
             <div class="ready-detail">${escapeHtml(String(_rd.display || ""))}</div>
           </div>
+          ${Number.isFinite(_targetMs) ? `<div class="ready-target"><span>${escapeHtml(_targetLabel)}</span><strong data-countdown-ms="${_targetMs}">${escapeHtml(_targetText)}</strong></div>` : ""}
           <div class="ready-bar" data-ready-from="${_a}" data-ready-span="${Math.round(_span)}">
             <div class="ready-zone green" style="left:${_g0}%;width:${Math.max(0,_g1-_g0)}%"></div>
             <div class="ready-zone amber" style="left:${_g1}%;width:${Math.max(0,_w1-_g1)}%"></div>
@@ -1560,6 +1665,16 @@ function _renderHtml() {
           ${_rd.provenance ? `<div class="ready-note">${escapeHtml(String(_rd.provenance))}</div>` : ""}
         </div>`;
       }
+      if (!activeNap && !_isNightSleep && !_hasLiveReady) {
+        _readyHtml = `<div class="ready awaiting">
+          <div class="ready-head">
+            <div class="ready-label">Sleep readiness</div>
+            <div class="ready-detail">Waiting to sync</div>
+          </div>
+          <div class="ready-bar" aria-hidden="true"></div>
+          <div class="ready-awaiting-copy">Open OBubba on the parent's phone to bring today's live readiness window into BubbaCare.</div>
+        </div>`;
+      }
 
       // Event countdown — parent app's prediction only (no fallback calculations)
       let _countdownHtml = "";
@@ -1571,15 +1686,16 @@ function _renderHtml() {
         const _nappyTime = _t.lastPoop && _t.lastPoop.time ? _t.lastPoop.time : "";
         if (_nextCareTime || _feedTime || _nappyTime) {
           _countdownHtml = `<div class="care-countdown">
-            <div class="care-countdown-title">Live care countdown</div>
-            <div class="care-countdown-grid${_readyHtml ? " two" : ""}">
+            <div class="care-countdown-title">${escapeHtml(_name)}'s care compass</div>
+            <img class="care-compass-art" src="./care-assets/care-compass.webp" alt="Sleep, feed and nappy care compass"/>
+            <div class="care-countdown-grid${_hasLiveReady ? " two" : ""}">
               ${/* ⚠️ The readiness meter directly above already shows the nap,
                    with zones and a live marker, so this tile repeated it in a
                    worse form: "Not yet · green in 25m" and "in 22m · Next nap"
                    are the same sentence twice, three centimetres apart, and
                    they tick out of step because one rounds and one does not.
                    The tile stays only when there is no meter to replace it. */""}
-              ${_nextCareTime && !_readyHtml ? `<div class="care-countdown-item primary"><img src="./care-assets/sleep.webp" alt=""><div class="care-countdown-value care-countdown-clock" data-countdown-to="${escapeHtml(_nextCareTime)}">${escapeHtml(_nextCareTime)}</div><small>${escapeHtml(_nextCareLabel)}</small></div>` : ""}
+              ${_nextCareTime && !_hasLiveReady ? `<div class="care-countdown-item primary"><img src="./care-assets/sleep.webp" alt=""><div class="care-countdown-value care-countdown-clock" data-countdown-to="${escapeHtml(_nextCareTime)}">${escapeHtml(_nextCareTime)}</div><small>${escapeHtml(_nextCareLabel)}</small></div>` : ""}
               ${_feedTime ? `<div class="care-countdown-item"><img src="./care-assets/feed.webp" alt=""><div class="care-countdown-value care-countdown-clock" data-countdown-to="${escapeHtml(_feedTime)}">${_feedOverdue ? "Now" : escapeHtml(_feedTime)}</div><small>${_feedOverdue ? "Feed due" : "Next feed"}</small></div>` : ""}
               ${_nappyTime ? `<div class="care-countdown-item"><img src="./care-assets/nappy.webp" alt=""><div class="care-countdown-value care-countdown-clock" data-elapsed-from="${escapeHtml(_nappyTime)}">${escapeHtml(fmtSince((_lastNappyAgo || 0) * 60))}</div><small>Since change</small></div>` : ""}
             </div>
@@ -1587,9 +1703,25 @@ function _renderHtml() {
         }
       }
 
-      return `<div class="status-bar" style="background:${statusBg}">
+      // Keep the compass visible while sleeping; this is the portal's most
+      // commonly watched state and the running timer remains the hero.
+      if (activeNap || _isNightSleep) {
+        const _sleepPred = familyContext.prediction || {};
+        const _sleepFeed = _sleepPred.nextFeedEstimate || _nextFeedStr || "";
+        const _sleepNappy = _t.lastPoop && _t.lastPoop.time ? _t.lastPoop.time : "";
+        _countdownHtml = `<div class="care-countdown">
+          <div class="care-countdown-title">${escapeHtml(_name)}'s care compass</div>
+          <img class="care-compass-art" src="./care-assets/care-compass.webp" alt="Sleep, feed and nappy care compass"/>
+          <div class="care-countdown-grid two">
+            <div class="care-countdown-item"><img src="./care-assets/v2/feed-ui.webp" alt=""><div class="care-countdown-value care-countdown-clock" ${_sleepFeed ? `data-countdown-to="${escapeHtml(_sleepFeed)}"` : ""}>${_sleepFeed ? escapeHtml(_sleepFeed) : "After wake"}</div><small>Next feed</small></div>
+            <div class="care-countdown-item"><img src="./care-assets/v2/nappy-ui.webp" alt=""><div class="care-countdown-value care-countdown-clock" ${_sleepNappy ? `data-elapsed-from="${escapeHtml(_sleepNappy)}"` : ""}>${_sleepNappy ? escapeHtml(fmtSince((_lastNappyAgo || 0) * 60)) : "As needed"}</div><small>${_sleepNappy ? "Since change" : "Nappy"}</small></div>
+          </div>
+        </div>`;
+      }
+
+      return `<div class="status-bar${activeNap || _isNightSleep ? " is-sleeping" : ""}" style="background:${statusBg}">
         <div class="status-row">
-          <span class="status-icon">${statusIcon}</span>
+          <span class="status-icon"><img class="status-art-icon" src="${activeNap || _isNightSleep ? "./care-assets/v2/sleep-ui.webp" : (_lastFeedAgo !== null && _lastFeedAgo < 30 ? "./care-assets/v2/feed-ui.webp" : "./care-assets/care-compass.webp")}" alt=""/></span>
           <div style="flex:1">
             <div class="status-text">${escapeHtml(statusText)}</div>
             <div class="status-sub">Live · updates automatically</div>
@@ -1598,18 +1730,14 @@ function _renderHtml() {
         ${_timerHtml}
         ${_readyHtml}
         ${_countdownHtml}
-        ${nextAction?`<div style="padding:10px 12px;background:rgba(255,255,255,0.5);border-radius:12px;font-size:13px;color:#4A3B35;line-height:1.6;margin-top:6px">
-          <div style="font-size:11px;font-weight:800;color:#8A4A60;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px">What to do</div>
-          ${escapeHtml(nextAction)}
+        ${nextAction?`<div class="care-tip">
+          <img src="./care-assets/v2/${activeNap || _isNightSleep ? "sleep-ui.webp" : "care-scene.webp"}" alt="">
+          <div><div class="care-tip-label">${activeNap || _isNightSleep ? "While they sleep" : "A gentle next step"}</div><div class="care-tip-copy">${escapeHtml(nextAction)}</div></div>
         </div>`:""}
       </div>`;
     })()}
 
 
-
-    ${/* The concept puts the glance above the buttons: you read where the
-         baby is up to, then you act. */""}
-    ${_babyStatsHtml}
 
     <div class="card" style="padding:14px">
       ${_nightWakePausedAt && _isNightSleep ? `
@@ -1632,7 +1760,7 @@ function _renderHtml() {
           <span class="label">Morning Wake</span>
         </button>
       </div>
-      ` : `<div class="btn-grid">
+      ` : `<div class="btn-grid${activeNap ? " sleep-actions" : ""}">
         <button class="action-btn" data-action="feed">
           <span class="icon"><img src="./care-assets/feed.webp" alt=""/></span>
           <span class="label">Feed</span>
@@ -1667,12 +1795,7 @@ function _renderHtml() {
           <span class="icon"><img src="./care-assets/sleep.webp" alt=""/></span>
           <span class="label">Morning Wake</span>
         </button>
-        ` : activeNap ? `
-        <button class="action-btn" data-action="nappy">
-          <span class="icon"><img src="./care-assets/nappy.webp" alt=""/></span>
-          <span class="label">Sleeping...</span>
-        </button>
-        ` : _bedEntry ? `
+        ` : activeNap ? `` : _bedEntry ? `
         <button class="action-btn" data-action="wake">
           <span class="icon"><img src="./care-assets/sleep.webp" alt=""/></span>
           <span class="label">Baby Woke</span>
@@ -1727,25 +1850,32 @@ function _renderHtml() {
     ${/* The concept has the little guide ON THE HOME: three named cards that
          tell a carer what is in there. The reading itself lives on the Guide
          surface, so this is the door rather than the room. */""}
-    <button type="button" class="card guide-door" data-view="guide">
-      <div class="card-head">${escapeHtml(_name)}'s little guide</div>
-      <div class="guide-cards">
-        <div class="guide-card"><img src="./care-assets/v2/feed-ui.webp" alt=""/><div><strong>Milk</strong><span>How much, how often</span></div></div>
-        <div class="guide-card"><img src="./care-assets/v2/nappy-ui.webp" alt=""/><div><strong>Nappies</strong><span>What to expect</span></div></div>
-        <div class="guide-card"><img src="./care-assets/safe-sleep.webp" alt=""/><div><strong>Safe sleep</strong><span>A few gentle reminders</span></div></div>
+    <button type="button" class="card guide-door guide-cover" data-view="guide">
+      <div class="guide-cover-top">
+        <div>
+          <div class="guide-cover-kicker">Made by the people who know them best</div>
+          <div class="guide-cover-title">${escapeHtml(_name)}'s little guide</div>
+          <div class="guide-cover-sub">Quick, reassuring answers whenever you need them.</div>
+        </div>
+        <img class="guide-cover-art" src="./care-assets/v2/care-scene.webp" alt=""/>
       </div>
-      <div class="guide-more">Tap to read it all ›</div>
+      <div class="guide-chapters">
+        <div class="guide-chapter"><img src="./care-assets/v2/feed-ui.webp" alt=""/><div><strong>Milk &amp; feeds</strong><span>Usual amounts, timing and what helps</span></div><b>›</b></div>
+        <div class="guide-chapter"><img src="./care-assets/v2/nappy-ui.webp" alt=""/><div><strong>Nappies</strong><span>What is normal and what to notice</span></div><b>›</b></div>
+        <div class="guide-chapter"><img src="./care-assets/safe-sleep.webp" alt=""/><div><strong>Safe sleep</strong><span>Clear reminders for naps and bedtime</span></div><b>›</b></div>
+      </div>
+      <div class="guide-more">Open ${escapeHtml(_name)}'s guide</div>
     </button>
 
     ${(() => {
       const first = (familyContext.emergencyContacts || [])
         .filter(c => c && c.phone && String(c.phone).trim())[0];
       return `
-      ${first ? `<a class="big-btn call" href="tel:${escapeHtml(String(first.phone).replace(/[^0-9+]/g,""))}">📞 Call ${escapeHtml(first.name || "their parent")}</a>` : ""}
+      ${first ? `<a class="big-btn call" href="tel:${escapeHtml(String(first.phone).replace(/[^0-9+]/g,""))}"><span class="call-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 3.5 4.8 4.9c-.8.5-1.1 1.4-.8 2.3 2 6.2 6.7 10.9 12.9 12.9.9.3 1.8 0 2.3-.8l1.4-2.4-4.4-3-1.6 2c-3-1.3-5.4-3.7-6.7-6.7l2-1.5-2.7-4.2Z"/><path d="m17.2 3.2.5 1.2 1.2.5-1.2.5-.5 1.2-.5-1.2-1.2-.5 1.2-.5.5-1.2Z"/></svg></span>Call ${escapeHtml(first.name || "their parent")}</a>` : ""}
       ${/* ⚠️ This sat the same size and weight as "Call Mum" but only scrolls
            the page, so two very different things competed for the same tap.
            It reads as the quiet link it is. */""}
-      <a class="big-btn emerg" href="#emergency">🛟 Help &amp; emergency</a>`;
+      <a class="big-btn emerg" href="#emergency"><span class="emergency-mark" aria-hidden="true">!</span>Help &amp; emergency</a>`;
     })()}
 
     ${/* ⚠️ SEVENTEEN BLOCKS AND SIX THOUSAND PIXELS OF SCROLL. The concept is
@@ -1759,11 +1889,17 @@ function _renderHtml() {
          A tab bar, the way an app does it. */""}
     </section>
     <section class="v v-guide" hidden>
+    <div class="guide-hub-hero">
+      <div class="guide-hub-kicker">Calm answers, close at hand</div>
+      <div class="guide-hub-title">Caring for ${escapeHtml(_name)}</div>
+      <div class="guide-hub-copy">What comforts them, what keeps them safe, and what to do when you are unsure.</div>
+      <img class="guide-hub-art" src="./care-assets/v2/care-scene.webp" alt=""/>
+    </div>
     ${/* ── SOOTHING PLAYBOOK ── */""}
-    ${familyContext.carerComfort ? `<div class="card" style="border-color:rgba(139,126,200,0.3)">
-      <div class="card-head">${escapeHtml(_name)}'s Soothing Playbook</div>
-      <div style="font-size:13px;color:#4A3B35;line-height:1.7;white-space:pre-line">${escapeHtml(familyContext.carerComfort)}</div>
-      <div style="font-size:10px;color:#6E645C;margin-top:8px;font-style:italic">Written by ${escapeHtml(_name)}'s parents, these are what work specifically for ${escapeHtml(_name)}.</div>
+    ${familyContext.carerComfort ? `<div class="card guide-feature">
+      <img src="./care-assets/v2/note-ui.webp" alt=""/>
+      <div><div class="guide-feature-label">Their familiar comforts</div><div class="guide-feature-title">${escapeHtml(_name)}'s soothing recipe</div><div class="guide-feature-copy">${escapeHtml(familyContext.carerComfort)}</div></div>
+      <div class="guide-feature-foot">Written by ${escapeHtml(_name)}'s parents—personal guidance, not generic advice.</div>
     </div>` : `<div class="card" style="border-color:rgba(212,168,85,0.3)">
       <div class="card-head">Soothing Playbook</div>
       <div style="font-size:13px;color:#6A584E;line-height:1.6">Parents haven't added soothing techniques yet. If ${escapeHtml(_name)} is upset, try: gentle rocking, shushing, offering a dummy, or a walk in the pram.</div>
@@ -1775,36 +1911,34 @@ function _renderHtml() {
          two are material you need while it is happening, and a babysitter who
          has never opened the guide has never read either of them. */""}
     <!-- ═══ SAFE SLEEP ESSENTIALS ═══ -->
-    <div class="card" style="background:#F0FFF4;border:1px solid #D0E8D8">
+    <div class="card guide-safety">
       <!-- safe-sleep.webp was drawn for this card and shipped unreferenced, so
            the one card in the portal that exists for a baby's safety was the
            one wearing a stock emoji while 32KB of artwork for it sat unused. -->
-      <div style="display:flex;align-items:center;gap:9px;margin-bottom:6px">
-        <img src="./care-assets/safe-sleep.webp" alt="" style="width:34px;height:34px;object-fit:contain;flex:none"/>
-        <div class="card-head" style="margin-bottom:0">Safe Sleep Essentials</div>
+      <div class="guide-section-head">
+        <img src="./care-assets/safe-sleep.webp" alt=""/>
+        <div><div class="guide-eyebrow">The essentials</div><div class="card-head">Safe sleep, made simple</div></div>
       </div>
-      <div style="font-size:14px;font-style:italic;color:#42786A;margin-bottom:10px">Based on The Lullaby Trust safer sleep guidance</div>
-      <div style="font-size:13px;color:#5B4F5F;line-height:1.8">
-        ✅ Always on their <strong>back</strong>, for every sleep, day and night<br>
-        ✅ <strong>Clear cot</strong>, firm, flat mattress only. No pillows, toys, bumpers, or loose bedding<br>
-        ✅ <strong>Same room as you</strong>, stay in the room while ${escapeHtml(_name)} sleeps<br>
-        ✅ <strong>Room temperature 16–20°C</strong>, feel chest or back of neck to check<br>
-        ✅ <strong>Don't cover their head</strong>, no hats indoors<br>
-        ✅ <strong>Feet to foot</strong>, feet at the bottom of the cot<br>
-        ❌ <strong>Never</strong> on a sofa or armchair, even if you're holding them<br>
-        ❌ <strong>Never</strong> in a car seat for prolonged sleep, only for travel
+      <div style="font-size:12px;color:#477568">Based on The Lullaby Trust safer sleep guidance</div>
+      <div class="safety-list">
+        <div class="safety-item"><span class="safety-mark">✓</span><span>Always place them on their <strong>back</strong>, day and night.</span></div>
+        <div class="safety-item"><span class="safety-mark">✓</span><span>Use a <strong>clear cot</strong> with a firm, flat mattress—nothing loose inside.</span></div>
+        <div class="safety-item"><span class="safety-mark">✓</span><span>Stay in the <strong>same room</strong> and keep it around <strong>16–20°C</strong>.</span></div>
+        <div class="safety-item"><span class="safety-mark">✓</span><span>Keep their head uncovered and place their feet near the foot of the cot.</span></div>
+        <div class="safety-item never"><span class="safety-mark">!</span><span><strong>Never sleep on a sofa or armchair</strong>, even while holding them.</span></div>
+        <div class="safety-item never"><span class="safety-mark">!</span><span>Car seats are for travel, not prolonged sleep.</span></div>
       </div>
     </div>
 
     <!-- ═══ IF BABY CRIES ═══ -->
-    <div class="card" style="background:#FFF8F2;border:1px solid #F0D0C8">
-      <div class="card-head">If ${escapeHtml(_name)} Cries</div>
-      <div style="font-size:13px;color:#5B4F5F;line-height:1.8">
-        1. <strong>Check basics</strong>, hungry? nappy? too hot/cold?<br>
-        2. <strong>Tired?</strong>, check wake window above. Dim lights, quiet voice<br>
-        3. <strong>Wind</strong>, try burping over shoulder or gentle bicycle legs<br>
-        4. <strong>Comfort</strong>, gentle rocking, skin-to-skin, white noise<br>
-        5. <strong>Still unsettled?</strong>, contact parent. It's OK to put ${escapeHtml(_name)} down safely and take a breath
+    <div class="card calm-card">
+      <div class="guide-section-head"><img src="./care-assets/care-compass.webp" alt=""/><div><div class="guide-eyebrow">A calm path through</div><div class="card-head">When ${escapeHtml(_name)} cries</div></div></div>
+      <div class="calm-path">
+        <div class="calm-step"><b>1</b><span><strong>Check the basics</strong><br>Hungry, wet nappy, too warm or too cold?</span></div>
+        <div class="calm-step"><b>2</b><span><strong>Could they be tired?</strong><br>Dim the lights and use a quiet voice.</span></div>
+        <div class="calm-step"><b>3</b><span><strong>Try wind relief</strong><br>Burp over your shoulder or gently bicycle their legs.</span></div>
+        <div class="calm-step"><b>4</b><span><strong>Offer familiar comfort</strong><br>Rocking, cuddles and white noise can help.</span></div>
+        <div class="calm-step"><b>5</b><span><strong>Still unsettled?</strong><br>Call the parent. It is okay to put ${escapeHtml(_name)} down safely and take a breath.</span></div>
       </div>
     </div>
 
@@ -1814,9 +1948,11 @@ function _renderHtml() {
          which tells a carer nothing about what is behind it, so most will never
          open it. The concept shows three named cards instead: what is in there,
          in the carer's language, as the thing you tap. */""}
-    <details class="guide" style="margin-bottom:14px">
+    <details class="guide everyday-guide" style="margin-bottom:14px">
       <summary>
-        <div class="guide-title">${escapeHtml(_name)}'s little guide</div>
+        <div class="everyday-head"><div class="guide-cover-kicker" style="color:#705886">Useful throughout the day</div><div class="guide-title">Everyday care details</div></div>
+        <div class="guide-cards">
+          <div class="guide-card"><img src="./care-assets/v2/feed-ui.webp" alt=""/><div><strong>Feeds</strong><span>Amounts and timing</span></div></div>
           <div class="guide-card"><img src="./care-assets/v2/nappy-ui.webp" alt=""/><div><strong>Nappies</strong><span>What to expect</span></div></div>
           <div class="guide-card"><img src="./care-assets/v2/sleep-ui.webp" alt=""/><div><strong>Routine</strong><span>Naps and wake windows</span></div></div>
         </div>
@@ -1919,9 +2055,10 @@ function _renderHtml() {
     </details>
     </section>
     <section class="v v-today">
-    <div class="card">
-      <div class="card-head">Today so far</div>
-      <div id="recent-list"><div style="font-size:13px;color:#6E645C;text-align:center;padding:8px">Nothing logged yet</div></div>
+    <div class="card story-card">
+      <div class="story-kicker">A little care story</div>
+      <div class="story-title">Care moments</div>
+      <div id="recent-list"><div class="story-empty"><img src="./care-assets/v2/note-ui.webp" alt=""/>Nothing logged yet. The day’s story will appear here.</div></div>
     </div>
 
     ${(() => {
@@ -1959,10 +2096,17 @@ function _renderHtml() {
       if (!_rows || !_carerHasLogged) return "";
       return `
       <div class="handback">
-        <img class="handback-art" src="./care-assets/v2/care-scene.webp" alt=""/>
-        <div class="handback-cap">
-          <h3>Ready to hand back?</h3>
-          <p>Everything above is already with ${escapeHtml(_name)}'s parent. Your access ends when they finish the session.</p>
+        <div class="handback-art-wrap">
+          <img class="handback-art" src="./care-assets/v2/care-scene.webp" alt="A magical calm care scene"/>
+          <div class="handback-badge">Care safely shared</div>
+          <div class="handback-cap">
+            <h3>${escapeHtml(_name)}'s care, beautifully remembered</h3>
+            <p>A warm, clear record for the people who know them best.</p>
+          </div>
+        </div>
+        <div class="handback-summary">
+          <div class="handback-summary-title">Ready whenever it’s time to hand back</div>
+          <div class="handback-summary-copy">Feeds, sleeps, nappies and notes sync as you add them. There is nothing extra to send.</div>
         </div>
       </div>`;
     })()}
@@ -1970,10 +2114,10 @@ function _renderHtml() {
 
     <nav class="tabbar" role="tablist">
       <button type="button" class="tab is-on" data-view="today">
-        <span class="tab-ico">☾</span><span>Today</span>
+        <span class="tab-ico"><img src="./care-assets/care-compass.webp" alt=""/></span><span>Today</span>
       </button>
       <button type="button" class="tab" data-view="guide">
-        <span class="tab-ico">📖</span><span>Guide</span>
+        <span class="tab-ico"><img src="./care-assets/safe-sleep.webp" alt=""/></span><span>Guide</span>
       </button>
     </nav>
     `;
@@ -2067,27 +2211,38 @@ function updateRecentList() {
   const list = document.getElementById("recent-list");
   if (!list) return;
   if (recentEntries.length === 0) {
-    list.innerHTML = `<div style="font-size:13px;color:#6E645C;text-align:center;padding:8px">Nothing logged yet</div>`;
+    list.innerHTML = `<div class="story-empty"><img src="./care-assets/v2/note-ui.webp" alt=""/>Nothing logged yet. The day’s story will appear here.</div>`;
     return;
   }
-  const icons = { feed: "🍼", poop: "💩", nap: "😴", wake: "☀️" };
+  const icons = {
+    feed: "./care-assets/v2/feed-ui.webp",
+    poop: "./care-assets/v2/nappy-ui.webp",
+    nap: "./care-assets/v2/sleep-ui.webp",
+    wake: "./care-assets/v2/sleep-ui.webp"
+  };
   const labels = { feed: "Feed", poop: "Nappy", nap: "Nap", wake: "Wake" };
-  list.innerHTML = recentEntries.map(e => {
-    const t = e.time || (e.loggedAt || "").slice(11,16);
+  const storyEntries = [...recentEntries].sort((a,b) => {
+    const av = String(a.time || a.start || (a.loggedAt || "").slice(11,16));
+    const bv = String(b.time || b.start || (b.loggedAt || "").slice(11,16));
+    return bv.localeCompare(av);
+  });
+  list.innerHTML = `<div class="story-list">` + storyEntries.map(e => {
     const type = String(e.type || "");
+    const t = (type === "nap" ? e.start : e.time) || (e.loggedAt || "").slice(11,16);
     const safeLabel = escapeHtml(labels[type] || type || "Entry");
     const amount = Number(e.amount);
     const detail = type === "feed" && Number.isFinite(amount) && amount > 0
-      ? ` · ${amount}ml`
+      ? `${amount}ml taken`
       : type === "poop" && e.poopType
-        ? ` · ${escapeHtml(e.poopType)}`
-        : "";
-    return `<div class="entry">
-      <span class="emoji">${icons[type]||"📝"}</span>
-      <span class="label">${safeLabel}${detail}</span>
-      <span class="time">${fmt12(t)}</span>
+        ? `${escapeHtml(e.poopType)} nappy`
+        : type === "nap" && e.end && e.end !== e.start ? `Rested until ${escapeHtml(fmt12(e.end))}`
+        : type === "nap" ? "Nap in progress" : "Saved for the family";
+    return `<div class="story-entry">
+      <span class="story-node"><img src="${icons[type] || "./care-assets/v2/note-ui.webp"}" alt=""/></span>
+      <span><span class="story-label">${safeLabel}</span><span class="story-detail">${detail}</span></span>
+      <span class="story-time">${fmt12(t)}</span>
     </div>`;
-  }).join("");
+  }).join("") + `</div>`;
 }
 </script>
 </body>
