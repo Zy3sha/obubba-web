@@ -279,7 +279,7 @@
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-import { getFirestore, collection, addDoc, query, orderBy, limit, onSnapshot, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { getFirestore, collection, addDoc, deleteDoc, query, orderBy, limit, onSnapshot, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCdHzmheQRbtzP_JI1FuWcZLeW8yVja5-0",
@@ -711,13 +711,40 @@ function subscribeFamilyContext() {
   } catch (e) { console.warn("subscribeFamilyContext error", e); }
 }
 
-function showToast(msg) {
+function showToast(msg, undo) {
   const t = document.createElement("div");
   t.className = "toast";
-  t.textContent = msg;
+  const label = document.createElement("span");
+  label.textContent = msg;
+  t.appendChild(label);
+  // ⚠️ THERE WAS NO WAY BACK. A carer who tapped Feed and typed 120 instead of
+  // 20 had already sent it to the parent's phone, with no correction except a
+  // phone call. The deployed rules allow a carer to delete their own entry
+  // (carer_logs/{code}/entries — "allow delete: if signedIn() && backupCodeId"),
+  // so this is a real delete rather than a flag nobody reads.
+  const life = undo ? 8000 : 2200;
+  if (undo) {
+    const b = document.createElement("button");
+    b.className = "toast-undo";
+    b.type = "button";
+    b.textContent = "Undo";
+    b.addEventListener("click", async () => {
+      b.disabled = true;
+      try {
+        await undo();
+        label.textContent = "Removed";
+      } catch (e) {
+        console.warn("undo failed", e);
+        label.textContent = "Couldn't undo — tell the parent";
+      }
+      b.remove();
+      setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 300); }, 1800);
+    });
+    t.appendChild(b);
+  }
   document.body.appendChild(t);
   setTimeout(() => t.classList.add("show"), 10);
-  setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 300); }, 2200);
+  setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 300); }, life);
 }
 
 async function logEntry(entry) {
@@ -734,8 +761,11 @@ async function logEntry(entry) {
     else if (entry.start) _doc.start = entry.start;
     // Remove any undefined fields — Firestore rejects them
     Object.keys(_doc).forEach(k => { if (_doc[k] === undefined) delete _doc[k]; });
-    await addDoc(colRef, _doc);
-    showToast("✓ Saved · parents will see this");
+    const _ref = await addDoc(colRef, _doc);
+    // Eight seconds: long enough to spot a wrong number, short enough that the
+    // parent has almost certainly not acted on it. It does NOT claim they have
+    // not seen it, because it cannot know that.
+    showToast("Saved · their parent can see it", () => deleteDoc(_ref));
     closeSheet();
   } catch (e) {
     console.error("Log failed", e);
