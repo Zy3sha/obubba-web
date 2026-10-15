@@ -16,31 +16,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet"/>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-  html, body { background: #FFFCF9; font-family: -apple-system, "SF Pro Display", system-ui, sans-serif; color: #4A3B35; min-height: 100vh; }
+  html, body { background: #FFFCF9; font-family: -apple-system, "SF Pro Display", system-ui, sans-serif; color: #F4EFE6; min-height: 100vh; }
   body { background: radial-gradient(ellipse 80% 50% at 15% 8%,rgba(245,218,210,0.35),transparent 60%), radial-gradient(ellipse 60% 45% at 85% 12%,rgba(240,210,200,0.25),transparent 60%), linear-gradient(170deg,#FFFCF9 0%,#F8F0E8 50%,#F5E8E0 100%); background-attachment: fixed; padding: max(16px, env(safe-area-inset-top, 16px)) 16px max(16px, env(safe-area-inset-bottom, 16px)); max-width: 560px; margin: 0 auto; }
   .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; padding: 0 4px; }
   .header-left { display: flex; align-items: center; gap: 10px; }
   .header-photo { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,0.8); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-  .header-name { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 17px; color: #4A3B35; }
-  .header-age { font-size: 11px; color: #A89A90; margin-top: 1px; }
-  .logo { font-family: "Parisienne", cursive; font-weight: 400; font-size: 28px; color: #4A3B35; letter-spacing: -0.01em; }
-  .sub { font-size: 11px; color: #A89A90; margin-top: 1px; }
+  .header-name { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 17px; color: #F4EFE6; }
+  .header-age { font-size: 11px; color: #ABA39C; margin-top: 1px; }
+  .logo { font-family: "Parisienne", cursive; font-weight: 400; font-size: 28px; color: #F4EFE6; letter-spacing: -0.01em; }
+  .sub { font-size: 11px; color: #ABA39C; margin-top: 1px; }
   /* Sticky status bar */
   .status-bar { position: sticky; top: 0; z-index: 50; margin: 0 -16px 14px; padding: 12px 20px; backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); border-bottom: 1px solid rgba(0,0,0,0.06); }
   .status-bar .status-row { display: flex; align-items: center; gap: 10px; }
   .status-bar .status-icon { font-size: 24px; }
-  .status-bar .status-text { font-size: 14px; font-weight: 700; color: #4A3B35; }
-  .status-bar .status-sub { font-size: 11px; color: #A89A90; }
+  .status-bar .status-text { font-size: 14px; font-weight: 700; color: #F4EFE6; }
+  .status-bar .status-sub { font-size: 11px; color: #ABA39C; }
   .status-bar .status-timer { font-family: ui-monospace, monospace; font-size: 28px; font-weight: 700; letter-spacing: -0.02em; text-align: center; margin: 6px 0 2px; }
   .status-bar .status-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
-  .status-bar .status-pill { padding: 4px 10px; border-radius: 99px; background: rgba(255,255,255,0.7); border: 1px solid rgba(0,0,0,0.06); font-size: 11px; font-weight: 600; color: #4A3B35; }
+  .status-bar .status-pill { padding: 4px 10px; border-radius: 99px; background: rgba(255,255,255,0.7); border: 1px solid rgba(0,0,0,0.06); font-size: 11px; font-weight: 600; color: #F4EFE6; }
   /* Cards */
   .card { background: rgba(255,255,255,0.55); backdrop-filter: blur(14px) saturate(1.3); -webkit-backdrop-filter: blur(14px) saturate(1.3); border: 1px solid rgba(255,255,255,0.65); border-radius: 20px; padding: 16px; margin-bottom: 14px; box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 8px 24px -12px rgba(160,110,100,0.15); }
   .caring-banner { background: linear-gradient(135deg,rgba(155,184,168,0.12),rgba(155,184,168,0.04)); border: 1px solid rgba(155,184,168,0.3); border-radius: 16px; padding: 14px 16px; margin-bottom: 14px; text-align: center; }
-  .caring-banner .title { font-family: "Playfair Display", serif; font-style: italic; font-size: 15px; font-weight: 700; color: #4A3B35; margin-bottom: 2px; }
-  .caring-banner .text { font-size: 12px; color: #6A8A7A; line-height: 1.5; }
+  .caring-banner .title { font-family: "Playfair Display", serif; font-style: italic; font-size: 15px; font-weight: 700; color: #F4EFE6; margin-bottom: 2px; }
+  .caring-banner .text { font-size: 12px; color: #8ED6A8; line-height: 1.5; }
   .btn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .action-btn { padding: 20px 12px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.7); background: rgba(255,255,255,0.55); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); cursor: pointer; font-size: 16px; font-weight: 700; color: #4A3B35; display: flex; flex-direction: column; align-items: center; gap: 8px; min-height: 100px; font-family: inherit; transition: transform 0.1s; box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 6px 16px -8px rgba(160,110,100,0.15); }
+  .action-btn { padding: 20px 12px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.7); background: rgba(255,255,255,0.55); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); cursor: pointer; font-size: 16px; font-weight: 700; color: #F4EFE6; display: flex; flex-direction: column; align-items: center; gap: 8px; min-height: 100px; font-family: inherit; transition: transform 0.1s; box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 6px 16px -8px rgba(160,110,100,0.15); }
   .action-btn:active { transform: scale(0.96); }
   .action-btn .icon { font-size: 32px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1)); }
   .action-btn .label { font-size: 13px; font-weight: 700; letter-spacing: 0.02em; }
@@ -50,51 +50,51 @@
   .action-btn.wake-nap { border-color: rgba(139,126,200,0.3); background: rgba(139,126,200,0.06); }
   /* Mood chips */
   .mood-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
-  .mood-chip { padding: 8px 14px; border-radius: 99px; border: 1px solid rgba(255,255,255,0.6); background: rgba(255,255,255,0.5); font-size: 12px; font-weight: 600; color: #4A3B35; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+  .mood-chip { padding: 8px 14px; border-radius: 99px; border: 1px solid rgba(255,255,255,0.6); background: rgba(255,255,255,0.5); font-size: 12px; font-weight: 600; color: #F4EFE6; cursor: pointer; display: flex; align-items: center; gap: 5px; }
   .mood-chip:active { transform: scale(0.96); }
   .mood-chip.selected { background: rgba(192,112,136,0.1); border-color: rgba(192,112,136,0.3); }
-  .section-label { font-size: 14px; font-weight: 700; color: #7A5C52; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+  .section-label { font-size: 14px; font-weight: 700; color: #CFC6BC; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
   .entry { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 12px; background: #FBF5F0; border: 1px solid #E8DED3; margin-bottom: 6px; font-size: 14px; }
   .entry .emoji { font-size: 18px; }
-  .entry .label { flex: 1; font-weight: 600; color: #4A3B35; }
-  .entry .time { font-size: 12px; color: #7A5C52; font-family: ui-monospace, monospace; }
+  .entry .label { flex: 1; font-weight: 600; color: #F4EFE6; }
+  .entry .time { font-size: 12px; color: #CFC6BC; font-family: ui-monospace, monospace; }
   .sheet { position: fixed; inset: 0; background: rgba(44,31,26,0.5); z-index: 100; display: flex; align-items: flex-end; }
   .sheet-inner { background: #FFFCF9; border-radius: 28px 28px 0 0; padding: 24px 20px max(24px, env(safe-area-inset-bottom,24px)); width: 100%; max-width: 560px; margin: 0 auto; }
   .sheet-handle { width: 40px; height: 4px; background: #E8DED3; border-radius: 99px; margin: 0 auto 18px; }
-  .sheet-title { font-family: "Playfair Display", Georgia, serif; font-size: 22px; font-weight: 700; color: #4A3B35; text-align: center; margin-bottom: 14px; }
-  .amount-display { font-size: 54px; font-weight: 700; color: #C07088; text-align: center; font-family: ui-monospace, monospace; margin-bottom: 10px; }
-  .amount-display .unit { font-size: 20px; color: #A89A90; font-weight: 600; margin-left: 4px; }
+  .sheet-title { font-family: "Playfair Display", Georgia, serif; font-size: 22px; font-weight: 700; color: #F4EFE6; text-align: center; margin-bottom: 14px; }
+  .amount-display { font-size: 54px; font-weight: 700; color: #F2A0B8; text-align: center; font-family: ui-monospace, monospace; margin-bottom: 10px; }
+  .amount-display .unit { font-size: 20px; color: #ABA39C; font-weight: 600; margin-left: 4px; }
   .amount-btns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
-  .amt-btn { padding: 14px; border-radius: 14px; border: 2px solid #E8DED3; background: #FFFDFA; font-size: 18px; font-weight: 700; color: #4A3B35; cursor: pointer; font-family: inherit; }
-  .amt-btn.plus { border-color: #C07088; color: #C07088; background: rgba(192,112,136,0.06); }
+  .amt-btn { padding: 14px; border-radius: 14px; border: 2px solid #E8DED3; background: #FFFDFA; font-size: 18px; font-weight: 700; color: #F4EFE6; cursor: pointer; font-family: inherit; }
+  .amt-btn.plus { border-color: #F2A0B8; color: #F2A0B8; background: rgba(192,112,136,0.06); }
   .amt-btn:active { transform: scale(0.96); }
-  .opt-btn { width: 100%; padding: 18px; border-radius: 14px; border: 2px solid #E8DED3; background: #FFFDFA; font-size: 18px; font-weight: 700; color: #4A3B35; cursor: pointer; font-family: inherit; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 12px; }
+  .opt-btn { width: 100%; padding: 18px; border-radius: 14px; border: 2px solid #E8DED3; background: #FFFDFA; font-size: 18px; font-weight: 700; color: #F4EFE6; cursor: pointer; font-family: inherit; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 12px; }
   .opt-btn .emoji { font-size: 24px; }
   .save-btn { width: 100%; padding: 18px; border-radius: 99px; border: none; background: linear-gradient(135deg,#C07088,#a85a44); color: white; font-size: 17px; font-weight: 700; cursor: pointer; font-family: inherit; box-shadow: 0 4px 14px rgba(192,112,136,0.25); }
-  .cancel-btn { width: 100%; padding: 12px; border-radius: 99px; border: none; background: transparent; color: #A89A90; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; margin-top: 8px; }
+  .cancel-btn { width: 100%; padding: 12px; border-radius: 99px; border: none; background: transparent; color: #ABA39C; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; margin-top: 8px; }
   .toast { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%); background: #4A3B35; color: #FAF6F0; padding: 12px 18px; border-radius: 99px; font-size: 14px; font-weight: 600; z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.2); opacity: 0; transition: opacity 0.2s; }
   .toast.show { opacity: 1; }
   .error-screen { padding: 40px 24px; text-align: center; }
   .error-screen .icon { font-size: 48px; margin-bottom: 16px; }
-  .error-screen h2 { font-family: "Playfair Display", serif; font-size: 22px; color: #4A3B35; margin-bottom: 8px; }
-  .error-screen p { font-size: 14px; color: #7A5C52; line-height: 1.6; }
-  .loading { padding: 60px 20px; text-align: center; color: #7A5C52; }
-  .parent-note { background: rgba(212,168,133,0.08); border: 1px solid rgba(212,168,133,0.3); border-radius: 14px; padding: 12px 14px; margin-bottom: 12px; font-size: 14px; color: #4A3B35; line-height: 1.55; }
-  .parent-note .pn-label { font-size: 10px; font-weight: 700; color: #A88848; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
-  .call-btn { display: flex; align-items: center; gap: 10px; width: 100%; padding: 13px 16px; border-radius: 14px; border: 1.5px solid #9BB8A8; background: rgba(155,184,168,0.08); color: #4A3B35; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; text-decoration: none; margin-bottom: 6px; }
+  .error-screen h2 { font-family: "Playfair Display", serif; font-size: 22px; color: #F4EFE6; margin-bottom: 8px; }
+  .error-screen p { font-size: 14px; color: #CFC6BC; line-height: 1.6; }
+  .loading { padding: 60px 20px; text-align: center; color: #CFC6BC; }
+  .parent-note { background: rgba(212,168,133,0.08); border: 1px solid rgba(212,168,133,0.3); border-radius: 14px; padding: 12px 14px; margin-bottom: 12px; font-size: 14px; color: #F4EFE6; line-height: 1.55; }
+  .parent-note .pn-label { font-size: 10px; font-weight: 700; color: #E8C97A; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+  .call-btn { display: flex; align-items: center; gap: 10px; width: 100%; padding: 13px 16px; border-radius: 14px; border: 1.5px solid #9BB8A8; background: rgba(155,184,168,0.08); color: #F4EFE6; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; text-decoration: none; margin-bottom: 6px; }
   .call-btn .emoji { font-size: 20px; }
   .call-btn .name { flex: 1; text-align: left; }
   .call-btn .arrow { color: #9BB8A8; font-size: 18px; }
   .reassurance-item { padding: 12px 14px; border-radius: 12px; background: #FBF5F0; border: 1px solid #E8DED3; margin-bottom: 8px; }
-  .reassurance-item .q { font-size: 14px; font-weight: 700; color: #4A3B35; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
-  .reassurance-item .a { font-size: 13px; color: #6A584E; line-height: 1.55; }
+  .reassurance-item .q { font-size: 14px; font-weight: 700; color: #F4EFE6; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+  .reassurance-item .a { font-size: 13px; color: #CFC6BC; line-height: 1.55; }
   details.reassurance-item summary { list-style: none; cursor: pointer; -webkit-user-select: none; user-select: none; }
   details.reassurance-item summary::-webkit-details-marker { display: none; }
   details.reassurance-item[open] summary { margin-bottom: 6px; }
-  details.reassurance-item summary::after { content: "▼"; margin-left: auto; font-size: 10px; color: #A89A90; transition: transform 0.2s; }
+  details.reassurance-item summary::after { content: "▼"; margin-left: auto; font-size: 10px; color: #ABA39C; transition: transform 0.2s; }
   details.reassurance-item[open] summary::after { transform: rotate(180deg); }
   details.reassurance-item summary .q { display: flex; align-items: center; gap: 6px; width: 100%; margin-bottom: 0; }
-  details.reassurance-item summary .q::after { content: "▼"; margin-left: auto; font-size: 10px; color: #A89A90; transition: transform 0.2s; }
+  details.reassurance-item summary .q::after { content: "▼"; margin-left: auto; font-size: 10px; color: #ABA39C; transition: transform 0.2s; }
   details.reassurance-item[open] summary .q::after { transform: rotate(180deg); }
   /* Floating call button */
   .fab-call { position: fixed; bottom: max(24px, env(safe-area-inset-bottom, 24px)); right: 20px; width: 56px; height: 56px; border-radius: 50%; background: #9BB8A8; color: white; font-size: 24px; border: none; cursor: pointer; box-shadow: 0 6px 20px rgba(155,184,168,0.4); z-index: 90; display: flex; align-items: center; justify-content: center; }
@@ -102,29 +102,29 @@
   /* Dark mode */
   @media (prefers-color-scheme: dark) {
     html, body { background: #1C1820; color: #E8DDE0; }
-    .card { background: #252028; border-color: #3A2E35; box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+    .card { background: #252028; border-color: #F4EFE6; box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
     .header .logo { color: #E8DDE0; }
-    .header .sub { color: #A898AC; }
+    .header .sub { color: #B3A9B8; }
     .caring-banner { background: rgba(155,184,168,0.1); border-color: rgba(155,184,168,0.25); }
     .caring-banner .title { color: #E8DDE0; }
-    .action-btn { background: #2A2430; border-color: #3A2E35; color: #E8DDE0; }
+    .action-btn { background: #2A2430; border-color: #F4EFE6; color: #E8DDE0; }
     .action-btn:active { background: #352E3A; }
     .action-btn.active { background: rgba(155,184,168,0.15); }
-    .entry { background: #2A2430; border-color: #3A2E35; }
+    .entry { background: #2A2430; border-color: #F4EFE6; }
     .entry .label { color: #E8DDE0; }
-    .entry .time { color: #A898AC; }
-    .section-label { color: #A898AC; }
+    .entry .time { color: #B3A9B8; }
+    .section-label { color: #B3A9B8; }
     .parent-note { background: rgba(212,168,133,0.06); border-color: rgba(212,168,133,0.2); color: #E8DDE0; }
-    .reassurance-item { background: #2A2430; border-color: #3A2E35; }
+    .reassurance-item { background: #2A2430; border-color: #F4EFE6; }
     .reassurance-item .q { color: #E8DDE0; }
-    .reassurance-item .a { color: #C8B8C0; }
+    .reassurance-item .a { color: #D8CFD4; }
     .sheet-inner { background: #1C1820; }
     .sheet-handle { background: #3A2E35; }
-    .opt-btn { background: #2A2430; border-color: #3A2E35; color: #E8DDE0; }
+    .opt-btn { background: #2A2430; border-color: #F4EFE6; color: #E8DDE0; }
     .save-btn { background: linear-gradient(135deg,#C07088,#a85a44); }
-    .amt-btn { background: #2A2430; border-color: #3A2E35; color: #E8DDE0; }
+    .amt-btn { background: #2A2430; border-color: #F4EFE6; color: #E8DDE0; }
     .call-btn { background: rgba(155,184,168,0.08); border-color: rgba(155,184,168,0.3); color: #E8DDE0; }
-    .toast { background: #E8DDE0; color: #1C1820; }
+    .toast { background: #E8DDE0; color: #F4EFE6; }
   }
 
   /* 2026 BubbaCare clarity pass — a calm, grandparent-friendly care cockpit. */
@@ -132,8 +132,8 @@
     --care-night:#071a38;
     --care-night-2:#102b55;
     --care-cream:#fffaf1;
-    --care-ink:#112747;
-    --care-muted:#5f6e83;
+    --care-ink:#F4EFE6;
+    --care-muted:rgba(244,239,230,.62);
     --care-gold:#edc36d;
     --care-mint:#bcebd8;
     --care-peach:#ffae91;
@@ -157,20 +157,136 @@
   .header-name{font-size:24px;color:#fff}.header-age{font-size:14px;color:#c7d3e7}.logo{font-size:31px;color:#f4d892}.sub{font-size:12px;color:#b9c9df;text-transform:uppercase;letter-spacing:.16em}
   .caring-banner{position:relative;overflow:hidden;text-align:left;padding:20px 20px 18px;border-radius:24px;background:linear-gradient(145deg,rgba(43,70,118,.97),rgba(15,39,77,.98));border:1px solid rgba(237,195,109,.48);box-shadow:0 16px 38px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.14)}
   .caring-banner:after{content:"✦";position:absolute;right:18px;top:9px;color:#f4d892;font-size:31px;opacity:.85}.caring-banner .title{font-size:24px;color:#fff;font-style:normal}.caring-banner .text{font-size:16px;color:#d9e4f3}.caring-banner .text:last-child{font-size:13px;color:#aebed4!important}
-  .card,.status-bar{background:rgba(255,250,241,.98)!important;color:var(--care-ink);border:1px solid rgba(237,195,109,.44)!important;box-shadow:0 15px 38px rgba(0,0,0,.19),inset 0 1px #fff!important;border-radius:24px!important}
+  .card,.status-bar{background:rgba(10,20,48,.62)!important;color:var(--care-ink);border:1px solid rgba(232,201,122,.20)!important;box-shadow:0 15px 38px rgba(0,0,0,.42),inset 0 1px rgba(255,255,255,.05)!important;border-radius:24px!important}
   .status-bar{position:relative;top:auto;margin:14px 0;padding:18px}.status-bar .status-row{gap:13px}.status-bar .status-icon{font-size:32px}.status-bar .status-text{font-size:18px;color:var(--care-ink)}.status-bar .status-sub{font-size:13px;color:var(--care-muted)}.status-bar .status-timer{font-size:36px}.status-bar [style*="font-size:13px"]{font-size:15px!important}
-  .care-countdown{margin-top:15px;padding-top:14px;border-top:1px solid #e8dcc9}.care-countdown-title{font-size:12px;font-weight:800;letter-spacing:.13em;color:#785f80;text-transform:uppercase;margin-bottom:9px}.care-countdown-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:8px}.care-countdown-item{min-width:0;text-align:center;padding:11px 5px 10px;border-radius:16px;background:#f6efe5;border:1px solid #eadfce}.care-countdown-item.primary{background:linear-gradient(145deg,#f4efff,#ddd0ff);border-color:#cdb9ff}.care-countdown-item img{width:38px;height:38px;object-fit:contain}.care-countdown-item small{display:block;color:#667488;font-size:11px;line-height:1.2;margin-top:2px}.care-countdown-value{font-size:18px;font-weight:850;color:#112747;font-variant-numeric:tabular-nums;white-space:nowrap}.care-countdown-item.primary .care-countdown-value{font-size:21px}.care-countdown-clock{font-variant-numeric:tabular-nums}
+  /* The readiness meter, drawn from the app's own four zones. Same reading as
+     the bar on the parent's clock: green is the window, amber is watch for
+     cues, coral is past it. */
+  .ready{margin-top:14px;padding-top:13px;border-top:1px solid #e8dcc9}
+  .ready-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:9px}
+  .ready-label{font-size:15px;font-weight:800;color:#F4EFE6}
+  .ready-detail{font-size:12px;color:#9DA8BA;text-align:right;flex:none}
+  .ready-bar{position:relative;height:16px;border-radius:999px;overflow:hidden;background:#ece3d6}
+  .ready-zone{position:absolute;top:0;bottom:0}
+  .ready-zone.green{background:linear-gradient(180deg,#9FD9B4,#7CC79B)}
+  .ready-zone.amber{background:linear-gradient(180deg,#F2D08A,#E8BE68)}
+  .ready-zone.coral{background:linear-gradient(180deg,#F3A68F,#EC8C72)}
+  .ready-marker{position:absolute;top:-3px;bottom:-3px;width:4px;border-radius:3px;background:#112747;box-shadow:0 0 0 2px #FFFCF9;transition:left .6s linear}
+  .ready-scale{display:flex;justify-content:space-between;margin-top:5px;font-size:11px;color:#ABA3AE}
+  .ready-note{margin-top:7px;font-size:11px;color:#A89FA6}
+  .care-countdown{margin-top:15px;padding-top:14px;border-top:1px solid #e8dcc9}.care-countdown-title{font-size:12px;font-weight:800;letter-spacing:.13em;color:#C3B2CC;text-transform:uppercase;margin-bottom:9px}.care-countdown-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:8px}.care-countdown-item{min-width:0;text-align:center;padding:11px 5px 10px;border-radius:16px;background:#f6efe5;border:1px solid #eadfce}.care-countdown-item.primary{background:linear-gradient(145deg,#f4efff,#ddd0ff);border-color:#cdb9ff}.care-countdown-item img{width:38px;height:38px;object-fit:contain}.care-countdown-item small{display:block;color:#9DA8BA;font-size:11px;line-height:1.2;margin-top:2px}.care-countdown-value{font-size:18px;font-weight:850;color:#F4EFE6;font-variant-numeric:tabular-nums;white-space:nowrap}.care-countdown-item.primary .care-countdown-value{font-size:21px}.care-countdown-clock{font-variant-numeric:tabular-nums}
   .section-label{font-size:13px;color:#6f5874;letter-spacing:.12em}.parent-note{font-size:16px;border-radius:18px;padding:16px}.parent-note .pn-label{font-size:12px}
   .btn-grid{gap:12px}.action-btn{min-height:126px;padding:14px 10px;border:1px solid rgba(16,39,71,.12);border-radius:24px;color:var(--care-ink);background:linear-gradient(145deg,#fff6ed,#ffd0bd);box-shadow:0 10px 22px rgba(5,22,50,.12),inset 0 1px #fff;font-size:18px;justify-content:center}.action-btn:nth-child(2){background:linear-gradient(145deg,#f0fff9,#bcebd8)}.action-btn:nth-child(3){background:linear-gradient(145deg,#f6f0ff,#cdb9ff)}.action-btn:nth-child(4){background:linear-gradient(145deg,#fff9df,#f7d986)}.action-btn .icon{font-size:0;width:62px;height:62px}.action-btn .icon img,.care-icon{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 7px 8px rgba(16,39,71,.17))}.action-btn .label{font-size:18px;letter-spacing:0}.action-btn:focus-visible,.save-btn:focus-visible,.call-btn:focus-visible{outline:4px solid #76baff;outline-offset:3px}
   .action-btn.note-action{grid-column:1/-1;min-height:94px;flex-direction:row;background:linear-gradient(145deg,#fff9e7,#f7d986)}.action-btn.note-action .icon{width:54px;height:54px}
   .entry{padding:14px;border-radius:16px;background:#f7f2ea;border-color:#e8dcc9;font-size:16px}.entry .time{font-size:14px}
-  .sheet{background:rgba(2,10,24,.68);backdrop-filter:blur(6px)}.sheet-inner{background:var(--care-cream);border:1px solid #f0d7a1;border-radius:30px 30px 0 0;padding:25px 22px max(28px,env(safe-area-inset-bottom,28px));box-shadow:0 -18px 70px rgba(0,0,0,.35)}.sheet-title{font-size:27px;color:var(--care-ink)}.sheet-handle{width:54px;height:6px;background:#d4c8b8}.amount-display{font-size:62px;color:#192f55}.amt-btn,.opt-btn{min-height:58px;border-radius:16px;font-size:19px}.save-btn{min-height:60px;background:linear-gradient(135deg,#ffad90,#ef796d);font-size:20px;box-shadow:0 9px 20px rgba(239,121,109,.28),inset 0 1px rgba(255,255,255,.7)}.cancel-btn{min-height:52px;font-size:17px;color:#5f6e83}
+  .sheet{background:rgba(2,10,24,.68);backdrop-filter:blur(6px)}.sheet-inner{background:#0C1630;border:1px solid rgba(232,201,122,.22);border-radius:30px 30px 0 0;padding:25px 22px max(28px,env(safe-area-inset-bottom,28px));box-shadow:0 -18px 70px rgba(0,0,0,.35)}.sheet-title{font-size:27px;color:var(--care-ink)}.sheet-handle{width:54px;height:6px;background:rgba(244,239,230,.28)}.amount-display{font-size:62px;color:#F4EFE6}.amt-btn,.opt-btn{min-height:58px;border-radius:16px;font-size:19px}.save-btn{min-height:60px;background:linear-gradient(135deg,#ffad90,#ef796d);font-size:20px;box-shadow:0 9px 20px rgba(239,121,109,.28),inset 0 1px rgba(255,255,255,.7)}.cancel-btn{min-height:52px;font-size:17px;color:rgba(244,239,230,.62)}
   .sheet-art{display:block;width:116px;height:116px;object-fit:contain;margin:-8px auto 4px;filter:drop-shadow(0 12px 18px rgba(17,39,71,.2))}.sheet-art.note-art{width:96px;height:96px}
   .call-btn{min-height:58px;padding:14px 17px;border-radius:17px;background:#e8f8f1;color:var(--care-ink);font-size:17px}.fab-call{width:66px;height:66px;background:linear-gradient(145deg,#bcebd8,#69c8a7);border:2px solid rgba(255,255,255,.75);box-shadow:0 10px 28px rgba(0,0,0,.28)}
   details>summary{min-height:58px!important;font-size:17px!important}.reassurance-item .q{font-size:16px}.reassurance-item .a{font-size:15px}.toast{font-size:16px;padding:15px 20px;background:#10294d;color:#fff;border:1px solid #f0cf83}
   @media(max-width:370px){.action-btn{min-height:116px}.action-btn .label{font-size:16px}.caring-banner .title{font-size:21px}}
   @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
-</style>
+
+  /* ──────────────────────────────────────────────────────────────────────
+     THE APP'S OWN NIGHT, applied to the portal.
+
+     Owner, 15 Oct 2026: "i want the portal to look beautiful like the actual
+     app". The page was already navy, but every card on it was cream paper
+     laid on top, which is the same fault the app's own temperature chart had:
+     a daylight panel floating on a night sky, so the two never looked like
+     one product.
+
+     Written as overrides at the end of the sheet rather than by rewriting two
+     hundred and seventy-five colour literals through the file, which is how
+     you turn a restyle into a regression hunt. Same tokens as the app: deep
+     navy panels, a gold hairline, cream ink, Playfair headings.
+     ────────────────────────────────────────────────────────────────────── */
+  :root{
+    --n-panel:rgba(10,20,48,.62);
+    --n-panel-solid:#101C3A;
+    --n-line:rgba(255,230,184,.14);
+    --n-ink:#F4EFE6;
+    --n-soft:rgba(244,239,230,.68);
+    --n-faint:rgba(244,239,230,.45);
+    --n-gold:#E8C97A;
+  }
+  html,body{background:#070F24;color:var(--n-ink)}
+  body{background:
+    radial-gradient(ellipse 80% 50% at 12% 6%,rgba(93,74,138,.34),transparent 62%),
+    radial-gradient(ellipse 62% 44% at 88% 10%,rgba(40,74,138,.30),transparent 62%),
+    linear-gradient(170deg,#0A1430 0%,#070F24 52%,#060C1E 100%);
+    background-attachment:fixed}
+
+  .card{background:var(--n-panel);border:1px solid var(--n-line);
+    box-shadow:0 10px 26px -14px rgba(0,0,0,.6)}
+  .card,.card div,.card span,.card strong{color:var(--n-ink)}
+
+  .status-bar{background:rgba(7,15,36,.82)!important;border-bottom:1px solid var(--n-line)}
+  .status-bar .status-text{color:var(--n-ink)}
+  .status-bar .status-sub{color:var(--n-faint)}
+  .status-bar .status-pill{background:rgba(255,255,255,.06);border-color:var(--n-line);color:var(--n-soft)}
+
+  .header-name,.logo{color:var(--n-ink)}
+  .header .sub{color:var(--n-faint)}
+  .section-label{color:var(--n-gold)}
+
+  .caring-banner{background:linear-gradient(135deg,rgba(232,201,122,.10),rgba(232,201,122,.03));
+    border:1px solid var(--n-line)}
+  .caring-banner .title{color:var(--n-ink)}
+  .caring-banner .text{color:var(--n-soft)}
+
+  .entry{background:rgba(255,255,255,.05);border:1px solid var(--n-line)}
+  .entry .label{color:var(--n-ink)}
+  .entry .time{color:var(--n-faint)}
+
+  /* The action tiles were four pastel gradients. The artwork is the subject;
+     the tile is the room it stands in. */
+  .action-btn,
+  .action-btn:nth-child(2),
+  .action-btn:nth-child(3),
+  .action-btn:nth-child(4){
+    background:rgba(255,255,255,.055);border:1px solid var(--n-line);
+    color:var(--n-ink);box-shadow:0 10px 22px -14px rgba(0,0,0,.65)}
+  .action-btn.note-action{background:linear-gradient(145deg,rgba(232,201,122,.16),rgba(232,201,122,.06))}
+  .action-btn:active{background:rgba(255,255,255,.1)}
+  .action-btn.active{background:rgba(232,201,122,.14);border-color:rgba(232,201,122,.38)}
+  .action-btn .icon img,.care-icon{filter:drop-shadow(0 8px 14px rgba(0,0,0,.5))}
+
+  .care-countdown{border-top:1px solid var(--n-line)}
+  .care-countdown-title{color:var(--n-gold)}
+  .care-countdown-item{background:rgba(255,255,255,.05);border:1px solid var(--n-line)}
+  .care-countdown-item.primary{background:linear-gradient(145deg,rgba(185,139,240,.22),rgba(185,139,240,.08));
+    border-color:rgba(185,139,240,.40)}
+  .care-countdown-value{color:var(--n-ink)}
+  .care-countdown-item small{color:var(--n-faint)}
+
+  .ready{border-top:1px solid var(--n-line)}
+  .ready-label{color:var(--n-ink)}
+  .ready-detail{color:var(--n-soft)}
+  .ready-bar{background:rgba(255,255,255,.07)}
+  .ready-marker{background:var(--n-ink);box-shadow:0 0 0 2px #0A1430,0 0 10px rgba(244,239,230,.5)}
+  .ready-scale{color:var(--n-faint)}
+  .ready-note{color:var(--n-faint)}
+
+  .sheet-inner{background:#0C1630;color:var(--n-ink)}
+  .sheet-handle{background:rgba(255,255,255,.22)}
+  .sheet-title{color:var(--n-ink)}
+  .opt-btn,.amt-btn{background:rgba(255,255,255,.06);border:1px solid var(--n-line);color:var(--n-ink)}
+  .opt-btn.sel,.opt-btn[aria-pressed=true]{background:rgba(232,201,122,.18);border-color:rgba(232,201,122,.45)}
+  .parent-note{background:rgba(232,201,122,.07);border:1px solid var(--n-line);color:var(--n-ink)}
+  .reassurance-item{background:rgba(255,255,255,.05);border:1px solid var(--n-line)}
+  .reassurance-item .q{color:var(--n-ink)}
+  .reassurance-item .a{color:var(--n-soft)}
+  .call-btn{background:rgba(232,201,122,.10);border:1px solid rgba(232,201,122,.35);color:var(--n-ink)}
+  .toast{background:var(--n-ink);color:#0A1430}
+  input,textarea,select{background:rgba(255,255,255,.07)!important;color:var(--n-ink)!important;
+    border:1px solid var(--n-line)!important}
+  input::placeholder,textarea::placeholder{color:var(--n-faint)!important}
+  details>summary{background:rgba(255,255,255,.05)!important;border-color:var(--n-line)!important;
+    color:var(--n-ink)!important}
+  .error-screen h2{color:var(--n-ink)}
+  .error-screen p{color:var(--n-soft)}
+
+  </style>
 </head>
 <body>
 <div id="app"><div class="loading">Loading…</div></div>
@@ -241,8 +357,8 @@ if (!rawCode || rawCode.length < 4) {
     var _lockedHtml = `
       <div style="text-align:center;padding:80px 24px;min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center">
         <div style="font-size:48px;margin-bottom:16px">🔒</div>
-        <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:22px;color:#4A3B35;margin-bottom:8px">Session ended</h2>
-        <p style="font-size:14px;color:#A89A90;line-height:1.6;max-width:280px">The parent has ended this Bubba Care session. Thank you for looking after their little one.</p>
+        <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:22px;color:#F4EFE6;margin-bottom:8px">Session ended</h2>
+        <p style="font-size:14px;color:#ABA39C;line-height:1.6;max-width:280px">The parent has ended this Bubba Care session. Thank you for looking after their little one.</p>
       </div>`;
     function _lockPortal() {
       _sessionLocked = true;
@@ -662,8 +778,8 @@ function openSheet(type) {
 
   // Reusable time picker row
   const _timePickerHtml = `<div style="display:flex;align-items:center;gap:8px;margin:10px 0 14px;justify-content:center">
-    <label style="font-size:13px;color:#8A7F87;font-weight:600">Time:</label>
-    <input type="time" id="carer-time-input" value="${nowTime()}" style="font-size:16px;padding:8px 12px;border-radius:10px;border:1.5px solid #f0e8e0;background:#FFFCF9;color:#5B4F5F;text-align:center;font-family:inherit;outline:none;min-width:120px"/>
+    <label style="font-size:13px;color:#ABA3AE;font-weight:600">Time:</label>
+    <input type="time" id="carer-time-input" value="${nowTime()}" style="font-size:16px;padding:8px 12px;border-radius:10px;border:1.5px solid #f0e8e0;background:#FFFCF9;color:#E6DFD6;text-align:center;font-family:inherit;outline:none;min-width:120px"/>
   </div>`;
 
   if (type === "feed") {
@@ -722,14 +838,14 @@ function openSheet(type) {
         <div class="sheet-handle"></div>
         <div class="sheet-title">😴 Log a Nap</div>
         <div style="margin:14px 0">
-          <label style="font-size:12px;color:#8A7F87;font-weight:600;display:block;margin-bottom:4px">Started at</label>
-          <input type="time" id="nap-start-input" value="${nowTime()}" style="width:100%;font-size:18px;padding:12px;border-radius:10px;border:1.5px solid #f0e8e0;background:#FFFCF9;color:#5B4F5F;font-family:inherit;text-align:center"/>
+          <label style="font-size:12px;color:#ABA3AE;font-weight:600;display:block;margin-bottom:4px">Started at</label>
+          <input type="time" id="nap-start-input" value="${nowTime()}" style="width:100%;font-size:18px;padding:12px;border-radius:10px;border:1.5px solid #f0e8e0;background:#FFFCF9;color:#E6DFD6;font-family:inherit;text-align:center"/>
         </div>
         <button class="save-btn" id="nap-started-btn" style="margin-bottom:8px">😴 Nap Started</button>
         <div style="font-size:11px;color:#A89898;text-align:center;margin:12px 0 8px;display:flex;align-items:center;gap:8px"><div style="flex:1;height:1px;background:#E8DED3"></div>or log a completed nap<div style="flex:1;height:1px;background:#E8DED3"></div></div>
         <div style="margin-bottom:14px">
-          <label style="font-size:12px;color:#8A7F87;font-weight:600;display:block;margin-bottom:4px">Ended at</label>
-          <input type="time" id="nap-end-input" value="${nowTime()}" style="width:100%;font-size:18px;padding:12px;border-radius:10px;border:1.5px solid #f0e8e0;background:#FFFCF9;color:#5B4F5F;font-family:inherit;text-align:center"/>
+          <label style="font-size:12px;color:#ABA3AE;font-weight:600;display:block;margin-bottom:4px">Ended at</label>
+          <input type="time" id="nap-end-input" value="${nowTime()}" style="width:100%;font-size:18px;padding:12px;border-radius:10px;border:1.5px solid #f0e8e0;background:#FFFCF9;color:#E6DFD6;font-family:inherit;text-align:center"/>
         </div>
         <button class="save-btn" id="save-nap" style="background:linear-gradient(135deg,#8B7EC8,#6B5B95)">Save Completed Nap ✓</button>
         <button class="cancel-btn" id="cancel">Cancel</button>
@@ -795,8 +911,8 @@ function openSheet(type) {
         <img class="sheet-art note-art" src="./care-assets/v2/note-ui.webp" alt=""/>
         <div class="sheet-title">Add a note for the parents</div>
         ${_timePickerHtml}
-        <label for="carer-note" style="display:block;font-size:16px;font-weight:700;color:#112747;margin:4px 0 8px">What would you like them to know?</label>
-        <textarea id="carer-note" maxlength="500" rows="4" placeholder="For example: Oliver loved looking at the garden." style="width:100%;resize:vertical;border:2px solid #dfd3c2;border-radius:18px;padding:15px;font:inherit;font-size:17px;line-height:1.45;color:#112747;background:#fffdf8;margin-bottom:14px"></textarea>
+        <label for="carer-note" style="display:block;font-size:16px;font-weight:700;color:#F4EFE6;margin:4px 0 8px">What would you like them to know?</label>
+        <textarea id="carer-note" maxlength="500" rows="4" placeholder="For example: Oliver loved looking at the garden." style="width:100%;resize:vertical;border:2px solid #dfd3c2;border-radius:18px;padding:15px;font:inherit;font-size:17px;line-height:1.45;color:#F4EFE6;background:#fffdf8;margin-bottom:14px"></textarea>
         <button class="save-btn" id="save-note">Save note</button>
         <button class="cancel-btn" id="cancel">Cancel</button>
       </div>`;
@@ -819,8 +935,17 @@ function _mergeCarerEntries() {
     const _todayStr = todayStrLocal();
     const _careDay = familyContext._careDayKey || _todayStr;
     const _todayPending = recentEntries.filter(e => {
-      // Skip entries already merged by parent app — but keep active naps so timer stays visible
+      // Skip entries already merged by parent app — but keep active naps so timer stays visible.
+      // ⚠️ `_active` is set by the portal and cleared by nobody, so a nap the
+      // parent has since closed was being kept alive here for the rest of the
+      // day. If the parent's own entries show that nap closed, it is closed.
       if (e._merged && !e._active) return false;
+      if (e._active && e.type === "nap" && e.start) {
+        const _pc = (((familyContext.today || {}).entries) || []).some(
+          p => p && p.type === "nap" && p.start === e.start && p.end && p.end !== p.start
+        );
+        if (_pc) return false;
+      }
       if (e.date) return e.date === _careDay;
       const t = e.loggedAt || e.time || "";
       if (typeof t === "string" && t.length >= 10) {
@@ -889,7 +1014,19 @@ function renderApp() {
         if (targetMins == null) return;
         let remaining = targetMins*60 - _nowSeconds;
         if (remaining < -1800) remaining += 86400;
-        node.textContent = remaining <= 0 ? "Now" : fmtElapsed(remaining);
+        // ⚠️ fmtElapsed again, so a countdown to the next nap read "24:18"
+        // under a sleep picture: a duration wearing a clock's clothes, in the
+        // same card as two real clock times. The readiness meter above already
+        // carries the fine detail, so this says plainly how long is left.
+        node.textContent = remaining <= 0 ? "Now" : "in " + fmtSince(remaining);
+      });
+      document.querySelectorAll('[data-ready-from]').forEach(bar => {
+        const from = Number(bar.getAttribute('data-ready-from'));
+        const span = Number(bar.getAttribute('data-ready-span'));
+        const marker = bar.querySelector('.ready-marker');
+        if (!marker || !Number.isFinite(from) || !(span > 0)) return;
+        const pct = Math.max(0, Math.min(100, ((Date.now() - from) / span) * 100));
+        marker.style.left = pct + '%';
       });
       document.querySelectorAll('[data-elapsed-from]').forEach(node => {
         const startMins = clockMins(node.getAttribute('data-elapsed-from'));
@@ -960,13 +1097,33 @@ function _renderHtml() {
   // Baby state — computed once for use in status card + action buttons
   const _allEntries = (_t.entries || []);
   const _bedEntry = _allEntries.find(e=>e.type==="sleep"&&!e.night);
+  // ⚠️ THE PORTAL USED TO INVENT A NAP, AND THEN REFUSE TO END IT.
+  //
+  // Owner, 15 Oct 2026: "the timers arent synced and when nap ends in app it
+  // doesnt show in portal and portal nap starts by itself when countdown ends".
+  // All three came from this one function believing itself over the app.
+  //
+  // It counted a nap as still running for TWELVE MINUTES after its logged end,
+  // so the moment a parent ended a nap in the app the portal carried on saying
+  // "napping" with a timer ticking up, for twelve minutes, every single nap.
+  //
+  // And a carer-logged nap carries an `_active` flag that only the portal ever
+  // sets. Nothing clears it when the parent closes that nap in the app, so one
+  // stale flag left the portal napping indefinitely while the app said awake.
+  //
+  // The parent's app is the source of truth. A nap it has closed is closed,
+  // whatever a leftover flag on a carer log says, and an end time is an end
+  // time with no grace period bolted onto it.
+  const _parentClosedStarts = new Set(
+    (_t.entries || [])
+      .filter(e => e && e.type === "nap" && !e.night && e.end && e.end !== e.start)
+      .map(e => e.start)
+  );
   const _findActiveNap = (arr) => arr.find(e=>{
     if(e.type!=="nap"||!e.start||e.night) return false;
-    if(e._active===true) return true;
-    if(!e.end||e.start===e.end) return true;
-    const _endMins = clockMins(e.end);
-    if(_endMins == null) return false;
-    return (_nowMins-_endMins) >= 0 && (_nowMins-_endMins) <= 12;
+    if(_parentClosedStarts.has(e.start)) return false;
+    if(e.end && e.end !== e.start) return false;
+    return true;
   });
   // Prefer familyContext entries (parent-side, correct data), fall back to recentEntries
   const activeNap = _napEndedLocally ? null : (_findActiveNap(_t.entries || []) || _findActiveNap(recentEntries));
@@ -1025,31 +1182,31 @@ function _renderHtml() {
   const _babyStatsHtml = `<div class="card" style="background:linear-gradient(135deg,rgba(212,168,133,0.06),rgba(155,184,168,0.04))">
     <div class="section-label" style="margin-bottom:10px">👶 ${escapeHtml(_name)}${_ageStr?" · "+_ageStr:""}</div>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:${_napWindowStr||_nextFeedStr?10:0}px">
-      <div style="text-align:center;padding:10px 4px;background:#FBF5F0;border-radius:12px">
+      <div style="text-align:center;padding:10px 4px;background:rgba(255,255,255,.055);border-radius:12px">
         <img class="care-icon" src="./care-assets/feed.webp" alt="" style="width:46px;height:46px;margin:0 auto 3px"/>
-        <div style="font-size:10px;color:#A89A90;text-transform:uppercase;letter-spacing:0.05em">Last feed</div>
-        <div style="font-size:13px;font-weight:700;color:#4A3B35;margin-top:2px">${_t.lastFeed ? fmtAgo(_lastFeedAgo) : "--"}</div>
-        ${safePositiveNumber(_t.lastFeed&&_t.lastFeed.amount) ? `<div style="font-size:14px;color:#6A584E;margin-top:1px">${safePositiveNumber(_t.lastFeed.amount)}ml</div>` : ""}
+        <div style="font-size:10px;color:#ABA39C;text-transform:uppercase;letter-spacing:0.05em">Last feed</div>
+        <div style="font-size:13px;font-weight:700;color:#F4EFE6;margin-top:2px">${_t.lastFeed ? fmtAgo(_lastFeedAgo) : "--"}</div>
+        ${safePositiveNumber(_t.lastFeed&&_t.lastFeed.amount) ? `<div style="font-size:14px;color:#CFC6BC;margin-top:1px">${safePositiveNumber(_t.lastFeed.amount)}ml</div>` : ""}
       </div>
-      <div style="text-align:center;padding:10px 4px;background:#FBF5F0;border-radius:12px">
+      <div style="text-align:center;padding:10px 4px;background:rgba(255,255,255,.055);border-radius:12px">
         <img class="care-icon" src="./care-assets/sleep.webp" alt="" style="width:46px;height:46px;margin:0 auto 3px"/>
-        <div style="font-size:10px;color:#A89A90;text-transform:uppercase;letter-spacing:0.05em">Last nap</div>
-        <div style="font-size:13px;font-weight:700;color:#4A3B35;margin-top:2px">${_t.lastNap ? fmtAgo(_lastNapAgo) : "--"}</div>
+        <div style="font-size:10px;color:#ABA39C;text-transform:uppercase;letter-spacing:0.05em">Last nap</div>
+        <div style="font-size:13px;font-weight:700;color:#F4EFE6;margin-top:2px">${_t.lastNap ? fmtAgo(_lastNapAgo) : "--"}</div>
       </div>
-      <div style="text-align:center;padding:10px 4px;background:#FBF5F0;border-radius:12px">
+      <div style="text-align:center;padding:10px 4px;background:rgba(255,255,255,.055);border-radius:12px">
         <img class="care-icon" src="./care-assets/nappy.webp" alt="" style="width:46px;height:46px;margin:0 auto 3px"/>
-        <div style="font-size:10px;color:#A89A90;text-transform:uppercase;letter-spacing:0.05em">Nappies</div>
-        <div style="font-size:13px;font-weight:700;color:#4A3B35;margin-top:2px">${_t.nappyCount||0} today</div>
-        ${_t.wetCount ? `<div style="font-size:14px;color:#6A584E;margin-top:1px">${_t.wetCount} wet</div>` : ""}
+        <div style="font-size:10px;color:#ABA39C;text-transform:uppercase;letter-spacing:0.05em">Nappies</div>
+        <div style="font-size:13px;font-weight:700;color:#F4EFE6;margin-top:2px">${_t.nappyCount||0} today</div>
+        ${_t.wetCount ? `<div style="font-size:14px;color:#CFC6BC;margin-top:1px">${_t.wetCount} wet</div>` : ""}
       </div>
     </div>
     ${/* Hide own feed/nap calcs when parent prediction is live — prevents dual-display conflict */
-      !_pred0.nextPrediction && (_nextFeedStr || _napWindowStr) ? `<div style="padding:10px 12px;background:rgba(192,112,136,0.06);border:1px solid rgba(192,112,136,0.15);border-radius:12px;font-size:12px;color:#6A584E;line-height:1.7">
-      <div style="font-size:10px;color:#A88848;text-transform:uppercase;letter-spacing:0.1em;font-weight:700;margin-bottom:6px">Coming up</div>
-      ${_nextFeedStr ? `<div>🍼 Next feed around <strong style="color:#4A3B35">${_nextFeedStr}</strong>${_t.avgMl?` (~${_t.avgMl}ml typical)`:""}</div>` : ""}
-      ${_napWindowStr ? `<div>💤 Next nap window <strong style="color:#4A3B35">${_napWindowStr}</strong>${_ww?` · wake window ${_ww.label}`:""}</div>` : ""}
+      !_pred0.nextPrediction && (_nextFeedStr || _napWindowStr) ? `<div style="padding:10px 12px;background:rgba(192,112,136,0.06);border:1px solid rgba(192,112,136,0.15);border-radius:12px;font-size:12px;color:#CFC6BC;line-height:1.7">
+      <div style="font-size:10px;color:#E8C97A;text-transform:uppercase;letter-spacing:0.1em;font-weight:700;margin-bottom:6px">Coming up</div>
+      ${_nextFeedStr ? `<div>🍼 Next feed around <strong style="color:#F4EFE6">${_nextFeedStr}</strong>${_t.avgMl?` (~${_t.avgMl}ml typical)`:""}</div>` : ""}
+      ${_napWindowStr ? `<div>💤 Next nap window <strong style="color:#F4EFE6">${_napWindowStr}</strong>${_ww?` · wake window ${_ww.label}`:""}</div>` : ""}
     </div>` : ""}
-    ${_t.avgFeedsPerDay ? `<div style="font-size:14px;color:#A89A90;margin-top:8px;text-align:center">${escapeHtml(_name)} usually has ~${_t.avgFeedsPerDay} feeds/day${_t.avgMl?", ~"+_t.avgMl+"ml each":""}</div>` : ""}
+    ${_t.avgFeedsPerDay ? `<div style="font-size:14px;color:#ABA39C;margin-top:8px;text-align:center">${escapeHtml(_name)} usually has ~${_t.avgFeedsPerDay} feeds/day${_t.avgMl?", ~"+_t.avgMl+"ml each":""}</div>` : ""}
   </div>`;
   // Build parent context (only show cards that have content)
   // Allergy/medical pinned notes, sticky, can't-miss banner
@@ -1070,7 +1227,7 @@ function _renderHtml() {
     return `
     <a class="call-btn" href="${escapeHtml(_href)}">
       <span class="emoji">📞</span>
-      <span class="name">${escapeHtml(c.name || "Call")}${c.relation?" <span style='font-size:14px;color:#A89A90;font-weight:500'>· "+escapeHtml(c.relation)+"</span>":""}</span>
+      <span class="name">${escapeHtml(c.name || "Call")}${c.relation?" <span style='font-size:14px;color:#ABA39C;font-weight:500'>· "+escapeHtml(c.relation)+"</span>":""}</span>
       <span class="arrow">›</span>
     </a>`;
   }).join("");
@@ -1123,14 +1280,13 @@ function _renderHtml() {
       // Active nap: explicit _active flag (authoritative), missing/equal end,
       // OR end within last 12 min. Carer page updates every few minutes over network,
       // so generous window prevents "just woke up" flicker while baby is still sleeping.
+      // Same rule as _findActiveNap above: ended is ended, and a stale carer
+      // flag never outranks the parent's own closed nap.
       const activeNap = _napEndedLocally ? null : entries.find(e=>{
         if(e.type!=="nap"||!e.start||e.night) return false;
-        if(e._active===true) return true;
-        if(!e.end||e.start===e.end) return true;
-        const endMins = clockMins(e.end);
-        if(endMins == null) return false;
-        const diff = nowM - endMins;
-        return diff >= 0 && diff <= 12;
+        if(_parentClosedStarts.has(e.start)) return false;
+        if(e.end && e.end !== e.start) return false;
+        return true;
       });
       const _allNaps = [...(_t.naps||[]), ...recentEntries.filter(e=>e.type==="nap")];
       const lastCompletedNap = _allNaps.filter(n=>n.end&&n.start!==n.end).sort((a,b)=>napEndSortMins(a)-napEndSortMins(b)).pop();
@@ -1228,7 +1384,7 @@ function _renderHtml() {
           if(_bedElapSec<0) _bedElapSec+=86400;
           const _fmtBed = (()=>{ const h=Math.floor(_bedElapSec/3600),m=Math.floor((_bedElapSec%3600)/60),s=_bedElapSec%60; return h>0?h+":"+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0"):m+":"+String(s).padStart(2,"0"); })();
           _timerHtml = `<div class="status-timer" data-timer-start="${escapeHtml(_bedEntry.time)}" data-timer-type="bed" style="color:${statusColor}">${_fmtBed}</div>
-          <div style="font-size:11px;color:#A89A90;text-align:center;margin-bottom:4px">Bedtime ${fmt12(_bedEntry.time)}</div>`;
+          <div style="font-size:11px;color:#ABA39C;text-align:center;margin-bottom:4px">Bedtime ${fmt12(_bedEntry.time)}</div>`;
         }
       }
       // Night wake override — when carer has paused the timer
@@ -1237,8 +1393,64 @@ function _renderHtml() {
         statusIcon="🌙"; statusText=_name+" · Night wake in progress"; statusColor="#D4A855"; statusBg="rgba(212,168,85,0.08)";
         nextAction = "";
         _timerHtml = `<div style="text-align:center;padding:8px 0;margin-bottom:4px">
-          <div style="font-size:13px;color:#D4A855;font-weight:700;margin-bottom:4px">🌙 Night wake</div>
-          <div style="font-size:22px;font-weight:700;color:#4A3B35;font-family:monospace">${_wakeMins < 1 ? "just now" : _wakeMins+"m awake"}</div>
+          <div style="font-size:13px;color:#E8C97A;font-weight:700;margin-bottom:4px">🌙 Night wake</div>
+          <div style="font-size:22px;font-weight:700;color:#F4EFE6;font-family:monospace">${_wakeMins < 1 ? "just now" : _wakeMins+"m awake"}</div>
+        </div>`;
+      }
+
+      // ── READINESS METER ──────────────────────────────────────────────────
+      //
+      // ⚠️ THE APP HAS BEEN SENDING THIS ALL ALONG AND THE PORTAL THREW IT AWAY.
+      //
+      // families/{bk}.prediction carries a complete four-zone readiness payload:
+      // the window edges and the awake anchor as ABSOLUTE epoch-ms, the state,
+      // the label, and where the marker sits. readiness.dart says in as many
+      // words that "the portal must NOT run its own wake-window maths
+      // (single-source-of-truth rule)" and that it should "render the readiness
+      // card straight from these fields". It never did. It read two strings out
+      // of that payload, ignored the rest, and worked the rest out for itself
+      // from an age band, which is precisely why the app and the portal
+      // disagreed about the same baby at the same moment.
+      //
+      // Absolute times mean the marker ticks client-side without refetching, so
+      // the bar moves in the carer's hand exactly as it does in the parent's.
+      let _readyHtml = "";
+      const _rd = familyContext.prediction || {};
+      if (!activeNap && !_isNightSleep &&
+          Number.isFinite(_rd.awakeSinceMs) && Number.isFinite(_rd.warnEndMs) &&
+          Number.isFinite(_rd.windowStartMs) && Number.isFinite(_rd.windowEndMs)) {
+        const _a = _rd.awakeSinceMs;
+        // The bar runs from waking to a little past the amber edge, so the
+        // coral zone is visible rather than falling off the end.
+        const _span = Math.max(1, (_rd.warnEndMs - _a) * 1.18);
+        const _pct = (ms) => Math.max(0, Math.min(100, ((ms - _a) / _span) * 100));
+        const _g0 = _pct(_rd.windowStartMs), _g1 = _pct(_rd.windowEndMs), _w1 = _pct(_rd.warnEndMs);
+        const _stateLabel = {
+          not_yet: "Not yet",
+          sweet_spot: "Nap window",
+          watch: "Watch for cues",
+          overtired: "Past the window"
+        }[String(_rd.state || "")] || "";
+        const _clock = (ms) => {
+          const d = new Date(ms);
+          return fmt12(String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0"));
+        };
+        _readyHtml = `<div class="ready">
+          <div class="ready-head">
+            <div class="ready-label">${escapeHtml(String(_rd.label || _stateLabel || "Readiness"))}</div>
+            <div class="ready-detail">${escapeHtml(String(_rd.display || ""))}</div>
+          </div>
+          <div class="ready-bar" data-ready-from="${_a}" data-ready-span="${Math.round(_span)}">
+            <div class="ready-zone green" style="left:${_g0}%;width:${Math.max(0,_g1-_g0)}%"></div>
+            <div class="ready-zone amber" style="left:${_g1}%;width:${Math.max(0,_w1-_g1)}%"></div>
+            <div class="ready-zone coral" style="left:${_w1}%;right:0"></div>
+            <div class="ready-marker" style="left:${_pct(Date.now())}%"></div>
+          </div>
+          <div class="ready-scale">
+            <span>Awake ${escapeHtml(_clock(_a))}</span>
+            <span>Window ${escapeHtml(_clock(_rd.windowStartMs))}</span>
+          </div>
+          ${_rd.provenance ? `<div class="ready-note">${escapeHtml(String(_rd.provenance))}</div>` : ""}
         </div>`;
       }
 
@@ -1271,8 +1483,9 @@ function _renderHtml() {
           </div>
         </div>
         ${_timerHtml}
+        ${_readyHtml}
         ${_countdownHtml}
-        ${nextAction?`<div style="padding:10px 12px;background:rgba(255,255,255,0.5);border-radius:12px;font-size:13px;color:#4A3B35;line-height:1.6;margin-top:6px">
+        ${nextAction?`<div style="padding:10px 12px;background:rgba(255,255,255,.055);border-radius:12px;font-size:13px;color:#F4EFE6;line-height:1.6;margin-top:6px">
           <div style="font-size:10px;font-weight:700;color:${statusColor};text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px">👉 What to do</div>
           ${escapeHtml(nextAction)}
         </div>`:""}
@@ -1281,17 +1494,17 @@ function _renderHtml() {
 
     ${/* ── SOOTHING PLAYBOOK ── */""}
     ${familyContext.carerComfort ? `<div class="card" style="border-color:rgba(139,126,200,0.3)">
-      <div class="section-label" style="color:#8B7EC8;margin-bottom:8px">🧸 ${escapeHtml(_name)}'s Soothing Playbook</div>
-      <div style="font-size:13px;color:#4A3B35;line-height:1.7;white-space:pre-line">${escapeHtml(familyContext.carerComfort)}</div>
-      <div style="font-size:10px;color:#A89A90;margin-top:8px;font-style:italic">Written by ${escapeHtml(_name)}'s parents, these are what work specifically for ${escapeHtml(_name)}.</div>
+      <div class="section-label" style="color:#B9A4F0;margin-bottom:8px">🧸 ${escapeHtml(_name)}'s Soothing Playbook</div>
+      <div style="font-size:13px;color:#F4EFE6;line-height:1.7;white-space:pre-line">${escapeHtml(familyContext.carerComfort)}</div>
+      <div style="font-size:10px;color:#ABA39C;margin-top:8px;font-style:italic">Written by ${escapeHtml(_name)}'s parents, these are what work specifically for ${escapeHtml(_name)}.</div>
     </div>` : `<div class="card" style="border-color:rgba(212,168,85,0.3)">
-      <div class="section-label" style="color:#D4A855;margin-bottom:6px">🧸 Soothing Playbook</div>
-      <div style="font-size:13px;color:#6A584E;line-height:1.6">Parents haven't added soothing techniques yet. If ${escapeHtml(_name)} is upset, try: gentle rocking, shushing, offering a dummy, or a walk in the pram.</div>
+      <div class="section-label" style="color:#E8C97A;margin-bottom:6px">🧸 Soothing Playbook</div>
+      <div style="font-size:13px;color:#CFC6BC;line-height:1.6">Parents haven't added soothing techniques yet. If ${escapeHtml(_name)} is upset, try: gentle rocking, shushing, offering a dummy, or a walk in the pram.</div>
     </div>`}
 
     <div class="card" style="padding:14px">
       ${_nightWakePausedAt && _isNightSleep ? `
-      <div style="text-align:center;font-size:12px;color:#8A7F87;font-weight:600;margin-bottom:10px">How did ${escapeHtml(_name)} settle?</div>
+      <div style="text-align:center;font-size:12px;color:#ABA3AE;font-weight:600;margin-bottom:10px">How did ${escapeHtml(_name)} settle?</div>
       <div class="btn-grid">
         <button class="action-btn" data-action="night-settle" data-settle="feed">
           <span class="icon"><img src="./care-assets/feed.webp" alt=""/></span>
@@ -1377,7 +1590,7 @@ function _renderHtml() {
 
     ${/* Medicine banner — shows today's doses so carers know what's been given */
       (familyContext.todayMeds||[]).length ? `<div class="card" style="border-color:rgba(212,168,85,0.3);background:linear-gradient(135deg,rgba(212,168,85,0.06),rgba(212,168,85,0.02))">
-      <div style="font-size:10px;color:#A88848;text-transform:uppercase;letter-spacing:0.1em;font-weight:700;margin-bottom:8px">💊 Medicine today</div>
+      <div style="font-size:10px;color:#E8C97A;text-transform:uppercase;letter-spacing:0.1em;font-weight:700;margin-bottom:8px">💊 Medicine today</div>
       ${(familyContext.todayMeds||[]).map(function(m){
         var _medNameLower = String(m.name||"").toLowerCase();
         var _isP = _medNameLower.match(/paracetamol|calpol|tylenol|acetaminophen/);
@@ -1392,12 +1605,12 @@ function _renderHtml() {
           }
         }
         return '<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-top:1px solid rgba(212,168,85,0.1);font-size:13px">' +
-          '<span style="font-weight:700;color:#4A3B35">' + fmt12(m.time||"") + '</span>' +
-          '<span style="color:#6A584E">' + escapeHtml(m.name||"") + (m.dose ? " (" + escapeHtml(m.dose) + ")" : "") + '</span>' +
-          (_nextSafe ? '<span style="font-size:11px;color:#A88848">' + _nextSafe + '</span>' : '') +
+          '<span style="font-weight:700;color:#F4EFE6">' + fmt12(m.time||"") + '</span>' +
+          '<span style="color:#CFC6BC">' + escapeHtml(m.name||"") + (m.dose ? " (" + escapeHtml(m.dose) + ")" : "") + '</span>' +
+          (_nextSafe ? '<span style="font-size:11px;color:#E8C97A">' + _nextSafe + '</span>' : '') +
           '</div>';
       }).join("")}
-      <div style="font-size:10px;color:#A89A90;margin-top:6px;font-style:italic">Always check with parents before giving any medicine.</div>
+      <div style="font-size:10px;color:#ABA39C;margin-top:6px;font-style:italic">Always check with parents before giving any medicine.</div>
     </div>` : ""}
 
     ${_notesHtml}
@@ -1405,55 +1618,55 @@ function _renderHtml() {
 
     <!-- ═══ DETAILED CARE GUIDE (collapsible) ═══ -->
     <details style="margin-bottom:14px">
-      <summary style="padding:14px 16px;border-radius:14px;background:#FFFDFA;border:1.5px solid #E8DED3;cursor:pointer;font-size:15px;font-weight:700;color:#4A3B35;list-style:none;display:flex;align-items:center;justify-content:space-between;-webkit-user-select:none">
+      <summary style="padding:14px 16px;border-radius:14px;background:#FFFDFA;border:1.5px solid #E8DED3;cursor:pointer;font-size:15px;font-weight:700;color:#F4EFE6;list-style:none;display:flex;align-items:center;justify-content:space-between;-webkit-user-select:none">
         <span>📖 Full Care Guide</span>
-        <span style="font-size:12px;color:#A89A90">tap to expand ▼</span>
+        <span style="font-size:12px;color:#ABA39C">tap to expand ▼</span>
       </summary>
 
-    <div class="card" style="background:#FFF8F2;border:1px solid #F0D0C8;margin-top:10px">
-      <div style="font-size:15px;font-weight:700;color:#C07088;margin-bottom:10px">🍼 Feeding</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:13px;color:#5B4F5F;margin-bottom:10px">
-        ${_t.avgMl ? `<div style="color:#A898AC">Typical amount</div><div style="font-weight:600">~${_t.avgMl}ml per feed</div>` : ""}
-        ${_t.avgFeedsPerDay ? `<div style="color:#A898AC">Typical frequency</div><div style="font-weight:600">~${_t.avgFeedsPerDay} feeds/day</div>` : ""}
-        ${_t.lastFeed ? `<div style="color:#A898AC">Last feed</div><div style="font-weight:600">${fmt12(_t.lastFeed.time)}${safePositiveNumber(_t.lastFeed.amount)?", "+safePositiveNumber(_t.lastFeed.amount)+"ml":""}</div>` : ""}
-        ${_nextFeedStr ? `<div style="color:#A898AC">Next feed around</div><div style="font-weight:600">~${_nextFeedStr}</div>` : ""}
+    <div class="card" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,230,184,.14);margin-top:10px">
+      <div style="font-size:15px;font-weight:700;color:#F2A0B8;margin-bottom:10px">🍼 Feeding</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:13px;color:#E6DFD6;margin-bottom:10px">
+        ${_t.avgMl ? `<div style="color:#B3A9B8">Typical amount</div><div style="font-weight:600">~${_t.avgMl}ml per feed</div>` : ""}
+        ${_t.avgFeedsPerDay ? `<div style="color:#B3A9B8">Typical frequency</div><div style="font-weight:600">~${_t.avgFeedsPerDay} feeds/day</div>` : ""}
+        ${_t.lastFeed ? `<div style="color:#B3A9B8">Last feed</div><div style="font-weight:600">${fmt12(_t.lastFeed.time)}${safePositiveNumber(_t.lastFeed.amount)?", "+safePositiveNumber(_t.lastFeed.amount)+"ml":""}</div>` : ""}
+        ${_nextFeedStr ? `<div style="color:#B3A9B8">Next feed around</div><div style="font-weight:600">~${_nextFeedStr}</div>` : ""}
       </div>
-      <div style="font-size:12px;color:#7A6B7E;line-height:1.6">💡 <strong>Feed every ${_weeks&&_weeks<8?"2–3":"3–4"} hours</strong>, or sooner if ${escapeHtml(_name)} shows hunger cues (rooting, lip-smacking, hand-to-mouth). Follow ${escapeHtml(_name)}'s lead.</div>
+      <div style="font-size:12px;color:#B6AEB8;line-height:1.6">💡 <strong>Feed every ${_weeks&&_weeks<8?"2–3":"3–4"} hours</strong>, or sooner if ${escapeHtml(_name)} shows hunger cues (rooting, lip-smacking, hand-to-mouth). Follow ${escapeHtml(_name)}'s lead.</div>
     </div>
 
     <!-- ═══ NAPPIES SECTION ═══ -->
-    <div class="card" style="background:#FFF8F2;border:1px solid #F0D0C8">
-      <div style="font-size:15px;font-weight:700;color:#C07088;margin-bottom:10px">👶 Nappies</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:13px;color:#5B4F5F;margin-bottom:10px">
-        <div style="color:#A898AC">Today's nappies</div><div style="font-weight:600">${_t.nappyCount||0} (${_t.wetCount||0} wet)</div>
-        ${_t.lastPoop ? `<div style="color:#A898AC">Last nappy</div><div style="font-weight:600">${fmt12(_t.lastPoop.time)}, ${escapeHtml(_t.lastPoop.poopType||"wet")}</div>` : ""}
-        <div style="color:#A898AC">Hydration target</div><div style="font-weight:600">${_t.wetCount||0}/6 wet nappies</div>
+    <div class="card" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,230,184,.14)">
+      <div style="font-size:15px;font-weight:700;color:#F2A0B8;margin-bottom:10px">👶 Nappies</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:13px;color:#E6DFD6;margin-bottom:10px">
+        <div style="color:#B3A9B8">Today's nappies</div><div style="font-weight:600">${_t.nappyCount||0} (${_t.wetCount||0} wet)</div>
+        ${_t.lastPoop ? `<div style="color:#B3A9B8">Last nappy</div><div style="font-weight:600">${fmt12(_t.lastPoop.time)}, ${escapeHtml(_t.lastPoop.poopType||"wet")}</div>` : ""}
+        <div style="color:#B3A9B8">Hydration target</div><div style="font-weight:600">${_t.wetCount||0}/6 wet nappies</div>
       </div>
-      <div style="font-size:12px;color:#7A6B7E;line-height:1.5">NHS guidance: 6+ wet nappies in 24h indicates adequate hydration. Check nappy every 2-3 hours.</div>
+      <div style="font-size:12px;color:#B6AEB8;line-height:1.5">NHS guidance: 6+ wet nappies in 24h indicates adequate hydration. Check nappy every 2-3 hours.</div>
     </div>
 
     <!-- ═══ SLEEP & ROUTINE ═══ -->
-    <div class="card" style="background:#F0FFF4;border:1px solid #D0E8D8">
-      <div style="font-size:15px;font-weight:700;color:#C07088;margin-bottom:10px">😴 Sleep & Routine</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:13px;color:#5B4F5F;margin-bottom:10px">
-        ${_wakeEntry ? `<div style="color:#A898AC">Woke up today</div><div style="font-weight:600">${fmt12(_wakeEntry.time)}</div>` : ""}
-        ${_ww ? `<div style="color:#A898AC">Wake window</div><div style="font-weight:600">${_ww.label} between sleeps${_wwIsPersonal?" <span style='font-size:10px;color:#6fa898'>✓ personal</span>":""}</div>` : ""}
-        ${_lastNapStr ? `<div style="color:#A898AC">Last nap</div><div style="font-weight:600">${_lastNapStr}${_lastNapDur?" ("+_lastNapDur+"m)":""}</div>` : ""}
+    <div class="card" style="background:rgba(142,214,168,.09);border:1px solid rgba(142,214,168,.28)">
+      <div style="font-size:15px;font-weight:700;color:#F2A0B8;margin-bottom:10px">😴 Sleep & Routine</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:13px;color:#E6DFD6;margin-bottom:10px">
+        ${_wakeEntry ? `<div style="color:#B3A9B8">Woke up today</div><div style="font-weight:600">${fmt12(_wakeEntry.time)}</div>` : ""}
+        ${_ww ? `<div style="color:#B3A9B8">Wake window</div><div style="font-weight:600">${_ww.label} between sleeps${_wwIsPersonal?" <span style='font-size:10px;color:#8ED6A8'>✓ personal</span>":""}</div>` : ""}
+        ${_lastNapStr ? `<div style="color:#B3A9B8">Last nap</div><div style="font-weight:600">${_lastNapStr}${_lastNapDur?" ("+_lastNapDur+"m)":""}</div>` : ""}
       </div>
-      <div style="font-size:12px;color:#7A6B7E;line-height:1.6">Watch for tired cues: yawning, rubbing eyes, looking away, fussing. Put ${escapeHtml(_name)} down when you see these signs, don't wait until they're overtired.</div>
+      <div style="font-size:12px;color:#B6AEB8;line-height:1.6">Watch for tired cues: yawning, rubbing eyes, looking away, fussing. Put ${escapeHtml(_name)} down when you see these signs, don't wait until they're overtired.</div>
     </div>
 
     <!-- ═══ SAFE SLEEP ESSENTIALS ═══ -->
-    <div class="card" style="background:#F0FFF4;border:1px solid #D0E8D8">
+    <div class="card" style="background:rgba(142,214,168,.09);border:1px solid rgba(142,214,168,.28)">
       <!-- safe-sleep.webp was drawn for this card and shipped unreferenced, so
            the one card in the portal that exists for a baby's safety was the
            one wearing a stock emoji while 32KB of artwork for it sat unused. -->
       <div style="display:flex;align-items:center;gap:9px;margin-bottom:6px">
         <img src="./care-assets/safe-sleep.webp" alt="" style="width:34px;height:34px;object-fit:contain;flex:none"/>
-        <div style="font-size:15px;font-weight:700;color:#C07088">Safe Sleep Essentials</div>
+        <div style="font-size:15px;font-weight:700;color:#F2A0B8">Safe Sleep Essentials</div>
       </div>
-      <div style="font-size:14px;font-style:italic;color:#6fa898;margin-bottom:10px">Based on The Lullaby Trust safer sleep guidance</div>
-      <div style="font-size:13px;color:#5B4F5F;line-height:1.8">
+      <div style="font-size:14px;font-style:italic;color:#8ED6A8;margin-bottom:10px">Based on The Lullaby Trust safer sleep guidance</div>
+      <div style="font-size:13px;color:#E6DFD6;line-height:1.8">
         ✅ Always on their <strong>back</strong>, for every sleep, day and night<br>
         ✅ <strong>Clear cot</strong>, firm, flat mattress only. No pillows, toys, bumpers, or loose bedding<br>
         ✅ <strong>Same room as you</strong>, stay in the room while ${escapeHtml(_name)} sleeps<br>
@@ -1466,9 +1679,9 @@ function _renderHtml() {
     </div>
 
     <!-- ═══ IF BABY CRIES ═══ -->
-    <div class="card" style="background:#FFF8F2;border:1px solid #F0D0C8">
-      <div style="font-size:15px;font-weight:700;color:#C07088;margin-bottom:10px">💝 If ${escapeHtml(_name)} Cries</div>
-      <div style="font-size:13px;color:#5B4F5F;line-height:1.8">
+    <div class="card" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,230,184,.14)">
+      <div style="font-size:15px;font-weight:700;color:#F2A0B8;margin-bottom:10px">💝 If ${escapeHtml(_name)} Cries</div>
+      <div style="font-size:13px;color:#E6DFD6;line-height:1.8">
         1. <strong>Check basics</strong>, hungry? nappy? too hot/cold?<br>
         2. <strong>Tired?</strong>, check wake window above. Dim lights, quiet voice<br>
         3. <strong>Wind</strong>, try burping over shoulder or gentle bicycle legs<br>
@@ -1478,9 +1691,9 @@ function _renderHtml() {
     </div>
 
     <!-- ═══ IF YOU'RE OVERWHELMED ═══ -->
-    <div class="card" style="background:#F5F0F8;border:1px solid #D4C4E0">
-      <div style="font-size:15px;font-weight:700;color:#8868A0;margin-bottom:10px">💜 If you're feeling overwhelmed</div>
-      <div style="font-size:13px;color:#5B4F5F;line-height:1.7">
+    <div class="card" style="background:rgba(185,139,240,.10);border:1px solid rgba(185,139,240,.28)">
+      <div style="font-size:15px;font-weight:700;color:#C9A8E8;margin-bottom:10px">💜 If you're feeling overwhelmed</div>
+      <div style="font-size:13px;color:#E6DFD6;line-height:1.7">
         Crying is hard to sit with. If you feel yourself getting tense, frustrated, or tearful, that's a signal, not a failure.
         <br><br>
         <strong>It's always OK to:</strong><br>
@@ -1488,20 +1701,20 @@ function _renderHtml() {
         • Walk away for a minute or two, make a cup of tea, take a few breaths<br>
         • Come back when you feel steadier. ${escapeHtml(_name)} is safe in the cot.
         <br><br>
-        <strong style="color:#8868A0">Never shake a baby.</strong> Putting baby down and stepping away is always the right choice if you need a moment.
+        <strong style="color:#C9A8E8">Never shake a baby.</strong> Putting baby down and stepping away is always the right choice if you need a moment.
       </div>
     </div>
 
     <!-- ═══ EMERGENCY & CONTACTS ═══ -->
-    <div class="card" style="background:#f8f0f0;border:2px solid #E8B4C0">
-      <div style="font-size:15px;font-weight:700;color:#C07088;margin-bottom:10px">📞 Emergency & Contacts</div>
+    <div class="card" style="background:rgba(240,90,126,.10);border:2px solid rgba(240,90,126,.42)">
+      <div style="font-size:15px;font-weight:700;color:#F2A0B8;margin-bottom:10px">📞 Emergency & Contacts</div>
       ${_contactsHtml ? `<div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #f0d0d0">${_contactsHtml}</div>` : ""}
-      <div style="font-size:13px;color:#5B4F5F;line-height:1.8">
-        <strong>Emergency:</strong> <span style="color:#e8574a;font-weight:700">${_emergNum}</span><br>
+      <div style="font-size:13px;color:#E6DFD6;line-height:1.8">
+        <strong>Emergency:</strong> <span style="color:#FF9A8A;font-weight:700">${_emergNum}</span><br>
         <strong>Non-emergency:</strong> ${_nonEmerg}<br>
         <strong>If concerned:</strong> Contact ${_hvTitle}
       </div>
-      <div style="font-size:14px;color:#A898AC;margin-top:8px;line-height:1.5">If ${escapeHtml(_name)} is unresponsive, has difficulty breathing, has a high temperature (38°C+ in under 3 months), a rash that doesn't fade under pressure, or you're worried, please call ${_emergNum}.</div>
+      <div style="font-size:14px;color:#B3A9B8;margin-top:8px;line-height:1.5">If ${escapeHtml(_name)} is unresponsive, has difficulty breathing, has a high temperature (38°C+ in under 3 months), a rash that doesn't fade under pressure, or you're worried, please call ${_emergNum}.</div>
     </div>
 
     <div class="card">
@@ -1544,7 +1757,7 @@ function _renderHtml() {
     </div>` : ""}
     <div class="card">
       <div class="section-label">Recent entries</div>
-      <div id="recent-list"><div style="font-size:13px;color:#A89A90;text-align:center;padding:8px">Nothing logged yet</div></div>
+      <div id="recent-list"><div style="font-size:13px;color:#ABA39C;text-align:center;padding:8px">Nothing logged yet</div></div>
     </div>
     ${/* Floating call button */""}
     ${(()=>{ const _href = safeTelHref((familyContext.emergencyContacts.find(c=>c&&c.phone)||{}).phone||""); return _href ? `<a class="fab-call" href="${escapeHtml(_href)}" title="Call parent">📞</a>` : ""; })()}
@@ -1638,7 +1851,7 @@ function updateRecentList() {
   const list = document.getElementById("recent-list");
   if (!list) return;
   if (recentEntries.length === 0) {
-    list.innerHTML = `<div style="font-size:13px;color:#A89A90;text-align:center;padding:8px">Nothing logged yet</div>`;
+    list.innerHTML = `<div style="font-size:13px;color:#ABA39C;text-align:center;padding:8px">Nothing logged yet</div>`;
     return;
   }
   const icons = { feed: "🍼", poop: "💩", nap: "😴", wake: "☀️" };
