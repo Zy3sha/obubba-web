@@ -1069,7 +1069,17 @@ function openSheet(type) {
     // Re-render immediately so timer disappears and awake time recalculates
     setTimeout(()=>{ try{_mergeCarerEntries();_renderHtml();}catch{} }, 100);
   } else if (type === "bedtime") {
-    logEntry({type:"sleep", night:false, note:"Bedtime · logged by caregiver"});
+    // ⚠️ THIS USED TO WRITE NO `start`, AND THE APP CANNOT SEE A BEDTIME WITHOUT ONE.
+    //
+    // Owner, 15 Oct 2026: "they should mirror each other so if bedtime is
+    // logged in app it should show on carer and vice versa". The vice versa
+    // half did not work. openSleepTimerOf and _sleepSignature both require
+    // startMin, so a carer's bedtime ran no timer on the parent's clock, no
+    // Live Activity, and never flipped the sleep state that pushes the mirror.
+    // A nap from this page has always written `start`. Bedtime never did.
+    const _bedAt = nowTime();
+    logEntry({type:"sleep", night:false, start:_bedAt, time:_bedAt,
+              note:"Bedtime · logged by caregiver"});
   } else if (type === "note") {
     inner = `
       <div class="sheet-inner">
@@ -1336,6 +1346,12 @@ function _renderHtml() {
     ? null
     : (_findActiveNap(_allEntries, false) || _findActiveNap(recentEntries, true));
   const _isNightSleep = isOpenNightSleep(_allEntries, _bedEntry, _nowMins);
+  // A bedtime that has been logged and not yet ended. _isNightSleep is a
+  // DERIVED answer that can be false while one exists (a bedtime logged before
+  // 4pm, say), and whenever it is false this page offered "Bedtime" again. The
+  // carer tapping it a second time is how Oliver got two bedtimes on 15 Oct.
+  const _bedLogged = !!_bedEntry &&
+    !(_bedEntry.end && _bedEntry.end !== bedStart(_bedEntry));
   const _bedtimeMins = 19*60; // 7pm, typical bedtime cutoff
   const _nightCutoff = 20*60; // 8pm, after this, baby is winding down; no more feed/nap suggestions
   const _lastFeedAgo = _t.lastFeed ? agoMin(_t.lastFeed.time) : null;
@@ -1793,7 +1809,7 @@ function _renderHtml() {
           <span class="icon"><img src="./care-assets/sleep.webp" alt=""/></span>
           <span class="label">Nap Ended</span>
         </button>
-        ` : _isNightSleep ? `
+        ` : (_isNightSleep || _bedLogged) ? `
         <button class="action-btn wake-night" data-action="wake">
           <span class="icon"><img src="./care-assets/sleep.webp" alt=""/></span>
           <span class="label">Night Wake</span>
@@ -1827,6 +1843,11 @@ function _renderHtml() {
         <button class="action-btn" data-action="wake">
           <span class="icon"><img src="./care-assets/sleep.webp" alt=""/></span>
           <span class="label">Baby Woke</span>
+        </button>
+        ` : _bedLogged ? `
+        <button class="action-btn wake-night" data-action="wake">
+          <span class="icon"><img src="./care-assets/sleep.webp" alt=""/></span>
+          <span class="label">Night Wake</span>
         </button>
         ` : `
         <button class="action-btn" data-action="bedtime">
