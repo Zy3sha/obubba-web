@@ -193,9 +193,10 @@
   .hero-row{display:flex;align-items:center;gap:14px}
   .hero-photo{width:76px;height:76px;border-radius:50%;object-fit:cover;flex:none;
     border:3px solid rgba(237,195,109,.65);box-shadow:0 6px 18px rgba(0,0,0,.35)}
-  .hero-pill{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:5px 12px;
+  .hero-pill{display:inline-flex;align-items:center;gap:6px;margin-top:9px;padding:5px 13px;
     border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(237,195,109,.35);
-    font-size:12px;color:#f3e6c8;font-weight:600}
+    font-size:12px;color:#f3e6c8;font-weight:600;white-space:nowrap}
+  .caring-banner .hero-row>div{min-width:0}
 
   /* A row inside a two-column grid is tight at 390px, so everything that can
      shrink does: the label truncates rather than pushing the tile wider. */
@@ -1203,7 +1204,10 @@ function _renderHtml() {
   $app.innerHTML = `
     <div class="header">
       <div class="header-left">
-        ${_babyPhotoSrc ? `<img class="header-photo" src="${escapeHtml(_babyPhotoSrc)}" alt="${escapeHtml(_name)}" data-hide-on-error="baby-photo"/>` : ""}
+        ${/* ⚠️ The photo also sits in the hero card immediately below, so it
+             was on the screen twice, forty pixels apart. The hero is where the
+             reference puts it and where it is big enough to be a face rather
+             than a bullet. */""}
         <div>
           <div class="header-name">${escapeHtml(_name)}</div>
           <div class="header-age">${_ageStr||"Baby"}</div>
@@ -1219,8 +1223,12 @@ function _renderHtml() {
         ${_babyPhotoSrc ? `<img class="hero-photo" src="${escapeHtml(_babyPhotoSrc)}" alt="${escapeHtml(_name)}" data-hide-on-error="baby-photo"/>` : ""}
         <div style="min-width:0">
           <div class="title">Today with ${escapeHtml(_name)}</div>
-          <div class="text">Everything you need for a calm day together.</div>
-          <div class="hero-pill">🔒 Shared by their parent · updates live</div>
+          ${/* ⚠️ This was "Everything you need for a calm day together", which
+               is a greeting, not information. The one thing a carer wants
+               confirmed when they open the link is that they are in the right
+               place, looking after the right baby, with the parent watching. */""}
+          <div class="text">You're caring for ${escapeHtml(_name)}. Anything you log appears on their parent's phone straight away.</div>
+          <div class="hero-pill">🔒 Shared by their parent</div>
         </div>
       </div>
     </div>
@@ -1447,23 +1455,7 @@ function _renderHtml() {
       </div>`;
     })()}
 
-    ${/* ── SOOTHING PLAYBOOK ── */""}
-    ${familyContext.carerComfort ? `<div class="card" style="border-color:rgba(139,126,200,0.3)">
-      <div class="section-label" style="color:#8B7EC8;margin-bottom:8px">🧸 ${escapeHtml(_name)}'s Soothing Playbook</div>
-      <div style="font-size:13px;color:#4A3B35;line-height:1.7;white-space:pre-line">${escapeHtml(familyContext.carerComfort)}</div>
-      <div style="font-size:10px;color:#6E645C;margin-top:8px;font-style:italic">Written by ${escapeHtml(_name)}'s parents, these are what work specifically for ${escapeHtml(_name)}.</div>
-    </div>` : `<div class="card" style="border-color:rgba(212,168,85,0.3)">
-      <div class="section-label" style="color:#8A6A1F;margin-bottom:6px">🧸 Soothing Playbook</div>
-      <div style="font-size:13px;color:#6A584E;line-height:1.6">Parents haven't added soothing techniques yet. If ${escapeHtml(_name)} is upset, try: gentle rocking, shushing, offering a dummy, or a walk in the pram.</div>
-    </div>`}
 
-    ${(() => {
-      const first = (familyContext.emergencyContacts || [])
-        .filter(c => c && c.phone && String(c.phone).trim())[0];
-      return `
-      ${first ? `<a class="big-btn call" href="tel:${escapeHtml(String(first.phone).replace(/[^0-9+]/g,""))}">📞 Call ${escapeHtml(first.name || "their parent")}</a>` : ""}
-      <a class="big-btn emerg" href="#emergency">🛟 Help &amp; emergency</a>`;
-    })()}
 
     <div class="card" style="padding:14px">
       ${_nightWakePausedAt && _isNightSleep ? `
@@ -1578,6 +1570,24 @@ function _renderHtml() {
 
     ${_notesHtml}
     ${_comfortHtml}
+
+    ${/* ── SOOTHING PLAYBOOK ── */""}
+    ${familyContext.carerComfort ? `<div class="card" style="border-color:rgba(139,126,200,0.3)">
+      <div class="section-label" style="color:#8B7EC8;margin-bottom:8px">🧸 ${escapeHtml(_name)}'s Soothing Playbook</div>
+      <div style="font-size:13px;color:#4A3B35;line-height:1.7;white-space:pre-line">${escapeHtml(familyContext.carerComfort)}</div>
+      <div style="font-size:10px;color:#6E645C;margin-top:8px;font-style:italic">Written by ${escapeHtml(_name)}'s parents, these are what work specifically for ${escapeHtml(_name)}.</div>
+    </div>` : `<div class="card" style="border-color:rgba(212,168,85,0.3)">
+      <div class="section-label" style="color:#8A6A1F;margin-bottom:6px">🧸 Soothing Playbook</div>
+      <div style="font-size:13px;color:#6A584E;line-height:1.6">Parents haven't added soothing techniques yet. If ${escapeHtml(_name)} is upset, try: gentle rocking, shushing, offering a dummy, or a walk in the pram.</div>
+    </div>`}
+
+    ${(() => {
+      const first = (familyContext.emergencyContacts || [])
+        .filter(c => c && c.phone && String(c.phone).trim())[0];
+      return `
+      ${first ? `<a class="big-btn call" href="tel:${escapeHtml(String(first.phone).replace(/[^0-9+]/g,""))}">📞 Call ${escapeHtml(first.name || "their parent")}</a>` : ""}
+      <a class="big-btn emerg" href="#emergency">🛟 Help &amp; emergency</a>`;
+    })()}
 
     <!-- ═══ DETAILED CARE GUIDE (collapsible) ═══ -->
     <details style="margin-bottom:14px">
