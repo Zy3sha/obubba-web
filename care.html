@@ -595,8 +595,31 @@ function isSettledNightWakeEntry(e) {
 function recentlySettledNightWake() {
   return Number.isFinite(_nightWakeSettledAt) && (Date.now() - _nightWakeSettledAt) < 15 * 60 * 1000;
 }
+/// When a bedtime actually began.
+///
+/// ⚠️ THE APP AND THE PORTAL WERE COUNTING FROM DIFFERENT MINUTES.
+///
+/// Owner, 15 Oct 2026, with a photo: the Dynamic Island read 15:03 and this
+/// page read 10:03, five minutes apart, at the same instant. A bedtime entry
+/// carries BOTH `start` (19:52, when he went down) and `time` (19:57). The app
+/// counts from `startMin ?? timeMin` (track_providers.dart, openSleepTimerOf);
+/// this page read `.time` and so started its clock five minutes late. The nap
+/// branch had always used `.start`. Only bedtime was wrong.
+const bedStart = (e) => (e && (e.start || e.time)) || null;
+
+/// The bedtime to render, mirroring openSleepTimerOf: it scans REVERSED and
+/// skips an entry with no start, which is why the app ignored the carer's
+/// 20:05 "Bedtime" tap and kept counting the parent's 19:52 one. A carer-only
+/// bedtime has no `start` at all, so it is still used when nothing better is
+/// there, otherwise the page would show no bedtime for a carer who logged it.
+function pickBedEntry(entries) {
+  const beds = safeEntryList(entries).filter(e => e && e.type === "sleep" && !e.night);
+  for (let i = beds.length - 1; i >= 0; i--) if (beds[i].start) return beds[i];
+  return beds.length ? beds[beds.length - 1] : undefined;
+}
+
 function morningWakeClosesBed(entries, bedEntry) {
-  const bedMins = clockMins(bedEntry && bedEntry.time);
+  const bedMins = clockMins(bedStart(bedEntry));
   if (bedMins == null) return false;
   return safeEntryList(entries).some(e => {
     if (!isMorningWakeEntry(e)) return false;
@@ -605,7 +628,7 @@ function morningWakeClosesBed(entries, bedEntry) {
   });
 }
 function isOpenNightSleep(entries, bedEntry, nowMins) {
-  const bedMins = clockMins(bedEntry && bedEntry.time);
+  const bedMins = clockMins(bedStart(bedEntry));
   if (bedMins == null) return false;
   if (morningWakeClosesBed(entries, bedEntry)) return false;
   const bedtimeIsEvening = bedMins >= 16 * 60;
@@ -1288,7 +1311,7 @@ function _renderHtml() {
   const _nowMins = _nowD.getHours()*60 + _nowD.getMinutes();
   // Baby state — computed once for use in status card + action buttons
   const _allEntries = (_t.entries || []);
-  const _bedEntry = _allEntries.find(e=>e.type==="sleep"&&!e.night);
+  const _bedEntry = pickBedEntry(_allEntries);
   // ⚠️ THE PORTAL USED TO INVENT A NAP, AND THEN REFUSE TO END IT.
   //
   // Owner, 15 Oct 2026: "the timers arent synced and when nap ends in app it
@@ -1485,7 +1508,7 @@ function _renderHtml() {
     ${(()=>{
       const entries = _t.entries || [];
       const nowM = _nowMins;
-      const bedEntry = entries.find(e=>e.type==="sleep"&&!e.night);
+      const bedEntry = pickBedEntry(entries);
       // One rule, shared with _findActiveNap above and with the merge filter:
       // the parent's app decides whether the baby is asleep, and a carer's flag
       // never outranks it. See napIsOngoing.
@@ -1582,13 +1605,13 @@ function _renderHtml() {
           _timerHtml = `<div class="status-timer" data-timer-start="${escapeHtml(activeNap.start)}" data-timer-type="nap" style="color:${statusColor}">${_fmtNap}</div>`;
         }
       } else if (_isNightSleep && _bedEntry) {
-        const _bedStartM = clockMins(_bedEntry.time);
+        const _bedStartM = clockMins(bedStart(_bedEntry));
         if(_bedStartM != null){
           let _bedElapSec = _nowSec - (_bedStartM*60);
           if(_bedElapSec<0) _bedElapSec+=86400;
           const _fmtBed = (()=>{ const h=Math.floor(_bedElapSec/3600),m=Math.floor((_bedElapSec%3600)/60),s=_bedElapSec%60; return h>0?h+":"+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0"):m+":"+String(s).padStart(2,"0"); })();
-          _timerHtml = `<div class="status-timer" data-timer-start="${escapeHtml(_bedEntry.time)}" data-timer-type="bed" style="color:${statusColor}">${_fmtBed}</div>
-          <div style="font-size:11px;color:#6E645C;text-align:center;margin-bottom:4px">Bedtime ${fmt12(_bedEntry.time)}</div>`;
+          _timerHtml = `<div class="status-timer" data-timer-start="${escapeHtml(bedStart(_bedEntry))}" data-timer-type="bed" style="color:${statusColor}">${_fmtBed}</div>
+          <div style="font-size:11px;color:#6E645C;text-align:center;margin-bottom:4px">Bedtime ${fmt12(bedStart(_bedEntry))}</div>`;
         }
       }
       // Night wake override — when carer has paused the timer
