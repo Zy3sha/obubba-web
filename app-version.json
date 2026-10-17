@@ -1,13 +1,13 @@
 {
-  "_comment": "Read by the app's fetchUpdateStatus() (lib/core/update_check.dart). ⚠️ THIS MUST MATCH WHAT THE STORES ACTUALLY SERVE, not what has been built or submitted. It said 211/3.2.35 on 2026-10-13 while both stores were still serving 210/3.2.34, so every user on the current build was told an update was waiting and tapped through to the version they already had. iOS does NOT save you: its Apple-lookup cross-check only RAISES a stale value, it never lowers one. Bump it when a release is LIVE and verified in the store, never when it is built or submitted. Android has no other source of truth, so a stale file is the only thing telling an Android user anything. Do NOT set minBuild unless you intend to hard-block older builds from opening.",
+  "_comment": "Read by the app's fetchUpdateStatus() (lib/core/update_check.dart). \u26a0\ufe0f THIS MUST MATCH WHAT THE STORES ACTUALLY SERVE, not what has been built or submitted. It said 211/3.2.35 on 2026-10-13 while both stores were still serving 210/3.2.34, so every user on the current build was told an update was waiting and tapped through to the version they already had. iOS does NOT save you: its Apple-lookup cross-check only RAISES a stale value, it never lowers one. Bump it when a release is LIVE and verified in the store, never when it is built or submitted. Android has no other source of truth, so a stale file is the only thing telling an Android user anything. Do NOT set minBuild unless you intend to hard-block older builds from opening.",
   "ios": {
     "latestBuild": 214,
     "latestVersion": "3.2.38",
     "url": "https://apps.apple.com/gb/app/obubba/id6760968757"
   },
   "android": {
-    "latestBuild": 214,
-    "latestVersion": "3.2.38",
+    "latestBuild": 217,
+    "latestVersion": "3.2.41",
     "url": "https://play.google.com/store/apps/details?id=com.obubba.app"
   }
 }
