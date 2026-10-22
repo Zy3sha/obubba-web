@@ -1114,6 +1114,15 @@
         if (!source && params.has("ttclid")) source = "tiktok";
         if (!source && params.has("msclkid")) source = "bing";
         if (!source && refSource) source = refSource;
+        // In-app browsers often send no referrer, so read the app from the user agent.
+        var uaSource = "";
+        try {
+          var ua = navigator.userAgent || "";
+          if (/Instagram/i.test(ua)) uaSource = "instagram";
+          else if (/FBAN|FBAV|FB_IAB/i.test(ua)) uaSource = "facebook";
+          else if (/musical_ly|BytedanceWebview|TikTok/i.test(ua)) uaSource = "tiktok";
+        } catch (e) {}
+        if (!source && uaSource) { source = uaSource; refSource = uaSource; }
 
         if (!medium && hasClickId) medium = source === "google" || source === "bing" ? "paid_search" : "paid_social";
         if (!medium && refSource) medium = "referral";
