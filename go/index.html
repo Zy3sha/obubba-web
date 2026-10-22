@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>OBubba | Get the app</title>
+  <meta name="description" content="Get OBubba free on the App Store and Google Play. The baby app that learns your baby's own rhythm and suggests naps and bedtime."/>
+  <meta name="robots" content="noindex, follow"/>
+  <link rel="canonical" href="https://obubba.com/"/>
+  <meta property="og:title" content="OBubba | Get the app"/>
+  <meta property="og:image" content="https://obubba.com/og-image.png"/>
+  <meta name="theme-color" content="#020b1c"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    var __obConsent = 'denied';
+    try { if (localStorage.getItem('ob_analytics_consent') === 'granted') __obConsent = 'granted'; } catch (e) {}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: __obConsent
+    });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'allow_ad_personalization_signals', false);
+    gtag('js', new Date());
+    gtag('config', 'G-Y7CHSL1YHZ');
+    document.addEventListener('DOMContentLoaded', function () {
+      var stored = null;
+      try { stored = localStorage.getItem('ob_analytics_consent'); } catch (e) {}
+      if (stored === 'granted' || stored === 'denied') return;
+      var bar = document.createElement('div');
+      bar.className = 'ob-consent';
+      bar.setAttribute('role', 'dialog');
+      bar.setAttribute('aria-label', 'Analytics cookie choice');
+      bar.innerHTML = '<p>We use privacy-first analytics to understand how families find OBubba. Accept analytics cookies, or decline and the site stays completely cookieless. See our <a href="/privacy.html">Privacy Policy</a>.</p><div class="ob-consent-btns"><button type="button" data-ob-decline>Decline</button><button type="button" data-ob-accept>Accept</button></div>';
+      document.body.appendChild(bar);
+      function choose(v) {
+        try { localStorage.setItem('ob_analytics_consent', v); } catch (e) {}
+        gtag('consent', 'update', { analytics_storage: v });
+        bar.remove();
+      }
+      bar.querySelector('[data-ob-accept]').addEventListener('click', function () { choose('granted'); });
+      bar.querySelector('[data-ob-decline]').addEventListener('click', function () { choose('denied'); });
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7CHSL1YHZ"></script>
+  <style>
+    .ob-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:#fff;color:#2b2030;border:1px solid rgba(80,50,80,.18);border-radius:14px;box-shadow:0 18px 50px rgba(55,38,56,.22);padding:16px 18px;font:14px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+    .ob-consent p{margin:0 0 12px}
+    .ob-consent a{color:#b8618f;text-decoration:underline}
+    .ob-consent-btns{display:flex;gap:10px;justify-content:flex-end}
+    .ob-consent button{cursor:pointer;border-radius:10px;padding:9px 18px;font:600 14px Inter,system-ui,sans-serif;border:1px solid rgba(80,50,80,.25);background:#f4eef3;color:#2b2030}
+    .ob-consent [data-ob-accept]{background:#b8618f;color:#fff;border-color:#b8618f}
+    @media (prefers-color-scheme:dark){.ob-consent{background:#241b28;color:#f3e9f0;border-color:rgba(255,255,255,.14)}.ob-consent button{background:#3a2c40;color:#f3e9f0}.ob-consent [data-ob-accept]{background:#d98cb6;color:#241019;border-color:#d98cb6}}
+  </style>
+  <style>
+    :root{--ink:#f5efe6;--muted:#b9c2d6;--gold:#e9c46a;--gold-bright:#ffe6a8;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.12)}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%}
+    body{background:radial-gradient(circle at 50% -5%,rgba(33,57,112,.55),transparent 34rem),linear-gradient(180deg,#020814 0%,#06142d 55%,#020b1d 100%);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.45}
+    @font-face{font-family:"OBubba Script";src:url("/Parisienne-Regular.ttf") format("truetype");font-display:swap}
+    main{max-width:480px;margin:0 auto;padding:28px 16px 48px;text-align:center}
+    .mascot{width:92px;height:92px;border-radius:50%;box-shadow:0 0 0 3px rgba(233,196,106,.35),0 14px 40px rgba(0,0,0,.45)}
+    .brand{font-family:"OBubba Script",Georgia,serif;font-size:46px;line-height:1;margin:10px 0 4px;color:var(--gold-bright)}
+    .tag{margin:0 0 6px;font-size:16px;color:var(--ink)}
+    .sub{margin:0 0 22px;font-size:14px;color:var(--muted)}
+    .cta{display:block;padding:17px 18px;border-radius:16px;background:linear-gradient(180deg,#ffe6a8,#e9c46a);color:#1a1405;font-weight:800;font-size:18px;text-decoration:none;box-shadow:0 10px 30px rgba(233,196,106,.25)}
+    .cta small{display:block;font-weight:600;font-size:12.5px;opacity:.75;margin-top:2px}
+    h2{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:30px 0 12px;font-weight:800}
+    .topics{display:grid;gap:10px}
+    .topic{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;background:var(--card);border:1px solid var(--line);color:var(--ink);text-decoration:none;text-align:left;font-size:15.5px;font-weight:600}
+    .topic span.e{font-size:22px;width:28px;text-align:center;flex:none}
+    .topic.hot{border-color:rgba(233,196,106,.7);background:rgba(233,196,106,.12)}
+    .foot{margin-top:28px;font-size:12.5px;color:var(--muted)}
+    .foot a{color:var(--muted)}
+  </style>
+</head>
+<body>
+<main>
+  <img class="mascot" src="/obubba-happy.png" alt="OBubba crowned baby" width="92" height="92"/>
+  <div class="brand">OBubba</div>
+  <p class="tag">The baby app that learns your baby's own rhythm 🌙</p>
+  <p class="sub">Log a few sleeps and feeds and OBubba starts suggesting naps and bedtime for <em>your</em> baby.</p>
+
+  <a class="cta js-go" data-topic="sleep_rhythm" href="https://apps.apple.com/app/obubba-baby-sleep-tracker/id6760968757">Get OBubba free<small>App Store and Google Play</small></a>
+
+  <h2>Pick what you need help with</h2>
+  <div class="topics">
+    <a class="topic js-go" data-topic="sleep_rhythm" href="#"><span class="e">😴</span>Naps and sleep by age</a>
+    <a class="topic js-go" data-topic="sleep_consultant" href="#"><span class="e">🌅</span>Night wakes and early mornings</a>
+    <a class="topic js-go" data-topic="newborn" href="#"><span class="e">👶</span>Newborn days and nights</a>
+    <a class="topic js-go" data-topic="sleep_training" href="#"><span class="e">🌙</span>Gentle sleep training</a>
+    <a class="topic js-go" data-topic="breastfeeding" href="#"><span class="e">🍼</span>Feeding and pumping</a>
+    <a class="topic js-go" data-topic="teething" href="#"><span class="e">🦷</span>Teething</a>
+    <a class="topic js-go" data-topic="colic" href="#"><span class="e">🤍</span>Crying and unsettled evenings</a>
+    <a class="topic js-go" data-topic="weaning" href="#"><span class="e">🥕</span>Starting solids</a>
+    <a class="topic js-go" data-topic="family" href="#"><span class="e">🤝</span>Sharing nights with your partner</a>
+    <a class="topic js-go" data-topic="luna" href="#"><span class="e">✨</span>Ask Luna, your sleep guide</a>
+  </div>
+
+  <p class="foot"><a href="/">obubba.com</a> · <a href="/privacy.html">Privacy</a></p>
+</main>
+<script>
+(function () {
+  // Apple provider token from App Store Connect (Analytics > Campaigns). Until it is set, Apple ignores ct,
+  // but the Custom Product Page (ppid) still reports downloads per topic and GA4 records every tap.
+  var PT = "";
+  var IOS_BASE = "https://apps.apple.com/app/obubba-baby-sleep-tracker/id6760968757";
+  var PLAY_BASE = "https://play.google.com/store/apps/details?id=com.obubba.app";
+  var PPID = {
+    sleep_consultant: "5c0669f1-97f6-4c28-835a-0bad818e0d7e",
+    sleep_rhythm: "77bb6034-ab63-4416-94dd-64be87633399",
+    sleep_training: "52ce43ab-4336-409b-b8b0-a748d0af2ae1",
+    breastfeeding: "e1be5340-6f10-4009-9597-fdcc9ec8b3e6",
+    weaning: "511c7a46-62d4-4bc4-845a-310703ee470b",
+    teething: "87d36e9d-bd65-499c-ac6f-fc13e3997d96",
+    colic: "304015f6-8ccb-4e24-8a22-b231e5020228",
+    newborn: "9ba246f7-ca76-41b4-bdf2-dfaddde99283",
+    family: "59dc0808-2001-4184-8ab3-314a3e749a11",
+    luna: "a5df2239-dfa4-417f-bca9-30e27ba278e6"
+  };
+  var SRC_ALIASES = { tt: "tiktok", tiktok: "tiktok", ig: "instagram", instagram: "instagram", fb: "facebook", facebook: "facebook" };
+
+  function clean(v) { return String(v || "").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 32); }
+
+  var params = new URLSearchParams(location.search || "");
+  var ua = ""; try { ua = navigator.userAgent || ""; } catch (e) {}
+
+  // Source: explicit ?s= first, then the in-app browser, then the referrer.
+  function detectSource() {
+    var s = clean(params.get("s") || params.get("utm_source"));
+    if (s) return SRC_ALIASES[s] || s;
+    if (/Instagram/i.test(ua)) return "instagram";
+    if (/FBAN|FBAV|FB_IAB/i.test(ua)) return "facebook";
+    if (/musical_ly|BytedanceWebview|TikTok/i.test(ua)) return "tiktok";
+    try {
+      var h = new URL(document.referrer).hostname;
+      if (/instagram\.com$/.test(h)) return "instagram";
+      if (/facebook\.com$|fb\.com$/.test(h)) return "facebook";
+      if (/tiktok\.com$/.test(h)) return "tiktok";
+      if (h) return clean(h.replace(/^www\./, "").split(".")[0]);
+    } catch (e) {}
+    return "direct";
+  }
+  var src = detectSource();
+  var hotTopic = clean(params.get("t"));
+
+  function isAndroid() { return /android/i.test(ua); }
+
+  function linkFor(topic) {
+    if (isAndroid()) {
+      var ref = new URLSearchParams({ utm_source: src, utm_medium: "social", utm_campaign: "bio_link", utm_content: topic });
+      return PLAY_BASE + "&referrer=" + encodeURIComponent(ref.toString());
+    }
+    var url = new URL(IOS_BASE);
+    if (PPID[topic]) url.searchParams.set("ppid", PPID[topic]);
+    if (PT) url.searchParams.set("pt", PT);
+    url.searchParams.set("ct", ("bio_" + src + "_" + topic).slice(0, 100));
+    url.searchParams.set("mt", "8");
+    return url.toString();
+  }
+
+  function track(name, extra) {
+    try {
+      if (typeof window.gtag !== "function") return;
+      var p = { ob_source: src, ob_medium: "social", ob_campaign: "bio_link", transport_type: "beacon" };
+      for (var k in extra) p[k] = extra[k];
+      window.gtag("event", name, p);
+    } catch (e) {}
+  }
+
+  var links = document.querySelectorAll(".js-go");
+  Array.prototype.forEach.call(links, function (el) {
+    var topic = el.getAttribute("data-topic");
+    el.href = linkFor(topic);
+    if (hotTopic && topic === hotTopic && el.classList.contains("topic")) el.classList.add("hot");
+    el.addEventListener("click", function () {
+      track("download_click", { event_category: "download", store: isAndroid() ? "google_play" : "app_store", ob_content: el.getAttribute("data-topic"), link_url: el.href, page_location: location.href });
+    });
+  });
+  // The main button follows the post's topic when the link carries one.
+  if (hotTopic && PPID[hotTopic]) {
+    var main = document.querySelector(".cta.js-go");
+    main.setAttribute("data-topic", hotTopic);
+    main.href = linkFor(hotTopic);
+  }
+  track("bio_link_view", { ob_content: hotTopic || "none", page_location: location.href });
+})();
+</script>
+</body>
+</html>
