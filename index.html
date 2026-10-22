@@ -1227,7 +1227,9 @@
             url.searchParams.set("referrer", utms.toString());
           } else {
             utms.forEach(function (value, key) { url.searchParams.set(key, value); });
+            url.searchParams.set("pt", "128670067");
             url.searchParams.set("ct", campaignToken(attr));
+            url.searchParams.set("mt", "8");
           }
           return url.toString();
         } catch (e) {

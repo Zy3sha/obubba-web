@@ -105,9 +105,8 @@
 </main>
 <script>
 (function () {
-  // Apple provider token from App Store Connect (Analytics > Campaigns). Until it is set, Apple ignores ct,
-  // but the Custom Product Page (ppid) still reports downloads per topic and GA4 records every tap.
-  var PT = "";
+  // Apple provider token (App Store Connect campaign links); Apple only reads ct when pt is present.
+  var PT = "128670067";
   var IOS_BASE = "https://apps.apple.com/app/obubba-baby-sleep-tracker/id6760968757";
   var PLAY_BASE = "https://play.google.com/store/apps/details?id=com.obubba.app";
   var PPID = {
