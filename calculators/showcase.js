@@ -97,19 +97,22 @@
 
   const reviews = document.querySelector('[data-sv-reviews]');
   if (reviews) {
-    const slides = [...reviews.querySelectorAll('[data-sv-review-slide]')];
-    const dots = [...reviews.querySelectorAll('[data-sv-review-dot]')];
-    let activeReview = 0; let reviewTimer = null;
-    const showReview = (index) => {
-      activeReview = (index + slides.length) % slides.length;
-      slides.forEach((slide, i) => { const active = i === activeReview; slide.classList.toggle('is-active', active); slide.setAttribute('aria-hidden', String(!active)); });
-      dots.forEach((dot, i) => dot.classList.toggle('is-active', i === activeReview));
-      reviews.querySelector('[data-sv-review-current]').textContent = String(activeReview + 1);
-    };
-    const restartReviews = () => { clearInterval(reviewTimer); if (!reduced) reviewTimer = setInterval(() => showReview(activeReview + 1), 5200); };
-    reviews.querySelector('[data-sv-review-prev]').addEventListener('click', () => { showReview(activeReview - 1); restartReviews(); });
-    reviews.querySelector('[data-sv-review-next]').addEventListener('click', () => { showReview(activeReview + 1); restartReviews(); });
-    dots.forEach((dot) => dot.addEventListener('click', () => { showReview(Number(dot.dataset.svReviewDot)); restartReviews(); }));
-    reviews.addEventListener('mouseenter', () => clearInterval(reviewTimer)); reviews.addEventListener('mouseleave', restartReviews); restartReviews();
+    reviews.querySelectorAll('[data-sv-review-phone]').forEach((phone) => {
+      const slides = [...phone.querySelectorAll('[data-sv-review-slide]')];
+      let activeReview = 0; let reviewTimer = null; let startTimer = null;
+      const showReview = (index) => {
+        activeReview = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => { const active = i === activeReview; slide.classList.toggle('is-active', active); slide.setAttribute('aria-hidden', String(!active)); });
+        phone.querySelector('[data-sv-review-current]').textContent = String(activeReview + 1);
+      };
+      const stopReviews = () => { clearTimeout(startTimer); clearInterval(reviewTimer); };
+      const restartReviews = () => {
+        stopReviews();
+        if (!reduced) startTimer = setTimeout(() => { reviewTimer = setInterval(() => showReview(activeReview + 1), 5600); }, Number(phone.dataset.svReviewDelay || 0));
+      };
+      phone.querySelector('[data-sv-review-prev]').addEventListener('click', () => { showReview(activeReview - 1); restartReviews(); });
+      phone.querySelector('[data-sv-review-next]').addEventListener('click', () => { showReview(activeReview + 1); restartReviews(); });
+      phone.addEventListener('mouseenter', stopReviews); phone.addEventListener('mouseleave', restartReviews); restartReviews();
+    });
   }
 })();
