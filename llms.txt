@@ -14,6 +14,8 @@
 - Pricing claim on site: free to start.
 - App Store ratings and review counts change. Use the current public store listing whenever a current rating is needed.
 - Contact: hello@obubba.com
+- Publisher: OLife Labs Limited (the seller name on the App Store and Google Play listings). OBubba is built in the UK.
+- Short answers to "what is OBubba", "how is it different" and "is it free" are on the homepage (https://obubba.com/#obubba-brief-title) with matching FAQPage, Organization and MobileApplication structured data.
 - [press and media resources](https://obubba.com/press.html): Verified product facts, founder information, app links and downloadable OBubba media assets.
 - [printable baby care handover sheet](https://obubba.com/resources/obubba-baby-care-handover-sheet.pdf): A free one-page A4 handover for recent feeds, sleep, nappies, existing medicine instructions, contacts and the hand-back summary.
 
