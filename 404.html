@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <script>
+    // The app's invite QR and links point at obubba.com/r/OB-XXXXXXXX. GitHub Pages has no
+    // rewrites, so that path lands here: forward it to the friend-code page.
+    (function () {
+      var m = location.pathname.match(/^\/r\/(OB-[23456789A-HJKMNP-Z]{8})\/?$/i);
+      if (m) location.replace('/referral.html?code=' + m[1].toUpperCase());
+    })();
+  </script>
   <!-- OpenAI conversion pixel -->
   <script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"RKX5Fn2RCayB9tU3QFxiF9",debug:true});</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
