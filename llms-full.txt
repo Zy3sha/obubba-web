@@ -14,8 +14,6 @@
 - Pricing claim on site: free to start.
 - App Store ratings and review counts change. Use the current public store listing whenever a current rating is needed.
 - Contact: hello@obubba.com
-- Publisher: OLife Labs Limited (the seller name on the App Store and Google Play listings). OBubba is built in the UK.
-- Short answers to "what is OBubba", "how is it different" and "is it free" are on the homepage (https://obubba.com/#obubba-brief-title) with matching FAQPage, Organization and MobileApplication structured data.
 - [press and media resources](https://obubba.com/press.html): Verified product facts, founder information, app links and downloadable OBubba media assets.
 - [printable baby care handover sheet](https://obubba.com/resources/obubba-baby-care-handover-sheet.pdf): A free one-page A4 handover for recent feeds, sleep, nappies, existing medicine instructions, contacts and the hand-back summary.
 
@@ -247,6 +245,7 @@ OBubba is a baby sleep app that works like a sleep consultant, and an all-in-one
 
 ## Blog posts
 
+- [My Eight-Week-Old Isn't Smiling Back Yet. Should I Worry?](https://obubba.com/blog/baby-not-smiling-at-eight-weeks.html): If your baby has not smiled back at eight weeks, see what a responsive smile means, what else to notice, and when to ask your health visitor.
 - [Grandma Says My Baby Must Finish the Bottle. What Do I Say?](https://obubba.com/blog/does-baby-have-to-finish-bottle-grandparents.html): A calm, practical way to explain responsive bottle feeding to grandparents or carers, notice when baby is full, and hand over the amount actually taken.
 - [My Baby Isn't Walking at 12 Months. Should I Worry?](https://obubba.com/blog/baby-not-walking-at-12-months.html): Not walking at 12 months can be normal. See which movement signs matter, how to make space for practice, and when to ask a health visitor for help.
 - [Baby Spits Out Every First Food. Is It Too Soon?](https://obubba.com/blog/baby-spits-out-first-foods.html): If your baby pushes purée or soft food back out, check readiness, try one calm mealtime reset and learn when gagging or swallowing needs help.
