@@ -25,7 +25,7 @@
 - [First foods database](https://obubba.com/first-foods/): over 400 foods, each with when to start, how to serve at 6, 9 and 12 months, choking safety, allergens and key nutrients, written to NHS and Food Standards Agency guidance.
 - [Allergen guides](https://obubba.com/allergens/): how to introduce each of the UK 14 major allergens.
 - [Pregnancy week by week](https://obubba.com/pregnancy/): weeks 4 to 42.
-- [Compare baby tracker apps](https://obubba.com/compare/): OBubba compared with 24 baby apps using each app's own listing, with sources and a checked-on date.
+- [Compare baby tracker apps](https://obubba.com/compare/): OBubba compared with 25 baby apps using each app's own listing, with sources and a checked-on date.
 - [Switching from Nara Baby](https://obubba.com/compare/nara-baby-alternative.html): Nara Baby is now a paid app (per Nara's own FAQ). How to export Nara data so parents keep a copy, and OBubba's free everyday logging with partner sync.
 
 ## Ratings and reviews

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://obubba.com/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -2936,6 +2936,11 @@
     <priority>0.82</priority>
   </url>
   <url>
+    <loc>https://obubba.com/compare/obubba-vs-robin-baby.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.82</priority>
+  </url>
+  <url>
     <loc>https://obubba.com/es/compare/</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.75</priority>
@@ -3058,6 +3063,11 @@
   <url>
     <loc>https://obubba.com/es/compare/obubba-vs-pixy.html</loc>
     <lastmod>2026-10-26</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://obubba.com/es/compare/obubba-vs-robin-baby.html</loc>
+    <lastmod>2026-10-30</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -3186,6 +3196,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://obubba.com/fr/compare/obubba-vs-robin-baby.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://obubba.com/de/compare/</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.75</priority>
@@ -3308,6 +3323,11 @@
   <url>
     <loc>https://obubba.com/de/compare/obubba-vs-pixy.html</loc>
     <lastmod>2026-10-26</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://obubba.com/de/compare/obubba-vs-robin-baby.html</loc>
+    <lastmod>2026-10-30</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -3436,6 +3456,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://obubba.com/pt/compare/obubba-vs-robin-baby.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://obubba.com/it/compare/</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.75</priority>
@@ -3558,6 +3583,11 @@
   <url>
     <loc>https://obubba.com/it/compare/obubba-vs-pixy.html</loc>
     <lastmod>2026-10-26</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://obubba.com/it/compare/obubba-vs-robin-baby.html</loc>
+    <lastmod>2026-10-30</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
