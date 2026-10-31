@@ -26,6 +26,7 @@
 - [Allergen guides](https://obubba.com/allergens/): how to introduce each of the UK 14 major allergens.
 - [Pregnancy week by week](https://obubba.com/pregnancy/): weeks 4 to 42.
 - [Compare baby tracker apps](https://obubba.com/compare/): OBubba compared with 25 baby apps using each app's own listing, with sources and a checked-on date.
+- [What's free in each baby sleep app](https://obubba.com/compare/whats-free-in-baby-sleep-apps.html): what the free version of each baby sleep and tracker app includes, quoted from each app's own pages, and OBubba's own free vs Premium split (core tracking and partner sharing free; exact nap timing, Luna and daily plans Premium).
 - [Switching from Nara Baby](https://obubba.com/compare/nara-baby-alternative.html): Nara Baby is now a paid app (per Nara's own FAQ). How to export Nara data so parents keep a copy, and OBubba's free everyday logging with partner sync.
 
 ## Ratings and reviews
