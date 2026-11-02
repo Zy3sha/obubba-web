@@ -114,18 +114,20 @@
       document.getElementById('join-code').textContent = code;
       validPanel.hidden = false;
 
-      // The custom scheme is already registered on both platforms, so this opens
-      // the app straight onto the connect screen with the code filled in. It is
-      // a real link rather than a scripted redirect so that it survives a
-      // browser that blocks navigation without a gesture, and so that a long
-      // press still offers to copy it.
+      // The custom scheme is already registered, so this opens the app straight
+      // onto the connect screen with the code filled in. It is a real link
+      // rather than a scripted redirect so that it survives a browser that
+      // blocks navigation without a gesture, and so that a long press still
+      // offers to copy it.
+      //
+      // Deliberately NOT auto-redirected on arrival. Reading the code out of
+      // the link needs a build newer than 3.2.44, so a parent who already has
+      // an older OBubba installed would have been thrown into the app with
+      // nothing in it, and would never have seen this code or these steps. A
+      // page with a button is never a dead end; an unexplained app switch is.
       var deep = 'obubba://join#code=' + encodeURIComponent(code);
       var openApp = document.getElementById('open-app');
       openApp.setAttribute('href', deep);
-      // Best effort on arrival: if OBubba is installed this hands straight over.
-      // If it is not, nothing happens and the install buttons are already on
-      // screen, so there is no dead end either way.
-      try { window.location.href = deep; } catch (e) {}
 
       var copy = document.getElementById('copy-code');
       copy.addEventListener('click', function () {
