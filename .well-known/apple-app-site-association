@@ -4,7 +4,12 @@
     "details": [
       {
         "appID": "VWJU5WSFNX.com.obubba.app",
-        "paths": ["*"]
+        "appIDs": ["VWJU5WSFNX.com.obubba.app"],
+        "paths": ["/invite", "/invite.html"],
+        "components": [
+          { "/": "/invite" },
+          { "/": "/invite.html" }
+        ]
       }
     ]
   },
