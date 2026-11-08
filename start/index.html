@@ -70,7 +70,7 @@
     (() => {
       const incoming = new URLSearchParams(location.search);
       const attribution = new URLSearchParams();
-      const allowedSources = new Set(['owned_search', 'instagram', 'facebook', 'meta', 'tiktok', 'email', 'app_store', 'google', 'apple_ads', 'bing', 'referral', 'direct']);
+      const allowedSources = new Set(['owned_search', 'instagram', 'facebook', 'meta', 'tiktok', 'email', 'app_store', 'google', 'apple_ads', 'bing', 'reddit', 'referral', 'direct']);
       const allowedMedia = new Set(['website', 'organic_social', 'lifecycle', 'organic_store', 'seo', 'paid_search', 'paid_social', 'referral']);
       const source = incoming.get('utm_source') || '';
       const medium = incoming.get('utm_medium') || '';
@@ -96,6 +96,16 @@
           ? 'app_store'
           : '';
       const ios = document.getElementById('ios');
+      // App Store campaign tag so App Store Connect counts these downloads (ct: max 40 chars)
+      if (attribution.get('utm_source')) {
+        const label = [attribution.get('utm_source'), (attribution.get('utm_content') || '').replace(/^auto_/, '')]
+          .filter(Boolean).join('_').slice(0, 40);
+        const store = new URL(ios.href);
+        store.searchParams.set('pt', '128670067');
+        store.searchParams.set('ct', label);
+        store.searchParams.set('mt', '8');
+        ios.href = store.toString();
+      }
       const safePageLocation = `${location.origin}${location.pathname}${referrer ? `?${referrer}` : ''}`;
       const eventParams = (store, routeMode) => ({
         event_category: 'download',
