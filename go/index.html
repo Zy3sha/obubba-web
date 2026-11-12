@@ -2,6 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <script>
+  // TikTok taps skip this page and go straight to the store, so TikTok opens the App Store
+  // inside its own app (like a direct store link). Same ct/ppid tags as the buttons below.
+  // Add ?stay=1 to see the page from TikTok for testing.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search || ""), ua = navigator.userAgent || "";
+      var s = String(q.get("s") || q.get("utm_source") || "").toLowerCase();
+      var fromTikTok = s === "tt" || s === "tiktok" || (!s && /musical_ly|BytedanceWebview|TikTok/i.test(ua));
+      if (!fromTikTok || q.get("stay")) return;
+      var t = String(q.get("t") || "sleep_rhythm").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 32);
+      var PPID = { sleep_consultant: "5c0669f1-97f6-4c28-835a-0bad818e0d7e", sleep_rhythm: "77bb6034-ab63-4416-94dd-64be87633399", sleep_training: "52ce43ab-4336-409b-b8b0-a748d0af2ae1", breastfeeding: "e1be5340-6f10-4009-9597-fdcc9ec8b3e6", weaning: "511c7a46-62d4-4bc4-845a-310703ee470b", teething: "87d36e9d-bd65-499c-ac6f-fc13e3997d96", colic: "304015f6-8ccb-4e24-8a22-b231e5020228", newborn: "9ba246f7-ca76-41b4-bdf2-dfaddde99283", family: "59dc0808-2001-4184-8ab3-314a3e749a11", luna: "a5df2239-dfa4-417f-bca9-30e27ba278e6" };
+      var to;
+      if (/android/i.test(ua)) {
+        to = "https://play.google.com/store/apps/details?id=com.obubba.app&referrer=" + encodeURIComponent("utm_source=tiktok&utm_medium=social&utm_campaign=bio_link&utm_content=" + t);
+      } else {
+        to = "https://apps.apple.com/app/obubba-baby-sleep-tracker/id6760968757?" + (PPID[t] ? "ppid=" + PPID[t] + "&" : "") + "pt=128670067&ct=" + encodeURIComponent("bio_tiktok_" + t) + "&mt=8";
+      }
+      location.replace(to);
+    } catch (e) {}
+  })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   <title>OBubba | Get the app</title>
   <meta name="description" content="Get OBubba free on the App Store and Google Play. The baby app that learns your baby's own rhythm and suggests naps and bedtime."/>
