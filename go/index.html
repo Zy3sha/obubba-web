@@ -18,7 +18,7 @@
       if (/android/i.test(ua)) {
         to = "https://play.google.com/store/apps/details?id=com.obubba.app&referrer=" + encodeURIComponent("utm_source=tiktok&utm_medium=social&utm_campaign=bio_link&utm_content=" + t);
       } else {
-        to = "https://apps.apple.com/app/obubba-baby-sleep-tracker/id6760968757?" + (PPID[t] ? "ppid=" + PPID[t] + "&" : "") + "pt=128670067&ct=" + encodeURIComponent("bio_tiktok_" + t) + "&mt=8";
+        to = "https://apps.apple.com/app/obubba-baby-sleep-tracker/id6760968757?" + (PPID[t] ? "ppid=" + PPID[t] + "&" : "") + "pt=128670067&ct=" + encodeURIComponent("bio_tiktok") + "&mt=8";
       }
       location.replace(to);
     } catch (e) {}
@@ -179,7 +179,7 @@
     var url = new URL(IOS_BASE);
     if (PPID[topic]) url.searchParams.set("ppid", PPID[topic]);
     if (PT) url.searchParams.set("pt", PT);
-    url.searchParams.set("ct", ("bio_" + src + "_" + topic).slice(0, 100));
+    url.searchParams.set("ct", ("bio_" + src).slice(0, 100)); // one ct per channel (12 Nov 2026): topic stays in GA4 ob_content and ppid
     url.searchParams.set("mt", "8");
     return url.toString();
   }
