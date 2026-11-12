@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,15 @@
 <figure><img src="/obubba-learning-to-resettle-alone.jpg" alt="An awake, content baby lies on their back in a clear cot while a responsive parent stays close by." loading="lazy"/><figcaption>Self-settling can happen with a parent present and after comfort; it never requires leaving a crying or hungry baby unanswered.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current detector stays silent unless all of these are true:</p>
-<p>| Gate | Current rule | What it protects against | |---|---:|---| | Detailed evidence | At least <strong>6 night wakes</strong> have a non-empty ordered soothe breakdown | A few anecdotes are not called a trend | | Comparison groups | At least <strong>3 qualifying wakes</strong> fall in both the recent and earlier groups | Both sides need a minimum sample | | Recent level | At least <strong>40%</strong> of recent wakes end in Self-settle | A rise from a very low level is not enough | | Improvement | Recent share is at least <strong>20 percentage points higher</strong> | Tiny changes stay quiet |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">Current rule</th><th scope="col">What it protects against</th></tr></thead>
+<tbody>
+<tr><td>Detailed evidence</td><td>At least <strong>6 night wakes</strong> have a non-empty ordered soothe breakdown</td><td>A few anecdotes are not called a trend</td></tr>
+<tr><td>Comparison groups</td><td>At least <strong>3 qualifying wakes</strong> fall in both the recent and earlier groups</td><td>Both sides need a minimum sample</td></tr>
+<tr><td>Recent level</td><td>At least <strong>40%</strong> of recent wakes end in Self-settle</td><td>A rise from a very low level is not enough</td></tr>
+<tr><td>Improvement</td><td>Recent share is at least <strong>20 percentage points higher</strong></td><td>Tiny changes stay quiet</td></tr>
+</tbody>
+</table></div>
 <p>The caller supplies qualifying wakes from up to <strong>14 recent nights</strong>. For each wake, the detector reads only the <strong>last recorded soothe segment</strong>. If that final segment is Self-settle, the wake gets one “self-resolved” vote.</p>
 <figure><img src="/obubba-self-settle-progress-logic.svg" alt="The six-wake example and exact gates behind OBubba’s self-settle progress card." loading="lazy"/><figcaption>The current engine compares the final segment of detailed wake logs, requiring six wakes overall, three on each side, a recent share of at least 40% and a gain of at least 20 percentage points.</figcaption></figure>
 <p>These are product thresholds, not a medical definition of self-soothing and not a developmental target every baby should meet.</p>
@@ -881,9 +894,23 @@
 <p>That is still worth celebrating. It simply is not the same claim as “your baby now settles without you”.</p>
 <h2>A worked six-wake example</h2>
 <p>The positive test in the code uses this pattern:</p>
-<p>| Earlier recorded wakes | Final segment | Vote | |---|---|---:| | Patted 5m → Fed 15m | Fed | no | | Fed 20m | Fed | no | | Rocked 10m → Fed 12m | Fed | no |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Earlier recorded wakes</th><th scope="col">Final segment</th><th scope="col">Vote</th></tr></thead>
+<tbody>
+<tr><td>Patted 5m → Fed 15m</td><td>Fed</td><td>no</td></tr>
+<tr><td>Fed 20m</td><td>Fed</td><td>no</td></tr>
+<tr><td>Rocked 10m → Fed 12m</td><td>Fed</td><td>no</td></tr>
+</tbody>
+</table></div>
 <p>Earlier self-resolved share: <strong>0 out of 3 = 0%</strong>.</p>
-<p>| Recent recorded wakes | Final segment | Vote | |---|---|---:| | Fed 8m → Self-settle 25m | Self-settle | yes | | Patted 5m → Self-settle 20m | Self-settle | yes | | Self-settle 30m | Self-settle | yes |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Recent recorded wakes</th><th scope="col">Final segment</th><th scope="col">Vote</th></tr></thead>
+<tbody>
+<tr><td>Fed 8m → Self-settle 25m</td><td>Self-settle</td><td>yes</td></tr>
+<tr><td>Patted 5m → Self-settle 20m</td><td>Self-settle</td><td>yes</td></tr>
+<tr><td>Self-settle 30m</td><td>Self-settle</td><td>yes</td></tr>
+</tbody>
+</table></div>
 <p>Recent self-resolved share: <strong>3 out of 3 = 100%</strong>.</p>
 <p>The recent level clears 40%, and the improvement is 100 percentage points, so the card can appear with a six-wake sample label.</p>
 <p>The threshold is a <strong>percentage-point</strong> difference. If an earlier group is 20% and a recent group is 50%, the gain is 30 percentage points—not a 30% increase.</p>
@@ -941,6 +968,7 @@
 <h2>Reliable UK sources</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/soothing-a-crying-baby/" target="_blank" rel="noopener noreferrer">NHS: Soothing a crying baby</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/bonding-with-your-baby/building-a-close-relationship-with-your-baby/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Building a close relationship with your baby</a></li><li><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/sleep-and-night-time-resources/caring-for-your-baby-at-night/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly Initiative: Caring for your baby at night</a></li></ul>
 <p><em>This article provides general information for UK families. OBubba cannot assess crying, hunger, illness, development or sleep safety from a soothe log. Follow your baby’s cues and advice from your own midwife, health visitor, GP or clinical team.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-says-learning-to-resettle-alone"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -972,6 +1000,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

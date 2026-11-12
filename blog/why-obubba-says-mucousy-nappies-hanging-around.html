@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -864,7 +869,18 @@
 <p>The card is deliberately low urgency. A separate same-day safety layer handles logged blood, pale stools, very dark stools after the newborn period and watery diarrhoea. That separation is the most important part of the design: a slow pattern reminder must not blur an acute warning sign.</p>
 <h2>A worked seven-day example</h2>
 <p>Imagine today is Sunday and the log looks like this:</p>
-<p>| Day | What was logged | Mucus-day count | |---|---|---:| | Sunday | one ordinary poo | 0 | | Saturday | one poo tagged Mucousy | 1 | | Friday | no nappy entry | 0 | | Thursday | two poos; one tagged Mucousy | 1 | | Wednesday | one ordinary poo | 0 | | Tuesday | three poos, all tagged Mucousy | 1 | | Monday | one ordinary poo | 0 |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Day</th><th scope="col">What was logged</th><th scope="col">Mucus-day count</th></tr></thead>
+<tbody>
+<tr><td>Sunday</td><td>one ordinary poo</td><td>0</td></tr>
+<tr><td>Saturday</td><td>one poo tagged Mucousy</td><td>1</td></tr>
+<tr><td>Friday</td><td>no nappy entry</td><td>0</td></tr>
+<tr><td>Thursday</td><td>two poos; one tagged Mucousy</td><td>1</td></tr>
+<tr><td>Wednesday</td><td>one ordinary poo</td><td>0</td></tr>
+<tr><td>Tuesday</td><td>three poos, all tagged Mucousy</td><td>1</td></tr>
+<tr><td>Monday</td><td>one ordinary poo</td><td>0</td></tr>
+</tbody>
+</table></div>
 <p>Saturday, Thursday and Tuesday make three flagged days, so the detector can speak. Tuesday does not count three times, even though three nappies carried the tag.</p>
 <p>Now change the record:</p>
 <ul><li><strong>three tagged nappies on Saturday only:</strong> one flagged day, so no mucus-trend card;</li><li><strong>Saturday and Thursday only:</strong> two flagged days, so the branch stays quiet;</li><li><strong>Saturday, Thursday and the previous Sunday:</strong> the previous Sunday has fallen outside the latest seven days, so it does not count;</li><li><strong>three tagged days but watery nappies today, yesterday and the day before:</strong> the higher-priority loose-stool run speaks first;</li><li><strong>three tagged days plus pellet-like stools on two days:</strong> the hard-stool branch speaks first;</li><li><strong>only three days of history:</strong> the whole rolling tummy detector stays quiet.</li></ul>
@@ -951,6 +967,7 @@
 <p><a href="https://www.nhs.uk/conditions/dehydration/" target="_blank" rel="noopener noreferrer">NHS: Dehydration</a> — dehydration signs and urgent advice.</p>
 <p><a href="https://bwc.nhs.uk/news/how-a-snap-of-a-dirty-nappy-could-detect-lifethreatening-liver-condition-17254" target="_blank" rel="noopener noreferrer">Birmingham Women’s and Children’s NHS Foundation Trust: How a dirty-nappy photo could help detect liver disease</a> — why a pale stool in a young baby deserves prompt attention.</p>
 <p>OBubba source reviewed for this article: `lib/core/engine/gi_health.dart`, `lib/core/engine/health_insights.dart`, `lib/core/engine/brain.dart`, `test/gi_health_test.dart` and `test/health_insights_test.dart`.</p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-says-mucousy-nappies-hanging-around"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -982,6 +999,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -864,7 +869,14 @@
 <p>That is a pattern hypothesis. “Not hunger” is not a clinical finding.</p>
 <h2>A worked example</h2>
 <p>Imagine a complete night from 7:30pm to 6:30am:</p>
-<p>| Time | What was logged | |---|---| | 12:40am | wake + 30ml bottle | | 3:15am | wake + 25ml bottle | | 5:10am | brief wake, resettled without milk |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Time</th><th scope="col">What was logged</th></tr></thead>
+<tbody>
+<tr><td>12:40am</td><td>wake + 30ml bottle</td></tr>
+<tr><td>3:15am</td><td>wake + 25ml bottle</td></tr>
+<tr><td>5:10am</td><td>brief wake, resettled without milk</td></tr>
+</tbody>
+</table></div>
 <p>There are three wakes and two night feeds. Two is at least `3 − 1`, so feeding happened at nearly every wake. The measured average is 27.5ml, below the 40ml threshold. If no stronger branch takes precedence, the comfort-feed title can appear.</p>
 <p>Now change one detail:</p>
 <ul><li><strong>one 30ml feed and one unmeasured breastfeed:</strong> the current average can be built from the one positive measured amount, while the night-feed count still includes both qualifying feeds;</li><li><strong>two 45ml feeds:</strong> the average is no longer under 40ml, so this comfort-volume branch stays quiet;</li><li><strong>two 90ml feeds:</strong> the broader feed-driven diagnosis can describe them as sizeable and likely genuine hunger;</li><li><strong>only one feed across three wakes:</strong> this branch does not qualify;</li><li><strong>two of three wakes explicitly tagged as hunger:</strong> the parent’s direct hunger tags take priority;</li><li><strong>baby is 12 weeks old:</strong> the newborn gate wins and the app does not label a sleep association.</li></ul>
@@ -959,6 +971,7 @@
 <p><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/sleep-and-night-time-resources-/caring-for-your-baby-at-night/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly: Caring for your baby at night</a> — night feeding, rest and safer sleep.</p>
 <p>OBubba source reviewed for this article: `lib/core/engine/night_analysis.dart`, `lib/core/engine/brain.dart`, `lib/core/engine/night_corroboration.dart`, `test/night_analysis_test.dart` and `test/night_corroboration_test.dart`.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -989,6 +1002,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

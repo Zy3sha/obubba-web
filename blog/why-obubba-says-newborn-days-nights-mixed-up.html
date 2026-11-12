@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -860,7 +865,16 @@
 <h2>The exact five-gate rule</h2>
 <p>Imagine yesterday contained 6 hours 25 minutes of completed day sleep. The night ending this morning had a reconstructable bedtime, four wakes and a longest unbroken stretch of 1 hour 50 minutes.</p>
 <p>For a six-week-old, that clears all five gates:</p>
-<p>| Evidence gate | Current requirement | |---|---:| | Baby&#39;s age | 2–12 weeks inclusive | | Night evidence | A real bedtime/night record exists | | Logged day sleep | At least 6 hours | | Longest night stretch | Under 2 hours 30 minutes | | Logged night wakes | At least 3 |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Evidence gate</th><th scope="col">Current requirement</th></tr></thead>
+<tbody>
+<tr><td>Baby&#39;s age</td><td>2–12 weeks inclusive</td></tr>
+<tr><td>Night evidence</td><td>A real bedtime/night record exists</td></tr>
+<tr><td>Logged day sleep</td><td>At least 6 hours</td></tr>
+<tr><td>Longest night stretch</td><td>Under 2 hours 30 minutes</td></tr>
+<tr><td>Logged night wakes</td><td>At least 3</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-day-night-confusion-logic.svg" alt="A mobile-readable five-gate diagram showing exactly when OBubba can display its newborn days-and-nights-mixed-up insight." loading="lazy"/><figcaption>Every gate must be true; one missing piece keeps the day/night confusion card silent.</figcaption></figure>
 <p>These are <strong>app display thresholds</strong>, not a medical definition of day/night confusion and not sleep targets for a newborn. They exist to stop a gentle pattern card appearing from thin or one-sided evidence.</p>
 <h2>Why one rough night does not trigger it</h2>
@@ -899,7 +913,17 @@
 <p>Seek appropriate medical advice when a newborn is difficult to wake, not feeding normally, has drier nappies than usual, has breathing difficulty, has a temperature that concerns you or simply seems seriously unwell. A sleep insight cannot assess the baby.</p>
 <h2>A gentle 24-hour reset—without a schedule</h2>
 <p>For the next day, try only this:</p>
-<p>| When | One useful distinction | |---|---| | Morning | Curtains open and ordinary voices after waking | | Day feeds | Light, interaction and responsive feeding | | Day naps | Safe sleep in the same room; normal household sound | | Evening | Let light and stimulation taper naturally | | Night wakes | Dim, quiet, feed/change/comfort, no play | | Morning again | Repeat the daylight cue |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">When</th><th scope="col">One useful distinction</th></tr></thead>
+<tbody>
+<tr><td>Morning</td><td>Curtains open and ordinary voices after waking</td></tr>
+<tr><td>Day feeds</td><td>Light, interaction and responsive feeding</td></tr>
+<tr><td>Day naps</td><td>Safe sleep in the same room; normal household sound</td></tr>
+<tr><td>Evening</td><td>Let light and stimulation taper naturally</td></tr>
+<tr><td>Night wakes</td><td>Dim, quiet, feed/change/comfort, no play</td></tr>
+<tr><td>Morning again</td><td>Repeat the daylight cue</td></tr>
+</tbody>
+</table></div>
 <p>There is no need to force clock times, stretch wake windows or turn every nap into a training exercise. The baby is learning a contrast, not passing a test.</p>
 <h2>Why this is more useful than a generic newborn tip</h2>
 <p>Most baby apps can display an article saying “keep nights dark”. OBubba can wait until the baby&#39;s own recent log shows the particular day-heavy, night-fragmented shape the advice is meant for.</p>
@@ -920,6 +944,7 @@
 <p>Daytime can include daylight and normal household sound, but all safer-sleep principles still apply. Keep the sleep space clear, flat and away from direct heat or sunlight, with baby on their back.</p>
 <h3>Is OBubba listening to my baby at night?</h3>
 <p>No. The detector uses the sleep and wake records in the tracker. Without a reconstructable logged night, it returns no card.</p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -951,6 +976,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

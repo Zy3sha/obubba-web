@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,19 @@
 <p>The parent prepares the care guide in the app, then shares a private link or shows a QR code. The carer opens a calm page with the baby’s current essentials and large, simple controls for feeds, nappies and naps. Those entries flow back to the parent’s OBubba timeline during the active session.</p>
 <p>This is deliberately different from permanent Family Sharing. Bubba Care is the lighter handoff for somebody who needs today’s care context, not the family’s whole app.</p>
 <h2>The short answer</h2>
-<p>| Question | What Bubba Care does | |---|---| | Must the carer download OBubba? | <strong>No.</strong> The care page opens in a browser | | Must they make an account or remember a password? | <strong>No.</strong> The private link is the access credential | | How can the parent share it? | QR code, share sheet, copied link or a saved PDF guide | | What can the parent include? | Contacts, comfort and routine notes, feeding details and current care context | | Can the carer add updates? | Yes: simple feed, nappy and nap logging during the live session | | Do those updates reach the parent? | Yes. The app listens for carer activity and merges it into the baby’s timeline | | Is it the same as Family Sharing? | No. Family Sharing is for trusted, ongoing co-care inside the full app | | What happens afterwards? | <strong>End care session</strong> saves the session’s logs, clears the carer page and stops the session |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Question</th><th scope="col">What Bubba Care does</th></tr></thead>
+<tbody>
+<tr><td>Must the carer download OBubba?</td><td><strong>No.</strong> The care page opens in a browser</td></tr>
+<tr><td>Must they make an account or remember a password?</td><td><strong>No.</strong> The private link is the access credential</td></tr>
+<tr><td>How can the parent share it?</td><td>QR code, share sheet, copied link or a saved PDF guide</td></tr>
+<tr><td>What can the parent include?</td><td>Contacts, comfort and routine notes, feeding details and current care context</td></tr>
+<tr><td>Can the carer add updates?</td><td>Yes: simple feed, nappy and nap logging during the live session</td></tr>
+<tr><td>Do those updates reach the parent?</td><td>Yes. The app listens for carer activity and merges it into the baby’s timeline</td></tr>
+<tr><td>Is it the same as Family Sharing?</td><td>No. Family Sharing is for trusted, ongoing co-care inside the full app</td></tr>
+<tr><td>What happens afterwards?</td><td><strong>End care session</strong> saves the session’s logs, clears the carer page and stops the session</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-no-download-carer-flow.svg" alt="A Bubba Care handoff moves from the parent’s app to one private browser page, then returns the carer’s simple updates to the parent’s timeline." loading="lazy"/><figcaption>The parent prepares and controls the session in OBubba. The carer only needs the private browser page for the care period.</figcaption></figure>
 <h2>What the parent does in the OBubba app</h2>
 <p>We traced the current implementation before writing this guide. The path is <strong>Care → Bubba Care → Start a session</strong>.</p>
@@ -890,7 +907,16 @@
 <p>Because the parent’s account is much larger than the job.</p>
 <p>Sharing a personal login can expose settings and information the carer does not need, creates confusion about who changed what and leaves the family with a password they may later need to replace. It also asks the carer to learn the whole product for a narrow task.</p>
 <p>Bubba Care follows a more proportionate pattern:</p>
-<p>| Need | Better OBubba route | |---|---| | One evening with a sitter | Private Bubba Care link | | Occasional grandparent day | Bubba Care link or PDF guide | | A new person taking over from the previous carer | <strong>New carer (fresh link)</strong> | | Regular co-parent using the same ongoing record | Family Sharing | | Nursery with its own mandatory system | Use the nursery’s official process; OBubba can remain the parent’s record |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Need</th><th scope="col">Better OBubba route</th></tr></thead>
+<tbody>
+<tr><td>One evening with a sitter</td><td>Private Bubba Care link</td></tr>
+<tr><td>Occasional grandparent day</td><td>Bubba Care link or PDF guide</td></tr>
+<tr><td>A new person taking over from the previous carer</td><td><strong>New carer (fresh link)</strong></td></tr>
+<tr><td>Regular co-parent using the same ongoing record</td><td>Family Sharing</td></tr>
+<tr><td>Nursery with its own mandatory system</td><td>Use the nursery’s official process; OBubba can remain the parent’s record</td></tr>
+</tbody>
+</table></div>
 <p>The smallest access surface that completes the job is usually the easiest to explain and the easiest to end.</p>
 <h2>What “New carer” and “End care session” actually do</h2>
 <p>These two buttons solve different handoff moments.</p>
@@ -937,6 +963,7 @@
 <h3>Is Bubba Care a medical record?</h3>
 <p>No. It is for day-to-day care context and simple logging. It does not replace prescribed plans, medicine labels, professional records, clinical advice or emergency services.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -967,6 +994,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

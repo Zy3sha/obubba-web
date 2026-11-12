@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,17 @@
 <p>The <a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS recommends including iron-containing foods</a> such as meat, fish, fortified breakfast cereal, dark green vegetables, beans and lentils. At the beginning, how much a baby eats matters less than learning to eat. Milk remains their main source of nutrition while food variety and quantity build gradually.</p>
 <h2>The five-second version</h2>
 <p>At a meal, choose one iron-rich base, prepare it in a safe texture and add a fruit or vegetable containing vitamin C when convenient.</p>
-<p>| Iron-rich base | Baby-safe starting texture | Easy vitamin C partner | |---|---|---| | Beef, lamb, chicken or turkey | Slow-cooked and finely shredded, minced or blended into mash | Broccoli, tomato or soft pepper | | Lentils, beans or chickpeas | Cooked until very soft and mashed into dhal, houmous or a thick purée | Tomato, cauliflower or strawberries | | Fish | Cooked, carefully checked for bones and flaked finely | Peas, broccoli or potato | | Egg | Properly prepared for the egg type, then mashed or cut into graspable strips | Kiwi, berries or broccoli | | Tofu | Soft tofu mashed, or firm tofu cooked and offered in soft strips | Soft pepper, tomato or orange segments prepared safely | | Iron-fortified baby cereal | Mixed to a soft texture with breast milk, formula or water | Mashed berries, pear or kiwi |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Iron-rich base</th><th scope="col">Baby-safe starting texture</th><th scope="col">Easy vitamin C partner</th></tr></thead>
+<tbody>
+<tr><td>Beef, lamb, chicken or turkey</td><td>Slow-cooked and finely shredded, minced or blended into mash</td><td>Broccoli, tomato or soft pepper</td></tr>
+<tr><td>Lentils, beans or chickpeas</td><td>Cooked until very soft and mashed into dhal, houmous or a thick purée</td><td>Tomato, cauliflower or strawberries</td></tr>
+<tr><td>Fish</td><td>Cooked, carefully checked for bones and flaked finely</td><td>Peas, broccoli or potato</td></tr>
+<tr><td>Egg</td><td>Properly prepared for the egg type, then mashed or cut into graspable strips</td><td>Kiwi, berries or broccoli</td></tr>
+<tr><td>Tofu</td><td>Soft tofu mashed, or firm tofu cooked and offered in soft strips</td><td>Soft pepper, tomato or orange segments prepared safely</td></tr>
+<tr><td>Iron-fortified baby cereal</td><td>Mixed to a soft texture with breast milk, formula or water</td><td>Mashed berries, pear or kiwi</td></tr>
+</tbody>
+</table></div>
 <p>Vitamin C can help the body absorb iron, particularly the type found in plant foods. It is a useful pairing, not another rule that makes a meal “fail”. Lentils without a strawberry still count.</p>
 <h2>Why iron comes up when weaning begins</h2>
 <p>Iron helps the body make haemoglobin, the part of red blood cells that carries oxygen. It also supports normal growth and development. That is why UK guidance shifts attention towards iron-containing foods when complementary feeding starts.</p>
@@ -969,6 +984,7 @@
 <p>Iron matters, but the goal is not a perfect plate. It is a growing rotation of safe, varied foods beside responsive milk feeds, with a parent who can see the bigger picture without needing to remember every spoonful.</p>
 <p><em>This article provides general information, not medical advice. Follow your baby&#39;s individual feeding plan and seek advice from your health visitor, GP or paediatric dietitian for concerns about prematurity, restricted diets, feeding, growth, iron deficiency or supplements.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -999,6 +1015,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

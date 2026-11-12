@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,17 @@
 <p>This guide gives you that boundary. If your baby seems seriously unwell, call 999. For urgent concerns that are not immediately life-threatening, contact your midwife, health visitor, GP or NHS 111. Babies under six months can be difficult to assess remotely, so trust your instinct and seek care when something feels wrong.</p>
 <h2>The two-minute newborn check</h2>
 <p>Before trying to name the behaviour, look at the whole baby.</p>
-<p>| Check | More reassuring | Get medical help | |---|---|---| | <strong>Breathing</strong> | Comfortable between brief noises or pauses | Working hard, persistently fast, grunting with each breath, nostrils flaring, ribs or tummy pulling in, or unable to feed because of breathlessness | | <strong>Colour</strong> | Usual colour for your baby | Blue, grey, very pale, blotchy or ashen; on brown or black skin, check lips, tongue, gums, palms and soles too | | <strong>Response</strong> | Wakes, looks around or reacts normally | Floppy, unusually difficult to wake, unresponsive, stiff for a prolonged period or having rhythmic jerking | | <strong>Feeding</strong> | Feeding in their usual newborn pattern | Suddenly not interested, repeatedly unable to feed, or much less effective than usual | | <strong>Nappies</strong> | Wet and dirty nappies follow their established pattern | Much drier nappies, no wet nappy for 12 hours, or worrying stool or urine colour | | <strong>Temperature</strong> | Body feels comfortable and measured temperature is not concerning | <strong>38°C or higher in a baby under three months</strong>, below 36°C, or baby feels unusually hot or cold and seems unwell |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Check</th><th scope="col">More reassuring</th><th scope="col">Get medical help</th></tr></thead>
+<tbody>
+<tr><td><strong>Breathing</strong></td><td>Comfortable between brief noises or pauses</td><td>Working hard, persistently fast, grunting with each breath, nostrils flaring, ribs or tummy pulling in, or unable to feed because of breathlessness</td></tr>
+<tr><td><strong>Colour</strong></td><td>Usual colour for your baby</td><td>Blue, grey, very pale, blotchy or ashen; on brown or black skin, check lips, tongue, gums, palms and soles too</td></tr>
+<tr><td><strong>Response</strong></td><td>Wakes, looks around or reacts normally</td><td>Floppy, unusually difficult to wake, unresponsive, stiff for a prolonged period or having rhythmic jerking</td></tr>
+<tr><td><strong>Feeding</strong></td><td>Feeding in their usual newborn pattern</td><td>Suddenly not interested, repeatedly unable to feed, or much less effective than usual</td></tr>
+<tr><td><strong>Nappies</strong></td><td>Wet and dirty nappies follow their established pattern</td><td>Much drier nappies, no wet nappy for 12 hours, or worrying stool or urine colour</td></tr>
+<tr><td><strong>Temperature</strong></td><td>Body feels comfortable and measured temperature is not concerning</td><td><strong>38°C or higher in a baby under three months</strong>, below 36°C, or baby feels unusually hot or cold and seems unwell</td></tr>
+</tbody>
+</table></div>
 <p>The <a href="https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/" target="_blank" rel="noopener noreferrer">NHS urgent-help guide for babies and young children</a> emphasises breathing, colour, responsiveness, feeding and nappies because those changes can matter more than whether one isolated noise has a reassuring name.</p>
 <h2>1. Grunts, snorts and uneven breathing</h2>
 <p>Newborn breathing is not metronomic. A settled baby may breathe faster for a short spell, slow down, pause for a few seconds and make an extraordinary collection of snorts, whistles and gurgles. Their nasal passages are tiny, so a little mucus can sound dramatic.</p>
@@ -934,6 +949,7 @@
 <p>Newborns are noisy, unfinished and startlingly good at looking mysterious. You do not have to know the name of every reflex or rash. You need a reliable way to notice the difference between an ordinary surprise and a baby who needs help, and permission to ask whenever you are unsure.</p>
 <p><em>This UK-oriented article is general information, not a diagnosis or individual medical advice. Newborns can become unwell quickly. Follow your baby&#39;s discharge plan and your maternity or neonatal team&#39;s advice. Call 999 for an emergency; contact your midwife, GP, health visitor or NHS 111 when you are concerned.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -964,6 +980,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

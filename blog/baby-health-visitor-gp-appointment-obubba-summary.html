@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -870,7 +875,16 @@
 <h3>2. Four-week summary PDF for clinic</h3>
 <p>This is the longer pattern view. OBubba looks back across 28 calendar days and creates a shareable A4 PDF.</p>
 <p>The PDF can contain:</p>
-<p>| Section | What may appear | |---|---| | <strong>Sleep</strong> | 24-hour sleep, night sleep, day sleep, naps and night wakes—with rows shown only when supporting sleep data exists | | <strong>Feeding</strong> | Average feeds per logged day | | <strong>Nappies</strong> | Average wet and dirty nappies on the same daily basis as the other averages | | <strong>Growth</strong> | Most recently logged weight, length and head circumference, each with its measurement date and a centile where the required details exist | | <strong>Summary</strong> | A short plain-English description of the recorded pattern |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Section</th><th scope="col">What may appear</th></tr></thead>
+<tbody>
+<tr><td><strong>Sleep</strong></td><td>24-hour sleep, night sleep, day sleep, naps and night wakes—with rows shown only when supporting sleep data exists</td></tr>
+<tr><td><strong>Feeding</strong></td><td>Average feeds per logged day</td></tr>
+<tr><td><strong>Nappies</strong></td><td>Average wet and dirty nappies on the same daily basis as the other averages</td></tr>
+<tr><td><strong>Growth</strong></td><td>Most recently logged weight, length and head circumference, each with its measurement date and a centile where the required details exist</td></tr>
+<tr><td><strong>Summary</strong></td><td>A short plain-English description of the recorded pattern</td></tr>
+</tbody>
+</table></div>
 <p>It also prints the date range and number of logged days. That denominator matters. “4.8 feeds per day across 18 logged days” is much more honest than making a month with ten blank days look complete.</p>
 <h3>3. Prep sheet for a doctor visit</h3>
 <p>This is the “what might I need to raise?” view. It scans the latest seven days and can place up to four health-category insights at the top, followed by:</p>
@@ -933,6 +947,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/babys-development/height-weight-and-reviews/baby-reviews/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s health and development reviews</a></li><li><a href="https://www.nhs.uk/baby/babys-development/height-weight-and-reviews/baby-height-and-weight/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s weight and height</a></li><li><a href="https://www.rcpch.ac.uk/resources/uk-who-growth-charts-0-4-years" target="_blank" rel="noopener noreferrer">Royal College of Paediatrics and Child Health: UK-WHO growth charts, 0–4 years</a></li><li><a href="https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/" target="_blank" rel="noopener noreferrer">NHS: When to get urgent medical help for babies and children under 5</a></li></ul>
 <p><em>OBubba is a parent tracking and education tool, not a medical record, diagnostic device or emergency service. Discuss concerns with a qualified health professional and seek urgent help when needed.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -963,6 +978,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

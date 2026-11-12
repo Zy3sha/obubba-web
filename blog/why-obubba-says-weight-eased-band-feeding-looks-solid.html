@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -875,7 +880,14 @@
 <p><strong>2, 9, 25, 50, 75, 91 and 98</strong></p>
 <p>Imagine a move from the 54th centile to the 47th. The decrease is at least five points and crosses the 50 line, so the code counts one band. A move from 54 to 51 does neither. A value landing exactly on a boundary is not treated as crossing through it; the line must sit strictly between the two calculated centiles.</p>
 <p>The language changes with the count:</p>
-<p>| Calculated change | What OBubba does | |---|---| | Down at least 5 points, but no major line crossed | Keeps this insight quiet | | Exactly 1 major line crossed | Looks at recorded feeding frequency for context | | 2 or more major lines crossed | Shows a medium-urgency “Weight has eased a couple of centile lines” route to the health visitor |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Calculated change</th><th scope="col">What OBubba does</th></tr></thead>
+<tbody>
+<tr><td>Down at least 5 points, but no major line crossed</td><td>Keeps this insight quiet</td></tr>
+<tr><td>Exactly 1 major line crossed</td><td>Looks at recorded feeding frequency for context</td></tr>
+<tr><td>2 or more major lines crossed</td><td>Shows a medium-urgency “Weight has eased a couple of centile lines” route to the health visitor</td></tr>
+</tbody>
+</table></div>
 <p>The two-line route does <strong>not</strong> get softened by a high feed count. That is an important safety boundary.</p>
 <p>This general shape aligns with UK growth-chart guidance, but the app’s exact algorithm is its own product logic. The <a href="https://www.nhs.uk/baby/babys-development/height-weight-and-reviews/baby-height-and-weight/" target="_blank" rel="noopener noreferrer">NHS notes that a baby’s weight may move up or down one centile line and that crossing two lines is less common</a>. The <a href="https://growth.rcpch.ac.uk/parents/faqs-parents/" target="_blank" rel="noopener noreferrer">RCPCH’s parent FAQ similarly explains that movement by up to one centile space can be normal, while two spaces is less common and may prompt assessment</a>. Neither source turns one line into an automatic all-clear; the whole child and the quality of the measurements still matter.</p>
 <h2>Next, OBubba builds a fixed feeding window</h2>
@@ -894,7 +906,16 @@
 <p>The sample label has another wrinkle. For this insight, `sampleSize` is the <strong>calendar span between the weights</strong>, not the number of days that contributed feed counts. A “30-day” label can sit behind an average based on three logged dates. A clearer future version would show both: <strong>“3 feed-log days within a 30-day weight window.”</strong></p>
 <h2>The age-based feed floors</h2>
 <p>The app divides the sum of qualifying feed events by the number of qualifying dates. It compares that average with this internal floor:</p>
-<p>| Baby’s current age | OBubba’s feed-frequency floor | |---|---:| | Under 4 weeks | 8 recorded milk feeds/day | | 4 to under 8 weeks | 7/day | | 8 to under 13 weeks | 6/day | | 13 to under 26 weeks | 5/day | | 26 weeks and older | 4/day |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Baby’s current age</th><th scope="col">OBubba’s feed-frequency floor</th></tr></thead>
+<tbody>
+<tr><td>Under 4 weeks</td><td>8 recorded milk feeds/day</td></tr>
+<tr><td>4 to under 8 weeks</td><td>7/day</td></tr>
+<tr><td>8 to under 13 weeks</td><td>6/day</td></tr>
+<tr><td>13 to under 26 weeks</td><td>5/day</td></tr>
+<tr><td>26 weeks and older</td><td>4/day</td></tr>
+</tbody>
+</table></div>
 <p>Meeting or exceeding the floor produces the low-urgency <strong>“feeding looks solid”</strong> wording. Falling below it produces the medium-urgency <strong>“feeds are on the lower side”</strong> version instead. The lower-side card keeps one decimal place in its displayed average so rounding does not accidentally make the copy contradict the threshold.</p>
 <p>These floors are <strong>OBubba product heuristics</strong>, not NHS feeding prescriptions or clinical thresholds. Feeding frequency varies with age, feeding method, milk supply, appetite, illness, solids and how a family records events. An older baby’s four large milk feeds cannot be directly compared with a newborn’s eight or more breastfeeds.</p>
 <p>There is also a timing limitation: the floor comes from the baby’s <strong>current</strong> age, not their age during each logged day. If the latest weight is old, a baby may have moved into a lower-frequency age band since the weigh-in window. That can tilt the current verdict towards reassurance. This is one reason to read the card as a retrospective pattern, not a live feeding assessment.</p>
@@ -941,6 +962,7 @@
 <p>Use the card to replace one frightening dot with a more proportionate question: <em>Is this a small settling of the curve, are the records representative, and is there anything about my baby or feeding that I want a professional to review?</em></p>
 <p>That combination—calm context, visible limits and a clear route to human help—is what makes personalisation trustworthy.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -971,6 +993,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

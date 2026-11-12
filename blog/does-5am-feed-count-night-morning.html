@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -857,7 +862,15 @@
 <p>That is a <strong>tracking definition</strong>, not a rule about whether a baby should be fed. Respond to hunger cues and follow any individual feeding plan regardless of what the clock or app label says.</p>
 <figure><img src="/obubba-5am-feed-decision.svg" alt="A simple decision guide showing that a 5am feed followed by more sleep belongs with the night, while a 5am feed followed by the start of the day belongs with morning." loading="lazy"/><figcaption>Ask what happened next: more overnight sleep, or the start of the day?</figcaption></figure>
 <h2>The quick answer in four real nights</h2>
-<p>| What happened | Most useful label | Why | |---|---|---| | 4:50am feed, asleep again by 5:15, up for the day at 6:40 | <strong>Night feed</strong> | it occurred inside one continuing overnight sleep | | 5:20am feed, then lights on, dressed and playing | <strong>Morning feed</strong> | the feed began the first awake period of the day | | 5:05am feed, 25 minutes awake, then another 90 minutes asleep | <strong>Night feed</strong> | a proper wake can still sit inside the night | | 5:30am feed and you cannot remember whether baby slept again | <strong>Record the time; add a note if useful</strong> | honest uncertainty is better than inventing a boundary |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What happened</th><th scope="col">Most useful label</th><th scope="col">Why</th></tr></thead>
+<tbody>
+<tr><td>4:50am feed, asleep again by 5:15, up for the day at 6:40</td><td><strong>Night feed</strong></td><td>it occurred inside one continuing overnight sleep</td></tr>
+<tr><td>5:20am feed, then lights on, dressed and playing</td><td><strong>Morning feed</strong></td><td>the feed began the first awake period of the day</td></tr>
+<tr><td>5:05am feed, 25 minutes awake, then another 90 minutes asleep</td><td><strong>Night feed</strong></td><td>a proper wake can still sit inside the night</td></tr>
+<tr><td>5:30am feed and you cannot remember whether baby slept again</td><td><strong>Record the time; add a note if useful</strong></td><td>honest uncertainty is better than inventing a boundary</td></tr>
+</tbody>
+</table></div>
 <p>The same clock time can therefore receive a different label on two mornings. That is not inconsistent. It reflects what the baby actually did.</p>
 <h2>Think in physical nights, not calendar boxes</h2>
 <p>Midnight is tidy for calendars but meaningless to a sleeping baby.</p>
@@ -901,7 +914,16 @@
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — log the feed once and let sleep context, night analysis and your chosen timeline view do the organising.</p>
 <h2>Why the label is useful</h2>
 <p>A good label helps answer specific questions over several days.</p>
-<p>| Parent question | What consistent night/morning labels reveal | |---|---| | Is milk shifting into the night? | daytime versus overnight feed frequency and, where measured, volume | | Is the first morning feed moving earlier? | whether the day itself is starting earlier or one night feed is being mistaken for breakfast | | Is the 5am feed helping sleep continue? | feed time beside resettling and final morning wake | | Are night feeds naturally reducing? | comparable night-feed counts across complete nights | | Did a routine change help? | whether the change affected feeding, waking or both |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Parent question</th><th scope="col">What consistent night/morning labels reveal</th></tr></thead>
+<tbody>
+<tr><td>Is milk shifting into the night?</td><td>daytime versus overnight feed frequency and, where measured, volume</td></tr>
+<tr><td>Is the first morning feed moving earlier?</td><td>whether the day itself is starting earlier or one night feed is being mistaken for breakfast</td></tr>
+<tr><td>Is the 5am feed helping sleep continue?</td><td>feed time beside resettling and final morning wake</td></tr>
+<tr><td>Are night feeds naturally reducing?</td><td>comparable night-feed counts across complete nights</td></tr>
+<tr><td>Did a routine change help?</td><td>whether the change affected feeding, waking or both</td></tr>
+</tbody>
+</table></div>
 <p>Consistency matters more than achieving the “correct” category on every uncertain morning. If you always classify by whether overnight sleep continued, comparisons stay meaningful.</p>
 <h2>What if baby dozes during the feed?</h2>
 <p>Dozing does not automatically decide the boundary. Ask what happened after the feed was complete.</p>
@@ -933,6 +955,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Safer sleep advice for babies</a></li><li><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/sleep-and-night-time-resources/caring-for-your-baby-at-night/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly Initiative: Caring for your baby at night</a></li></ul>
 <p><em>OBubba is a tracking and education tool, not medical advice. Ask a qualified health professional about concerns involving feeding, growth, wet nappies, unusual sleepiness, illness or your baby&#39;s individual feeding plan.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -963,6 +986,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -630,6 +630,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -865,7 +870,16 @@
 <p>There is no universally agreed clinical threshold for the parent term “split night”. In this guide, it means:</p>
 <ul><li>the baby completed a meaningful first block of night sleep</li><li>they were genuinely awake for roughly an hour or longer</li><li>the wake happened in the middle of the night, not just after bedtime</li><li>they then returned to sleep for another block</li></ul>
 <p>OBubba&#39;s current logic uses <strong>60 minutes</strong> as a practical detection threshold and requires the long wake to begin more than <strong>45 minutes after bedtime</strong> when the timing is known. Those are product rules designed to prevent mislabelling; they are not medical cut-offs.</p>
-<p>| What happened | Better description | Why the distinction matters | |---|---|---| | Baby woke 20–45 minutes after bedtime | <strong>False start</strong> | Bedtime timing, transfer, hunger or discomfort may be more relevant than a split-night schedule change | | Baby woke briefly several times and resettled within minutes | <strong>Night waking or cycle-linked stirring</strong> | Short wakes are not the same pattern as one sustained awake interval | | Baby slept for hours, stayed awake for 60–120 minutes, then slept again | <strong>Split-night pattern</strong> | The whole 24-hour rhythm and the day before bedtime are worth comparing | | Baby woke at 4:30am and never returned to sleep | <strong>Early morning waking</strong> | Light, bedtime and body-clock timing may need a different plan | | A newborn fed, changed and stayed awake overnight | <strong>Newborn night waking</strong> | Immature day–night rhythm and feeding come before schedule correction |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What happened</th><th scope="col">Better description</th><th scope="col">Why the distinction matters</th></tr></thead>
+<tbody>
+<tr><td>Baby woke 20–45 minutes after bedtime</td><td><strong>False start</strong></td><td>Bedtime timing, transfer, hunger or discomfort may be more relevant than a split-night schedule change</td></tr>
+<tr><td>Baby woke briefly several times and resettled within minutes</td><td><strong>Night waking or cycle-linked stirring</strong></td><td>Short wakes are not the same pattern as one sustained awake interval</td></tr>
+<tr><td>Baby slept for hours, stayed awake for 60–120 minutes, then slept again</td><td><strong>Split-night pattern</strong></td><td>The whole 24-hour rhythm and the day before bedtime are worth comparing</td></tr>
+<tr><td>Baby woke at 4:30am and never returned to sleep</td><td><strong>Early morning waking</strong></td><td>Light, bedtime and body-clock timing may need a different plan</td></tr>
+<tr><td>A newborn fed, changed and stayed awake overnight</td><td><strong>Newborn night waking</strong></td><td>Immature day–night rhythm and feeding come before schedule correction</td></tr>
+</tbody>
+</table></div>
 <p>The label should make the night easier to understand, not turn one difficult wake into a disorder.</p>
 <h2>Are split nights normal in babies?</h2>
 <p>Occasional long wakes can happen. Infant sleep changes rapidly, and waking itself is normal.</p>
@@ -916,7 +930,17 @@
 <ul><li>Was day sleep genuinely different?</li><li>Was the final awake period shorter or longer?</li><li>Did bedtime or morning move?</li><li>Was the baby calm or distressed during the wake?</li><li>Did they take a full feed?</li><li>Is there a repeatable link, or only a story that fits one night?</li></ul>
 <p>The comparison protects you from the most common mistake: seeing a long wake after a long nap and assuming the nap caused it, without checking whether long naps also happened before good nights.</p>
 <h2>Choose the right direction, not a dramatic reset</h2>
-<p>| Repeated evidence | First experiment | Avoid | |---|---|---| | Day sleep clearly above this baby&#39;s recent norm; calm long wake | Trim 10–15 minutes from the final nap <strong>or</strong> move bedtime 10–15 minutes later | Cutting every nap at once | | Final wake window repeatedly too short; day sleep otherwise suitable | Lengthen only the final window by 10–15 minutes | Keeping an exhausted baby awake to hit a chart | | Day sleep low; bedtime frantic; long early-hours wake | Protect naps or move bedtime 10–15 minutes earlier | Trimming daytime sleep | | Full active feed ends the wake | Improve calm daytime milk opportunities and keep responsive night feeds | Removing milk based on age alone | | Pain, illness or breathing signs | Pause schedule work and seek appropriate advice | Calling it a regression or habit | | No repeatable evidence | Hold the routine steady and gather more nights | Guessing confidently from one wake |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Repeated evidence</th><th scope="col">First experiment</th><th scope="col">Avoid</th></tr></thead>
+<tbody>
+<tr><td>Day sleep clearly above this baby&#39;s recent norm; calm long wake</td><td>Trim 10–15 minutes from the final nap <strong>or</strong> move bedtime 10–15 minutes later</td><td>Cutting every nap at once</td></tr>
+<tr><td>Final wake window repeatedly too short; day sleep otherwise suitable</td><td>Lengthen only the final window by 10–15 minutes</td><td>Keeping an exhausted baby awake to hit a chart</td></tr>
+<tr><td>Day sleep low; bedtime frantic; long early-hours wake</td><td>Protect naps or move bedtime 10–15 minutes earlier</td><td>Trimming daytime sleep</td></tr>
+<tr><td>Full active feed ends the wake</td><td>Improve calm daytime milk opportunities and keep responsive night feeds</td><td>Removing milk based on age alone</td></tr>
+<tr><td>Pain, illness or breathing signs</td><td>Pause schedule work and seek appropriate advice</td><td>Calling it a regression or habit</td></tr>
+<tr><td>No repeatable evidence</td><td>Hold the routine steady and gather more nights</td><td>Guessing confidently from one wake</td></tr>
+</tbody>
+</table></div>
 <p>Test one change for three to five comparable nights. Keep bedtime cues, feeding response and morning anchor broadly stable so you can interpret the result.</p>
 <p>If the wake shortens and the baby remains well rested, continue gently. If bedtime becomes harder, daytime mood worsens or the wake moves earlier, undo the change. A good experiment is reversible.</p>
 <h2>What to do during a split night tonight</h2>
@@ -957,6 +981,7 @@
 <p>You do not need to solve the whole night at 2am. Keep it safe and responsive, then let daylight and several honest days of evidence choose the next move.</p>
 <p><em>This article provides general information, not medical advice. Follow your baby&#39;s individual feeding and care plan and speak with a qualified health professional whenever sleep changes accompany feeding, growth, breathing, pain, fever or illness concerns.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -987,6 +1012,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,18 @@
 <p>Cooked rice needs tighter handling: cool it within <strong>1 hour</strong>, refrigerate or freeze it straight away, use refrigerated rice within <strong>24 hours</strong>, and never reheat it more than once.</p>
 <p>&gt; <strong>Save the untouched portion, not the half-eaten bowl.</strong></p>
 <h2>The baby-food leftovers table</h2>
-<p>| Food situation | Keep or discard? | What to do | |---|---|---| | extra food still in the clean pan | <strong>Keep</strong> | divide into small portions, cool promptly, then chill or freeze | | food spooned into a clean container before the meal | <strong>Keep</strong> | refrigerate within 1–2 hours and use within 2 days, or freeze | | half-eaten bowl | <strong>Discard</strong> | saliva and used utensils have contacted it; do not chill for tomorrow | | untouched food on the serving plate | <strong>Usually keep</strong> | only if the baby, used spoon and hands did not touch it and it has not sat out too long | | cooked rice | <strong>Keep with extra care</strong> | cool within 1 hour; refrigerate up to 24 hours or freeze | | previously reheated leftovers | <strong>Do not reheat again</strong> | serve what is needed, then discard the rest | | food carried without a cool bag | <strong>Time-limited</strong> | NHS advice says eat it as soon as possible and within 4 hours maximum, then discard leftovers |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Food situation</th><th scope="col">Keep or discard?</th><th scope="col">What to do</th></tr></thead>
+<tbody>
+<tr><td>extra food still in the clean pan</td><td><strong>Keep</strong></td><td>divide into small portions, cool promptly, then chill or freeze</td></tr>
+<tr><td>food spooned into a clean container before the meal</td><td><strong>Keep</strong></td><td>refrigerate within 1–2 hours and use within 2 days, or freeze</td></tr>
+<tr><td>half-eaten bowl</td><td><strong>Discard</strong></td><td>saliva and used utensils have contacted it; do not chill for tomorrow</td></tr>
+<tr><td>untouched food on the serving plate</td><td><strong>Usually keep</strong></td><td>only if the baby, used spoon and hands did not touch it and it has not sat out too long</td></tr>
+<tr><td>cooked rice</td><td><strong>Keep with extra care</strong></td><td>cool within 1 hour; refrigerate up to 24 hours or freeze</td></tr>
+<tr><td>previously reheated leftovers</td><td><strong>Do not reheat again</strong></td><td>serve what is needed, then discard the rest</td></tr>
+<tr><td>food carried without a cool bag</td><td><strong>Time-limited</strong></td><td>NHS advice says eat it as soon as possible and within 4 hours maximum, then discard leftovers</td></tr>
+</tbody>
+</table></div>
 <p>The easiest waste-saving habit happens <strong>before</strong> the highchair: put one small serving into the baby&#39;s bowl and keep the remaining clean food separate. Offer a little more from the untouched container if your baby is still hungry.</p>
 <h2>How long can homemade baby food stay in the fridge?</h2>
 <p>Current NHS Best Start in Life guidance says batch-cooked food should be cooled ideally within <strong>1 to 2 hours</strong>. If refrigerated, use it within <strong>2 days</strong>.</p>
@@ -942,6 +958,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/storing-and-reheating-food/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Storing and reheating food</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/childrens-food-safety-and-hygiene/" target="_blank" rel="noopener noreferrer">NHS: Children’s food safety and hygiene</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s first solid foods</a></li><li><a href="https://www.food.gov.uk/safety-hygiene/cooking-your-food" target="_blank" rel="noopener noreferrer">Food Standards Agency: Cooking food and using leftovers safely</a></li><li><a href="https://www.food.gov.uk/safety-hygiene/home-food-fact-checker" target="_blank" rel="noopener noreferrer">Food Standards Agency: Can you reheat rice?</a></li></ul>
 <p><em>This UK-oriented guide covers cooked complementary foods, not the separate storage rules for breast milk, prepared infant formula or specialist feeds. Follow product instructions and individual advice from your health visitor, GP, dietitian or clinical team.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -972,6 +989,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

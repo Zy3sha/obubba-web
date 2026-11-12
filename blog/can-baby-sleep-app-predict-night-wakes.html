@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -862,7 +867,16 @@
 <p>The range does not use a microphone, movement sensor, cry detector or hidden medical data. It cannot observe an unlogged wake, know why the baby woke or calculate the chance of each possible outcome.</p>
 <h2>How does “1–2 wakes” get calculated?</h2>
 <p>Imagine these are the eligible wake counts from five completed nights:</p>
-<p>| Night | Logged wakes | |---|---:| | Sunday | 1 | | Monday | 2 | | Tuesday | 1 | | Wednesday | 3 | | Thursday | 2 |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Night</th><th scope="col">Logged wakes</th></tr></thead>
+<tbody>
+<tr><td>Sunday</td><td>1</td></tr>
+<tr><td>Monday</td><td>2</td></tr>
+<tr><td>Tuesday</td><td>1</td></tr>
+<tr><td>Wednesday</td><td>3</td></tr>
+<tr><td>Thursday</td><td>2</td></tr>
+</tbody>
+</table></div>
 <p>The average is <strong>1.8 wakes per night</strong>. OBubba rounds the average to one decimal place and passes it through its display rule:</p>
 <ul><li>average of <strong>1.0 or below</strong> → <strong>0–1 wakes</strong></li><li>average <strong>above 1.0 and up to 2.5</strong> → <strong>1–2 wakes</strong></li><li>average <strong>above 2.5</strong> → a wider range from roughly one below the average to the rounded-up average</li></ul>
 <p>So 1.8 becomes <strong>“Expect roughly 1–2 wakes tonight.”</strong> An average of 3.6 would display as roughly <strong>2–4 wakes</strong>.</p>
@@ -895,7 +909,13 @@
 <p>OBubba separately calculates the average for nights 8–14 ago when at least three of those nights are eligible.</p>
 <p>If the current average is more than <strong>0.5 wakes lower</strong> than that comparison average, improvement takes priority over the standard age explanation. The guidance may say the nights are consolidating and encourage the family to protect the steadiness.</p>
 <p>For example:</p>
-<p>| Window | Average logged wakes | |---|---:| | Previous eligible nights | 3.0 | | Recent eligible nights | 2.2 |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Window</th><th scope="col">Average logged wakes</th></tr></thead>
+<tbody>
+<tr><td>Previous eligible nights</td><td>3.0</td></tr>
+<tr><td>Recent eligible nights</td><td>2.2</td></tr>
+</tbody>
+</table></div>
 <p>The fall is 0.8, so the improving-trend explanation qualifies. A move from 3.0 to 2.6 does not clear that threshold.</p>
 <p>This is a comparison of recorded windows, not evidence that a routine change caused the improvement. Teething may have eased. A cold may have passed. One carer may have logged more consistently. Celebrate the easier nights without assigning a cause the data cannot support.</p>
 <h2>What if tonight has zero wakes—or five?</h2>
@@ -958,6 +978,7 @@
 <p>No. It is tonight’s bedtime anchor plus the average first stretch from at least three eligible recent nights. Use it for rough adult planning, not as a deadline.</p>
 <h3>What counts as a night wake?</h3>
 <p>In practice, consistency matters most: record the wakes where the baby fully wakes or needs care in the same way across nights. A brief stir that resolves without intervention need not become a logged event unless that is the specific pattern you are studying.</p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_can-baby-sleep-app-predict-night-wakes"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -989,6 +1010,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,16 @@
 <p>Those definitions should never become a deadline. A long stretch is worth noticing. It is not proof that a baby no longer needs night feeds, that every future night will match it or that a baby who still wakes is behind.</p>
 <h2>The short answer: six hours can count, but define what you mean</h2>
 <p>Use the phrase with a qualifier:</p>
-<p>| What you mean | A clear way to say it | |---|---| | One long block | “Baby slept for 6 hours without signalling.” | | No feed | “There was no night feed between bedtime and morning.” | | No parent help | “Baby did not need us overnight.” | | Full family night | “Baby slept from bedtime until our morning start.” | | OBubba milestone | “The complete log shows no wakes and at least a 6-hour stretch.” |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What you mean</th><th scope="col">A clear way to say it</th></tr></thead>
+<tbody>
+<tr><td>One long block</td><td>“Baby slept for 6 hours without signalling.”</td></tr>
+<tr><td>No feed</td><td>“There was no night feed between bedtime and morning.”</td></tr>
+<tr><td>No parent help</td><td>“Baby did not need us overnight.”</td></tr>
+<tr><td>Full family night</td><td>“Baby slept from bedtime until our morning start.”</td></tr>
+<tr><td>OBubba milestone</td><td>“The complete log shows no wakes and at least a 6-hour stretch.”</td></tr>
+</tbody>
+</table></div>
 <p>That extra sentence removes most of the confusion. It also lets a health visitor understand the night without having to guess what “through” meant.</p>
 <h2>Why the definition changes the answer</h2>
 <p>Infant-sleep studies have used several thresholds. A study of 388 babies assessed both <strong>six-hour and eight-hour uninterrupted blocks</strong> at six and 12 months; depending on age and definition, 27.9% to 57% had not reached the threshold. The authors did not find that failing to sleep through by those definitions was associated with poorer mental or psychomotor development. You can read the <a href="https://pubmed.ncbi.nlm.nih.gov/30420470/" target="_blank" rel="noopener noreferrer">study abstract on PubMed</a>.</p>
@@ -871,7 +885,15 @@
 <h2>What is a longest sleep stretch?</h2>
 <p>The longest stretch is the biggest continuous block between night sleep beginning, a meaningful wake and the final morning wake.</p>
 <p>Suppose the night looks like this:</p>
-<p>| Event | Time | Stretch that just ended | |---|---|---| | Asleep for the night | 7:40pm | — | | Wake and feed | 1:55am | 6h 15m | | Back asleep | 2:20am | — | | Morning wake | 6:30am | 4h 10m |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Event</th><th scope="col">Time</th><th scope="col">Stretch that just ended</th></tr></thead>
+<tbody>
+<tr><td>Asleep for the night</td><td>7:40pm</td><td>—</td></tr>
+<tr><td>Wake and feed</td><td>1:55am</td><td>6h 15m</td></tr>
+<tr><td>Back asleep</td><td>2:20am</td><td>—</td></tr>
+<tr><td>Morning wake</td><td>6:30am</td><td>4h 10m</td></tr>
+</tbody>
+</table></div>
 <p>The longest stretch is <strong>6h 15m</strong>. Under a six-hour research definition, that baby achieved a six-hour uninterrupted block. Under a bedtime-to-morning family definition, the baby did not sleep through because there was a feed and parental help.</p>
 <p>Both descriptions are true. The first stretch may still be an encouraging sign of consolidation, especially if it has grown from three or four hours.</p>
 <h2>Does a night feed mean baby did not sleep through?</h2>
@@ -910,7 +932,16 @@
 <p>If you realise the sleep timer was left running, edit the end rather than deleting the whole night. If you missed a brief wake time, an honest note is better than invented precision.</p>
 <p>Our guide to <a href="/blog/what-time-counts-as-baby-bedtime.html">what time counts as bedtime</a> separates routine start, into-bed time and sleep onset. For a difficult night, <a href="/blog/what-to-track-when-baby-wakes-at-night.html">track only the details that can change the next decision</a>.</p>
 <h2>One night, three different useful wins</h2>
-<p>| Night result | What is worth noticing | What it does not prove | |---|---|---| | 6h 20m first stretch, then a feed | the longest block is growing | night feeds are no longer needed | | Bedtime to morning, no logged wakes | a genuine wake-free complete night | every future night will repeat it | | Two wakes, both settled quickly | less time awake and less parental effort | the baby “should” have had zero wakes | | Same wakes, later morning | the night may be shifting later | total sleep automatically increased | | Fewer wakes, two-hour split night | the wake count fell | the night became more restorative |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Night result</th><th scope="col">What is worth noticing</th><th scope="col">What it does not prove</th></tr></thead>
+<tbody>
+<tr><td>6h 20m first stretch, then a feed</td><td>the longest block is growing</td><td>night feeds are no longer needed</td></tr>
+<tr><td>Bedtime to morning, no logged wakes</td><td>a genuine wake-free complete night</td><td>every future night will repeat it</td></tr>
+<tr><td>Two wakes, both settled quickly</td><td>less time awake and less parental effort</td><td>the baby “should” have had zero wakes</td></tr>
+<tr><td>Same wakes, later morning</td><td>the night may be shifting later</td><td>total sleep automatically increased</td></tr>
+<tr><td>Fewer wakes, two-hour split night</td><td>the wake count fell</td><td>the night became more restorative</td></tr>
+</tbody>
+</table></div>
 <p>This is why OBubba keeps longest stretch, wake count, time awake and total sleep as different signals. A single score cannot tell the whole story.</p>
 <h2>Sleeping through does not replace safer sleep</h2>
 <p>A longer stretch changes nothing about the sleep-space basics. The <a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS says the safest place for the first six months is a cot or Moses basket in the same room as you, with baby placed on their back</a>. Use a firm, flat mattress and keep the space clear of pillows, cot bumpers and loose objects.</p>
@@ -938,6 +969,7 @@
 <p>You do not need to turn it into a deadline for tomorrow. You do not need to compare it with another baby. And you do not need to call it “sleeping through” without explaining what happened.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — record bedtime, meaningful wakes and morning once, then let the app distinguish a long stretch, a personal best and a complete wake-free night without treating missing logs as perfection.</p>
 <p><em>OBubba supports parent-held tracking and pattern awareness. It cannot observe unlogged wakes, assess feeding or growth, confirm that a sleep space is safe, diagnose a sleep problem or replace advice from a health visitor, GP or other qualified professional.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_what-counts-sleeping-through-night-baby"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -969,6 +1001,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

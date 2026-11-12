@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -861,7 +866,17 @@
 <p>The <a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS first-solid-food guide</a> says starting around six months gives babies time to develop the skills needed to move food around the mouth, chew and swallow. Some babies can begin with mashed or finger foods and may not need a smooth-only stage at all.</p>
 <h2>A practical texture ladder</h2>
 <p>The stages overlap. You do not need to finish every smooth meal before offering a finger food, and you do not have to choose between spoon feeding and baby-led weaning.</p>
-<p>| Texture | What it looks like | A small next step | |---|---|---| | Smooth | Completely blended and uniform | Blend the same food for slightly less time | | Thick smooth | Holds shape on the spoon | Add less liquid or stir in a little fork-mashed food | | Fork-mashed | Soft, uneven texture with tiny squashable lumps | Leave a few slightly larger soft pieces | | Soft finger food | Adult-finger-sized piece baby can grip; soft enough to squash | Offer beside the mash for self-feeding exploration | | Chopped or minced | Small soft pieces for improving pincer grip and chewing | Vary shape and combine with familiar sauces | | Adapted family food | The family&#39;s meal without added salt, prepared to a safe size and texture | Increase variety while retaining safe preparation |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Texture</th><th scope="col">What it looks like</th><th scope="col">A small next step</th></tr></thead>
+<tbody>
+<tr><td>Smooth</td><td>Completely blended and uniform</td><td>Blend the same food for slightly less time</td></tr>
+<tr><td>Thick smooth</td><td>Holds shape on the spoon</td><td>Add less liquid or stir in a little fork-mashed food</td></tr>
+<tr><td>Fork-mashed</td><td>Soft, uneven texture with tiny squashable lumps</td><td>Leave a few slightly larger soft pieces</td></tr>
+<tr><td>Soft finger food</td><td>Adult-finger-sized piece baby can grip; soft enough to squash</td><td>Offer beside the mash for self-feeding exploration</td></tr>
+<tr><td>Chopped or minced</td><td>Small soft pieces for improving pincer grip and chewing</td><td>Vary shape and combine with familiar sauces</td></tr>
+<tr><td>Adapted family food</td><td>The family&#39;s meal without added salt, prepared to a safe size and texture</td><td>Increase variety while retaining safe preparation</td></tr>
+</tbody>
+</table></div>
 <p>The <a href="https://www.nhs.uk/best-start-in-life/baby/weaning/what-to-feed-your-baby/7-to-9-months/" target="_blank" rel="noopener noreferrer">NHS guide for 7- to 9-month-olds</a> advises moving towards mashed, lumpy foods and finger foods as soon as a baby can manage them. It also makes clear that babies take different amounts of time and that repeated, patient offering matters.</p>
 <p>Treat this table as a direction of travel, not a race. A child can eat yoghurt at lunch and soft toast fingers at tea. Smooth food does not become forbidden when they learn to chew.</p>
 <h2>A seven-meal transition that changes one thing at a time</h2>
@@ -969,6 +984,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby&#39;s first solid foods</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/what-to-feed-your-baby/7-to-9-months/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Feeding from 7 to 9 months</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/preparing-food-safely/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Preparing food safely</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/choking-and-gagging-on-food/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Choking and gagging on food</a></li><li><a href="https://www.somersetft.nhs.uk/children-and-young-peoples-therapy-service/coping-with-lumpy-food/" target="_blank" rel="noopener noreferrer">Somerset NHS Foundation Trust: Coping with lumpy food</a></li></ul>
 <p><em>OBubba supports feeding records, age-stage education, pattern summaries and safety reminders. It cannot see food preparation, supervise meals, assess chewing or swallowing, diagnose a feeding disorder or replace individual advice from a health visitor, dietitian, GP, speech and language therapist or emergency services.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -999,6 +1015,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -855,7 +860,15 @@
 <p><strong>Some worry and stress are common in pregnancy. Anxiety deserves support when it is difficult to control, keeps returning, or starts changing how you sleep, concentrate, work, eat, attend appointments or enjoy ordinary life.</strong> You do not need to wait until it becomes unbearable, and you do not need an app to confirm that it is “bad enough”. Tell your midwife or GP what is happening.</p>
 <p>The aim is not to eliminate every uncertain thought. It is to notice when worry has stopped being useful information and started running the day.</p>
 <h2>Common worry or time to ask for help?</h2>
-<p>| What it may look like | A sensible next step | |---|---| | A specific worry that settles after reliable information or an appointment | note the question once, use one trusted source and bring it to the next routine conversation | | Worry that is there much of the time, difficult to control or affecting daily life | contact your midwife or GP; support is available and you will not be judged | | Panic attacks, repeated checking, avoiding appointments, severe fear of birth, distressing intrusive thoughts or anxiety that stops you functioning | ask for a prompt mental-health assessment rather than relying on self-help alone | | You think there is a risk you may harm yourself or your baby, or you cannot keep yourself safe | call <strong>999</strong> or go to A&amp;E now; ask another person to stay with you and make the call if needed |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What it may look like</th><th scope="col">A sensible next step</th></tr></thead>
+<tbody>
+<tr><td>A specific worry that settles after reliable information or an appointment</td><td>note the question once, use one trusted source and bring it to the next routine conversation</td></tr>
+<tr><td>Worry that is there much of the time, difficult to control or affecting daily life</td><td>contact your midwife or GP; support is available and you will not be judged</td></tr>
+<tr><td>Panic attacks, repeated checking, avoiding appointments, severe fear of birth, distressing intrusive thoughts or anxiety that stops you functioning</td><td>ask for a prompt mental-health assessment rather than relying on self-help alone</td></tr>
+<tr><td>You think there is a risk you may harm yourself or your baby, or you cannot keep yourself safe</td><td>call <strong>999</strong> or go to A&amp;E now; ask another person to stay with you and make the call if needed</td></tr>
+</tbody>
+</table></div>
 <p>This is not a diagnostic table. Anxiety can sit beside depression, obsessive-compulsive symptoms, trauma, a previous mental-health condition, pregnancy loss, fertility treatment, a difficult pregnancy or practical pressures. A professional can help work out what kind of support fits.</p>
 <h2>What anxiety in pregnancy can feel like</h2>
 <p>The <a href="https://www.nhs.uk/pregnancy/mental-health-in-pregnancy-and-after-the-birth/anxiety-in-pregnancy/" target="_blank" rel="noopener noreferrer">NHS describes perinatal anxiety</a> as stress or worry that affects daily life and is difficult to control. It may show up as:</p>
@@ -920,7 +933,16 @@
 <p>That record is deliberately kept <strong>on the device</strong> and outside the shared child sync record. A partner or carer does not automatically receive sensitive mental health check-ins simply because they share the baby&#39;s care. Signing out clears the maternal wellbeing record from that device.</p>
 <p>The wellbeing feature is a self-reflection tool, not a clinical screening instrument. It computes no depression or anxiety score and returns no diagnosis. The separate <strong>I need a little more support</strong> action opens contacts selected for the device region and tells the parent to speak to a midwife or GP. In the UK list, crisis help includes 999 or NHS 111. It is still a signposting screen, not an assessment of whether someone is safe.</p>
 <p>Important limits remain:</p>
-<p>| OBubba can help with | OBubba cannot know | |---|---| | pausing long enough to name today&#39;s feeling | whether you have an anxiety disorder | | keeping one daily feeling check-in for personal reflection | whether you or the pregnancy are medically well | | keeping the check-in out of the shared baby timeline | who can see your phone or device backups | | making support information easier to reach | whether you are safe without asking and assessing you directly | | guiding one minute of breathing | whether breathing, therapy or medicine is the right treatment |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">OBubba can help with</th><th scope="col">OBubba cannot know</th></tr></thead>
+<tbody>
+<tr><td>pausing long enough to name today&#39;s feeling</td><td>whether you have an anxiety disorder</td></tr>
+<tr><td>keeping one daily feeling check-in for personal reflection</td><td>whether you or the pregnancy are medically well</td></tr>
+<tr><td>keeping the check-in out of the shared baby timeline</td><td>who can see your phone or device backups</td></tr>
+<tr><td>making support information easier to reach</td><td>whether you are safe without asking and assessing you directly</td></tr>
+<tr><td>guiding one minute of breathing</td><td>whether breathing, therapy or medicine is the right treatment</td></tr>
+</tbody>
+</table></div>
 <p>Use the check-in to begin a sentence, not end the investigation: “I feel worried most days, and the worry is affecting my sleep. I want to tell my midwife.”</p>
 <p><strong><a href="/app.html?utm_source=pregnancy_anxiety_article&amp;utm_medium=owned_search&amp;utm_campaign=from_bump_to_baby_auto&amp;utm_content=auto_20261123_pregnancy_anxiety">Try OBubba free →</a></strong>. Pregnancy wellbeing, appointments, preparation and keepsakes continue into sleep, feeds, nappies, weaning, growth and shared care after birth.</p>
 <h2>Frequently asked questions</h2>
@@ -937,6 +959,7 @@
 <h2>Reliable UK sources</h2>
 <ul><li><a href="https://www.nhs.uk/pregnancy/mental-health-in-pregnancy-and-after-the-birth/anxiety-in-pregnancy/" target="_blank" rel="noopener noreferrer">NHS: Anxiety in pregnancy</a></li><li><a href="https://www.nhs.uk/nhs-services/mental-health-services/find-care-for-your-mental-health-before-during-and-after-pregnancy/" target="_blank" rel="noopener noreferrer">NHS: Find mental-health care before, during and after pregnancy</a></li><li><a href="https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/behaviours/help-for-suicidal-thoughts/" target="_blank" rel="noopener noreferrer">NHS: Help for suicidal thoughts</a></li><li><a href="https://www.nice.org.uk/guidance/cg192" target="_blank" rel="noopener noreferrer">NICE CG192: Antenatal and postnatal mental health</a></li></ul>
 <p><em>This UK-oriented article gives general information, not a diagnosis or individual medical advice. Tell your midwife or GP when anxiety is difficult to control or affecting daily life. Call 999 or go to A&amp;E if there is an immediate risk of harm to you or your baby.</em></p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -968,6 +991,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

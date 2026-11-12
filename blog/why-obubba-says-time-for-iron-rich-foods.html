@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -887,7 +892,20 @@
 <ul><li>meat, beef, lamb, pork, mince, chicken, turkey and liver</li><li>lentil, dahl or dal, bean, chickpea, hummus or houmous</li><li>egg, tofu, spinach and quinoa</li><li>fish, salmon, sardine and mackerel</li><li>oat, oats, porridge, cereal, Weetabix and fortified</li><li>apricot</li></ul>
 <p>The app checks whole words with simple plural handling. This prevents accidental substring matches: <strong>goat</strong> does not count because it contains “oat”, <strong>jellybeans</strong> does not count because it contains “bean”, and <strong>eggplant</strong> does not become an egg meal.</p>
 <p>That is good defensive code. It is not ingredient intelligence.</p>
-<p>| Logged food name | Does the current detector count it? | Why | |---|---:|---| | `Beef and lentil stew` | Yes | contains beef and lentil | | `Egg and avocado mash` | Yes | contains egg | | `Chicken curry` | Yes | contains chicken | | `Baby porridge` | Yes | contains porridge | | `Fish pie` | Yes | contains fish | | `Bolognese` | No | beef or meat is not named | | `Veggie chilli` | No | bean, lentil or another recognised source is not named | | `Breakfast cereal` | Yes | “cereal” matches even if fortification is unknown | | `Goat’s yoghurt` | No | goat does not falsely match oat |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Logged food name</th><th scope="col">Does the current detector count it?</th><th scope="col">Why</th></tr></thead>
+<tbody>
+<tr><td>`Beef and lentil stew`</td><td>Yes</td><td>contains beef and lentil</td></tr>
+<tr><td>`Egg and avocado mash`</td><td>Yes</td><td>contains egg</td></tr>
+<tr><td>`Chicken curry`</td><td>Yes</td><td>contains chicken</td></tr>
+<tr><td>`Baby porridge`</td><td>Yes</td><td>contains porridge</td></tr>
+<tr><td>`Fish pie`</td><td>Yes</td><td>contains fish</td></tr>
+<tr><td>`Bolognese`</td><td>No</td><td>beef or meat is not named</td></tr>
+<tr><td>`Veggie chilli`</td><td>No</td><td>bean, lentil or another recognised source is not named</td></tr>
+<tr><td>`Breakfast cereal`</td><td>Yes</td><td>“cereal” matches even if fortification is unknown</td></tr>
+<tr><td>`Goat’s yoghurt`</td><td>No</td><td>goat does not falsely match oat</td></tr>
+</tbody>
+</table></div>
 <p>The last examples show both sides of a keyword system. A vague real iron-containing recipe can be missed. A generic cereal name can count even though the app has not checked the packet or confirmed that it is fortified.</p>
 <h2>Why the note can appear after an iron-containing meal</h2>
 <p>The detector searches the food name, not the note or a photograph.</p>
@@ -968,6 +986,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s first solid foods</a></li><li><a href="https://www.gov.uk/government/publications/feeding-in-the-first-year-of-life-sacn-report" target="_blank" rel="noopener noreferrer">GOV.UK: SACN report on feeding in the first year of life</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/vitamins-for-children/" target="_blank" rel="noopener noreferrer">NHS: Vitamins for children</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/what-to-feed-young-children/" target="_blank" rel="noopener noreferrer">NHS: What to feed young children</a></li></ul>
 <p><em>This article gives general information for UK families and describes the OBubba implementation reviewed on 22 March 2027. OBubba cannot measure iron intake, diagnose deficiency, recommend supplements or replace advice from a health professional who knows the child.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -998,6 +1017,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

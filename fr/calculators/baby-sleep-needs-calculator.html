@@ -630,6 +630,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -916,6 +921,7 @@
 &lt;p&gt;&lt;a href=&quot;https://obubba.com/fr/calculators/baby-sleep-needs-calculator.html&quot;&gt;Combien de temps doit dormir mon bébé ?&lt;/a&gt; by &lt;a href=&quot;https://obubba.com&quot;&gt;OBubba&lt;/a&gt;&lt;/p&gt;</textarea><button class="button secondary g-embed-copy" type="button" data-done="Code copié">Copier le code</button></section>
     <section class="g-section faq"><p class="eyebrow">Les questions des parents</p><h2>Questions fréquentes</h2><details open><summary>Combien d’heures dort un nouveau-né ?</summary><p>Les nouveau-nés dorment en général environ 14 à 17 heures sur 24, par petites périodes réparties le jour et la nuit.</p></details><details><summary>Combien doit dormir un bébé de 6 mois ?</summary><p>Environ 12 à 16 heures sur 24, souvent 10 à 12 la nuit et le reste sur environ trois siestes.</p></details><details><summary>Mon bébé dort moins que le tableau. Est-ce un souci ?</summary><p>En général, non. Si votre bébé est plutôt serein, mange et grandit bien, il a probablement ce dont il a besoin. Si vous vous posez la question, une puéricultrice de PMI ou votre pédiatre pourra vous répondre.</p></details></section>
 
+
     <section class="g-section"><h2>Autres outils gratuits</h2><div class="g-tiles"><a class="g-tile" href="/fr/calculators/baby-sleep-schedule-maker.html"><span class="g-tile-art"><img src="/obubba-schedule-maker-app.jpg" alt="" loading="lazy"/></span><strong>Créer le planning de siestes de bébé</strong><small>Une journée type de siestes et de coucher selon l’âge et l’heure de réveil de bébé.</small></a><a class="g-tile" href="/fr/calculators/wake-window-calculator.html"><span class="g-tile-art"><img src="/obubba-personalised-nap-prediction-app.jpg" alt="" loading="lazy"/></span><strong>Calculateur de fenêtres d’éveil</strong><small>Combien de temps votre bébé peut rester éveillé sereinement entre deux sommeils.</small></a><a class="g-tile" href="/fr/calculators/night-waking-checker.html"><span class="g-tile-art"><img src="/obubba-read-baby-night-wake.jpg" alt="" loading="lazy"/></span><strong>Pourquoi mon bébé se réveille-t-il la nuit ?</strong><small>Répondez à quelques questions pour voir les raisons les plus probables des réveils nocturnes.</small></a><a class="g-tile" href="/fr/calculators/bedtime-calculator.html"><span class="g-tile-art"><img src="/obubba-late-nap-may-move-bedtime.jpg" alt="" loading="lazy"/></span><strong>Calculer l’heure du coucher de bébé</strong><small>La bonne heure du coucher selon la fin de la dernière sieste.</small></a><a class="g-tile" href="/fr/calculators/sleep-regression-checker.html"><span class="g-tile-art"><img src="/obubba-still-learning-baby-rhythm.jpg" alt="" loading="lazy"/></span><strong>Vérifier une régression du sommeil</strong><small>Quels chamboulements courants du sommeil correspondent à l’âge de bébé, et ce qui aide.</small></a><a class="g-tile" href="/fr/calculators/nap-transition-checker.html"><span class="g-tile-art"><img src="/obubba-drop-a-nap-transition.jpg" alt="" loading="lazy"/></span><strong>Transition de siestes : bébé est-il prêt ?</strong><small>Votre bébé est-il prêt à supprimer une sieste ? Quatre signes à vérifier.</small></a></div></section>
     <section class="g-section g-sources"><h2>Sources</h2><ul><li><a href="https://jcsm.aasm.org/doi/10.5664/jcsm.5866" rel="noopener" target="_blank">Paruthi et al. 2016, durées de sommeil recommandées par l’AASM</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" rel="noopener" target="_blank">NHS : de combien de sommeil mon bébé a-t-il besoin ?</a></li></ul><p class="g-disclaimer">Les outils OBubba donnent des informations générales selon l’âge. Ils ne remplacent pas un avis médical et ne posent aucun diagnostic. Chaque bébé est différent. Si vous êtes inquiet pour votre bébé, parlez-en à votre sage-femme, à une puéricultrice de PMI, à votre pédiatre ou à votre médecin, ou appelez le 15 en cas d’urgence.</p></section>
   </main>
@@ -933,6 +939,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

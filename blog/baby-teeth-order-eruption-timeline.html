@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,18 @@
 <p>Most babies start teething at around 6 months, but some begin before 4 months and some after 12 months. Teeth tend to follow a recognisable order, with front teeth followed by molars and canines, but the calendar varies widely.</p>
 <p>&gt; <strong>The usual order is:</strong> central incisors, lateral incisors, first molars, canines, then second molars. Lower front teeth commonly appear before their upper partners. Most children have all 20 milk teeth by about 2 to 3 years old.</p>
 <h2>Baby teeth order at a glance</h2>
-<p>| Tooth group | Typical eruption window | What you may notice | |---|---:|---| | Lower central incisors | <strong>6–10 months</strong> | The two bottom front teeth are often first | | Upper central incisors | <strong>8–12 months</strong> | The two top front teeth create the familiar four-tooth smile | | Upper lateral incisors | <strong>9–13 months</strong> | Teeth appear beside the upper central pair | | Lower lateral incisors | <strong>10–16 months</strong> | The lower front row widens | | First molars | <strong>13–19 months</strong> | Broad back teeth arrive before the canines in many children | | Canines | <strong>16–22 months</strong> | Pointed teeth fill the spaces between incisors and molars | | Second molars | <strong>23–33 months</strong> | The final four milk teeth usually complete the set |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Tooth group</th><th scope="col">Typical eruption window</th><th scope="col">What you may notice</th></tr></thead>
+<tbody>
+<tr><td>Lower central incisors</td><td><strong>6–10 months</strong></td><td>The two bottom front teeth are often first</td></tr>
+<tr><td>Upper central incisors</td><td><strong>8–12 months</strong></td><td>The two top front teeth create the familiar four-tooth smile</td></tr>
+<tr><td>Upper lateral incisors</td><td><strong>9–13 months</strong></td><td>Teeth appear beside the upper central pair</td></tr>
+<tr><td>Lower lateral incisors</td><td><strong>10–16 months</strong></td><td>The lower front row widens</td></tr>
+<tr><td>First molars</td><td><strong>13–19 months</strong></td><td>Broad back teeth arrive before the canines in many children</td></tr>
+<tr><td>Canines</td><td><strong>16–22 months</strong></td><td>Pointed teeth fill the spaces between incisors and molars</td></tr>
+<tr><td>Second molars</td><td><strong>23–33 months</strong></td><td>The final four milk teeth usually complete the set</td></tr>
+</tbody>
+</table></div>
 <p>These are the broader orientation windows used in OBubba, not NHS deadlines. The <a href="https://www.nhs.uk/baby/babys-development/teething/baby-teething-symptoms/" target="_blank" rel="noopener noreferrer">NHS teething guide</a> gives a simpler rough sequence: central incisors around 6 months, lateral incisors around 8 months, first molars around 12 months, canines around 18 months and second molars around 24 months.</p>
 <p>Neither chart is an appointment. A tooth may arrive earlier, later or in a slightly different order without meaning anything is wrong.</p>
 <h2>The complete journey from first tooth to 20</h2>
@@ -943,7 +959,17 @@
 <p><strong><a href="/app.html?utm_source=baby_teeth_order_article&amp;utm_medium=owned_search&amp;utm_campaign=from_bump_to_baby_auto&amp;utm_content=auto_20261023_baby_teeth">Map baby&#39;s first teeth in OBubba →</a></strong>. Try OBubba free and keep first teeth beside feeds, sleep, medicines, growth and milestones, then turn the moments you log into a first-year story the family can share.</p>
 <h2>What is worth recording?</h2>
 <p>You do not need to inspect the mouth every day. When something changes, a concise entry is enough:</p>
-<p>| Record | Why it may help | |---|---| | Exact tooth or approximate position | Distinguishes a real eruption from a general teething note | | Date first spotted | Connects the tooth with a short-lived feeding or sleep change | | Sore or swollen gum | More specific than chewing alone | | Feeding changes | Helps show whether milk or food intake actually shifted | | Temperature measured with a thermometer | Prevents “felt warm” becoming an invented fever | | Comfort method tried | Makes care handover easier between adults |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Record</th><th scope="col">Why it may help</th></tr></thead>
+<tbody>
+<tr><td>Exact tooth or approximate position</td><td>Distinguishes a real eruption from a general teething note</td></tr>
+<tr><td>Date first spotted</td><td>Connects the tooth with a short-lived feeding or sleep change</td></tr>
+<tr><td>Sore or swollen gum</td><td>More specific than chewing alone</td></tr>
+<tr><td>Feeding changes</td><td>Helps show whether milk or food intake actually shifted</td></tr>
+<tr><td>Temperature measured with a thermometer</td><td>Prevents “felt warm” becoming an invented fever</td></tr>
+<tr><td>Comfort method tried</td><td>Makes care handover easier between adults</td></tr>
+</tbody>
+</table></div>
 <p>Do not prolong an examination if the child resists. A photo of a natural smile or the date you first noticed the edge is enough for the memory.</p>
 <h2>When to ask for professional advice</h2>
 <p>Speak to a dentist, health visitor, pharmacist, GP or NHS 111 as appropriate if:</p>
@@ -967,6 +993,7 @@
 <h3>Can teeth come through in the wrong order?</h3>
 <p>A different sequence is often just normal variation. A dentist can assess an unusual appearance, persistent asymmetry or any concern about the jaw and gums.</p>
 <p><em>This article provides general UK information, not a diagnosis or individual dental plan. Seek professional advice when symptoms are severe, persistent, unusual or worrying.</em></p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -998,6 +1025,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

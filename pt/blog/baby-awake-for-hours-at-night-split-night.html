@@ -630,6 +630,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -865,7 +870,16 @@
 <p>Não existe um limite clínico universalmente aceito para o termo popular &quot;noite dividida&quot;. Neste guia, significa:</p>
 <ul><li>o bebê completou um primeiro bloco significativo de sono noturno</li><li>ele ficou genuinamente acordado por cerca de uma hora ou mais</li><li>o despertar aconteceu no meio da noite, não logo depois de dormir</li><li>ele então voltou a dormir por outro bloco</li></ul>
 <p>A lógica atual do OBubba em usa <strong>60 minutos</strong> como limite prático de detecção e exige que o despertar longo comece mais de <strong>45 minutos depois do horário de dormir</strong> quando esse horário é conhecido. Essas são regras do produto pensadas para evitar classificações erradas; não são limites médicos.</p>
-<p>| O que aconteceu | Descrição melhor | Por que a distinção importa | |---|---|---| | O bebê acordou 20 a 45 minutos depois de dormir | <strong>Falso começo</strong> | O horário de dormir, a transferência para o berço, a fome ou o desconforto podem ser mais relevantes do que uma mudança de agenda por noite dividida | | O bebê acordou brevemente várias vezes e voltou a dormir em minutos | <strong>Despertar noturno ou mexer ligado aos ciclos</strong> | Despertares curtos não são o mesmo padrão que um único intervalo acordado prolongado | | O bebê dormiu por horas, ficou acordado por 60 a 120 minutos e dormiu de novo | <strong>Padrão de noite dividida</strong> | Vale a pena comparar o ritmo das 24 horas inteiras e o dia anterior ao horário de dormir | | O bebê acordou às 4h30 e nunca mais voltou a dormir | <strong>Despertar matinal precoce</strong> | A luz, o horário de dormir e o relógio biológico podem precisar de um plano diferente | | Um recém-nascido mamou, foi trocado e ficou acordado de madrugada | <strong>Despertar noturno do recém-nascido</strong> | O ritmo dia-noite imaturo e a alimentação vêm antes da correção de agenda |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">O que aconteceu</th><th scope="col">Descrição melhor</th><th scope="col">Por que a distinção importa</th></tr></thead>
+<tbody>
+<tr><td>O bebê acordou 20 a 45 minutos depois de dormir</td><td><strong>Falso começo</strong></td><td>O horário de dormir, a transferência para o berço, a fome ou o desconforto podem ser mais relevantes do que uma mudança de agenda por noite dividida</td></tr>
+<tr><td>O bebê acordou brevemente várias vezes e voltou a dormir em minutos</td><td><strong>Despertar noturno ou mexer ligado aos ciclos</strong></td><td>Despertares curtos não são o mesmo padrão que um único intervalo acordado prolongado</td></tr>
+<tr><td>O bebê dormiu por horas, ficou acordado por 60 a 120 minutos e dormiu de novo</td><td><strong>Padrão de noite dividida</strong></td><td>Vale a pena comparar o ritmo das 24 horas inteiras e o dia anterior ao horário de dormir</td></tr>
+<tr><td>O bebê acordou às 4h30 e nunca mais voltou a dormir</td><td><strong>Despertar matinal precoce</strong></td><td>A luz, o horário de dormir e o relógio biológico podem precisar de um plano diferente</td></tr>
+<tr><td>Um recém-nascido mamou, foi trocado e ficou acordado de madrugada</td><td><strong>Despertar noturno do recém-nascido</strong></td><td>O ritmo dia-noite imaturo e a alimentação vêm antes da correção de agenda</td></tr>
+</tbody>
+</table></div>
 <p>O rótulo deve deixar a noite mais fácil de entender, não transformar um despertar difícil em um distúrbio.</p>
 <h2>Noites divididas são normais em bebês?</h2>
 <p>Despertares longos ocasionais podem acontecer. O sono infantil muda rapidamente, e acordar em si é normal.</p>
@@ -916,7 +930,17 @@
 <ul><li>O sono de dia foi genuinamente diferente?</li><li>O período acordado final foi mais curto ou mais longo?</li><li>O horário de dormir ou o da manhã mudou?</li><li>O bebê estava calmo ou angustiado durante o despertar?</li><li>Ele tomou uma mamada completa?</li><li>Existe uma ligação que se repete, ou só uma história que encaixa em uma noite?</li></ul>
 <p>A comparação te protege do erro mais comum: ver um despertar longo depois de uma soneca longa e presumir que a soneca causou aquilo, sem verificar se sonecas longas também aconteceram antes de boas noites.</p>
 <h2>Escolha a direção certa, não uma reformulação dramática</h2>
-<p>| Evidência repetida | Primeiro experimento | Evite | |---|---|---| | Sono de dia claramente acima da norma recente deste bebê; despertar longo e calmo | Reduza 10 a 15 minutos da última soneca <strong>ou</strong> atrase o horário de dormir em 10 a 15 minutos | Cortar todas as sonecas de uma vez | | Janela de sono final repetidamente curta demais; sono de dia de resto adequado | Alongue só a janela final em 10 a 15 minutos | Manter um bebê exausto acordado para bater uma tabela | | Sono de dia baixo; hora de dormir frenética; despertar longo de madrugada | Proteja as sonecas ou adiante o horário de dormir em 10 a 15 minutos | Reduzir o sono de dia | | Uma mamada ativa e completa encerra o despertar | Melhore as oportunidades calmas de leite durante o dia e mantenha as mamadas noturnas responsivas | Retirar o leite com base só na idade | | Sinais de dor, doença ou respiração | Pause o trabalho de agenda e busque orientação adequada | Chamar de regressão ou hábito | | Nenhuma evidência que se repita | Mantenha a rotina estável e reúna mais noites | Adivinhar com confiança a partir de um único despertar |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Evidência repetida</th><th scope="col">Primeiro experimento</th><th scope="col">Evite</th></tr></thead>
+<tbody>
+<tr><td>Sono de dia claramente acima da norma recente deste bebê; despertar longo e calmo</td><td>Reduza 10 a 15 minutos da última soneca <strong>ou</strong> atrase o horário de dormir em 10 a 15 minutos</td><td>Cortar todas as sonecas de uma vez</td></tr>
+<tr><td>Janela de sono final repetidamente curta demais; sono de dia de resto adequado</td><td>Alongue só a janela final em 10 a 15 minutos</td><td>Manter um bebê exausto acordado para bater uma tabela</td></tr>
+<tr><td>Sono de dia baixo; hora de dormir frenética; despertar longo de madrugada</td><td>Proteja as sonecas ou adiante o horário de dormir em 10 a 15 minutos</td><td>Reduzir o sono de dia</td></tr>
+<tr><td>Uma mamada ativa e completa encerra o despertar</td><td>Melhore as oportunidades calmas de leite durante o dia e mantenha as mamadas noturnas responsivas</td><td>Retirar o leite com base só na idade</td></tr>
+<tr><td>Sinais de dor, doença ou respiração</td><td>Pause o trabalho de agenda e busque orientação adequada</td><td>Chamar de regressão ou hábito</td></tr>
+<tr><td>Nenhuma evidência que se repita</td><td>Mantenha a rotina estável e reúna mais noites</td><td>Adivinhar com confiança a partir de um único despertar</td></tr>
+</tbody>
+</table></div>
 <p>Teste uma mudança por três a cinco noites comparáveis. Mantenha os sinais da hora de dormir, a resposta à alimentação e a âncora da manhã amplamente estáveis para você conseguir interpretar o resultado.</p>
 <p>Se o despertar encurtar e o bebê continuar bem descansado, siga com gentileza. Se a hora de dormir ficar mais difícil, o humor de dia piorar ou o despertar se antecipar, desfaça a mudança. Um bom experimento é reversível.</p>
 <h2>O que fazer durante uma noite dividida hoje</h2>
@@ -957,6 +981,7 @@
 <p>Você não precisa resolver a noite inteira às 2 da manhã. Mantenha tudo seguro e responsivo, depois deixe a luz do dia e várias noites honestas de evidência escolherem o próximo passo.</p>
 <p><em>Este artigo oferece informação geral, não conselho médico. Siga o plano individual de alimentação e cuidado do seu bebê e converse com um profissional de saúde qualificado sempre que as mudanças de sono vierem acompanhadas de preocupações com alimentação, crescimento, respiração, dor, febre ou doença.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -987,6 +1012,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

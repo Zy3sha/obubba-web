@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -984,7 +989,19 @@
 <p>Check whether deletion is available inside the app, whether there is a delay or legal retention exception and what happens to data previously shared with another family member. Do this before you need it, not after a phone is lost or a relationship changes.</p>
 <h2>A 60-second comparison card</h2>
 <p>When comparing two pregnancy or baby apps, write one line for each item:</p>
-<p>| Question | App A | App B | |---|---|---| | Works before account creation |  |  | | Local versus cloud storage explained |  |  | | Sharing is invitation-based and revocable |  |  | | AI provider and sent context named |  |  | | Analytics separated from baby data |  |  | | Location optional and purpose-limited |  |  | | Usable export available |  |  | | In-app account/cloud deletion available |  |  |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Question</th><th scope="col">App A</th><th scope="col">App B</th></tr></thead>
+<tbody>
+<tr><td>Works before account creation</td><td></td><td></td></tr>
+<tr><td>Local versus cloud storage explained</td><td></td><td></td></tr>
+<tr><td>Sharing is invitation-based and revocable</td><td></td><td></td></tr>
+<tr><td>AI provider and sent context named</td><td></td><td></td></tr>
+<tr><td>Analytics separated from baby data</td><td></td><td></td></tr>
+<tr><td>Location optional and purpose-limited</td><td></td><td></td></tr>
+<tr><td>Usable export available</td><td></td><td></td></tr>
+<tr><td>In-app account/cloud deletion available</td><td></td><td></td></tr>
+</tbody>
+</table></div>
 <p>Leave a box blank when the answer is hard to find. Missing information is itself useful information when choosing where to place a long family history.</p>
 <h2>How OBubba answers the checklist</h2>
 <p>This page is published by OBubba, so this section is first-party product information rather than an independent assessment.</p>
@@ -993,6 +1010,7 @@
 <h2>Choose clarity over slogans</h2>
 <p>No app can truthfully promise that a connected service is impossible to breach. A better sign is specific, current information: what is collected, where it goes, why it goes there, who can access it and how the family can export or delete it.</p>
 <p>Read the policy before building a long record. Then use only the features that give your family something back.</p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -1025,6 +1043,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,15 @@
 <p><strong>In the current app, no. A plan tick and a solids log are two separate records.</strong> The tick remembers that you checked off a planned idea for this week. Only <strong>Log a food</strong> creates the dated feeding entry used by the journal, food response, allergen history, weaning analytics and recommendation engine.</p>
 <p>That distinction is useful once you know it, but the interface does not explain it well enough. We traced the path through the current `weaning_screen.dart`, `weaning_plan.dart`, feed log sheet, child history and recipe engine to show exactly what parents should tap—and how OBubba can make the handoff much better.</p>
 <h2>The short answer</h2>
-<p>| Action | What it saves now | What it does not save | |---|---|---| | Tap a meal in <strong>This week’s plan</strong> | that plan item’s `tried` tick for the current child and week | no date, time, amount, response, symptoms or solids feed | | Tick an item in <strong>Shopping list</strong> | whether that ingredient is “in the basket” | no evidence that it was cooked, offered or eaten | | Tap <strong>Log a food</strong> and choose Solids | a dated feed with the food name, detected allergens and optional Loved/Unsure/Reaction response | it cannot know the quantity swallowed or verify the real ingredients | | Manually mark an allergen introduced | a child-specific introduced-allergen tick on that device | no meal, date, response or clinical detail |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Action</th><th scope="col">What it saves now</th><th scope="col">What it does not save</th></tr></thead>
+<tbody>
+<tr><td>Tap a meal in <strong>This week’s plan</strong></td><td>that plan item’s `tried` tick for the current child and week</td><td>no date, time, amount, response, symptoms or solids feed</td></tr>
+<tr><td>Tick an item in <strong>Shopping list</strong></td><td>whether that ingredient is “in the basket”</td><td>no evidence that it was cooked, offered or eaten</td></tr>
+<tr><td>Tap <strong>Log a food</strong> and choose Solids</td><td>a dated feed with the food name, detected allergens and optional Loved/Unsure/Reaction response</td><td>it cannot know the quantity swallowed or verify the real ingredients</td></tr>
+<tr><td>Manually mark an allergen introduced</td><td>a child-specific introduced-allergen tick on that device</td><td>no meal, date, response or clinical detail</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-plan-tick-food-log-flow.svg" alt="A two-lane diagram showing that the weekly plan tick stays in a temporary checklist, while a solids log flows into the dated journal, allergen history, weaning analytics and future recipe suggestions." loading="lazy"/><figcaption>The current data flow: a plan tick and a food log are separate. Only the dated solids entry becomes evidence for the wider weaning experience.</figcaption></figure>
 <p>The practical rule is simple:</p>
 <p>&gt; Use <strong>tried</strong> to manage the plan. Use <strong>Log a food</strong> to remember what actually happened.</p>
@@ -905,7 +918,15 @@
 <p>Use it to repair the journey, not to replace a meaningful reaction record. Also note a current limitation: if an allergen is present in an actual food log, removing its manual tick cannot erase that historical exposure. The history still wins, as it should.</p>
 <h2>Planning and logging answer different questions</h2>
 <p>The two-record model is not inherently wrong. In fact, keeping intention separate from reality is good product design.</p>
-<p>| Planning asks | Logging asks | |---|---| | What could we offer this week? | What was actually offered? | | Which ingredients do we need? | When did it happen? | | Have we dealt with this idea? | How did baby take it? | | What fits the baby’s stage and known history? | Which allergens and textures were really present? |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Planning asks</th><th scope="col">Logging asks</th></tr></thead>
+<tbody>
+<tr><td>What could we offer this week?</td><td>What was actually offered?</td></tr>
+<tr><td>Which ingredients do we need?</td><td>When did it happen?</td></tr>
+<tr><td>Have we dealt with this idea?</td><td>How did baby take it?</td></tr>
+<tr><td>What fits the baby’s stage and known history?</td><td>Which allergens and textures were really present?</td></tr>
+</tbody>
+</table></div>
 <p>A meal can be planned and never served. It can be served but barely explored. The parent can swap the recipe, change an ingredient or use a shop-bought alternative. Automatically converting every plan tick into a precise meal record would create false data.</p>
 <p>The problem is not that two states exist. The problem is that the current interface makes one tap look as if it updates both.</p>
 <h2>The best product fix: a prefilled handoff</h2>
@@ -939,6 +960,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/how-to-start-weaning-your-baby/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: How to start weaning your baby</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-allergies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Introducing foods that could trigger an allergic reaction</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/preparing-food-safely/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Preparing food safely</a></li></ul>
 <p><em>This UK-oriented article provides general information, not individual medical or dietetic advice. OBubba cannot diagnose allergy, assess swallowing or verify ingredients. Follow your child’s clinical plan where relevant and seek urgent help for a severe reaction or choking.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -969,6 +991,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

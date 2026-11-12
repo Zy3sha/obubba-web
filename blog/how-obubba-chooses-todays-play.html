@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -871,7 +876,16 @@
 <p>For every eligible activity, calculates this composite:</p>
 <p>&gt; <strong>20% age fit + 35% emerging-skill fit + 30% recent-interest fit + 15% consolidation fit + an optional 25% active-domain boost</strong></p>
 <p>The active-domain term is additive, so the theoretical total can exceed 1.0. The number is an internal ordering score, not a percentage shown to parents and not a probability that the activity will “work”.</p>
-<p>| Signal | Current weight | What earns it | |---|---:|---| | Age fit | 20% | Full fit inside the activity’s stated age band; a gradual fall just outside it | | Emerging skill | 35% | The activity is linked to an age-due milestone not yet marked achieved | | Recent interests | 30% | Recognised activity types linked to this domain make up part of the family’s previous 14 days of activity logs | | Consolidation | 15% | The activity is linked to a milestone dated within the previous 14 days | | Active development domain | +25% | The current top development signal maps clearly to the activity’s domain |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Signal</th><th scope="col">Current weight</th><th scope="col">What earns it</th></tr></thead>
+<tbody>
+<tr><td>Age fit</td><td>20%</td><td>Full fit inside the activity’s stated age band; a gradual fall just outside it</td></tr>
+<tr><td>Emerging skill</td><td>35%</td><td>The activity is linked to an age-due milestone not yet marked achieved</td></tr>
+<tr><td>Recent interests</td><td>30%</td><td>Recognised activity types linked to this domain make up part of the family’s previous 14 days of activity logs</td></tr>
+<tr><td>Consolidation</td><td>15%</td><td>The activity is linked to a milestone dated within the previous 14 days</td></tr>
+<tr><td>Active development domain</td><td>+25%</td><td>The current top development signal maps clearly to the activity’s domain</td></tr>
+</tbody>
+</table></div>
 <p>The largest ordinary weight goes to an emerging skill. That does not mean OBubba has observed the baby attempting it. It means the milestone is inside its broad age window, remains unmarked and has a curated bridge to this activity.</p>
 <h2>How corrected age shapes the shelf</h2>
 <p>For a baby born prematurely, the app uses corrected age when the child profile supports it. Corrected age is the age the baby would be from their estimated due date rather than their birth date.</p>
@@ -883,7 +897,17 @@
 <p>OBubba scans today and the previous 13 calendar days. It counts only nine recognised activity types from the child timeline:</p>
 <ul><li>tummy time</li><li>bath</li><li>outdoor or walk</li><li>play</li><li>reading</li><li>massage</li><li>swimming</li><li>skin-to-skin</li><li>music</li></ul>
 <p>The recommender then maps those event types to broad play domains.</p>
-<p>| Activity domain | Timeline logs that support its interest score | |---|---| | Movement | tummy time, play, swimming, outdoor or walk | | Language | reading, music | | Social | play, music | | Thinking | play, reading | | Sensory | bath, massage, skin-to-skin, swimming | | Visual | play |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Activity domain</th><th scope="col">Timeline logs that support its interest score</th></tr></thead>
+<tbody>
+<tr><td>Movement</td><td>tummy time, play, swimming, outdoor or walk</td></tr>
+<tr><td>Language</td><td>reading, music</td></tr>
+<tr><td>Social</td><td>play, music</td></tr>
+<tr><td>Thinking</td><td>play, reading</td></tr>
+<tr><td>Sensory</td><td>bath, massage, skin-to-skin, swimming</td></tr>
+<tr><td>Visual</td><td>play</td></tr>
+</tbody>
+</table></div>
 <p>The denominator is <strong>all recognised activity events in the 14-day scan</strong>, not all baby-care logs and not the number of days the app was installed.</p>
 <p>Suppose the family logged ten recognised activities:</p>
 <ul><li>5 tummy-time sessions</li><li>3 outdoor walks</li><li>2 reading sessions</li></ul>
@@ -962,6 +986,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-moves/" target="_blank" rel="noopener noreferrer">NHS: Baby moves</a></li><li><a href="https://www.nhs.uk/baby/babys-development/play-and-learning/baby-and-toddler-play-ideas/" target="_blank" rel="noopener noreferrer">NHS: Baby and toddler play ideas</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/learning-to-talk/listening-and-learning-6-to-12-months/" target="_blank" rel="noopener noreferrer">NHS: Listening and learning, 6 to 12 months</a></li><li><a href="https://www.uhs.nhs.uk/for-visitors/southampton-childrens-hospital/childrens-services/neonatal-intensive-care-unit/going-home" target="_blank" rel="noopener noreferrer">University Hospital Southampton: corrected age and premature-baby development</a></li><li>OBubba source reviewed for this article: `activity_recommendation.dart`, `todays_play_screen.dart`, `activities_screen.dart`, `dev_activity.dart`, `milestone_activity_bridge.dart`, `dev_predict.dart` and 13 focused tests, verified 7 May 2027.</li></ul>
 <p><em>OBubba provides tracking, general education and play suggestions. It is not a medical device, developmental assessment or therapy programme. A recommendation score cannot measure ability, interest or progress.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -992,6 +1017,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

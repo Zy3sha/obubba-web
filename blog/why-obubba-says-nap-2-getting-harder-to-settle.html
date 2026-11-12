@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,17 @@
 <figure><img src="/obubba-nap-2-harder-to-settle.jpg" alt="A calm parent holds an awake baby beside a clear cot during a gentle daytime nap reset." loading="lazy"/><figcaption>A difficult second nap is information, not failure; the next step depends on the baby’s cues and the wider day.</figcaption></figure>
 <h2>The short answer</h2>
 <p>For one nap position, the current detector requires all of these:</p>
-<p>| Gate | Current rule | Why it matters | |---|---:|---| | Lookback | Up to <strong>14 calendar days</strong>, including today | The card is about a recent change | | Valid settle value | More than <strong>0</strong> and no more than <strong>120 minutes</strong> | Empty and implausibly large values are excluded | | Total sample | At least <strong>5 records</strong> for that nap position | A couple of attempts do not create a card | | Recent side | At least <strong>2 records</strong> on day indices 0–2 | The latest three calendar days need evidence | | Older side | At least <strong>2 records</strong> on day indices 3–13 | There must be a personal baseline | | Rise | Recent mean is at least <strong>3 minutes higher</strong> | Smaller differences stay quiet |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">Current rule</th><th scope="col">Why it matters</th></tr></thead>
+<tbody>
+<tr><td>Lookback</td><td>Up to <strong>14 calendar days</strong>, including today</td><td>The card is about a recent change</td></tr>
+<tr><td>Valid settle value</td><td>More than <strong>0</strong> and no more than <strong>120 minutes</strong></td><td>Empty and implausibly large values are excluded</td></tr>
+<tr><td>Total sample</td><td>At least <strong>5 records</strong> for that nap position</td><td>A couple of attempts do not create a card</td></tr>
+<tr><td>Recent side</td><td>At least <strong>2 records</strong> on day indices 0–2</td><td>The latest three calendar days need evidence</td></tr>
+<tr><td>Older side</td><td>At least <strong>2 records</strong> on day indices 3–13</td><td>There must be a personal baseline</td></tr>
+<tr><td>Rise</td><td>Recent mean is at least <strong>3 minutes higher</strong></td><td>Smaller differences stay quiet</td></tr>
+</tbody>
+</table></div>
 <p>If several nap positions qualify, the detector chooses the one with the <strong>largest increase</strong>.</p>
 <figure><img src="/obubba-nap-position-settle-drift.svg" alt="The exact fourteen-day grouping and worked Nap 2 example behind OBubba’s settle-drift card." loading="lazy"/><figcaption>The detector groups daytime naps by their order within each calendar day, then compares recent and older time-to-settle averages for each position.</figcaption></figure>
 <p>These are product thresholds, not medical definitions of a nap problem and not proof that one wake-window change will fix it.</p>
@@ -871,7 +886,15 @@
 <p>An unlogged nap is therefore more consequential than a missing settle-time answer. A nap with no settle value still occupies its correct position before being excluded from the averages. A nap missing entirely does not.</p>
 <h2>The settle-time buttons are ranges, not a stopwatch</h2>
 <p>After a nap, the current editor asks <strong>“Time to fall asleep”</strong> and offers:</p>
-<p>| Parent sees | Value stored for analysis | |---|---:| | Under 5m | <strong>3 minutes</strong> | | 5–15m | <strong>10 minutes</strong> | | 15–30m | <strong>22 minutes</strong> | | 30m+ | <strong>40 minutes</strong> |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Parent sees</th><th scope="col">Value stored for analysis</th></tr></thead>
+<tbody>
+<tr><td>Under 5m</td><td><strong>3 minutes</strong></td></tr>
+<tr><td>5–15m</td><td><strong>10 minutes</strong></td></tr>
+<tr><td>15–30m</td><td><strong>22 minutes</strong></td></tr>
+<tr><td>30m+</td><td><strong>40 minutes</strong></td></tr>
+</tbody>
+</table></div>
 <p>These representative values keep logging quick, but they are not exact measurements. Two naps that took 16 and 29 minutes both contribute 22. A 35-minute and a 70-minute settle can both contribute 40.</p>
 <p>The card body may say the baby is taking “about 20 min” lately. That can be a mean of exact-looking numbers, but much of the underlying history may consist of bucket proxies. Read it as a direction—<strong>quicker range versus slower range</strong>—not precision to the minute.</p>
 <p>Imported, legacy or other app-created records can carry different positive integer values, and the model accepts them as long as they are no more than 120 minutes.</p>
@@ -941,6 +964,7 @@
 <h2>Reliable UK sources</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/bonding-with-your-baby/understanding-your-baby/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Understanding your baby</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/helping-your-baby-sleep/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Helping your baby sleep</a></li><li><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/sleep-and-night-time-resources/caring-for-your-baby-at-night/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly Initiative: Caring for your baby at night and when sleeping</a></li></ul>
 <p><em>This article provides general information for UK families. OBubba cannot diagnose overtiredness, undertiredness, illness or a nap transition from settle-time logs. Follow your baby’s cues and advice from your own health visitor, GP or clinical team.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-says-nap-2-getting-harder-to-settle"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -972,6 +996,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

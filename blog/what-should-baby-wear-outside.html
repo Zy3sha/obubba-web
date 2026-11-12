@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,18 @@
 <p>The <a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/caring-for-your-baby/how-to-dress-a-newborn/" target="_blank" rel="noopener noreferrer">NHS suggests one extra clothing layer for a baby compared with an adult</a> as a practical winter starting point. It is not a rule to follow blindly: your pace, wind, sunshine, body heat in a carrier and a warm shop can all change what your baby needs.</p>
 <h2>The quick baby-outfit guide by temperature</h2>
 <p>Use this as a packing guide for a healthy baby, not a prescription. The examples assume ordinary daytime clothes and should be adjusted for wind, sun, rain, time outside and how your baby feels.</p>
-<p>| Feels-like temperature | Sensible starting point | Useful extra to carry | |---|---|---| | 28°C and above | One very light, breathable layer or just a nappy in a shaded, private place | Wide-brim sun hat, shade and plenty of feeds | | 24–27°C | A lightweight cotton vest, romper or loose single layer | Spare dry layer for air-conditioned spaces | | 20–23°C | Light outfit; a short-sleeve vest plus thin trousers or a romper may be enough | Thin cardigan for breeze or shade | | 16–19°C | Vest plus outfit, with a light removable outer layer | Cardigan or light jacket | | 10–15°C | Several light layers and a warmer outer layer | Hat and blanket for a stationary pram, removed indoors | | 5–9°C | Warm fitted layers plus coat or pramsuit while outside | Mittens, warm hat and weather cover that preserves airflow | | Below 5°C | Full winter layers; keep exposed skin covered and reassess the length of the outing | Warm dry spares and a shorter route near shelter |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Feels-like temperature</th><th scope="col">Sensible starting point</th><th scope="col">Useful extra to carry</th></tr></thead>
+<tbody>
+<tr><td>28°C and above</td><td>One very light, breathable layer or just a nappy in a shaded, private place</td><td>Wide-brim sun hat, shade and plenty of feeds</td></tr>
+<tr><td>24–27°C</td><td>A lightweight cotton vest, romper or loose single layer</td><td>Spare dry layer for air-conditioned spaces</td></tr>
+<tr><td>20–23°C</td><td>Light outfit; a short-sleeve vest plus thin trousers or a romper may be enough</td><td>Thin cardigan for breeze or shade</td></tr>
+<tr><td>16–19°C</td><td>Vest plus outfit, with a light removable outer layer</td><td>Cardigan or light jacket</td></tr>
+<tr><td>10–15°C</td><td>Several light layers and a warmer outer layer</td><td>Hat and blanket for a stationary pram, removed indoors</td></tr>
+<tr><td>5–9°C</td><td>Warm fitted layers plus coat or pramsuit while outside</td><td>Mittens, warm hat and weather cover that preserves airflow</td></tr>
+<tr><td>Below 5°C</td><td>Full winter layers; keep exposed skin covered and reassess the length of the outing</td><td>Warm dry spares and a shorter route near shelter</td></tr>
+</tbody>
+</table></div>
 <p>Why “feels like” rather than only the large number on the forecast? The <a href="https://weather.metoffice.gov.uk/learn-about/weather/types-of-weather/wind/wind-chill-factor" target="_blank" rel="noopener noreferrer">Met Office explains that feels-like temperature accounts for wind and humidity</a>. A calm 12°C and a windy, damp 12°C can feel quite different.</p>
 <p>There is no medically approved garment formula for every number. A thick fleece, thin cotton cardigan and insulated pramsuit cannot all be counted as “one layer” in the same way. The table helps you choose a starting bundle; your baby is the final check.</p>
 <h2>Use layers you can actually remove</h2>
@@ -950,6 +966,7 @@
 <p>OBubba can compare the weather, context and clothes you selected. You still make the most important check: the real baby in front of you.</p>
 <p><em>This article offers general information for healthy babies and is not a substitute for advice from your midwife, health visitor, GP, neonatal team or another qualified professional. Follow product instructions and local severe-weather guidance. Seek urgent medical help if your baby is unusually hot or cold, difficult to wake, breathing abnormally, feeding poorly or otherwise seriously unwell.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -980,6 +997,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

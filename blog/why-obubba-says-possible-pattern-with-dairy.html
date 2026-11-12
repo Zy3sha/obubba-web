@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,12 +864,29 @@
 <figure><img src="/obubba-baby-food-allergy-reaction-log.jpg" alt="A parent records a baby food reaction while the details are fresh." loading="lazy"/><figcaption>A thoughtful food record can make a clinical conversation clearer, but it cannot diagnose the cause of a reaction.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current detector needs all of these conditions before it can show the card:</p>
-<p>| What OBubba checks | Current rule | What that prevents | |---|---:|---| | Full reaction logs | At least <strong>2</strong> meals marked Reaction in the recent collection | One isolated tap does not become a group pattern | | Shared allergen group | The reacted foods must share a recognised or saved group | Unrelated egg and fish reactions are not merged | | Different food names | At least <strong>2 distinct</strong> lowercased names in the leading group | “Yoghurt” twice does not prove a wider dairy pattern | | Clear group leader | The top group must have more reaction meals than the runner-up | A tie is too ambiguous to headline | | Calm counter-evidence | Blank or Loved it meals in that group are counted | Existing tolerance changes the tone and urgency |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What OBubba checks</th><th scope="col">Current rule</th><th scope="col">What that prevents</th></tr></thead>
+<tbody>
+<tr><td>Full reaction logs</td><td>At least <strong>2</strong> meals marked Reaction in the recent collection</td><td>One isolated tap does not become a group pattern</td></tr>
+<tr><td>Shared allergen group</td><td>The reacted foods must share a recognised or saved group</td><td>Unrelated egg and fish reactions are not merged</td></tr>
+<tr><td>Different food names</td><td>At least <strong>2 distinct</strong> lowercased names in the leading group</td><td>“Yoghurt” twice does not prove a wider dairy pattern</td></tr>
+<tr><td>Clear group leader</td><td>The top group must have more reaction meals than the runner-up</td><td>A tie is too ambiguous to headline</td></tr>
+<tr><td>Calm counter-evidence</td><td>Blank or Loved it meals in that group are counted</td><td>Existing tolerance changes the tone and urgency</td></tr>
+</tbody>
+</table></div>
 <p>Meals marked <strong>Unsure</strong> are neutral: they neither fire the card nor count as calm counter-evidence.</p>
 <figure><img src="/obubba-possible-pattern-dairy-gates.svg" alt="The five software gates behind OBubba’s possible dairy pattern card." loading="lazy"/><figcaption>The app requires full reactions, a shared allergen group, two distinct food names, a strict leader and a tolerance check.</figcaption></figure>
 <p>These are product guardrails, not clinical diagnostic criteria.</p>
 <h2>Four examples make the logic clearer</h2>
-<p>| Recent saved record | Card? | Why | |---|---|---| | Yoghurt — Reaction; cheese — Reaction | <strong>May appear</strong>, medium urgency | Two different food names share dairy, with no calm dairy meal in the collection | | Yoghurt — Reaction; yoghurt — Reaction | <strong>No</strong> | The normalised food name is the same twice | | Scrambled egg — Reaction; salmon — Reaction | <strong>No</strong> | Egg and fish do not share a group; the counts tie | | Yoghurt — Reaction; cheese — Reaction; four dairy meals calm | <strong>May appear</strong>, softened wording and low urgency | Calm dairy meals are at least twice the dairy reaction count |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Recent saved record</th><th scope="col">Card?</th><th scope="col">Why</th></tr></thead>
+<tbody>
+<tr><td>Yoghurt — Reaction; cheese — Reaction</td><td><strong>May appear</strong>, medium urgency</td><td>Two different food names share dairy, with no calm dairy meal in the collection</td></tr>
+<tr><td>Yoghurt — Reaction; yoghurt — Reaction</td><td><strong>No</strong></td><td>The normalised food name is the same twice</td></tr>
+<tr><td>Scrambled egg — Reaction; salmon — Reaction</td><td><strong>No</strong></td><td>Egg and fish do not share a group; the counts tie</td></tr>
+<tr><td>Yoghurt — Reaction; cheese — Reaction; four dairy meals calm</td><td><strong>May appear</strong>, softened wording and low urgency</td><td>Calm dairy meals are at least twice the dairy reaction count</td></tr>
+</tbody>
+</table></div>
 <p>One calm dairy meal is already enough to reduce the current urgency from medium to low. The special <strong>“mostly tolerated”</strong> wording needs more: calm group meals must be at least twice the number of reaction meals. With two dairy reactions, that means four or more calm dairy meals.</p>
 <p>That softer card is not a green light. Previous tolerance does not rule out allergy, and a parent’s <strong>Loved it</strong> tap says how the meal was logged—not what a clinician would conclude.</p>
 <h2>How OBubba knows yoghurt and cheese are both dairy</h2>
@@ -925,6 +947,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/food-allergies-in-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Food allergies in babies and young children</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-allergies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Baby food allergies</a></li><li><a href="https://www.nhs.uk/conditions/food-allergy/" target="_blank" rel="noopener noreferrer">NHS: Food allergy</a></li><li><a href="https://www.nhs.uk/conditions/anaphylaxis/" target="_blank" rel="noopener noreferrer">NHS: Anaphylaxis</a></li><li><a href="https://www.nhs.uk/conditions/hives/" target="_blank" rel="noopener noreferrer">NHS: Hives</a></li></ul>
 <p><em>This article gives general information for UK families. It is not allergy diagnosis, treatment or an individual reintroduction plan, and OBubba is not a medical device. Follow advice from your baby’s own healthcare or allergy team.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -955,6 +978,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -865,7 +870,15 @@
 <p>A calendar day has a hard boundary at midnight. A baby&#39;s night does not.</p>
 <p>Parents usually tell the story as “Monday night”, even though part of that night happened on Tuesday&#39;s date. Clinicians and sleep professionals may also review the complete bedtime-to-morning period rather than treating 11:59pm and 12:01am as different sleep episodes.</p>
 <p>Neither display is universally correct:</p>
-<p>| Choose <strong>Calendar day</strong> when… | Choose <strong>Wake to wake</strong> when… | |---|---| | you expect the log to match the date shown on the phone | you think of the whole night as belonging to the evening it began | | you share timestamps with another calendar-based record | you want bedtime, night wakes and night feeds in one continuous list | | “2am Tuesday” should visibly mean Tuesday | you prefer the way a sleep consultant reads a bedtime-to-morning night | | seeing yesterday after midnight feels confusing | seeing the night split across two date cards feels confusing |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Choose <strong>Calendar day</strong> when…</th><th scope="col">Choose <strong>Wake to wake</strong> when…</th></tr></thead>
+<tbody>
+<tr><td>you expect the log to match the date shown on the phone</td><td>you think of the whole night as belonging to the evening it began</td></tr>
+<tr><td>you share timestamps with another calendar-based record</td><td>you want bedtime, night wakes and night feeds in one continuous list</td></tr>
+<tr><td>“2am Tuesday” should visibly mean Tuesday</td><td>you prefer the way a sleep consultant reads a bedtime-to-morning night</td></tr>
+<tr><td>seeing yesterday after midnight feels confusing</td><td>seeing the night split across two date cards feels confusing</td></tr>
+</tbody>
+</table></div>
 <p>The best setting is the one your exhausted brain can predict.</p>
 <h2>The three layers OBubba keeps separate</h2>
 <h3>1. Storage: the event keeps its real local date</h3>
@@ -956,6 +969,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Safer sleep advice for babies</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/co-sleeping/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Co-sleeping and avoiding sofa or armchair sleep</a></li></ul>
 <p><em>OBubba supports parent-entered tracking, organisation and pattern review. It cannot observe your baby, determine why they woke, decide whether a feed is needed or replace safer-sleep guidance and individual advice from your midwife, health visitor, GP, feeding team or paediatric service.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -986,6 +1000,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

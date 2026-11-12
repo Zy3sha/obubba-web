@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,16 @@
 <p>Perfect tracking is not the goal. A record should reduce mental load, make handovers easier and reveal patterns that are hard to see when days blur together. If it is making you watch the app instead of your baby, the record is asking too much.</p>
 <h2>The smallest useful baby record</h2>
 <p>Start with the question you want the record to answer. Different questions need different anchors.</p>
-<p>| The question | Log these anchors | Usually safe to skip | |---|---|---| | When might the next nap fit? | morning wake, nap starts and ends | every yawn, cuddle and settling attempt | | Why is bedtime difficult? | last nap end, bedtime attempt, sleep onset, important context | every protest or dummy replacement | | Is a night feed changing? | genuine night wakes, wake-driven feeds, morning wake and enough ordinary nights | every stir your baby resettles from | | Is bottle intake shifting? | feed time, milk type and amount actually taken | the amount prepared but left behind | | Which breast might be next? | feed time and side offered | invented milk-transfer estimates |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">The question</th><th scope="col">Log these anchors</th><th scope="col">Usually safe to skip</th></tr></thead>
+<tbody>
+<tr><td>When might the next nap fit?</td><td>morning wake, nap starts and ends</td><td>every yawn, cuddle and settling attempt</td></tr>
+<tr><td>Why is bedtime difficult?</td><td>last nap end, bedtime attempt, sleep onset, important context</td><td>every protest or dummy replacement</td></tr>
+<tr><td>Is a night feed changing?</td><td>genuine night wakes, wake-driven feeds, morning wake and enough ordinary nights</td><td>every stir your baby resettles from</td></tr>
+<tr><td>Is bottle intake shifting?</td><td>feed time, milk type and amount actually taken</td><td>the amount prepared but left behind</td></tr>
+<tr><td>Which breast might be next?</td><td>feed time and side offered</td><td>invented milk-transfer estimates</td></tr>
+</tbody>
+</table></div>
 <p>The minimum is not the same for every family or stage. A healthy older baby&#39;s casual sleep pattern and a newborn&#39;s feeding or nappy check do not carry the same stakes. Follow any neonatal, growth, feeding, allergy or medicine plan you have been given.</p>
 <h2>Missing is not zero</h2>
 <p>This distinction protects the whole record.</p>
@@ -935,6 +949,7 @@
 <h3>Sources</h3>
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS: Responsive or on-demand bottle feeding</a></li></ul>
 <p><em>OBubba is a record, pattern and education tool. It cannot assess hydration, milk transfer, growth, allergy, medicine safety, illness or sleep disorders, and it does not replace an individual care plan or advice from a midwife, health visitor, feeding specialist, pharmacist, GP, NHS 111 or emergency services.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_keep-forgetting-log-baby-sleep-feeds"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -966,6 +981,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

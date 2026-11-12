@@ -206,6 +206,21 @@
     <priority>0.88</priority>
   </url>
   <url>
+    <loc>https://obubba.com/baby-sleep/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://obubba.com/about.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://obubba.com/editorial-policy.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://obubba.com/blog/</loc>
     <lastmod>2026-11-12</lastmod>
     <priority>0.8</priority>
@@ -1887,12 +1902,12 @@
   </url>
   <url>
     <loc>https://obubba.com/blog/4-month-sleep-regression.html</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://obubba.com/blog/wake-windows-by-age.html</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.75</priority>
   </url>
   <url>
@@ -2512,37 +2527,37 @@
   </url>
   <url>
     <loc>https://obubba.com/calculators/baby-sleep-schedule-maker.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://obubba.com/calculators/wake-window-calculator.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://obubba.com/calculators/night-waking-checker.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://obubba.com/calculators/bedtime-calculator.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://obubba.com/calculators/baby-sleep-needs-calculator.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://obubba.com/calculators/sleep-regression-checker.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://obubba.com/calculators/nap-transition-checker.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <priority>0.88</priority>
   </url>
   <url>

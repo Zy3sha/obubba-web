@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -872,7 +877,15 @@
 <ul><li><strong>200ml by 2pm:</strong> no card, because the code uses “less than”, not “less than or equal to”;</li><li><strong>a 10am wake:</strong> only four waking hours have passed, so the detector stays quiet at noon and 2pm;</li><li><strong>one breastfeed logged today:</strong> the bottle-only comparison is disabled;</li><li><strong>only two measured bottles in the previous week:</strong> not enough evidence of an established bottle-fed pattern;</li><li><strong>60ml plus a 150ml pumping session:</strong> still 60ml of intake; expressed output is not milk the baby drank;</li><li><strong>60ml plus solids:</strong> still 60ml of measured milk; food grams do not become millilitres;</li><li><strong>60ml in a feed marked night:</strong> that volume is excluded from this daytime total;</li><li><strong>no positive bottle amount logged at all:</strong> the card stays quiet because zero could mean “nothing recorded”, not “baby drank nothing”.</li></ul>
 <h2>The four age buckets are app guardrails</h2>
 <p>The current code starts with a whole-day reference before adjusting it to waking time:</p>
-<p>| Age used by the detector | Internal reference | |---|---:| | under 3 months | 450ml | | 3 to under 6 months | 600ml | | 6 to under 12 months | 500ml | | 12 months and older | 400ml |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Age used by the detector</th><th scope="col">Internal reference</th></tr></thead>
+<tbody>
+<tr><td>under 3 months</td><td>450ml</td></tr>
+<tr><td>3 to under 6 months</td><td>600ml</td></tr>
+<tr><td>6 to under 12 months</td><td>500ml</td></tr>
+<tr><td>12 months and older</td><td>400ml</td></tr>
+</tbody>
+</table></div>
 <p>These are not personalised prescriptions. Real needs vary with body weight, growth, illness, feeding method and complementary food. NHS guidance focuses on responsive feeding, growth and nappies rather than demanding that every baby finish an age-table volume. Read “around X is typical” as product context: OBubba does not calculate ml per kilogram or replace a clinical feeding plan.</p>
 <h2>What actually counts as “intake” here?</h2>
 <p>The detector begins with today’s milk-feed entries. It removes:</p>
@@ -929,7 +942,16 @@
 <p>This card should not appear once a breast or `both` feed is logged today. That is the correct bias: breastfeed duration cannot be translated reliably into millilitres.</p>
 <p>For breastfeeding, look for rhythmic sucking and swallowing, relaxed behaviour after feeds, steady growth and wet nappies. If transfer, latch, pain or supply worries you, ask a midwife, health visitor or breastfeeding specialist to observe a feed.</p>
 <p>For combination feeding, keep the two kinds of evidence separate:</p>
-<p>| Logged information | What it tells you | What it cannot prove | |---|---|---| | bottle amount | measured milk offered/taken | total intake if breastfeeds also happened | | breast duration and side | timing and opportunity | transferred millilitres | | pumping amount | milk expressed | milk consumed by baby | | wet nappies | output pattern | exact intake volume | | weight trend | growth direction | why feeding changed today |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Logged information</th><th scope="col">What it tells you</th><th scope="col">What it cannot prove</th></tr></thead>
+<tbody>
+<tr><td>bottle amount</td><td>measured milk offered/taken</td><td>total intake if breastfeeds also happened</td></tr>
+<tr><td>breast duration and side</td><td>timing and opportunity</td><td>transferred millilitres</td></tr>
+<tr><td>pumping amount</td><td>milk expressed</td><td>milk consumed by baby</td></tr>
+<tr><td>wet nappies</td><td>output pattern</td><td>exact intake volume</td></tr>
+<tr><td>weight trend</td><td>growth direction</td><td>why feeding changed today</td></tr>
+</tbody>
+</table></div>
 <p>Do not add pump output to bottle intake. Milk expressed and milk drunk are two different events, even when they happen close together.</p>
 <h2>When reduced feeding needs medical help</h2>
 <p>Contact your GP, midwife, health visitor or NHS 111 promptly if your baby is not feeding normally and you are worried, keeps refusing feeds, cannot keep milk down, has markedly fewer or drier nappies, has a dry mouth, seems unusually sleepy or irritable, or the pattern is worsening.</p>
@@ -962,6 +984,7 @@
 <p><a href="https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/" target="_blank" rel="noopener noreferrer">NHS: Is your baby or toddler seriously ill?</a> — poor feeding, drier nappies, breathing, responsiveness, colour and routes to urgent help.</p>
 <p>OBubba source reviewed for this article: `lib/core/engine/feed_insights.dart`, `lib/core/engine/brain.dart`, `lib/core/engine/health_insights.dart`, `test/feed_insights_test.dart`, `test/feeding_signals_test.dart` and `test/health_insights_test.dart`.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -992,6 +1015,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

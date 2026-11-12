@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,13 @@
 <p>That is a calculation safeguard, not a silent eraser. The original timeline entries can still exist for you to inspect or correct. OBubba protects the analysis while leaving human meaning in human hands.</p>
 <h2>The 2am example</h2>
 <p>Suppose two connected carers record:</p>
-<p>| Shared timeline | What they meant | |---|---| | Carer A: wake at 2:00am, awake 20 minutes | The baby woke once | | Carer B: wake at 2:02am, awake 25 minutes | The same waking, timed slightly differently |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Shared timeline</th><th scope="col">What they meant</th></tr></thead>
+<tbody>
+<tr><td>Carer A: wake at 2:00am, awake 20 minutes</td><td>The baby woke once</td></tr>
+<tr><td>Carer B: wake at 2:02am, awake 25 minutes</td><td>The same waking, timed slightly differently</td></tr>
+</tbody>
+</table></div>
 <p>For the canonical night read, OBubba groups those wakes because they are no more than three minutes apart. The result is:</p>
 <ul><li><strong>one</strong> waking, not two</li><li><strong>2:00am</strong> as the event time</li><li><strong>25 minutes</strong> as the resolved awake duration</li><li>25 minutes deducted from sleep <strong>once</strong>, not 20 + 25</li></ul>
 <figure><img src="/obubba-shared-wake-dedup-logic.svg" alt="A mobile-readable diagram showing two carers&#39; near-simultaneous wake logs becoming one canonical wake, with awake time deducted once." loading="lazy"/><figcaption>Two entries remain inspectable, while OBubba&#39;s canonical sleep calculation treats the near-simultaneous pair as one physical waking.</figcaption></figure>
@@ -886,7 +897,18 @@
 <ul><li>overlapping or nested nap records are merged before nap count and day-sleep total</li><li>genuinely separate naps remain separate</li><li>back-to-back naps are not collapsed merely because one ends when another begins</li><li>a timed mid-nap stir is deducted once when two carers log the same stir within three minutes</li></ul>
 <p>This also protects the next-sleep calculation. A nested duplicate nap should not move “awake since” backwards to the shorter record&#39;s end and falsely suggest that the baby has been awake longer than they have.</p>
 <h2>What OBubba does—and does not—fix automatically</h2>
-<p>| Situation | Canonical calculation | |---|---| | Two night wakes within 3 minutes | One waking; earliest time and best resolved duration | | Same timed wake recorded twice | Awake duration deducted once | | Two overlapping sleep or nap arcs | Overlap counted once | | Feed during an existing awake episode | Usually part of the same waking | | Two wakes more than 3 minutes apart | Preserved as separate events | | Two independently created similar bottles | Not assumed to be one bottle | | Wake with no duration | Counted, but OBubba does not invent minutes to subtract |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Situation</th><th scope="col">Canonical calculation</th></tr></thead>
+<tbody>
+<tr><td>Two night wakes within 3 minutes</td><td>One waking; earliest time and best resolved duration</td></tr>
+<tr><td>Same timed wake recorded twice</td><td>Awake duration deducted once</td></tr>
+<tr><td>Two overlapping sleep or nap arcs</td><td>Overlap counted once</td></tr>
+<tr><td>Feed during an existing awake episode</td><td>Usually part of the same waking</td></tr>
+<tr><td>Two wakes more than 3 minutes apart</td><td>Preserved as separate events</td></tr>
+<tr><td>Two independently created similar bottles</td><td>Not assumed to be one bottle</td></tr>
+<tr><td>Wake with no duration</td><td>Counted, but OBubba does not invent minutes to subtract</td></tr>
+</tbody>
+</table></div>
 <p>That last distinction is important. OBubba can safely canonicalise sleep mathematics without pretending to know every real-world fact. Two similar feeds could be a duplicate, a top-up or two separate feeds. Automatically deleting one would be riskier than asking a carer to check.</p>
 <h2>Why you may still see both entries on the timeline</h2>
 <p>The sleep engine and the event history have different jobs.</p>
@@ -915,6 +937,7 @@
 <p>Near-simultaneous wake taps are treated as one event for calculation, so correct the timeline if two genuinely distinct events were recorded within three minutes. Events more than three minutes apart remain separate under this rule.</p>
 <h3>Does OBubba also de-duplicate feeds?</h3>
 <p>Near-simultaneous night feeds can be counted once, and a feed during an existing awake episode need not create another wake. OBubba does not automatically erase two independently created feed records just because their times or amounts look similar.</p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -946,6 +969,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

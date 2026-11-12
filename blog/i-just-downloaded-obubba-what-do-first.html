@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -864,7 +869,16 @@
 <p>The current setup does not require you to know a typical wake window, choose a sleep-training method or estimate how many ounces your baby “should” drink. It asks for observations the parent can actually know.</p>
 <h2>What the optional setup answers do</h2>
 <p>Optional does not mean pointless. It means you can add context without being trapped by it.</p>
-<p>| Setup choice | What the current app does with it | Fine to skip? | |---|---|---| | Baby photo | Makes the profile feel more personal | Yes | | What should OBubba help with first? | Stores a primary concern for a more relevant starting experience | Yes | | How is today going? | Can seed one honest first-day event instead of beginning from an empty timeline | Yes | | Reflux, CMPA or other factors | Gives the engines context when reading feeds, naps and wakes | Yes; add later if preferred | | Feeding style | Shapes the first feed controls when setup reaches the feeding branch | Sometimes required by that branch |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Setup choice</th><th scope="col">What the current app does with it</th><th scope="col">Fine to skip?</th></tr></thead>
+<tbody>
+<tr><td>Baby photo</td><td>Makes the profile feel more personal</td><td>Yes</td></tr>
+<tr><td>What should OBubba help with first?</td><td>Stores a primary concern for a more relevant starting experience</td><td>Yes</td></tr>
+<tr><td>How is today going?</td><td>Can seed one honest first-day event instead of beginning from an empty timeline</td><td>Yes</td></tr>
+<tr><td>Reflux, CMPA or other factors</td><td>Gives the engines context when reading feeds, naps and wakes</td><td>Yes; add later if preferred</td></tr>
+<tr><td>Feeding style</td><td>Shapes the first feed controls when setup reaches the feeding branch</td><td>Sometimes required by that branch</td></tr>
+</tbody>
+</table></div>
 <p>The “today” answer is handled more carefully than a marketing demo might suggest.</p>
 <ul><li>Choosing <strong>woke</strong> adds a morning-wake entry only when setup is happening at a plausible morning time.</li><li>Choosing <strong>fed</strong> adds a feed, not a made-up wake at the same time.</li><li>Choosing <strong>napped</strong> adds a completed nap only when both times form a plausible span.</li><li>Choosing <strong>bedtime</strong>, or skipping the question, does not fabricate an event.</li></ul>
 <p>Each seeded event receives a real identifier, so it can be edited or deleted like another timeline entry. The code would rather begin with no anchor than invent the wrong one.</p>
@@ -891,7 +905,17 @@
 <h2>Where the six built-in guides live</h2>
 <p>Open <strong>Account</strong>, expand <strong>Help &amp; Settings</strong>, then tap <strong>Guides</strong>.</p>
 <p>The current catalogue contains six tours:</p>
-<p>| Guide | What it covers | Pages in the current build | |---|---|---:| | Getting started | Home clock, quick logging, editing and switching babies | 3 | | Tracking &amp; the clock | Live sleep timer and logging now or on a past day | 2 | | Sleep &amp; wake windows | How recent sleep feeds the next-nap and bedtime guidance | 2 | | Care tools | Weaning, breastfeeding, Sleep Consultant, Night Weaning, Safe Sleep and Parent Room | 1 | | Grow | Growth, milestones, teeth and age-relevant activities | 1 | | Sharing &amp; Bubba Care | Partner sync and browser-based carer handover | 2 |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Guide</th><th scope="col">What it covers</th><th scope="col">Pages in the current build</th></tr></thead>
+<tbody>
+<tr><td>Getting started</td><td>Home clock, quick logging, editing and switching babies</td><td>3</td></tr>
+<tr><td>Tracking &amp; the clock</td><td>Live sleep timer and logging now or on a past day</td><td>2</td></tr>
+<tr><td>Sleep &amp; wake windows</td><td>How recent sleep feeds the next-nap and bedtime guidance</td><td>2</td></tr>
+<tr><td>Care tools</td><td>Weaning, breastfeeding, Sleep Consultant, Night Weaning, Safe Sleep and Parent Room</td><td>1</td></tr>
+<tr><td>Grow</td><td>Growth, milestones, teeth and age-relevant activities</td><td>1</td></tr>
+<tr><td>Sharing &amp; Bubba Care</td><td>Partner sync and browser-based carer handover</td><td>2</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-guides-app.jpg" alt="The genuine current OBubba Guides screen showing the first lanes in its six-part app map." loading="lazy"/><figcaption>This genuine debug-harness capture uses a fictional six-month-old profile. The production Guides screen is a replayable map; opening a lane displays short pages with Back, Next and Done controls.</figcaption></figure>
 <p>Tap a lane and the app opens a short bottom-sheet lesson. You can use <strong>Next little step</strong>, go back, or swipe between pages. The compact-iPhone widget test specifically protects the three-page Getting started lesson from becoming unreadable.</p>
 <p>These guides are deliberately low-stakes:</p>
@@ -947,6 +971,7 @@
 <ul><li>Current surfaces reviewed: `welcome_screen.dart`, `how_it_works_screen.dart`, `onboarding_screen.dart`, `guides_screen.dart`, `coach_kb.dart` and the new-child setup path.</li><li>54 focused tests passed on 10 May 2027, including the compact-iPhone Guides interaction, first-week explainer, app-help routing and existing-session behavior.</li><li>The app image above was captured from the repository’s debug-only visual harness on an iPhone simulator with fictional profile data. No production family data was used.</li></ul>
 <p><em>OBubba is a tracking, planning and educational tool. It cannot observe your baby, diagnose a feeding or sleep concern, guarantee longer sleep or replace advice from a midwife, health visitor, GP or another qualified professional.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -977,6 +1002,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,20 @@
 <p>The honest translation is:</p>
 <p>&gt; “Your recent log shows either two allergens first appearing on the same calendar day, or at least three first appearing within the newest seven-day span. Introducing one new allergen at a time can make a reaction easier to attribute.”</p>
 <h2>The short answer</h2>
-<p>| Question | Current behaviour | |---|---| | What does it read? | Solid-food logs from today and the preceding 21 calendar days, plus memory of allergens logged earlier | | What counts as new? | A recognised allergen not found in the earlier history whose first recent appearance is within six days of the newest logged solids meal | | When can the card appear? | After at least three recent solids entries, if two or more new allergens first appear on one day, or three or more first appear within the newest seven-day window | | Does two on different days trigger it? | No—not unless a third new allergen enters that seven-day window | | Do several established allergens in one family meal trigger it? | No, provided the app’s history already recognises them | | Does “same day” mean close together? | The detector only knows the calendar day; breakfast and dinner count the same as one mixed meal | | Does it inspect reaction symptoms? | No | | Does it check that a baby is ready for solids? | No explicit age or readiness gate exists inside this detector | | How urgent is the card? | Low urgency; it is not the right surface to use during a suspected reaction |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Question</th><th scope="col">Current behaviour</th></tr></thead>
+<tbody>
+<tr><td>What does it read?</td><td>Solid-food logs from today and the preceding 21 calendar days, plus memory of allergens logged earlier</td></tr>
+<tr><td>What counts as new?</td><td>A recognised allergen not found in the earlier history whose first recent appearance is within six days of the newest logged solids meal</td></tr>
+<tr><td>When can the card appear?</td><td>After at least three recent solids entries, if two or more new allergens first appear on one day, or three or more first appear within the newest seven-day window</td></tr>
+<tr><td>Does two on different days trigger it?</td><td>No—not unless a third new allergen enters that seven-day window</td></tr>
+<tr><td>Do several established allergens in one family meal trigger it?</td><td>No, provided the app’s history already recognises them</td></tr>
+<tr><td>Does “same day” mean close together?</td><td>The detector only knows the calendar day; breakfast and dinner count the same as one mixed meal</td></tr>
+<tr><td>Does it inspect reaction symptoms?</td><td>No</td></tr>
+<tr><td>Does it check that a baby is ready for solids?</td><td>No explicit age or readiness gate exists inside this detector</td></tr>
+<tr><td>How urgent is the card?</td><td>Low urgency; it is not the right surface to use during a suspected reaction</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-allergen-pacing-detector.svg" alt="The current OBubba allergen-pacing detector combines recent solids with earlier history, then follows one of two exact trigger paths." loading="lazy"/><figcaption>The exact thresholds for OBubba’s Spacing out new allergens card.</figcaption></figure>
 <h2>What the detector actually reads</h2>
 <p>The OBubba brain supplies two kinds of information.</p>
@@ -935,6 +953,7 @@
 <h3>Can I rely on food names alone?</h3>
 <p>Use clear ingredient names and stored allergen tags when possible. Free-text recognition is helpful but cannot understand every brand, nickname or mixed recipe.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -965,6 +984,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,12 +864,32 @@
 <p>That can be a genuinely useful handover check. It is not enough to call a medicine <strong>safe</strong>.</p>
 <p>The better label is <strong>“Interval clear in this log—check packet.”</strong> It preserves the feature’s value without turning incomplete tracking data into clinical permission.</p>
 <h2>The short answer</h2>
-<p>| Question | Current behaviour | |---|---| | Where does the green label appear? | On a saved medicine in the Health sheet’s <strong>Quick log</strong> section | | Which medicines receive a countdown? | Recognised paracetamol and ibuprofen names and brands | | What history does it scan? | Logged doses of the same normalised medicine in the latest 24 hours | | What interval does it use? | Four hours for paracetamol; six hours for ibuprofen | | What count does it use? | Four paracetamol or three ibuprofen entries in 24 hours | | Does it read the entered dose amount? | No | | Does it know the product strength or leaflet? | No | | Does it know current weight or contraindications? | No | | Does it catch unlogged doses? | No | | Is “Safe to give now” clinical permission? | No; it only reports the state of OBubba’s limited log checks |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Question</th><th scope="col">Current behaviour</th></tr></thead>
+<tbody>
+<tr><td>Where does the green label appear?</td><td>On a saved medicine in the Health sheet’s <strong>Quick log</strong> section</td></tr>
+<tr><td>Which medicines receive a countdown?</td><td>Recognised paracetamol and ibuprofen names and brands</td></tr>
+<tr><td>What history does it scan?</td><td>Logged doses of the same normalised medicine in the latest 24 hours</td></tr>
+<tr><td>What interval does it use?</td><td>Four hours for paracetamol; six hours for ibuprofen</td></tr>
+<tr><td>What count does it use?</td><td>Four paracetamol or three ibuprofen entries in 24 hours</td></tr>
+<tr><td>Does it read the entered dose amount?</td><td>No</td></tr>
+<tr><td>Does it know the product strength or leaflet?</td><td>No</td></tr>
+<tr><td>Does it know current weight or contraindications?</td><td>No</td></tr>
+<tr><td>Does it catch unlogged doses?</td><td>No</td></tr>
+<tr><td>Is “Safe to give now” clinical permission?</td><td>No; it only reports the state of OBubba’s limited log checks</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-medicine-countdown-boundary.svg" alt="The exact information boundary behind OBubba’s saved-medicine countdown." loading="lazy"/><figcaption>The app can check recorded timing, count and a basic age gate. It cannot determine whether a real-world dose is suitable.</figcaption></figure>
 <h2>What the status actually reads</h2>
 <p>Saved medicines are stored per child with a parent-entered name and optional usual dose. The quick-log row gathers matching medicine entries from the child timeline, calculates when the most recent one was logged and counts recent use.</p>
 <p>For its safety status, the code keeps only entries from the latest 24 hours. It recognises several common names:</p>
-<p>| Normalised clock | Examples the current matcher recognises | |---|---| | Paracetamol | paracetamol, Calpol, Panadol, Disprol, acetaminophen, Tylenol | | Ibuprofen | ibuprofen, Nurofen, Calprofen, Brufen, Advil, Motrin |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Normalised clock</th><th scope="col">Examples the current matcher recognises</th></tr></thead>
+<tbody>
+<tr><td>Paracetamol</td><td>paracetamol, Calpol, Panadol, Disprol, acetaminophen, Tylenol</td></tr>
+<tr><td>Ibuprofen</td><td>ibuprofen, Nurofen, Calprofen, Brufen, Advil, Motrin</td></tr>
+</tbody>
+</table></div>
 <p>That normalisation matters when two carers use different names for the same active medicine. “Calpol” and “paracetamol” feed one timing clock rather than two. “Calprofen” correctly maps to ibuprofen and is not confused with the similar-looking Calpol brand name.</p>
 <p>Unrecognised medicines receive no calculated countdown. The code deliberately refuses to guess an interval for antibiotics, supplements or arbitrary product names.</p>
 <h2>The three checks behind the green line</h2>
@@ -935,7 +960,15 @@
 <h2>Better product wording</h2>
 <p>The underlying feature is worth keeping. A last-dose time, week count, conservative countdown and shared log can reduce memory errors. The problem is the semantic leap from <strong>“my recorded timing checks passed”</strong> to <strong>“safe”</strong>.</p>
 <p>The status set could become:</p>
-<p>| Current wording | More accurate wording | |---|---| | Safe to give now | Interval clear in this log—check packet | | Next dose in 2h | OBubba’s conservative interval: 2h remaining | | Daily max reached | Generic logged-count limit reached—check packet/advice | | Check age suitability | Check age, weight and product suitability |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Current wording</th><th scope="col">More accurate wording</th></tr></thead>
+<tbody>
+<tr><td>Safe to give now</td><td>Interval clear in this log—check packet</td></tr>
+<tr><td>Next dose in 2h</td><td>OBubba’s conservative interval: 2h remaining</td></tr>
+<tr><td>Daily max reached</td><td>Generic logged-count limit reached—check packet/advice</td></tr>
+<tr><td>Check age suitability</td><td>Check age, weight and product suitability</td></tr>
+</tbody>
+</table></div>
 <p>The green tick should become a neutral clock or log icon. Green conventionally signals permission; this surface only has partial evidence.</p>
 <h2>What the feature should improve next</h2>
 <ol><li><strong>Remove “safe”.</strong> Describe the recorded interval, not the clinical decision.</li><li><strong>Model young-infant rules explicitly.</strong> The 2-to-3-month paracetamol branch needs product, weight, gestation and reason context—or a firm deferral instead of a generic limit.</li><li><strong>Represent ibuprofen schedules honestly.</strong> Label the six-hour clock as a conservative default rather than universal.</li><li><strong>Confirm active ingredients.</strong> Let parents map a saved product to a verified ingredient instead of relying only on name matching.</li><li><strong>Add suitability reminders.</strong> Include weight, hydration, chickenpox, asthma and prescribed-plan caveats where relevant without pretending to adjudicate them.</li><li><strong>Make overrides documentary.</strong> Change “Log anyway” to “Record as already given” or require a reason, reducing the chance that an override feels like approval.</li><li><strong>Link uncertainty to help.</strong> Put pharmacist/NHS 111 guidance beside the warning, especially when the history is incomplete or an extra dose is possible.</li></ol>
@@ -959,6 +992,7 @@
 <h2>Reliable UK sources</h2>
 <ul><li><a href="https://www.nhs.uk/medicines/paracetamol-for-children/" target="_blank" rel="noopener noreferrer">NHS: Paracetamol for children</a></li><li><a href="https://www.nhs.uk/medicines/ibuprofen-for-children/" target="_blank" rel="noopener noreferrer">NHS: How and when to give ibuprofen for children</a></li><li><a href="https://www.nhs.uk/medicines/ibuprofen-for-children/" target="_blank" rel="noopener noreferrer">NHS: Taking ibuprofen with other medicines</a></li><li><a href="https://www.nhs.uk/baby/health/medicines-for-babies-and-children/" target="_blank" rel="noopener noreferrer">NHS: Medicines for babies and children</a></li><li><a href="https://www.nhs.uk/nhs-services/urgent-and-emergency-care-services/when-to-use-111/" target="_blank" rel="noopener noreferrer">NHS: When to use 111</a></li></ul>
 <p><em>This article provides general information for UK families. OBubba does not prescribe, calculate doses, verify a medicine or determine that it is safe or needed. Always follow the packet, dispensing label, prescription and current advice from a pharmacist, GP, NHS 111 or emergency service.</em></p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -990,6 +1024,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -630,6 +630,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -916,6 +921,7 @@
 &lt;p&gt;&lt;a href=&quot;https://obubba.com/de/calculators/bedtime-calculator.html&quot;&gt;Schlafenszeit-Rechner fürs Baby&lt;/a&gt; by &lt;a href=&quot;https://obubba.com&quot;&gt;OBubba&lt;/a&gt;&lt;/p&gt;</textarea><button class="button secondary g-embed-copy" type="button" data-done="Code kopiert">Code kopieren</button></section>
     <section class="g-section faq"><p class="eyebrow">Fragen von Eltern</p><h2>Häufige Fragen</h2><details open><summary>Ist 19 Uhr eine gute Schlafenszeit fürs Baby?</summary><p>Für die meisten Babys ab etwa drei Monaten ja. Alles zwischen 18 und 20 Uhr passt meist gut zum natürlichen abendlichen Anstieg von Melatonin.</p></details><details><summary>Warum wehrt sich mein Baby gegen das Schlafengehen?</summary><p>Häufige Gründe sind ein letztes Schläfchen, das zu kurz vor der Schlafenszeit endete, zu viel Tagschlaf oder Übermüdung nach einer langen Wachphase. Bei den ersten beiden hilft der Rechner.</p></details><details><summary>Kann ein Baby zu früh ins Bett gehen?</summary><p>Das kann vorkommen, wenn es tagsüber viel geschlafen hat. Es zeigt sich manchmal als lange Wachphase in der Nacht oder als sehr früher Start in den Tag. Sehr frühe Schlafenszeiten sind am besten für das Aufholen nach einem Tag mit kurzen Schläfchen gedacht.</p></details></section>
 
+
     <section class="g-section"><h2>Weitere kostenlose Tools</h2><div class="g-tiles"><a class="g-tile" href="/de/calculators/baby-sleep-schedule-maker.html"><span class="g-tile-art"><img src="/obubba-schedule-maker-app.jpg" alt="" loading="lazy"/></span><strong>Schlafplan fürs Baby erstellen</strong><small>Ein kompletter Beispieltag mit Schläfchen und Schlafenszeit, passend zu Alter und Aufwachzeit.</small></a><a class="g-tile" href="/de/calculators/wake-window-calculator.html"><span class="g-tile-art"><img src="/obubba-personalised-nap-prediction-app.jpg" alt="" loading="lazy"/></span><strong>Wachfenster-Rechner</strong><small>Wie lange dein Baby zwischen zwei Schlafphasen entspannt wach bleiben kann.</small></a><a class="g-tile" href="/de/calculators/night-waking-checker.html"><span class="g-tile-art"><img src="/obubba-read-baby-night-wake.jpg" alt="" loading="lazy"/></span><strong>Warum wacht mein Baby nachts auf?</strong><small>Beantworte ein paar Fragen und sieh die wahrscheinlichsten Gründe für nächtliches Aufwachen.</small></a><a class="g-tile" href="/de/calculators/baby-sleep-needs-calculator.html"><span class="g-tile-art"><img src="/obubba-baby-typical-day-rhythm.jpg" alt="" loading="lazy"/></span><strong>Wie viel Schlaf braucht mein Baby?</strong><small>Wie viel Schlaf dein Baby in 24 Stunden braucht, nachts und tagsüber.</small></a><a class="g-tile" href="/de/calculators/sleep-regression-checker.html"><span class="g-tile-art"><img src="/obubba-still-learning-baby-rhythm.jpg" alt="" loading="lazy"/></span><strong>Schlafregression-Check</strong><small>Welche typischen Schlafumbrüche zum Alter deines Babys passen und was hilft.</small></a><a class="g-tile" href="/de/calculators/nap-transition-checker.html"><span class="g-tile-art"><img src="/obubba-drop-a-nap-transition.jpg" alt="" loading="lazy"/></span><strong>Check: Schläfchen weglassen</strong><small>Ist dein Baby bereit, ein Schläfchen wegzulassen? Vier Zeichen zum Prüfen.</small></a></div></section>
     <section class="g-section g-sources"><h2>Quellen</h2><ul><li><a href="https://jcsm.aasm.org/doi/10.5664/jcsm.5866" rel="noopener" target="_blank">AASM-Konsens zum empfohlenen Schlaf bei Kindern</a></li></ul><p class="g-disclaimer">Die OBubba Tools geben allgemeine, altersbezogene Informationen. Sie sind keine medizinische Beratung und stellen keine Diagnose. Jedes Baby ist anders. Wenn du dir Sorgen um dein Baby machst, sprich mit deiner Hebamme, deiner Kinderärztin oder deinem Kinderarzt oder ruf den ärztlichen Bereitschaftsdienst unter 116 117 an.</p></section>
   </main>
@@ -933,6 +939,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -865,7 +870,15 @@
 <p>The meter appears when you are viewing <strong>today</strong>, the baby is recorded as awake and OBubba has a wake anchor to work from. It prefers the app’s live nap prediction. Where there is enough usable history, recent successful naps can help it learn a personal wake-window range; otherwise it falls back to age-aware timing.</p>
 <p>Personal sleep learning looks back across up to 14 recent days. Days marked sick, fever, travel, daycare or grandparents are excluded from that personal wake-window learning because an unusual day should not quietly become the new normal.</p>
 <p>The labels deliberately describe a window, not a verdict:</p>
-<p>| Meter state | Plain-English meaning | |---|---| | <strong>Not yet</strong> | The predicted window is still ahead | | <strong>Nap window</strong> | The predicted start window has arrived | | <strong>Watch cues</strong> | The predicted window is passing; check the baby, not just the colour | | <strong>Sleep cues likely</strong> | The estimate is substantially late, so cues may be easier to spot |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Meter state</th><th scope="col">Plain-English meaning</th></tr></thead>
+<tbody>
+<tr><td><strong>Not yet</strong></td><td>The predicted window is still ahead</td></tr>
+<tr><td><strong>Nap window</strong></td><td>The predicted start window has arrived</td></tr>
+<tr><td><strong>Watch cues</strong></td><td>The predicted window is passing; check the baby, not just the colour</td></tr>
+<tr><td><strong>Sleep cues likely</strong></td><td>The estimate is substantially late, so cues may be easier to spot</td></tr>
+</tbody>
+</table></div>
 <p>Green does not mean “safe” and amber or red does not mean “danger”. The colours are planning shorthand. They never justify keeping a clearly tired baby awake to satisfy the graph.</p>
 <p>OBubba also avoids inventing a nap when its predictor says naps are finished and the day plan contains no next nap. When predicted bedtime comes within roughly 90 minutes, bedtime takes priority. That helps prevent the classic late-afternoon mistake: treating every fussy stretch as a request for one more full nap.</p>
 <h3>2. Feed is a cue-led rhythm heads-up</h3>
@@ -922,6 +935,7 @@
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS: Feeding on demand</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s first solid foods</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/safer-sleep-overview/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Safer sleep overview</a></li></ul>
 <p><em>OBubba is a tracking and education tool, not medical advice, a diagnostic device or an emergency service. Contact your GP, health visitor or NHS 111 for non-emergency concerns; call 999 in an emergency.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_is-baby-ready-nap-feed-obubba-live-readiness-meter"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -953,6 +967,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -896,7 +901,15 @@
 <p>Deferred items appear as small labels beneath the lead card. They answer a useful question: <strong>did the app forget the other problem?</strong></p>
 <p>No. The radar means the observation remains visible to the system but is not tonight’s job.</p>
 <p>For example:</p>
-<p>| Lead tonight | What may stay on the radar | |---|---| | Disrupted week | current plan, longer consultation finding, last-night note | | Active plan step | consultation finding, last-night note | | Strongest consultation finding | last-night note | | Last-night nudge | nothing lower remains |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Lead tonight</th><th scope="col">What may stay on the radar</th></tr></thead>
+<tbody>
+<tr><td>Disrupted week</td><td>current plan, longer consultation finding, last-night note</td></tr>
+<tr><td>Active plan step</td><td>consultation finding, last-night note</td></tr>
+<tr><td>Strongest consultation finding</td><td>last-night note</td></tr>
+<tr><td>Last-night nudge</td><td>nothing lower remains</td></tr>
+</tbody>
+</table></div>
 <p>The radar is not a queue that must eventually become four interventions. A lower-priority finding may disappear when the lead issue settles. That is one reason to reassess rather than automatically working down a checklist.</p>
 <h2>A worked example: teething context during an earlier-bedtime test</h2>
 <p>Imagine an active test asks the family to move bedtime 20 minutes earlier. Two nights later, a recent tooth record and a qualifying run of disrupted sleep become the strongest context.</p>
@@ -938,6 +951,7 @@
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — turn sleep logs into one understandable focus, keep the other observations visible, and let “nothing to change” be a valid answer.</p>
 <p><em>This article gives general information for UK families and describes the current OBubba implementation reviewed on 3 March 2027. OBubba does not diagnose illness or the cause of sleep disruption, assess a baby in person or replace individual advice from a health visitor, GP or paediatric professional.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -968,6 +982,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

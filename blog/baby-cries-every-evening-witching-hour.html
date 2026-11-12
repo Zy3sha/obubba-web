@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -864,7 +869,17 @@
 <p>The pattern is especially familiar in the early months, when regulation, feeding and sleep are still immature. The fact that it happens at a similar time can be reassuring—but timing never cancels a red flag.</p>
 <h2>Witching hour, colic or something else?</h2>
 <p>These labels overlap, which is why one evening cannot settle the question.</p>
-<p>| Pattern | More consistent with | What to do next | |---|---|---| | Similar fussy spell most evenings; baby otherwise feeds, wakes and behaves as usual | Developmental evening fussiness may fit | Keep evenings calm, record timing and seek advice if worried | | Long, intense, difficult-to-console episodes in a young baby who otherwise appears healthy | Colic may be considered | Discuss with a health visitor or GP; do not self-diagnose or change diet alone | | Crying clusters around feeds, with difficulty attaching, coughing or distress | Feeding technique, flow, wind or reflux may matter | Get a feeding assessment and medical advice when persistent | | Crying follows a series of short naps or an unusually long final awake stretch | Accumulated tiredness may contribute | Protect the final nap or try a modestly earlier bedtime | | Evening feed frequency rises but wet nappies and growth are reassuring | Cluster feeding may fit | Feed responsively; frequency alone does not prove low supply | | Cry is new, weak, high-pitched or unlike normal; baby seems unwell | Illness or pain must be considered | Seek urgent medical advice |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Pattern</th><th scope="col">More consistent with</th><th scope="col">What to do next</th></tr></thead>
+<tbody>
+<tr><td>Similar fussy spell most evenings; baby otherwise feeds, wakes and behaves as usual</td><td>Developmental evening fussiness may fit</td><td>Keep evenings calm, record timing and seek advice if worried</td></tr>
+<tr><td>Long, intense, difficult-to-console episodes in a young baby who otherwise appears healthy</td><td>Colic may be considered</td><td>Discuss with a health visitor or GP; do not self-diagnose or change diet alone</td></tr>
+<tr><td>Crying clusters around feeds, with difficulty attaching, coughing or distress</td><td>Feeding technique, flow, wind or reflux may matter</td><td>Get a feeding assessment and medical advice when persistent</td></tr>
+<tr><td>Crying follows a series of short naps or an unusually long final awake stretch</td><td>Accumulated tiredness may contribute</td><td>Protect the final nap or try a modestly earlier bedtime</td></tr>
+<tr><td>Evening feed frequency rises but wet nappies and growth are reassuring</td><td>Cluster feeding may fit</td><td>Feed responsively; frequency alone does not prove low supply</td></tr>
+<tr><td>Cry is new, weak, high-pitched or unlike normal; baby seems unwell</td><td>Illness or pain must be considered</td><td>Seek urgent medical advice</td></tr>
+</tbody>
+</table></div>
 <p>Colic is a description applied to excessive crying in a baby who appears otherwise healthy; its exact cause is uncertain. The <a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-challenges/colic-and-bottle-feeding/" target="_blank" rel="noopener noreferrer">NHS colic guidance</a> notes that it commonly begins at a few weeks and usually improves around three or four months.</p>
 <p>Do not use a “rule of threes” to reassure yourself when the baby looks ill. Likewise, a difficult hour does not earn a diagnosis simply because it happened three nights in a row.</p>
 <h2>Why does evening crying happen?</h2>
@@ -948,6 +963,7 @@
 <h3>Can I put my baby down and walk away?</h3>
 <p>Yes, when crying is overwhelming: place baby safely on their back in their clear cot, step away briefly and return when calmer. Never leave them somewhere unsafe and never shake them.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -978,6 +994,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

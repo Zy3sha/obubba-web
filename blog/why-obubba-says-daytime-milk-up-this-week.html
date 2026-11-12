@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,15 @@
 <p>When the card appears:</p>
 <ol><li>Keep feeding responsively; do not create a new bottle target from the average.</li><li>Check whether the rise reflects appetite, more measured bottles, better shared logging or a shift away from breastfeeding.</li><li>Look at the whole 24 hours, including breastfeeds and night feeds that this calculation excludes.</li><li>Let hunger and fullness cues lead the next feed.</li><li>Use wet nappies, wellbeing and professionally measured growth—not one upward line—to judge whether feeding is going well.</li></ol>
 <p>The <a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS recommends responsive bottle feeding</a>: offer milk when the baby shows hunger cues, pace the feed, watch for pauses and never force the bottle to be finished. It also says a big feed does not mean a baby will go longer between feeds.</p>
-<p>| The card establishes | The card cannot establish | |---|---| | Logged daytime milk volume rose across two weekly groups | Total milk intake rose by the same amount | | Both the percentage and millilitre thresholds passed | A growth spurt caused the change | | At least four measured days exist in each week | Every included day was completely logged | | Pump output and night milk did not inflate the result | More daytime milk will improve tonight’s sleep |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">The card establishes</th><th scope="col">The card cannot establish</th></tr></thead>
+<tbody>
+<tr><td>Logged daytime milk volume rose across two weekly groups</td><td>Total milk intake rose by the same amount</td></tr>
+<tr><td>Both the percentage and millilitre thresholds passed</td><td>A growth spurt caused the change</td></tr>
+<tr><td>At least four measured days exist in each week</td><td>Every included day was completely logged</td></tr>
+<tr><td>Pump output and night milk did not inflate the result</td><td>More daytime milk will improve tonight’s sleep</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-daytime-milk-up-this-week-logic.svg" alt="The exact gates behind OBubba’s “Daytime milk is up this week” insight." loading="lazy"/><figcaption>The app compares fourteen completed day slots, keeps amount-bearing daytime milk feeds, requires at least four measured days in both weeks, and speaks only when the average rises by at least 20% and 60ml per measured day.</figcaption></figure>
 <h2>The exact calculation</h2>
 <p>The brain sends `daytimeMilkVolumeTrend` <strong>14 completed calendar days</strong>, most recent first. It starts with yesterday rather than today.</p>
@@ -969,6 +982,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Feeding on demand</a></li><li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/bottle-feeding/advice/" target="_blank" rel="noopener noreferrer">NHS: Bottle-feeding advice</a></li><li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/bottle-feeding/formula-milk-questions/" target="_blank" rel="noopener noreferrer">NHS: Formula milk—common questions</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/breastfeeding/breastfeeding-challenges/milk-supply/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Milk supply</a></li><li><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/bottle-feeding-resources/infant-formula-responsive-bottle-feeding-guide-for-parents/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly Initiative: Infant formula and responsive bottle feeding</a></li><li>OBubba source reviewed: `feed_insights.dart`, `brain.dart`, `brain_insight.dart`, `track_home.dart`, `baby_entry.dart`, `prefs.dart`, `log_sheet.dart`, `daytime_milk_trend_test.dart`, `feed_insights_test.dart` and `engine_integration_test.dart`.</li></ul>
 <p><em>OBubba is a record, pattern and education tool. It cannot measure breast-milk transfer, diagnose a growth spurt, establish nutritional adequacy or predict sleep from daytime milk. It does not replace individual advice from a midwife, health visitor, GP, paediatrician, dietitian, neonatal team or feeding specialist.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -999,6 +1013,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,15 @@
 <p>&gt; <strong>A public-health recommendation, a pattern in your baby’s records and a medical diagnosis are three different things. OBubba should never blur them together.</strong></p>
 <h2>The 30-second answer</h2>
 <p>When OBubba shows guidance, ask which layer you are seeing:</p>
-<p>| Layer | What it uses | What it can reasonably say | What it must not imply | |---|---|---|---| | <strong>General guidance</strong> | Trusted health and research organisations | Broad safer-sleep, feeding, growth or wellbeing information | That an outside organisation endorses OBubba | | <strong>Your baby’s pattern</strong> | Sleep, feed, nappy, growth and care events your family recorded | A cautious observation such as “recent short naps often followed a longer wake” | That correlation is a diagnosis or a guarantee | | <strong>Safety routing</strong> | Built-in, deterministic red-flag rules | Stop normal coaching and point towards appropriate human help | A diagnosis, prescription or medicine dose | | <strong>Optional AI answer</strong> | The question and relevant baby context, after consent | A more conversational explanation inside the same scope | That AI is a clinician or the source of truth |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Layer</th><th scope="col">What it uses</th><th scope="col">What it can reasonably say</th><th scope="col">What it must not imply</th></tr></thead>
+<tbody>
+<tr><td><strong>General guidance</strong></td><td>Trusted health and research organisations</td><td>Broad safer-sleep, feeding, growth or wellbeing information</td><td>That an outside organisation endorses OBubba</td></tr>
+<tr><td><strong>Your baby’s pattern</strong></td><td>Sleep, feed, nappy, growth and care events your family recorded</td><td>A cautious observation such as “recent short naps often followed a longer wake”</td><td>That correlation is a diagnosis or a guarantee</td></tr>
+<tr><td><strong>Safety routing</strong></td><td>Built-in, deterministic red-flag rules</td><td>Stop normal coaching and point towards appropriate human help</td><td>A diagnosis, prescription or medicine dose</td></tr>
+<tr><td><strong>Optional AI answer</strong></td><td>The question and relevant baby context, after consent</td><td>A more conversational explanation inside the same scope</td><td>That AI is a clinician or the source of truth</td></tr>
+</tbody>
+</table></div>
 <p>The most trustworthy answer is not always the cleverest one. Sometimes it is a direct link to the original source. Sometimes it is “we do not have enough of your data yet.” Sometimes it is “please seek urgent help.”</p>
 <h2>Where to find the evidence library</h2>
 <p>In the current app, <strong>Sources &amp; evidence</strong> is available from <strong>Account</strong>. Bubba Coach also places a <strong>Sources &amp; safety</strong> link beside its advice, so the evidence is not buried in a legal page far away from the answer.</p>
@@ -926,6 +939,7 @@
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — bring sleep, feeds, nappies, growth, weaning and family care into one record, then get support that shows the difference between a source, your baby’s pattern and a safety handoff.</p>
 <p><em>This article describes the current OBubba implementation reviewed on 9 March 2027. OBubba provides informational support, not diagnosis or medical care. Features, source links and privacy choices can change; review the current app screens. In an emergency, contact local emergency services immediately.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -956,6 +970,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

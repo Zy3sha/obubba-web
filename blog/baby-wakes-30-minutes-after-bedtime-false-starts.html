@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -867,7 +872,18 @@
 <p>Always return baby to a safer sleep space: on their back in a clear cot or Moses basket with a firm, flat mattress. The <a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/keeping-a-clear-cot/" target="_blank" rel="noopener noreferrer">Lullaby Trust&#39;s clear-cot guidance</a> applies to every sleep; a false start is not a reason to add a pillow, wedge, nest or positioner.</p>
 <h2>Overtired or undertired? Use the day as evidence</h2>
 <p>Both an overtired and an undertired baby can wake shortly after bedtime. Both may also fight settling, cry and seem “wired”. Their day usually separates them better than their behaviour in one minute.</p>
-<p>| Pattern before bedtime | More consistent with | First experiment | |---|---|---| | Missed or very short naps; final awake stretch was longer than usual; frantic or hard-to-soothe evening | <strong>Overtired</strong> | Bring bedtime about 10–15 minutes earlier next time | | Last nap ended late; final awake stretch was unusually short; baby played or chatted before sleep | <strong>Undertired</strong> | Let a little more awake time build before bedtime | | Day sleep was repeatedly above your baby&#39;s usual range | <strong>Not enough sleep pressure</strong> | Adjust the long or late nap gently—not every nap at once | | Day sleep was very low and baby crashed instantly | <strong>Overtired</strong> | Protect naps and shorten the final stretch | | Strong feeding cues or clearly lower daytime intake | <strong>Hunger may contribute</strong> | Feed responsively; review daytime opportunities later | | Crying with feeding difficulty, repeated vomiting or obvious discomfort | <strong>Discomfort or illness</strong> | Address comfort and seek health advice when needed | | Timing looks appropriate but the room or routine changed | <strong>Environment or transition</strong> | Restore the familiar calm, dark wind-down |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Pattern before bedtime</th><th scope="col">More consistent with</th><th scope="col">First experiment</th></tr></thead>
+<tbody>
+<tr><td>Missed or very short naps; final awake stretch was longer than usual; frantic or hard-to-soothe evening</td><td><strong>Overtired</strong></td><td>Bring bedtime about 10–15 minutes earlier next time</td></tr>
+<tr><td>Last nap ended late; final awake stretch was unusually short; baby played or chatted before sleep</td><td><strong>Undertired</strong></td><td>Let a little more awake time build before bedtime</td></tr>
+<tr><td>Day sleep was repeatedly above your baby&#39;s usual range</td><td><strong>Not enough sleep pressure</strong></td><td>Adjust the long or late nap gently—not every nap at once</td></tr>
+<tr><td>Day sleep was very low and baby crashed instantly</td><td><strong>Overtired</strong></td><td>Protect naps and shorten the final stretch</td></tr>
+<tr><td>Strong feeding cues or clearly lower daytime intake</td><td><strong>Hunger may contribute</strong></td><td>Feed responsively; review daytime opportunities later</td></tr>
+<tr><td>Crying with feeding difficulty, repeated vomiting or obvious discomfort</td><td><strong>Discomfort or illness</strong></td><td>Address comfort and seek health advice when needed</td></tr>
+<tr><td>Timing looks appropriate but the room or routine changed</td><td><strong>Environment or transition</strong></td><td>Restore the familiar calm, dark wind-down</td></tr>
+</tbody>
+</table></div>
 <p>These are clues, not a remote diagnosis. One false start can be random. Look for the same relationship across several comparable nights before moving the whole schedule.</p>
 <h2>Signs of an overtired false start</h2>
 <p>Overtired does not always look sleepy. A baby who has stayed awake beyond what they can comfortably manage may become frantic, silly, clingy, tearful or unusually difficult to settle.</p>
@@ -956,6 +972,7 @@
 <ul><li><a href="/blog/baby-wake-windows-without-stress.html">Baby wake windows without the stress</a></li><li><a href="/blog/wake-windows-by-age.html">Wake windows by age</a></li><li><a href="/blog/what-to-track-when-baby-wakes-at-night.html">What to track when your baby wakes at night</a></li><li><a href="/blog/why-wont-my-baby-sleep.html">Why won&#39;t my baby sleep?</a></li><li><a href="/blog/is-my-baby-ready-to-drop-a-nap.html">Is my baby ready to drop a nap?</a></li><li><a href="/blog/simple-baby-bedtime-routine-that-works.html">A simple baby bedtime routine</a></li><li><a href="/blog/is-my-baby-ready-to-night-wean.html">Is my baby ready to night wean?</a></li></ul>
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/helping-your-baby-sleep/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Helping your baby sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/breastfeeding/breastfeeding-challenges/reflux/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Reflux</a></li><li><a href="https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/" target="_blank" rel="noopener noreferrer">NHS: Is your baby or toddler seriously ill?</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/keeping-a-clear-cot/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Keeping a clear cot</a></li></ul>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_baby-wakes-30-minutes-after-bedtime-false-starts"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -987,6 +1004,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

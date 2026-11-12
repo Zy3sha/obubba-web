@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -867,7 +872,18 @@
 <h2>The timing rules the app actually uses</h2>
 <p>The anchors are not vague labels. applies fixed offsets to the current plan.</p>
 <figure><img src="/obubba-rhythm-anchor-timing.svg" alt="A visual map of OBubba’s current custom-plan timing offsets around wake-up, naps and bedtime." loading="lazy"/><figcaption>After Nap 2 means 15 minutes after its predicted end. If Nap 2 disappears, the task becomes unplaced rather than attaching itself to a different nap.</figcaption></figure>
-<p>| Choice | Resolved plan position | |---|---:| | Before wake-up | 20 minutes before predicted wake | | After wake-up | 35 minutes after predicted wake | | Before Nap N | 20 minutes before that nap’s predicted start | | After Nap N | 15 minutes after that nap’s predicted end | | Before bedtime | 30 minutes before predicted bedtime | | Exact time | The time the parent enters | | Anytime | No resolved clock time; sorted after timed items |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Choice</th><th scope="col">Resolved plan position</th></tr></thead>
+<tbody>
+<tr><td>Before wake-up</td><td>20 minutes before predicted wake</td></tr>
+<tr><td>After wake-up</td><td>35 minutes after predicted wake</td></tr>
+<tr><td>Before Nap N</td><td>20 minutes before that nap’s predicted start</td></tr>
+<tr><td>After Nap N</td><td>15 minutes after that nap’s predicted end</td></tr>
+<tr><td>Before bedtime</td><td>30 minutes before predicted bedtime</td></tr>
+<tr><td>Exact time</td><td>The time the parent enters</td></tr>
+<tr><td>Anytime</td><td>No resolved clock time; sorted after timed items</td></tr>
+</tbody>
+</table></div>
 <p>These offsets are current product rules. The parent cannot change “after nap” from 15 minutes to 30 minutes inside this sheet.</p>
 <p>For example, a day plan might show:</p>
 <ul><li>wake-up at 7am</li><li>Nap 1 from 9–10am</li><li>Nap 2 from 1–2:30pm</li><li>bedtime at 7pm</li></ul>
@@ -876,7 +892,13 @@
 <h2>What changes when the predicted nap moves?</h2>
 <p>On the Track screen, the app resolves each anchor against the live plan it is currently displaying. If its prediction shifts, the displayed approximate task time shifts with it.</p>
 <p>Imagine Nap 2 moves from 1–2:30pm to 1:30–3pm:</p>
-<p>| Saved intention | Earlier plan | Updated plan | |---|---:|---:| | Bath after Nap 2 | ~2:45pm | ~3:15pm | | Snack before Nap 2 | ~12:40pm | ~1:10pm |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Saved intention</th><th scope="col">Earlier plan</th><th scope="col">Updated plan</th></tr></thead>
+<tbody>
+<tr><td>Bath after Nap 2</td><td>~2:45pm</td><td>~3:15pm</td></tr>
+<tr><td>Snack before Nap 2</td><td>~12:40pm</td><td>~1:10pm</td></tr>
+</tbody>
+</table></div>
 <p>The title, category and anchor stay the same. The calculation changes because the predicted nap changed.</p>
 <p>This is more resilient than setting a new alarm every time the schedule drifts. It is not the same as live monitoring, though. OBubba does not watch the room or know the precise instant the baby wakes. The task follows the plan data available to the app.</p>
 <h2>What if Nap 2 disappears?</h2>
@@ -935,6 +957,7 @@
 <h2>Sources and product verification</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/washing-and-bathing-your-baby/" target="_blank" rel="noopener noreferrer">NHS: Washing and bathing your baby</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li>OBubba source reviewed for this article: `custom_plan_item.dart`, `custom_plan_sheet.dart`, `custom_plan_providers.dart`, `track_home.dart`, `reminder_schedule.dart` and `child_sync_repository.dart`.</li><li>101 focused tests passed on 8 May 2027 across custom-plan anchors, reminders, family-field round trips, additive family merging and fresh-reinstall recovery.</li></ul>
 <p><em>OBubba provides tracking, planning and general educational support. It does not observe your baby, guarantee a schedule or replace individual medical, feeding or safety advice.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_can-obubba-plan-bath-time-around-nap-2"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -966,6 +989,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

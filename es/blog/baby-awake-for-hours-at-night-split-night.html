@@ -630,6 +630,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -865,7 +870,16 @@
 <p>No existe un umbral clínico universalmente aceptado para el término popular &quot;noche partida&quot;. En esta guía significa:</p>
 <ul><li>el bebé completó un primer bloque significativo de sueño nocturno</li><li>estuvo genuinamente despierto durante aproximadamente una hora o más</li><li>el despertar ocurrió en mitad de la noche, no justo después de acostarlo</li><li>luego volvió a dormirse durante otro bloque</li></ul>
 <p>La lógica actual de OBubba en usa <strong>60 minutos</strong> como umbral práctico de detección y exige que el despertar largo empiece más de <strong>45 minutos después de acostarlo</strong> cuando se conoce ese horario. Son reglas del producto pensadas para evitar etiquetados erróneos; no son límites médicos.</p>
-<p>| Qué pasó | Mejor descripción | Por qué importa la distinción | |---|---|---| | El bebé se despertó de 20 a 45 minutos después de acostarlo | <strong>Falso arranque</strong> | El horario de acostarse, el traslado a la cuna, el hambre o una molestia pueden ser más relevantes que un cambio de horario por noche partida | | El bebé se despertó brevemente varias veces y se calmó en minutos | <strong>Despertar nocturno o microdespertar entre ciclos</strong> | Los despertares cortos no son el mismo patrón que un único intervalo de vigilia sostenido | | El bebé durmió horas, estuvo despierto de 60 a 120 minutos y luego volvió a dormir | <strong>Patrón de noche partida</strong> | Merece la pena comparar todo el ritmo de 24 horas y el día previo a acostarlo | | El bebé se despertó a las 4:30 y ya no volvió a dormirse | <strong>Despertar precoz de la mañana</strong> | La luz, la hora de acostarse y el ritmo del reloj interno pueden necesitar otro plan | | Un recién nacido comió, se cambió y se quedó despierto de noche | <strong>Despertar nocturno del recién nacido</strong> | El ritmo día-noche inmaduro y la alimentación van antes que corregir el horario |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Qué pasó</th><th scope="col">Mejor descripción</th><th scope="col">Por qué importa la distinción</th></tr></thead>
+<tbody>
+<tr><td>El bebé se despertó de 20 a 45 minutos después de acostarlo</td><td><strong>Falso arranque</strong></td><td>El horario de acostarse, el traslado a la cuna, el hambre o una molestia pueden ser más relevantes que un cambio de horario por noche partida</td></tr>
+<tr><td>El bebé se despertó brevemente varias veces y se calmó en minutos</td><td><strong>Despertar nocturno o microdespertar entre ciclos</strong></td><td>Los despertares cortos no son el mismo patrón que un único intervalo de vigilia sostenido</td></tr>
+<tr><td>El bebé durmió horas, estuvo despierto de 60 a 120 minutos y luego volvió a dormir</td><td><strong>Patrón de noche partida</strong></td><td>Merece la pena comparar todo el ritmo de 24 horas y el día previo a acostarlo</td></tr>
+<tr><td>El bebé se despertó a las 4:30 y ya no volvió a dormirse</td><td><strong>Despertar precoz de la mañana</strong></td><td>La luz, la hora de acostarse y el ritmo del reloj interno pueden necesitar otro plan</td></tr>
+<tr><td>Un recién nacido comió, se cambió y se quedó despierto de noche</td><td><strong>Despertar nocturno del recién nacido</strong></td><td>El ritmo día-noche inmaduro y la alimentación van antes que corregir el horario</td></tr>
+</tbody>
+</table></div>
 <p>La etiqueta debería facilitarte entender la noche, no convertir un despertar difícil en un trastorno.</p>
 <h2>¿Son normales las noches partidas en los bebés?</h2>
 <p>Los despertares largos ocasionales pueden pasar. El sueño infantil cambia rápidamente, y despertarse es en sí mismo algo normal.</p>
@@ -916,7 +930,17 @@
 <ul><li>¿Fue el sueño diurno realmente diferente?</li><li>¿Fue el último periodo de vigilia más corto o más largo?</li><li>¿Se movió la hora de acostarse o la de despertar?</li><li>¿Estaba el bebé tranquilo o angustiado durante el despertar?</li><li>¿Hizo una toma completa?</li><li>¿Hay un vínculo que se repite, o solo una historia que encaja con una noche?</li></ul>
 <p>La comparación te protege del error más común: ver un despertar largo tras una siesta larga y dar por hecho que la siesta lo causó, sin comprobar si también hubo siestas largas antes de las buenas noches.</p>
 <h2>Elige la dirección correcta, no un cambio drástico</h2>
-<p>| Prueba repetida | Primer experimento | Evita | |---|---|---| | Sueño diurno claramente por encima de la norma reciente de este bebé; despertar largo tranquilo | Recorta de 10 a 15 minutos de la última siesta <strong>o</strong> retrasa la hora de acostarse de 10 a 15 minutos | Recortar todas las siestas de golpe | | Ventana de vigilia final repetidamente demasiado corta; sueño diurno por lo demás adecuado | Alarga solo la ventana final de 10 a 15 minutos | Mantener despierto a un bebé exhausto para cuadrar una tabla | | Sueño diurno bajo; hora de acostarse frenética; despertar largo de madrugada | Protege las siestas o adelanta la hora de acostarse de 10 a 15 minutos | Recortar el sueño diurno | | Una toma completa y activa pone fin al despertar | Mejora las oportunidades tranquilas de leche diurna y mantén las tomas nocturnas receptivas | Retirar la leche basándote solo en la edad | | Señales de dolor, enfermedad o respiración | Pausa el trabajo de horario y busca la orientación adecuada | Llamarlo una regresión o un hábito | | Sin pruebas que se repitan | Mantén la rutina estable y reúne más noches | Adivinar con seguridad a partir de un solo despertar |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Prueba repetida</th><th scope="col">Primer experimento</th><th scope="col">Evita</th></tr></thead>
+<tbody>
+<tr><td>Sueño diurno claramente por encima de la norma reciente de este bebé; despertar largo tranquilo</td><td>Recorta de 10 a 15 minutos de la última siesta <strong>o</strong> retrasa la hora de acostarse de 10 a 15 minutos</td><td>Recortar todas las siestas de golpe</td></tr>
+<tr><td>Ventana de vigilia final repetidamente demasiado corta; sueño diurno por lo demás adecuado</td><td>Alarga solo la ventana final de 10 a 15 minutos</td><td>Mantener despierto a un bebé exhausto para cuadrar una tabla</td></tr>
+<tr><td>Sueño diurno bajo; hora de acostarse frenética; despertar largo de madrugada</td><td>Protege las siestas o adelanta la hora de acostarse de 10 a 15 minutos</td><td>Recortar el sueño diurno</td></tr>
+<tr><td>Una toma completa y activa pone fin al despertar</td><td>Mejora las oportunidades tranquilas de leche diurna y mantén las tomas nocturnas receptivas</td><td>Retirar la leche basándote solo en la edad</td></tr>
+<tr><td>Señales de dolor, enfermedad o respiración</td><td>Pausa el trabajo de horario y busca la orientación adecuada</td><td>Llamarlo una regresión o un hábito</td></tr>
+<tr><td>Sin pruebas que se repitan</td><td>Mantén la rutina estable y reúne más noches</td><td>Adivinar con seguridad a partir de un solo despertar</td></tr>
+</tbody>
+</table></div>
 <p>Prueba un cambio durante tres a cinco noches comparables. Mantén las señales de acostarse, la respuesta de alimentación y el ancla de la mañana bastante estables para poder interpretar el resultado.</p>
 <p>Si el despertar se acorta y el bebé sigue bien descansado, continúa con suavidad. Si acostarlo se vuelve más difícil, el ánimo diurno empeora o el despertar se adelanta, deshaz el cambio. Un buen experimento es reversible.</p>
 <h2>Qué hacer esta noche durante una noche partida</h2>
@@ -957,6 +981,7 @@
 <p>No necesitas resolver toda la noche a las 2 de la madrugada. Manténla segura y receptiva, y luego deja que la luz del día y varios días honestos de pruebas elijan el siguiente paso.</p>
 <p><em>Este artículo ofrece información general, no consejo médico. Sigue el plan individual de alimentación y cuidado de tu bebé y consulta con un profesional sanitario cualificado siempre que los cambios de sueño vayan acompañados de preocupaciones sobre alimentación, crecimiento, respiración, dolor, fiebre o enfermedad.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -987,6 +1012,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,17 @@
 <p><strong>There is no universal age when every family should stop tracking. You can usually reduce or stop a category when it no longer changes a care decision, supports a handover or fulfils a professional plan. Keep temporarily precise records for newborn feeding concerns, medicines, suspected food reactions, illness or clinician-requested monitoring. Otherwise, graduate from full-day logging to one question, a few anchors—or nothing at all.</strong></p>
 <p>&gt; <strong>A baby tracker should earn every tap. If a field no longer changes what you do, it may no longer deserve a place in your day.</strong></p>
 <h2>The quick decision table</h2>
-<p>| Category | Keep detailed tracking when | Lighten it when | Stop routine tracking when | |---|---|---|---| | <strong>milk feeds</strong> | baby is newborn, feeding or weight is being assessed, intake is uncertain, or a professional asked for a record | the pattern is established and only a handover or one question needs times or amounts | the baby is feeding well, no individual plan requires it and the record no longer changes care | | <strong>wet and dirty nappies</strong> | newborn output is part of a feeding check, hydration or illness is a concern, or a clinician needs a count | you only need “last change” for shared care | nappies are predictably normal and nobody is using the total for a decision | | <strong>sleep</strong> | you are learning the current rhythm, planning around naps or investigating a repeated pattern | morning wake, naps, bedtime and meaningful night wakes answer the question | predictions or charts no longer help, or tracking is increasing anxiety | | <strong>solids</strong> | introducing allergens, watching a suspected reaction, progressing textures or following a dietetic plan | record new foods, allergens and notable responses rather than every familiar meal | food history is established and ordinary meals need no memory aid | | <strong>growth</strong> | use measurements taken on the schedule set by the health-visiting or clinical team | add professionally measured points only | never collect frequent home weights merely to keep a graph busy | | <strong>medicine</strong> | while any dose is being given or carers are sharing responsibility | do not lighten the actual administration record | stop only when the medicine course or need ends; retain relevant instructions and seek advice about missed or uncertain doses |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Category</th><th scope="col">Keep detailed tracking when</th><th scope="col">Lighten it when</th><th scope="col">Stop routine tracking when</th></tr></thead>
+<tbody>
+<tr><td><strong>milk feeds</strong></td><td>baby is newborn, feeding or weight is being assessed, intake is uncertain, or a professional asked for a record</td><td>the pattern is established and only a handover or one question needs times or amounts</td><td>the baby is feeding well, no individual plan requires it and the record no longer changes care</td></tr>
+<tr><td><strong>wet and dirty nappies</strong></td><td>newborn output is part of a feeding check, hydration or illness is a concern, or a clinician needs a count</td><td>you only need “last change” for shared care</td><td>nappies are predictably normal and nobody is using the total for a decision</td></tr>
+<tr><td><strong>sleep</strong></td><td>you are learning the current rhythm, planning around naps or investigating a repeated pattern</td><td>morning wake, naps, bedtime and meaningful night wakes answer the question</td><td>predictions or charts no longer help, or tracking is increasing anxiety</td></tr>
+<tr><td><strong>solids</strong></td><td>introducing allergens, watching a suspected reaction, progressing textures or following a dietetic plan</td><td>record new foods, allergens and notable responses rather than every familiar meal</td><td>food history is established and ordinary meals need no memory aid</td></tr>
+<tr><td><strong>growth</strong></td><td>use measurements taken on the schedule set by the health-visiting or clinical team</td><td>add professionally measured points only</td><td>never collect frequent home weights merely to keep a graph busy</td></tr>
+<tr><td><strong>medicine</strong></td><td>while any dose is being given or carers are sharing responsibility</td><td>do not lighten the actual administration record</td><td>stop only when the medicine course or need ends; retain relevant instructions and seek advice about missed or uncertain doses</td></tr>
+</tbody>
+</table></div>
 <p>This table is not permission to ignore a concern. If your baby is feeding poorly, has fewer wet nappies than usual, is difficult to wake, seems unwell or has a professional care plan, contact the appropriate midwife, health visitor, pharmacist, GP, NHS 111 or emergency service.</p>
 <h2>Five signs a category has finished its job</h2>
 <h3>1. It no longer changes the next decision</h3>
@@ -971,6 +986,7 @@
 <h3>What if tracking makes me anxious?</h3>
 <p>Turn off non-essential categories and reminders or stop completely. If repeated checking, fear or intrusive thoughts are affecting daily life, speak to someone you trust and a health professional. The app is optional; support is not.</p>
 <p><em>OBubba supports parent-entered records, organisation and pattern summaries. It cannot assess milk transfer, hydration, allergy, growth, medicine safety, illness or sleep disorders; verify that an omitted event did not happen; or replace an individual plan, the Red Book, a midwife, health visitor, feeding specialist, dietitian, pharmacist, GP, NHS 111 or emergency service.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_when-can-i-stop-tracking-baby-feeds-nappies-sleep"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -1002,6 +1018,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -863,7 +868,14 @@
 <p>Peanut is a <strong>legume</strong>, not a tree nut. Other legumes include soya, peas, beans, lentils and lupin. Their proteins can share structural similarities, which is one reason clinicians think about cross-reactivity.</p>
 <p>But biological relationship is not destiny. Allergy UK explains that most people with peanut allergy can eat other legumes, while lupin deserves particular attention because it can share relevant proteins with peanut. Its guidance also says peanut allergy does not automatically mean tree-nut allergy, although the two can occur in the same child.</p>
 <p>That gives “also watch” its proper scale:</p>
-<p>| Prompt | What it can mean | What it cannot mean | |---|---|---| | <strong>Tree nuts</strong> | Peanut and tree-nut allergies sometimes coexist; individual assessment may be useful | Peanut is a tree nut, or every tree nut is unsafe | | <strong>Lupin</strong> | A related legume whose proteins can cross-react with peanut | A peanut reaction confirms lupin allergy | | <strong>Soya</strong> | Another legume that may be relevant to the history | All legumes should be removed |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Prompt</th><th scope="col">What it can mean</th><th scope="col">What it cannot mean</th></tr></thead>
+<tbody>
+<tr><td><strong>Tree nuts</strong></td><td>Peanut and tree-nut allergies sometimes coexist; individual assessment may be useful</td><td>Peanut is a tree nut, or every tree nut is unsafe</td></tr>
+<tr><td><strong>Lupin</strong></td><td>A related legume whose proteins can cross-react with peanut</td><td>A peanut reaction confirms lupin allergy</td></tr>
+<tr><td><strong>Soya</strong></td><td>Another legume that may be relevant to the history</td><td>All legumes should be removed</td></tr>
+</tbody>
+</table></div>
 <p>The words <strong>cross-reactivity</strong> and <strong>co-allergy</strong> are also different. Cross-reactivity describes an immune response to similar proteins. Co-allergy means the person has more than one allergy, whether or not shared proteins explain it. A tracking app cannot establish either.</p>
 <h2>What the current OBubba app actually does</h2>
 <p>We traced the production code through the solids logger, long-term child summary, Allergen journey, first-taste chooser, recipe engine and weekly-plan regeneration.</p>
@@ -925,6 +937,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/food-allergies-in-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Food allergies in babies and young children</a></li><li><a href="https://www.nhs.uk/conditions/anaphylaxis/" target="_blank" rel="noopener noreferrer">NHS: Anaphylaxis</a></li><li><a href="https://www.allergyuk.org/resources/peanut-allergy-factsheet/" target="_blank" rel="noopener noreferrer">Allergy UK: Peanut allergy</a></li><li><a href="https://www.allergyuk.org/resources/reactions-to-legumes/" target="_blank" rel="noopener noreferrer">Allergy UK: Reactions to legumes</a></li><li><a href="https://www.bsaci.org/resources/allergy-management/food-allergy/foods-involved/peanut-tree-nut-and-seed-allergy/" target="_blank" rel="noopener noreferrer">BSACI: Peanut, tree nut and seed allergy</a></li></ul>
 <p><em>OBubba is a tracking and education tool, not medical advice, an emergency service or an allergy test. Call 999 for a severe reaction. For non-emergency concerns, contact your GP, health visitor, allergy team or NHS 111.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -955,6 +968,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

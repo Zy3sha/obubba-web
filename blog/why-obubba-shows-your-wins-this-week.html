@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -866,7 +871,14 @@
 <ul><li><strong>this week:</strong> today and the previous six calendar days</li><li><strong>the comparison week:</strong> the seven calendar days before that</li></ul>
 <p>It then calculates separate evidence gates for night wakes, daytime sleep and total 24-hour sleep. A general “two days logged” check allows the weekly digest to exist, but each win has stricter requirements of its own.</p>
 <figure><img src="/obubba-your-wins-week-logic.svg" alt="A visual map of the three evidence paths that can produce OBubba&#39;s Your wins this week card." loading="lazy"/><figcaption>Each metric needs matching real data in both seven-day windows and a meaningful minimum change. Missing logs never become zero.</figcaption></figure>
-<p>| Possible win | Data needed in both weeks | Change needed | |---|---:|---:| | Fewer night wakes | At least 2 nights with night data in each week | Average falls by <strong>0.5 wake/night or more</strong> | | More daytime sleep | At least 2 nap days in each week | Average rises by <strong>20 minutes/day or more</strong> | | More total sleep | At least 5 days in each week with both night sleep and at least one nap | Average rises by <strong>30 minutes/day or more</strong> |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Possible win</th><th scope="col">Data needed in both weeks</th><th scope="col">Change needed</th></tr></thead>
+<tbody>
+<tr><td>Fewer night wakes</td><td>At least 2 nights with night data in each week</td><td>Average falls by <strong>0.5 wake/night or more</strong></td></tr>
+<tr><td>More daytime sleep</td><td>At least 2 nap days in each week</td><td>Average rises by <strong>20 minutes/day or more</strong></td></tr>
+<tr><td>More total sleep</td><td>At least 5 days in each week with both night sleep and at least one nap</td><td>Average rises by <strong>30 minutes/day or more</strong></td></tr>
+</tbody>
+</table></div>
 <p>The Parent Room takes at most the first three win lines. There is no fourth badge to unlock and no escalating reward animation.</p>
 <h2>What counts as a night-wake win?</h2>
 <p>The code subtracts this week’s average night wakes from the earlier week’s average. If the result is at least <strong>0.5</strong>, it can produce a line such as:</p>
@@ -929,6 +941,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li>OBubba source reviewed for this article: `weekly_digest.dart`, `day_metrics.dart`, `parent_room_screen.dart` and their focused tests, verified 5 May 2027.</li></ul>
 <p><em>OBubba is a tracking and education tool, not medical advice. A positive weekly comparison cannot assess whether a baby is well or prove that a routine caused the change.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -959,6 +972,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

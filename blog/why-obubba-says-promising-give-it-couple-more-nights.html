@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -861,20 +866,44 @@
 <p>This is an unusually valuable feature because baby apps are rewarded for delivering certainty quickly. Parents are better served by an app that can be excited <strong>and</strong> sceptical at the same time.</p>
 <h2>The exact rule</h2>
 <p>The note appears only when all three conditions are true:</p>
-<p>| Supervisor input | Required value | |---|---| | Active experiment | Yes | | Live verdict | Exactly <strong>working</strong> | | Calendar nights elapsed | Fewer than <strong>5</strong> |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Supervisor input</th><th scope="col">Required value</th></tr></thead>
+<tbody>
+<tr><td>Active experiment</td><td>Yes</td></tr>
+<tr><td>Live verdict</td><td>Exactly <strong>working</strong></td></tr>
+<tr><td>Calendar nights elapsed</td><td>Fewer than <strong>5</strong></td></tr>
+</tbody>
+</table></div>
 <p>Because the experiment engine cannot return `working` before three elapsed nights, the practical window is <strong>night 3 or night 4</strong>.</p>
 <p>The note names the experiment, reports the elapsed-night number and recommends continuing to approximately seven nights before counting the win.</p>
 <figure><img src="/obubba-promising-couple-more-nights-logic.svg" alt="The exact path behind OBubba’s Promising, but give it a couple more nights note." loading="lazy"/><figcaption>The experiment engine may call a metric improved from night three when enough outcomes clear a meaningful-change threshold. The Coach then checks that the experiment is active, the verdict is working and fewer than five calendar nights have elapsed before recommending a steadier run towards seven nights.</figcaption></figure>
 <h2>The first verdict is real—but deliberately sensitive</h2>
 <p>Every OBubba sleep experiment has one outcome metric. The engine does not judge every change by wake count:</p>
-<p>| What the family is testing | Outcome watches | “Working” threshold | |---|---|---:| | Earlier bedtime or a smaller evening bottle | Night wakes | At least <strong>0.5 fewer</strong> per night | | Dropping a dream feed | Night feeds | At least <strong>0.5 fewer</strong> per night | | Anchoring the morning | Morning wake | At least <strong>15 minutes later</strong> | | Day-sleep cap, earlier last nap, wake-window tuning, steadier bedtime or the gentle feed–sleep-link test | Longest unbroken stretch | At least <strong>30 minutes longer</strong> |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What the family is testing</th><th scope="col">Outcome watches</th><th scope="col">“Working” threshold</th></tr></thead>
+<tbody>
+<tr><td>Earlier bedtime or a smaller evening bottle</td><td>Night wakes</td><td>At least <strong>0.5 fewer</strong> per night</td></tr>
+<tr><td>Dropping a dream feed</td><td>Night feeds</td><td>At least <strong>0.5 fewer</strong> per night</td></tr>
+<tr><td>Anchoring the morning</td><td>Morning wake</td><td>At least <strong>15 minutes later</strong></td></tr>
+<tr><td>Day-sleep cap, earlier last nap, wake-window tuning, steadier bedtime or the gentle feed–sleep-link test</td><td>Longest unbroken stretch</td><td>At least <strong>30 minutes longer</strong></td></tr>
+</tbody>
+</table></div>
 <p>The direction changes with the metric. Fewer wakes and feeds are improvement; a later morning endpoint or longer stretch is improvement.</p>
 <p>These are product thresholds, not clinical definitions. They give the app a consistent line for its first read. A 29-minute stretch gain is not biologically different from a 30-minute gain, and half a wake is an average rather than an event one can observe.</p>
 <h2>Why “night 3” can mean only two usable outcomes</h2>
 <p>The supervisor’s displayed number comes from <strong>calendar days since the experiment started</strong>, calculated using date keys. It is not a count of complete logged nights.</p>
 <p>The verdict engine separately checks how many usable outcome values exist. To judge a result it requires at least half of the elapsed window, rounded up, with a minimum of two.</p>
 <p>That produces this ladder:</p>
-<p>| Calendar nights elapsed | Minimum usable outcomes for a verdict | |---:|---:| | 3 | 2 | | 4 | 2 | | 5 | 3 | | 7 | 4 | | 14 | 7 |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Calendar nights elapsed</th><th scope="col">Minimum usable outcomes for a verdict</th></tr></thead>
+<tbody>
+<tr><td>3</td><td>2</td></tr>
+<tr><td>4</td><td>2</td></tr>
+<tr><td>5</td><td>3</td></tr>
+<tr><td>7</td><td>4</td></tr>
+<tr><td>14</td><td>7</td></tr>
+</tbody>
+</table></div>
 <p>So a night-three `working` verdict can be based on two valid measurements. The note’s copy says the app is calling a win “after only 3 nights”, but a more exact translation is: <strong>three calendar nights have elapsed and at least two usable results cleared the improvement threshold</strong>.</p>
 <p>That distinction is precisely why the extra caution is worthwhile.</p>
 <h2>How the baseline is built</h2>
@@ -939,6 +968,7 @@
 <p>That is a much better relationship with data than “the app said it worked”.</p>
 <p>OBubba connects one-change sleep experiments with the correct outcome metric, disruption context, a per-baby result history and a Coach that can question the app’s own first answer. <a href="/#download">Explore OBubba</a> when you want a baby tracker that does more than produce insights—it checks whether its confidence has earned your trust.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -969,6 +999,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

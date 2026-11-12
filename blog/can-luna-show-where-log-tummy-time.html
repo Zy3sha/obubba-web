@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -868,7 +873,18 @@
 <h2>How Luna decides this is an app question</h2>
 <figure><img src="/obubba-luna-app-help-routing.svg" alt="The current routing path from a natural question to fixed app help, data-grounded care guidance or an honest fallback." loading="lazy"/><figcaption>Precise app questions retrieve a curated route and stay off the generative-AI path. Advice, safety and live-status questions have different handlers so similar words do not force the wrong kind of answer.</figcaption></figure>
 <p>The current code keeps several kinds of question separate.</p>
-<p>| What the parent asks | Intended route | |---|---| | “Where do I log tummy time?” | Curated app-help card | | “How do I turn on the sound machine?” | Curated app-help card | | “Where did my 2am wake go?” | Curated day-grouping explanation | | “Is white noise safe?” | Sleep or safety guidance, not sound-machine controls | | “How do I get my baby to sleep?” | Sleep support, not an app tutorial | | “Is my baby asleep right now?” | Live-status read from the family’s current log | | An infant or parent emergency phrase | Vetted safety response before ordinary retrieval |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What the parent asks</th><th scope="col">Intended route</th></tr></thead>
+<tbody>
+<tr><td>“Where do I log tummy time?”</td><td>Curated app-help card</td></tr>
+<tr><td>“How do I turn on the sound machine?”</td><td>Curated app-help card</td></tr>
+<tr><td>“Where did my 2am wake go?”</td><td>Curated day-grouping explanation</td></tr>
+<tr><td>“Is white noise safe?”</td><td>Sleep or safety guidance, not sound-machine controls</td></tr>
+<tr><td>“How do I get my baby to sleep?”</td><td>Sleep support, not an app tutorial</td></tr>
+<tr><td>“Is my baby asleep right now?”</td><td>Live-status read from the family’s current log</td></tr>
+<tr><td>An infant or parent emergency phrase</td><td>Vetted safety response before ordinary retrieval</td></tr>
+</tbody>
+</table></div>
 <p>For app help, Luna looks for common action phrases such as <strong>how do I</strong>, <strong>where is</strong>, <strong>find</strong>, <strong>turn on</strong>, <strong>change</strong> and <strong>set up</strong>, plus specific feature names. It then searches the app-help catalogue using keyword relevance.</p>
 <p>The current catalogue contains <strong>72 entries labelled app help</strong>. They cover actions across Track, Care, Grow and Account, including:</p>
 <ul><li>starting or correcting sleep, nap and night-wake records</li><li>logging feeds, nappies, medicine, pumping and crying</li><li>finding weaning, first-food and allergen tools</li><li>opening the Sound Machine, Parent Room or Sleep Consultant</li><li>changing units, clock format, haptics and other preferences</li><li>exporting data, restoring purchases and understanding family sync</li><li>finding Activities, milestones, developmental Waves and tummy-time controls</li></ul>
@@ -943,6 +959,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-moves/" target="_blank" rel="noopener noreferrer">NHS: Baby moves</a></li><li><a href="https://www.nhs.uk/baby/babys-development/play-and-learning/keep-baby-or-toddler-active/" target="_blank" rel="noopener noreferrer">NHS: How to keep your baby or toddler active</a></li><li>OBubba source reviewed for this article: `coach_kb.dart`, `bubba_coach.dart`, `bubba_coach_screen.dart`, `coach_retrieval.dart` and the Activities/tummy-time route.</li><li>77 focused tests passed on 9 May 2027 across app-help routing, tummy-time location, knowledge retrieval, collision protection and translated-content behavior.</li></ul>
 <p><em>OBubba provides tracking, navigation help and general educational support. Luna cannot observe a baby, confirm that an activity is safe for an individual child, diagnose a concern or replace advice from a health visitor, GP, physiotherapist or other qualified professional.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -973,6 +990,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

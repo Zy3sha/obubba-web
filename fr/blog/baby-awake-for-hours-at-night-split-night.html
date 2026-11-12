@@ -630,6 +630,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -865,7 +870,16 @@
 <p>Il n&#39;existe pas de seuil clinique universellement admis pour le terme parental « nuit coupée ». Dans ce guide, cela désigne :</p>
 <ul><li>le bébé a terminé un premier bloc significatif de sommeil de nuit</li><li>il a été réellement éveillé pendant environ une heure ou plus</li><li>le réveil s&#39;est produit au milieu de la nuit, pas juste après le coucher</li><li>il s&#39;est ensuite rendormi pour un autre bloc</li></ul>
 <p>La logique actuelle de l&#39;application d&#39;OBubba utilise <strong>60 minutes</strong> comme seuil de détection pratique et exige que le long réveil commence plus de <strong>45 minutes après le coucher</strong> lorsque l&#39;horaire est connu. Ce sont des règles produit conçues pour éviter les erreurs d&#39;étiquetage ; ce ne sont pas des seuils médicaux.</p>
-<p>| Ce qui s&#39;est passé | Meilleure description | Pourquoi la distinction compte | |---|---|---| | Bébé s&#39;est réveillé 20 à 45 minutes après le coucher | <strong>Faux départ</strong> | L&#39;heure du coucher, le transfert, la faim ou un inconfort peuvent être plus pertinents qu&#39;un changement de rythme lié à une nuit coupée | | Bébé s&#39;est réveillé brièvement plusieurs fois et s&#39;est rendormi en quelques minutes | <strong>Réveil nocturne ou micro-réveil lié aux cycles</strong> | Les courts réveils ne forment pas le même schéma qu&#39;un long intervalle d&#39;éveil continu | | Bébé a dormi des heures, est resté éveillé 60 à 120 minutes, puis s&#39;est rendormi | <strong>Schéma de nuit coupée</strong> | Le rythme complet des 24 heures et la journée précédant le coucher méritent d&#39;être comparés | | Bébé s&#39;est réveillé à 4h30 et ne s&#39;est jamais rendormi | <strong>Réveil matinal précoce</strong> | La lumière, le coucher et l&#39;horloge biologique peuvent nécessiter un plan différent | | Un nouveau-né a mangé, a été changé et est resté éveillé la nuit | <strong>Réveil nocturne du nouveau-né</strong> | Le rythme jour-nuit immature et l&#39;alimentation passent avant toute correction d&#39;emploi du temps |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Ce qui s&#39;est passé</th><th scope="col">Meilleure description</th><th scope="col">Pourquoi la distinction compte</th></tr></thead>
+<tbody>
+<tr><td>Bébé s&#39;est réveillé 20 à 45 minutes après le coucher</td><td><strong>Faux départ</strong></td><td>L&#39;heure du coucher, le transfert, la faim ou un inconfort peuvent être plus pertinents qu&#39;un changement de rythme lié à une nuit coupée</td></tr>
+<tr><td>Bébé s&#39;est réveillé brièvement plusieurs fois et s&#39;est rendormi en quelques minutes</td><td><strong>Réveil nocturne ou micro-réveil lié aux cycles</strong></td><td>Les courts réveils ne forment pas le même schéma qu&#39;un long intervalle d&#39;éveil continu</td></tr>
+<tr><td>Bébé a dormi des heures, est resté éveillé 60 à 120 minutes, puis s&#39;est rendormi</td><td><strong>Schéma de nuit coupée</strong></td><td>Le rythme complet des 24 heures et la journée précédant le coucher méritent d&#39;être comparés</td></tr>
+<tr><td>Bébé s&#39;est réveillé à 4h30 et ne s&#39;est jamais rendormi</td><td><strong>Réveil matinal précoce</strong></td><td>La lumière, le coucher et l&#39;horloge biologique peuvent nécessiter un plan différent</td></tr>
+<tr><td>Un nouveau-né a mangé, a été changé et est resté éveillé la nuit</td><td><strong>Réveil nocturne du nouveau-né</strong></td><td>Le rythme jour-nuit immature et l&#39;alimentation passent avant toute correction d&#39;emploi du temps</td></tr>
+</tbody>
+</table></div>
 <p>L&#39;étiquette doit rendre la nuit plus facile à comprendre, pas transformer un seul réveil difficile en trouble.</p>
 <h2>Les nuits coupées sont-elles normales chez les bébés ?</h2>
 <p>De longs réveils occasionnels peuvent arriver. Le sommeil du nourrisson évolue rapidement, et le réveil en lui-même est normal.</p>
@@ -916,7 +930,17 @@
 <ul><li>Le sommeil de jour était-il réellement différent ?</li><li>La dernière période d&#39;éveil était-elle plus courte ou plus longue ?</li><li>Le coucher ou le matin ont-ils bougé ?</li><li>Le bébé était-il calme ou en détresse pendant le réveil ?</li><li>A-t-il pris un repas complet ?</li><li>Existe-t-il un lien reproductible, ou seulement une histoire qui colle à une seule nuit ?</li></ul>
 <p>La comparaison vous protège de l&#39;erreur la plus fréquente : voir un long réveil après une longue sieste et supposer que la sieste l&#39;a causé, sans vérifier si de longues siestes ont aussi eu lieu avant de bonnes nuits.</p>
 <h2>Choisissez la bonne direction, pas une remise à zéro spectaculaire</h2>
-<p>| Preuve répétée | Première expérience | À éviter | |---|---|---| | Sommeil de jour nettement au-dessus de la norme récente de ce bébé ; long réveil calme | Raccourcir de 10 à 15 minutes la dernière sieste <strong>ou</strong> décaler le coucher de 10 à 15 minutes plus tard | Couper toutes les siestes d&#39;un coup | | Dernière période d&#39;éveil systématiquement trop courte ; sommeil de jour par ailleurs adapté | Allonger uniquement la dernière période d&#39;éveil de 10 à 15 minutes | Garder un bébé épuisé éveillé pour coller à un tableau | | Sommeil de jour faible ; coucher frénétique ; long réveil aux petites heures | Protéger les siestes ou avancer le coucher de 10 à 15 minutes | Rogner le sommeil de journée | | Un repas complet et actif met fin au réveil | Améliorer les occasions de lait calmes en journée et maintenir des tétées de nuit à la demande | Supprimer le lait sur le seul critère de l&#39;âge | | Signes de douleur, de maladie ou de respiration | Suspendre le travail sur l&#39;emploi du temps et demander un avis approprié | Parler de régression ou d&#39;habitude | | Aucune preuve reproductible | Maintenir la routine stable et rassembler plus de nuits | Deviner avec assurance à partir d&#39;un seul réveil |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Preuve répétée</th><th scope="col">Première expérience</th><th scope="col">À éviter</th></tr></thead>
+<tbody>
+<tr><td>Sommeil de jour nettement au-dessus de la norme récente de ce bébé ; long réveil calme</td><td>Raccourcir de 10 à 15 minutes la dernière sieste <strong>ou</strong> décaler le coucher de 10 à 15 minutes plus tard</td><td>Couper toutes les siestes d&#39;un coup</td></tr>
+<tr><td>Dernière période d&#39;éveil systématiquement trop courte ; sommeil de jour par ailleurs adapté</td><td>Allonger uniquement la dernière période d&#39;éveil de 10 à 15 minutes</td><td>Garder un bébé épuisé éveillé pour coller à un tableau</td></tr>
+<tr><td>Sommeil de jour faible ; coucher frénétique ; long réveil aux petites heures</td><td>Protéger les siestes ou avancer le coucher de 10 à 15 minutes</td><td>Rogner le sommeil de journée</td></tr>
+<tr><td>Un repas complet et actif met fin au réveil</td><td>Améliorer les occasions de lait calmes en journée et maintenir des tétées de nuit à la demande</td><td>Supprimer le lait sur le seul critère de l&#39;âge</td></tr>
+<tr><td>Signes de douleur, de maladie ou de respiration</td><td>Suspendre le travail sur l&#39;emploi du temps et demander un avis approprié</td><td>Parler de régression ou d&#39;habitude</td></tr>
+<tr><td>Aucune preuve reproductible</td><td>Maintenir la routine stable et rassembler plus de nuits</td><td>Deviner avec assurance à partir d&#39;un seul réveil</td></tr>
+</tbody>
+</table></div>
 <p>Testez un seul changement sur trois à cinq nuits comparables. Gardez les repères du coucher, la réponse aux repas et l&#39;ancrage du matin globalement stables afin de pouvoir interpréter le résultat.</p>
 <p>Si le réveil raccourcit et que le bébé reste bien reposé, poursuivez en douceur. Si le coucher devient plus difficile, si l&#39;humeur de journée se dégrade ou si le réveil se décale plus tôt, annulez le changement. Une bonne expérience est réversible.</p>
 <h2>Que faire pendant une nuit coupée, ce soir</h2>
@@ -957,6 +981,7 @@
 <p>Vous n&#39;avez pas besoin de résoudre toute la nuit à 2h du matin. Gardez-la sûre et attentive, puis laissez le jour et plusieurs journées de preuves honnêtes choisir le prochain mouvement.</p>
 <p><em>Cet article fournit des informations générales, pas un avis médical. Suivez le plan d&#39;alimentation et de soins individuel de votre bébé et parlez à un professionnel de santé qualifié dès que des changements de sommeil s&#39;accompagnent d&#39;inquiétudes concernant l&#39;alimentation, la croissance, la respiration, la douleur, la fièvre ou une maladie.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -987,6 +1012,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

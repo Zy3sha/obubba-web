@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,14 @@
 <p><strong>The goal is not to prove who worked hardest. It is to make enough of the workload visible that one person does not have to notice, remember, decide, perform and explain everything alone.</strong></p>
 <h2>What is the new-parent mental load?</h2>
 <p>Baby care has at least three overlapping layers:</p>
-<p>| Layer | What it can include | Why it is easy to miss | |---|---|---| | <strong>Hands-on care</strong> | feeds, nappies, settling, baths, contact naps, medicine and washing equipment | each task looks small when viewed alone | | <strong>Cognitive work</strong> | noticing supplies, anticipating the next feed, remembering advice, planning appointments and watching patterns | it happens inside one person’s head | | <strong>Emotional work</strong> | staying calm, reassuring a worried partner, making decisions while tired and absorbing family opinions | it rarely appears on a to-do list |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Layer</th><th scope="col">What it can include</th><th scope="col">Why it is easy to miss</th></tr></thead>
+<tbody>
+<tr><td><strong>Hands-on care</strong></td><td>feeds, nappies, settling, baths, contact naps, medicine and washing equipment</td><td>each task looks small when viewed alone</td></tr>
+<tr><td><strong>Cognitive work</strong></td><td>noticing supplies, anticipating the next feed, remembering advice, planning appointments and watching patterns</td><td>it happens inside one person’s head</td></tr>
+<tr><td><strong>Emotional work</strong></td><td>staying calm, reassuring a worried partner, making decisions while tired and absorbing family opinions</td><td>it rarely appears on a to-do list</td></tr>
+</tbody>
+</table></div>
 <p>The phrase <em>mental load</em> usually points most directly to that middle layer: being the household’s memory, alert system and decision-maker. But the physical and emotional layers feed it. A parent who has soothed four wakes is not only tired from being awake; they may also be calculating when the baby last fed, whether the nappy was wet and how the morning will work.</p>
 <p>This is why “just tell me what to do” does not always feel like shared care. Giving instructions is another task.</p>
 <h2>First, stop using tiredness as a fairness calculator</h2>
@@ -931,6 +943,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/your-mental-health/" target="_blank" rel="noopener noreferrer">NHS: Your mental health after having a baby</a></li><li><a href="https://www.nhs.uk/baby/support-and-services/relationships-after-having-a-baby/" target="_blank" rel="noopener noreferrer">NHS: Relationships after having a baby</a></li><li><a href="https://www.nhs.uk/mental-health/conditions/postnatal-depression/" target="_blank" rel="noopener noreferrer">NHS: Postnatal depression</a></li><li><a href="https://www.nhs.uk/nhs-services/mental-health-services/find-care-for-your-mental-health-before-during-and-after-pregnancy/" target="_blank" rel="noopener noreferrer">NHS: Find care for your mental health before, during and after pregnancy</a></li><li><a href="https://www.nhs.uk/every-mind-matters/urgent-support/" target="_blank" rel="noopener noreferrer">NHS: Urgent mental health support</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/sudden-infant-death-syndrome-sids/" target="_blank" rel="noopener noreferrer">NHS: Sudden infant death syndrome (SIDS)</a></li></ul>
 <p><em>This article provides general information for UK parents. It is not medical, mental-health or relationship advice, and OBubba is not a medical device. Seek professional help whenever you are worried about yourself, your baby or another carer.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -961,6 +974,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,19 @@
 <p>There is still room to be more precise. The sentence “sounds like a tooth is on the move” is warmer than a clinical label, but the same pattern can have other explanations. The most honest translation is:</p>
 <p>&gt; “You recently logged signs that can fit teething discomfort. Here are a few low-risk comfort options, while you continue to watch how your baby is.”</p>
 <h2>The short answer</h2>
-<p>| Question | Current behaviour | |---|---| | What unlocks the card? | At least one logged <strong>discomfort marker</strong> in the latest seven days | | Which markers count? | Swollen gums, fussiness, disturbed sleep, going off food or red cheeks | | Do drooling and chewing count? | No | | Does “Temperature” count? | No; it is deliberately excluded from this detector | | Must a tooth be selected? | No; a dated, symptom-only note can qualify | | Does OBubba diagnose teething? | No; it reflects the symptoms you selected and offers comfort ideas | | What does “Thanks” do? | It acknowledges this episode so the same evolving symptom cluster does not keep reappearing | | Can the card return? | Yes, after a genuinely separate episode; a gap of more than 10 days starts a new run |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Question</th><th scope="col">Current behaviour</th></tr></thead>
+<tbody>
+<tr><td>What unlocks the card?</td><td>At least one logged <strong>discomfort marker</strong> in the latest seven days</td></tr>
+<tr><td>Which markers count?</td><td>Swollen gums, fussiness, disturbed sleep, going off food or red cheeks</td></tr>
+<tr><td>Do drooling and chewing count?</td><td>No</td></tr>
+<tr><td>Does “Temperature” count?</td><td>No; it is deliberately excluded from this detector</td></tr>
+<tr><td>Must a tooth be selected?</td><td>No; a dated, symptom-only note can qualify</td></tr>
+<tr><td>Does OBubba diagnose teething?</td><td>No; it reflects the symptoms you selected and offers comfort ideas</td></tr>
+<tr><td>What does “Thanks” do?</td><td>It acknowledges this episode so the same evolving symptom cluster does not keep reappearing</td></tr>
+<tr><td>Can the card return?</td><td>Yes, after a genuinely separate episode; a gap of more than 10 days starts a new run</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-teething-comfort-seven-day-logic.svg" alt="The exact seven-day symptom gate behind OBubba’s teething-comfort insight." loading="lazy"/><figcaption>Only recent discomfort markers unlock the comfort card. Common behaviours and temperature stay outside the trigger.</figcaption></figure>
 <h2>What the detector actually reads</h2>
 <p>The detector receives the current child record and scans its rich teething history. Each entry can contain:</p>
@@ -873,7 +890,19 @@
 <p>The Teeth logger lets a parent record drooling and chewing. The proactive detector intentionally excludes both.</p>
 <p>That is sensible product design. A baby may chew toys for exploration, sensory play or hunger. Dribbling can increase for reasons unrelated to an erupting tooth. Those observations are worth keeping in the history, but they do not automatically mean the baby needs a discomfort intervention.</p>
 <p>The app draws a line between:</p>
-<p>| Observation | Stored in the Teeth history? | Unlocks this comfort card? | |---|---:|---:| | Drooling | Yes | No | | Chewing | Yes | No | | Swollen gums | Yes | Yes | | Fussiness | Yes | Yes | | Disturbed sleep | Yes | Yes | | Going off food | Yes | Yes | | Red cheeks | Yes | Yes | | Temperature | Yes | No |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Observation</th><th scope="col">Stored in the Teeth history?</th><th scope="col">Unlocks this comfort card?</th></tr></thead>
+<tbody>
+<tr><td>Drooling</td><td>Yes</td><td>No</td></tr>
+<tr><td>Chewing</td><td>Yes</td><td>No</td></tr>
+<tr><td>Swollen gums</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Fussiness</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Disturbed sleep</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Going off food</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Red cheeks</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Temperature</td><td>Yes</td><td>No</td></tr>
+</tbody>
+</table></div>
 <p>The card is not asking, “Could a baby this age be teething?” It is asking, “Did this parent recently record a sign the product classifies as genuine discomfort?”</p>
 <p>That narrower question reduces noise. It also makes the insight feel earned rather than generated from age alone.</p>
 <h2>Temperature is stored—but kept out of the inference</h2>
@@ -952,6 +981,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/babys-development/teething/baby-teething-symptoms/" target="_blank" rel="noopener noreferrer">NHS: Baby teething symptoms</a></li><li><a href="https://www.nhs.uk/baby/babys-development/teething/tips-for-helping-your-teething-baby/" target="_blank" rel="noopener noreferrer">NHS: Tips for helping your teething baby</a></li><li><a href="https://www.nhs.uk/baby/health/how-to-take-your-babys-temperature/" target="_blank" rel="noopener noreferrer">NHS: How to take your baby’s temperature</a></li><li><a href="https://www.nhs.uk/baby/health/medicines-for-babies-and-children/" target="_blank" rel="noopener noreferrer">NHS: Medicines for babies and children</a></li></ul>
 <p><em>This article provides general information for UK families. OBubba cannot diagnose teething or illness, examine a baby, assess hydration, choose a medicine or dose, or replace advice from NHS 111, a pharmacist, dentist, health visitor, GP, paediatrician or emergency service.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -982,6 +1012,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

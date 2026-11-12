@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -863,7 +868,17 @@
 <p>“Fish pie” alone cannot answer those questions. Neither can a list of allergen ticks with no meal, time or response.</p>
 <h2>What common mixed dishes might contain</h2>
 <p>These are prompts to check—not universal recipes.</p>
-<p>| Dish name | Possible allergens | What to verify | |---|---|---| | Fish pie | fish, milk, wheat; sometimes egg | fish species, sauce ingredients, topping and stock | | Pesto pasta | wheat; often milk and tree nuts; pasta may contain egg | pasta label, cheese, pine nuts or another nut, and any nut-free substitution | | Omelette fingers | egg; sometimes milk or cheese | what was added to the egg and how it was cooked | | Hummus on toast | sesame and wheat | tahini in the hummus and bread ingredients | | Family curry | recipe-dependent: milk, nuts, mustard or others | paste, stock, yoghurt, coconut products and the full packet label | | Pancake | often wheat, egg and milk | whether it was vegan, dairy-free, gluten-free or made from a different flour |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Dish name</th><th scope="col">Possible allergens</th><th scope="col">What to verify</th></tr></thead>
+<tbody>
+<tr><td>Fish pie</td><td>fish, milk, wheat; sometimes egg</td><td>fish species, sauce ingredients, topping and stock</td></tr>
+<tr><td>Pesto pasta</td><td>wheat; often milk and tree nuts; pasta may contain egg</td><td>pasta label, cheese, pine nuts or another nut, and any nut-free substitution</td></tr>
+<tr><td>Omelette fingers</td><td>egg; sometimes milk or cheese</td><td>what was added to the egg and how it was cooked</td></tr>
+<tr><td>Hummus on toast</td><td>sesame and wheat</td><td>tahini in the hummus and bread ingredients</td></tr>
+<tr><td>Family curry</td><td>recipe-dependent: milk, nuts, mustard or others</td><td>paste, stock, yoghurt, coconut products and the full packet label</td></tr>
+<tr><td>Pancake</td><td>often wheat, egg and milk</td><td>whether it was vegan, dairy-free, gluten-free or made from a different flour</td></tr>
+</tbody>
+</table></div>
 <p>Write what this serving contained. “Usually contains” is not the same as “baby ate”. A dairy-free fish pie should not create a milk exposure; a cashew-free pesto should not create a cashew exposure. Because an automatic dish match may still represent the typical recipe, use ingredient-level wording when your version is different.</p>
 <p>For packaged foods, read the full label every time the product or recipe changes. If your child has a diagnosed allergy, the NHS advises avoiding food when you are unsure whether it contains that allergen and reading labels carefully.</p>
 <h2>A mixed meal is easier after the ingredients are established</h2>
@@ -921,6 +936,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/food-allergies-in-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Food allergies in babies and young children</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-allergies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Baby food allergies</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby&#39;s first solid foods</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/foods-to-avoid-giving-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Foods to avoid giving babies and young children</a></li></ul>
 <p><em>This article gives general information for UK families. OBubba is a tracking and education tool, not a medical device, allergy test or emergency service. Follow your baby&#39;s own clinical plan and call 999 for a suspected severe reaction.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -951,6 +967,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

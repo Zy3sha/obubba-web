@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,16 @@
 <p>Here is exactly what earns the card, why a new family may see an early version, what <strong>Celebrate this</strong> does and where the encouraging copy goes beyond the data.</p>
 <h2>The short answer</h2>
 <p>OBubba has two positive routes to the same dedicated sleep-win card:</p>
-<p>| Route | Current rule | |---|---| | Early read | <strong>6–18 valid nights</strong>; split into recent and earlier halves; recent median is <strong>30+ minutes longer</strong> and at least <strong>2 hours</strong> | | Mature read | Up to <strong>14 recent valid nights</strong> versus up to <strong>14 earlier valid nights</strong>; at least <strong>5 nights in each group</strong>; recent median is <strong>30+ minutes longer</strong> | | Valid night | Both a bedtime and morning-wake anchor exist | | Statistic | Median longest unbroken sleep block—not mean, total sleep or fewest wakes | | Order | Nights must arrive most-recent first; the Brain supplies up to 28 |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Route</th><th scope="col">Current rule</th></tr></thead>
+<tbody>
+<tr><td>Early read</td><td><strong>6–18 valid nights</strong>; split into recent and earlier halves; recent median is <strong>30+ minutes longer</strong> and at least <strong>2 hours</strong></td></tr>
+<tr><td>Mature read</td><td>Up to <strong>14 recent valid nights</strong> versus up to <strong>14 earlier valid nights</strong>; at least <strong>5 nights in each group</strong>; recent median is <strong>30+ minutes longer</strong></td></tr>
+<tr><td>Valid night</td><td>Both a bedtime and morning-wake anchor exist</td></tr>
+<tr><td>Statistic</td><td>Median longest unbroken sleep block—not mean, total sleep or fewest wakes</td></tr>
+<tr><td>Order</td><td>Nights must arrive most-recent first; the Brain supplies up to 28</td></tr>
+</tbody>
+</table></div>
 <p>There is also a mature negative route. It waits for a larger <strong>45-minute drop</strong> before saying <strong>The longest stretch has shortened</strong>. Changes between those thresholds remain quiet.</p>
 <figure><img src="/obubba-longest-stretch-growing-confidence-ladder.svg" alt="OBubba’s exact confidence ladder for deciding that a baby’s longest sleep stretch is growing." loading="lazy"/><figcaption>OBubba first requires a bedtime and morning-wake anchor, then measures the longest sleep block between awake intervals. From 6–18 valid nights it can give a positive-only early read; from 19 or more it compares recent and earlier medians. A 30-minute gain earns the growing card, while the mature detector waits for a 45-minute drop before giving a shortened heads-up.</figcaption></figure>
 <h2>First, OBubba rebuilds each night</h2>
@@ -895,7 +909,15 @@
 <p>The mature detector takes the first 14 valid nights as “recent,” then the next up to 14 as “prior.” Each group must contain at least five nights.</p>
 <p>Because the recent group greedily takes up to 14 first, the mature route cannot fire with only ten complete nights. It needs a minimum of <strong>19 valid nights</strong>: 14 recent plus 5 prior. At 28, it compares 14 with 14.</p>
 <p>The groups can therefore be uneven:</p>
-<p>| Valid nights available | Recent group | Earlier group | |---:|---:|---:| | 18 | Mature detector cannot run; early route may use 9 + 9 | | 19 | 14 | 5 | | 22 | 14 | 8 | | 28 | 14 | 14 |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Valid nights available</th><th scope="col">Recent group</th><th scope="col">Earlier group</th></tr></thead>
+<tbody>
+<tr><td>18</td><td>Mature detector cannot run; early route may use 9 + 9</td></tr>
+<tr><td>19</td><td>14</td><td>5</td></tr>
+<tr><td>22</td><td>14</td><td>8</td></tr>
+<tr><td>28</td><td>14</td><td>14</td></tr>
+</tbody>
+</table></div>
 <p>If the recent median exceeds the earlier median by at least 30 minutes, the title becomes <strong>The longest stretch is growing</strong>. The body names both rounded durations—for example, “about 5h 10m lately, up from 4h 05m a couple of weeks ago.”</p>
 <p>At 19 nights and above, the early detector retires even when the mature detector stays silent. That avoids two systems disagreeing, but it also means a positive early card can disappear once the history crosses 19 valid nights if the mature comparison does not clear its threshold.</p>
 <h2>Thirty minutes up, 45 minutes down—and silence between</h2>
@@ -957,6 +979,7 @@
 <p>Its limit is equally clear: it measures duration, not sleep stages, cause, parenting method or the quality of the whole night. Valid nights may span longer than the copy implies, and missing wake logs can make a block look too long.</p>
 <p>Use the card as evidence of direction—not a verdict. OBubba’s most valuable job here is not to promise that sleep is solved. It is to show an exhausted parent that, underneath the rough nights, something may genuinely be moving.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -987,6 +1010,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -899,7 +904,14 @@
 <p>That is good product restraint. OBubba is not measuring the parent’s sleep and cannot know who handled each wake. It is using the baby record to ask a humane question, not inferring a mental-health condition.</p>
 <h2>What stays private—and what “private” means here</h2>
 <p>The Parent Room has three different storage behaviours:</p>
-<p>| Parent Room action | What the current build does | |---|---| | Quick six-face mood tap | Session-only screen state; not saved after leaving | | Recovery &amp; healing profile/check-ins | Stored locally on this phone in a dedicated maternal store | | Two-minute EPDS check-in | Completion time and score history are stored locally, scoped to the active baby, with the latest 24 retained |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Parent Room action</th><th scope="col">What the current build does</th></tr></thead>
+<tbody>
+<tr><td>Quick six-face mood tap</td><td>Session-only screen state; not saved after leaving</td></tr>
+<tr><td>Recovery &amp; healing profile/check-ins</td><td>Stored locally on this phone in a dedicated maternal store</td></tr>
+<tr><td>Two-minute EPDS check-in</td><td>Completion time and score history are stored locally, scoped to the active baby, with the latest 24 retained</td></tr>
+</tbody>
+</table></div>
 <p>The dedicated maternal store is deliberately excluded from OBubba’s shared `child_syncs` record. That means delivery details, recovery tags and daily mood entries do not travel to the partner or carer baby timeline.</p>
 <p>“On this phone” has a trade-off. These records are not a cloud backup or a clinician record. Changing or losing the device may mean losing them. They should support a conversation, not be the only place important information exists.</p>
 <p>The app also does not silently transmit a low mood to a health professional. Privacy is not the same as supervision: you still need to contact a human when you want or need human help.</p>
@@ -935,6 +947,7 @@
 <ul><li>Current surfaces reviewed: Care routing, Parent Room, Recovery &amp; healing, the maternal local store, mood-trend logic, the EPDS screen, warning signs, regional contacts and proactive wellbeing prompts from completed nights.</li><li>92 focused tests passed on 14 May 2027, covering maternal warning signs, regional crisis contacts, self-harm escalation, low-day nudges, recovery rules, wellbeing scoring, Coach safety routing and compact iPhone rendering.</li><li>The app image above is a genuine repository simulator capture using a fictional baby profile. No production family or maternal data appears in it.</li></ul>
 <p><em>This article describes the reviewed app build and links to UK guidance; support routes differ by country. OBubba offers tracking, education and signposting. It does not diagnose, monitor safety, provide emergency care or replace a GP, midwife, health visitor, perinatal mental-health team or local emergency service.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -965,6 +978,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -863,7 +868,15 @@
 <p>That is why the first recommendation can change after a food log. Once dairy is recorded as introduced, a dairy recipe no longer needs a <strong>new: dairy</strong> boost. Once a recipe is tried, the <strong>tried</strong> badge can appear and another useful option may move above it.</p>
 <h2>The actual ranking, in plain English</h2>
 <p>The current scorer is deliberately compact:</p>
-<p>| Signal | Ranking effect | Why it exists | |---|---:|---| | Exactly one new allergen | +3 | helps introduce allergens singly so a reaction is easier to identify | | Iron-rich recipe | +2 | keeps iron-containing choices visible from around six months | | Exact recipe not previously logged | +1 | encourages variety without making novelty the only goal | | Two or more new allergens | −2 | moves a complicated first exposure below clearer one-allergen options |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Signal</th><th scope="col">Ranking effect</th><th scope="col">Why it exists</th></tr></thead>
+<tbody>
+<tr><td>Exactly one new allergen</td><td>+3</td><td>helps introduce allergens singly so a reaction is easier to identify</td></tr>
+<tr><td>Iron-rich recipe</td><td>+2</td><td>keeps iron-containing choices visible from around six months</td></tr>
+<tr><td>Exact recipe not previously logged</td><td>+1</td><td>encourages variety without making novelty the only goal</td></tr>
+<tr><td>Two or more new allergens</td><td>−2</td><td>moves a complicated first exposure below clearer one-allergen options</td></tr>
+</tbody>
+</table></div>
 <p>These points choose order; they do not grade the baby’s diet. A score of six is not a nutritional quality score, and a lower-ranked recipe is not necessarily worse.</p>
 <p>The app also does not promise that the highest-ranked six recipes form a complete weekly diet. They are a decision-reducing shortlist to use alongside milk feeds, family foods, accepted favourites and professional advice where needed.</p>
 <h2>First, the recipe has to fit the stage</h2>
@@ -951,6 +964,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby&#39;s first solid foods</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/food-allergies-in-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Food allergies in babies and young children</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/what-to-feed-your-baby/from-around-6-months/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: From around 6 months</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/preparing-food-safely/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Preparing food safely</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/foods-to-avoid-giving-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Foods to avoid giving babies and young children</a></li></ul>
 <p><em>OBubba is a tracking, planning and education tool, not a dietetic assessment, allergy diagnosis or medical device. Seek qualified advice for feeding, growth, swallowing, nutrition or allergy concerns and follow your baby&#39;s individual care plan.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -981,6 +995,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

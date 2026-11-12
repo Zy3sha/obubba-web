@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -855,7 +860,18 @@
 <p>You do not need to remember everything, and your health professional does not need every tap.</p>
 <p><strong>Take the Red Book, appointment details, medicines or a medicine list, feeding essentials, spare clothes and nappies—and a one-page summary of what changed, when it started and the questions you want answered.</strong> A short, honest pattern is usually more useful than a perfect-looking chart or an unfiltered data dump.</p>
 <h2>The five-minute appointment checklist</h2>
-<p>| Bring | Why it helps | |---|---| | <strong>Red Book / Personal Child Health Record</strong> | Holds professionally recorded growth, vaccinations and other child-health information | | <strong>Appointment letter or message</strong> | Confirms the time, place, purpose and any preparation requested | | <strong>Medicines, packaging or a current list</strong> | Gives the clinician the exact name, strength and dose rather than a remembered approximation | | <strong>Milk, feeding equipment and comfort item</strong> | Keeps the baby comfortable if the appointment or journey runs long | | <strong>Nappies, wipes and a change of clothes</strong> | Covers ordinary baby timing—and makes undressing for an examination easier | | <strong>Your top three questions</strong> | Protects the concerns most likely to vanish when the conversation starts | | <strong>One short log summary</strong> | Shows dates, frequencies and changes without asking anyone to decode every entry |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Bring</th><th scope="col">Why it helps</th></tr></thead>
+<tbody>
+<tr><td><strong>Red Book / Personal Child Health Record</strong></td><td>Holds professionally recorded growth, vaccinations and other child-health information</td></tr>
+<tr><td><strong>Appointment letter or message</strong></td><td>Confirms the time, place, purpose and any preparation requested</td></tr>
+<tr><td><strong>Medicines, packaging or a current list</strong></td><td>Gives the clinician the exact name, strength and dose rather than a remembered approximation</td></tr>
+<tr><td><strong>Milk, feeding equipment and comfort item</strong></td><td>Keeps the baby comfortable if the appointment or journey runs long</td></tr>
+<tr><td><strong>Nappies, wipes and a change of clothes</strong></td><td>Covers ordinary baby timing—and makes undressing for an examination easier</td></tr>
+<tr><td><strong>Your top three questions</strong></td><td>Protects the concerns most likely to vanish when the conversation starts</td></tr>
+<tr><td><strong>One short log summary</strong></td><td>Shows dates, frequencies and changes without asking anyone to decode every entry</td></tr>
+</tbody>
+</table></div>
 <p>The NHS advises taking your baby&#39;s Personal Child Health Record—usually called the <strong>Red Book</strong> in England—to baby clinic and GP visits. It is used to record weight and height, vaccinations and other important information. An app summary can sit beside it; it does not replace it.</p>
 <h2>First, know what kind of appointment this is</h2>
 <p>Preparation changes with the purpose of the visit.</p>
@@ -934,6 +950,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/babys-development/height-weight-and-reviews/baby-reviews/" target="_blank" rel="noopener noreferrer">NHS: Your baby&#39;s health and development reviews</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/caring-for-your-baby/vaccinations-and-newborn-screening-tests/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Vaccinations and newborn screening tests</a></li><li><a href="https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/" target="_blank" rel="noopener noreferrer">NHS: When to get urgent medical help for babies and children under 5</a></li><li><a href="https://www.nhs.uk/vaccinations/vaccination-tips-for-parents/" target="_blank" rel="noopener noreferrer">NHS: Vaccination tips for parents</a></li></ul>
 <p><em>OBubba supports organisation, parent-entered tracking and health conversations. It is not a medical record or medical device, cannot verify observations, diagnose illness or replace the Red Book, health visitor, GP, paediatric team, NHS 111 or emergency services.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -964,6 +981,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

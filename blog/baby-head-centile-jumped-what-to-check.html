@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -867,7 +872,14 @@
 <h3>3. Is it a one-off point or a continuing pattern?</h3>
 <p>Ask how this value compares with earlier professionally measured points. Is the head measurement continuing to rise across centile spaces, or does one dot need confirming? The RCPCH advises assessment when the head centile keeps rising or there are other concerning signs. There is no safe app-only rule that settles that question for an individual child.</p>
 <h2>When to call, and when not to wait</h2>
-<p>| What you notice | Next step | |---|---| | One unexpected number, baby otherwise well | Contact your health visitor or GP to check the measurement and chart; do not repeatedly remeasure at home | | A confirmed upward trend across visits, or a concern about head shape or development | Arrange a professional review and bring the dated measurements and Red Book | | Bulging or swollen soft spot, unusual drowsiness, repeated vomiting, or a baby who seems seriously unwell | Seek urgent medical help now; use NHS 111 for urgent advice or 999 in an emergency |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What you notice</th><th scope="col">Next step</th></tr></thead>
+<tbody>
+<tr><td>One unexpected number, baby otherwise well</td><td>Contact your health visitor or GP to check the measurement and chart; do not repeatedly remeasure at home</td></tr>
+<tr><td>A confirmed upward trend across visits, or a concern about head shape or development</td><td>Arrange a professional review and bring the dated measurements and Red Book</td></tr>
+<tr><td>Bulging or swollen soft spot, unusual drowsiness, repeated vomiting, or a baby who seems seriously unwell</td><td>Seek urgent medical help now; use NHS 111 for urgent advice or 999 in an emergency</td></tr>
+</tbody>
+</table></div>
 <p>The <a href="https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/" target="_blank" rel="noopener noreferrer">NHS urgent-help guide</a> is the place to check other warning signs. Trust your instincts if your baby seems different or unwell. A chart is never a reason to delay care.</p>
 <h2>What to bring to the conversation</h2>
 <p>You do not need a spreadsheet of every day. A useful note is:</p>
@@ -878,6 +890,7 @@
 <p>If you log a professional measurement, keep its date and units accurate. You can use the record to remember what was measured and when, then ask your health visitor about a surprising change. You do not need to fill the gaps with daily home measurements. Our <a href="/blog/how-often-weigh-baby.html">guide to weighing frequency</a> explains why more points are not always more clarity.</p>
 <p><strong><a href="/app.html?utm_source=head_centile_article&amp;utm_medium=owned_search&amp;utm_campaign=parent_guides&amp;utm_content=20260924_head_circumference">Keep dated growth records together in OBubba →</a></strong></p>
 <p>The reassuring answer is not “the app says it&#39;s fine”. It is: “we checked the right measurement with the right professional, and we know what happens next.”</p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -909,6 +922,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

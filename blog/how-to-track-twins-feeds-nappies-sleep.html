@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,19 @@
 <p>&gt; <strong>Keep one household rhythm, but two baby records.</strong> Before starting a timer or saving an event, check the active baby&#39;s name. Copy an event to both only when it truly happened to both.</p>
 <p>That rule makes the log useful for handovers without forcing twins into matching feeds, naps or milestones.</p>
 <h2>The quick twin-tracking rule</h2>
-<p>| Event | Usually log separately? | Why | |---|---:|---| | Breastfeed, bottle or tube feed | Yes | Side, duration, volume, tolerance and advice can differ | | Nap, bedtime or night wake | Yes | One twin may settle, wake or finish sleeping earlier | | Wet or dirty nappy | Yes | Output is part of each baby&#39;s feeding and wellbeing picture | | Medicine or dose | <strong>Always</strong> | Baby, medicine, dose and time must never be assumed from a shared entry | | Temperature, symptom or reaction | <strong>Always</strong> | The observation belongs to the baby who had it | | New food or allergen | <strong>Always</strong> | Readiness, amount eaten and reactions can differ | | Weight, tooth or milestone | <strong>Always</strong> | Development is individual, even for twins | | A shared care moment | Sometimes | Copy only if the same event genuinely happened to both |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Event</th><th scope="col">Usually log separately?</th><th scope="col">Why</th></tr></thead>
+<tbody>
+<tr><td>Breastfeed, bottle or tube feed</td><td>Yes</td><td>Side, duration, volume, tolerance and advice can differ</td></tr>
+<tr><td>Nap, bedtime or night wake</td><td>Yes</td><td>One twin may settle, wake or finish sleeping earlier</td></tr>
+<tr><td>Wet or dirty nappy</td><td>Yes</td><td>Output is part of each baby&#39;s feeding and wellbeing picture</td></tr>
+<tr><td>Medicine or dose</td><td><strong>Always</strong></td><td>Baby, medicine, dose and time must never be assumed from a shared entry</td></tr>
+<tr><td>Temperature, symptom or reaction</td><td><strong>Always</strong></td><td>The observation belongs to the baby who had it</td></tr>
+<tr><td>New food or allergen</td><td><strong>Always</strong></td><td>Readiness, amount eaten and reactions can differ</td></tr>
+<tr><td>Weight, tooth or milestone</td><td><strong>Always</strong></td><td>Development is individual, even for twins</td></tr>
+<tr><td>A shared care moment</td><td>Sometimes</td><td>Copy only if the same event genuinely happened to both</td></tr>
+</tbody>
+</table></div>
 <p>“Log for all” should mean <strong>this happened to both babies</strong>, not <strong>I want their days to look the same</strong>.</p>
 <h2>Set up the system before the next tired handover</h2>
 <p>The best twin log starts outside the app. Give each baby one unmistakable visual cue and use it everywhere: for example, sage for Amara and lavender for Bea. Put the colour on bottle labels, the paper note by the changing mat and the family shorthand in messages. Do not rely only on “Twin 1” and “Twin 2” if carers are more likely to remember names.</p>
@@ -937,6 +954,7 @@
 <h2>Sources and further support</h2>
 <ul><li><a href="https://www.nhs.uk/baby/newborn-twins-and-multiples/twins-and-sleep/" target="_blank" rel="noopener noreferrer">NHS: Twins and sleep</a></li><li><a href="https://www.nhs.uk/baby/newborn-twins-and-multiples/feeding-twins-and-multiples/" target="_blank" rel="noopener noreferrer">NHS: Feeding twins and multiples</a></li><li><a href="https://www.nhs.uk/baby/newborn-twins-and-multiples/your-newborn-twins/" target="_blank" rel="noopener noreferrer">NHS: Your newborn twins</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li></ul>
 <p><em>This UK-oriented article is general information, not individual feeding, sleep or medical advice. Follow the plan from your maternity or neonatal team, especially after premature birth or when weight gain, jaundice, medicines or feeding are being monitored. Contact your midwife, health visitor, GP or NHS 111 when concerned; call 999 in an emergency.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_how-to-track-twins-feeds-nappies-sleep"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -968,6 +986,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

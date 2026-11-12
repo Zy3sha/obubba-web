@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -868,7 +873,13 @@
 <p>This is called confounding: something outside the planned change affects the outcome. Family logs cannot eliminate every confounder, but an app can avoid treating the most visible ones as clean evidence.</p>
 <h2>OBubba uses two disruption gates</h2>
 <p>The current app does not rely on one generic “rough week” switch.</p>
-<p>| Gate | What it asks | Why both are needed | |---|---|---| | <strong>Presence gate</strong> | Is an explicitly logged disruption active right now? | A sick or teething baby should not be pushed into a new plan merely because earlier nights happened to look calm. | | <strong>Rough-night diagnostic</strong> | Have nights already become unusually disrupted, and is a sufficiently strong cause ranked at the top? | A repeated sleep change can provide context even when there is no single current log carrying the whole story. |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">What it asks</th><th scope="col">Why both are needed</th></tr></thead>
+<tbody>
+<tr><td><strong>Presence gate</strong></td><td>Is an explicitly logged disruption active right now?</td><td>A sick or teething baby should not be pushed into a new plan merely because earlier nights happened to look calm.</td></tr>
+<tr><td><strong>Rough-night diagnostic</strong></td><td>Have nights already become unusually disrupted, and is a sufficiently strong cause ranked at the top?</td><td>A repeated sleep change can provide context even when there is no single current log carrying the whole story.</td></tr>
+</tbody>
+</table></div>
 <p>The presence gate is protective before a pattern becomes dramatic. The diagnostic gate explains a disturbance already visible in the sleep history.</p>
 <h2>What counts as an active presence signal</h2>
 <p>The shared context checks recent logs in a fixed priority order.</p>
@@ -960,6 +971,7 @@
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/baby/babys-development/teething/baby-teething-symptoms/" target="_blank" rel="noopener noreferrer">NHS: Baby teething symptoms</a></li><li><a href="https://www.nhs.uk/baby/babys-development/teething/tips-for-helping-your-teething-baby/" target="_blank" rel="noopener noreferrer">NHS: Tips for helping your teething baby</a></li><li><a href="https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/" target="_blank" rel="noopener noreferrer">NHS: Is your baby or toddler seriously ill?</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Safer sleep advice for babies</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/your-babys-sleep-patterns/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Your baby’s sleep patterns</a></li></ul>
 <p><em>OBubba is a tracking, planning and education tool, not a medical device. Its disruption holds and experiment verdicts are estimates from logged context. They cannot diagnose illness, teething, allergy, pain or the cause of a wake, and they do not replace safer-sleep guidance or professional care.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-says-hold-off-sleep-change"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -991,6 +1003,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

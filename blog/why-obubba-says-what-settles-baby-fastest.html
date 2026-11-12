@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,16 @@
 <p>Used in proportion, the card answers a useful question: <strong>which recorded route has taken less time in this family’s recent night log?</strong> It does not answer which method is best, kindest, safest or appropriate for the next wake.</p>
 <h2>The short answer</h2>
 <p>The current insight needs all of the following:</p>
-<p>| Gate | rule | Why it matters | |---|---:|---| | Recent history | Up to <strong>14 reconstructed nights</strong> | One memorable wake is not enough | | Comparable methods | At least <strong>2 method buckets</strong> with positive time | There must be something to compare | | Evidence at both extremes | At least <strong>3 samples</strong> in the fastest and slowest buckets | A one-off win cannot become advice | | Meaningful separation | Slowest rounded average minus fastest rounded average is at least <strong>8 minutes</strong> | Near-ties stay quiet | | Contradiction guard | A winning feed can be suppressed when a feed-reduction insight is active | The same screen should not give opposite instructions |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">rule</th><th scope="col">Why it matters</th></tr></thead>
+<tbody>
+<tr><td>Recent history</td><td>Up to <strong>14 reconstructed nights</strong></td><td>One memorable wake is not enough</td></tr>
+<tr><td>Comparable methods</td><td>At least <strong>2 method buckets</strong> with positive time</td><td>There must be something to compare</td></tr>
+<tr><td>Evidence at both extremes</td><td>At least <strong>3 samples</strong> in the fastest and slowest buckets</td><td>A one-off win cannot become advice</td></tr>
+<tr><td>Meaningful separation</td><td>Slowest rounded average minus fastest rounded average is at least <strong>8 minutes</strong></td><td>Near-ties stay quiet</td></tr>
+<tr><td>Contradiction guard</td><td>A winning feed can be suppressed when a feed-reduction insight is active</td><td>The same screen should not give opposite instructions</td></tr>
+</tbody>
+</table></div>
 <p>The card is low urgency. Its own final sentence says to follow hunger and comfort cues first.</p>
 <figure><img src="/obubba-what-settles-baby-fastest-logic.svg" alt="The exact route from OBubba’s night-wake records to the “What settles fastest” card." loading="lazy"/><figcaption>The engine scans up to fourteen recent nights, converts valid settling records into four broad buckets, compares rounded averages and speaks only when both extreme buckets have at least three samples and differ by eight minutes or more.</figcaption></figure>
 <h2>The exact data path</h2>
@@ -877,14 +891,29 @@
 <p>This fallback keeps older data useful. It also means the averages can contain two different kinds of measurement: <strong>segment minutes</strong> and <strong>whole-wake minutes</strong>.</p>
 <h2>The four comparison buckets</h2>
 <p>The app does not compare every button label separately. It maps them into four broader groups:</p>
-<p>| What the parent records | Comparison bucket | Wording used on the card | |---|---|---| | Self-settle / Independent | `self` | self-settling | | Fed | `fed` | a feed | | Rocked, Held or Patted | `assisted` | rocking/holding | | Dummy | `other` | a dummy |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What the parent records</th><th scope="col">Comparison bucket</th><th scope="col">Wording used on the card</th></tr></thead>
+<tbody>
+<tr><td>Self-settle / Independent</td><td>`self`</td><td>self-settling</td></tr>
+<tr><td>Fed</td><td>`fed`</td><td>a feed</td></tr>
+<tr><td>Rocked, Held or Patted</td><td>`assisted`</td><td>rocking/holding</td></tr>
+<tr><td>Dummy</td><td>`other`</td><td>a dummy</td></tr>
+</tbody>
+</table></div>
 <p>That grouping gives each bucket more chance of reaching a usable sample. It also removes detail.</p>
 <p>If all three assisted samples were <strong>Patted</strong>, the current label can still say <strong>“rocking/holding”</strong>. If holding is quick but rocking is slow, combining them may hide the difference. “Other” currently means dummy rather than every possible alternative.</p>
 <p>The card is best read at bucket level: self, feed, hands-on soothing or dummy—not as a precise ranking of every technique.</p>
 <h2>How the winner is calculated</h2>
 <p>For every bucket with a positive sample, totals the minutes and divides by the sample count. Each average is rounded to a whole minute.</p>
 <p>Imagine the recent records contain:</p>
-<p>| Bucket | Samples | Rounded average | |---|---|---:| | Self-settling | 7, 8, 9 min | <strong>8 min</strong> | | Feed | 13, 15, 17 min | <strong>15 min</strong> | | Rocking/holding | 26, 28, 30 min | <strong>28 min</strong> |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Bucket</th><th scope="col">Samples</th><th scope="col">Rounded average</th></tr></thead>
+<tbody>
+<tr><td>Self-settling</td><td>7, 8, 9 min</td><td><strong>8 min</strong></td></tr>
+<tr><td>Feed</td><td>13, 15, 17 min</td><td><strong>15 min</strong></td></tr>
+<tr><td>Rocking/holding</td><td>26, 28, 30 min</td><td><strong>28 min</strong></td></tr>
+</tbody>
+</table></div>
 <p>The app sorts those averages. It names only the fastest and slowest:</p>
 <p>&gt; Self-settling gets Oliver back down in about 8 min, vs ~28 min with rocking/holding.</p>
 <p>The 15-minute feed average is not shown in the body. It still contributes to the insight’s sample label.</p>
@@ -982,6 +1011,7 @@
 <h2>Sources</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS — Helping your baby to sleep</a></li><li><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/sleep-and-night-time-resources/caring-for-your-baby-at-night/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly Initiative — Caring for your baby at night</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/keeping-a-clear-cot/" target="_blank" rel="noopener noreferrer">The Lullaby Trust — Keeping a clear cot</a></li></ul>
 <p><em>This article provides general information for UK families. An app cannot assess hunger, illness, pain, breathing, growth or an individual feeding plan from settling times. Respond to your baby and seek advice from a health visitor, GP or other appropriate professional when you are worried.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-says-what-settles-baby-fastest"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -1013,6 +1043,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,16 @@
 <p>The best nap place is the one that is:</p>
 <ol><li><strong>safe for that sleep and situation;</strong></li><li><strong>workable for the family;</strong></li><li><strong>restorative enough for what the baby needs;</strong> and</li><li><strong>repeatably associated with a useful outcome.</strong></li></ol>
 <p>That outcome may be length, a calm wake, easy settling or simply making the day possible.</p>
-<p>| What you need from this nap | Useful signal | What not to assume | |---|---|---| | A solid restorative nap | Average duration by location | Longer always means better quality | | A calm transition into the next part of the day | How baby wakes in each place | A fussy wake proves the location was wrong | | A practical on-the-go top-up | Enough sleep to bridge the next stretch | Every short pram or carrier nap has failed | | A break from holding or motion naps | A repeatable cot opportunity | Contact naps have “spoilt” the baby | | Safer sleep | The surface, position, airway and supervision | An app result can override safer-sleep guidance |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What you need from this nap</th><th scope="col">Useful signal</th><th scope="col">What not to assume</th></tr></thead>
+<tbody>
+<tr><td>A solid restorative nap</td><td>Average duration by location</td><td>Longer always means better quality</td></tr>
+<tr><td>A calm transition into the next part of the day</td><td>How baby wakes in each place</td><td>A fussy wake proves the location was wrong</td></tr>
+<tr><td>A practical on-the-go top-up</td><td>Enough sleep to bridge the next stretch</td><td>Every short pram or carrier nap has failed</td></tr>
+<tr><td>A break from holding or motion naps</td><td>A repeatable cot opportunity</td><td>Contact naps have “spoilt” the baby</td></tr>
+<tr><td>Safer sleep</td><td>The surface, position, airway and supervision</td><td>An app result can override safer-sleep guidance</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-nap-place-length-mood-logic.svg" alt="The evidence gates behind OBubba’s two nap-location insights." loading="lazy"/><figcaption>OBubba analyses duration and wake mood separately. Each comparison needs at least two locations with three qualifying naps per place, plus a clear outcome gap; otherwise the app stays quiet.</figcaption></figure>
 <h2>Length and mood answer different questions</h2>
 <h3>“Cot naps run longest”</h3>
@@ -880,7 +894,17 @@
 <p>Do not change <strong>Fussy</strong> to <strong>Happy</strong> because the nap was long. Record what happened. The point is to preserve two outcomes rather than make the history look tidy.</p>
 <h2>A worked example</h2>
 <p>Suppose six recent naps look like this:</p>
-<p>| Location | Length | How baby woke | |---|---:|---| | Cot | 82 min | Happy | | Cot | 88 min | Happy | | Cot | 91 min | Sleepy | | Pram | 46 min | Fussy | | Pram | 52 min | Fussy | | Pram | 44 min | Sleepy |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Location</th><th scope="col">Length</th><th scope="col">How baby woke</th></tr></thead>
+<tbody>
+<tr><td>Cot</td><td>82 min</td><td>Happy</td></tr>
+<tr><td>Cot</td><td>88 min</td><td>Happy</td></tr>
+<tr><td>Cot</td><td>91 min</td><td>Sleepy</td></tr>
+<tr><td>Pram</td><td>46 min</td><td>Fussy</td></tr>
+<tr><td>Pram</td><td>52 min</td><td>Fussy</td></tr>
+<tr><td>Pram</td><td>44 min</td><td>Sleepy</td></tr>
+</tbody>
+</table></div>
 <p>The cot average is 87 minutes and the pram average is about 47 minutes—a 40-minute gap. Two of three cot wakes were Happy, while none of the three pram wakes were.</p>
 <p>Both detectors have enough evidence to speak:</p>
 <ul><li>the duration card can identify cot naps as longer; and</li><li>the mood card can identify cot naps as the happier-wake location.</li></ul>
@@ -968,6 +992,7 @@
 <h2>Reliable UK sources</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/sudden-infant-death-syndrome-sids/" target="_blank" rel="noopener noreferrer">NHS: Sudden infant death syndrome—reducing the risk</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/keeping-a-clear-cot/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Keeping a clear cot</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/baby-product-information/slings-and-carriers/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Baby slings and carriers</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/co-sleeping/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Co-sleeping and sofa safety</a></li></ul>
 <p><em>This article provides general information for UK families. It is not a medical or product-safety assessment, and OBubba is not a medical device. Follow current safer-sleep guidance, the equipment manufacturer’s instructions and your baby’s individual healthcare advice.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_longest-nap-happiest-wake-baby-best-nap-place"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -999,6 +1024,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

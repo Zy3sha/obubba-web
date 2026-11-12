@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -894,7 +899,14 @@
 <h2>What the real importer does with the file</h2>
 <p>The CSV text is read and parsed locally on the device first. OBubba identifies the header shape, translates recognised rows into its own entry types and shows a preview before saving the new profile.</p>
 <p>There are three levels of support:</p>
-<p>| File type | How OBubba handles it | |---|---| | OBubba CSV | Full round-trip mapping for OBubba&#39;s own structured fields | | Huckleberry CSV | Dedicated mapping for its known headers and event labels | | Baby Connect, Sprout, Glow, Baby Tracker and other recognisable CSVs | Header-driven best effort using common date, time, type, activity, category, amount and note columns |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">File type</th><th scope="col">How OBubba handles it</th></tr></thead>
+<tbody>
+<tr><td>OBubba CSV</td><td>Full round-trip mapping for OBubba&#39;s own structured fields</td></tr>
+<tr><td>Huckleberry CSV</td><td>Dedicated mapping for its known headers and event labels</td></tr>
+<tr><td>Baby Connect, Sprout, Glow, Baby Tracker and other recognisable CSVs</td><td>Header-driven best effort using common date, time, type, activity, category, amount and note columns</td></tr>
+</tbody>
+</table></div>
 <p>“Best effort” matters. Two apps can both call a column “Activity” while storing different details inside it. OBubba does not pretend every proprietary feature has a universal equivalent.</p>
 <p>Recognised foreign entries can include:</p>
 <ul><li>sleep and naps with start and end times</li><li>breastfeeding and bottle feeds</li><li>bottle or pump amounts where a clear ml or oz value exists</li><li>solids, nappies, medicine, temperature and notes</li><li>dates written in common ISO or slash formats</li><li>12-hour times with am/pm and 24-hour times</li></ul>
@@ -902,7 +914,14 @@
 <h2>Why imported nights need more than row copying</h2>
 <p>This is one of the most important differences between a superficial importer and a useful one.</p>
 <p>Some trackers export a broken night as several separate sleep sessions:</p>
-<p>| Exported row | Time | |---|---| | Sleep session 1 | 7:30pm–11:45pm | | Sleep session 2 | 12:10am–3:00am | | Sleep session 3 | 3:35am–6:25am |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Exported row</th><th scope="col">Time</th></tr></thead>
+<tbody>
+<tr><td>Sleep session 1</td><td>7:30pm–11:45pm</td></tr>
+<tr><td>Sleep session 2</td><td>12:10am–3:00am</td></tr>
+<tr><td>Sleep session 3</td><td>3:35am–6:25am</td></tr>
+</tbody>
+</table></div>
 <p>A literal row-for-row import would look like three unrelated sleeps. It could undercount total night sleep, hide the two awake gaps or attach part of the night to the wrong calendar day.</p>
 <p>For Huckleberry and generic foreign formats, OBubba&#39;s importer groups consecutive overnight sessions into one bedtime-to-morning sleep arc and creates explicit night-wake entries for the gaps. Daytime naps remain separate.</p>
 <p>That transformation lets the existing sleep engine read the migrated night in the same shape as a night tracked natively in OBubba. It is still an interpretation of the exported timestamps, so spot-check unusual nights—especially travel, sickness, split nights and very early bedtimes.</p>
@@ -962,6 +981,7 @@
 <ul><li><a href="https://huckleberry.zendesk.com/hc/en-us/articles/4409286804627-Can-I-export-my-data-from-the-app" target="_blank" rel="noopener noreferrer">Huckleberry: Can I export my data from the app?</a></li><li><a href="https://en.babyconnect.com/reports" target="_blank" rel="noopener noreferrer">Baby Connect: Reports and CSV export</a></li><li><a href="https://wp.glowing.com/glow-baby-app" target="_blank" rel="noopener noreferrer">Glow Baby: Features and data export</a></li><li><a href="https://wp.glowing.com/glow-safety" target="_blank" rel="noopener noreferrer">Glow: Downloading data for safekeeping</a></li><li><a href="https://nighp.com/babytracker/FAQ.html" target="_blank" rel="noopener noreferrer">Baby Tracker by Nighp: FAQ and CSV exporting</a></li></ul>
 <p><em>Huckleberry, Baby Connect, Sprout, Glow and Baby Tracker are trademarks of their respective owners and are not affiliated with OBubba. Export features, labels and plan requirements can change; check the source app&#39;s current help. OBubba imports parent-provided tracking data on a best-effort basis and is not a medical-record migration service.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -992,6 +1012,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,18 @@
 <p><strong>Use the OBubba home-screen widget when you need a quick glance or one-tap care action. On a compatible iPhone, use the Live Activity to watch a running nap, sleep or feed timer from the Lock Screen or Dynamic Island. When both hands are busy, Siri can start a nap or bedtime timer, stop a running nap or sleep timer, and tell you the next predicted nap without opening OBubba.</strong></p>
 <p>These shortcuts reduce friction; they do not remove the need to check an important time, medicine record or ambiguous entry inside the app.</p>
 <h2>The 20-second guide</h2>
-<p>| What you need right now | Best OBubba surface | |---|---| | See whether a timer is running | Home-screen widget | | See the next predicted nap or bedtime | Home-screen widget, or ask Siri on iPhone | | Log a feed or nappy quickly | Home-screen widget | | Watch a running nap, bedtime or feed timer | OBubba app, or Live Activity on a compatible iPhone | | Start a nap or bedtime timer, or stop a running nap or sleep timer, with both hands full | Siri on iPhone | | Add a completed feed, nappy and nap together | <a href="/blog/hands-free-baby-tracking-voice-log.html">Quick Log</a> inside OBubba | | Correct a time, add details or record medicine | Open OBubba and review the full form |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What you need right now</th><th scope="col">Best OBubba surface</th></tr></thead>
+<tbody>
+<tr><td>See whether a timer is running</td><td>Home-screen widget</td></tr>
+<tr><td>See the next predicted nap or bedtime</td><td>Home-screen widget, or ask Siri on iPhone</td></tr>
+<tr><td>Log a feed or nappy quickly</td><td>Home-screen widget</td></tr>
+<tr><td>Watch a running nap, bedtime or feed timer</td><td>OBubba app, or Live Activity on a compatible iPhone</td></tr>
+<tr><td>Start a nap or bedtime timer, or stop a running nap or sleep timer, with both hands full</td><td>Siri on iPhone</td></tr>
+<tr><td>Add a completed feed, nappy and nap together</td><td><a href="/blog/hands-free-baby-tracking-voice-log.html">Quick Log</a> inside OBubba</td></tr>
+<tr><td>Correct a time, add details or record medicine</td><td>Open OBubba and review the full form</td></tr>
+</tbody>
+</table></div>
 <p>The home-screen widget works on iPhone and Android. Live Activities, the Dynamic Island and OBubba&#39;s Siri shortcuts are Apple features, so do not expect the same surfaces on Android. Device model, operating-system version and settings also affect what is available.</p>
 <h2>What the OBubba home-screen widget actually shows</h2>
 <p>A useful widget should answer the question in your head before asking you to open the app.</p>
@@ -882,7 +898,17 @@
 <p>You should not have to understand any of that at 3am. You should be able to trust that <strong>Stop</strong> means stop this timer.</p>
 <h2>What you can say to Siri</h2>
 <p>OBubba exposes a small set of focused iPhone shortcuts. Natural phrasing can vary, but useful examples include:</p>
-<p>| Try saying | What OBubba does | |---|---| | “Siri, start a nap timer in OBubba.” | Starts a timestamped nap timer without opening the app | | “Siri, stop the timer in OBubba.” | Queues a timestamped stop without opening the app | | “Siri, when&#39;s the next nap in OBubba?” | Speaks the current next-nap or bedtime answer | | “Siri, log a feed in OBubba.” | Opens OBubba at the feed action so you can add the details | | “Siri, log a nappy in OBubba.” | Opens OBubba at the nappy action | | “Siri, start a sleep timer in OBubba.” | Starts a timestamped bedtime timer without opening the app |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Try saying</th><th scope="col">What OBubba does</th></tr></thead>
+<tbody>
+<tr><td>“Siri, start a nap timer in OBubba.”</td><td>Starts a timestamped nap timer without opening the app</td></tr>
+<tr><td>“Siri, stop the timer in OBubba.”</td><td>Queues a timestamped stop without opening the app</td></tr>
+<tr><td>“Siri, when&#39;s the next nap in OBubba?”</td><td>Speaks the current next-nap or bedtime answer</td></tr>
+<tr><td>“Siri, log a feed in OBubba.”</td><td>Opens OBubba at the feed action so you can add the details</td></tr>
+<tr><td>“Siri, log a nappy in OBubba.”</td><td>Opens OBubba at the nappy action</td></tr>
+<tr><td>“Siri, start a sleep timer in OBubba.”</td><td>Starts a timestamped bedtime timer without opening the app</td></tr>
+</tbody>
+</table></div>
 <p>Start and stop are deliberately timestamped at the moment you speak. The action is stored in a durable queue shared with the app, then drains it through the ordinary tracking repository. If OBubba was not on screen, it can still preserve when the request happened rather than substituting the later time when you next open the app.</p>
 <p>The queue is bounded rather than allowed to grow forever. That protects the app from replaying an unlimited backlog after a long period offline.</p>
 <h3>Asking for the next nap</h3>
@@ -942,6 +968,7 @@
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://support.apple.com/en-us/118610" target="_blank" rel="noopener noreferrer">Apple: Add and edit widgets on iPhone</a></li><li><a href="https://support.apple.com/guide/iphone/iph28f50d10d/ios" target="_blank" rel="noopener noreferrer">Apple: View Live Activities in the Dynamic Island on iPhone</a></li><li><a href="https://support.apple.com/guide/iphone/use-siri-with-apps-iph0193a9d54/26/ios/26" target="_blank" rel="noopener noreferrer">Apple: Use Siri with apps on iPhone</a></li><li><a href="https://support.google.com/android/answer/9450271?hl=en" target="_blank" rel="noopener noreferrer">Android Help: Add apps, shortcuts and widgets to Home screens</a></li></ul>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -972,6 +999,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

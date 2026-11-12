@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -863,7 +868,16 @@
 <p>The result is a manageable shortlist, not a prescription, feeding schedule, readiness assessment or allergy plan.</p>
 <h2>First tastes are not recipes</h2>
 <p>OBubba has two different food recommendation systems.</p>
-<p>| First-tastes chooser | Recipe engine | |---|---| | Suggests individual catalogue foods | Ranks complete recipe ideas | | Appears as <strong>Try these next</strong> | Appears under recipe ideas and the weekly plan | | Designed for early, traceable tastes | Designed for broader meal planning | | Uses corrected months and a 34-food catalogue | Uses corrected weeks, recipe stage and meal-history gaps | | Shows 4 ideas | Can build a 6-meal weekly plan |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">First-tastes chooser</th><th scope="col">Recipe engine</th></tr></thead>
+<tbody>
+<tr><td>Suggests individual catalogue foods</td><td>Ranks complete recipe ideas</td></tr>
+<tr><td>Appears as <strong>Try these next</strong></td><td>Appears under recipe ideas and the weekly plan</td></tr>
+<tr><td>Designed for early, traceable tastes</td><td>Designed for broader meal planning</td></tr>
+<tr><td>Uses corrected months and a 34-food catalogue</td><td>Uses corrected weeks, recipe stage and meal-history gaps</td></tr>
+<tr><td>Shows 4 ideas</td><td>Can build a 6-meal weekly plan</td></tr>
+</tbody>
+</table></div>
 <p>If the first-tastes card suggests <strong>Egg</strong>, it is not recommending a multi-ingredient omelette recipe. It is pointing to the catalogue entry, where the parent can open preparation, nutrient, allergen and safety information.</p>
 <figure><img src="/obubba-first-foods-guide-app.jpg" alt="The genuine OBubba First foods screen, with its searchable 34-food catalogue and serving guidance." loading="lazy"/><figcaption>The personalised card chooses from this catalogue. The catalogue explains preparation; it cannot inspect the food on the tray or confirm that a baby is ready.</figcaption></figure>
 <h2>Gate 1: corrected age comes first</h2>
@@ -876,7 +890,16 @@
 <h2>Gate 2: what has already been logged?</h2>
 <p>The screen reads solids entries from today back through roughly <strong>120 days</strong>. Every non-empty food description becomes part of the tried-food set.</p>
 <p>The comparison is case-insensitive but otherwise exact:</p>
-<p>| Logged food text | Catalogue item | Treated as the same food? | |---|---|---:| | `Egg` | Egg | Yes | | `egg` | Egg | Yes | | `Scrambled egg + toast` | Egg | No | | `Broccoli` | Broccoli | Yes | | `Broccoli and lentil mash` | Broccoli | No |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Logged food text</th><th scope="col">Catalogue item</th><th scope="col">Treated as the same food?</th></tr></thead>
+<tbody>
+<tr><td>`Egg`</td><td>Egg</td><td>Yes</td></tr>
+<tr><td>`egg`</td><td>Egg</td><td>Yes</td></tr>
+<tr><td>`Scrambled egg + toast`</td><td>Egg</td><td>No</td></tr>
+<tr><td>`Broccoli`</td><td>Broccoli</td><td>Yes</td></tr>
+<tr><td>`Broccoli and lentil mash`</td><td>Broccoli</td><td>No</td></tr>
+</tbody>
+</table></div>
 <p>This protects the app from pretending it understands every ingredient in free text. It also creates a clear limitation: a mixed description can leave an individual catalogue food eligible even though the baby has eaten it.</p>
 <p>If “scrambled egg + toast” was logged, the allergen detector may still remember <strong>egg</strong> and <strong>gluten</strong> as introduced. The app should not label Egg as a <em>new allergen</em>, but Egg may still appear later as a familiar variety idea because the exact catalogue name was not logged.</p>
 <p>Similarly, food-name memory is recent rather than lifetime. A non-allergen eaten more than about 120 days ago may eventually return to the pool. That is not harmful by itself—repeat exposure is part of ordinary eating—but it means <strong>“Try these next” does not mean “your baby has definitely never tried these.”</strong></p>
@@ -910,7 +933,15 @@
 <p>The chooser tries to lead with a new allergen, then a variety food, then an allergen, then variety, until it reaches four items.</p>
 <p>If only one pool has food left, it fills from that pool. This prevents the engine from returning nothing simply because the perfect alternating pattern is impossible.</p>
 <p>The exact names are less important than the structure:</p>
-<p>| Slot | What the engine tries to offer | Why | |---|---|---| | 1 | One not-yet-recorded allergen | Keeps safe introduction from being endlessly postponed | | 2 | A non-new-allergen taste | Adds variety and makes the list less intimidating | | 3 | A different allergen group | Avoids duplicating the same unseen allergen | | 4 | Another variety food | Keeps the round balanced where inventory allows |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Slot</th><th scope="col">What the engine tries to offer</th><th scope="col">Why</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>One not-yet-recorded allergen</td><td>Keeps safe introduction from being endlessly postponed</td></tr>
+<tr><td>2</td><td>A non-new-allergen taste</td><td>Adds variety and makes the list less intimidating</td></tr>
+<tr><td>3</td><td>A different allergen group</td><td>Avoids duplicating the same unseen allergen</td></tr>
+<tr><td>4</td><td>Another variety food</td><td>Keeps the round balanced where inventory allows</td></tr>
+</tbody>
+</table></div>
 <p>NHS guidance says foods that can trigger allergy can be introduced from around six months, <strong>one at a time and in very small amounts</strong>, so a reaction can be spotted. Once tolerated, they should remain part of the baby’s usual diet. The OBubba shortlist can organise memory, but the parent chooses the day, amount and safe form.</p>
 <h2>A worked example</h2>
 <p>Imagine an eight-month-old whose record contains:</p>
@@ -953,6 +984,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/how-to-start-weaning-your-baby/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: How to start weaning</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/what-to-feed-your-baby/from-around-6-months/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: From around 6 months</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-allergies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Introducing foods that could trigger an allergic reaction</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/preparing-food-safely/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Preparing food safely</a></li></ul>
 <p><em>OBubba is a tracking, organisation and education tool. It does not assess readiness, inspect food, diagnose allergy or replace a health visitor, GP, neonatal team, paediatric dietitian, feeding team, NHS 111 or emergency services.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -983,6 +1015,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

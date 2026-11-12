@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,16 @@
 <figure><img src="/obubba-how-bridge-nap-works.svg" alt="The two separate routes that can lead OBubba to mention a bridge nap." loading="lazy"/><figcaption>The live card uses today’s deficit and awake time; the bedtime planner separately checks whether the projected final wake window would become too long.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current live card can appear only when every one of these gates passes:</p>
-<p>| Live-card check | Current rule | Why it matters | |---|---:|---| | Time of day | <strong>2:00pm–5:30pm</strong> | Keeps the prompt in the afternoon rescue window | | Nap history today | At least <strong>1 completed nap</strong> | No first nap yet is a different problem, not a bridge | | Current sleep state | <strong>No open nap timer</strong> | Avoids duplicating an active nap timer | | Day-sleep deficit | At least <strong>45 minutes</strong> below the corrected-age floor | Avoids reacting to a tiny shortfall | | Time awake | At least the corrected-age <strong>minimum wake window</strong> since the last completed nap | Avoids suggesting sleep before the baby is plausibly tired |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Live-card check</th><th scope="col">Current rule</th><th scope="col">Why it matters</th></tr></thead>
+<tbody>
+<tr><td>Time of day</td><td><strong>2:00pm–5:30pm</strong></td><td>Keeps the prompt in the afternoon rescue window</td></tr>
+<tr><td>Nap history today</td><td>At least <strong>1 completed nap</strong></td><td>No first nap yet is a different problem, not a bridge</td></tr>
+<tr><td>Current sleep state</td><td><strong>No open nap timer</strong></td><td>Avoids duplicating an active nap timer</td></tr>
+<tr><td>Day-sleep deficit</td><td>At least <strong>45 minutes</strong> below the corrected-age floor</td><td>Avoids reacting to a tiny shortfall</td></tr>
+<tr><td>Time awake</td><td>At least the corrected-age <strong>minimum wake window</strong> since the last completed nap</td><td>Avoids suggesting sleep before the baby is plausibly tired</td></tr>
+</tbody>
+</table></div>
 <p>When those gates pass, the body says how far below the age-profile floor today’s completed naps sit, rounded to one decimal hour, and suggests a <strong>brief 20–30 minute nap</strong>.</p>
 <p>This insight has medium urgency and a <strong>protect day sleep</strong> direction. When reconciles competing advice, that live rescue signal can remove a lower-urgency historical card telling the parent to trim day sleep. The app should not say “add a nap now” and “cap naps” at the same time.</p>
 <h2>A worked example</h2>
@@ -893,7 +907,14 @@
 <ol><li>the earliest age-appropriate bedtime boundary</li><li>the last nap end plus the contextual maximum final wake window</li></ol>
 <p>If the earliest allowable bedtime would still come after that maximum awake stretch, and no bridge is already scheduled, the planner can insert a short bridge before recomputing bedtime.</p>
 <p>Its default bridge duration is age-tuned:</p>
-<p>| Corrected age | Planner’s bridge duration | |---|---:| | Under 22 weeks | <strong>25 minutes</strong> | | 22–38 weeks | <strong>20 minutes</strong> | | 39 weeks and older | <strong>15 minutes</strong> |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Corrected age</th><th scope="col">Planner’s bridge duration</th></tr></thead>
+<tbody>
+<tr><td>Under 22 weeks</td><td><strong>25 minutes</strong></td></tr>
+<tr><td>22–38 weeks</td><td><strong>20 minutes</strong></td></tr>
+<tr><td>39 weeks and older</td><td><strong>15 minutes</strong></td></tr>
+</tbody>
+</table></div>
 <p>After the bridge, the planner uses a shorter settling window—at least 30 minutes, or about 65% of the contextual minimum wake window—then checks that the new bedtime is coherent.</p>
 <p>These numbers belong to OBubba’s planning model. They are not universal clinical rules and do not mean every baby should be woken at exactly 15, 20 or 25 minutes.</p>
 <h2>What the real plan shows</h2>
@@ -902,7 +923,17 @@
 <p>A bridge is not visible in this example because this day’s two naps already connect coherently to bedtime. That absence is useful proof: OBubba does not add a late catnap to every plan. It appears only when the day or final wake-window maths creates a gap that needs crossing.</p>
 <h2>Bridge nap or earlier bedtime?</h2>
 <p>Use the smallest intervention that fits the real evening.</p>
-<p>| Situation | More plausible option | |---|---| | Bedtime is still several hours away and baby is clearly tired | Offer a brief bridge opportunity | | Bedtime is close enough to reach with calm, low stimulation | Use a modestly earlier bedtime | | Baby has repeatedly rejected the nap for 10–15 calm minutes | Stop turning it into a battle; reset and consider earlier bedtime | | A late nap reliably creates a very long bedtime struggle | Prefer the earlier-night route and review the pattern | | Baby is ill, in pain or unusually unsettled | Comfort and health needs outrank schedule optimisation | | The nap entry is missing or wrong | Correct the log before acting on the deficit |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Situation</th><th scope="col">More plausible option</th></tr></thead>
+<tbody>
+<tr><td>Bedtime is still several hours away and baby is clearly tired</td><td>Offer a brief bridge opportunity</td></tr>
+<tr><td>Bedtime is close enough to reach with calm, low stimulation</td><td>Use a modestly earlier bedtime</td></tr>
+<tr><td>Baby has repeatedly rejected the nap for 10–15 calm minutes</td><td>Stop turning it into a battle; reset and consider earlier bedtime</td></tr>
+<tr><td>A late nap reliably creates a very long bedtime struggle</td><td>Prefer the earlier-night route and review the pattern</td></tr>
+<tr><td>Baby is ill, in pain or unusually unsettled</td><td>Comfort and health needs outrank schedule optimisation</td></tr>
+<tr><td>The nap entry is missing or wrong</td><td>Correct the log before acting on the deficit</td></tr>
+</tbody>
+</table></div>
 <p>Do not move bedtime dramatically early after one messy day without considering feeds, family rhythm and the baby’s actual cues. “Earlier” usually means a modest protective adjustment, not declaring 4:30pm to be night.</p>
 <h2>A bridge nap is deliberately small</h2>
 <p>The purpose is to take the sharpest edge off tiredness while preserving enough sleep pressure for bedtime.</p>
@@ -914,7 +945,17 @@
 <ol><li>It is before 2:00pm or after 5:30pm.</li><li>No completed nap is logged today.</li><li>A nap timer is still open.</li><li>Completed day sleep is less than 45 minutes below the age-profile floor.</li><li>The minimum wake window since the latest completed nap has not passed.</li><li>A nap has a missing or invalid end time, so it cannot anchor the calculation.</li><li>Higher-priority curation keeps a more important safety or health message above it.</li></ol>
 <p>The card does not require several historical days and therefore carries no <strong>“from N nights”</strong> evidence caption. It is a live same-day calculation based on age context and today’s log.</p>
 <h2>What to log so the suggestion is useful</h2>
-<p>| Log detail | Why it matters | |---|---| | Actual nap start and end | Creates the completed day-sleep total | | Mid-nap awake pause | Prevents awake time being counted as sleep | | Corrected forgotten nursery nap | Prevents a false deficit | | Morning wake | Gives the wider day plan a reliable anchor | | Real bedtime start | Helps future bedtime prediction | | Illness, teething or off-day context | Stops an unusual day being treated like an ordinary template |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Log detail</th><th scope="col">Why it matters</th></tr></thead>
+<tbody>
+<tr><td>Actual nap start and end</td><td>Creates the completed day-sleep total</td></tr>
+<tr><td>Mid-nap awake pause</td><td>Prevents awake time being counted as sleep</td></tr>
+<tr><td>Corrected forgotten nursery nap</td><td>Prevents a false deficit</td></tr>
+<tr><td>Morning wake</td><td>Gives the wider day plan a reliable anchor</td></tr>
+<tr><td>Real bedtime start</td><td>Helps future bedtime prediction</td></tr>
+<tr><td>Illness, teething or off-day context</td><td>Stops an unusual day being treated like an ordinary template</td></tr>
+</tbody>
+</table></div>
 <p>You do not need to record every sleepy blink. Accurate anchors are more valuable than a perfect-looking timeline.</p>
 <p><strong><a href="/baby-sleep-tracker.html">Explore OBubba’s baby sleep tracker →</a></strong> — connect live nap timers, corrected-age context, today’s day-sleep total and a bedtime plan that updates rather than demanding a fixed schedule.</p>
 <h2>Frequently asked questions</h2>
@@ -935,6 +976,7 @@
 <h2>Reliable UK sources</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/your-babys-sleep-patterns/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Your baby’s sleep patterns</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/bonding-with-your-baby/understanding-your-baby/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Understanding your baby’s cues</a></li><li><a href="https://www.lullabytrust.org.uk/safer-sleep-advice/safer-sleep-basics/safer-sleep-for-babies/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Safer sleep for babies</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/keeping-a-clear-cot/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Keeping a clear cot</a></li></ul>
 <p><em>This article gives general information for UK families. It is not a sleep prescription or medical advice, and OBubba is not a medical device. Follow safer-sleep guidance, your baby’s cues and any individual advice from your health visitor or clinical team.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-suggests-short-bridge-nap"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -966,6 +1008,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

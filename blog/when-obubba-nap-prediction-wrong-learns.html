@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,17 @@
 <p>When the prediction and baby disagree:</p>
 <ol><li><strong>Follow clear sleepy behaviour.</strong> Do not keep an exhausted baby awake to satisfy the clock.</li><li><strong>Do not force a bright-eyed baby to sleep.</strong> Keep things calm and try again after a short pause.</li><li><strong>Check the awake anchor.</strong> A wrong or missing morning wake can move the whole forecast.</li><li><strong>Record the actual nap start and end.</strong> The miss becomes useful only when the real outcome is preserved.</li><li><strong>Look for direction, not perfection.</strong> Three minutes early one day and seven minutes late the next is ordinary variation. Repeated 20-minute lateness is a learnable pattern.</li></ol>
 <p>The NHS emphasises that babies differ and that their sleep patterns change as they grow. A prediction should therefore support observation, not replace it.</p>
-<p>| What happened | Best response now | What the history may teach | |---|---|---| | Baby sleeps 8 minutes before the midpoint | Start the nap and log reality | Probably within normal forecast spread | | Baby is content 25 minutes after the window | Pause the attempt; check anchor and cues | Repeated lateness may justify a later correction | | Baby crashes well before the window after a broken night | Offer sleep; protect recovery | This may be disruption, not a new baseline | | Prediction is suddenly an hour out | Check forgotten timers, car dozes and morning wake | Bad input can create a bad comparison | | Several ordinary first naps start about 20 minutes late | Keep logging comparable days | The calibrator can shift the base window later | | Baby is unusually sleepy, difficult to wake or unwell | Assess the baby, not the schedule | Seek medical advice rather than training the model |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What happened</th><th scope="col">Best response now</th><th scope="col">What the history may teach</th></tr></thead>
+<tbody>
+<tr><td>Baby sleeps 8 minutes before the midpoint</td><td>Start the nap and log reality</td><td>Probably within normal forecast spread</td></tr>
+<tr><td>Baby is content 25 minutes after the window</td><td>Pause the attempt; check anchor and cues</td><td>Repeated lateness may justify a later correction</td></tr>
+<tr><td>Baby crashes well before the window after a broken night</td><td>Offer sleep; protect recovery</td><td>This may be disruption, not a new baseline</td></tr>
+<tr><td>Prediction is suddenly an hour out</td><td>Check forgotten timers, car dozes and morning wake</td><td>Bad input can create a bad comparison</td></tr>
+<tr><td>Several ordinary first naps start about 20 minutes late</td><td>Keep logging comparable days</td><td>The calibrator can shift the base window later</td></tr>
+<tr><td>Baby is unusually sleepy, difficult to wake or unwell</td><td>Assess the baby, not the schedule</td><td>Seek medical advice rather than training the model</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-nap-prediction-calibration-flow.svg" alt="How OBubba turns repeated first-nap misses into a bounded timing correction." loading="lazy"/><figcaption>The current calibrator compares a reconstructed base prediction with the first nap&#39;s actual start, weights recent misses more, trims one extreme miss from the offset and caps the correction at 40 minutes.</figcaption></figure>
 <h2>What “accurate” means inside the app</h2>
 <p>OBubba does not require a nap to begin at one exact minute.</p>
@@ -869,7 +884,17 @@
 <p>The percentage is therefore <strong>not the probability that the next nap will happen</strong>. It is the share of recent reconstructed first-nap comparisons that landed within the code’s ±15-minute tolerance after calibration.</p>
 <h2>A worked example</h2>
 <p>Suppose the base engine would have placed the first-nap midpoint at 9:00 on six recent days.</p>
-<p>| Day | Reconstructed midpoint | Actual first nap | Error | |---|---:|---:|---:| | 1 | 9:00 | 9:18 | +18 min | | 2 | 9:00 | 9:22 | +22 min | | 3 | 9:00 | 9:15 | +15 min | | 4 | 9:00 | 9:20 | +20 min | | 5 | 9:00 | 11:10 | +130 min | | 6 | 9:00 | 9:17 | +17 min |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Day</th><th scope="col">Reconstructed midpoint</th><th scope="col">Actual first nap</th><th scope="col">Error</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>9:00</td><td>9:18</td><td>+18 min</td></tr>
+<tr><td>2</td><td>9:00</td><td>9:22</td><td>+22 min</td></tr>
+<tr><td>3</td><td>9:00</td><td>9:15</td><td>+15 min</td></tr>
+<tr><td>4</td><td>9:00</td><td>9:20</td><td>+20 min</td></tr>
+<tr><td>5</td><td>9:00</td><td>11:10</td><td>+130 min</td></tr>
+<tr><td>6</td><td>9:00</td><td>9:17</td><td>+17 min</td></tr>
+</tbody>
+</table></div>
 <p>Five days tell a coherent story: this baby’s first nap tends to start about 15–22 minutes later than the uncorrected midpoint. Day 5 looks unlike the rest—perhaps there was an unlogged car doze, an unusual outing or a data error.</p>
 <p>With five or more valid records, the calibrator removes the single largest absolute miss <strong>from the offset calculation</strong>. It keeps the remaining days in time order, gives newer observations more weight and learns an adjustment of about <strong>+18 minutes</strong>.</p>
 <p>A fresh raw midpoint of 9:00 can therefore move to about 9:18.</p>
@@ -965,6 +990,7 @@
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/your-babys-sleep-patterns/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Your baby’s sleep patterns</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/sudden-infant-death-syndrome-sids/" target="_blank" rel="noopener noreferrer">NHS: Sudden infant death syndrome (SIDS)</a></li><li>OBubba source reviewed: `prediction_learning.dart`, `prediction_learning_test.dart`, `predict_nap.dart`, `track_home.dart`, `reminder_schedule.dart`, `brain.dart`, `brain_insight.dart` and `optimal_ww.dart`</li></ul>
 <p><em>OBubba is a tracking, planning and education tool, not a medical device. Nap predictions are estimates, not instructions. The app cannot observe sleepiness, diagnose illness, assess breathing or guarantee when a baby will sleep. Follow safer-sleep guidance, your baby’s cues and any individual clinical plan.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_when-obubba-nap-prediction-wrong-learns"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -996,6 +1022,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

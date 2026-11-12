@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -864,14 +869,42 @@
 <p>That summary is broader than the literal matcher. <strong>A note that only says “fussy”, “crying” or “unsettled” does not match the current code.</strong> The recognised words are the narrower list above.</p>
 <h2>A worked example: why three notes can trigger it</h2>
 <p>Imagine this saved week:</p>
-<p>| Entry | Time | Result | |---|---:|---| | Bottle feed | Monday 08:00 | feed 1 | | “Posset again” | Monday 08:18 | <strong>match</strong>: 18 minutes after | | Breastfeed | Tuesday 11:10 | feed 2 | | “Arching back” | Tuesday 11:42 | no match: 32 minutes after | | Bottle feed | Wednesday 14:00 | feed 3 | | “Spit-up” | Wednesday 14:00 | <strong>match</strong>: zero minutes is allowed | | Dream feed | Thursday 22:30 | feed 4 | | “Refused feed then posset” | Thursday 22:55 | <strong>match</strong>: 25 minutes after | | Milk feed | Friday 07:00 | feed 5 | | Milk feed | Saturday 09:00 | feed 6 |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Entry</th><th scope="col">Time</th><th scope="col">Result</th></tr></thead>
+<tbody>
+<tr><td>Bottle feed</td><td>Monday 08:00</td><td>feed 1</td></tr>
+<tr><td>“Posset again”</td><td>Monday 08:18</td><td><strong>match</strong>: 18 minutes after</td></tr>
+<tr><td>Breastfeed</td><td>Tuesday 11:10</td><td>feed 2</td></tr>
+<tr><td>“Arching back”</td><td>Tuesday 11:42</td><td>no match: 32 minutes after</td></tr>
+<tr><td>Bottle feed</td><td>Wednesday 14:00</td><td>feed 3</td></tr>
+<tr><td>“Spit-up”</td><td>Wednesday 14:00</td><td><strong>match</strong>: zero minutes is allowed</td></tr>
+<tr><td>Dream feed</td><td>Thursday 22:30</td><td>feed 4</td></tr>
+<tr><td>“Refused feed then posset”</td><td>Thursday 22:55</td><td><strong>match</strong>: 25 minutes after</td></tr>
+<tr><td>Milk feed</td><td>Friday 07:00</td><td>feed 5</td></tr>
+<tr><td>Milk feed</td><td>Saturday 09:00</td><td>feed 6</td></tr>
+</tbody>
+</table></div>
 <p>There are six feeds and three usable feed-to-note links, so the card can appear. The 32-minute note does not count.</p>
 <p>Now change one detail:</p>
 <ul><li>only five feeds in the seven-day collection: no card, even with three matching notes;</li><li>only two matching notes: no card, even with many feeds;</li><li>the note says only “very fussy”: no match;</li><li>the note is 10 minutes before the feed: no match;</li><li>the note follows a solids meal with no milk feed nearby: the solids meal does not count;</li><li>the feed is just before midnight and the note just after midnight: the current per-day comparison cannot pair them.</li></ul>
 <p>This is why a card can disappear after an edit. The engine is describing the saved timeline, not making a permanent medical judgment.</p>
 <h2>Which words actually count?</h2>
 <p>The matching is case-insensitive and accepts these patterns:</p>
-<p>| A note like… | Recognised? | Why | |---|---:|---| | “Spit up after feed” | Yes | `spit up` matches with a space | | “Spit-up after feed” | Yes | a hyphen is also accepted | | “Posset twice” | Yes | `posset` is recognised | | “Back arch after bottle” | Yes | `back arch` is recognised | | “Back-arch after bottle” | Yes | a hyphen is accepted | | “Arching back and crying” | Yes | `arching back` is recognised | | “Refuses feed” | Yes | refuses/refused/refusing feed are recognised | | “Fussy after feeding” | <strong>No</strong> | generic fussiness is not in the expression | | “Cried for ten minutes” | <strong>No</strong> | crying alone is not in the expression | | “Gagged on puree” | <strong>No</strong> | gagging is not a recognised reflux phrase |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">A note like…</th><th scope="col">Recognised?</th><th scope="col">Why</th></tr></thead>
+<tbody>
+<tr><td>“Spit up after feed”</td><td>Yes</td><td>`spit up` matches with a space</td></tr>
+<tr><td>“Spit-up after feed”</td><td>Yes</td><td>a hyphen is also accepted</td></tr>
+<tr><td>“Posset twice”</td><td>Yes</td><td>`posset` is recognised</td></tr>
+<tr><td>“Back arch after bottle”</td><td>Yes</td><td>`back arch` is recognised</td></tr>
+<tr><td>“Back-arch after bottle”</td><td>Yes</td><td>a hyphen is accepted</td></tr>
+<tr><td>“Arching back and crying”</td><td>Yes</td><td>`arching back` is recognised</td></tr>
+<tr><td>“Refuses feed”</td><td>Yes</td><td>refuses/refused/refusing feed are recognised</td></tr>
+<tr><td>“Fussy after feeding”</td><td><strong>No</strong></td><td>generic fussiness is not in the expression</td></tr>
+<tr><td>“Cried for ten minutes”</td><td><strong>No</strong></td><td>crying alone is not in the expression</td></tr>
+<tr><td>“Gagged on puree”</td><td><strong>No</strong></td><td>gagging is not a recognised reflux phrase</td></tr>
+</tbody>
+</table></div>
 <p>Spelling matters. “Possetting” contains `posset`, so it matches; an unrelated euphemism may not. Use ordinary, specific words rather than trying to write for the algorithm.</p>
 <p>The detector reads the note attached to <strong>any timestamped entry</strong>, not only a Quick Note. That makes it flexible, but also means a recognised phrase in an unrelated note can be linked if its time falls in the window.</p>
 <h2>The 30-minute window is directional</h2>
@@ -916,7 +949,16 @@
 <p>The useful idea is not “an app can diagnose reflux.” It cannot. The useful idea is that exhausted parents often remember the worst moment but struggle to reconstruct whether it followed one feed or several, by five minutes or by an hour.</p>
 <p>OBubba joins event timing across one practical timeline. It requires repetition before speaking, excludes solids from the feed denominator, prevents one note from multiplying into several matches, uses low urgency and says <strong>possible</strong>.</p>
 <p>But the boundaries are just as important:</p>
-<p>| OBubba can describe | OBubba cannot conclude | |---|---| | three recognised notes followed feeds within 30 minutes | baby has reflux or GORD | | how many milk feeds were in the seven-day sample | how much milk baby transferred at the breast | | exact phrases and saved timestamps | severity, pain, colour or force unless you record them | | a repeated timeline association | cause, treatment or safety | | feeds, sleep, nappies and notes together | whether baby is clinically well |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">OBubba can describe</th><th scope="col">OBubba cannot conclude</th></tr></thead>
+<tbody>
+<tr><td>three recognised notes followed feeds within 30 minutes</td><td>baby has reflux or GORD</td></tr>
+<tr><td>how many milk feeds were in the seven-day sample</td><td>how much milk baby transferred at the breast</td></tr>
+<tr><td>exact phrases and saved timestamps</td><td>severity, pain, colour or force unless you record them</td></tr>
+<tr><td>a repeated timeline association</td><td>cause, treatment or safety</td></tr>
+<tr><td>feeds, sleep, nappies and notes together</td><td>whether baby is clinically well</td></tr>
+</tbody>
+</table></div>
 <p>That honest boundary makes the record more valuable, not less. A clinician can ask better questions when the history is specific and the software has not pretended to answer them.</p>
 <h2>Frequently asked questions</h2>
 <h3>Does three spit-ups mean my baby has reflux disease?</h3>
@@ -942,6 +984,7 @@
 <p><a href="https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/" target="_blank" rel="noopener noreferrer">NHS: Is your baby or toddler seriously ill?</a> — poor feeding, drier nappies, breathing, responsiveness, colour and urgent-help signs.</p>
 <p><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS: Safer sleep advice for babies</a> — a clear, flat sleep space and returning baby to their cot before the adult sleeps.</p>
 <p>OBubba source reviewed for this article: `lib/core/engine/feed_insights.dart`, `lib/core/engine/brain.dart`, `lib/core/models/baby_entry.dart`, `test/reflux_test.dart` and related feed-entry tests.</p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -973,6 +1016,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

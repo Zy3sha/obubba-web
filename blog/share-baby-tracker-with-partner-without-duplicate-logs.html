@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -864,7 +869,13 @@
 <p>Then agree one household rule: <strong>the adult who feeds, changes, settles or gives medicine records the event</strong>. If the other adult is catching up later, they check the shared timeline first.</p>
 <h2>Live sync or a separate copy?</h2>
 <p>OBubba&#39;s connection screen offers two different outcomes. Choose deliberately.</p>
-<p>| Option | What happens | Use it for | |---|---|---| | <strong>Connect — live sync</strong> | Both phones read and write the same baby&#39;s changing timeline | Partners, co-parents and regular shared care | | <strong>Import a separate copy instead</strong> | A new independent baby record is created on this phone | Private analysis, an offline snapshot or a deliberate fork |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Option</th><th scope="col">What happens</th><th scope="col">Use it for</th></tr></thead>
+<tbody>
+<tr><td><strong>Connect — live sync</strong></td><td>Both phones read and write the same baby&#39;s changing timeline</td><td>Partners, co-parents and regular shared care</td></tr>
+<tr><td><strong>Import a separate copy instead</strong></td><td>A new independent baby record is created on this phone</td><td>Private analysis, an offline snapshot or a deliberate fork</td></tr>
+</tbody>
+</table></div>
 <p>A separate copy is not family sharing. A feed logged into that copy will not appear on the original phone, and later changes on the original will not flow into the copy.</p>
 <p>If the goal is “we both need to know what happened today”, choose live sync.</p>
 <figure><img src="/obubba-connect-live-family-sync.jpg" alt="The real OBubba connection screen where a family member enters a sync code and chooses Connect — live sync or a separate one-time copy." loading="lazy"/><figcaption>Current OBubba Connect your account screen using an empty fictional code field.</figcaption></figure>
@@ -909,7 +920,13 @@
 <p>Do not repeatedly tap <strong>Save</strong> because the other phone has not updated in one second. A delayed write and a second manual entry can become two real records.</p>
 <h2>Sync code versus recovery code</h2>
 <p>OBubba uses two code types for different jobs.</p>
-<p>| Code | Typical shape | Purpose | |---|---|---| | Baby sync code | 6–8 letters or numbers | Let another carer join this baby&#39;s live record | | Family recovery code | Begins <strong>BK</strong> and is 12 characters | Restore the account owner&#39;s family data on a new or recovered device |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Code</th><th scope="col">Typical shape</th><th scope="col">Purpose</th></tr></thead>
+<tbody>
+<tr><td>Baby sync code</td><td>6–8 letters or numbers</td><td>Let another carer join this baby&#39;s live record</td></tr>
+<tr><td>Family recovery code</td><td>Begins <strong>BK</strong> and is 12 characters</td><td>Restore the account owner&#39;s family data on a new or recovered device</td></tr>
+</tbody>
+</table></div>
 <p>Send a partner the baby&#39;s <strong>sync code</strong> from Family sharing. Do not send your family recovery code as a casual invitation. Recovery credentials deserve the same care as an account password because they are designed to restore a broader family record.</p>
 <p>OBubba&#39;s connection screen recognises the format and routes the codes differently, but the safest habit is to copy the code from the correct Family sharing panel rather than from an old screenshot or support message.</p>
 <h2>Share the invitation privately</h2>
@@ -957,6 +974,7 @@
 <h2>Related guides</h2>
 <ul><li><a href="/blog/baby-medicine-log-prevent-double-dosing.html">Baby medicine log: prevent double-dosing between carers</a></li><li><a href="/blog/baby-care-handover-template-grandparents-nursery.html">Baby care handover template for grandparents and nursery</a></li><li><a href="/blog/hands-free-baby-tracking-voice-log.html">Track feeds and nappies hands-free at 3am</a></li><li><a href="/blog/baby-tracker-widgets-lock-screen-siri.html">Baby tracker widgets: log without opening the app</a></li><li><a href="/blog/what-to-track-when-baby-wakes-at-night.html">What to track when your baby wakes at night</a></li><li><a href="/blog/switch-baby-tracker-apps-without-losing-history.html">How to switch baby tracker apps without losing your history</a></li></ul>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -987,6 +1005,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

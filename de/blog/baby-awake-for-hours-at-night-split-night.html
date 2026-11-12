@@ -630,6 +630,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -865,7 +870,16 @@
 <p>Es gibt keine allgemein anerkannte klinische Schwelle für den Elternbegriff „geteilte Nacht“. In diesem Leitfaden bedeutet er:</p>
 <ul><li>das Baby hat einen nennenswerten ersten Block des Nachtschlafs abgeschlossen</li><li>es war wirklich etwa eine Stunde oder länger wach</li><li>das Aufwachen geschah mitten in der Nacht, nicht kurz nach dem Zubettgehen</li><li>es kehrte dann für einen weiteren Block in den Schlaf zurück</li></ul>
 <p>Die aktuelle Logik von OBubba verwendet <strong>60 Minuten</strong> als praktische Erkennungsschwelle und verlangt, dass das lange Aufwachen mehr als <strong>45 Minuten nach dem Zubettgehen</strong> beginnt, wenn das Timing bekannt ist. Das sind Produktregeln, die falsche Kennzeichnungen verhindern sollen; sie sind keine medizinischen Grenzwerte.</p>
-<p>| Was passiert ist | Bessere Beschreibung | Warum die Unterscheidung wichtig ist | |---|---|---| | Baby wachte 20–45 Minuten nach dem Zubettgehen auf | <strong>Fehlstart</strong> | Das Timing der Zubettgehzeit, das Umbetten, Hunger oder Unwohlsein sind vielleicht relevanter als eine Änderung des Zeitplans wegen einer geteilten Nacht | | Baby wachte mehrmals kurz auf und beruhigte sich binnen Minuten | <strong>Nächtliches Aufwachen oder zyklusbedingtes Regen</strong> | Kurze Wachphasen sind nicht dasselbe Muster wie ein anhaltendes Wachintervall | | Baby schlief stundenlang, blieb 60–120 Minuten wach und schlief dann wieder | <strong>Muster der geteilten Nacht</strong> | Der ganze 24-Stunden-Rhythmus und der Tag vor dem Zubettgehen sind einen Vergleich wert | | Baby wachte um 4:30 Uhr auf und schlief nicht wieder ein | <strong>Frühes morgendliches Aufwachen</strong> | Licht, Zubettgehzeit und das Timing der inneren Uhr brauchen vielleicht einen anderen Plan | | Ein Neugeborenes trank, wurde gewickelt und blieb nachts wach | <strong>Nächtliches Aufwachen beim Neugeborenen</strong> | Der unreife Tag-Nacht-Rhythmus und die Ernährung kommen vor einer Korrektur des Zeitplans |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Was passiert ist</th><th scope="col">Bessere Beschreibung</th><th scope="col">Warum die Unterscheidung wichtig ist</th></tr></thead>
+<tbody>
+<tr><td>Baby wachte 20–45 Minuten nach dem Zubettgehen auf</td><td><strong>Fehlstart</strong></td><td>Das Timing der Zubettgehzeit, das Umbetten, Hunger oder Unwohlsein sind vielleicht relevanter als eine Änderung des Zeitplans wegen einer geteilten Nacht</td></tr>
+<tr><td>Baby wachte mehrmals kurz auf und beruhigte sich binnen Minuten</td><td><strong>Nächtliches Aufwachen oder zyklusbedingtes Regen</strong></td><td>Kurze Wachphasen sind nicht dasselbe Muster wie ein anhaltendes Wachintervall</td></tr>
+<tr><td>Baby schlief stundenlang, blieb 60–120 Minuten wach und schlief dann wieder</td><td><strong>Muster der geteilten Nacht</strong></td><td>Der ganze 24-Stunden-Rhythmus und der Tag vor dem Zubettgehen sind einen Vergleich wert</td></tr>
+<tr><td>Baby wachte um 4:30 Uhr auf und schlief nicht wieder ein</td><td><strong>Frühes morgendliches Aufwachen</strong></td><td>Licht, Zubettgehzeit und das Timing der inneren Uhr brauchen vielleicht einen anderen Plan</td></tr>
+<tr><td>Ein Neugeborenes trank, wurde gewickelt und blieb nachts wach</td><td><strong>Nächtliches Aufwachen beim Neugeborenen</strong></td><td>Der unreife Tag-Nacht-Rhythmus und die Ernährung kommen vor einer Korrektur des Zeitplans</td></tr>
+</tbody>
+</table></div>
 <p>Die Bezeichnung soll die Nacht verständlicher machen und nicht ein einzelnes schwieriges Aufwachen zu einer Störung erklären.</p>
 <h2>Sind geteilte Nächte bei Babys normal?</h2>
 <p>Gelegentliche lange Wachphasen können vorkommen. Der Säuglingsschlaf verändert sich schnell, und Aufwachen an sich ist normal.</p>
@@ -916,7 +930,17 @@
 <ul><li>War der Tagschlaf wirklich anders?</li><li>War die letzte Wachperiode kürzer oder länger?</li><li>Hat sich die Zubettgehzeit oder der Morgen verschoben?</li><li>War das Baby während des Aufwachens ruhig oder gequält?</li><li>Hat es eine volle Mahlzeit getrunken?</li><li>Gibt es eine wiederholbare Verbindung, oder nur eine Geschichte, die zu einer Nacht passt?</li></ul>
 <p>Der Vergleich schützt Sie vor dem häufigsten Fehler: ein langes Aufwachen nach einem langen Nickerchen zu sehen und anzunehmen, das Nickerchen habe es verursacht, ohne zu prüfen, ob lange Nickerchen auch vor guten Nächten vorkamen.</p>
 <h2>Wählen Sie die richtige Richtung, keinen dramatischen Neustart</h2>
-<p>| Wiederholte Belege | Erstes Experiment | Vermeiden | |---|---|---| | Tagschlaf klar über der jüngsten Norm dieses Babys; ruhiges langes Aufwachen | Das letzte Nickerchen um 10–15 Minuten kürzen <strong>oder</strong> die Zubettgehzeit 10–15 Minuten später legen | Alle Nickerchen auf einmal streichen | | Letztes Wachfenster wiederholt zu kurz; Tagschlaf ansonsten passend | Nur das letzte Wachfenster um 10–15 Minuten verlängern | Ein erschöpftes Baby wachhalten, um eine Tabelle zu treffen | | Tagschlaf gering; Zubettgehen hektisch; langes Aufwachen in den frühen Stunden | Nickerchen schützen oder die Zubettgehzeit 10–15 Minuten früher legen | Den Tagschlaf kürzen | | Eine volle aktive Mahlzeit beendet das Aufwachen | Ruhige Milchgelegenheiten am Tag verbessern und feinfühlige Nachtmahlzeiten beibehalten | Milch allein aufgrund des Alters streichen | | Anzeichen von Schmerz, Krankheit oder Atemproblemen | Arbeit am Zeitplan pausieren und passenden Rat suchen | Es als Regression oder Angewohnheit abtun | | Keine wiederholbaren Belege | Die Routine stabil halten und mehr Nächte sammeln | Selbstsicher aus einem Aufwachen raten |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Wiederholte Belege</th><th scope="col">Erstes Experiment</th><th scope="col">Vermeiden</th></tr></thead>
+<tbody>
+<tr><td>Tagschlaf klar über der jüngsten Norm dieses Babys; ruhiges langes Aufwachen</td><td>Das letzte Nickerchen um 10–15 Minuten kürzen <strong>oder</strong> die Zubettgehzeit 10–15 Minuten später legen</td><td>Alle Nickerchen auf einmal streichen</td></tr>
+<tr><td>Letztes Wachfenster wiederholt zu kurz; Tagschlaf ansonsten passend</td><td>Nur das letzte Wachfenster um 10–15 Minuten verlängern</td><td>Ein erschöpftes Baby wachhalten, um eine Tabelle zu treffen</td></tr>
+<tr><td>Tagschlaf gering; Zubettgehen hektisch; langes Aufwachen in den frühen Stunden</td><td>Nickerchen schützen oder die Zubettgehzeit 10–15 Minuten früher legen</td><td>Den Tagschlaf kürzen</td></tr>
+<tr><td>Eine volle aktive Mahlzeit beendet das Aufwachen</td><td>Ruhige Milchgelegenheiten am Tag verbessern und feinfühlige Nachtmahlzeiten beibehalten</td><td>Milch allein aufgrund des Alters streichen</td></tr>
+<tr><td>Anzeichen von Schmerz, Krankheit oder Atemproblemen</td><td>Arbeit am Zeitplan pausieren und passenden Rat suchen</td><td>Es als Regression oder Angewohnheit abtun</td></tr>
+<tr><td>Keine wiederholbaren Belege</td><td>Die Routine stabil halten und mehr Nächte sammeln</td><td>Selbstsicher aus einem Aufwachen raten</td></tr>
+</tbody>
+</table></div>
 <p>Testen Sie eine Änderung über drei bis fünf vergleichbare Nächte. Halten Sie die Zubettgeh-Signale, die Reaktion auf die Ernährung und den morgendlichen Anker weitgehend stabil, damit Sie das Ergebnis deuten können.</p>
 <p>Wenn das Aufwachen kürzer wird und das Baby weiterhin gut erholt ist, machen Sie sanft weiter. Wenn das Zubettgehen schwieriger wird, sich die Tagesstimmung verschlechtert oder das Aufwachen nach vorn wandert, machen Sie die Änderung rückgängig. Ein gutes Experiment ist umkehrbar.</p>
 <h2>Was Sie heute Nacht während einer geteilten Nacht tun sollten</h2>
@@ -957,6 +981,7 @@
 <p>Sie müssen die ganze Nacht nicht um 2 Uhr lösen. Halten Sie sie sicher und feinfühlig, und lassen Sie dann das Tageslicht und mehrere ehrliche Tage mit Belegen den nächsten Schritt wählen.</p>
 <p><em>Dieser Artikel bietet allgemeine Informationen, keinen medizinischen Rat. Folgen Sie dem individuellen Ernährungs- und Betreuungsplan Ihres Babys und sprechen Sie mit einer qualifizierten medizinischen Fachperson, wann immer Schlafveränderungen mit Bedenken zu Ernährung, Wachstum, Atmung, Schmerz, Fieber oder Krankheit einhergehen.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -987,6 +1012,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

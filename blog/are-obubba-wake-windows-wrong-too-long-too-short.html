@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -864,7 +869,14 @@
 <p>The aim is not to replace observation with an algorithm. It is to stop parents doing the same mental recalculation after every wake.</p>
 <h2>What each choice actually changes</h2>
 <p>The implementation maps the three labels to a signed timing bias:</p>
-<p>| What you choose | What OBubba does to the starting range | A reasonable reason to try it | |---|---:|---| | <strong>Too long</strong> | shifts both ends <strong>25 minutes earlier</strong> | baby is repeatedly struggling before the displayed window | | <strong>About right</strong> | applies <strong>no parent-set shift</strong> | timing is broadly useful, the pattern is mixed or you are unsure | | <strong>Too short</strong> | shifts both ends <strong>25 minutes later</strong> | baby is repeatedly content at the window and settles better later |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What you choose</th><th scope="col">What OBubba does to the starting range</th><th scope="col">A reasonable reason to try it</th></tr></thead>
+<tbody>
+<tr><td><strong>Too long</strong></td><td>shifts both ends <strong>25 minutes earlier</strong></td><td>baby is repeatedly struggling before the displayed window</td></tr>
+<tr><td><strong>About right</strong></td><td>applies <strong>no parent-set shift</strong></td><td>timing is broadly useful, the pattern is mixed or you are unsure</td></tr>
+<tr><td><strong>Too short</strong></td><td>shifts both ends <strong>25 minutes later</strong></td><td>baby is repeatedly content at the window and settles better later</td></tr>
+</tbody>
+</table></div>
 <p>The wording describes the <strong>window</strong>, not the baby. “Too short” means “the suggested awake stretch seems too short”; it does not mean the nap was too short.</p>
 <p>That distinction matters. A parent whose baby takes 30-minute naps might instinctively tap <strong>Too short</strong>, but the cause may be an awake stretch that was already too long. Use the control only when the <em>timing before sleep</em> looks consistently early or late, not as a verdict on nap duration alone.</p>
 <h2>A worked example: when the app seems early</h2>
@@ -934,6 +946,7 @@
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Safer sleep advice for babies</a></li></ul>
 <p><em>OBubba is a tracking and education tool, not medical advice. Seek qualified help for concerns about unusual sleepiness, breathing, illness, feeding, growth, hydration or development, and follow your baby&#39;s individual clinical plan.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_are-obubba-wake-windows-wrong-too-long-too-short"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -965,6 +978,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

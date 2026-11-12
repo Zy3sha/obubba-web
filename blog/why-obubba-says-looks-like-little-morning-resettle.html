@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,18 @@
 <p>Here is the exact route, what the button changes and how to decide without letting the app rewrite a correct nap.</p>
 <h2>The short answer</h2>
 <p>The actionable card needs every gate below:</p>
-<p>| Gate | Current rule | |---|---| | Data window | <strong>Today’s calendar-day entries only</strong> | | Wake anchor | Earliest timed `wake` not marked night | | Sleep candidate | Earliest completed daytime `nap` or `sleep` after that wake | | Awake gap | <strong>10–60 minutes inclusive</strong> | | Candidate duration | At least <strong>10 minutes</strong> | | Earlier completed nap | None before the candidate | | Care between wake and sleep | None from the detector’s supported list |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">Current rule</th></tr></thead>
+<tbody>
+<tr><td>Data window</td><td><strong>Today’s calendar-day entries only</strong></td></tr>
+<tr><td>Wake anchor</td><td>Earliest timed `wake` not marked night</td></tr>
+<tr><td>Sleep candidate</td><td>Earliest completed daytime `nap` or `sleep` after that wake</td></tr>
+<tr><td>Awake gap</td><td><strong>10–60 minutes inclusive</strong></td></tr>
+<tr><td>Candidate duration</td><td>At least <strong>10 minutes</strong></td></tr>
+<tr><td>Earlier completed nap</td><td>None before the candidate</td></tr>
+<tr><td>Care between wake and sleep</td><td>None from the detector’s supported list</td></tr>
+</tbody>
+</table></div>
 <p>If a supported care event exists strictly between the wake and sleep start, OBubba takes the cautious branch instead:</p>
 <p>&gt; <strong>That first wake window was tiny</strong></p>
 <p>It keeps the sleep as Nap 1 and watches. With no supported care entry, it offers the data-changing morning-resettle action.</p>
@@ -890,7 +906,14 @@
 <p>Other record types are ignored. A second wake, a mid-nap stir or an unsupported imported event does not count as care. And an unlogged feed is invisible.</p>
 <h2>Two records can produce two very different cards</h2>
 <p>Take the app’s tested example:</p>
-<p>| Log | Time | |---|---:| | Morning wake | 7:00am | | Nap starts | 7:25am | | Nap ends | 8:40am |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Log</th><th scope="col">Time</th></tr></thead>
+<tbody>
+<tr><td>Morning wake</td><td>7:00am</td></tr>
+<tr><td>Nap starts</td><td>7:25am</td></tr>
+<tr><td>Nap ends</td><td>8:40am</td></tr>
+</tbody>
+</table></div>
 <p>The gap is 25 minutes, the sleep lasts 75 minutes and there is no earlier completed nap.</p>
 <h3>No care entry in the gap</h3>
 <p>The result is <strong>Looks like a little morning resettle</strong>. The card offers the active repair and targets:</p>
@@ -967,6 +990,7 @@
 <p>The active button deletes that first sleep, moves the original morning wake to its end and adds a note. That can immediately improve the awake clock, day-sleep total, nap count, night span and next prediction.</p>
 <p>But the detector has meaningful limits: age and the bedtime-anchor flag do not currently affect the result; there is no morning clock boundary; it does not observe mood, crying or independent settling; and the three-part edit has no dedicated undo.</p>
 <p>Use it as a smart correction offer, not an automatic verdict. The best baby tracker is not the one that insists its label is right. It is the one that catches a plausible logging mismatch, explains the consequences and gives the parent the final say.</p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-says-looks-like-little-morning-resettle"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -998,6 +1022,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

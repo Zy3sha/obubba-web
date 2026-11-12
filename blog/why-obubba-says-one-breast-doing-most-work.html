@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,11 +863,30 @@
 <figure><img src="/obubba-two-breast-side-signals.svg" alt="The two separate thresholds behind OBubba’s breastfeeding-side guidance." loading="lazy"/><figcaption>The gentle seven-day balance card starts at a 60% share; the stricter five-day alert requires at least six qualifying feeds and a lesser-recorded side at 20% or below.</figcaption></figure>
 <h2>The short answer</h2>
 <p>OBubba’s stricter side alert appears when all these conditions are true:</p>
-<p>| Check | Current rule | What it actually establishes | |---|---|---| | Entry type | Breastfeed, or a combination entry carrying breast-side data | The record contains a breast component | | Time window | Today plus the previous 4 calendar days | The imbalance is recent | | Minimum sample | At least <strong>6 qualifying feeds</strong> | There is more than a one-feed anecdote | | Side evidence | Left/right minutes, or a single-side label when no minutes exist | A side can be assigned in the record | | Strong-skew gate | Lesser-recorded side is <strong>20% or less</strong> of total side time | The log is extremely one-sided |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Check</th><th scope="col">Current rule</th><th scope="col">What it actually establishes</th></tr></thead>
+<tbody>
+<tr><td>Entry type</td><td>Breastfeed, or a combination entry carrying breast-side data</td><td>The record contains a breast component</td></tr>
+<tr><td>Time window</td><td>Today plus the previous 4 calendar days</td><td>The imbalance is recent</td></tr>
+<tr><td>Minimum sample</td><td>At least <strong>6 qualifying feeds</strong></td><td>There is more than a one-feed anecdote</td></tr>
+<tr><td>Side evidence</td><td>Left/right minutes, or a single-side label when no minutes exist</td><td>A side can be assigned in the record</td></tr>
+<tr><td>Strong-skew gate</td><td>Lesser-recorded side is <strong>20% or less</strong> of total side time</td><td>The log is extremely one-sided</td></tr>
+</tbody>
+</table></div>
 <p>The card is medium urgency and displays its sample as “from N feeds”. It is a prompt to notice comfort, positioning and missing data—not a diagnosis of engorgement, blocked ducts, mastitis or low supply.</p>
 <h2>OBubba has two different side signals</h2>
 <p>The app’s ordinary balance insight and its stricter alert are separate functions.</p>
-<p>| Gentle balance card | Stricter one-sided alert | |---|---| | Reads up to 7 days | Reads the most recent 5 days of that series | | Needs at least 5 side-timed feeds | Needs at least 6 qualifying feeds | | Appears when one side is <strong>60% or more</strong> | Appears when the other side is <strong>20% or less</strong>—equivalent to the dominant side being at least 80% | | Low urgency | Medium urgency | | Says <strong>Feeding leans to one side</strong> | Says one named side is doing nearly all the work | | Encourages noticing the pattern | Adds discomfort and mastitis context |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gentle balance card</th><th scope="col">Stricter one-sided alert</th></tr></thead>
+<tbody>
+<tr><td>Reads up to 7 days</td><td>Reads the most recent 5 days of that series</td></tr>
+<tr><td>Needs at least 5 side-timed feeds</td><td>Needs at least 6 qualifying feeds</td></tr>
+<tr><td>Appears when one side is <strong>60% or more</strong></td><td>Appears when the other side is <strong>20% or less</strong>—equivalent to the dominant side being at least 80%</td></tr>
+<tr><td>Low urgency</td><td>Medium urgency</td></tr>
+<tr><td>Says <strong>Feeding leans to one side</strong></td><td>Says one named side is doing nearly all the work</td></tr>
+<tr><td>Encourages noticing the pattern</td><td>Adds discomfort and mastitis context</td></tr>
+</tbody>
+</table></div>
 <p>On a very one-sided record, both functions can return a result. The stricter card sorts ahead because medium urgency is prioritised over low urgency. The daily Guidance surface groups related feeding reads together rather than treating them as unrelated problems.</p>
 <p>That is why the app can move from a quiet “leans left” note to a more prominent “right side is doing nearly all the work” alert without changing the underlying subject: the threshold changed from noticeable drift to an extreme recorded skew.</p>
 <h2>Exactly what the detector counts</h2>
@@ -877,7 +901,19 @@
 <p>There is also <strong>no age gate</strong> in this detector. The same record rule can run for a newborn or an older breastfeeding child. The right response may be very different, which is why the card cannot replace individual feeding advice.</p>
 <h2>A worked example</h2>
 <p>Suppose seven feeds across the last few days contain:</p>
-<p>| Feed | Left recorded | Right recorded | |---|---:|---:| | 1 | 0 min | 16 min | | 2 | 0 min | 14 min | | 3 | 4 min | 15 min | | 4 | 0 min | 13 min | | 5 | 0 min | 12 min | | 6 | 6 min | 10 min | | 7 | 0 min | 10 min | | <strong>Total</strong> | <strong>10 min</strong> | <strong>90 min</strong> |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Feed</th><th scope="col">Left recorded</th><th scope="col">Right recorded</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>0 min</td><td>16 min</td></tr>
+<tr><td>2</td><td>0 min</td><td>14 min</td></tr>
+<tr><td>3</td><td>4 min</td><td>15 min</td></tr>
+<tr><td>4</td><td>0 min</td><td>13 min</td></tr>
+<tr><td>5</td><td>0 min</td><td>12 min</td></tr>
+<tr><td>6</td><td>6 min</td><td>10 min</td></tr>
+<tr><td>7</td><td>0 min</td><td>10 min</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>10 min</strong></td><td><strong>90 min</strong></td></tr>
+</tbody>
+</table></div>
 <p>Left is 10% of the recorded total. The lesser side is below the 20% gate, so the dynamic title names the right as the side doing nearly all the work. The body reports that only about 10% was recorded on the left.</p>
 <p>The calculation is accurate for those fields. The interpretation is still limited.</p>
 <p>Perhaps the baby swallowed efficiently for six minutes on the left and comfort-sucked for twelve on the right. Perhaps the parent forgot to switch the timer. Perhaps a second side was offered but not recorded. Perhaps one breast normally has a faster flow. None of that is available to the detector.</p>
@@ -926,7 +962,17 @@
 <p>&gt; “The record is strongly one-sided. Is that intentional, incomplete, comfortable or worth showing someone?”</p>
 <p><strong><a href="/breastfeeding-tracker.html">Try OBubba’s breastfeeding tracker →</a></strong> — time left and right, remember the starting side, keep combination feeds together and carry the useful pattern into a conversation with a midwife, health visitor or breastfeeding specialist.</p>
 <h2>How to create a more useful record</h2>
-<p>| Log field | Useful wording | What it preserves | |---|---|---| | Side | Left, right or both | Which breast had an opportunity | | Duration | Actual timer or edited minutes | Recorded time, not volume | | Note | “Right refused; nose blocked” | A possible reason for the pattern | | Comfort | “Left hot patch, sore since 3pm” | Symptoms and timing for help | | Response | “Deep sucks and audible swallows” | Observed feeding behaviour | | Action | “Spoke to health visitor at 5pm” | What advice was obtained |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Log field</th><th scope="col">Useful wording</th><th scope="col">What it preserves</th></tr></thead>
+<tbody>
+<tr><td>Side</td><td>Left, right or both</td><td>Which breast had an opportunity</td></tr>
+<tr><td>Duration</td><td>Actual timer or edited minutes</td><td>Recorded time, not volume</td></tr>
+<tr><td>Note</td><td>“Right refused; nose blocked”</td><td>A possible reason for the pattern</td></tr>
+<tr><td>Comfort</td><td>“Left hot patch, sore since 3pm”</td><td>Symptoms and timing for help</td></tr>
+<tr><td>Response</td><td>“Deep sucks and audible swallows”</td><td>Observed feeding behaviour</td></tr>
+<tr><td>Action</td><td>“Spoke to health visitor at 5pm”</td><td>What advice was obtained</td></tr>
+</tbody>
+</table></div>
 <p>Do not put off asking for help while waiting to build a better sample. Pain, fever, poor feeding, low nappy output, unusual sleepiness or growth concerns matter without six beautifully timed feeds.</p>
 <h2>Frequently asked questions</h2>
 <h3>Does 80/20 mean one breast makes 80% of my milk?</h3>
@@ -946,6 +992,7 @@
 <h2>Sources</h2>
 <ul><li><a href="https://www.nhs.uk/conditions/mastitis/" target="_blank" rel="noopener noreferrer">NHS: Mastitis</a></li><li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/breastfeeding-problems/breast-pain/" target="_blank" rel="noopener noreferrer">NHS: Breast pain and breastfeeding</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/breastfeeding/breastfeeding-challenges/milk-supply/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Milk supply</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/breastfeeding/expressing-your-breast-milk/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Expressing breast milk</a></li></ul>
 <p><em>OBubba provides records, pattern prompts and general education. It cannot measure milk supply or transfer, assess latch or breast symptoms, diagnose mastitis, or replace a midwife, health visitor, GP, NHS 111, neonatal team or breastfeeding specialist.</em></p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -977,6 +1024,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

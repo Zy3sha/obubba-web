@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -860,7 +865,16 @@
 <figure><img src="/obubba-daytime-milk-easing.jpg" alt="An attentive caregiver responsively bottle-feeds an alert baby in daylight, with a small first-foods bowl kept in the background." loading="lazy"/><figcaption>Measured milk and first foods can sit in the same day, but the baby’s feeding cues and whole feeding picture still lead.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current card needs all of these:</p>
-<p>| Gate | rule | What it prevents | |---|---:|---| | Comparison window | <strong>14 previous calendar-day slots</strong> | Today’s unfinished total cannot drag the new week down | | Coverage | At least <strong>4 amount-bearing days in each seven-day group</strong> | A mostly unlogged week stays quiet | | Qualifying amount | Positive amount on a daytime milk-feed entry | Feed counts are not converted into imaginary millilitres | | Relative shift | At least <strong>20%</strong> | Ordinary small variation stays quiet | | Absolute shift | At least <strong>60ml per logged day</strong> | A large percentage on tiny totals stays quiet |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">rule</th><th scope="col">What it prevents</th></tr></thead>
+<tbody>
+<tr><td>Comparison window</td><td><strong>14 previous calendar-day slots</strong></td><td>Today’s unfinished total cannot drag the new week down</td></tr>
+<tr><td>Coverage</td><td>At least <strong>4 amount-bearing days in each seven-day group</strong></td><td>A mostly unlogged week stays quiet</td></tr>
+<tr><td>Qualifying amount</td><td>Positive amount on a daytime milk-feed entry</td><td>Feed counts are not converted into imaginary millilitres</td></tr>
+<tr><td>Relative shift</td><td>At least <strong>20%</strong></td><td>Ordinary small variation stays quiet</td></tr>
+<tr><td>Absolute shift</td><td>At least <strong>60ml per logged day</strong></td><td>A large percentage on tiny totals stays quiet</td></tr>
+</tbody>
+</table></div>
 <p>The visual below uses five measured days in the recent week averaging 620ml and six in the earlier week averaging 900ml. The fall is about 31% and 280ml per measured day, so both change gates pass.</p>
 <figure><img src="/obubba-daytime-milk-trend-logic.svg" alt="The exact measured-day comparison, dual change threshold and 22-week wording switch behind OBubba’s daytime milk trend." loading="lazy"/><figcaption>The current detector compares amount-bearing daytime milk logs and changes its interpretation at 22 weeks without checking whether solids were actually introduced.</figcaption></figure>
 <p>These are product thresholds. They are not daily milk requirements.</p>
@@ -905,7 +919,13 @@
 <h2>Daytime volume is not 24-hour milk</h2>
 <p>Night feeds are excluded from this detector. That keeps the question clean, but it means daytime milk can fall while total milk stays similar.</p>
 <p>For example:</p>
-<p>| Daytime | Night | 24-hour total | |---:|---:|---:| | Earlier: 900ml | 0ml | 900ml | | Recent: 620ml | 280ml | 900ml |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Daytime</th><th scope="col">Night</th><th scope="col">24-hour total</th></tr></thead>
+<tbody>
+<tr><td>Earlier: 900ml</td><td>0ml</td><td>900ml</td></tr>
+<tr><td>Recent: 620ml</td><td>280ml</td><td>900ml</td></tr>
+</tbody>
+</table></div>
 <p>The daytime card still fires. It does not cross-check yesterday’s separate <strong>“Night feeds are dropping”</strong> detector or diagnose reverse cycling from this result.</p>
 <p>That is why one app is useful when it keeps the domains together: the parent can review daytime bottles, breastfeeds, night feeds, solids, wet nappies and growth instead of asking one number to carry the whole story.</p>
 <h2>Why the card stays silent for breast-only feeding</h2>
@@ -953,6 +973,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s first solid foods</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/drinks-and-cups-for-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Drinks and cups for babies and young children</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Feeding on demand</a></li><li><a href="https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/" target="_blank" rel="noopener noreferrer">NHS: Is your baby or toddler seriously ill?</a></li><li><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/bottle-feeding-resources/infant-formula-responsive-bottle-feeding-guide-for-parents/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly Initiative: Infant formula and responsive bottle feeding</a></li></ul>
 <p><em>This article provides general information for UK families. OBubba cannot measure breast-milk transfer, establish nutritional adequacy, diagnose dehydration or illness, or decide that solids should replace a milk feed. Follow your baby’s cues and any individual advice from your midwife, health visitor, GP, dietitian, feeding team or neonatal service.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -983,6 +1004,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

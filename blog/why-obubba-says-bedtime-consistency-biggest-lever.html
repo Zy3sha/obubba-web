@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,15 @@
 <p>When this card appears:</p>
 <ol><li>Treat the number as a pattern worth testing, not a diagnosis.</li><li>Aim for a <strong>bedtime range</strong>, usually about 30 to 60 minutes wide, rather than one perfect minute.</li><li>Keep the wind-down sequence familiar while letting bedtime respond to the final nap and the baby in front of you.</li><li>Test one small change across seven reasonably ordinary nights.</li><li>Keep logging wakes, feeds, illness, travel, nursery and unusual naps so the next comparison has context.</li></ol>
 <p>The <a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS says a simple, soothing bedtime routine may help babies settle</a> and reminds parents that babies have individual sleep patterns. A controlled study of 405 families with children aged 7 to 36 months found improvements after a consistent nightly routine, including fewer and shorter night wakings—but that study tested a routine, not OBubba’s exact “closest versus furthest bedtime” calculation.</p>
-<p>| What the card means | What it does not mean | |---|---| | Your logged steady-bedtime group averaged at least one fewer wake | Every late bedtime caused a bad night | | There were at least nine nights with a recorded bedtime | Every night was fully or perfectly logged | | The steady and variable groups differed enough in timing to compare | 7:00pm is biologically correct for every baby | | This pattern may be a useful first experiment | Night feeds should be removed or distress ignored |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What the card means</th><th scope="col">What it does not mean</th></tr></thead>
+<tbody>
+<tr><td>Your logged steady-bedtime group averaged at least one fewer wake</td><td>Every late bedtime caused a bad night</td></tr>
+<tr><td>There were at least nine nights with a recorded bedtime</td><td>Every night was fully or perfectly logged</td></tr>
+<tr><td>The steady and variable groups differed enough in timing to compare</td><td>7:00pm is biologically correct for every baby</td></tr>
+<tr><td>This pattern may be a useful first experiment</td><td>Night feeds should be removed or distress ignored</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-bedtime-consistency-biggest-lever-logic.svg" alt="How OBubba turns recent bedtime and wake records into a cautious pattern." loading="lazy"/><figcaption>The app needs at least nine usable bedtimes, ranks nights by distance from the baby&#39;s circular usual bedtime, compares the tightest and loosest thirds, then speaks only when both the timing and wake-count gaps clear their thresholds.</figcaption></figure>
 <h2>What the app actually compares</h2>
 <p>The current engine builds a list from <strong>14 calendar mornings</strong>, most recent first. For each one, it resolves the physical night across midnight and asks `analyzeNight` for two values:</p>
@@ -894,7 +907,16 @@
 <p>The card copy recommends keeping bedtime within roughly <strong>±15 to 30 minutes</strong>. In daily life, that means choosing an anchor range.</p>
 <p>If the usual sleep onset is around 7:30pm, a workable target might be <strong>7:15 to 7:45pm</strong>, with the wind-down beginning before it. Some families need a wider window. Newborns and young babies often do not yet have a settled clock bedtime, while naps and feeding remain highly variable.</p>
 <p>The range should bend when the day does.</p>
-<p>| What happened today | A sensible bedtime response | |---|---| | Naps and morning wake were close to usual | Use the familiar wind-down and usual bedtime range | | Final nap ended later | Allow enough awake time for genuine sleepiness; do not force the early edge of the range | | A nap was missed or very short | Begin the routine modestly earlier rather than stretching an exhausted baby | | Baby is ill, in pain or feeding differently | Prioritise responsive care, comfort and medical advice where needed | | Nursery, travel or an event changed everything | Preserve one or two familiar cues and return gradually over the next days |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What happened today</th><th scope="col">A sensible bedtime response</th></tr></thead>
+<tbody>
+<tr><td>Naps and morning wake were close to usual</td><td>Use the familiar wind-down and usual bedtime range</td></tr>
+<tr><td>Final nap ended later</td><td>Allow enough awake time for genuine sleepiness; do not force the early edge of the range</td></tr>
+<tr><td>A nap was missed or very short</td><td>Begin the routine modestly earlier rather than stretching an exhausted baby</td></tr>
+<tr><td>Baby is ill, in pain or feeding differently</td><td>Prioritise responsive care, comfort and medical advice where needed</td></tr>
+<tr><td>Nursery, travel or an event changed everything</td><td>Preserve one or two familiar cues and return gradually over the next days</td></tr>
+</tbody>
+</table></div>
 <p>This is the same principle explored in <a href="/blog/does-baby-need-same-bedtime-every-night.html">Does My Baby Need the Same Bedtime Every Night?</a>: consistency can be an anchor without becoming rigidity.</p>
 <h2>A seven-night test inside OBubba</h2>
 <h3>1. Choose the smallest useful change</h3>
@@ -957,6 +979,7 @@
 <h2>Sources</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/baby/health/sleep-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Sleep and young children</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/19480226/" target="_blank" rel="noopener noreferrer">Mindell et al., <em>Sleep</em> (2009): A nightly bedtime routine—impact on sleep in young children and maternal mood</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/keeping-a-clear-cot/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Keeping a clear cot</a></li><li>OBubba source reviewed: `bedtime_consistency_impact.dart`, `brain.dart`, `night_analysis.dart`, `day_metrics.dart`, `brain_insight.dart`, `track_home.dart`, `bedtime_consistency_impact_test.dart`, `night_analysis_test.dart` and `day_metrics_test.dart`.</li></ul>
 <p><em>OBubba is a record, pattern and education tool. It cannot diagnose the cause of night waking or assess a baby’s health, feeding needs or sleep safety. It does not replace advice from a health visitor, GP, paediatrician, NHS 111 or emergency services.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-says-bedtime-consistency-biggest-lever"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -988,6 +1011,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

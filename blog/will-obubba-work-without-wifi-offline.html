@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,18 @@
 <p>That sentence has an important boundary. A previously used phone with a cached baby is different from a fresh install or a new phone. First setup, recovery, joining a family and sharing all need a connection. Other caregivers will not see this phone’s queued changes until it reconnects.</p>
 <p>Here is the honest offline map of the current OBubba app.</p>
 <h2>The 20-second answer</h2>
-<p>| Situation | What happens | |---|---| | Same phone, active baby already loaded | Keep viewing cached history and adding, editing or deleting logs | | Connection disappears while logging | The change is applied locally and queued for later sync | | Partner is using another phone | They see the change after this phone reconnects and sync completes | | Brand-new install or uncached baby | Reconnect before OBubba will create or change that baby’s record | | First baby setup | Your typed setup is retained, but the secure account and baby record finish online | | Stories and sound machine | Built into the app and available without Wi-Fi | | Live weather or richer Luna AI answer | Needs a connection; local guidance or fallback may remain available |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Situation</th><th scope="col">What happens</th></tr></thead>
+<tbody>
+<tr><td>Same phone, active baby already loaded</td><td>Keep viewing cached history and adding, editing or deleting logs</td></tr>
+<tr><td>Connection disappears while logging</td><td>The change is applied locally and queued for later sync</td></tr>
+<tr><td>Partner is using another phone</td><td>They see the change after this phone reconnects and sync completes</td></tr>
+<tr><td>Brand-new install or uncached baby</td><td>Reconnect before OBubba will create or change that baby’s record</td></tr>
+<tr><td>First baby setup</td><td>Your typed setup is retained, but the secure account and baby record finish online</td></tr>
+<tr><td>Stories and sound machine</td><td>Built into the app and available without Wi-Fi</td></tr>
+<tr><td>Live weather or richer Luna AI answer</td><td>Needs a connection; local guidance or fallback may remain available</td></tr>
+</tbody>
+</table></div>
 <p>No baby app should turn “offline” into a vague promise. In OBubba, <strong>the safe rule is: same phone plus a baby that has already loaded</strong>.</p>
 <h2>What you can do offline on a prepared phone</h2>
 <p>Once the active baby has loaded and is held in the device cache, the everyday record can continue through a train tunnel, a rural stay or a home broadband wobble.</p>
@@ -922,6 +938,7 @@
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — keep the family’s care story moving through patchy Wi-Fi, rural nights and everyday connection wobbles.</p>
 <p><em>This article describes the current OBubba implementation reviewed on 7 March 2027. Device storage, operating-system behaviour and later app updates can affect availability. OBubba is not a baby monitor, medical device or emergency service.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -952,6 +969,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

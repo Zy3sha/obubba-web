@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -863,7 +868,14 @@
 <p>The rule is about the role cow&#39;s milk plays in the diet—not a magical change to milk on the first birthday.</p>
 <p>Before 12 months, breast milk or first infant formula should remain the main milk drink because it provides the nutritional balance a baby needs. The NHS says cow&#39;s milk can be used in cooking or mixed with food from around six months, and that full-fat dairy foods such as plain yoghurt can be offered from around six months.</p>
 <p>A spoon of yoghurt is one complementary food within a varied diet. A bottle or cup of cow&#39;s milk used to replace the baby&#39;s usual milk is different.</p>
-<p>| From around 6 months | Wait until 12 months | |---|---| | plain full-fat yoghurt as food | cow&#39;s milk as the main drink | | pasteurised cheese in suitable amounts and forms | replacing breast milk or first infant formula with ordinary milk | | cow&#39;s milk mixed into porridge, mash or cooking | relying on yoghurt to make up for several dropped milk feeds |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">From around 6 months</th><th scope="col">Wait until 12 months</th></tr></thead>
+<tbody>
+<tr><td>plain full-fat yoghurt as food</td><td>cow&#39;s milk as the main drink</td></tr>
+<tr><td>pasteurised cheese in suitable amounts and forms</td><td>replacing breast milk or first infant formula with ordinary milk</td></tr>
+<tr><td>cow&#39;s milk mixed into porridge, mash or cooking</td><td>relying on yoghurt to make up for several dropped milk feeds</td></tr>
+</tbody>
+</table></div>
 <p>Continue normal responsive breastfeeds or first infant formula feeds while solids gradually grow. Do not deliberately cut milk so that a baby arrives at the highchair hungrier.</p>
 <h2>Which yoghurt is best for a 6-month-old?</h2>
 <h3>Choose full-fat</h3>
@@ -930,6 +942,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby&#39;s first solid foods</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/food-allergies-in-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Food allergies in babies and young children</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/drinks-and-cups-for-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Drinks and cups for babies and young children</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/help-your-baby-enjoy-new-foods/" target="_blank" rel="noopener noreferrer">NHS: Help your baby enjoy new foods</a></li></ul>
 <p><em>This article gives general information for UK families. It is not an allergy, feeding or growth assessment, and OBubba is not a medical device. Follow advice from your baby&#39;s own healthcare team.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -960,6 +973,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

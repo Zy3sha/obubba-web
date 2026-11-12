@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,19 @@
 <p>That threshold means the record has become useful enough to share. It does not prove that you have a partner, that you are logging alone or that another trusted adult is absent.</p>
 <p>The feature behind the prompt is genuinely useful: two phones can read and add to the same baby’s live timeline, access is limited to that child, the owner can see a participant roster and the invite can be replaced when access should end. But the current prompt needs a more honest connection to that feature.</p>
 <h2>The short answer</h2>
-<p>| Question | Current behaviour | |---|---| | When can the prompt appear? | At <strong>3 complete nights</strong> within the latest 14-night window | | What is a complete night here? | The night analyser reconstructed both a <strong>bedtime</strong> and a <strong>morning wake</strong> | | Must the nights be consecutive? | No | | Does it check whether someone is already connected? | No | | Does it know who handled each wake? | No | | Does its button open Family Sharing? | No; <strong>“Got it”</strong> acknowledges and closes the insight | | Can it be hidden? | “Got it” uses a stable per-child dismissal; the separate snooze hides it for one week | | What can Family Sharing do? | Give another trusted person live read-and-write access to this baby’s record |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Question</th><th scope="col">Current behaviour</th></tr></thead>
+<tbody>
+<tr><td>When can the prompt appear?</td><td>At <strong>3 complete nights</strong> within the latest 14-night window</td></tr>
+<tr><td>What is a complete night here?</td><td>The night analyser reconstructed both a <strong>bedtime</strong> and a <strong>morning wake</strong></td></tr>
+<tr><td>Must the nights be consecutive?</td><td>No</td></tr>
+<tr><td>Does it check whether someone is already connected?</td><td>No</td></tr>
+<tr><td>Does it know who handled each wake?</td><td>No</td></tr>
+<tr><td>Does its button open Family Sharing?</td><td>No; <strong>“Got it”</strong> acknowledges and closes the insight</td></tr>
+<tr><td>Can it be hidden?</td><td>“Got it” uses a stable per-child dismissal; the separate snooze hides it for one week</td></tr>
+<tr><td>What can Family Sharing do?</td><td>Give another trusted person live read-and-write access to this baby’s record</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-partner-invite-three-night-logic.svg" alt="The exact three-complete-night gate behind OBubba’s partner-sharing prompt, followed by the separate Family Sharing access decision." loading="lazy"/><figcaption>The insight reads night completeness, not relationship status or who performed the care. Family Sharing is a separate, deliberate access action.</figcaption></figure>
 <p>The useful translation is:</p>
 <p>&gt; “You now have a night record worth sharing. If another trusted person regularly cares for this baby, one live timeline may reduce handover work.”</p>
@@ -892,7 +909,13 @@
 <p>Both devices then work from the same changing child record. A feed, nappy, sleep or note added on one phone can appear on the other instead of being retyped from messages in the morning.</p>
 <figure><img src="/obubba-connect-live-family-sync.jpg" alt="The real OBubba connection screen explains that Connect creates shared live data while importing creates a separate copy." loading="lazy"/><figcaption>The current receiving screen clearly distinguishes live connection from a private imported snapshot.</figcaption></figure>
 <p>That distinction matters:</p>
-<p>| Choice | Result | |---|---| | <strong>Connect — live sync</strong> | Both phones continue reading and writing the same baby’s record | | <strong>Import a separate copy</strong> | This phone receives its own snapshot; later edits do not remain live-linked |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Choice</th><th scope="col">Result</th></tr></thead>
+<tbody>
+<tr><td><strong>Connect — live sync</strong></td><td>Both phones continue reading and writing the same baby’s record</td></tr>
+<tr><td><strong>Import a separate copy</strong></td><td>This phone receives its own snapshot; later edits do not remain live-linked</td></tr>
+</tbody>
+</table></div>
 <p>If the goal is a two-person night handover, choose live sync. Two disconnected copies recreate the exact reconciliation work the feature is meant to remove.</p>
 <h2>Access is per child</h2>
 <p>The current Family Sharing card is scoped to the active baby. Its interface explicitly says that somebody using Maya’s code can see and add logs for Maya only. They do not automatically receive another child from the owner’s account.</p>
@@ -956,6 +979,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/support-and-services/sleep-and-tiredness-after-having-a-baby/" target="_blank" rel="noopener noreferrer">NHS: Sleep and tiredness after having a baby</a></li><li><a href="https://www.nhs.uk/baby/support-and-services/relationships-after-having-a-baby/" target="_blank" rel="noopener noreferrer">NHS: Relationships after having a baby</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/being-a-parent-or-caregiver/sleep-deprivation/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Sleep deprivation</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/keeping-a-clear-cot/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Keeping a clear cot</a></li></ul>
 <p><em>This article provides general information for UK families. OBubba cannot determine who performed care, assess relationship safety, supervise a baby, guarantee that a sync operation completed or replace responsive feeding, safer-sleep practice or individual advice from your midwife, health visitor, GP, feeding team, paediatrician or neonatal service.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -986,6 +1010,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

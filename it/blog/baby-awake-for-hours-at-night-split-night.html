@@ -630,6 +630,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -865,7 +870,16 @@
 <p>Non esiste una soglia clinica universalmente concordata per il termine &quot;notte spezzata&quot; usato dai genitori. In questa guida significa:</p>
 <ul><li>il bambino ha completato un primo blocco significativo di sonno notturno</li><li>è stato davvero sveglio per circa un&#39;ora o più</li><li>il risveglio è avvenuto nel cuore della notte, non subito dopo la nanna</li><li>poi è tornato a dormire per un altro blocco</li></ul>
 <p>L&#39;attuale logica di OBubba usa <strong>60 minuti</strong> come soglia pratica di rilevamento e richiede che il lungo risveglio inizi più di <strong>45 minuti dopo l&#39;ora della nanna</strong> quando l&#39;orario è noto. Sono regole del prodotto pensate per evitare etichette sbagliate; non sono soglie mediche.</p>
-<p>| Cosa è successo | Descrizione migliore | Perché la distinzione conta | |---|---|---| | Il bambino si è svegliato 20–45 minuti dopo la nanna | <strong>Falsa partenza</strong> | L&#39;orario della nanna, il trasferimento, la fame o il disagio possono essere più rilevanti di un cambiamento di orario da notte spezzata | | Il bambino si è svegliato brevemente più volte e si è riaddormentato in pochi minuti | <strong>Risveglio notturno o movimento legato al ciclo</strong> | I brevi risvegli non sono lo stesso schema di un unico intervallo di veglia prolungato | | Il bambino ha dormito per ore, è rimasto sveglio per 60–120 minuti, poi ha dormito di nuovo | <strong>Schema di notte spezzata</strong> | Vale la pena confrontare l&#39;intero ritmo delle 24 ore e la giornata che precede la nanna | | Il bambino si è svegliato alle 4:30 e non è più tornato a dormire | <strong>Risveglio precoce del mattino</strong> | Luce, ora della nanna e orologio biologico potrebbero richiedere un piano diverso | | Un neonato ha poppato, è stato cambiato ed è rimasto sveglio durante la notte | <strong>Risveglio notturno del neonato</strong> | Il ritmo giorno-notte immaturo e l&#39;alimentazione vengono prima della correzione dell&#39;orario |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Cosa è successo</th><th scope="col">Descrizione migliore</th><th scope="col">Perché la distinzione conta</th></tr></thead>
+<tbody>
+<tr><td>Il bambino si è svegliato 20–45 minuti dopo la nanna</td><td><strong>Falsa partenza</strong></td><td>L&#39;orario della nanna, il trasferimento, la fame o il disagio possono essere più rilevanti di un cambiamento di orario da notte spezzata</td></tr>
+<tr><td>Il bambino si è svegliato brevemente più volte e si è riaddormentato in pochi minuti</td><td><strong>Risveglio notturno o movimento legato al ciclo</strong></td><td>I brevi risvegli non sono lo stesso schema di un unico intervallo di veglia prolungato</td></tr>
+<tr><td>Il bambino ha dormito per ore, è rimasto sveglio per 60–120 minuti, poi ha dormito di nuovo</td><td><strong>Schema di notte spezzata</strong></td><td>Vale la pena confrontare l&#39;intero ritmo delle 24 ore e la giornata che precede la nanna</td></tr>
+<tr><td>Il bambino si è svegliato alle 4:30 e non è più tornato a dormire</td><td><strong>Risveglio precoce del mattino</strong></td><td>Luce, ora della nanna e orologio biologico potrebbero richiedere un piano diverso</td></tr>
+<tr><td>Un neonato ha poppato, è stato cambiato ed è rimasto sveglio durante la notte</td><td><strong>Risveglio notturno del neonato</strong></td><td>Il ritmo giorno-notte immaturo e l&#39;alimentazione vengono prima della correzione dell&#39;orario</td></tr>
+</tbody>
+</table></div>
 <p>L&#39;etichetta dovrebbe rendere la notte più facile da capire, non trasformare un risveglio difficile in un disturbo.</p>
 <h2>Le notti spezzate sono normali nei bambini?</h2>
 <p>Occasionali lunghi risvegli possono capitare. Il sonno infantile cambia rapidamente, e il risveglio in sé è normale.</p>
@@ -916,7 +930,17 @@
 <ul><li>Il sonno diurno era davvero diverso?</li><li>L&#39;ultimo periodo di veglia è stato più breve o più lungo?</li><li>L&#39;ora della nanna o del mattino si è spostata?</li><li>Il bambino era calmo o in difficoltà durante il risveglio?</li><li>Ha preso una poppata completa?</li><li>C&#39;è un collegamento ripetibile, o solo una storia che si adatta a una notte?</li></ul>
 <p>Il confronto ti protegge dall&#39;errore più comune: vedere un lungo risveglio dopo un lungo sonnellino e presumere che il sonnellino l&#39;abbia causato, senza controllare se i lunghi sonnellini si siano verificati anche prima di buone notti.</p>
 <h2>Scegli la direzione giusta, non un reset drastico</h2>
-<p>| Prova ripetuta | Primo esperimento | Da evitare | |---|---|---| | Sonno diurno chiaramente sopra la norma recente di questo bambino; lungo risveglio calmo | Riduci di 10–15 minuti l&#39;ultimo sonnellino <strong>oppure</strong> sposta l&#39;ora della nanna 10–15 minuti più tardi | Tagliare tutti i sonnellini in una volta | | Finestra di veglia finale ripetutamente troppo breve; sonno diurno per il resto adeguato | Allunga solo la finestra finale di 10–15 minuti | Tenere sveglio un bambino esausto per rispettare una tabella | | Sonno diurno scarso; nanna concitata; lungo risveglio nelle prime ore | Proteggi i sonnellini o sposta l&#39;ora della nanna 10–15 minuti prima | Tagliare il sonno diurno | | Una poppata completa e attiva pone fine al risveglio | Migliora le occasioni di latte diurne e tranquille e mantieni poppate notturne reattive | Togliere il latte basandoti solo sull&#39;età | | Segni di dolore, malattia o respirazione | Sospendi il lavoro sugli orari e cerca un consiglio adeguato | Chiamarla regressione o abitudine | | Nessuna prova ripetibile | Mantieni stabile la routine e raccogli altre notti | Indovinare con sicurezza da un solo risveglio |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Prova ripetuta</th><th scope="col">Primo esperimento</th><th scope="col">Da evitare</th></tr></thead>
+<tbody>
+<tr><td>Sonno diurno chiaramente sopra la norma recente di questo bambino; lungo risveglio calmo</td><td>Riduci di 10–15 minuti l&#39;ultimo sonnellino <strong>oppure</strong> sposta l&#39;ora della nanna 10–15 minuti più tardi</td><td>Tagliare tutti i sonnellini in una volta</td></tr>
+<tr><td>Finestra di veglia finale ripetutamente troppo breve; sonno diurno per il resto adeguato</td><td>Allunga solo la finestra finale di 10–15 minuti</td><td>Tenere sveglio un bambino esausto per rispettare una tabella</td></tr>
+<tr><td>Sonno diurno scarso; nanna concitata; lungo risveglio nelle prime ore</td><td>Proteggi i sonnellini o sposta l&#39;ora della nanna 10–15 minuti prima</td><td>Tagliare il sonno diurno</td></tr>
+<tr><td>Una poppata completa e attiva pone fine al risveglio</td><td>Migliora le occasioni di latte diurne e tranquille e mantieni poppate notturne reattive</td><td>Togliere il latte basandoti solo sull&#39;età</td></tr>
+<tr><td>Segni di dolore, malattia o respirazione</td><td>Sospendi il lavoro sugli orari e cerca un consiglio adeguato</td><td>Chiamarla regressione o abitudine</td></tr>
+<tr><td>Nessuna prova ripetibile</td><td>Mantieni stabile la routine e raccogli altre notti</td><td>Indovinare con sicurezza da un solo risveglio</td></tr>
+</tbody>
+</table></div>
 <p>Prova un cambiamento per tre-cinque notti comparabili. Mantieni i segnali della nanna, la risposta all&#39;alimentazione e l&#39;ancora del mattino ampiamente stabili così da poter interpretare il risultato.</p>
 <p>Se il risveglio si accorcia e il bambino resta ben riposato, continua con delicatezza. Se la nanna diventa più difficile, l&#39;umore diurno peggiora o il risveglio si sposta prima, annulla il cambiamento. Un buon esperimento è reversibile.</p>
 <h2>Cosa fare stanotte durante una notte spezzata</h2>
@@ -957,6 +981,7 @@
 <p>Non devi risolvere l&#39;intera notte alle 2. Mantienila sicura e reattiva, poi lascia che la luce del giorno e diverse giornate oneste di prove scelgano la mossa successiva.</p>
 <p><em>Questo articolo fornisce informazioni generali, non consigli medici. Segui il piano individuale di alimentazione e accudimento del tuo bambino e parla con un professionista sanitario qualificato ogni volta che i cambiamenti nel sonno si accompagnano a preoccupazioni per alimentazione, crescita, respirazione, dolore, febbre o malattia.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -987,6 +1012,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

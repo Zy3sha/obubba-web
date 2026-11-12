@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,15 @@
 <p>Here is what the product is really saying—and how to use that information safely.</p>
 <h2>The exact rule</h2>
 <p>The current `diagnoseWeaningPattern` function can return this card only when these conditions line up:</p>
-<p>| Product check | What requires | |---|---| | Weaning age | At least <strong>30 weeks</strong> | | Recent solids | At least one usable solids log in the roughly three-week window | | Priority set | At least <strong>4 of 6</strong> priority allergens still absent from all-time logged history | | Higher-priority weaning read | No current clustered refusal insight and no qualifying iron-gap insight |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Product check</th><th scope="col">What requires</th></tr></thead>
+<tbody>
+<tr><td>Weaning age</td><td>At least <strong>30 weeks</strong></td></tr>
+<tr><td>Recent solids</td><td>At least one usable solids log in the roughly three-week window</td></tr>
+<tr><td>Priority set</td><td>At least <strong>4 of 6</strong> priority allergens still absent from all-time logged history</td></tr>
+<tr><td>Higher-priority weaning read</td><td>No current clustered refusal insight and no qualifying iron-gap insight</td></tr>
+</tbody>
+</table></div>
 <p>The six labels, in their fixed detector order, are:</p>
 <ol><li>egg;</li><li>peanut;</li><li>dairy;</li><li>gluten;</li><li>fish; and</li><li>sesame.</li></ol>
 <p>If four or more are missing, the body displays the <strong>first four missing labels</strong> in that order. It does not list every possible allergenic food, and it does not rank a child’s personal medical risk.</p>
@@ -920,6 +933,7 @@
 <p>That is exactly where a thoughtful baby app should sit: remembering what exhausted parents may forget, preserving reaction history, and leaving medical decisions where they belong.</p>
 <p>OBubba connects solids logging, automatic allergen recognition, a 14-label journey, reaction-aware meal planning and long-term memory in one calm weaning space. <a href="/#download">Explore OBubba</a> if you want a tracker that explains not only what it noticed, but the limits of what it knows.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -950,6 +964,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

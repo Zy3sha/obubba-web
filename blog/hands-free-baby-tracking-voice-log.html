@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -874,7 +879,20 @@
 <p>The NHS advises checking the label for the correct dose and asking a pharmacist, health visitor or GP when unsure. A family log can support memory, but it does not calculate or approve a dose. See our guide to <a href="/blog/baby-medicine-log-prevent-double-dosing.html">logging baby medicine without double dosing</a>.</p>
 <h2>Speakable baby-log examples</h2>
 <p>Short clauses and explicit units give speech recognition less room to guess.</p>
-<p>| You want to record | Try saying | |---|---| | Bottle feed | “Fed 120 millilitres at 2:15am.” | | Breastfeed | “Breastfed left 12 minutes, right 8 minutes.” | | Nappy | “Wet and dirty nappy at 3am.” | | Completed nap | “Napped 1pm to 2:30pm.” | | Bedtime | “Bedtime at 7:45pm.” | | Night wake | “Woke at 3:20am.” | | Temperature | “Temperature 38 point 5 at 11am.” | | Medicine already given | “Gave medicine [exact medicine name], [measured amount], at 11:10am.” | | Several events | “Fed 120 millilitres at 2:15am, then wet and dirty nappy at 3am.” |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">You want to record</th><th scope="col">Try saying</th></tr></thead>
+<tbody>
+<tr><td>Bottle feed</td><td>“Fed 120 millilitres at 2:15am.”</td></tr>
+<tr><td>Breastfeed</td><td>“Breastfed left 12 minutes, right 8 minutes.”</td></tr>
+<tr><td>Nappy</td><td>“Wet and dirty nappy at 3am.”</td></tr>
+<tr><td>Completed nap</td><td>“Napped 1pm to 2:30pm.”</td></tr>
+<tr><td>Bedtime</td><td>“Bedtime at 7:45pm.”</td></tr>
+<tr><td>Night wake</td><td>“Woke at 3:20am.”</td></tr>
+<tr><td>Temperature</td><td>“Temperature 38 point 5 at 11am.”</td></tr>
+<tr><td>Medicine already given</td><td>“Gave medicine [exact medicine name], [measured amount], at 11:10am.”</td></tr>
+<tr><td>Several events</td><td>“Fed 120 millilitres at 2:15am, then wet and dirty nappy at 3am.”</td></tr>
+</tbody>
+</table></div>
 <p>Names, accents and background noise can change the transcript. Treat these as sentence templates, not magic commands.</p>
 <h2>Five habits that make voice logs more accurate</h2>
 <h3>1. Say the unit</h3>
@@ -948,6 +966,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/health/medicines-for-babies-and-children/" target="_blank" rel="noopener noreferrer">NHS: Medicines for babies and children</a></li><li><a href="https://www.nhs.uk/symptoms/fever-in-children/" target="_blank" rel="noopener noreferrer">NHS: High temperature in children</a></li><li><a href="https://support.google.com/gboard/answer/11197787?hl=EN" target="_blank" rel="noopener noreferrer">Google: Advanced voice typing and on-device processing</a></li><li><a href="https://support.apple.com/en-us/127070" target="_blank" rel="noopener noreferrer">Apple: Improve Siri &amp; Dictation controls</a></li></ul>
 <p><em>OBubba supports parent-entered tracking and family handovers. It does not measure intake, diagnose illness or sleep problems, calculate medicine doses or replace a health visitor, pharmacist, GP, paediatric team, NHS 111 or emergency service. Always check voice-derived numbers and times before saving.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -978,6 +997,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

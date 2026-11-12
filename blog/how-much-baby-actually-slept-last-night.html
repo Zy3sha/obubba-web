@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -860,11 +865,27 @@
 <h2>The simplest calculation</h2>
 <p><strong>Estimated night sleep = night span − known awake time</strong></p>
 <p>For the example above:</p>
-<p>| Part of the night | Duration | |---|---:| | 7:30pm to 6:30am night span | 11h 00m | | Wake 1 | −20m | | Wake 2 | −35m | | Wake 3 | −10m | | <strong>Estimated time asleep</strong> | <strong>9h 55m</strong> |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Part of the night</th><th scope="col">Duration</th></tr></thead>
+<tbody>
+<tr><td>7:30pm to 6:30am night span</td><td>11h 00m</td></tr>
+<tr><td>Wake 1</td><td>−20m</td></tr>
+<tr><td>Wake 2</td><td>−35m</td></tr>
+<tr><td>Wake 3</td><td>−10m</td></tr>
+<tr><td><strong>Estimated time asleep</strong></td><td><strong>9h 55m</strong></td></tr>
+</tbody>
+</table></div>
 <p>This is not proof that the baby spent exactly 9 hours 55 minutes asleep. They may have had brief arousals that nobody noticed, and a parent may estimate resettling times. It is the most honest result the observed record supports.</p>
 <h2>Night span is useful—but it is not sleep</h2>
 <p>Suppose two babies both have a 7pm-to-7am night:</p>
-<p>| Night | Known awake periods | Estimated night sleep | What the span alone hides | |---|---:|---:|---| | A | one 10-minute feed | 11h 50m | almost the whole span was sleep | | B | three wakes totalling 1h 20m | 10h 40m | a substantial amount of awake time | | C | one 90-minute split night | 10h 30m | one long, disruptive awake block |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Night</th><th scope="col">Known awake periods</th><th scope="col">Estimated night sleep</th><th scope="col">What the span alone hides</th></tr></thead>
+<tbody>
+<tr><td>A</td><td>one 10-minute feed</td><td>11h 50m</td><td>almost the whole span was sleep</td></tr>
+<tr><td>B</td><td>three wakes totalling 1h 20m</td><td>10h 40m</td><td>a substantial amount of awake time</td></tr>
+<tr><td>C</td><td>one 90-minute split night</td><td>10h 30m</td><td>one long, disruptive awake block</td></tr>
+</tbody>
+</table></div>
 <p>All three nights occupy 12 clock hours. They do not contain the same amount or shape of sleep.</p>
 <p>This is why “baby was down for 12 hours” can be true while “baby slept 12 hours” is not. Neither description is dishonest; they answer different questions.</p>
 <h2>Start with actual sleep, not the routine</h2>
@@ -905,7 +926,16 @@
 <p>A total slightly outside a chart on one day is not a diagnosis.</p>
 <h2>One night is arithmetic; a week is a pattern</h2>
 <p>The total becomes useful when it answers a decision.</p>
-<p>| Question | Better signal than one raw total | |---|---| | Is the night becoming more consolidated? | longest stretch and total awake time | | Is baby sleeping less overall? | night sleep plus naps across several days | | Are wakes shorter even if the count is unchanged? | wake duration by night | | Did bedtime move but sleep stay stable? | actual sleep onset and final wake | | Is the family getting more rest? | parent interventions and parent sleep, not baby total alone |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Question</th><th scope="col">Better signal than one raw total</th></tr></thead>
+<tbody>
+<tr><td>Is the night becoming more consolidated?</td><td>longest stretch and total awake time</td></tr>
+<tr><td>Is baby sleeping less overall?</td><td>night sleep plus naps across several days</td></tr>
+<tr><td>Are wakes shorter even if the count is unchanged?</td><td>wake duration by night</td></tr>
+<tr><td>Did bedtime move but sleep stay stable?</td><td>actual sleep onset and final wake</td></tr>
+<tr><td>Is the family getting more rest?</td><td>parent interventions and parent sleep, not baby total alone</td></tr>
+</tbody>
+</table></div>
 <p>Compare like with like. A night with complete bedtime, wake and morning anchors should not be compared as equal-quality data with a night where somebody forgot to stop the timer.</p>
 <h2>What the actual OBubba app calculates</h2>
 <p>The current app deliberately reports <strong>actual night sleep rather than raw bedtime-to-morning span</strong> when the evidence is available.</p>
@@ -966,6 +996,7 @@
 <p>Keep those signals separate, estimate only what you observed and compare complete nights over time. The most helpful sleep total is not the most impressive number. It is the one whose meaning you can explain.</p>
 <p><em>This article provides general sleep-tracking information, not medical advice. Seek qualified help for concerns about breathing, unusual sleepiness, feeding, growth, illness or family safety, and follow your baby&#39;s individual clinical plan.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -996,6 +1027,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

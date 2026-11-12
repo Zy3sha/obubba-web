@@ -630,6 +630,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -871,7 +876,16 @@
 <h2>Why contact naps can <em>look</em> like the cause of a bad night</h2>
 <p>A location is easy to blame because it is visible: “That was a contact nap, then bedtime went wrong.” Sleep pressure is less visible.</p>
 <p>Consider what else changed:</p>
-<p>| What happened in the day | What you may see at night | What the useful question is | |---|---|---| | A contact nap ran much longer than the usual cot nap | Less tiredness at the usual bedtime | Did total daytime sleep or the final wake window change? | | The last nap ended late | Playing, rolling or chatting at bedtime | Is bedtime now too close to the end of the nap? | | A transfer ended the nap after 20 minutes | Fussiness and a difficult late afternoon | Was baby left awake too long after a short nap? | | A held nap rescued an overtired day | A calmer bedtime | Did the extra sleep prevent a very long final wake window? | | Illness, teething or a developmental change arrived too | More waking regardless of nap location | Is the whole sleep pattern temporarily different? |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What happened in the day</th><th scope="col">What you may see at night</th><th scope="col">What the useful question is</th></tr></thead>
+<tbody>
+<tr><td>A contact nap ran much longer than the usual cot nap</td><td>Less tiredness at the usual bedtime</td><td>Did total daytime sleep or the final wake window change?</td></tr>
+<tr><td>The last nap ended late</td><td>Playing, rolling or chatting at bedtime</td><td>Is bedtime now too close to the end of the nap?</td></tr>
+<tr><td>A transfer ended the nap after 20 minutes</td><td>Fussiness and a difficult late afternoon</td><td>Was baby left awake too long after a short nap?</td></tr>
+<tr><td>A held nap rescued an overtired day</td><td>A calmer bedtime</td><td>Did the extra sleep prevent a very long final wake window?</td></tr>
+<tr><td>Illness, teething or a developmental change arrived too</td><td>More waking regardless of nap location</td><td>Is the whole sleep pattern temporarily different?</td></tr>
+</tbody>
+</table></div>
 <p>The held part is not automatically the problem. A long, late nap may reduce sleep pressure before bed whether it happened in arms, a cot or a pram. A short cot nap may leave a baby overtired. A contact nap can sometimes protect the night by rescuing sleep on a difficult day.</p>
 <p>This is also why “short nap equals overtired” is too simple. A baby can take a short nap after a wake window that was too long, but they can also nap briefly because they were not tired enough yet. The pattern before and after the nap is more useful than the location alone.</p>
 <h2>Are contact naps a bad habit?</h2>
@@ -933,6 +947,7 @@
 <ul><li><a href="/blog/baby-wake-windows-without-stress.html">Baby wake windows without the stress</a></li><li><a href="/blog/what-to-track-when-baby-wakes-at-night.html">What to track when your baby wakes at night</a></li><li><a href="/blog/is-my-baby-ready-to-drop-a-nap.html">Is my baby ready to drop a nap?</a></li><li><a href="/blog/baby-naps-at-nursery-bedtime-plan.html">Baby naps at nursery: a realistic bedtime plan</a></li><li><a href="/blog/simple-baby-bedtime-routine-that-works.html">Build a simple baby bedtime routine</a></li><li><a href="/blog/baby-tracker-widgets-lock-screen-siri.html">Baby tracker widgets: log feeds and naps without opening the app</a></li></ul>
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/sudden-infant-death-syndrome-sids/" target="_blank" rel="noopener noreferrer">NHS: Sudden infant death syndrome (SIDS)</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/your-babys-sleep-patterns/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Your baby&#39;s sleep patterns</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/room-sharing/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Room sharing and safer sleep</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/being-a-parent-or-caregiver/other-carers-babysitters/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Other carers and babysitters</a></li></ul>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_do-contact-naps-ruin-night-sleep"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -964,6 +979,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

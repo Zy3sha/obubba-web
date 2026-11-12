@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,16 @@
 <figure><img src="/obubba-how-looking-good-card-works.svg" alt="The evidence gates behind OBubba’s Looking good with Egg card." loading="lazy"/><figcaption>The card requires three to eight calm recent meals, fewer than two Unsure meals, no recorded reaction in lifetime history and a recent introductory window.</figcaption></figure>
 <h2>The short answer</h2>
 <p>In the current app, <strong>Looking good with Egg</strong> can appear when all of these are true for egg:</p>
-<p>| What the engine checks | Current rule | Why it matters | |---|---:|---| | Clearly calm logged meals | <strong>3 to 8</strong> | One taste is too little for the insight; after eight, the introductory nudge has done its job. | | Meals marked <strong>Unsure</strong> | <strong>Fewer than 2</strong> | Repeated ambiguity should not be turned into reassurance. | | Meals marked <strong>Reaction</strong> | <strong>None</strong> | Any recorded reaction blocks the card. | | Older reaction memory | <strong>None recorded</strong> | A reaction is not forgotten when it leaves the recent timeline. | | Introductory timing | First recent appearance is within the app’s <strong>21-day history window</strong> | The card is for a newly established food, not a forever badge. |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What the engine checks</th><th scope="col">Current rule</th><th scope="col">Why it matters</th></tr></thead>
+<tbody>
+<tr><td>Clearly calm logged meals</td><td><strong>3 to 8</strong></td><td>One taste is too little for the insight; after eight, the introductory nudge has done its job.</td></tr>
+<tr><td>Meals marked <strong>Unsure</strong></td><td><strong>Fewer than 2</strong></td><td>Repeated ambiguity should not be turned into reassurance.</td></tr>
+<tr><td>Meals marked <strong>Reaction</strong></td><td><strong>None</strong></td><td>Any recorded reaction blocks the card.</td></tr>
+<tr><td>Older reaction memory</td><td><strong>None recorded</strong></td><td>A reaction is not forgotten when it leaves the recent timeline.</td></tr>
+<tr><td>Introductory timing</td><td>First recent appearance is within the app’s <strong>21-day history window</strong></td><td>The card is for a newly established food, not a forever badge.</td></tr>
+</tbody>
+</table></div>
 <p>The card then shows the allergen with the strongest qualifying record. Underneath, the app is transparent about sample size: at three or four meals it says <strong>“early read · 3 meals”</strong> or <strong>“early read · 4 meals”;</strong> from five meals it says <strong>“from 5 meals.”</strong></p>
 <p>Those labels are not confidence percentages. They tell you how much of your own saved history produced the message.</p>
 <h2>What counts as a calm meal in the app</h2>
@@ -909,7 +923,14 @@
 <ul><li>the exact food and brand or recipe</li><li>every ingredient and allergen you know was present</li><li>how much was eaten, approximately</li><li>when the meal started and when symptoms appeared</li><li>the symptoms and how they changed</li><li>a photograph, if safe and useful</li><li>illness, medicines and other foods that day</li></ul>
 <p>That history can support a clinician. It cannot replace one.</p>
 <h2>A tiny log that earns honest wording</h2>
-<p>| Day | Food recorded | Response | What egg evidence becomes | |---|---|---|---:| | Monday | Well-cooked omelette strip | Loved it | 1 calm meal | | Thursday | Mashed hard-boiled egg | Blank | 2 calm meals | | Sunday | Scrambled egg | Loved it | 3 calm meals → card may qualify |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Day</th><th scope="col">Food recorded</th><th scope="col">Response</th><th scope="col">What egg evidence becomes</th></tr></thead>
+<tbody>
+<tr><td>Monday</td><td>Well-cooked omelette strip</td><td>Loved it</td><td>1 calm meal</td></tr>
+<tr><td>Thursday</td><td>Mashed hard-boiled egg</td><td>Blank</td><td>2 calm meals</td></tr>
+<tr><td>Sunday</td><td>Scrambled egg</td><td>Loved it</td><td>3 calm meals → card may qualify</td></tr>
+</tbody>
+</table></div>
 <p>Change Sunday to <strong>Unsure</strong> and the calm total stays at two. Add a later calm egg meal and one Unsure still does not block the card. Mark any egg meal <strong>Reaction</strong>, and the card must not appear.</p>
 <p>This is what trustworthy personalisation looks like at small scale: not “OBubba knows egg is safe,” but “OBubba can show exactly which saved pattern allowed this sentence.”</p>
 <p><strong><a href="/baby-weaning-tracker.html">Explore OBubba’s baby weaning tracker →</a></strong> — keep first tastes, recognised allergens, reactions, textures, milk and the rest of the day in one record, with the evidence count visible when the app offers an insight.</p>
@@ -929,6 +950,7 @@
 <h2>Reliable UK sources</h2>
 <ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/food-allergies-in-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Food allergies in babies and young children</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-allergies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Baby food allergies</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/foods-to-avoid-giving-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Foods to avoid giving babies and young children</a></li><li><a href="https://www.nhs.uk/conditions/food-allergy/" target="_blank" rel="noopener noreferrer">NHS: Food allergy</a></li></ul>
 <p><em>This article gives general information for UK families. It is not allergy diagnosis, treatment or an individual reintroduction plan, and OBubba is not a medical device. Follow advice from your baby’s own healthcare or allergy team.</em></p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -960,6 +982,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

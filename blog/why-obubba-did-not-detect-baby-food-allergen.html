@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -871,7 +876,17 @@
 <h2>Why “yellow breakfast” cannot become egg</h2>
 <p>A nickname carries family context that the phone does not have. “Yellow breakfast” might mean scrambled egg, banana porridge, mango yoghurt or something entirely different.</p>
 <p>The same problem appears with descriptions such as:</p>
-<p>| Too vague | More useful for the record | |---|---| | breakfast | scrambled egg, buttered toast | | pouch | chicken pouch — contains milk and celery | | pasta | wheat pasta with tomato and grated cheese | | curry | lentil curry with coconut milk and chapati | | yoghurt bowl | soya yoghurt, banana and smooth peanut butter | | fish dinner | salmon, mash made with cow’s milk and peas |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Too vague</th><th scope="col">More useful for the record</th></tr></thead>
+<tbody>
+<tr><td>breakfast</td><td>scrambled egg, buttered toast</td></tr>
+<tr><td>pouch</td><td>chicken pouch — contains milk and celery</td></tr>
+<tr><td>pasta</td><td>wheat pasta with tomato and grated cheese</td></tr>
+<tr><td>curry</td><td>lentil curry with coconut milk and chapati</td></tr>
+<tr><td>yoghurt bowl</td><td>soya yoghurt, banana and smooth peanut butter</td></tr>
+<tr><td>fish dinner</td><td>salmon, mash made with cow’s milk and peas</td></tr>
+</tbody>
+</table></div>
 <p>You do not need perfect punctuation or a formal recipe. Include the ingredients that change the meaning of the record—especially a newly introduced allergen, a packaged-food allergen, the serving form when texture matters and anything connected with a possible reaction.</p>
 <p>For a homemade meal, a short comma-separated description is enough. For a packet, check the current ingredients each time. Recipes and manufacturing information can change, and the app does not inspect the pack in your hand.</p>
 <h2>Why a familiar baby-food brand may trigger “check the pack”</h2>
@@ -923,7 +938,16 @@
 <ul><li>fork-mashed lentils and tomato — loved it</li><li>omelette strip with grated cheese — unsure</li><li>soya yoghurt with banana — loved it</li><li>cod fishcake containing wheat and milk — reaction; see note</li><li>chicken pouch containing celery — tasted two spoons, no immediate reaction observed</li></ul>
 <p>“No immediate reaction observed” is a factual observation, not a declaration that the food is safe forever. Some reactions can be delayed, and an app cannot assess symptoms.</p>
 <h2>What OBubba can and cannot claim</h2>
-<p>| OBubba can | OBubba cannot | |---|---| | recognise listed dishes and ingredient words | inspect a bowl or read a packet | | show the groups it found before saving | guarantee that no other allergen is present | | keep food, timing, response and groups together | know how much was swallowed | | remember introduced and reacted groups for that baby | diagnose allergy or confirm tolerance | | use the record to shape cautious prompts and ideas | replace labels, supervision or medical advice |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">OBubba can</th><th scope="col">OBubba cannot</th></tr></thead>
+<tbody>
+<tr><td>recognise listed dishes and ingredient words</td><td>inspect a bowl or read a packet</td></tr>
+<tr><td>show the groups it found before saving</td><td>guarantee that no other allergen is present</td></tr>
+<tr><td>keep food, timing, response and groups together</td><td>know how much was swallowed</td></tr>
+<tr><td>remember introduced and reacted groups for that baby</td><td>diagnose allergy or confirm tolerance</td></tr>
+<tr><td>use the record to shape cautious prompts and ideas</td><td>replace labels, supervision or medical advice</td></tr>
+</tbody>
+</table></div>
 <p>That boundary is a feature, not a disclaimer pasted on afterwards. The best parenting technology does not turn a guess into certainty because certainty looks reassuring on a card.</p>
 <h2>The habit that makes the whole app smarter</h2>
 <p>The aim is not to log every crumb. It is to make the entries that matter legible to your future self, your partner and the app.</p>
@@ -942,6 +966,7 @@
 <p>Yes. A mixed meal can contain several recognised groups. For a planned first introduction, however, NHS guidance is to introduce allergy-triggering foods one at a time in small amounts so a reaction is easier to identify.</p>
 <h3>Does a tick mean my baby is not allergic?</h3>
 <p>No. It means the group was recorded as introduced. It is not a test, diagnosis or guarantee of future tolerance.</p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -973,6 +998,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

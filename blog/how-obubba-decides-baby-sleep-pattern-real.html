@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,15 @@
 <figure><img src="/obubba-how-a-sleep-pattern-earns-a-card.svg" alt="A five-stage explanation of the gates a day-to-night relationship must pass before OBubba surfaces it as a sleep pattern." loading="lazy"/><figcaption>A pattern needs usable day-to-night pairs, enough nights on both sides and a meaningful difference before one strongest tendency appears.</figcaption></figure>
 <h2>The short answer: an observation, a pattern and a cause are different things</h2>
 <p>OBubba treats them differently:</p>
-<p>| Stage | What it means | What the app should say | |---|---|---| | <strong>Observation</strong> | one day was followed by one kind of night | “This happened” | | <strong>Repeated relationship</strong> | one daytime factor repeatedly appears beside a different night outcome | “This tends to line up with…” | | <strong>Experiment</strong> | the family changes one measurable lever and watches the right outcome | “Let’s test whether this helps” | | <strong>Cause</strong> | other explanations have been adequately ruled out | not something a family tracker can prove from routine logs |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Stage</th><th scope="col">What it means</th><th scope="col">What the app should say</th></tr></thead>
+<tbody>
+<tr><td><strong>Observation</strong></td><td>one day was followed by one kind of night</td><td>“This happened”</td></tr>
+<tr><td><strong>Repeated relationship</strong></td><td>one daytime factor repeatedly appears beside a different night outcome</td><td>“This tends to line up with…”</td></tr>
+<tr><td><strong>Experiment</strong></td><td>the family changes one measurable lever and watches the right outcome</td><td>“Let’s test whether this helps”</td></tr>
+<tr><td><strong>Cause</strong></td><td>other explanations have been adequately ruled out</td><td>not something a family tracker can prove from routine logs</td></tr>
+</tbody>
+</table></div>
 <p>This is more than careful wording. The current code uses numeric gates that stop a small or flat dataset producing a confident-sounding insight.</p>
 <h2>First, the app builds the right day-to-night pair</h2>
 <p>The unit is not a calendar square in isolation. It is <strong>one day joined to the night that began after it</strong>.</p>
@@ -962,6 +975,7 @@
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/your-babys-sleep-patterns/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Your baby&#39;s sleep patterns</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Safer sleep advice for babies</a></li></ul>
 <p><em>OBubba is a tracking, planning and education tool, not a medical device or proof of causation. Its insights and experiments are optional estimates from logged history. Follow safer-sleep guidance and your baby&#39;s individual clinical plan.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_how-obubba-decides-baby-sleep-pattern-real"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -993,6 +1007,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

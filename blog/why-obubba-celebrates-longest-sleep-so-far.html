@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,17 @@
 <figure><img src="/obubba-longest-sleep-early-read-ladder.svg" alt="How the current engine chooses one early rhythm card in priority order." loading="lazy"/><figcaption>The longest-sleep celebration comes first; daytime feed spacing and wake windows are fallbacks. The early read only runs with 3 to 25 recent loggable moments.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current app can show the longest-sleep celebration when all of these are true:</p>
-<p>| Check | Current rule | What it means | |---|---:|---| | Early-use window | <strong>3–25</strong> loggable moments | There is enough activity for a first observation, but the activation card has not retired | | Calendar window | <strong>Today + previous 6 days</strong> | “So far” means this supplied seven-day snapshot—not lifetime history | | Entry type | A saved <strong>nap or sleep</strong> | Both daytime and night sleep can qualify | | Complete arc | Start and end are present | An open timer cannot produce a duration | | Notable duration | At least <strong>2h 30m</strong> | Short naps do not earn the celebration | | Plausibility cap | No more than <strong>16h</strong> | Very long timer arcs are rejected |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Check</th><th scope="col">Current rule</th><th scope="col">What it means</th></tr></thead>
+<tbody>
+<tr><td>Early-use window</td><td><strong>3–25</strong> loggable moments</td><td>There is enough activity for a first observation, but the activation card has not retired</td></tr>
+<tr><td>Calendar window</td><td><strong>Today + previous 6 days</strong></td><td>“So far” means this supplied seven-day snapshot—not lifetime history</td></tr>
+<tr><td>Entry type</td><td>A saved <strong>nap or sleep</strong></td><td>Both daytime and night sleep can qualify</td></tr>
+<tr><td>Complete arc</td><td>Start and end are present</td><td>An open timer cannot produce a duration</td></tr>
+<tr><td>Notable duration</td><td>At least <strong>2h 30m</strong></td><td>Short naps do not earn the celebration</td></tr>
+<tr><td>Plausibility cap</td><td>No more than <strong>16h</strong></td><td>Very long timer arcs are rejected</td></tr>
+</tbody>
+</table></div>
 <p>If several sleeps qualify, the engine chooses the longest duration. It formats the result plainly—such as <strong>“7h 35m”</strong>—and labels it a low-urgency celebration.</p>
 <p>The card is factual about one saved timer arc. It is not a sleep score, developmental grade or forecast.</p>
 <h2>“So far” is seven days, not all time</h2>
@@ -870,7 +885,14 @@
 <h2>Why it can appear after only three logs</h2>
 <p>The activation gate counts recent entries whose types are feed, nap, sleep, wake, nappy, solids, pump. It needs at least three in total, but the winning sleep observation itself can still be a single timer arc.</p>
 <p>For example:</p>
-<p>| Recent record | Counts toward the 3-log gate? | Can become the longest sleep? | |---|---:|---:| | Night sleep, 20:00–02:45 | Yes | Yes—6h 45m | | Morning bottle | Yes | No | | Wet nappy | Yes | No |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Recent record</th><th scope="col">Counts toward the 3-log gate?</th><th scope="col">Can become the longest sleep?</th></tr></thead>
+<tbody>
+<tr><td>Night sleep, 20:00–02:45</td><td>Yes</td><td>Yes—6h 45m</td></tr>
+<tr><td>Morning bottle</td><td>Yes</td><td>No</td></tr>
+<tr><td>Wet nappy</td><td>Yes</td><td>No</td></tr>
+</tbody>
+</table></div>
 <p>Those three moments are enough to enter the early-use window. The sleep is then the one qualifying arc that supplies the displayed duration.</p>
 <p>That distinction matters. <strong>Three total logs are not three nights of evidence.</strong> The app’s generic trust-caption helper deliberately says nothing for a one-observation sample, so this particular card does not pretend the maximum has statistical confidence.</p>
 <h2>The priority rule parents cannot see</h2>
@@ -881,7 +903,15 @@
 <h2>What the duration calculation actually does</h2>
 <p>For each nap or sleep with two endpoints, subtracts the start minute from the end minute. If the answer is negative, it adds 24 hours so an overnight arc can cross midnight.</p>
 <p>Examples:</p>
-<p>| Saved arc | Calculated duration | Result | |---|---:|---| | 09:10–10:00 | 50m | Too short for this card | | 13:00–15:30 | 2h 30m | Qualifies at the boundary | | 20:00–02:45 | 6h 45m | Qualifies after midnight wrap | | 19:00–12:00 | 17h | Rejected above the 16h cap |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Saved arc</th><th scope="col">Calculated duration</th><th scope="col">Result</th></tr></thead>
+<tbody>
+<tr><td>09:10–10:00</td><td>50m</td><td>Too short for this card</td></tr>
+<tr><td>13:00–15:30</td><td>2h 30m</td><td>Qualifies at the boundary</td></tr>
+<tr><td>20:00–02:45</td><td>6h 45m</td><td>Qualifies after midnight wrap</td></tr>
+<tr><td>19:00–12:00</td><td>17h</td><td>Rejected above the 16h cap</td></tr>
+</tbody>
+</table></div>
 <p>The cap is a useful corruption guard, not proof that every duration below it is accurate. A forgotten timer stopped 15 hours later can still fit inside the function’s allowed range.</p>
 <h2>One timer arc is not necessarily unbroken sleep</h2>
 <p>The longest-sleep detector only sees the saved start and end. It does not subtract events that occurred inside the arc.</p>
@@ -932,6 +962,7 @@
 <h2>Reliable UK sources</h2>
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/your-babys-sleep-patterns/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Your baby’s sleep patterns</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Safer sleep advice for babies</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li></ul>
 <p><em>OBubba records timer arcs and offers general pattern education. It cannot observe sleep, know whether a wake occurred inside an open timer, assess feeding or illness, diagnose a sleep problem, or replace advice from a midwife, health visitor, GP, NHS 111, paediatric or neonatal team.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-celebrates-longest-sleep-so-far"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -963,6 +994,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

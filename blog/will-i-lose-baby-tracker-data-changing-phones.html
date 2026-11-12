@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -872,7 +877,15 @@
 <p>No. The current flow is explicitly an <strong>adoption</strong> of the babies already on the phone.</p>
 <p>If the family record already exists—for example, another device or partner holds events that this phone has not loaded—the merge is additive. The tested merge preserves the cloud-only entry and the local-only entry instead of replacing one side with the other.</p>
 <p>For example:</p>
-<p>| Before protection | After the family merge | |---|---| | Partner&#39;s 6am feed exists in the family archive | 6am feed remains | | This phone has an 8am feed the archive lacks | 8am feed is added | | A second child exists only in the family archive | That sibling remains | | An entry has a recorded deletion marker | The deleted entry stays excluded |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Before protection</th><th scope="col">After the family merge</th></tr></thead>
+<tbody>
+<tr><td>Partner&#39;s 6am feed exists in the family archive</td><td>6am feed remains</td></tr>
+<tr><td>This phone has an 8am feed the archive lacks</td><td>8am feed is added</td></tr>
+<tr><td>A second child exists only in the family archive</td><td>That sibling remains</td></tr>
+<tr><td>An entry has a recorded deletion marker</td><td>The deleted entry stays excluded</td></tr>
+</tbody>
+</table></div>
 <p>That is stronger than “last write wins”. A backup operation should not punish the family member whose phone happened to be a few minutes behind.</p>
 <h2>Username and PIN: the normal sign-in route</h2>
 <p>The protection form asks for a username and four numbers. Email is not required.</p>
@@ -883,7 +896,13 @@
 <p>After successful protection, OBubba shows a code beginning <strong>BK</strong> followed by ten characters. The alphabet avoids easily confused characters such as I, O, 0 and 1.</p>
 <p>Treat this code like an account password. Anyone who obtains a working family recovery credential may be able to restore a broad family record.</p>
 <p>It has a different job from the baby sync code:</p>
-<p>| Code | Current shape | Purpose | |---|---|---| | <strong>Family recovery code</strong> | `BK` + 10 characters; 12 total | Restore the account owner&#39;s family archive on another phone | | <strong>Baby sync code</strong> | 6–8 characters | Connect another carer to one baby&#39;s live shared record |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Code</th><th scope="col">Current shape</th><th scope="col">Purpose</th></tr></thead>
+<tbody>
+<tr><td><strong>Family recovery code</strong></td><td>`BK` + 10 characters; 12 total</td><td>Restore the account owner&#39;s family archive on another phone</td></tr>
+<tr><td><strong>Baby sync code</strong></td><td>6–8 characters</td><td>Connect another carer to one baby&#39;s live shared record</td></tr>
+</tbody>
+</table></div>
 <p>An eight-character sync code can coincidentally begin with “BK”. The validator does not misclassify it as a recovery code unless it has the full 12-character recovery shape.</p>
 <p>For partner setup, use the child&#39;s <strong>Family sharing</strong> invitation. For your own new phone or emergency recovery, use the account sign-in or family BK code. The full shared-care distinction is explained in <a href="/blog/share-baby-tracker-with-partner-without-duplicate-logs.html">how to share a baby tracker without duplicate logs</a>.</p>
 <h2>What happens on the new phone</h2>
@@ -939,6 +958,7 @@
 <h3>What if I already lost the phone without protecting the data?</h3>
 <p>Try any username, recovery email or BK code you previously saved and contact OBubba support with the details you still have. Recovery cannot be guaranteed when the only accessible copy was local and no recovery route was created.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -969,6 +989,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,16 @@
 <figure><img src="/obubba-night-feeds-dropping.jpg" alt="An awake caregiver holds a calm, alert baby upright after a night feed beside a clear cot." loading="lazy"/><figcaption>A falling night-feed count can happen naturally; responsive care and hunger cues still come before an app trend.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current detector needs all of these:</p>
-<p>| Gate | rule | Why it matters | |---|---:|---| | Window | Exactly <strong>14 night slots</strong> | Two seven-night periods must exist | | Logging coverage | At least <strong>4 non-empty nights in each week</strong> | Sparse logging is not treated as fewer feeds | | Qualifying event | Feed entry marked as <strong>night</strong>, excluding dream feeds and solids | Day feeds and planned dream feeds stay out | | Change | Absolute average difference of at least <strong>0.4 feeds per logged night</strong> | A flat or tiny shift stays quiet | | Direction | Newer average is lower | Produces “Night feeds are dropping” |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">rule</th><th scope="col">Why it matters</th></tr></thead>
+<tbody>
+<tr><td>Window</td><td>Exactly <strong>14 night slots</strong></td><td>Two seven-night periods must exist</td></tr>
+<tr><td>Logging coverage</td><td>At least <strong>4 non-empty nights in each week</strong></td><td>Sparse logging is not treated as fewer feeds</td></tr>
+<tr><td>Qualifying event</td><td>Feed entry marked as <strong>night</strong>, excluding dream feeds and solids</td><td>Day feeds and planned dream feeds stay out</td></tr>
+<tr><td>Change</td><td>Absolute average difference of at least <strong>0.4 feeds per logged night</strong></td><td>A flat or tiny shift stays quiet</td></tr>
+<tr><td>Direction</td><td>Newer average is lower</td><td>Produces “Night feeds are dropping”</td></tr>
+</tbody>
+</table></div>
 <p>If the newer average rises by at least 0.4 instead, the same detector can show <strong>“Night feeds have crept up.”</strong></p>
 <figure><img src="/obubba-night-feed-trend-logic.svg" alt="The exact two-week comparison, missing-night guard and 0.4-feed threshold behind OBubba’s night-feed trend." loading="lazy"/><figcaption>The current detector averages qualifying feed entries over logged nights in each seven-slot period; an unlogged night is excluded rather than counted as zero.</figcaption></figure>
 <p>These are product rules, not a clinical night-weaning assessment.</p>
@@ -947,6 +961,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Feeding on demand</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s first solid foods</a></li><li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/breastfeeding/how-to-stop/" target="_blank" rel="noopener noreferrer">NHS: How to stop breastfeeding</a></li><li><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/sleep-and-night-time-resources/caring-for-your-baby-at-night/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly Initiative: Caring for your baby at night</a></li><li><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/%20relationship-building-resources/responsive-feeding-infosheet/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly Initiative: Responsive feeding</a></li></ul>
 <p><em>This article provides general information for UK families. OBubba cannot determine night-weaning readiness, milk transfer, hydration, growth or illness from feed counts. Follow your baby’s cues and advice from your own health visitor, GP, midwife or feeding team.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -977,6 +992,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

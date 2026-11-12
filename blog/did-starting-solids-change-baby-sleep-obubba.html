@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -876,7 +881,14 @@
 <h3>4. It averages wakes per measured night</h3>
 <p>OBubba calculates the mean for each group and rounds each figure to one decimal place. If the result changes from 2.4 wakes before to 1.7 after, the displayed comparison is based on a difference of −0.7 wakes per measured night.</p>
 <p>The label uses three bands:</p>
-<p>| Difference after weaning began | What the card says | |---|---| | down by 0.5 wakes/night or more | “Night wakes are down since weaning began” | | between −0.4 and +0.4 | “Night wakes are steady since weaning began” | | up by 0.5 wakes/night or more | “Night wakes have risen a little since weaning began” |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Difference after weaning began</th><th scope="col">What the card says</th></tr></thead>
+<tbody>
+<tr><td>down by 0.5 wakes/night or more</td><td>“Night wakes are down since weaning began”</td></tr>
+<tr><td>between −0.4 and +0.4</td><td>“Night wakes are steady since weaning began”</td></tr>
+<tr><td>up by 0.5 wakes/night or more</td><td>“Night wakes have risen a little since weaning began”</td></tr>
+</tbody>
+</table></div>
 <p>The threshold prevents a tiny rounding wobble from being presented as a meaningful direction.</p>
 <h2>Where to find it in OBubba</h2>
 <p>Open <strong>Care → Weaning</strong>, then scroll to <strong>Weaning progress</strong>. The card appears after at least one solid has been logged. It combines the age-stage texture guide with iron-rich meals, unique foods, days since weaning began and, when there is enough sleep evidence, the before-and-after night-wake line.</p>
@@ -936,6 +948,7 @@
 <h2>Sources</h2>
 <ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s first solid foods</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/what-to-feed-your-baby/from-around-6-months/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Feeding from around 6 months</a></li><li><a href="https://jamanetwork.com/journals/jamapediatrics/fullarticle/2686726" target="_blank" rel="noopener noreferrer">Perkin et al., JAMA Pediatrics: early introduction of solids and infant sleep</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/29987321/" target="_blank" rel="noopener noreferrer">PubMed record for the EAT sleep secondary analysis</a></li></ul>
 <p><em>This article provides general information for UK families. It does not replace individual feeding, sleep or medical advice. OBubba is a tracking and pattern-support app, not a medical device.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_did-starting-solids-change-baby-sleep-obubba"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -967,6 +980,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

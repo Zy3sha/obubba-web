@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -868,7 +873,15 @@
 <h2>What the OBubba loop actually does</h2>
 <p>We traced the live widget rather than describing a generic meditation feature.</p>
 <p>The exercise has four equal phases:</p>
-<p>| Phase | On-screen cue | Time | Circle movement | |---|---|---:|---| | 1 | <strong>Breathe in…</strong> | 4 seconds | Expands | | 2 | <strong>Hold…</strong> | 4 seconds | Stays open | | 3 | <strong>Breathe out…</strong> | 4 seconds | Contracts | | 4 | <strong>Hold…</strong> | 4 seconds | Stays small |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Phase</th><th scope="col">On-screen cue</th><th scope="col">Time</th><th scope="col">Circle movement</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Breathe in…</strong></td><td>4 seconds</td><td>Expands</td></tr>
+<tr><td>2</td><td><strong>Hold…</strong></td><td>4 seconds</td><td>Stays open</td></tr>
+<tr><td>3</td><td><strong>Breathe out…</strong></td><td>4 seconds</td><td>Contracts</td></tr>
+<tr><td>4</td><td><strong>Hold…</strong></td><td>4 seconds</td><td>Stays small</td></tr>
+</tbody>
+</table></div>
 <p>The full cycle lasts <strong>16 seconds</strong> and repeats until you press <strong>Stop</strong>. Stopping resets the animation to its resting state. There is no audio, streak, score, completion target or claim that one cycle has solved the worry.</p>
 <figure><img src="/obubba-pregnancy-breathing-choice-map.svg" alt="A visual explainer of OBubba&#39;s four equal breathing phases and the decision that should follow the pause." loading="lazy"/><figcaption>Sixteen seconds can create a pause. The useful outcome is an honest next step—not proving that a symptom is safe.</figcaption></figure>
 <p>The expanding circle gives your eyes one simple object to follow. That matters on a tired night: the parent does not have to count, remember the next phase or unlock a separate meditation subscription.</p>
@@ -924,6 +937,7 @@
 <ul><li><a href="https://www.nhs.uk/pregnancy/mental-health-in-pregnancy-and-after-the-birth/anxiety-in-pregnancy/" target="_blank" rel="noopener noreferrer">NHS: Anxiety in pregnancy</a></li><li><a href="https://www.nhs.uk/pregnancy/common-symptoms/tiredness/" target="_blank" rel="noopener noreferrer">NHS: Tiredness and sleep problems in pregnancy</a></li><li><a href="https://www.nhs.uk/best-start-in-life/pregnancy/preparing-for-labour-and-birth/pain-relief-and-medication-during-labour/" target="_blank" rel="noopener noreferrer">NHS: Pain relief during labour</a></li><li><a href="https://www.nhs.uk/pregnancy/labour-and-birth/signs-that-labour-has-begun/" target="_blank" rel="noopener noreferrer">NHS: Signs that labour has begun</a></li><li><a href="https://www.nhs.uk/pregnancy/keeping-well/your-babys-movements/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s movements</a></li><li><a href="https://www.nhs.uk/conditions/pre-eclampsia/" target="_blank" rel="noopener noreferrer">NHS: Pre-eclampsia</a></li><li>Current OBubba implementation reviewed: `pregnancy_wellbeing.dart`, `pregnancy_home.dart` and `pregnancy_ui_compile_test.dart`</li></ul>
 <p><em>OBubba provides general information, organisation and wellbeing prompts. It does not monitor a pregnancy, diagnose anxiety, confirm that a symptom is safe, assess labour or replace a midwife, maternity unit, GP, NHS 111 or emergency care.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -954,6 +968,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

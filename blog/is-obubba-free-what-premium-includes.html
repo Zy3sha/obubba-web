@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -876,7 +881,21 @@
 <h2>What Premium unlocks</h2>
 <figure><img src="/obubba-premium-paywall-app.jpg" alt="The real OBubba Premium screen showing its four main benefit areas, three UK plan choices and the promise that core tracking stays free." loading="lazy"/><figcaption>Current debug-harness capture with a fictional baby profile. StoreKit supplies live local prices in production; this review screen uses the app’s public UK preview prices.</figcaption></figure>
 <p>Premium is not “the same log without adverts”. It unlocks the interpretation and planning layer built on top of those logs.</p>
-<p>| Premium area | What changes in the current app | |---|---| | Exact sleep timing | The clock can show the predicted next nap or bedtime target rather than only the free tracking state | | Live readiness | The nap-and-feed readiness meter opens instead of showing its Premium explanation | | Tomorrow’s plan | The Plan panel maps predicted naps, wind-down and bedtime; the evening can preview tomorrow | | Guidance | The fuller Guidance panel, correlations and selected sleep or feeding deep-dives open | | Tonight’s Story | The personalised evening summary opens from its free teaser banner | | Luna | The conversational coach can answer from the baby’s real logged day | | Sleep Consultant | A personalised 14-day sleep-plan flow becomes available | | Night Weaning | The readiness-aware, seven-night plan opens when the family chooses that path | | Weaning recipes | The weekly personalised recipe set expands beyond the two free suggestions | | Premium on another baby | A baby can be added as Free from the Track baby switcher; deeper guidance on that baby needs its own valid Premium access |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Premium area</th><th scope="col">What changes in the current app</th></tr></thead>
+<tbody>
+<tr><td>Exact sleep timing</td><td>The clock can show the predicted next nap or bedtime target rather than only the free tracking state</td></tr>
+<tr><td>Live readiness</td><td>The nap-and-feed readiness meter opens instead of showing its Premium explanation</td></tr>
+<tr><td>Tomorrow’s plan</td><td>The Plan panel maps predicted naps, wind-down and bedtime; the evening can preview tomorrow</td></tr>
+<tr><td>Guidance</td><td>The fuller Guidance panel, correlations and selected sleep or feeding deep-dives open</td></tr>
+<tr><td>Tonight’s Story</td><td>The personalised evening summary opens from its free teaser banner</td></tr>
+<tr><td>Luna</td><td>The conversational coach can answer from the baby’s real logged day</td></tr>
+<tr><td>Sleep Consultant</td><td>A personalised 14-day sleep-plan flow becomes available</td></tr>
+<tr><td>Night Weaning</td><td>The readiness-aware, seven-night plan opens when the family chooses that path</td></tr>
+<tr><td>Weaning recipes</td><td>The weekly personalised recipe set expands beyond the two free suggestions</td></tr>
+<tr><td>Premium on another baby</td><td>A baby can be added as Free from the Track baby switcher; deeper guidance on that baby needs its own valid Premium access</td></tr>
+</tbody>
+</table></div>
 <p>The distinction matters. <strong>Free remembers what happened. Premium spends more of the app’s work on what may help next.</strong></p>
 <p>Neither tier observes the baby, measures sleep or diagnoses why a night was difficult. Premium reads parent-entered records and applies the app’s rules and pattern engines. A more detailed answer can still be uncertain when the history is sparse, unusual or wrong.</p>
 <h2>How the free early phase actually works</h2>
@@ -889,7 +908,14 @@
 <p>That is a small implementation detail with a humane outcome: installing during pregnancy should not silently consume a trial that ends before the baby arrives.</p>
 <h2>How much does OBubba Premium cost?</h2>
 <p>The genuine paywall has three plan shapes: monthly, yearly and lifetime. Its UK review mode currently displays:</p>
-<p>| Plan | UK review price | Billing note shown in app | |---|---:|---| | Monthly | £7.99 | billed monthly | | Yearly | £79.99 | £6.67 a month | | Lifetime | £129.99 | one payment |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Plan</th><th scope="col">UK review price</th><th scope="col">Billing note shown in app</th></tr></thead>
+<tbody>
+<tr><td>Monthly</td><td>£7.99</td><td>billed monthly</td></tr>
+<tr><td>Yearly</td><td>£79.99</td><td>£6.67 a month</td></tr>
+<tr><td>Lifetime</td><td>£129.99</td><td>one payment</td></tr>
+</tbody>
+</table></div>
 <p>These are the app’s current public preview values, not a promise that every storefront or future version has the same price. The production paywall reads the product and currency from Apple or Google. Check the confirmation sheet on your own device before buying; that is the price you are agreeing to.</p>
 <p>The <a href="https://apps.apple.com/app/id6760968757" target="_blank" rel="noopener noreferrer">App Store listing</a> currently labels OBubba <strong>Free · In-App Purchases</strong>. <a href="https://play.google.com/store/apps/details?id=com.obubba.app&amp;referrer=utm_source%3Downed_search%26utm_medium%3Dseo%26utm_campaign%3Dfrom_bump_to_baby_auto%26utm_content%3Dis_obubba_free" target="_blank" rel="noopener noreferrer">Google Play</a> likewise lists in-app purchases and describes free core tracking. Currency, tax and product availability can vary by country and platform.</p>
 <p>Monthly and yearly subscriptions renew unless cancelled through the store. Lifetime is one payment. The paywall includes <strong>Restore purchases</strong>, Terms and Privacy links; restoring checks for an existing entitlement and does not create a new charge.</p>
@@ -938,6 +964,7 @@
 <ul><li>Current surfaces reviewed: the shared paywall, Premium provider, Track gates, Care catalogue, Weaning screen, Luna lock and multi-baby route.</li><li>A pre-publication source audit on 5 September 2026 checked the current entitlement provider, paywall, store-product IDs and both add-baby routes. Because this article is scheduled for May 2027, the product and live storefront prices must be checked again before publication.</li><li>The paywall image above is a genuine repository debug-harness capture on an iPhone simulator using fictional profile data. Production prices come from the device storefront.</li></ul>
 <p><em>Commercial features and prices can change. Check the installed app and the Apple or Google purchase confirmation for the current offer. OBubba is a tracking, planning and educational tool; it does not observe your baby, diagnose a condition or replace advice from a midwife, health visitor, GP or another qualified professional.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -968,6 +995,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

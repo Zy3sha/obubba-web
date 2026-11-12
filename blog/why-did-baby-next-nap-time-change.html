@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -862,7 +867,17 @@
 <p>If a nap ends at 10:00 instead of 10:45, the rest of the day has a different starting point. Keeping every later sleep at the original clock time may create a much longer awake stretch than intended.</p>
 <p>That is why “the prediction moved” is often evidence that the tracker is listening—not evidence that it is unreliable.</p>
 <h2>Six reasons a next nap can move</h2>
-<p>| What changed | What may happen to the next target | Why | |---|---|---| | Morning wake was 30 minutes later | It usually moves later | the whole nap day has a later anchor | | A genuinely short nap ended early | It may move earlier | some sleep pressure remains and the next awake stretch may need shortening | | A short nap followed a clearly too-short awake stretch | It may move later, not earlier | baby may have gone down before enough sleep pressure built | | A long, restorative nap ended later | It may move later—or remove a later nap | more sleep pressure was cleared and more day sleep is already banked | | Last night was highly fragmented | The first one or two targets may move slightly earlier | the day may need gentler awake stretches while baby recovers | | The final nap no longer fits before bedtime | The app may prefer a bridge nap or earlier bedtime | a full late nap can leave too little awake time before night sleep |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What changed</th><th scope="col">What may happen to the next target</th><th scope="col">Why</th></tr></thead>
+<tbody>
+<tr><td>Morning wake was 30 minutes later</td><td>It usually moves later</td><td>the whole nap day has a later anchor</td></tr>
+<tr><td>A genuinely short nap ended early</td><td>It may move earlier</td><td>some sleep pressure remains and the next awake stretch may need shortening</td></tr>
+<tr><td>A short nap followed a clearly too-short awake stretch</td><td>It may move later, not earlier</td><td>baby may have gone down before enough sleep pressure built</td></tr>
+<tr><td>A long, restorative nap ended later</td><td>It may move later—or remove a later nap</td><td>more sleep pressure was cleared and more day sleep is already banked</td></tr>
+<tr><td>Last night was highly fragmented</td><td>The first one or two targets may move slightly earlier</td><td>the day may need gentler awake stretches while baby recovers</td></tr>
+<tr><td>The final nap no longer fits before bedtime</td><td>The app may prefer a bridge nap or earlier bedtime</td><td>a full late nap can leave too little awake time before night sleep</td></tr>
+</tbody>
+</table></div>
 <p>The important word is <strong>may</strong>. A short nap does not always mean “next nap earlier”, because the wake window before that nap matters too.</p>
 <h2>The counter-intuitive case: a short nap can move the next nap later</h2>
 <p>Imagine a nine-month-old wakes at 7am and is put down at 8:45—much earlier than their recent successful first naps. They take 20 minutes to fall asleep, sleep for 30 minutes and wake happy.</p>
@@ -951,6 +966,7 @@
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/bonding-with-your-baby/understanding-your-baby/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Understanding your baby</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Safer sleep advice for babies</a></li><li><a href="https://aasm.org/wp-content/uploads/2017/10/child-sleep-duration-health-advisory.pdf" target="_blank" rel="noopener noreferrer">American Academy of Sleep Medicine: Child sleep-duration health advisory</a></li></ul>
 <p><em>OBubba is a tracking and education tool, not medical advice. Seek qualified help for concerns about unusual sleepiness, breathing, illness, feeding, growth, wet nappies or development, and follow your baby&#39;s individual clinical plan.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-did-baby-next-nap-time-change"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -982,6 +998,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

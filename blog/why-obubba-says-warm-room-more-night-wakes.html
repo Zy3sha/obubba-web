@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -871,7 +876,15 @@
 <h2>Why the app ignores thin data</h2>
 <p>One rough warm night proves very little. The baby might also have been teething, unwell, overtired, hungry, travelling or learning something new.</p>
 <p>OBubba therefore requires:</p>
-<p>| Evidence gate | Current requirement | Why it matters | |---|---:|---| | Warm nights | At least 3 | One hot night is not called a pattern | | Other temperature-tagged nights | At least 4 | The baby needs their own comparison group | | Wake difference | Warm average at least 0.5 higher | Tiny variation stays silent | | Look-back | Previous 14 days | The comparison remains recent |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Evidence gate</th><th scope="col">Current requirement</th><th scope="col">Why it matters</th></tr></thead>
+<tbody>
+<tr><td>Warm nights</td><td>At least 3</td><td>One hot night is not called a pattern</td></tr>
+<tr><td>Other temperature-tagged nights</td><td>At least 4</td><td>The baby needs their own comparison group</td></tr>
+<tr><td>Wake difference</td><td>Warm average at least 0.5 higher</td><td>Tiny variation stays silent</td></tr>
+<tr><td>Look-back</td><td>Previous 14 days</td><td>The comparison remains recent</td></tr>
+</tbody>
+</table></div>
 <p>Today is excluded because an in-progress day or night is not a fair comparison with completed nights.</p>
 <p>Untagged nights are also excluded from the temperature groups. Missing temperature information is not silently treated as Cool.</p>
 <h2>It compares the night—not a warm daytime nap</h2>
@@ -896,7 +909,13 @@
 <p>OBubba also has a genuine <strong>Safe Sleep</strong> screen. It accepts an actual room-temperature value and offers a sleepwear-oriented room check, alongside safer-sleep essentials.</p>
 <figure><img src="/obubba-warm-room-safe-sleep-app.jpg" alt="The current OBubba Safe Sleep screen with a room-temperature field, Celsius or Fahrenheit choice and a visual cool-to-warm scale." loading="lazy"/><figcaption>The Safe Sleep screen uses an entered temperature; the warm-room correlation separately compares the optional Cool, Just right and Warm tags saved with bedtime logs.</figcaption></figure>
 <p>These are related but different features:</p>
-<p>| Feature | Input | Purpose | |---|---|---| | Bedtime environment tag | Cool, Just right or Warm | Learn whether this baby&#39;s tagged warm nights coincide with more wakes | | Safe Sleep room check | A temperature entered in °C or °F | Help a parent think about sleepwear and the room tonight |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Feature</th><th scope="col">Input</th><th scope="col">Purpose</th></tr></thead>
+<tbody>
+<tr><td>Bedtime environment tag</td><td>Cool, Just right or Warm</td><td>Learn whether this baby&#39;s tagged warm nights coincide with more wakes</td></tr>
+<tr><td>Safe Sleep room check</td><td>A temperature entered in °C or °F</td><td>Help a parent think about sleepwear and the room tonight</td></tr>
+</tbody>
+</table></div>
 <p>Neither turns a phone into a room thermometer. Measure the room itself.</p>
 <h2>What about light and noise?</h2>
 <p>The current bedtime sheet stores Light and Noise alongside Room temperature, but this specific cross-night detector only uses the temperature tag.</p>
@@ -904,7 +923,15 @@
 <p>That restraint is deliberate. A trustworthy baby app should tell you what it used, what it ignored and how much evidence it required.</p>
 <h2>A seven-night temperature check</h2>
 <p>If the card appears, try this simple review:</p>
-<p>| Each bedtime | Each morning | |---|---| | Read the room thermometer | Check the resolved wake count | | Log the temperature category consistently | Note illness, travel or an unusual bedtime | | Use clothing appropriate to the room | Avoid judging the night by one wake alone | | Keep the rest of the routine broadly stable | Review the group after several nights |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Each bedtime</th><th scope="col">Each morning</th></tr></thead>
+<tbody>
+<tr><td>Read the room thermometer</td><td>Check the resolved wake count</td></tr>
+<tr><td>Log the temperature category consistently</td><td>Note illness, travel or an unusual bedtime</td></tr>
+<tr><td>Use clothing appropriate to the room</td><td>Avoid judging the night by one wake alone</td></tr>
+<tr><td>Keep the rest of the routine broadly stable</td><td>Review the group after several nights</td></tr>
+</tbody>
+</table></div>
 <p>The goal is not to create a perfect experiment while exhausted. It is to stop guessing whether “the room felt stuffy” and give one safe, plausible lever a fair test.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — track the night, add optional room context and get a personal pattern only when the comparison is strong enough to be useful.</p>
 <h2>Quick answers</h2>
@@ -920,6 +947,7 @@
 <p>No. It is an association in the baby&#39;s own recent logs. Other changes may explain part or all of the difference.</p>
 <h3>Does OBubba analyse the Dark and White noise tags too?</h3>
 <p>Not in this detector. The current cross-night comparison uses Room temperature only.</p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-says-warm-room-more-night-wakes"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -951,6 +979,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

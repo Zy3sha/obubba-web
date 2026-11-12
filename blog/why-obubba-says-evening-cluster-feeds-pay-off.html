@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,16 @@
 <figure><img src="/obubba-evening-cluster-feeds-pay-off.jpg" alt="An alert parent securely holds a calm baby after an evening feed." loading="lazy"/><figcaption>A feed-heavy evening may precede a calmer first stretch, but the relationship needs several nights and does not prove cause.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current insight stays silent unless all of these are true:</p>
-<p>| Gate | Current rule | Why it matters | |---|---:|---| | Evening cluster | At least <strong>3 qualifying feed entries</strong> after 5pm within one <strong>90-minute</strong> span | Two close feeds are not called a cluster | | Measurable first stretch | The night has a bedtime and a recorded first wake | The app needs bedtime-to-first-wake minutes | | Cluster sample | At least <strong>3 cluster nights</strong> | One lucky evening is not enough | | Comparison sample | At least <strong>2 other nights</strong> | The app needs a personal alternative | | Difference | Cluster-night median is at least <strong>30 minutes longer</strong> | Equal, worse or tiny differences produce no card |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">Current rule</th><th scope="col">Why it matters</th></tr></thead>
+<tbody>
+<tr><td>Evening cluster</td><td>At least <strong>3 qualifying feed entries</strong> after 5pm within one <strong>90-minute</strong> span</td><td>Two close feeds are not called a cluster</td></tr>
+<tr><td>Measurable first stretch</td><td>The night has a bedtime and a recorded first wake</td><td>The app needs bedtime-to-first-wake minutes</td></tr>
+<tr><td>Cluster sample</td><td>At least <strong>3 cluster nights</strong></td><td>One lucky evening is not enough</td></tr>
+<tr><td>Comparison sample</td><td>At least <strong>2 other nights</strong></td><td>The app needs a personal alternative</td></tr>
+<tr><td>Difference</td><td>Cluster-night median is at least <strong>30 minutes longer</strong></td><td>Equal, worse or tiny differences produce no card</td></tr>
+</tbody>
+</table></div>
 <p>The caller looks across up to <strong>21 recent nights</strong>. It compares medians rather than averages, which makes one exceptionally long or short stretch less dominant.</p>
 <figure><img src="/obubba-evening-cluster-payoff-logic.svg" alt="The exact five gates behind OBubba’s evening cluster-feed comparison." loading="lazy"/><figcaption>The detector pairs evening feed clusters with bedtime-to-first-wake duration, then requires three cluster nights, two comparison nights and a 30-minute median advantage.</figcaption></figure>
 <p>These are product thresholds—not medical definitions of cluster feeding or evidence that extra milk creates sleep.</p>
@@ -882,7 +896,13 @@
 <p>The card’s sample label counts only the usable nights passed to it. It is not necessarily the number of complete nights in the family’s history.</p>
 <h2>A worked example</h2>
 <p>Suppose the usable history contains:</p>
-<p>| Night type | First stretches | Median | |---|---|---:| | Evening cluster | 4h, 4h 10m, 4h 20m | <strong>4h 10m</strong> | | Other evenings | 2h 30m, 2h 50m | <strong>2h 40m</strong> |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Night type</th><th scope="col">First stretches</th><th scope="col">Median</th></tr></thead>
+<tbody>
+<tr><td>Evening cluster</td><td>4h, 4h 10m, 4h 20m</td><td><strong>4h 10m</strong></td></tr>
+<tr><td>Other evenings</td><td>2h 30m, 2h 50m</td><td><strong>2h 40m</strong></td></tr>
+</tbody>
+</table></div>
 <p>The median difference is 90 minutes, so the card can qualify. It would show a confidence label such as <strong>“3 cluster nights vs 2 other.”</strong></p>
 <p>Change the cluster median to 3h 05m and the other median to 2h 40m. The difference is 25 minutes, below the product’s 30-minute gate, so the detector stays silent.</p>
 <p>If cluster nights are equal or worse, it also stays silent. The engine never produces a negative “cluster feeds made sleep worse” version from this detector.</p>
@@ -939,6 +959,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/cluster-feeding/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Cluster feeding</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Feeding on demand</a></li><li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/breastfeeding-problems/enough-milk/" target="_blank" rel="noopener noreferrer">NHS: Is my baby getting enough breast milk?</a></li><li><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/%20relationship-building-resources/responsive-feeding-infosheet/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly Initiative: Responsive feeding</a></li><li><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/implementing-standards-resources/breastfeeding-assessment-tools/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly Initiative: Breastfeeding assessment tools</a></li></ul>
 <p><em>This article provides general information for UK families. OBubba cannot measure milk transfer, assess attachment, diagnose low supply or guarantee sleep. Follow advice from your baby’s own midwife, health visitor, GP, neonatal or feeding team.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -969,6 +990,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

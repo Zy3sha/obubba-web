@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -855,7 +860,16 @@
 <p><strong>A useful newborn night shift gives one adult clear responsibility while the other gets a protected block of rest.</strong> It must still preserve responsive feeding, your individual breastfeeding or medical plan and safer sleep. Before swapping, hand over only the facts that change the next decision: last effective feed, nappy, sleep state, medicine, anything unusual and who is now on duty.</p>
 <p>The goal is not an equal number of wakes. It is two adults who can function safely and a baby whose needs remain central.</p>
 <h2>Choose the shift shape that matches feeding</h2>
-<p>| Night-shift pattern | Can work well when | Important limitation | |---|---|---| | Early shift / late shift | One adult sleeps early while the other handles the evening, then they swap | A breastfeeding parent may still need to feed or express during their protected block | | Alternate complete wakes | Either adult can safely provide the planned feed and resettle | Both adults may keep waking unless rooms and responsibilities are genuinely separate | | Feeding parent + support parent | Breastfeeding is being established and baby feeds directly | The support parent owns lifting, changing, winding, settling, water and logging, not passive supervision | | One overnight adult + early-morning relief | One parent copes better at night and the other can start early | The overnight adult still needs a defined recovery block later | | Friend or relative daytime shift | A single parent or couple needs sleep but feeding limits overnight cover | The helper must receive safer-sleep, feeding, medicine and emergency instructions |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Night-shift pattern</th><th scope="col">Can work well when</th><th scope="col">Important limitation</th></tr></thead>
+<tbody>
+<tr><td>Early shift / late shift</td><td>One adult sleeps early while the other handles the evening, then they swap</td><td>A breastfeeding parent may still need to feed or express during their protected block</td></tr>
+<tr><td>Alternate complete wakes</td><td>Either adult can safely provide the planned feed and resettle</td><td>Both adults may keep waking unless rooms and responsibilities are genuinely separate</td></tr>
+<tr><td>Feeding parent + support parent</td><td>Breastfeeding is being established and baby feeds directly</td><td>The support parent owns lifting, changing, winding, settling, water and logging, not passive supervision</td></tr>
+<tr><td>One overnight adult + early-morning relief</td><td>One parent copes better at night and the other can start early</td><td>The overnight adult still needs a defined recovery block later</td></tr>
+<tr><td>Friend or relative daytime shift</td><td>A single parent or couple needs sleep but feeding limits overnight cover</td><td>The helper must receive safer-sleep, feeding, medicine and emergency instructions</td></tr>
+</tbody>
+</table></div>
 <p>There is no universal 9pm-to-2am schedule. A premature baby, newborn under a feeding plan, baby with jaundice or slow weight gain, or parent establishing milk supply may need feeds or expressing at intervals set by their clinical team. Build shifts around that plan rather than stretching feeds to protect the timetable.</p>
 <h2>Newborn wakes are not a scheduling failure</h2>
 <p>The NHS says newborn babies wake repeatedly during the first few months and need to feed little and often. Their sleep comes in short bursts and does not yet fit adult night and day.</p>
@@ -907,7 +921,17 @@
 <ul><li>likely next nap and bedtime from the current day plan</li><li>a short summary of last night</li><li>the settling approaches most often recorded as helpful</li><li>recorded conditions and lifetime food-reaction warnings</li><li>names of medicines logged today or yesterday</li><li>current developmental phase and one useful non-wellbeing insight</li></ul>
 <p>The briefing deliberately does <strong>not</strong> replace the exact timeline. It does not list a medicine dose or administration time, and it does not currently provide the last feed or nappy as a verified handover field. Those details must come from the live log and the adults&#39; closed-loop check.</p>
 <p>That limitation is important: “Recent medicine: paracetamol” is a warning to verify, not permission to give another dose.</p>
-<p>| OBubba can help with | The adults still must confirm | |---|---| | One live feed, sleep and nappy timeline across phones | Whether a real-world event was entered correctly | | Preserving a valid overnight timer and pause | Whether baby is currently asleep and safely positioned | | Learning commonly recorded settling methods | What this wake needs tonight | | Carrying older recorded food reactions into the Watch list | The current allergy action plan and safe foods | | Showing names of medicines used recently | Product, dose, exact time and whether another dose is due | | Copying a concise carer briefing | Emergency contacts and individual clinical instructions |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">OBubba can help with</th><th scope="col">The adults still must confirm</th></tr></thead>
+<tbody>
+<tr><td>One live feed, sleep and nappy timeline across phones</td><td>Whether a real-world event was entered correctly</td></tr>
+<tr><td>Preserving a valid overnight timer and pause</td><td>Whether baby is currently asleep and safely positioned</td></tr>
+<tr><td>Learning commonly recorded settling methods</td><td>What this wake needs tonight</td></tr>
+<tr><td>Carrying older recorded food reactions into the Watch list</td><td>The current allergy action plan and safe foods</td></tr>
+<tr><td>Showing names of medicines used recently</td><td>Product, dose, exact time and whether another dose is due</td></tr>
+<tr><td>Copying a concise carer briefing</td><td>Emergency contacts and individual clinical instructions</td></tr>
+</tbody>
+</table></div>
 <p>Access is per child. A partner joining one baby&#39;s code does not automatically receive every child on the owner&#39;s account. When access should end, replacing the sync code disconnects everyone on the old code; trusted carers who still need access must be re-invited.</p>
 <p>Read the full <a href="/blog/share-baby-tracker-with-partner-without-duplicate-logs.html">two-parent live-sync setup</a> before the first night rather than troubleshooting at 2am.</p>
 <p><strong><a href="/app.html?utm_source=newborn_night_shifts_article&amp;utm_medium=owned_search&amp;utm_campaign=from_bump_to_baby_auto&amp;utm_content=auto_20261102_newborn_night_shifts">Start tracking the night together →</a></strong></p>
@@ -928,6 +952,7 @@
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/baby/support-and-services/sleep-and-tiredness-after-having-a-baby/" target="_blank" rel="noopener noreferrer">NHS: Sleep and tiredness after having a baby</a></li><li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/breastfeeding/the-first-few-days/" target="_blank" rel="noopener noreferrer">NHS: Breastfeeding, the first few days</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/breastfeeding/breastfeeding-challenges/milk-supply/" target="_blank" rel="noopener noreferrer">NHS: Milk supply</a></li><li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/bottle-feeding/making-up-baby-formula/" target="_blank" rel="noopener noreferrer">NHS: How to make up baby formula</a></li><li><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/sleep-and-night-time-resources/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly Initiative: Caring for your baby at night</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Safer sleep for babies</a></li></ul>
 <p><em>OBubba supports organisation, tracking and family handovers. It does not verify feeds, assess milk transfer or supply, supervise sleep, calculate medicine doses, diagnose illness or replace a midwife, health visitor, breastfeeding specialist, pharmacist, GP, NHS 111 or emergency care.</em></p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -959,6 +984,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,23 @@
 <p>Milk remains important throughout the first year. Christmas lunch does not need to become a bigger-than-usual meal, a first-food challenge or a replacement for the baby’s familiar milk feed.</p>
 <p>&gt; <strong>Cook one meal; create the baby portion at the safe fork in the recipe—before salt, gravy and adult finishing touches.</strong></p>
 <h2>The Christmas dinner plate: serve, adapt or skip?</h2>
-<p>| Christmas food | Baby-friendly decision | How to adapt it | |---|---|---| | <strong>Turkey</strong> | <strong>Serve</strong> | cook thoroughly; remove every bone, skin and tough piece; shred very finely or cut into thin moist strips suited to the baby’s skills | | <strong>Potato</strong> | <strong>Serve</strong> | offer plain mash, a soft wedge or the squashable middle of a roast potato; avoid a hard, crisp piece for an early eater | | <strong>Carrot or parsnip</strong> | <strong>Serve</strong> | steam, boil or roast until it squashes easily; mash or offer a soft narrow baton | | <strong>Broccoli</strong> | <strong>Serve</strong> | cook until very soft; a floret with a handle may suit a confident self-feeder, while mash suits an earlier stage | | <strong>Brussels sprouts</strong> | <strong>Adapt</strong> | cook very soft, then shred, flatten or mash; do not put a firm whole round sprout on the baby’s plate | | <strong>Stuffing</strong> | <strong>Check carefully</strong> | ingredients may include salty stock, sausage meat, wheat, egg or nuts; use only a fully cooked, low-salt, soft version with known ingredients | | <strong>Gravy</strong> | <strong>Usually skip</strong> | stock cubes, gravy granules and meat juices can make it very salty; loosen baby’s food with water or their usual milk instead | | <strong>Pigs in blankets</strong> | <strong>Better swapped</strong> | processed sausage and bacon are salty; plain turkey is the easier protein. If sausage is offered to an older, experienced eater, remove skin and cut into short thin strips lengthways | | <strong>Yorkshire pudding</strong> | <strong>Occasional small taste</strong> | only when its egg, milk and wheat ingredients have been considered; choose a soft piece rather than a hard crisp edge | | <strong>Bread sauce</strong> | <strong>Check carefully</strong> | often contains milk, wheat and salt; use a small amount only if the recipe suits the baby and relevant allergens are already understood | | <strong>Cranberry sauce</strong> | <strong>Skip or use very little</strong> | commercial versions are often high in added sugar; plain soft fruit is simpler | | <strong>Christmas pudding or mince pie</strong> | <strong>Skip for a baby</strong> | may combine added sugar, dried fruit, alcohol, honey, nuts and several allergens; it offers complexity rather than a useful first taste |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Christmas food</th><th scope="col">Baby-friendly decision</th><th scope="col">How to adapt it</th></tr></thead>
+<tbody>
+<tr><td><strong>Turkey</strong></td><td><strong>Serve</strong></td><td>cook thoroughly; remove every bone, skin and tough piece; shred very finely or cut into thin moist strips suited to the baby’s skills</td></tr>
+<tr><td><strong>Potato</strong></td><td><strong>Serve</strong></td><td>offer plain mash, a soft wedge or the squashable middle of a roast potato; avoid a hard, crisp piece for an early eater</td></tr>
+<tr><td><strong>Carrot or parsnip</strong></td><td><strong>Serve</strong></td><td>steam, boil or roast until it squashes easily; mash or offer a soft narrow baton</td></tr>
+<tr><td><strong>Broccoli</strong></td><td><strong>Serve</strong></td><td>cook until very soft; a floret with a handle may suit a confident self-feeder, while mash suits an earlier stage</td></tr>
+<tr><td><strong>Brussels sprouts</strong></td><td><strong>Adapt</strong></td><td>cook very soft, then shred, flatten or mash; do not put a firm whole round sprout on the baby’s plate</td></tr>
+<tr><td><strong>Stuffing</strong></td><td><strong>Check carefully</strong></td><td>ingredients may include salty stock, sausage meat, wheat, egg or nuts; use only a fully cooked, low-salt, soft version with known ingredients</td></tr>
+<tr><td><strong>Gravy</strong></td><td><strong>Usually skip</strong></td><td>stock cubes, gravy granules and meat juices can make it very salty; loosen baby’s food with water or their usual milk instead</td></tr>
+<tr><td><strong>Pigs in blankets</strong></td><td><strong>Better swapped</strong></td><td>processed sausage and bacon are salty; plain turkey is the easier protein. If sausage is offered to an older, experienced eater, remove skin and cut into short thin strips lengthways</td></tr>
+<tr><td><strong>Yorkshire pudding</strong></td><td><strong>Occasional small taste</strong></td><td>only when its egg, milk and wheat ingredients have been considered; choose a soft piece rather than a hard crisp edge</td></tr>
+<tr><td><strong>Bread sauce</strong></td><td><strong>Check carefully</strong></td><td>often contains milk, wheat and salt; use a small amount only if the recipe suits the baby and relevant allergens are already understood</td></tr>
+<tr><td><strong>Cranberry sauce</strong></td><td><strong>Skip or use very little</strong></td><td>commercial versions are often high in added sugar; plain soft fruit is simpler</td></tr>
+<tr><td><strong>Christmas pudding or mince pie</strong></td><td><strong>Skip for a baby</strong></td><td>may combine added sugar, dried fruit, alcohol, honey, nuts and several allergens; it offers complexity rather than a useful first taste</td></tr>
+</tbody>
+</table></div>
 <p>This table is a starting point, not clearance for a particular recipe. Read labels and ask the cook what went into homemade dishes. “Turkey” may mean plain roast meat on one table and a salty glazed, stuffed or processed product on another.</p>
 <h2>Before solids: the Christmas meal is still milk</h2>
 <p>If your baby is younger than around six months or does not yet show all the readiness signs, do not start solids because the family is together or because a relative wants to offer “just a taste”.</p>
@@ -929,6 +950,7 @@
 <p>That can be normal, especially in a noisy unfamiliar setting. Keep milk feeds available, offer familiar food without pressure and end the meal when the baby shows they are finished. One Christmas lunch is not a nutrition test.</p>
 <p><em>OBubba supports family organisation and weaning records. It cannot inspect food, assess swallowing, diagnose allergy or replace individual advice from a health visitor, GP, dietitian or allergy team. Always supervise eating and seek urgent help if a baby is choking or has signs of a severe allergic reaction.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -959,6 +981,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

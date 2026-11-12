@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,16 @@
 <p>Night feeding is expected in young babies and remains normal for many older babies. A few night feeds do not automatically mean the pattern is reversed.</p>
 <p>The label becomes useful when the contrast is consistent:</p>
 <ul><li>daytime feeds are repeatedly brief, small or refused</li><li>the baby takes fuller or longer feeds after bedtime</li><li>much of the reliable daily milk intake happens overnight</li><li>the pattern continues across several ordinary days</li><li>night waking appears closely tied to taking a substantial feed</li></ul>
-<p>| What you see | More likely explanation | First response | |---|---|---| | A newborn feeds around the clock, including frequently at night | Normal newborn feeding | Feed responsively; do not try to shift intake into a schedule | | An older baby has one hungry night after a distracted or busy day | Day-to-day variation | Offer calmly the next day and watch, rather than changing the night immediately | | Day feeds stay small while repeated night feeds are full | Possible reverse-cycling pattern | Improve daytime feeding opportunities before reducing night milk | | A baby breastfeeds by day and has measured bottles at night | The daytime amount is unknown | Do not compare bottle millilitres as though they represent total intake | | Feeding drops day and night, with fewer wet nappies or unusual sleepiness | Possible illness, dehydration or feeding problem | Seek professional advice promptly |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What you see</th><th scope="col">More likely explanation</th><th scope="col">First response</th></tr></thead>
+<tbody>
+<tr><td>A newborn feeds around the clock, including frequently at night</td><td>Normal newborn feeding</td><td>Feed responsively; do not try to shift intake into a schedule</td></tr>
+<tr><td>An older baby has one hungry night after a distracted or busy day</td><td>Day-to-day variation</td><td>Offer calmly the next day and watch, rather than changing the night immediately</td></tr>
+<tr><td>Day feeds stay small while repeated night feeds are full</td><td>Possible reverse-cycling pattern</td><td>Improve daytime feeding opportunities before reducing night milk</td></tr>
+<tr><td>A baby breastfeeds by day and has measured bottles at night</td><td>The daytime amount is unknown</td><td>Do not compare bottle millilitres as though they represent total intake</td></tr>
+<tr><td>Feeding drops day and night, with fewer wet nappies or unusual sleepiness</td><td>Possible illness, dehydration or feeding problem</td><td>Seek professional advice promptly</td></tr>
+</tbody>
+</table></div>
 <p>The difference matters. Trying to “fix” normal newborn feeding can compromise intake and milk supply. Missing unmeasured breastfeeds can make a thriving combination-fed baby look as if they take almost nothing by day.</p>
 <h2>Why babies move more milk into the night</h2>
 <p>Usually there is not one single cause. Look for what changed shortly before the pattern began.</p>
@@ -958,6 +972,7 @@
 <p>And if it does not, that is information. It may mean your baby still needs the milk, the daytime record is incomplete or a feeding professional should help you look more closely.</p>
 <p><em>This article provides general information and is not medical advice. Follow your baby&#39;s individual feeding plan and seek professional support for concerns about intake, growth, hydration, pain, illness or feeding skill.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -988,6 +1003,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

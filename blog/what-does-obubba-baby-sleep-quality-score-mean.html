@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -857,7 +862,15 @@
 <p>That makes the number useful for comparison. It does not make it a medical measurement, a promise of development or a reason to change a routine after one week.</p>
 <h2>The short answer</h2>
 <p>OBubba first scores each usable night from 0 to 100, then averages the usable scores from the latest seven-night report window.</p>
-<p>| Signal | Share of one night’s score | What can improve the component | |---|---:|---| | Number of wakes | 30% | Fewer recorded wakes, judged against an age-aware range | | Longest unbroken stretch | 30% | A longer stretch relative to that whole night | | Logged time awake | 25% | Less explicitly timed awake time overnight | | Amount of night sleep | 15% | More sleep between bedtime and morning wake after logged awake time |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Signal</th><th scope="col">Share of one night’s score</th><th scope="col">What can improve the component</th></tr></thead>
+<tbody>
+<tr><td>Number of wakes</td><td>30%</td><td>Fewer recorded wakes, judged against an age-aware range</td></tr>
+<tr><td>Longest unbroken stretch</td><td>30%</td><td>A longer stretch relative to that whole night</td></tr>
+<tr><td>Logged time awake</td><td>25%</td><td>Less explicitly timed awake time overnight</td></tr>
+<tr><td>Amount of night sleep</td><td>15%</td><td>More sleep between bedtime and morning wake after logged awake time</td></tr>
+</tbody>
+</table></div>
 <p>The score bands shown in the weekly report are:</p>
 <ul><li><strong>80–100: Restful</strong></li><li><strong>60–79: Settled</strong></li><li><strong>40–59: Mixed</strong></li><li><strong>0–39: A tough week</strong></li></ul>
 <p>The app needs both bedtime and morning wake, and the reconstructed night must be between 6 and 16 hours. If not, that night produces <strong>no score</strong>. Missing nights are skipped, not turned into zeroes.</p>
@@ -874,7 +887,15 @@
 <p>&gt; score = wakes × 30% + longest stretch × 30% + awake time × 25% + duration × 15%</p>
 <h3>1. Wake count: 30%</h3>
 <p>The same number of wakes is not treated identically at every age.</p>
-<p>| Corrected age used by the app | Full wake-count score at | Wake-count score reaches zero at | |---|---:|---:| | Under 13 weeks | 3 wakes or fewer | 7 wakes | | 13–25 weeks | 2 wakes or fewer | 6 wakes | | 26–51 weeks | 1 wake or fewer | 5 wakes | | 52 weeks and over | 1 wake or fewer | 4 wakes |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Corrected age used by the app</th><th scope="col">Full wake-count score at</th><th scope="col">Wake-count score reaches zero at</th></tr></thead>
+<tbody>
+<tr><td>Under 13 weeks</td><td>3 wakes or fewer</td><td>7 wakes</td></tr>
+<tr><td>13–25 weeks</td><td>2 wakes or fewer</td><td>6 wakes</td></tr>
+<tr><td>26–51 weeks</td><td>1 wake or fewer</td><td>5 wakes</td></tr>
+<tr><td>52 weeks and over</td><td>1 wake or fewer</td><td>4 wakes</td></tr>
+</tbody>
+</table></div>
 <p>Between those anchors the component falls gradually. A 10-week-old with three recorded wakes can receive the full wake-count component; a 12-month-old with three wakes cannot.</p>
 <p>This is a fairness adjustment, not a claim that every baby at a given age should meet the upper line. The NHS notes that babies differ, sleep patterns change as they grow and newborns commonly wake repeatedly in the first months.</p>
 <h3>2. Longest unbroken stretch: 30%</h3>
@@ -970,6 +991,7 @@
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/your-babys-sleep-patterns/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Your baby’s sleep patterns</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li>OBubba source reviewed: `night_score.dart`, `night_score_test.dart`, `night_analysis.dart`, `day_metrics.dart`, `reports_screen.dart`, `insights_overview.dart` and `child_sync_repository.dart`</li></ul>
 <p><em>OBubba is a tracking, planning and education tool, not a medical device or sleep monitor. Its sleep-quality percentage is a deterministic summary of parent-entered logs. It cannot detect unlogged waking, assess breathing or sleep safety, diagnose illness, decide whether a feed is needed or guarantee how a baby should sleep.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_what-does-obubba-baby-sleep-quality-score-mean"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -1001,6 +1023,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

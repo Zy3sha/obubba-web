@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,21 @@
 <p><strong>In the current app, the weekly weaning plan does not sync between phones.</strong> The six recipes, tried checks and shopping-basket ticks are saved in local device preferences. Real solids logs belong to the shared child record, so connected carers can see those after sync and both phones can use that history for the journal, allergen memory and future recommendations.</p>
 <p>That is a precise but important boundary. OBubba’s Family sharing screen says both parents share the same live data, and an older blog guide broadly listed “plans” among shared child data. We traced the present `weaning_plan.dart`, feed log sheet and `ChildSyncRepository` rather than relying on that promise. The honest answer today is: <strong>the care record is shared; this particular planning layer is not yet.</strong></p>
 <h2>The 30-second answer</h2>
-<p>| Weaning information | Current behavior on connected phones | |---|---| | A saved solids meal | shared through the live child record | | Food name, date and response | shared as part of that solids entry | | Recognised allergens on a logged meal | shared and retained in lifetime child history | | A logged allergen reaction | shared and used to filter future suggestions | | Food journal and progress summaries | recalculated on each phone from shared history | | Six-meal weekly plan | local to the phone that generated it | | “Tried” checks in that plan | local to that phone | | Shopping-list “in the basket” checks | local to that phone | | Manual <strong>Mark as introduced</strong> allergen tick | local to that phone | | <strong>Copy list</strong> | copies text to that phone’s clipboard; it does not update another device |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Weaning information</th><th scope="col">Current behavior on connected phones</th></tr></thead>
+<tbody>
+<tr><td>A saved solids meal</td><td>shared through the live child record</td></tr>
+<tr><td>Food name, date and response</td><td>shared as part of that solids entry</td></tr>
+<tr><td>Recognised allergens on a logged meal</td><td>shared and retained in lifetime child history</td></tr>
+<tr><td>A logged allergen reaction</td><td>shared and used to filter future suggestions</td></tr>
+<tr><td>Food journal and progress summaries</td><td>recalculated on each phone from shared history</td></tr>
+<tr><td>Six-meal weekly plan</td><td>local to the phone that generated it</td></tr>
+<tr><td>“Tried” checks in that plan</td><td>local to that phone</td></tr>
+<tr><td>Shopping-list “in the basket” checks</td><td>local to that phone</td></tr>
+<tr><td>Manual <strong>Mark as introduced</strong> allergen tick</td><td>local to that phone</td></tr>
+<tr><td><strong>Copy list</strong></td><td>copies text to that phone’s clipboard; it does not update another device</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-weaning-plan-sync-boundary.svg" alt="A two-phone data-flow diagram showing that solids logs move through OBubba’s shared child record, while the weekly plan, tried checks, basket checks and manual allergen ticks remain in local device preferences." loading="lazy"/><figcaption>The current sync boundary. Connected carers share dated solids evidence; each installation separately holds its generated plan and checklist state.</figcaption></figure>
 <p>The useful household rule is:</p>
 <p>&gt; <strong>Treat food logs as the shared truth. Treat the weekly plan as a checklist belonging to the phone that created it.</strong></p>
@@ -947,6 +966,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/how-to-start-weaning-your-baby/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: How to start weaning your baby</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-allergies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Introducing foods that could trigger an allergic reaction</a></li><li><a href="/blog/share-baby-tracker-with-partner-without-duplicate-logs.html">OBubba: Share a baby tracker without duplicate logs</a></li><li><a href="/blog/does-ticking-tried-obubba-log-baby-meal.html">OBubba: Does ticking Tried log a baby meal?</a></li></ul>
 <p><em>This article describes the current OBubba implementation reviewed on 25 April 2027. It provides general information, not individual medical or dietetic advice. Follow your child’s clinical plan where relevant and seek urgent help for a severe reaction or choking.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -977,6 +997,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

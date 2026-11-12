@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,15 @@
 <p>The current answer is more interesting: OBubba first resolves tonight’s bedtime from the same engine used by its clock, plan, reminder and widget. It then surfaces that one result through <strong>three different nudge windows</strong>—a Track button, an in-app message and an operating-system reminder.</p>
 <p>We traced the complete path through `track_home.dart`, the shared schedule signals, reminder planner, guided Bedtime ritual, per-child settings and 25 focused tests. The architecture gets the hardest part right: a manual bedtime, consultation plan or skipped nap can move the reminder along with the clock. The experience still has avoidable contradictions: <strong>the default routine totals 42 minutes, while the two proactive nudges arrive about 30 minutes before bed; the clearest button is behind the premium readiness gate; and neither reminder opens the ritual directly.</strong></p>
 <h2>The short answer</h2>
-<p>| Surface | Current timing | What happens | |---|---|---| | <strong>Start wind-down button</strong> | From 90 minutes before predicted bedtime until 30 minutes after it | Opens the editable Bedtime ritual from the Track readiness panel | | <strong>In-app message</strong> | Once per child per day, when bedtime is 22–32 minutes away | Shows a snackbar suggesting bath, dim lights and calm | | <strong>OS reminder</strong> | Exactly 30 minutes before predicted bedtime | Shows the predicted bedtime, a generic routine suggestion and the engine’s reason | | <strong>Widget / Live Activity</strong> | Counts down to bedtime itself | Uses the bedtime display time, not the earlier reminder time |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Surface</th><th scope="col">Current timing</th><th scope="col">What happens</th></tr></thead>
+<tbody>
+<tr><td><strong>Start wind-down button</strong></td><td>From 90 minutes before predicted bedtime until 30 minutes after it</td><td>Opens the editable Bedtime ritual from the Track readiness panel</td></tr>
+<tr><td><strong>In-app message</strong></td><td>Once per child per day, when bedtime is 22–32 minutes away</td><td>Shows a snackbar suggesting bath, dim lights and calm</td></tr>
+<tr><td><strong>OS reminder</strong></td><td>Exactly 30 minutes before predicted bedtime</td><td>Shows the predicted bedtime, a generic routine suggestion and the engine’s reason</td></tr>
+<tr><td><strong>Widget / Live Activity</strong></td><td>Counts down to bedtime itself</td><td>Uses the bedtime display time, not the earlier reminder time</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-start-wind-down-timeline.svg" alt="A timeline showing how live schedule inputs feed one resolved bedtime, which then creates a 90-minute Track button, a 30-minute reminder and a 32-to-22-minute in-app message." loading="lazy"/><figcaption>The current app shares one bedtime calculation, then applies three different presentation windows. The guided routine is editable and separate from the sleep log.</figcaption></figure>
 <p>The crucial distinction is <strong>prediction versus notification</strong>. There is one resolved bedtime target, but the app decides separately when and where to bring it to the parent’s attention.</p>
 <h2>What moves the predicted bedtime first</h2>
@@ -942,6 +955,7 @@
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Feeding on demand</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Safer sleep advice for babies</a></li></ul>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -972,6 +986,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

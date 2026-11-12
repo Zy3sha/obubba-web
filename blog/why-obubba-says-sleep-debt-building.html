@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -882,11 +887,25 @@
 <figure><img src="/obubba-sleep-debt-track-app.jpg" alt="A genuine current OBubba Track screen showing the overnight clock and the night record that supplies bedtime and morning context" loading="lazy"/><figcaption>Current OBubba Track surface with fictional example data. The sleep-debt calculation needs completed day and night records; this screen is the source timeline, not a medical monitor.</figcaption></figure>
 <h2>The exact age floors</h2>
 <p>The current engine counts only minutes below the lower edge of these 24-hour ranges:</p>
-<p>| Corrected or chronological age used by the engine | OBubba range | Shortfall starts below | |---|---:|---:| | 4–11 months | 12–16 hours | 12 hours | | 1–2 years | 11–14 hours | 11 hours | | 2 years and over | 10–13 hours | 10 hours |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Corrected or chronological age used by the engine</th><th scope="col">OBubba range</th><th scope="col">Shortfall starts below</th></tr></thead>
+<tbody>
+<tr><td>4–11 months</td><td>12–16 hours</td><td>12 hours</td></tr>
+<tr><td>1–2 years</td><td>11–14 hours</td><td>11 hours</td></tr>
+<tr><td>2 years and over</td><td>10–13 hours</td><td>10 hours</td></tr>
+</tbody>
+</table></div>
 <p>The app contains a newborn reference range internally, but the proactive debt insight returns nothing below 16 weeks. It does not tell a fourth-trimester family that unpredictable, fragmented newborn sleep is a deficit to repay.</p>
 <p>Only short days add to the ledger. A day within or above the range contributes zero debt; extra sleep on another day does not mathematically cancel an earlier shortfall.</p>
 <p>For example:</p>
-<p>| Day | Logged total | 7-month floor | Added shortfall | |---|---:|---:|---:| | Monday | 11h 20m | 12h | 40m | | Tuesday | 12h 35m | 12h | 0m | | Wednesday | 11h 5m | 12h | 55m |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Day</th><th scope="col">Logged total</th><th scope="col">7-month floor</th><th scope="col">Added shortfall</th></tr></thead>
+<tbody>
+<tr><td>Monday</td><td>11h 20m</td><td>12h</td><td>40m</td></tr>
+<tr><td>Tuesday</td><td>12h 35m</td><td>12h</td><td>0m</td></tr>
+<tr><td>Wednesday</td><td>11h 5m</td><td>12h</td><td>55m</td></tr>
+</tbody>
+</table></div>
 <p>The running total is 95 minutes. The normal Tuesday stays normal; it does not become a 35-minute “credit”.</p>
 <h2>Why one terrible day does not trigger the card</h2>
 <p>The current logic requires <strong>both</strong>:</p>
@@ -902,7 +921,15 @@
 <h2>Where the recovery duration comes from</h2>
 <p>OBubba turns the accumulated shortfall into a simple planning horizon at roughly <strong>30 extra minutes of sleep opportunity per day</strong>. The suggested period is clamped between two and ten days.</p>
 <p>That produces an approximate ladder:</p>
-<p>| Calculated shortfall | Suggested recovery window | |---:|---:| | 90 minutes | about 3 days | | 2 hours | about 4 days | | 3 hours | about 6 days | | 5 hours or more | capped at 10 days |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Calculated shortfall</th><th scope="col">Suggested recovery window</th></tr></thead>
+<tbody>
+<tr><td>90 minutes</td><td>about 3 days</td></tr>
+<tr><td>2 hours</td><td>about 4 days</td></tr>
+<tr><td>3 hours</td><td>about 6 days</td></tr>
+<tr><td>5 hours or more</td><td>capped at 10 days</td></tr>
+</tbody>
+</table></div>
 <p>This is not a promise that sleep can be repaid like money. It is a way to avoid an extreme response. The plan asks for several modest opportunities rather than a single dramatically early bedtime or forcing a long nap.</p>
 <p>The age-specific bedtime suggestion comes from the same bedtime bounds used elsewhere in the app. It is not a universal “6pm bedtime” pasted onto every child.</p>
 <h2>Why the card may disappear even when the arithmetic qualifies</h2>
@@ -961,6 +988,7 @@
 <h2>Sources</h2>
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/your-babys-sleep-patterns/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Your baby’s sleep patterns</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://aasm.org/wp-content/uploads/2017/10/child-sleep-duration-health-advisory.pdf" target="_blank" rel="noopener noreferrer">American Academy of Sleep Medicine: Child sleep-duration advisory</a></li><li><a href="https://publications.aap.org/pediatrics/article/138/2/e20161601/52457/Recommended-Amount-of-Sleep-for-Pediatric" target="_blank" rel="noopener noreferrer">American Academy of Pediatrics: Endorsement of paediatric sleep-duration recommendations</a></li><li><a href="https://www.newcastle-hospitals.nhs.uk/services/sleep-service/paediatric-sleep/sleep-young-children/" target="_blank" rel="noopener noreferrer">Newcastle Hospitals NHS Foundation Trust: Sleep in young children</a></li></ul>
 <p><em>This article provides general information, not medical or individual sleep advice. OBubba is a tracking and pattern-support app, not a medical device.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-says-sleep-debt-building"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -992,6 +1020,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

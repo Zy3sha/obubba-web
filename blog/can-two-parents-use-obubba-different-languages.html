@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -857,7 +862,19 @@
 <p>There is an important limit: <strong>built-in interface labels can change language; text a person types does not get automatically translated.</strong> If Dad logs a note in English, Mum’s Spanish interface receives that same English note. OBubba does not silently guess a translation for family-written care information.</p>
 <p>&gt; <strong>Same baby facts. Each carer’s own interface. Original notes preserved.</strong></p>
 <h2>The 30-second answer</h2>
-<p>| Question | Current OBubba behavior | |---|---| | Can two connected parents choose different app languages? | <strong>Yes.</strong> The preference is local to each installation. | | Do both phones still use the same connected baby record? | <strong>Yes.</strong> Language selection and child sharing are separate systems. | | Does changing my language change my partner’s phone? | <strong>No.</strong> Their saved preference is not overwritten. | | Do built-in buttons and headings translate? | Yes, where that string has a translation; untranslated material can fall back to English. | | Are my typed notes translated for another carer? | <strong>No.</strong> They remain exactly as entered. | | Are baby names or custom food names translated? | No. They are family-entered data, not interface copy. | | Can the app follow the phone’s language automatically? | Yes. <strong>Automatic (device language)</strong> is the default option. | | Can language and region be chosen separately? | Yes. Language controls interface copy; region controls local terms, health wording and emergency-number context. |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Question</th><th scope="col">Current OBubba behavior</th></tr></thead>
+<tbody>
+<tr><td>Can two connected parents choose different app languages?</td><td><strong>Yes.</strong> The preference is local to each installation.</td></tr>
+<tr><td>Do both phones still use the same connected baby record?</td><td><strong>Yes.</strong> Language selection and child sharing are separate systems.</td></tr>
+<tr><td>Does changing my language change my partner’s phone?</td><td><strong>No.</strong> Their saved preference is not overwritten.</td></tr>
+<tr><td>Do built-in buttons and headings translate?</td><td>Yes, where that string has a translation; untranslated material can fall back to English.</td></tr>
+<tr><td>Are my typed notes translated for another carer?</td><td><strong>No.</strong> They remain exactly as entered.</td></tr>
+<tr><td>Are baby names or custom food names translated?</td><td>No. They are family-entered data, not interface copy.</td></tr>
+<tr><td>Can the app follow the phone’s language automatically?</td><td>Yes. <strong>Automatic (device language)</strong> is the default option.</td></tr>
+<tr><td>Can language and region be chosen separately?</td><td>Yes. Language controls interface copy; region controls local terms, health wording and emergency-number context.</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-two-parents-different-languages-flow.svg" alt="Two phones showing the same shared baby record with Spanish on one interface and English on the other." loading="lazy"/><figcaption>Each OBubba installation keeps its own language preference. Connected baby logs can still flow through one child record, while free-text notes remain in the language entered.</figcaption></figure>
 <h2>Which languages can you choose?</h2>
 <p>The current registry contains <strong>15 selectable locale entries across 12 language families</strong>:</p>
@@ -949,6 +966,7 @@
 <ul><li><a href="/blog/share-baby-tracker-with-partner-without-duplicate-logs.html">Share a baby tracker with your partner without duplicate logs</a></li><li><a href="/blog/will-obubba-weaning-plan-sync-partner-phone.html">Will OBubba’s weaning plan sync with my partner’s phone?</a></li><li><a href="/blog/how-to-split-newborn-night-shifts.html">How to split newborn night shifts without both parents running on empty</a></li></ul>
 <p><em>This article describes the current OBubba implementation reviewed on 27 April 2027. It is product guidance, not medical advice. Translation can contain errors; preserve and verify original wording for medicine, allergy, emergency and clinical instructions.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -979,6 +997,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

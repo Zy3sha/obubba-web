@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,14 +863,35 @@
 <p>Here is the exact calculation, what happens when you select more than one method, why some apparent winners are suppressed, and how to turn the card into a gentle experiment rather than a new sleep rule.</p>
 <h2>The short answer</h2>
 <p>Every basic gate below must pass:</p>
-<p>| Gate | Current rule | |---|---| | Lookback | Today plus the previous <strong>13 calendar days</strong> | | Excluded days | Sick, travel, daycare, nursery or grandparent day tags; days with a logged fever temperature | | Nap | Daytime `nap` entry with a start, end and recognised primary settling method | | Duration | <strong>5–240 minutes</strong>, inclusive | | Comparable methods | At least <strong>2 method buckets</strong> | | Samples | At least <strong>3 qualifying naps in each eligible bucket</strong> | | Comparison | Arithmetic mean elapsed nap duration for each bucket | | Difference | Best average is at least <strong>15 minutes</strong> longer than worst | | Result | Low-urgency <strong>What helps [first name] nap longest</strong> card |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">Current rule</th></tr></thead>
+<tbody>
+<tr><td>Lookback</td><td>Today plus the previous <strong>13 calendar days</strong></td></tr>
+<tr><td>Excluded days</td><td>Sick, travel, daycare, nursery or grandparent day tags; days with a logged fever temperature</td></tr>
+<tr><td>Nap</td><td>Daytime `nap` entry with a start, end and recognised primary settling method</td></tr>
+<tr><td>Duration</td><td><strong>5–240 minutes</strong>, inclusive</td></tr>
+<tr><td>Comparable methods</td><td>At least <strong>2 method buckets</strong></td></tr>
+<tr><td>Samples</td><td>At least <strong>3 qualifying naps in each eligible bucket</strong></td></tr>
+<tr><td>Comparison</td><td>Arithmetic mean elapsed nap duration for each bucket</td></tr>
+<tr><td>Difference</td><td>Best average is at least <strong>15 minutes</strong> longer than worst</td></tr>
+<tr><td>Result</td><td>Low-urgency <strong>What helps [first name] nap longest</strong> card</td></tr>
+</tbody>
+</table></div>
 <p>There is no age gate and no percentage threshold. A 45-minute versus 60-minute comparison qualifies, as does 120 versus 135, even though those changes have very different relative sizes.</p>
 <figure><img src="/obubba-nap-settle-method-detector.svg" alt="The exact path behind OBubba’s What helps baby nap longest card." loading="lazy"/><figcaption>OBubba takes completed 5-to-240-minute naps from eligible days, assigns one primary settling bucket, requires at least three naps in at least two buckets, compares average elapsed duration and speaks when the best beats the worst by 15 minutes. It finds an association, not a cause.</figcaption></figure>
 <h2>First, OBubba turns the log into four buckets</h2>
 <p>The nap form asks <strong>How settled?</strong> and offers:</p>
 <ul><li>Self-settled</li><li>Fed to sleep</li><li>Rocked</li><li>Held</li><li>Patted</li><li>Dummy</li></ul>
 <p>The detector does not compare all six labels separately. maps the stored primary method into four groups:</p>
-<p>| Stored primary method | Comparison bucket | Wording on the card | |---|---|---| | `independent` | `self` | self-settling | | `fed` | `fed` | a feed | | `rocked`, `held`, `patted` | `assisted` | rocking/holding | | `dummy` | `other` | a dummy |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Stored primary method</th><th scope="col">Comparison bucket</th><th scope="col">Wording on the card</th></tr></thead>
+<tbody>
+<tr><td>`independent`</td><td>`self`</td><td>self-settling</td></tr>
+<tr><td>`fed`</td><td>`fed`</td><td>a feed</td></tr>
+<tr><td>`rocked`, `held`, `patted`</td><td>`assisted`</td><td>rocking/holding</td></tr>
+<tr><td>`dummy`</td><td>`other`</td><td>a dummy</td></tr>
+</tbody>
+</table></div>
 <p>A missing or unfamiliar method is ignored. The classifier does not guess that an unlabelled nap was assisted.</p>
 <p>That is a strong honesty boundary. Six unlabelled naps cannot silently become six “rocked” naps and manufacture a result.</p>
 <p>The grouping also loses detail. Rocking, holding and patting become one assisted bucket even though a family may experience them very differently. The friendly label says <strong>rocking/holding</strong>, so a set made mostly from patting can be described without naming the action that actually dominated it.</p>
@@ -908,7 +934,13 @@
 <h2>The 15-minute gate uses arithmetic averages</h2>
 <p>For every eligible group, adds the raw elapsed durations and divides by the number of naps.</p>
 <p>Suppose the recent record contains:</p>
-<p>| Method bucket | Durations | Average | |---|---|---:| | Self-settling | 62, 70, 78 min | 70 min | | A feed | 30, 36, 42 min | 36 min |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Method bucket</th><th scope="col">Durations</th><th scope="col">Average</th></tr></thead>
+<tbody>
+<tr><td>Self-settling</td><td>62, 70, 78 min</td><td>70 min</td></tr>
+<tr><td>A feed</td><td>30, 36, 42 min</td><td>36 min</td></tr>
+</tbody>
+</table></div>
 <p>The gap is:</p>
 <p>&gt; 70 − 36 = <strong>34 minutes</strong></p>
 <p>That clears the 15-minute threshold. The body says self-settling naps average about 1h 10m, roughly 34 minutes longer than naps after a feed.</p>
@@ -962,6 +994,7 @@
 <p>&gt; <strong>In the recent ordinary-day log, naps assigned to this settling bucket had the longest average elapsed arc. That is a clue worth checking against timing, place, hunger, mood and what works for your family.</strong></p>
 <p>That is enough to make a tired parent’s data useful without pretending it has answered the whole sleep question.</p>
 <p>OBubba connects nap timing, settling method, location, wake mood, feeds and the rest of the baby’s day to find patterns generic schedules miss. <a href="/#download">Explore OBubba</a> when you want a tracker that learns from real family life—and explains exactly what it noticed.</p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-says-what-helps-baby-nap-longest"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -993,6 +1026,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

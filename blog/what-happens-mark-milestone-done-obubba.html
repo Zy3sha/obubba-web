@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -873,7 +878,15 @@
 <p>Immediately after a newly completed milestone is saved, OBubba scans up to 120 calendar days ending on the milestone date. If no date was chosen, the scan ends today.</p>
 <p>It counts only activity types the Track timeline can genuinely contain, then filters them by the milestone’s broad developmental area.</p>
 <figure><img src="/obubba-milestone-effort-story.svg" alt="The exact path from marking a milestone to OBubba&#39;s optional effort story and share preview." loading="lazy"/><figcaption>OBubba looks backwards from the chosen milestone date, uses only relevant logged activity categories, requires at least three sessions for a numeric highlight and shows at most two counts.</figcaption></figure>
-<p>| Milestone area | Activity types eligible for the effort story | |---|---| | Movement | tummy time, play, swimming, outdoor activities | | Language | reading, singing and music | | Social | play, singing and music, skin-to-skin, bath play | | Thinking | play, reading |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Milestone area</th><th scope="col">Activity types eligible for the effort story</th></tr></thead>
+<tbody>
+<tr><td>Movement</td><td>tummy time, play, swimming, outdoor activities</td></tr>
+<tr><td>Language</td><td>reading, singing and music</td></tr>
+<tr><td>Social</td><td>play, singing and music, skin-to-skin, bath play</td></tr>
+<tr><td>Thinking</td><td>play, reading</td></tr>
+</tbody>
+</table></div>
 <p>The categories are intentionally broad. A reading session is not used as the leading evidence for a rolling milestone, even if the family logged it many times. Tummy time may appear for a movement milestone but not for a first-word milestone.</p>
 <h2>Why two tummy-time logs stay invisible</h2>
 <p>A relevant activity needs at least <strong>three logged sessions</strong> inside the scan window before OBubba will show a numeric highlight. Eligible activities are sorted by count, and the celebration displays at most the top two.</p>
@@ -938,6 +951,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-moves/" target="_blank" rel="noopener noreferrer">NHS: Baby moves</a></li><li><a href="https://www.nhs.uk/baby/babys-development/height-weight-and-reviews/baby-reviews/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s health and development reviews</a></li><li>OBubba source reviewed for this article: `milestones_screen.dart`, `milestone_celebration.dart`, `milestone_celebration_dialog.dart`, `child_sync_repository.dart`, `child_merge.dart`, `memory_book.dart` and focused tests, verified 6 May 2027.</li></ul>
 <p><em>OBubba is a tracking, memory and education tool, not a medical device or developmental assessment. A saved milestone or activity count cannot verify development, diagnose delay or prove what caused a skill.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -968,6 +982,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

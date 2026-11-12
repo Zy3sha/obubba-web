@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -860,7 +865,15 @@
 <h2>The four gates behind the card</h2>
 <p>We traced this parent-facing message through OBubba’s current source and tests. The rule is deliberately narrower than the title might suggest.</p>
 <figure><img src="/obubba-puree-nudge-gates.svg" alt="The four software gates behind OBubba’s Ready to move past purées card." loading="lazy"/><figcaption>The card needs five texture-readable meals, a corrected-age stage of at least two and a smooth share of 60% or more. It cannot assess the baby directly.</figcaption></figure>
-<p>| Gate | What the app checks | Why the card may stay quiet | |---|---|---| | Recent solids | At least <strong>5</strong> recent solid-food logs in the collection | Two or three meals are not enough evidence | | Texture-readable logs | At least <strong>5</strong> food descriptions contain a recognised texture phrase | “Banana” and “lunch” do not reveal preparation | | Age band | Corrected age maps to stage 2 or later | The app does not push a newly weaning baby out of smooth food | | Smooth share | At least <strong>60%</strong> of the readable meals map to stage 1 | A varied run of mashed, lumpy or finger foods keeps it quiet |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">What the app checks</th><th scope="col">Why the card may stay quiet</th></tr></thead>
+<tbody>
+<tr><td>Recent solids</td><td>At least <strong>5</strong> recent solid-food logs in the collection</td><td>Two or three meals are not enough evidence</td></tr>
+<tr><td>Texture-readable logs</td><td>At least <strong>5</strong> food descriptions contain a recognised texture phrase</td><td>“Banana” and “lunch” do not reveal preparation</td></tr>
+<tr><td>Age band</td><td>Corrected age maps to stage 2 or later</td><td>The app does not push a newly weaning baby out of smooth food</td></tr>
+<tr><td>Smooth share</td><td>At least <strong>60%</strong> of the readable meals map to stage 1</td><td>A varied run of mashed, lumpy or finger foods keeps it quiet</td></tr>
+</tbody>
+</table></div>
 <p>If all four pass, the card appears with low urgency. It is a suggestion to explore, not an alert.</p>
 <h2>A worked example</h2>
 <p>Suppose a 32-week-old baby has these six recent entries:</p>
@@ -872,7 +885,16 @@
 <p>That precision matters. OBubba is not declaring that 59% is healthy and 60% is a problem. The percentage is simply a software threshold used to decide whether a quiet reminder is more likely to help than annoy.</p>
 <h2>Which words count as a texture?</h2>
 <p>The tracker does not analyse a photograph or inspect the food. It reads the food name a parent typed.</p>
-<p>| Words in the saved food description | App stage | |---|---:| | purée, pureed, smooth, blended, blitzed | 1 — smooth | | mash, mashed, lumpy, lumps, fork-mash | 2 — mashed/lumpy | | finger food, soldiers, veg stick, sticks, soft pieces, picked up | 2 — finger-food exploration | | chopped, minced, diced, small pieces, bite-size | 3 — chopped/minced | | family meal, same as us, same as everyone, whole family | 4 — family meal |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Words in the saved food description</th><th scope="col">App stage</th></tr></thead>
+<tbody>
+<tr><td>purée, pureed, smooth, blended, blitzed</td><td>1 — smooth</td></tr>
+<tr><td>mash, mashed, lumpy, lumps, fork-mash</td><td>2 — mashed/lumpy</td></tr>
+<tr><td>finger food, soldiers, veg stick, sticks, soft pieces, picked up</td><td>2 — finger-food exploration</td></tr>
+<tr><td>chopped, minced, diced, small pieces, bite-size</td><td>3 — chopped/minced</td></tr>
+<tr><td>family meal, same as us, same as everyone, whole family</td><td>4 — family meal</td></tr>
+</tbody>
+</table></div>
 <p>“Banana”, “porridge” and “chicken” alone produce no texture stage. That is correct: each could be served in several very different ways.</p>
 <p>The code also avoids treating <strong>whole milk</strong>, <strong>whole wheat</strong> and <strong>whole grain</strong> as family-meal clues. “Whole” used to be an easy word to misread; the current logic requires an actual family-food phrase such as “whole family meal”.</p>
 <p>For a record that helps later, write what was offered rather than only the ingredient:</p>
@@ -880,7 +902,16 @@
 <p>You do not need to write like a clinician. One honest preparation word is enough.</p>
 <h2>The progress ladder and the nudge are different</h2>
 <p>OBubba’s <strong>Weaning progress</strong> panel shows a texture stage based on corrected age. Its current bands are:</p>
-<p>| Corrected-age band in the app | Label shown | |---|---| | 26–30 weeks | Smooth purées | | 30–35 weeks | Mashed with lumps | | 30–39 weeks | Soft finger foods | | 39–48 weeks | Chopped &amp; minced | | 48 weeks onward | Family meals |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Corrected-age band in the app</th><th scope="col">Label shown</th></tr></thead>
+<tbody>
+<tr><td>26–30 weeks</td><td>Smooth purées</td></tr>
+<tr><td>30–35 weeks</td><td>Mashed with lumps</td></tr>
+<tr><td>30–39 weeks</td><td>Soft finger foods</td></tr>
+<tr><td>39–48 weeks</td><td>Chopped &amp; minced</td></tr>
+<tr><td>48 weeks onward</td><td>Family meals</td></tr>
+</tbody>
+</table></div>
 <p>These bands overlap in the source because mashed foods and soft finger foods can be explored together. The dashboard chooses the first matching band, so a baby at 32 weeks currently sees <strong>Mashed with lumps</strong>, not two simultaneous labels.</p>
 <figure><img src="/obubba-texture-stage-app.jpg" alt="The genuine current OBubba Weaning progress panel, showing an age-linked texture stage alongside iron-rich meals, unique foods and days weaning." loading="lazy"/><figcaption>The progress ladder is an age-linked orientation. It does not prove what texture a baby can safely manage.</figcaption></figure>
 <p>The progress panel can exist after one logged solid. The <strong>Ready to move past purées</strong> insight is more selective: it needs enough recent, texture-readable meal wording and a predominantly smooth pattern.</p>
@@ -959,6 +990,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/how-to-start-weaning-your-baby/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: How to start weaning your baby</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/what-to-feed-your-baby/7-to-9-months/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Feeding your baby from 7 to 9 months</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/choking-and-gagging-on-food/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Choking and gagging on food</a></li></ul>
 <p><em>This article gives general information for UK families. OBubba is a tracking and education tool, not a swallowing assessment, medical device or emergency service. Follow your baby’s individual clinical plan and call 999 for choking or breathing difficulty.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -989,6 +1021,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,18 @@
 <p>That can turn a blur of hard evenings into something discussable. But “witching hour” is a description of timing, not a cause—and the app’s older-baby explanation can sound more certain about overtiredness than the data proves.</p>
 <h2>The short answer</h2>
 <p>This exact card requires every gate below:</p>
-<p>| Gate | Current rule | |---|---:| | Rolling history | Today plus the previous <strong>6 calendar days</strong> | | Time window | <strong>3:00pm to 7:00pm</strong>, inclusive | | Eligible signals | A Crying event, or a Nap/Wake marked <strong>Fussy</strong> | | Logged-day evidence | At least <strong>4 days</strong> with any entry | | Repeated pattern | At least <strong>3 qualifying days</strong> | | Event evidence | At least <strong>4 qualifying events</strong> in total | | Majority | Qualifying days must be <strong>strictly more than half</strong> of logged days |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">Current rule</th></tr></thead>
+<tbody>
+<tr><td>Rolling history</td><td>Today plus the previous <strong>6 calendar days</strong></td></tr>
+<tr><td>Time window</td><td><strong>3:00pm to 7:00pm</strong>, inclusive</td></tr>
+<tr><td>Eligible signals</td><td>A Crying event, or a Nap/Wake marked <strong>Fussy</strong></td></tr>
+<tr><td>Logged-day evidence</td><td>At least <strong>4 days</strong> with any entry</td></tr>
+<tr><td>Repeated pattern</td><td>At least <strong>3 qualifying days</strong></td></tr>
+<tr><td>Event evidence</td><td>At least <strong>4 qualifying events</strong> in total</td></tr>
+<tr><td>Majority</td><td>Qualifying days must be <strong>strictly more than half</strong> of logged days</td></tr>
+</tbody>
+</table></div>
 <p>If the card clears those gates, it reports the median of each qualifying day’s <strong>earliest</strong> late-afternoon event. It then uses corrected age where available to choose one of two explanations: developmental reassurance under 16 weeks, or a last-nap/earlier-bedtime experiment from 16 weeks onward.</p>
 <figure><img src="/obubba-late-afternoon-fussy-patch-logic.svg" alt="The exact route from seven days of crying and nap-wake records to OBubba’s late-afternoon fussy-patch card." loading="lazy"/><figcaption>OBubba scans seven calendar days, keeps 3–7pm crying events and fussy nap wakes, applies four evidence gates, calculates a median daily onset and chooses age-specific wording. The card is not an illness assessment.</figcaption></figure>
 <h2>What the app actually counts</h2>
@@ -883,13 +899,30 @@
 <p>To speak, it needs:</p>
 <ol><li>four or more logged days;</li><li>three or more qualifying days;</li><li>four or more qualifying events; and</li><li>fuss on strictly more than half the logged days.</li></ol>
 <p>That last word—strictly—matters:</p>
-<p>| Seven-day record | Result | |---|---| | 3 fussy days out of 7 logged days | Silent: not a majority | | 3 out of 6 | Silent: exactly half | | 4 out of 6 | Eligible: strict majority | | 3 out of 4, but only 3 events total | Silent: event floor missed | | 3 out of 4, with 4 events total | Eligible |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Seven-day record</th><th scope="col">Result</th></tr></thead>
+<tbody>
+<tr><td>3 fussy days out of 7 logged days</td><td>Silent: not a majority</td></tr>
+<tr><td>3 out of 6</td><td>Silent: exactly half</td></tr>
+<tr><td>4 out of 6</td><td>Eligible: strict majority</td></tr>
+<tr><td>3 out of 4, but only 3 events total</td><td>Silent: event floor missed</td></tr>
+<tr><td>3 out of 4, with 4 events total</td><td>Eligible</td></tr>
+</tbody>
+</table></div>
 <p>The four-event floor stops one Fussy nap wake on each of three days from being enough. At least one qualifying day must contain a second supported event.</p>
 <p>These are product confidence thresholds, not clinical cut-offs. Three evenings are not inherently healthy, and two evenings are not inherently concerning.</p>
 <h2>How “around 5:15pm” is calculated</h2>
 <p>Within each qualifying day, OBubba keeps only the <strong>earliest</strong> eligible event for the onset calculation.</p>
 <p>Imagine this history:</p>
-<p>| Day | Supported events | Daily onset used | |---|---|---:| | Monday | Cry 5:05pm, cry 6:20pm | 5:05pm | | Tuesday | Fussy nap wake 4:50pm | 4:50pm | | Wednesday | Cry 5:15pm, fussy wake 5:40pm | 5:15pm | | Thursday | Cry 5:35pm | 5:35pm |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Day</th><th scope="col">Supported events</th><th scope="col">Daily onset used</th></tr></thead>
+<tbody>
+<tr><td>Monday</td><td>Cry 5:05pm, cry 6:20pm</td><td>5:05pm</td></tr>
+<tr><td>Tuesday</td><td>Fussy nap wake 4:50pm</td><td>4:50pm</td></tr>
+<tr><td>Wednesday</td><td>Cry 5:15pm, fussy wake 5:40pm</td><td>5:15pm</td></tr>
+<tr><td>Thursday</td><td>Cry 5:35pm</td><td>5:35pm</td></tr>
+</tbody>
+</table></div>
 <p>The daily onsets are sorted, and the middle value is selected. With an even number of values, the implementation takes the upper middle rather than averaging the pair. Here it would report about <strong>5:15pm</strong>, not 5:10pm.</p>
 <p>That time is best understood as <strong>the middle earliest-recorded onset</strong>, not the average time the baby was fussiest. The app does not measure crying duration, end time or peak intensity. A two-minute cry and a two-hour unsettled stretch can each establish the day’s onset.</p>
 <p>The displayed clock respects the parent’s 12- or 24-hour preference, so the same stored minute may appear as 5:15pm or 17:15.</p>
@@ -960,6 +993,7 @@
 <p>Use that pattern to prepare support before the hard hour, explain the week to another carer and test one proportionate change. Keep the limits equally visible: intensity, duration, illness and cause are outside this calculation, and an unusual cry or unwell baby always outranks the pattern.</p>
 <p>That is the kind of personalisation worth downloading—not an app pretending to know why a baby cries, but one that remembers when the difficult moments cluster, explains exactly what it counted and keeps human judgement in charge.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -990,6 +1024,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

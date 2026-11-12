@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,17 @@
 <figure><img src="/obubba-how-longer-feed-gap-works.svg" alt="How OBubba compares a longer current milk-feed gap with the baby’s own recent rhythm." loading="lazy"/><figcaption>The current gap must be more than one and a half times the 14-day personal average and at least 45 minutes longer before the low-urgency card can appear.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current insight needs all of these conditions:</p>
-<p>| Check | Current rule | What it prevents | |---|---:|---| | Personal history | At least <strong>10 valid daytime milk-feed gaps</strong> | A conclusion from a few scattered entries | | History window | Previous <strong>14 complete days</strong> | Comparing a partial today with complete past days | | Today’s anchor | At least <strong>2 daytime milk feeds</strong> logged today | Letting a single early entry define the whole day | | Relative stretch | Current gap is <strong>more than 1.5×</strong> the average | Flagging ordinary wobble | | Absolute stretch | Current gap is at least <strong>45 minutes longer</strong> | Overreacting when the usual gaps are short | | Timing sanity | Last logged feed is not in the future | A broken comparison after a mistimed entry |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Check</th><th scope="col">Current rule</th><th scope="col">What it prevents</th></tr></thead>
+<tbody>
+<tr><td>Personal history</td><td>At least <strong>10 valid daytime milk-feed gaps</strong></td><td>A conclusion from a few scattered entries</td></tr>
+<tr><td>History window</td><td>Previous <strong>14 complete days</strong></td><td>Comparing a partial today with complete past days</td></tr>
+<tr><td>Today’s anchor</td><td>At least <strong>2 daytime milk feeds</strong> logged today</td><td>Letting a single early entry define the whole day</td></tr>
+<tr><td>Relative stretch</td><td>Current gap is <strong>more than 1.5×</strong> the average</td><td>Flagging ordinary wobble</td></tr>
+<tr><td>Absolute stretch</td><td>Current gap is at least <strong>45 minutes longer</strong></td><td>Overreacting when the usual gaps are short</td></tr>
+<tr><td>Timing sanity</td><td>Last logged feed is not in the future</td><td>A broken comparison after a mistimed entry</td></tr>
+</tbody>
+</table></div>
 <p>The result includes its evidence count. Because the threshold starts at 10, the caption reads <strong>“from 10 gaps”</strong>, <strong>“from 14 gaps”</strong> and so on—not a confidence percentage.</p>
 <h2>A worked example</h2>
 <p>Suppose the last 14 days contain 12 usable daytime gaps averaging <strong>2 hours 10 minutes</strong>.</p>
@@ -885,7 +900,16 @@
 <p>OBubba can compare the shared record. It cannot observe an unlogged feed.</p>
 <h2>The forecast and the longer-gap card are different reads</h2>
 <p>The app also has a passive next-feed prediction. It is related, but not identical.</p>
-<p>| Feature | Next-feed forecast | Longer-gap insight | |---|---|---| | Job | Estimate when another milk feed may become likely | Notice when the current gap has become distinctly unusual | | Evidence minimum | 5 valid gaps | 10 valid gaps | | History | Previous 7 days | Previous 14 days | | Time-of-day handling | Uses a matching four-hour block when at least 3 matching gaps exist | Uses one average across valid daytime gaps | | After the estimate passes | The forecast goes quiet | The insight can appear only after both stretch gates pass |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Feature</th><th scope="col">Next-feed forecast</th><th scope="col">Longer-gap insight</th></tr></thead>
+<tbody>
+<tr><td>Job</td><td>Estimate when another milk feed may become likely</td><td>Notice when the current gap has become distinctly unusual</td></tr>
+<tr><td>Evidence minimum</td><td>5 valid gaps</td><td>10 valid gaps</td></tr>
+<tr><td>History</td><td>Previous 7 days</td><td>Previous 14 days</td></tr>
+<tr><td>Time-of-day handling</td><td>Uses a matching four-hour block when at least 3 matching gaps exist</td><td>Uses one average across valid daytime gaps</td></tr>
+<tr><td>After the estimate passes</td><td>The forecast goes quiet</td><td>The insight can appear only after both stretch gates pass</td></tr>
+</tbody>
+</table></div>
 <p>That hand-off is deliberate. A prediction is useful before the expected point. Once it is overdue, repeating “feed due” could sound like a rigid schedule. The separate insight waits for stronger evidence and uses gentler language about a personal change.</p>
 <p>One limitation is worth naming: the longer-gap detector’s average is not time-of-day matched. If a baby naturally has wide morning gaps and close evening feeds, the forecast can model that distinction more precisely than this drift card. Treat the number as a broad recent rhythm, not a perfect physiological clock.</p>
 <h2>Why OBubba does not flag every short gap</h2>
@@ -910,7 +934,17 @@
 <p>Call 999 if a baby will not wake, is struggling to breathe, is blue or grey, collapses or has another life-threatening symptom. Use NHS 111 or urgent clinical advice when you are unsure how quickly a concerning feeding change needs assessment.</p>
 <h2>A better way to log for this insight</h2>
 <p>You do not need perfect tracking. You need enough trustworthy anchors.</p>
-<p>| Useful anchor | Why it helps | |---|---| | Actual feed start time | Keeps gaps comparable across caregivers | | Breast, bottle or solids | Prevents a meal from becoming a milk interval | | Day or night classification | Keeps the daytime rhythm from absorbing overnight stretches | | Amount actually taken, when measured | Supports bottle-intake context without inventing breast volume | | Feed quality or refusal note | Explains a timing change that the clock cannot | | Wet nappies | Adds hydration context |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Useful anchor</th><th scope="col">Why it helps</th></tr></thead>
+<tbody>
+<tr><td>Actual feed start time</td><td>Keeps gaps comparable across caregivers</td></tr>
+<tr><td>Breast, bottle or solids</td><td>Prevents a meal from becoming a milk interval</td></tr>
+<tr><td>Day or night classification</td><td>Keeps the daytime rhythm from absorbing overnight stretches</td></tr>
+<tr><td>Amount actually taken, when measured</td><td>Supports bottle-intake context without inventing breast volume</td></tr>
+<tr><td>Feed quality or refusal note</td><td>Explains a timing change that the clock cannot</td></tr>
+<tr><td>Wet nappies</td><td>Adds hydration context</td></tr>
+</tbody>
+</table></div>
 <p>Agree as a household whether a feed time means <strong>start</strong> or <strong>finish</strong>, then use that convention consistently. The engine reads the saved time; it cannot infer which convention you chose.</p>
 <p><strong><a href="/baby-feed-tracker.html">Explore OBubba’s baby feed tracker →</a></strong> — share breast, bottle, pumping, solids and nappy context while keeping predictions transparent and responsive feeding in charge.</p>
 <h2>Frequently asked questions</h2>
@@ -931,6 +965,7 @@
 <h2>Reliable UK sources</h2>
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Feeding on demand</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Bottle feeding your baby</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/caring-for-your-baby/feeding-your-newborn-baby/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Feeding your newborn baby</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/how-to-start-weaning-your-baby/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: How to start weaning</a></li></ul>
 <p><em>This article gives general information for UK families. It is not a feeding prescription, hydration assessment or medical advice, and OBubba is not a medical device. Follow your baby’s cues and any individual feeding plan from their healthcare team.</em></p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -962,6 +997,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

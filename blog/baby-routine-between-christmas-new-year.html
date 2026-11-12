@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,16 @@
 <p>&gt; <strong>A calm baby routine is not a minute-by-minute timetable. It is a small set of anchors that still work when the clock gets strange.</strong></p>
 <h2>The minimum useful baby day</h2>
 <p>Start with five anchors. Add detail only when it answers a real question.</p>
-<p>| Anchor | What to keep steady | What can flex | |---|---|---| | <strong>Milk</strong> | responsive breast or bottle feeds; any individual feeding or growth plan | exact clock times, who gives an ordinary feed when sharing is appropriate | | <strong>Sleep</strong> | tired cues, the sleep already taken, familiar wind-down and a safer sleep space | nap location when suitable, nap length, bedtime within a reasonable range | | <strong>Nappies</strong> | enough context to notice a meaningful change; wet nappies when intake is a concern | logging every routine change when nobody needs the count | | <strong>Solids</strong> | readiness, safe texture, supervision, known allergies and milk as the main drink in the first year | whether lunch looks festive, how much is eaten, which familiar food is offered | | <strong>Handover</strong> | last feed, last sleep, last nappy, allergies, medicines and what usually settles the baby | a full narrative of everything the previous adult tried |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Anchor</th><th scope="col">What to keep steady</th><th scope="col">What can flex</th></tr></thead>
+<tbody>
+<tr><td><strong>Milk</strong></td><td>responsive breast or bottle feeds; any individual feeding or growth plan</td><td>exact clock times, who gives an ordinary feed when sharing is appropriate</td></tr>
+<tr><td><strong>Sleep</strong></td><td>tired cues, the sleep already taken, familiar wind-down and a safer sleep space</td><td>nap location when suitable, nap length, bedtime within a reasonable range</td></tr>
+<tr><td><strong>Nappies</strong></td><td>enough context to notice a meaningful change; wet nappies when intake is a concern</td><td>logging every routine change when nobody needs the count</td></tr>
+<tr><td><strong>Solids</strong></td><td>readiness, safe texture, supervision, known allergies and milk as the main drink in the first year</td><td>whether lunch looks festive, how much is eaten, which familiar food is offered</td></tr>
+<tr><td><strong>Handover</strong></td><td>last feed, last sleep, last nappy, allergies, medicines and what usually settles the baby</td><td>a full narrative of everything the previous adult tried</td></tr>
+</tbody>
+</table></div>
 <p>This “minimum useful” idea protects attention. If your baby is well, comfortable and following their usual clinical advice, the family does not need a complete data set to have a good day.</p>
 <h2>Decide what must be known, what is useful and what can wait</h2>
 <h3>Must be known by the next adult</h3>
@@ -944,6 +958,7 @@
 <p>No. It is a coordination aid. Confirm the baby&#39;s allergy plan, medicine name, exact dose, timing, consent, storage and emergency action directly with the carer and follow professional instructions.</p>
 <p><em>OBubba supports parent-entered organisation, pattern awareness and family handovers. It cannot supervise care, verify feeds or medicine doses, inspect food or sleep spaces, diagnose illness or allergy, or replace a midwife, health visitor, pharmacist, GP, NHS 111 or emergency service.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -974,6 +989,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

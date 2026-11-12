@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,16 @@
 <figure><img src="/obubba-what-month-of-love-counts.svg" alt="What each number on OBubba’s Month of Love card actually counts." loading="lazy"/><figcaption>The card uses a rolling 30-day record, requires at least 14 non-empty days and 20 feeds plus naps, and appears at most once per calendar month for each baby.</figcaption></figure>
 <h2>The short answer</h2>
 <p>The current card can appear when:</p>
-<p>| Check | rule | Meaning | |---|---:|---| | Working window | Today + previous <strong>29 days</strong> | A rolling 30-day snapshot, not the first-to-last day of a calendar month | | Logged-day gate | At least <strong>14 non-empty days</strong> | The recap is not built from a very sparse record | | Activity gate | At least <strong>20 feeds + completed naps</strong> | There is enough repeat care for the moment to feel earned | | Repeat limit | Not already dismissed this calendar month | It appears at most once per month for this baby | | Baby scope | Active baby only | Dismissing one child’s card does not suppress another child’s |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Check</th><th scope="col">rule</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><td>Working window</td><td>Today + previous <strong>29 days</strong></td><td>A rolling 30-day snapshot, not the first-to-last day of a calendar month</td></tr>
+<tr><td>Logged-day gate</td><td>At least <strong>14 non-empty days</strong></td><td>The recap is not built from a very sparse record</td></tr>
+<tr><td>Activity gate</td><td>At least <strong>20 feeds + completed naps</strong></td><td>There is enough repeat care for the moment to feel earned</td></tr>
+<tr><td>Repeat limit</td><td>Not already dismissed this calendar month</td><td>It appears at most once per month for this baby</td></tr>
+<tr><td>Baby scope</td><td>Active baby only</td><td>Dismissing one child’s card does not suppress another child’s</td></tr>
+</tbody>
+</table></div>
 <p>The gate does not check whether every day is complete. One saved event makes a day non-empty. Nappies and night wakes help populate the final card, but only feeds plus naps satisfy the 20-event activity gate.</p>
 <p>This is recognition, not assessment. There is no target, percentage, parent ranking or “good month” threshold.</p>
 <h2>It is a rolling month, not this calendar month</h2>
@@ -942,6 +956,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/your-mental-health/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Your mental health after having a baby</a></li><li><a href="https://www.nhs.uk/mental-health/conditions/postnatal-depression/" target="_blank" rel="noopener noreferrer">NHS: Postnatal depression</a></li><li><a href="https://www.nhs.uk/every-mind-matters/urgent-support/" target="_blank" rel="noopener noreferrer">NHS Every Mind Matters: Urgent mental-health support</a></li><li><a href="https://www.nhs.uk/baby/support-and-services/keeping-fit-and-healthy-with-a-baby/" target="_blank" rel="noopener noreferrer">NHS: Keeping fit and healthy with a baby</a></li></ul>
 <p><em>OBubba can reflect saved care events and help a family share information. It cannot measure love, effort, fairness or mental health; attribute every task to the person who did it; or replace support from a midwife, health visitor, GP, perinatal mental-health service, NHS 111 or emergency services.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -972,6 +987,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

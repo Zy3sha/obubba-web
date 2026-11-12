@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,18 @@
 <p>&gt; <strong>Correct the existing sleep with the best honest wake time you have. Do not stop it at the current time merely because that is when you noticed.</strong></p>
 <p>If you remember baby calling at about 6:40am, enter 6:40, not 10:12 when you reopened the app. If the time is uncertain, use a reasonable estimate and add a short note rather than manufacturing minute-perfect data.</p>
 <h2>The quick fix by mistake</h2>
-<p>| What happened? | Best repair | |---|---| | Nap timer is still running, but baby woke earlier | End the existing nap at the real or best-estimate wake time | | Bedtime timer ran through the morning | Close the same overnight sleep at baby&#39;s morning wake time | | Timer started late | Edit the start time; keep the end if it is already correct | | You stopped the timer accidentally and baby is still asleep | Resume the same sleep if the tracker offers it | | You logged the sleep twice | Keep the most complete entry and remove the duplicate | | You cannot remember the time at all | Add the uncertainty to a note or omit the unusable entry. Do not pretend “now” was the wake | | Nap appears to cross midnight | Check whether it was really bedtime; ordinary naps should not wrap into the next day |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What happened?</th><th scope="col">Best repair</th></tr></thead>
+<tbody>
+<tr><td>Nap timer is still running, but baby woke earlier</td><td>End the existing nap at the real or best-estimate wake time</td></tr>
+<tr><td>Bedtime timer ran through the morning</td><td>Close the same overnight sleep at baby&#39;s morning wake time</td></tr>
+<tr><td>Timer started late</td><td>Edit the start time; keep the end if it is already correct</td></tr>
+<tr><td>You stopped the timer accidentally and baby is still asleep</td><td>Resume the same sleep if the tracker offers it</td></tr>
+<tr><td>You logged the sleep twice</td><td>Keep the most complete entry and remove the duplicate</td></tr>
+<tr><td>You cannot remember the time at all</td><td>Add the uncertainty to a note or omit the unusable entry. Do not pretend “now” was the wake</td></tr>
+<tr><td>Nap appears to cross midnight</td><td>Check whether it was really bedtime; ordinary naps should not wrap into the next day</td></tr>
+</tbody>
+</table></div>
 <p>The principle is simple: repair the event that happened rather than adding a second event to cancel out the mistake.</p>
 <h2>Why stopping it “now” creates a worse record</h2>
 <p>A running sleep timer normally represents an open interval: it has a start but no end yet. The app cannot know whether baby is still asleep or whether the adult forgot to tap.</p>
@@ -925,7 +941,16 @@
 <p>The live sleep timer and logging controls are free to use. The exact countdown target is a Premium feature, but correcting the record is not.</p>
 <p><strong><a href="/app.html?utm_source=forgotten_sleep_timer_article&amp;utm_medium=owned_search&amp;utm_campaign=from_bump_to_baby_auto&amp;utm_content=auto_20261027_forgotten_timer">Fix the sleep record without starting again</a></strong>. Use OBubba&#39;s free nap or bedtime timer, correct the start and repair forgotten endings without being punished for one missed tap.</p>
 <h2>What a sleep timer can and cannot tell you</h2>
-<p>| It can help with | It cannot establish | |---|---| | Remembering approximate start and end times | Whether baby was safely positioned | | Showing total recorded duration | Sleep stages or sleep quality from timing alone | | Separating naps from overnight sleep | Why baby woke | | Supporting a carer handover | Whether a baby is medically well | | Revealing repeated patterns over several comparable days | A diagnosis or guaranteed schedule |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">It can help with</th><th scope="col">It cannot establish</th></tr></thead>
+<tbody>
+<tr><td>Remembering approximate start and end times</td><td>Whether baby was safely positioned</td></tr>
+<tr><td>Showing total recorded duration</td><td>Sleep stages or sleep quality from timing alone</td></tr>
+<tr><td>Separating naps from overnight sleep</td><td>Why baby woke</td></tr>
+<tr><td>Supporting a carer handover</td><td>Whether a baby is medically well</td></tr>
+<tr><td>Revealing repeated patterns over several comparable days</td><td>A diagnosis or guaranteed schedule</td></tr>
+</tbody>
+</table></div>
 <p>The timer is a memory tool. It is not a baby monitor and should never replace checking the baby.</p>
 <p>Follow safer-sleep guidance regardless of whether the timer is running. The <a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/keeping-a-clear-cot/" target="_blank" rel="noopener noreferrer">Lullaby Trust&#39;s clear-cot guidance</a> recommends placing baby on their back in their own clear, flat, separate sleep space with a firm, flat mattress and keeping the cot free of pillows, duvets, bumpers, toys and sleep positioners.</p>
 <h2>A low-pressure accuracy rule</h2>
@@ -948,6 +973,7 @@
 <h2>Sources and support</h2>
 <ul><li><a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/keeping-a-clear-cot/" target="_blank" rel="noopener noreferrer">Lullaby Trust: Keeping a clear cot</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/being-a-parent-or-caregiver/other-carers-babysitters/" target="_blank" rel="noopener noreferrer">Lullaby Trust: Advice for other carers and babysitters</a></li><li><a href="https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/" target="_blank" rel="noopener noreferrer">NHS: When to get urgent medical help for babies and children under 5</a></li></ul>
 <p><em>This UK-oriented article provides general information, not medical advice or a sleep prescription. A timer does not monitor breathing, safe positioning or health. Follow current safer-sleep guidance and seek medical help when your baby seems unwell; call 999 in an emergency.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_forgot-stop-baby-sleep-timer-fix-log"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -979,6 +1005,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

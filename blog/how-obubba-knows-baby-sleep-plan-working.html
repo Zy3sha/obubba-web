@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -857,7 +862,16 @@
 <p>We traced that full path through the live Sleep Consultant screen, plan storage, 14-day profile builder, win detector, one-tap plan update and seven focused tests. It is a thoughtful idea. It also needs one important translation: <strong>“no longer flagged” is evidence of change, not proof that the plan caused it or that all sleep is now sorted.</strong></p>
 <h2>The short answer</h2>
 <p>OBubba needs all of these before it can celebrate a consultation-plan win:</p>
-<p>| Gate | Current requirement | |---|---| | <strong>An active plan</strong> | The family must already be following a saved Sleep Consultation plan | | <strong>An honest starting point</strong> | The plan must contain the top finding category shown on activation day | | <strong>Time to try it</strong> | At least three whole calendar days must have passed | | <strong>Fresh evidence</strong> | At least five usable current day profiles must exist | | <strong>A category change</strong> | The original top category must be absent from today’s fresh consultation |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">Current requirement</th></tr></thead>
+<tbody>
+<tr><td><strong>An active plan</strong></td><td>The family must already be following a saved Sleep Consultation plan</td></tr>
+<tr><td><strong>An honest starting point</strong></td><td>The plan must contain the top finding category shown on activation day</td></tr>
+<tr><td><strong>Time to try it</strong></td><td>At least three whole calendar days must have passed</td></tr>
+<tr><td><strong>Fresh evidence</strong></td><td>At least five usable current day profiles must exist</td></tr>
+<tr><td><strong>A category change</strong></td><td>The original top category must be absent from today’s fresh consultation</td></tr>
+</tbody>
+</table></div>
 <p>A lower severity is not enough. If <strong>Bedtime</strong> remains a finding—even at a gentler level—the app stays quiet. If Bedtime disappears and <strong>Day sleep</strong> is now top, the card celebrates Bedtime and offers Day sleep as the next focus. If no findings remain, it says everything OBubba flagged has settled.</p>
 <figure><img src="/obubba-sleep-plan-working-loop.svg" alt="A flowchart showing OBubba saving the original top sleep finding, waiting at least three days, rebuilding the consultation from fresh data and branching to no win, a new focus or everything settled." loading="lazy"/><figcaption>OBubba compares a saved activation-day category with a fresh consultation. The original category must disappear after at least three days and with at least five current profiles before a win can appear.</figcaption></figure>
 <p>This is a category-level review, not a score-chasing animation. That restraint is useful. The strength of the conclusion still depends on what was logged.</p>
@@ -924,7 +938,17 @@
 <p>Rolling windows are useful because the plan stays current. They also mean the evidence is not a controlled experiment. OBubba should show the dates and coverage behind every celebration.</p>
 <h2>Better ways to judge progress at home</h2>
 <p>Do not make “slept through” the only finish line. Choose the outcome that matches the problem you started with.</p>
-<p>| Original focus | A useful family-centred measure | |---|---| | Bedtime variation | Bedtime lands in a workable range on most ordinary nights | | False starts | Fewer meaningful wakes soon after bedtime | | Settling | Less time or less distress, without withdrawing needed comfort | | Night wakes | Fewer wakes needing the most intensive response, or easier returns to sleep | | Nap rhythm | A more predictable day without forcing sleep or restricting a young baby | | Parent load | The plan feels easier to sustain and the adult can get more rest or support |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Original focus</th><th scope="col">A useful family-centred measure</th></tr></thead>
+<tbody>
+<tr><td>Bedtime variation</td><td>Bedtime lands in a workable range on most ordinary nights</td></tr>
+<tr><td>False starts</td><td>Fewer meaningful wakes soon after bedtime</td></tr>
+<tr><td>Settling</td><td>Less time or less distress, without withdrawing needed comfort</td></tr>
+<tr><td>Night wakes</td><td>Fewer wakes needing the most intensive response, or easier returns to sleep</td></tr>
+<tr><td>Nap rhythm</td><td>A more predictable day without forcing sleep or restricting a young baby</td></tr>
+<tr><td>Parent load</td><td>The plan feels easier to sustain and the adult can get more rest or support</td></tr>
+</tbody>
+</table></div>
 <p>Keep feeding, comfort and safety outside the success contest. A baby who still needs milk or reassurance has not failed a plan. A parent who stops an unsuitable method has made a sound decision, not lost a streak.</p>
 <p>The NHS advises that baby sleep patterns vary and encourages parents who are struggling with tiredness to seek help, share care where possible and prioritise rest. Those outcomes belong beside the baby metrics.</p>
 <h2>Safety does not become optional when the graph improves</h2>
@@ -955,6 +979,7 @@
 <p>Tapping “Keep it up” re-anchors the active plan and prevents the same celebration from repeating. The plan remains active with its existing times; it does not automatically return to flexible live predictions.</p>
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/baby/support-and-services/sleep-and-tiredness-after-having-a-baby/" target="_blank" rel="noopener noreferrer">NHS: Sleep and tiredness after having a baby</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Safer sleep advice for babies</a></li></ul>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_how-obubba-knows-baby-sleep-plan-working"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -986,6 +1011,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

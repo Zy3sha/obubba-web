@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,17 @@
 <p><strong>If the dummy falls out and your baby stays asleep, leave it out. If they wake and need it replaced repeatedly, do not rush to remove it—especially in the first six months. First build other predictable sleep cues alongside it, then decide whether the re-plugging is still a problem for your family.</strong></p>
 <h2>The answer depends on what happens after it falls out</h2>
 <p>Watch the baby, not the dummy.</p>
-<p>| What happens | What it means tonight | What to do | |---|---|---| | Dummy falls out; baby remains asleep | Nothing needs fixing | Leave it where it is | | Baby stirs briefly, then settles | A normal sleep-cycle stir may be passing | Pause and observe before intervening | | Baby wakes and cries; dummy settles them quickly | The dummy is a strong settling cue | Replace if you choose, then look at the multi-night pattern | | Every wake needs an adult re-plug | The cue may be parent-recreated | Build other cues before reducing replacements | | Baby refuses or repeatedly spits it out while awake | They may not want it | Do not force or repeatedly reinsert it | | Waking comes with hunger, pain, fever or breathing difficulty | This is not merely a dummy problem | Meet the need and seek advice when appropriate |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What happens</th><th scope="col">What it means tonight</th><th scope="col">What to do</th></tr></thead>
+<tbody>
+<tr><td>Dummy falls out; baby remains asleep</td><td>Nothing needs fixing</td><td>Leave it where it is</td></tr>
+<tr><td>Baby stirs briefly, then settles</td><td>A normal sleep-cycle stir may be passing</td><td>Pause and observe before intervening</td></tr>
+<tr><td>Baby wakes and cries; dummy settles them quickly</td><td>The dummy is a strong settling cue</td><td>Replace if you choose, then look at the multi-night pattern</td></tr>
+<tr><td>Every wake needs an adult re-plug</td><td>The cue may be parent-recreated</td><td>Build other cues before reducing replacements</td></tr>
+<tr><td>Baby refuses or repeatedly spits it out while awake</td><td>They may not want it</td><td>Do not force or repeatedly reinsert it</td></tr>
+<tr><td>Waking comes with hunger, pain, fever or breathing difficulty</td><td>This is not merely a dummy problem</td><td>Meet the need and seek advice when appropriate</td></tr>
+</tbody>
+</table></div>
 <p>The <a href="https://www.lullabytrust.org.uk/baby-safety/baby-product-information/dummies/" target="_blank" rel="noopener noreferrer">Lullaby Trust&#39;s current dummy guidance</a> says there is no need to put a dummy back in if it falls out during sleep. It also says not to force a baby to take one.</p>
 <p>That means a missing dummy is not an emergency. You are responding to the baby&#39;s wake, not maintaining an object in their mouth all night.</p>
 <h2>Are dummies safe for sleep?</h2>
@@ -946,6 +961,7 @@
 <ul><li><a href="https://www.lullabytrust.org.uk/baby-safety/baby-product-information/dummies/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Dummies</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/sudden-infant-death-syndrome-sids/" target="_blank" rel="noopener noreferrer">NHS: Sudden infant death syndrome (SIDS)</a></li><li><a href="https://www.nhs.uk/baby/babys-development/play-and-learning/help-your-baby-learn-to-talk/" target="_blank" rel="noopener noreferrer">NHS: Help your baby learn to talk</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li></ul>
 <p><em>OBubba supports sleep records, pattern summaries and educational guidance. It cannot supervise sleep, verify dummy safety, diagnose a cause of waking or replace individual advice from a health visitor, dentist, feeding professional, GP, NHS 111 or emergency services.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -976,6 +992,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

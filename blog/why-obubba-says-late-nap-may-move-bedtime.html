@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,17 @@
 <p>The word <strong>may</strong> matters. The card identifies the earliest plausible edge created by a completed late nap. It does not know exactly when your baby will fall asleep, and it is not identical to the fuller bedtime prediction elsewhere in OBubba.</p>
 <h2>The exact rule</h2>
 <p>The current `diagnoseAwakeWindow` function returns this card when all of these conditions are true:</p>
-<p>| Live input | requirement | |---|---| | Baby’s state | Awake now, with a real awake-time anchor | | Bedtime | No bedtime sleep logged yet | | Nap plan | The parent has not explicitly selected a zero-nap day | | Last completed nap | Ended at or after <strong>4:00pm</strong> | | Current clock | Before <strong>8:00pm</strong> | | More pressing live read | No earlier overdue-sleep branch won first |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Live input</th><th scope="col">requirement</th></tr></thead>
+<tbody>
+<tr><td>Baby’s state</td><td>Awake now, with a real awake-time anchor</td></tr>
+<tr><td>Bedtime</td><td>No bedtime sleep logged yet</td></tr>
+<tr><td>Nap plan</td><td>The parent has not explicitly selected a zero-nap day</td></tr>
+<tr><td>Last completed nap</td><td>Ended at or after <strong>4:00pm</strong></td></tr>
+<tr><td>Current clock</td><td>Before <strong>8:00pm</strong></td></tr>
+<tr><td>More pressing live read</td><td>No earlier overdue-sleep branch won first</td></tr>
+</tbody>
+</table></div>
 <p>The output is a <strong>low-urgency</strong> sleep insight. It appears in today’s guidance rather than OBubba’s longer-term pattern feed, and its dismissal key is specific to that calendar day and title.</p>
 <figure><img src="/obubba-late-nap-may-move-bedtime-logic.svg" alt="The exact route behind OBubba’s A late nap may move bedtime card." loading="lazy"/><figcaption>OBubba first checks that the baby is awake, a bedtime has not been logged and the last completed nap ended at or after 4pm. If the current time is before 8pm and a more urgent overdue-sleep message did not win first, adds at least the age-based minimum awake window—never less than 60 minutes—to the nap end and presents the result as a low-urgency possibility, not a fixed bedtime.</figcaption></figure>
 <h2>The worked example in the test</h2>
@@ -925,6 +940,7 @@
 <p>&gt; <strong>OBubba can see a completed nap ending at or after 4pm. The baby is awake, bedtime is not logged, it is before 8pm and no more pressing overdue-sleep message won first. added at least the current age-based minimum awake interval to the nap end and displayed that clock time as a low-urgency possibility. The 4pm gate is fixed; the interval is age-adjusted; neither is a guarantee of when this baby will sleep.</strong></p>
 <p>That is useful information at 5:15pm: specific enough to stop a futile early bedtime battle, modest enough to change when the baby or the evening says otherwise.</p>
 <p>OBubba connects live nap timing, corrected-age sleep ranges, coherent day plans, bedtime predictions and optional one-change experiments in the same record. <a href="/#download">Explore OBubba</a> if you want a tracker that not only moves the clock, but shows you the exact nap that moved it.</p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-says-late-nap-may-move-bedtime"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -956,6 +972,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

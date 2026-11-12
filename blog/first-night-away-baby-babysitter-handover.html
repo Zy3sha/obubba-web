@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,18 @@
 <p><strong>A good babysitter handover is not a complete history of your baby. It is one clear page covering today&#39;s rhythm, safe sleep, feeds, allergies and medicines, what usually settles them, emergency contacts and when you will return. Then walk through the home once and let the sitter repeat the important parts back.</strong></p>
 <p>The goal is not to make the evening unfold exactly as it does with you. It is to make safe, responsive care easy when you are not in the room.</p>
 <h2>The ten-minute handover</h2>
-<p>| Minute | Cover this | The useful level of detail | | --- | --- | --- | | 0-2 | Today&#39;s rhythm | Last feed, last nap, next likely sleep and whether today has been unusual | | 2-4 | Feed plan | What, roughly when, safe preparation and what not to offer | | 4-6 | Bedtime and safe sleep | Short routine, sleep clothing, clear cot, place on back and what to do after a wake | | 6-7 | Comfort | Two or three things that usually help; one thing that tends to make baby more upset | | 7-8 | Health | Allergies, conditions, recent medicine and exact written instructions for anything authorised | | 8-9 | Emergencies | Address, exits, emergency contacts, where essentials are and when to call 999 | | 9-10 | Communication | Return time, when to contact you, how many updates you actually want and the backup plan |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Minute</th><th scope="col">Cover this</th><th scope="col">The useful level of detail</th></tr></thead>
+<tbody>
+<tr><td>0-2</td><td>Today&#39;s rhythm</td><td>Last feed, last nap, next likely sleep and whether today has been unusual</td></tr>
+<tr><td>2-4</td><td>Feed plan</td><td>What, roughly when, safe preparation and what not to offer</td></tr>
+<tr><td>4-6</td><td>Bedtime and safe sleep</td><td>Short routine, sleep clothing, clear cot, place on back and what to do after a wake</td></tr>
+<tr><td>6-7</td><td>Comfort</td><td>Two or three things that usually help; one thing that tends to make baby more upset</td></tr>
+<tr><td>7-8</td><td>Health</td><td>Allergies, conditions, recent medicine and exact written instructions for anything authorised</td></tr>
+<tr><td>8-9</td><td>Emergencies</td><td>Address, exits, emergency contacts, where essentials are and when to call 999</td></tr>
+<tr><td>9-10</td><td>Communication</td><td>Return time, when to contact you, how many updates you actually want and the backup plan</td></tr>
+</tbody>
+</table></div>
 <p>If the handover needs forty minutes, it contains too much, or the care arrangement is not ready yet. Practise on an afternoon visit first if either adult still feels unsure.</p>
 <h2>Before the first evening: choose confidence over convenience</h2>
 <p>Meet the sitter before the night if possible. Let them spend time with your baby while you are still home and watch how they respond to cues, crying and ordinary unpredictability.</p>
@@ -913,7 +929,14 @@
 <p>When you come home, ask for facts before interpretation: feeds, sleep, nappies, medicine, anything unusual and what helped. “She hated bedtime” may mean five minutes of protest; a simple timeline is easier to understand.</p>
 <h2>Briefing, temporary care link or permanent sharing?</h2>
 <p>Different carers need different access. More access is not automatically better.</p>
-<p>| Option | Best for | What changes | | --- | --- | --- | | Copied handover briefing | One evening where the sitter mainly needs current context | A static text snapshot; no account access | | Temporary Bubba Care link | A sitter or grandparent who needs the guide and simple live logging | Opens in a browser; feeds, nappies and naps can flow back during the active session | | Family sharing | A co-parent or regular carer using the same ongoing baby record | Continued live access to the shared child&#39;s timeline until disconnected |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Option</th><th scope="col">Best for</th><th scope="col">What changes</th></tr></thead>
+<tbody>
+<tr><td>Copied handover briefing</td><td>One evening where the sitter mainly needs current context</td><td>A static text snapshot; no account access</td></tr>
+<tr><td>Temporary Bubba Care link</td><td>A sitter or grandparent who needs the guide and simple live logging</td><td>Opens in a browser; feeds, nappies and naps can flow back during the active session</td></tr>
+<tr><td>Family sharing</td><td>A co-parent or regular carer using the same ongoing baby record</td><td>Continued live access to the shared child&#39;s timeline until disconnected</td></tr>
+</tbody>
+</table></div>
 <p>For a first evening with an occasional sitter, a briefing or temporary session is usually more proportionate than sharing the baby&#39;s permanent sync code.</p>
 <p>Treat any live care link as private. Send it directly, do not include it in a public screenshot, and end or replace the session when the care period finishes.</p>
 <h2>How OBubba gives a babysitter right-sized access</h2>
@@ -948,6 +971,7 @@
 <h3>Can OBubba replace a babysitter handover conversation?</h3>
 <p>No. OBubba can organise current context and provide a temporary logging route, but the parent must still choose a suitable sitter, demonstrate the home and sleep setup, explain medical plans and confirm that safety-critical information was understood.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -978,6 +1002,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

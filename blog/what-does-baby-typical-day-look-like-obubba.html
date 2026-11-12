@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,18 @@
 <p><strong>The card describes what has recently happened. It does not prescribe when your baby must wake, sleep or go to bed today.</strong> A `~9:01am` first nap means “around this time in the recent record”, not “keep the baby awake until 9:01”.</p>
 <p>&gt; <strong>Use the rhythm as a map of recent history—not an appointment book for your baby.</strong></p>
 <h2>The 30-second answer</h2>
-<p>| What the card shows | How the current app gets it | |---|---| | Usual wake | average of the available morning-wake times | | Usual bedtime | average of the available bedtimes, with midnight handled as part of the same evening | | Number of naps | the most common nap count across logged days | | Nap 1, Nap 2 and so on | naps sorted by start time, then averaged by position | | Nap length | average duration for completed naps in that position | | “14 days” | logged days contributing to the daily nap-count view—not necessarily 14 samples behind every row | | `~` before a time | an approximate average, not a deadline |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What the card shows</th><th scope="col">How the current app gets it</th></tr></thead>
+<tbody>
+<tr><td>Usual wake</td><td>average of the available morning-wake times</td></tr>
+<tr><td>Usual bedtime</td><td>average of the available bedtimes, with midnight handled as part of the same evening</td></tr>
+<tr><td>Number of naps</td><td>the most common nap count across logged days</td></tr>
+<tr><td>Nap 1, Nap 2 and so on</td><td>naps sorted by start time, then averaged by position</td></tr>
+<tr><td>Nap length</td><td>average duration for completed naps in that position</td></tr>
+<tr><td>“14 days”</td><td>logged days contributing to the daily nap-count view—not necessarily 14 samples behind every row</td></tr>
+<tr><td>`~` before a time</td><td>an approximate average, not a deadline</td></tr>
+</tbody>
+</table></div>
 <p>The card only appears when its internal data gate passes: <strong>at least three logged days plus at least one real wake, bedtime or completed-nap result</strong>. With less than that, the app shows nothing rather than inventing a sample schedule.</p>
 <figure><img src="/obubba-typical-day-how-it-learns.svg" alt="How OBubba turns recent logs into a descriptive typical day: it skips blank calendar days, averages available wake and bedtime values, selects the most common nap count and averages each nap position." loading="lazy"/><figcaption>The current path. A recent observation window becomes an approximate wake-to-bed rhythm. It describes history, changes with the logs and is not an instruction for today.</figcaption></figure>
 <h2>Where to find your baby’s typical day</h2>
@@ -909,7 +925,16 @@
 <p>An implausible `None most days` for a baby who visibly naps is a prompt to check missing logs—not evidence that the baby stopped sleeping.</p>
 <h2>Why it is not today’s nap prediction</h2>
 <p>OBubba has several time-shaped features, and they answer different questions.</p>
-<p>| Feature | Question it answers | |---|---| | Typical day | What has usually happened across recent logged days? | | Live readiness | Does the current day suggest nap, feed or bedtime readiness now? | | Next nap / wake window | What timing window is plausible after the current wake and recent sleep? | | Bedtime prediction | Where may tonight’s bedtime land after today’s naps? | | Preferred bedtime | What family bedtime window should the predictor aim toward within its constraints? |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Feature</th><th scope="col">Question it answers</th></tr></thead>
+<tbody>
+<tr><td>Typical day</td><td>What has usually happened across recent logged days?</td></tr>
+<tr><td>Live readiness</td><td>Does the current day suggest nap, feed or bedtime readiness now?</td></tr>
+<tr><td>Next nap / wake window</td><td>What timing window is plausible after the current wake and recent sleep?</td></tr>
+<tr><td>Bedtime prediction</td><td>Where may tonight’s bedtime land after today’s naps?</td></tr>
+<tr><td>Preferred bedtime</td><td>What family bedtime window should the predictor aim toward within its constraints?</td></tr>
+</tbody>
+</table></div>
 <p>The typical-day card does not read the current moment, today’s last wake, the most recent nap outcome or live tired cues. It also does not alter the sleep engine. It is a display-only summary.</p>
 <p>So if the card says Nap 1 is usually around 9:01am but today the baby woke an hour early, is unwell or is clearly struggling at 8:20am, <strong>do not wait for the average merely to make the day match the app</strong>.</p>
 <p>The <a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/your-babys-sleep-patterns/" target="_blank" rel="noopener noreferrer">NHS baby sleep-pattern guide</a> stresses that babies differ and that patterns change as they grow. Its separate <a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">newborn sleep guidance</a> similarly says babies have their own waking and sleeping pattern and families should expect routines to change with growth, teething and illness.</p>
@@ -967,6 +992,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/your-babys-sleep-patterns/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Your baby’s sleep patterns</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li></ul>
 <p><em>This article describes the current OBubba implementation reviewed on 28 April 2027. The typical-day card is a descriptive summary of logged history, not medical advice, a sleep-safety assessment or an instruction to delay feeding, comfort or sleep.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -997,6 +1023,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

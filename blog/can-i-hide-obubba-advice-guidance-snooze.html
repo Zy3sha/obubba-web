@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -857,7 +862,20 @@
 <ul><li><strong>Got it</strong> acknowledges a card.</li><li><strong>Hide this for a week</strong> pauses the same recurring pattern for seven days.</li><li><strong>Undo</strong> reverses that pause immediately.</li><li>Defined safety guidance does not offer snooze and remains visible.</li></ul>
 <p>Snooze does not erase a feed, nap, symptom or tooth entry. It does not tell the engine that its observation was wrong. It changes what the interface asks you to look at for a limited time.</p>
 <h2>The short answer</h2>
-<p>| Question | Current behaviour | |---|---| | Can ordinary guidance be hidden? | Yes, for seven days | | Where is the action? | The card close button says <strong>“Hide this for a week”</strong>; the advice popup says <strong>“Don’t show this for a week”</strong> | | What exactly is paused? | The same date-less insight pattern for the active child | | Does it delete the underlying logs? | No | | Can I reverse it? | Yes; the confirmation offers <strong>Undo</strong> | | Can the card return? | Yes, if its snooze expires and the pattern still applies | | Does snooze carry to another child? | No; it is scoped per child | | Does it sync to a co-parent’s phone? | Not currently; this preference is stored on this device | | Can safety guidance be snoozed? | No. High-urgency cards and medium-or-higher health cards bypass the snooze filter |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Question</th><th scope="col">Current behaviour</th></tr></thead>
+<tbody>
+<tr><td>Can ordinary guidance be hidden?</td><td>Yes, for seven days</td></tr>
+<tr><td>Where is the action?</td><td>The card close button says <strong>“Hide this for a week”</strong>; the advice popup says <strong>“Don’t show this for a week”</strong></td></tr>
+<tr><td>What exactly is paused?</td><td>The same date-less insight pattern for the active child</td></tr>
+<tr><td>Does it delete the underlying logs?</td><td>No</td></tr>
+<tr><td>Can I reverse it?</td><td>Yes; the confirmation offers <strong>Undo</strong></td></tr>
+<tr><td>Can the card return?</td><td>Yes, if its snooze expires and the pattern still applies</td></tr>
+<tr><td>Does snooze carry to another child?</td><td>No; it is scoped per child</td></tr>
+<tr><td>Does it sync to a co-parent’s phone?</td><td>Not currently; this preference is stored on this device</td></tr>
+<tr><td>Can safety guidance be snoozed?</td><td>No. High-urgency cards and medium-or-higher health cards bypass the snooze filter</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-guidance-snooze-seven-day-flow.svg" alt="Ordinary guidance can pause for seven days, while OBubba&#39;s defined safety guidance follows a separate always-visible path." loading="lazy"/><figcaption>OBubba separates ordinary guidance snooze from its unhideable safety lane.</figcaption></figure>
 <h2>Why “seen” and “snoozed” are different</h2>
 <p>The app keeps two separate ideas because they answer different questions.</p>
@@ -936,6 +954,7 @@
 <h3>Where should I get help if my baby seems seriously ill?</h3>
 <p>Follow local urgent-care guidance. In England, the NHS advises contacting your GP in hours, NHS 111 when appropriate, and 999 for life-threatening emergencies.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -966,6 +985,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

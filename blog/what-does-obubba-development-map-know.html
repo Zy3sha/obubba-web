@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -860,7 +865,15 @@
 <p>&gt; Here is what my baby must do next.</p>
 <h2>The short answer</h2>
 <p>The live Development Map has four layers:</p>
-<p>| Layer | What the app uses | What it can honestly say | |---|---|---| | <strong>Age anchor</strong> | Date of birth and, when applicable, due date | A broad current, previous or upcoming development window | | <strong>Family observations</strong> | Explicit sleep, wake-mood, play, notes, teething, solids and milestone logs | A ranked clue only when a specific rule has enough supporting signals | | <strong>Weekly reflection</strong> | Recent night-wake counts and dated milestones | A warm summary and one low-pressure focus | | <strong>Routes to explore</strong> | The same saved child record | Emerging skills, the Wave timeline, milestone memories and a separate Skill Forecast |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Layer</th><th scope="col">What the app uses</th><th scope="col">What it can honestly say</th></tr></thead>
+<tbody>
+<tr><td><strong>Age anchor</strong></td><td>Date of birth and, when applicable, due date</td><td>A broad current, previous or upcoming development window</td></tr>
+<tr><td><strong>Family observations</strong></td><td>Explicit sleep, wake-mood, play, notes, teething, solids and milestone logs</td><td>A ranked clue only when a specific rule has enough supporting signals</td></tr>
+<tr><td><strong>Weekly reflection</strong></td><td>Recent night-wake counts and dated milestones</td><td>A warm summary and one low-pressure focus</td></tr>
+<tr><td><strong>Routes to explore</strong></td><td>The same saved child record</td><td>Emerging skills, the Wave timeline, milestone memories and a separate Skill Forecast</td></tr>
+</tbody>
+</table></div>
 <p>Age-based context is still age-based context. A parent logging nothing does not make the window personalised. A baby matching none of the description has not failed it.</p>
 <figure><img src="/obubba-development-map-layers.svg" alt="The four honest layers behind OBubba’s Development Map: age anchor, observed family signals, a gentle map and a clear clinical boundary." loading="lazy"/><figcaption>The map becomes more useful when age-based context and parent-recorded evidence stay visibly separate. Neither is a diagnosis or deadline.</figcaption></figure>
 <h2>What opens on the real screen</h2>
@@ -957,6 +970,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/babys-development/height-weight-and-reviews/baby-reviews/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s health and development reviews</a></li><li><a href="https://www.cdc.gov/act-early/milestones/key-points.html" target="_blank" rel="noopener noreferrer">CDC: Key points about developmental milestone checklists</a></li><li><a href="https://www.bedfordshirehospitals.nhs.uk/our-services/neonatal-services/neurodevelopment/" target="_blank" rel="noopener noreferrer">Bedfordshire Hospitals NHS Foundation Trust: Neurodevelopment and corrected age</a></li><li>OBubba source reviewed: `development_map_screen.dart`, `dev_position.dart`, `dev_predict_adapter.dart`, `dev_predict.dart`, `dev_weekly_review.dart`, `grow_data.dart` and their focused tests</li></ul>
 <p><em>OBubba is a tracking, planning and education tool, not a medical device, developmental screen or diagnostic assessment. Development windows, confidence labels and skill forecasts are interpretations of age and parent-entered records. They cannot diagnose delay, determine the cause of changed behaviour or replace a health visitor, GP, neonatal team or other qualified professional.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -987,6 +1001,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

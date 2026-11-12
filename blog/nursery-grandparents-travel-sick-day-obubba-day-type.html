@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,16 @@
 <p>OBubba has a small control designed for exactly this problem: <strong>Today type</strong>. Label the date <strong>Home, Daycare, Grand, Travel or Sick</strong>, and the app can keep the day in the family story while reading its naps, feeds and wake windows in the right context.</p>
 <p>&gt; <strong>The label does not erase an unusual day. It tells OBubba not to mistake that day for your baby’s normal baseline.</strong></p>
 <h2>The 30-second answer</h2>
-<p>| Day type | Use it when | How OBubba treats it | |---|---|---| | <strong>Home</strong> | An ordinary day in your usual routine | Eligible to help teach the normal pattern | | <strong>Daycare</strong> | Nursery, daycare or a childminder shaped the day | Keeps the record but excludes the day from normal baseline learning | | <strong>Grand</strong> | Grandparents or family provided most of the care | Keeps the record, protects the home baseline and can contribute to an away-day comparison | | <strong>Travel</strong> | You were out, travelling or sleeping somewhere different | Treats the day as disrupted context rather than a normal training day | | <strong>Sick</strong> | Baby was unwell or the day was clearly “off” | Excludes the day from normal learning and treats illness as a health confounder, not a routine type |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Day type</th><th scope="col">Use it when</th><th scope="col">How OBubba treats it</th></tr></thead>
+<tbody>
+<tr><td><strong>Home</strong></td><td>An ordinary day in your usual routine</td><td>Eligible to help teach the normal pattern</td></tr>
+<tr><td><strong>Daycare</strong></td><td>Nursery, daycare or a childminder shaped the day</td><td>Keeps the record but excludes the day from normal baseline learning</td></tr>
+<tr><td><strong>Grand</strong></td><td>Grandparents or family provided most of the care</td><td>Keeps the record, protects the home baseline and can contribute to an away-day comparison</td></tr>
+<tr><td><strong>Travel</strong></td><td>You were out, travelling or sleeping somewhere different</td><td>Treats the day as disrupted context rather than a normal training day</td></tr>
+<tr><td><strong>Sick</strong></td><td>Baby was unwell or the day was clearly “off”</td><td>Excludes the day from normal learning and treats illness as a health confounder, not a routine type</td></tr>
+</tbody>
+</table></div>
 <p><strong>Home is the default.</strong> You only need to change it when the day’s setting or condition materially changes how the logs should be interpreted.</p>
 <h2>Where to find Today type</h2>
 <p>Open <strong>Track</strong>, move to the date you want, then scroll below the <strong>Log details</strong> grid. The <strong>Today type</strong> card shows the current label and a <strong>Change</strong> button.</p>
@@ -936,6 +950,7 @@
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — keep every real care day, add the missing context, and let personalised guidance learn from comparable evidence rather than a perfect-looking diary.</p>
 <p><em>This article describes the current OBubba implementation reviewed on 8 March 2027. Day labels organise app context; they are not medical assessments. Seek appropriate professional help when a baby is unwell, and urgent help in an emergency.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -966,6 +981,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

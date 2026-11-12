@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -882,7 +887,14 @@
 <p>For every usable completed milestone, the engine compares:</p>
 <p><strong>age when logged as achieved − that milestone’s typical reference age</strong></p>
 <p>Imagine three dated firsts:</p>
-<p>| Dated first | Relative to its typical point | |---|---:| | First A | 2 weeks earlier | | First B | 1 week earlier | | First C | 3 weeks later |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Dated first</th><th scope="col">Relative to its typical point</th></tr></thead>
+<tbody>
+<tr><td>First A</td><td>2 weeks earlier</td></tr>
+<tr><td>First B</td><td>1 week earlier</td></tr>
+<tr><td>First C</td><td>3 weeks later</td></tr>
+</tbody>
+</table></div>
 <p>Ordered as −2, −1 and +3 weeks, the middle value is <strong>−1 week</strong>. That becomes the shared timing shift. A future milestone with a typical point at 40 weeks would therefore be projected near 39 weeks.</p>
 <p>The app uses the <strong>median</strong>, not the average. In this example the average is zero, because the +3-week entry cancels the two earlier ones. The median better describes the middle of the small history and is harder for one unusual or misremembered date to pull around.</p>
 <h2>Why some milestone dates do not count</h2>
@@ -955,6 +967,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/babys-development/height-weight-and-reviews/baby-reviews/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s health and development reviews</a></li><li><a href="https://www.bedfordshirehospitals.nhs.uk/our-services/neonatal-services/neurodevelopment/" target="_blank" rel="noopener noreferrer">Bedfordshire Hospitals NHS Foundation Trust: Neurodevelopment and corrected age</a></li><li><a href="https://www.healthiertogether.nhs.uk/new-parent-and-baby/when-should-i-worry-about-my-babys-movements" target="_blank" rel="noopener noreferrer">Healthier Together: When should I worry about my baby’s movements?</a></li></ul>
 <p><em>OBubba is a tracking, planning and education tool, not a medical device or developmental assessment. Skill Forecast estimates are based on saved age information and milestone dates. They do not diagnose delay, verify a skill or replace a health visitor, GP, neonatal team or other qualified professional.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -985,6 +998,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

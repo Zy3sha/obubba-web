@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -872,11 +877,34 @@
 <p>One workable pattern is:</p>
 <ol><li>choose two repeat slots in the week</li><li>attach each food to a meal your family already serves</li><li>use a small, familiar and safe form</li><li>keep the rest of the meal ordinary</li><li>let your baby decide how much to eat</li></ol>
 <p>For example:</p>
-<p>| Tolerated food | Easy repeat form | A natural place in the week | |---|---|---| | Well-cooked egg | omelette strip, mashed boiled egg or egg stirred into a familiar dish | breakfast twice a week | | Peanut | smooth peanut butter thinned with water or mixed through porridge or yoghurt | two familiar breakfasts or snacks | | Cow’s milk in food | plain full-fat yoghurt, pasteurised cheese or milk used in cooking | breakfast or family meal | | Wheat/gluten | toast finger, porridge, soft pasta or couscous | ordinary breakfast or lunch | | Sesame | smooth tahini thinned into a familiar food or hummus in a manageable texture | lunch alongside vegetables or bread | | Fish | carefully checked, well-cooked and softly flaked fish | family fish meal | | Soya | tofu or plain soya yoghurt in a suitable texture | lunch or snack | | A tolerated tree nut | that specific nut as a smooth, thinned butter or finely ground powder | mixed into porridge or yoghurt |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Tolerated food</th><th scope="col">Easy repeat form</th><th scope="col">A natural place in the week</th></tr></thead>
+<tbody>
+<tr><td>Well-cooked egg</td><td>omelette strip, mashed boiled egg or egg stirred into a familiar dish</td><td>breakfast twice a week</td></tr>
+<tr><td>Peanut</td><td>smooth peanut butter thinned with water or mixed through porridge or yoghurt</td><td>two familiar breakfasts or snacks</td></tr>
+<tr><td>Cow’s milk in food</td><td>plain full-fat yoghurt, pasteurised cheese or milk used in cooking</td><td>breakfast or family meal</td></tr>
+<tr><td>Wheat/gluten</td><td>toast finger, porridge, soft pasta or couscous</td><td>ordinary breakfast or lunch</td></tr>
+<tr><td>Sesame</td><td>smooth tahini thinned into a familiar food or hummus in a manageable texture</td><td>lunch alongside vegetables or bread</td></tr>
+<tr><td>Fish</td><td>carefully checked, well-cooked and softly flaked fish</td><td>family fish meal</td></tr>
+<tr><td>Soya</td><td>tofu or plain soya yoghurt in a suitable texture</td><td>lunch or snack</td></tr>
+<tr><td>A tolerated tree nut</td><td>that specific nut as a smooth, thinned butter or finely ground powder</td><td>mixed into porridge or yoghurt</td></tr>
+</tbody>
+</table></div>
 <p>This is a menu example, not an instruction to offer every row. Peanut and tree nuts are different allergen groups; tolerating one does not prove tolerance to another. Cow’s milk can be used in food from around six months, but it should not replace breast milk or first infant formula as the main drink before 12 months.</p>
 <h2>A seven-day example after several foods are established</h2>
 <p>Suppose egg, peanut, dairy, wheat and sesame have each already been introduced separately and tolerated. A normal week might look like this:</p>
-<p>| Day | Ordinary meal idea | What the rotation is doing | |---|---|---| | Monday | well-cooked omelette strips with a familiar vegetable | repeat egg | | Tuesday | plain yoghurt with fruit | repeat dairy | | Wednesday | porridge with thinned smooth peanut butter | repeat peanut and familiar wheat only if both are established | | Thursday | usual allergen-free family meal | no need to make every day a project | | Friday | soft pasta with a familiar sauce | repeat wheat | | Saturday | mashed egg in a familiar meal | second egg opportunity | | Sunday | hummus with safely prepared soft food | repeat sesame |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Day</th><th scope="col">Ordinary meal idea</th><th scope="col">What the rotation is doing</th></tr></thead>
+<tbody>
+<tr><td>Monday</td><td>well-cooked omelette strips with a familiar vegetable</td><td>repeat egg</td></tr>
+<tr><td>Tuesday</td><td>plain yoghurt with fruit</td><td>repeat dairy</td></tr>
+<tr><td>Wednesday</td><td>porridge with thinned smooth peanut butter</td><td>repeat peanut and familiar wheat only if both are established</td></tr>
+<tr><td>Thursday</td><td>usual allergen-free family meal</td><td>no need to make every day a project</td></tr>
+<tr><td>Friday</td><td>soft pasta with a familiar sauce</td><td>repeat wheat</td></tr>
+<tr><td>Saturday</td><td>mashed egg in a familiar meal</td><td>second egg opportunity</td></tr>
+<tr><td>Sunday</td><td>hummus with safely prepared soft food</td><td>repeat sesame</td></tr>
+</tbody>
+</table></div>
 <p>Peanut could appear again on Sunday or in the following week, depending on your family’s plan. The important distinction is that these are <strong>repeat servings of established foods</strong>. Do not copy a multi-allergen menu for first introductions.</p>
 <p>If your baby licks the spoon, eats a small amount or turns away after one taste, do not force more to satisfy the tracker. Keep the next opportunity calm. Ask a dietitian or allergy professional if you need a specific therapeutic amount.</p>
 <h2>Safe forms do not become optional after introduction</h2>
@@ -936,6 +964,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/food-allergies-in-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Food allergies in babies and young children</a></li><li><a href="https://www.allergyuk.org/resources/weaning-and-introducing-your-baby-onto-solids-factsheet/" target="_blank" rel="noopener noreferrer">Allergy UK: Weaning and introducing your baby onto solids</a></li><li><a href="https://www.allergyuk.org/resources/peanut-allergy-factsheet/" target="_blank" rel="noopener noreferrer">Allergy UK: Peanut allergy and maintaining tolerance</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/help-your-baby-enjoy-new-foods/" target="_blank" rel="noopener noreferrer">NHS: Help your baby enjoy new foods</a></li></ul>
 <p><em>This article gives general information for UK families. It is not a personalised allergy-prevention, diagnosis or reintroduction plan, and OBubba is not a medical device. Follow advice from your baby’s own healthcare or allergy team.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -966,6 +995,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,17 @@
 <p>The <a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS says newborns wake repeatedly during the night in their first few months</a> and may wake because they need feeding or because they are too hot or cold. <a href="https://www.newcastle-hospitals.nhs.uk/services/sleep-service/paediatric-sleep/sleep-infants-0-12-months-2/" target="_blank" rel="noopener noreferrer">Newcastle Hospitals explains that young babies often sleep in two-to-three-hour periods</a> and that waking at the end of a sleep cycle is normal.</p>
 <p>That does not make broken sleep easy. It does mean a newborn&#39;s two-hour rhythm is not proof that anything is wrong or that you have created a habit. In the early weeks, feeding, growth, warmth, closeness and safe rest matter more than stretching intervals.</p>
 <p>As babies grow, some sleep longer and need fewer night feeds, but there is no birthday on which every baby should suddenly sleep through. Between six and twelve months, the NHS says night feeds <strong>may</strong> no longer be necessary for some babies, not all. Prematurity, growth, milk supply, illness and an individual feeding plan can change the picture.</p>
-<p>| What you see | What it may mean | Best first move | |---|---|---| | Young baby wakes and takes an active, substantial feed | Normal feeding need may be driving the interval | Feed responsively and follow your midwife, health visitor or clinician&#39;s plan | | Older baby wakes at similar intervals and only takes a token feed | The feed may be one part of the settling sequence | Check daytime intake and health before gently changing one settle | | Waking suddenly increased with congestion, pain, fever or poor feeding | Illness or discomfort may be disrupting sleep | Pause schedule experiments and get appropriate medical advice | | Wakes follow a long final awake period or a very difficult bedtime | Overtiredness may be contributing | Protect naps or move bedtime 10–15 minutes earlier for several nights | | Baby is awake and cheerful for a long period overnight | Sleep timing or unusually high daytime sleep may be relevant | Compare several days before changing naps | | Timing varies but the parent is becoming dangerously exhausted | The urgent issue is family safety, not a perfect schedule | Share shifts where possible and plan feeds away from sofas and armchairs |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What you see</th><th scope="col">What it may mean</th><th scope="col">Best first move</th></tr></thead>
+<tbody>
+<tr><td>Young baby wakes and takes an active, substantial feed</td><td>Normal feeding need may be driving the interval</td><td>Feed responsively and follow your midwife, health visitor or clinician&#39;s plan</td></tr>
+<tr><td>Older baby wakes at similar intervals and only takes a token feed</td><td>The feed may be one part of the settling sequence</td><td>Check daytime intake and health before gently changing one settle</td></tr>
+<tr><td>Waking suddenly increased with congestion, pain, fever or poor feeding</td><td>Illness or discomfort may be disrupting sleep</td><td>Pause schedule experiments and get appropriate medical advice</td></tr>
+<tr><td>Wakes follow a long final awake period or a very difficult bedtime</td><td>Overtiredness may be contributing</td><td>Protect naps or move bedtime 10–15 minutes earlier for several nights</td></tr>
+<tr><td>Baby is awake and cheerful for a long period overnight</td><td>Sleep timing or unusually high daytime sleep may be relevant</td><td>Compare several days before changing naps</td></tr>
+<tr><td>Timing varies but the parent is becoming dangerously exhausted</td><td>The urgent issue is family safety, not a perfect schedule</td><td>Share shifts where possible and plan feeds away from sofas and armchairs</td></tr>
+</tbody>
+</table></div>
 <h2>Why the two-hour timing does not prove a “sleep association”</h2>
 <p>Babies move through lighter and deeper sleep. They may stir, vocalise or briefly wake at transitions. That is normal biology. An older baby who wakes at most transitions and needs the exact bedtime condition again, such as feeding, rocking, a dummy or contact, may have learned to expect that condition. But the clock alone cannot tell you that.</p>
 <p>A more convincing settling pattern has several parts:</p>
@@ -901,7 +916,18 @@
 <p>Add one plain-language note: “This wake felt like hunger,” “very blocked nose,” or “wide awake and playing.” Parent observation is valuable evidence.</p>
 <p>Then compare the <strong>first wake</strong> with the later wakes. The first may follow a bedtime timing problem while later wakes are full feeds. Treating all four as one problem can lead to the wrong change.</p>
 <h2>How to read the pattern</h2>
-<p>| Repeatable pattern | More plausible explanation | What would strengthen it | |---|---|---| | Full, active feed after a meaningful gap | Hunger | Day feeds were poor or distracted; baby has reassuring output after feeding | | Brief comfort feed at nearly every transition | Familiar settling condition | Same condition starts bedtime; baby settles rapidly once it returns | | First wake 20–60 minutes after sleep onset, then mixed wakes | Bedtime false start | Difficult final wake window, overtired signs or transfer problem | | Long, happy wake in the middle of several nights | Timing or high daytime sleep | Repeated link with unusually high day sleep or too-early bedtime | | Sudden frequent wakes plus pain or illness signs | Discomfort or illness | Daytime symptoms, temperature, poor feeding or altered nappies | | Temporary increase while practising a new skill | Development | New milestone visible by day; schedule otherwise unchanged | | No stable pattern | Normal variability or missing context | More representative nights are needed; do not force a confident answer |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Repeatable pattern</th><th scope="col">More plausible explanation</th><th scope="col">What would strengthen it</th></tr></thead>
+<tbody>
+<tr><td>Full, active feed after a meaningful gap</td><td>Hunger</td><td>Day feeds were poor or distracted; baby has reassuring output after feeding</td></tr>
+<tr><td>Brief comfort feed at nearly every transition</td><td>Familiar settling condition</td><td>Same condition starts bedtime; baby settles rapidly once it returns</td></tr>
+<tr><td>First wake 20–60 minutes after sleep onset, then mixed wakes</td><td>Bedtime false start</td><td>Difficult final wake window, overtired signs or transfer problem</td></tr>
+<tr><td>Long, happy wake in the middle of several nights</td><td>Timing or high daytime sleep</td><td>Repeated link with unusually high day sleep or too-early bedtime</td></tr>
+<tr><td>Sudden frequent wakes plus pain or illness signs</td><td>Discomfort or illness</td><td>Daytime symptoms, temperature, poor feeding or altered nappies</td></tr>
+<tr><td>Temporary increase while practising a new skill</td><td>Development</td><td>New milestone visible by day; schedule otherwise unchanged</td></tr>
+<tr><td>No stable pattern</td><td>Normal variability or missing context</td><td>More representative nights are needed; do not force a confident answer</td></tr>
+</tbody>
+</table></div>
 <p>This table is a way to form a hypothesis, not diagnose a baby. Multiple factors can coexist: a teething baby can also be hungry; an overtired baby may still prefer feeding to resettle.</p>
 <h2>Choose one gentle experiment</h2>
 <p>Once health and feeding needs are covered, choose the smallest change matched to the clearest pattern.</p>
@@ -939,6 +965,7 @@
 <p>Two-hour waking can be normal, temporary or a sign that one part of the day needs attention. The clock is the beginning of the investigation, not the verdict. A calm record helps you move from “something is wrong” to a specific, testable question. Sometimes the honest answer is simply that your baby still needs you at night.</p>
 <p><em>This article provides general information, not medical advice. Follow your baby&#39;s individual feeding or care plan and contact a qualified health professional whenever feeding, growth, breathing, pain, fever or illness concerns you.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -969,6 +996,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

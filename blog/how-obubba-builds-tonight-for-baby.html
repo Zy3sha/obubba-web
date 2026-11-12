@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -857,7 +862,15 @@
 <p>We traced the production <strong>Sleep Story engine</strong>, the Tonight’s Guidance engine that feeds it, the Care screen that displays it and the tests around missing data. The reassuring answer is that the story is assembled from identifiable rules—not from a camera, microphone or hidden diagnosis. The important caution is that <strong>a persuasive story is still only as complete as the record underneath it</strong>.</p>
 <h2>The short answer</h2>
 <p>OBubba’s Sleep Story combines four layers:</p>
-<p>| Story layer | What the app uses | What the parent sees | |---|---|---| | <strong>Tonight</strong> | Live bedtime guidance, a logged bedtime if one already exists, and the active coaching step | A single “calm path into bedtime” | | <strong>This week</strong> | Up to seven recent calendar days compared with the seven before them | Up to two “little lights” or wins | | <strong>Meaning</strong> | Logged nights, night wakes, day sleep, bedtime/morning timing and usable sleep-debt days | One assessment and explained observations | | <strong>Try</strong> | The strongest supported issue, such as fragmented nights or low consistency | Up to three ideas, framed as one gentle experiment |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Story layer</th><th scope="col">What the app uses</th><th scope="col">What the parent sees</th></tr></thead>
+<tbody>
+<tr><td><strong>Tonight</strong></td><td>Live bedtime guidance, a logged bedtime if one already exists, and the active coaching step</td><td>A single “calm path into bedtime”</td></tr>
+<tr><td><strong>This week</strong></td><td>Up to seven recent calendar days compared with the seven before them</td><td>Up to two “little lights” or wins</td></tr>
+<tr><td><strong>Meaning</strong></td><td>Logged nights, night wakes, day sleep, bedtime/morning timing and usable sleep-debt days</td><td>One assessment and explained observations</td></tr>
+<tr><td><strong>Try</strong></td><td>The strongest supported issue, such as fragmented nights or low consistency</td><td>Up to three ideas, framed as one gentle experiment</td></tr>
+</tbody>
+</table></div>
 <p>It also has a low-data state. If fewer than two days in the current week contain any entries, it says the rhythm is <strong>still learning</strong> and asks for more logging rather than inventing certainty.</p>
 <figure><img src="/obubba-tonight-sleep-story-logic.svg" alt="A diagram showing live guidance and one plan step flowing into tonight’s headline, while two seven-day windows produce wins, an assessment and optional experiments." loading="lazy"/><figcaption>OBubba’s Sleep Story has a live tonight layer and a separate weekly evidence layer, with missing-data gates before stronger conclusions.</figcaption></figure>
 <p>The result is a nightly synthesis, not a medical assessment and not a promise that a particular bedtime will produce a particular night.</p>
@@ -882,7 +895,14 @@
 <p>The comparison is still only as good as its coverage. A calendar day in the past is not necessarily a completely logged day. Nursery naps, contact naps or a partner’s night response can disappear from the story if they never reached the shared record.</p>
 <h2>What “settling beautifully”, “fairly typical” and “fragmented” mean</h2>
 <p>The weekly assessment uses a deliberately simple rule after at least two logged nights:</p>
-<p>| Average logged night wakes | Current assessment wording | |---:|---| | <strong>1.2 or fewer</strong> | “settling beautifully” | | <strong>more than 1.2, up to 3</strong> | “fairly typical” | | <strong>more than 3</strong> | “fragmented” |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Average logged night wakes</th><th scope="col">Current assessment wording</th></tr></thead>
+<tbody>
+<tr><td><strong>1.2 or fewer</strong></td><td>“settling beautifully”</td></tr>
+<tr><td><strong>more than 1.2, up to 3</strong></td><td>“fairly typical”</td></tr>
+<tr><td><strong>more than 3</strong></td><td>“fragmented”</td></tr>
+</tbody>
+</table></div>
 <p>With fewer than two logged nights, it says there are not yet enough nights to call the pattern.</p>
 <p>These are product labels. They do not determine whether a baby is thriving, whether wakes are developmentally expected, whether a feed is needed or whether a family is coping. A newborn waking four times is not “failing” sleep. An older baby waking once can still need help if the wake lasts three hours. A single average cannot contain either family’s full experience.</p>
 <p>The NHS notes that babies have individual sleep patterns, newborns repeatedly wake in the first months, and some babies—not all—sleep for longer stretches as they grow. Growth spurts, teething and illness can alter sleep. That is the right context for reading a weekly label: descriptive, not diagnostic.</p>
@@ -953,6 +973,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Feeding on demand</a></li><li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/breastfeeding/your-questions-answered/" target="_blank" rel="noopener noreferrer">NHS: Your breastfeeding questions answered</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/food-allergies-in-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Food allergies in babies and young children</a></li><li><a href="https://www.nhs.uk/conditions/anaphylaxis/" target="_blank" rel="noopener noreferrer">NHS: Anaphylaxis</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/keeping-a-clear-cot/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Keeping a clear cot</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/room-sharing/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Room sharing</a></li></ul>
 <p><em>This article provides general information for UK families. OBubba cannot diagnose a sleep, feeding, allergy or medical problem; determine why a baby woke; or decide that a night feed is no longer needed. Follow your baby’s cues and any individual advice from your midwife, health visitor, GP, feeding team, paediatrician or neonatal service.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -983,6 +1004,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

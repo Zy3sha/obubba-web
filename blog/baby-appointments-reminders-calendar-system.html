@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -855,7 +860,16 @@
 <p>This is why baby admin feels heavier than the number of appointments suggests. One event creates several different jobs.</p>
 <p><strong>Use two lanes: appointments for places you must be, and reminders for actions you must take.</strong> Put the confirmed date, time and location in the appointment. Then add one or two timed prompts for the preparation that cannot wait until the event starts. Keep the clinical invitation or official record as the source of truth.</p>
 <h2>The two-lane baby calendar</h2>
-<p>| Put it in <strong>Appointments</strong> | Put it in <strong>Reminders</strong> | |---|---| | “6–8 week baby check, Tuesday at 10:20” | “Put Red Book and question list in changing bag, Monday evening” | | “Vaccination appointment, 14:00” | “Pack comfort item and feeding supplies, 13:00” | | “Hearing follow-up, clinic, 09:30” | “Leave home by 08:45” | | “Health visitor review, home, Friday” | “Complete questionnaire, Wednesday after dinner” | | “Weaning allergy review, video call” | “Photograph ingredient labels and write the reaction timeline” |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Put it in <strong>Appointments</strong></th><th scope="col">Put it in <strong>Reminders</strong></th></tr></thead>
+<tbody>
+<tr><td>“6–8 week baby check, Tuesday at 10:20”</td><td>“Put Red Book and question list in changing bag, Monday evening”</td></tr>
+<tr><td>“Vaccination appointment, 14:00”</td><td>“Pack comfort item and feeding supplies, 13:00”</td></tr>
+<tr><td>“Hearing follow-up, clinic, 09:30”</td><td>“Leave home by 08:45”</td></tr>
+<tr><td>“Health visitor review, home, Friday”</td><td>“Complete questionnaire, Wednesday after dinner”</td></tr>
+<tr><td>“Weaning allergy review, video call”</td><td>“Photograph ingredient labels and write the reaction timeline”</td></tr>
+</tbody>
+</table></div>
 <p>An appointment answers <strong>where and when</strong>. A reminder answers <strong>what needs doing</strong>. If you squeeze both into a single calendar event, the useful action is often hidden until the moment the appointment begins.</p>
 <figure><img src="/obubba-baby-admin-two-lane-system.svg" alt="A visual two-lane system: appointments hold fixed events while reminders hold the preparation actions that make those events easier." loading="lazy"/><figcaption>Appointments are fixed events; reminders are the small actions that prepare the family for them.</figcaption></figure>
 <h2>Why one event creates so much mental load</h2>
@@ -898,7 +912,16 @@
 <h2>Use preparation reminders, not anxiety reminders</h2>
 <p>Good reminders reduce future work. Poor reminders simply move worry to a new time.</p>
 <p>Compare:</p>
-<p>| Anxiety reminder | Action reminder | |---|---| | “Don&#39;t forget baby appointment” | “Put Red Book in changing bag” | | “Ask about feeding” | “Write when shorter feeds began + bring three-day summary” | | “Vaccines tomorrow!!!” | “Check invitation, pack comfort item, leave at 13:20” | | “Weaning concern” | “Save ingredient photo and reaction timeline for clinician” | | “Baby not sleeping” | “Bring seven-day sleep summary; circle the two questions” |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Anxiety reminder</th><th scope="col">Action reminder</th></tr></thead>
+<tbody>
+<tr><td>“Don&#39;t forget baby appointment”</td><td>“Put Red Book in changing bag”</td></tr>
+<tr><td>“Ask about feeding”</td><td>“Write when shorter feeds began + bring three-day summary”</td></tr>
+<tr><td>“Vaccines tomorrow!!!”</td><td>“Check invitation, pack comfort item, leave at 13:20”</td></tr>
+<tr><td>“Weaning concern”</td><td>“Save ingredient photo and reaction timeline for clinician”</td></tr>
+<tr><td>“Baby not sleeping”</td><td>“Bring seven-day sleep summary; circle the two questions”</td></tr>
+</tbody>
+</table></div>
 <p>The action version tells a tired brain how to finish the job.</p>
 <h2>How OBubba&#39;s actual app handles this</h2>
 <p>Open <strong>Care → Reminders &amp; appointments</strong>. The current app deliberately separates <strong>Reminder</strong> and <strong>Appointment</strong> rather than placing every baby task in one undifferentiated list.</p>
@@ -945,6 +968,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/babys-development/height-weight-and-reviews/baby-reviews/" target="_blank" rel="noopener noreferrer">NHS: Your baby&#39;s health and development reviews</a></li><li><a href="https://www.nhs.uk/baby/newborn-screening/" target="_blank" rel="noopener noreferrer">NHS: Newborn screening</a></li><li><a href="https://www.nhs.uk/baby/newborn-screening/blood-spot-test/" target="_blank" rel="noopener noreferrer">NHS: Newborn blood spot test</a></li><li><a href="https://www.nhs.uk/baby/newborn-screening/physical-examination/" target="_blank" rel="noopener noreferrer">NHS: Newborn physical examination</a></li><li><a href="https://www.gov.uk/government/publications/routine-childhood-immunisation-schedule" target="_blank" rel="noopener noreferrer">UKHSA: Routine childhood immunisation schedule</a></li><li><a href="https://www.gov.uk/government/publications/the-complete-routine-immunisation-schedule/complete-routine-immunisation-schedule-from-1-january-2026" target="_blank" rel="noopener noreferrer">UKHSA: Complete routine immunisation schedule from 1 January 2026</a></li></ul>
 <p><em>This UK-oriented article is general organisation guidance, not medical advice. Appointment arrangements differ across the UK and by individual clinical plan. Use official invitations, the Red Book and advice from your midwife, health visitor, GP, pharmacist or specialist team. Seek urgent or emergency help when your baby is unwell rather than waiting for a reminder or routine appointment.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -975,6 +999,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,20 @@
 <p>Here is exactly how the app earns the sentence, why a mixed-fed baby may receive no card, what “from N days” really means and when feeding changes need a health check rather than another teething explanation.</p>
 <h2>The short answer</h2>
 <p>Every gate below must pass:</p>
-<p>| Gate | Current rule | |---|---| | Eruption anchor | An <strong>actual named tooth</strong> logged today or during the previous 5 days | | Around-tooth window | Logged feed days from <strong>D−5 through min(D+5, today)</strong> | | Baseline | Logged feed days from <strong>D−19 through D−6</strong> | | Minimum history | At least <strong>2 around-tooth days</strong> and <strong>5 baseline days</strong> | | Bottle route | Bottle-like records are at least <strong>70%</strong> of milk-feed records; compare daytime ml/day | | Breast route | If bottle route does not win, breast-like records are at least <strong>70%</strong>; compare daytime minutes/day | | Mixed route | Neither reaches 70%; stay silent | | Change needed | Around-tooth mean is at least <strong>15% lower</strong> than baseline | | Urgency | 15–29% is low; <strong>30%+ is medium</strong> |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">Current rule</th></tr></thead>
+<tbody>
+<tr><td>Eruption anchor</td><td>An <strong>actual named tooth</strong> logged today or during the previous 5 days</td></tr>
+<tr><td>Around-tooth window</td><td>Logged feed days from <strong>D−5 through min(D+5, today)</strong></td></tr>
+<tr><td>Baseline</td><td>Logged feed days from <strong>D−19 through D−6</strong></td></tr>
+<tr><td>Minimum history</td><td>At least <strong>2 around-tooth days</strong> and <strong>5 baseline days</strong></td></tr>
+<tr><td>Bottle route</td><td>Bottle-like records are at least <strong>70%</strong> of milk-feed records; compare daytime ml/day</td></tr>
+<tr><td>Breast route</td><td>If bottle route does not win, breast-like records are at least <strong>70%</strong>; compare daytime minutes/day</td></tr>
+<tr><td>Mixed route</td><td>Neither reaches 70%; stay silent</td></tr>
+<tr><td>Change needed</td><td>Around-tooth mean is at least <strong>15% lower</strong> than baseline</td></tr>
+<tr><td>Urgency</td><td>15–29% is low; <strong>30%+ is medium</strong></td></tr>
+</tbody>
+</table></div>
 <p>The Brain supplies 26 calendar days of feed history, which is enough for the oldest possible comparison when the tooth was five days ago.</p>
 <figure><img src="/obubba-teething-feed-dip-detector.svg" alt="The exact decision path behind OBubba’s milk-dip-around-a-tooth insight." loading="lazy"/><figcaption>OBubba requires an actual tooth logged in the past five days, compares a 14-day pre-tooth baseline with logged days around the eruption, chooses either bottle millilitres or breast minutes when one mode reaches 70%, and speaks only after a drop of at least 15%. Mixed feeding remains quiet rather than combining unlike units.</figcaption></figure>
 <h2>A real tooth entry comes first</h2>
@@ -981,6 +999,7 @@
 <p>The limits are equally real: night feeds are absent, age does not affect the rule, sore gums are not observed, partial days can skew the mean, and a solids-only logged date can enter with zero milk.</p>
 <p>Use the card to notice a change and bring the record into one place. Use wet nappies, the baby’s behaviour and professional advice to decide whether that change is safe.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -1011,6 +1030,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

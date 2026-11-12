@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,15 @@
 <p>When the card appears, do not start with a shopping list. Start with four questions:</p>
 <ol><li>Is your baby around six months old, using individual professional guidance if they were premature?</li><li>Can they stay sitting and hold their head steady?</li><li>Can they coordinate eyes, hands and mouth to look at food, pick it up and bring it towards their mouth?</li><li>Can they swallow food rather than automatically push it straight back out?</li></ol>
 <p>The <a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS says the three developmental signs should appear together from around six months</a>. Chewing fists, waking more at night and wanting more milk are not proof of readiness. Starting solids is also not a treatment for night waking.</p>
-<p>| What the card knows | What it does not know | |---|---| | Corrected guidance age from the saved birth and due dates | Whether sitting and head control are stable today | | Whether any solids feed exists in current or archived history | Whether your baby can coordinate reaching and mouthing food | | Whether the date of birth is missing or invalid | Whether swallowing is developmentally or clinically safe | | That the family may need the “Before first tastes” tools | Whether today is calm, illness-free and practical |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What the card knows</th><th scope="col">What it does not know</th></tr></thead>
+<tbody>
+<tr><td>Corrected guidance age from the saved birth and due dates</td><td>Whether sitting and head control are stable today</td></tr>
+<tr><td>Whether any solids feed exists in current or archived history</td><td>Whether your baby can coordinate reaching and mouthing food</td></tr>
+<tr><td>Whether the date of birth is missing or invalid</td><td>Whether swallowing is developmentally or clinically safe</td></tr>
+<tr><td>That the family may need the “Before first tastes” tools</td><td>Whether today is calm, illness-free and practical</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-ready-to-explore-solids-gates.svg" alt="The exact gates behind OBubba’s “Ready to explore solids?” card." loading="lazy"/><figcaption>The app waits for a known corrected age of at least 26 weeks and no solids anywhere in the history. The result opens a human readiness check; it does not certify readiness.</figcaption></figure>
 <h2>Why the card appeared now</h2>
 <p>The current path is deliberately small. `diagnoseWeaningPattern` first receives a developmental age and two different views of the solids history.</p>
@@ -898,7 +911,17 @@
 <p>This is not the same as deciding that swallowing is medically safe. Repeated coughing, choking, wet or noisy breathing, pain, colour change, recurrent chest infections or significant feeding distress need professional assessment.</p>
 <h2>Readiness signs that are easy to misread</h2>
 <p>The timing is confusing because several normal changes cluster around five to seven months.</p>
-<p>| What you notice | Why it can mislead | Better next check | |---|---|---| | Chewing hands | Mouthing and teething are normal development | Look for all three readiness signs | | Watching every bite | Interest is not full eye-hand-mouth coordination | Can baby reach and bring food to the mouth? | | More night wakes | Sleep can change for many reasons | Offer milk responsively and troubleshoot sleep separately | | Wanting extra milk | Growth and appetite vary | Continue breast milk or first infant formula | | One steady sit | A single moment may not persist through a meal | Observe the skill consistently | | A packet labelled “4+ months” | Packaging does not assess your baby | Use current guidance and individual development |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What you notice</th><th scope="col">Why it can mislead</th><th scope="col">Better next check</th></tr></thead>
+<tbody>
+<tr><td>Chewing hands</td><td>Mouthing and teething are normal development</td><td>Look for all three readiness signs</td></tr>
+<tr><td>Watching every bite</td><td>Interest is not full eye-hand-mouth coordination</td><td>Can baby reach and bring food to the mouth?</td></tr>
+<tr><td>More night wakes</td><td>Sleep can change for many reasons</td><td>Offer milk responsively and troubleshoot sleep separately</td></tr>
+<tr><td>Wanting extra milk</td><td>Growth and appetite vary</td><td>Continue breast milk or first infant formula</td></tr>
+<tr><td>One steady sit</td><td>A single moment may not persist through a meal</td><td>Observe the skill consistently</td></tr>
+<tr><td>A packet labelled “4+ months”</td><td>Packaging does not assess your baby</td><td>Use current guidance and individual development</td></tr>
+</tbody>
+</table></div>
 <p>The “night waking means solids” idea deserves special caution. The NHS explicitly says starting solids does not make a baby more likely to sleep through. If waking changed, use sleep evidence—wake timing, settling, feeds, naps and discomfort—not a developmental food milestone as a sleep fix.</p>
 <h2>What to do after the card appears</h2>
 <h3>1. Open the preparation guide before offering food</h3>
@@ -953,6 +976,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s first solid foods</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/what-to-feed-your-baby/from-around-6-months/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: From around 6 months</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/choking-and-gagging-on-food/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Choking and gagging on food</a></li><li><a href="https://www.cuh.nhs.uk/patient-information/weaning-babies-born-prematurely/" target="_blank" rel="noopener noreferrer">Cambridge University Hospitals: Weaning babies born prematurely</a></li><li>OBubba source reviewed: `weaning_insights.dart`, `brain.dart`, `child_sync_repository.dart`, `pre_weaning_screen.dart`, `dev_predict.dart`, `dev_predict_adapter.dart`, `weaning_insights_test.dart`, `engine_integration_test.dart`, `dev_predict_test.dart`, `day_trim_test.dart` and `lifetime_summary_test.dart`.</li></ul>
 <p><em>OBubba is a record, pattern and education tool. It cannot assess developmental readiness, posture, chewing, swallowing, nutrition or choking risk. It does not replace advice from a health visitor, GP, neonatal team, paediatric dietitian, speech and language therapist, paediatrician, NHS 111 or emergency services.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -983,6 +1007,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

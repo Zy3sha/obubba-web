@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,17 @@
 <p><strong>Do not build a perfect baby schedule for New Year. Choose one tiny anchor: a useful action attached to something that already happens, such as opening the curtains after the morning wake, offering a meal after the first nap or reading one board book before bedtime. Repeat the smallest version for a week, follow the baby’s cues and let the rest of the day remain flexible.</strong></p>
 <p>&gt; <strong>A routine says “when this happens, we usually do this next.” A rigid schedule says “this must happen at 9:05, whatever the baby is telling us.” Start with the first one.</strong></p>
 <h2>Pick one January anchor</h2>
-<p>| What feels difficult | One tiny anchor | Minimum version on a hard day | What it must not become | |---|---|---|---| | mornings and nights have blurred | open the curtains after the morning wake | stand by the window for one minute | deliberately waking a newborn or a baby who needs recovery sleep | | bedtime begins differently every night | dim lights and read one short book before the final settle | one page and the same goodnight phrase | withholding a feed or ignoring distress to preserve the sequence | | solids are easy to forget | offer one age-appropriate meal after a reliable wake or nap | sit together with one familiar food | pressuring the baby to eat, replacing needed milk or counting an empty bowl as success | | toothbrushing disappears in the evening rush | brush after the final meal or before the bedtime story | a brief gentle attempt | pinning down a distressed baby or treating perfection as more important than gradual familiarity | | leaving the house takes an hour | reset the nappy bag after the first nap | nappies, wipes and one spare outfit | packing instead of responding to hunger, tiredness or illness | | carers keep asking what happened | give a 30-second handover at each change of carer | last feed, last sleep and anything important | turning care into a scorecard between adults |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What feels difficult</th><th scope="col">One tiny anchor</th><th scope="col">Minimum version on a hard day</th><th scope="col">What it must not become</th></tr></thead>
+<tbody>
+<tr><td>mornings and nights have blurred</td><td>open the curtains after the morning wake</td><td>stand by the window for one minute</td><td>deliberately waking a newborn or a baby who needs recovery sleep</td></tr>
+<tr><td>bedtime begins differently every night</td><td>dim lights and read one short book before the final settle</td><td>one page and the same goodnight phrase</td><td>withholding a feed or ignoring distress to preserve the sequence</td></tr>
+<tr><td>solids are easy to forget</td><td>offer one age-appropriate meal after a reliable wake or nap</td><td>sit together with one familiar food</td><td>pressuring the baby to eat, replacing needed milk or counting an empty bowl as success</td></tr>
+<tr><td>toothbrushing disappears in the evening rush</td><td>brush after the final meal or before the bedtime story</td><td>a brief gentle attempt</td><td>pinning down a distressed baby or treating perfection as more important than gradual familiarity</td></tr>
+<tr><td>leaving the house takes an hour</td><td>reset the nappy bag after the first nap</td><td>nappies, wipes and one spare outfit</td><td>packing instead of responding to hunger, tiredness or illness</td></tr>
+<tr><td>carers keep asking what happened</td><td>give a 30-second handover at each change of carer</td><td>last feed, last sleep and anything important</td><td>turning care into a scorecard between adults</td></tr>
+</tbody>
+</table></div>
 <p>Choose the row that removes the most friction this week. Do not begin all six on 1 January.</p>
 <h2>Routine, rhythm and schedule are different</h2>
 <p>Parents are often told to “get the baby into a routine” as though everybody means the same thing.</p>
@@ -972,6 +987,7 @@
 <p>No. Resume at the next natural opportunity. Consistency means recognisable repetition across real family life—not an unbroken streak.</p>
 <p><em>OBubba supports parent-entered planning, reminders and pattern awareness. It cannot assess readiness for solids, supervise eating or sleep, prescribe feeding, diagnose a health problem, guarantee a nap, verify a safe sleep space or replace advice from a health visitor, dentist, dietitian, pharmacist, GP, NHS 111 or emergency service.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -1002,6 +1018,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

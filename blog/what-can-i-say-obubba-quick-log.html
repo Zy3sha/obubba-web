@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -864,20 +869,56 @@
 <h2>20 tested Quick Log phrases</h2>
 <p>These are not invented marketing examples. Each behaviour is covered in the current parser tests.</p>
 <h3>Bottle and breast feeds</h3>
-<p>| Say or type | OBubba proposes | |---|---| | <strong>1. “Fed 120ml at 2pm.”</strong> | Bottle feed, 120ml, 2:00pm | | <strong>2. “Bottle 4oz at 9am.”</strong> | Bottle feed, about 118ml, 9:00am | | <strong>3. “Gave a bottle of one twenty ml at 2pm.”</strong> | Bottle feed, 120ml, 2:00pm | | <strong>4. “Nursed right side 15 minutes at 2pm.”</strong> | Breastfeed, right side, 15 minutes, 2:00pm | | <strong>5. “Breastfed left 10 minutes, right 5 minutes.”</strong> | One breastfeed with 10 minutes left and 5 minutes right | | <strong>6. “Breastfed both sides for 20 minutes at 2pm.”</strong> | One 20-minute breastfeed, split across both sides |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Say or type</th><th scope="col">OBubba proposes</th></tr></thead>
+<tbody>
+<tr><td><strong>1. “Fed 120ml at 2pm.”</strong></td><td>Bottle feed, 120ml, 2:00pm</td></tr>
+<tr><td><strong>2. “Bottle 4oz at 9am.”</strong></td><td>Bottle feed, about 118ml, 9:00am</td></tr>
+<tr><td><strong>3. “Gave a bottle of one twenty ml at 2pm.”</strong></td><td>Bottle feed, 120ml, 2:00pm</td></tr>
+<tr><td><strong>4. “Nursed right side 15 minutes at 2pm.”</strong></td><td>Breastfeed, right side, 15 minutes, 2:00pm</td></tr>
+<tr><td><strong>5. “Breastfed left 10 minutes, right 5 minutes.”</strong></td><td>One breastfeed with 10 minutes left and 5 minutes right</td></tr>
+<tr><td><strong>6. “Breastfed both sides for 20 minutes at 2pm.”</strong></td><td>One 20-minute breastfeed, split across both sides</td></tr>
+</tbody>
+</table></div>
 <p>Four ounces is converted to millilitres and rounded because OBubba stores bottle volume in millilitres. The preview is therefore the place to notice whether speech recognition heard <strong>four</strong> or <strong>forty</strong>.</p>
 <p>If you only say <strong>“nursing”</strong>, with no completed time or duration, the parser offers <strong>Start breast timer</strong> rather than inventing a finished feed. That timer is not saved from Quick Log; open the clock/timer to start it properly.</p>
 <h3>Naps, bedtime and wakes</h3>
-<p>| Say or type | OBubba proposes | |---|---| | <strong>7. “Napped 1pm to 3pm.”</strong> | Completed nap, 1:00–3:00pm | | <strong>8. “Napped 1 to 3:30pm.”</strong> | Completed nap, 1:00–3:30pm | | <strong>9. “Down for a nap at 2pm.”</strong> | Open nap beginning at 2:00pm, marked still asleep | | <strong>10. “Slept 7pm to 7am.”</strong> | Overnight sleep, 7:00pm–7:00am | | <strong>11. “Bedtime at 7:30pm.”</strong> | Bedtime at 7:30pm | | <strong>12. “Woke up at 3am.”</strong> | Wake at 3:00am, classified as a night wake | | <strong>13. “Fed 120ml at half past seven.”</strong> | Bottle feed at 7:30 |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Say or type</th><th scope="col">OBubba proposes</th></tr></thead>
+<tbody>
+<tr><td><strong>7. “Napped 1pm to 3pm.”</strong></td><td>Completed nap, 1:00–3:00pm</td></tr>
+<tr><td><strong>8. “Napped 1 to 3:30pm.”</strong></td><td>Completed nap, 1:00–3:30pm</td></tr>
+<tr><td><strong>9. “Down for a nap at 2pm.”</strong></td><td>Open nap beginning at 2:00pm, marked still asleep</td></tr>
+<tr><td><strong>10. “Slept 7pm to 7am.”</strong></td><td>Overnight sleep, 7:00pm–7:00am</td></tr>
+<tr><td><strong>11. “Bedtime at 7:30pm.”</strong></td><td>Bedtime at 7:30pm</td></tr>
+<tr><td><strong>12. “Woke up at 3am.”</strong></td><td>Wake at 3:00am, classified as a night wake</td></tr>
+<tr><td><strong>13. “Fed 120ml at half past seven.”</strong></td><td>Bottle feed at 7:30</td></tr>
+</tbody>
+</table></div>
 <p>The parser understands <strong>half past seven</strong>, <strong>half seven</strong>, <strong>quarter past two</strong>, <strong>quarter to eight</strong>, <strong>noon</strong> and <strong>midnight</strong>. It also repairs common spoken ranges such as “napped 1 to 3”.</p>
 <p>Still, an explicit <strong>am</strong> or <strong>pm</strong> is safer than relying on context. “At seven” can be a morning feed; an ambiguous bedtime hour is usually interpreted as evening. If that is not what you meant, correct the sentence before saving.</p>
 <p>For catch-up logging after midnight, the app also applies the same night re-bucketing used by its manual log: a forgotten bedtime and its overnight wakes are kept with the relevant night rather than blindly filed under the date on the clock.</p>
 <h3>Nappies, solids and everyday care</h3>
-<p>| Say or type | OBubba proposes | |---|---| | <strong>14. “Dirty nappy at 4pm.”</strong> | Dirty nappy, 4:00pm | | <strong>15. “Wet dirty nappy at 4pm.”</strong> | One combined wet-and-dirty nappy, 4:00pm | | <strong>16. “Poopy diaper at 3pm.”</strong> | Dirty nappy, 3:00pm | | <strong>17. “Ate avocado at noon.”</strong> | Solids entry naming avocado, 12:00pm | | <strong>18. “Bath at 7. Bedtime 8pm.”</strong> | A bath entry and a separate bedtime entry |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Say or type</th><th scope="col">OBubba proposes</th></tr></thead>
+<tbody>
+<tr><td><strong>14. “Dirty nappy at 4pm.”</strong></td><td>Dirty nappy, 4:00pm</td></tr>
+<tr><td><strong>15. “Wet dirty nappy at 4pm.”</strong></td><td>One combined wet-and-dirty nappy, 4:00pm</td></tr>
+<tr><td><strong>16. “Poopy diaper at 3pm.”</strong></td><td>Dirty nappy, 3:00pm</td></tr>
+<tr><td><strong>17. “Ate avocado at noon.”</strong></td><td>Solids entry naming avocado, 12:00pm</td></tr>
+<tr><td><strong>18. “Bath at 7. Bedtime 8pm.”</strong></td><td>A bath entry and a separate bedtime entry</td></tr>
+</tbody>
+</table></div>
 <p>British <strong>nappy</strong> and American <strong>diaper</strong> both work. Texture words such as “pasty” can be recognised too, but a spoken description is never an assessment of hydration, allergy or illness. It is simply a parent-entered record.</p>
 <p>For allergen tracking, use the full food details when they matter. “Ate avocado” is enough for a simple meal note; it is not a substitute for carefully recording a first allergen exposure and any reaction. See our <a href="/blog/why-obubba-did-not-detect-baby-food-allergen.html">allergen recognition guide</a> for the exact difference.</p>
 <h3>Temperature and medicine</h3>
-<p>| Say or type | OBubba proposes | |---|---| | <strong>19. “Temperature 38.5 at 11am.”</strong> | Temperature reading of 38.5°C at 11:00am | | <strong>20. “Gave Calpol 5ml at 10am.”</strong> | Paracetamol medicine entry, 5ml, 10:00am |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Say or type</th><th scope="col">OBubba proposes</th></tr></thead>
+<tbody>
+<tr><td><strong>19. “Temperature 38.5 at 11am.”</strong></td><td>Temperature reading of 38.5°C at 11:00am</td></tr>
+<tr><td><strong>20. “Gave Calpol 5ml at 10am.”</strong></td><td>Paracetamol medicine entry, 5ml, 10:00am</td></tr>
+</tbody>
+</table></div>
 <p>These last two are records of something measured or already given. <strong>Quick Log does not measure a temperature, choose a medicine, calculate a dose, verify the product strength or decide when another dose is safe.</strong></p>
 <p>Always check the physical medicine packet or leaflet, the actual product and strength, the child’s age and any professional instructions. The NHS says to get help from 111 if a child has received more paracetamol than the packet, leaflet or prescription says. A log can help a carer remember what happened; it cannot authorise what happens next.</p>
 <p>Likewise, do not spend time making a perfect app entry before seeking help. NHS guidance says to contact 111 or a GP urgently for a temperature of <strong>38°C or higher in a baby under 3 months</strong>, or <strong>39°C or higher at 3–6 months</strong>, and sooner for other concerning symptoms. Call 999 for emergency signs such as severe breathing difficulty, a non-fading rash or a baby who will not wake.</p>
@@ -926,6 +967,7 @@
 <h3>Can I rely on Quick Log for medicine dosing?</h3>
 <p>No. Use it only to record what was actually given. Check the packet, leaflet or prescription and ask a pharmacist, doctor or NHS 111 when unsure. If the log and the physical medicine information disagree, stop and resolve the discrepancy before another dose.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -956,6 +998,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

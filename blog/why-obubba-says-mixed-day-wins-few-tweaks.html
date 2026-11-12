@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,15 @@
 <p><strong>The current Day Review reads the night that ended today plus today&#39;s completed logs. It creates separate lists of grounded wins and possible improvements, then chooses the headline from the balance between those lists. If there is not enough logged evidence, it does not invent a story.</strong></p>
 <h2>What the four headlines actually mean</h2>
 <p>The headline is a simple summary of which lists contain something:</p>
-<p>| Headline | condition | |---|---| | <strong>Not much logged yet today</strong> | No grounded wins or improvements | | <strong>A solid day ✨</strong> | One or more wins and no improvements | | <strong>A tougher day, here&#39;s what helps</strong> | One or more improvements and no wins | | <strong>A mixed day, wins and a few tweaks</strong> | Both lists contain something |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Headline</th><th scope="col">condition</th></tr></thead>
+<tbody>
+<tr><td><strong>Not much logged yet today</strong></td><td>No grounded wins or improvements</td></tr>
+<tr><td><strong>A solid day ✨</strong></td><td>One or more wins and no improvements</td></tr>
+<tr><td><strong>A tougher day, here&#39;s what helps</strong></td><td>One or more improvements and no wins</td></tr>
+<tr><td><strong>A mixed day, wins and a few tweaks</strong></td><td>Both lists contain something</td></tr>
+</tbody>
+</table></div>
 <p>“Mixed” therefore does not mean half good, half bad. One meaningful win plus one small adjustment is enough. The app does not turn the day into a percentage or compare your family with another baby&#39;s score.</p>
 <h2>What goes into Today&#39;s review</h2>
 <p>The review joins two timeframes that parents naturally think about together:</p>
@@ -935,6 +948,7 @@
 <h3>Is Today&#39;s review medical advice?</h3>
 <p>No. It is a summary of logged care and sleep signals. Health, feeding or hydration concerns should be assessed from the baby and appropriate professional guidance, not from a daily tracker headline.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -965,6 +979,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

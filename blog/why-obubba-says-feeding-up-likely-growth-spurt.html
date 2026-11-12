@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -867,7 +872,16 @@
 <p>Imagine the previous logged milk-feed counts were:</p>
 <p>&gt; 6 · 5 · 6 · 6 · 5 · 6 · 5</p>
 <p>The baseline is about 5.6 feeds per logged day.</p>
-<p>| Today’s record | What the current detector sees | |---|---| | 6 feeds | close to baseline; no growth-spurt card | | 7 feeds | busier, but not 40% higher; no card | | 8 feeds and yesterday was ordinary | more than 40% higher, but not quite the strong single-day 50% gate; no card | | 8 feeds and yesterday was also clearly elevated | two-day rise clears the persistence route; card can appear | | 9 feeds | at least 50% above baseline; the single strong day can qualify |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Today’s record</th><th scope="col">What the current detector sees</th></tr></thead>
+<tbody>
+<tr><td>6 feeds</td><td>close to baseline; no growth-spurt card</td></tr>
+<tr><td>7 feeds</td><td>busier, but not 40% higher; no card</td></tr>
+<tr><td>8 feeds and yesterday was ordinary</td><td>more than 40% higher, but not quite the strong single-day 50% gate; no card</td></tr>
+<tr><td>8 feeds and yesterday was also clearly elevated</td><td>two-day rise clears the persistence route; card can appear</td></tr>
+<tr><td>9 feeds</td><td>at least 50% above baseline; the single strong day can qualify</td></tr>
+</tbody>
+</table></div>
 <p>Because feed counts are whole numbers, the exact jump needed changes with the baseline. The point is not a magic total such as “nine feeds means a spurt”. It is <strong>more feeds than this baby’s own recent record</strong>.</p>
 <p>If a day has no milk feeds logged, OBubba does not treat it as a genuine zero when building this baseline. It is skipped. That protects the average from an obviously incomplete day, but it also means the pattern is only as representative as the days a family logged.</p>
 <h2>What counts as one feed?</h2>
@@ -956,6 +970,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS: Feeding on demand</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/cluster-feeding/" target="_blank" rel="noopener noreferrer">NHS: Cluster feeding</a></li><li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/breastfeeding-problems/enough-milk/" target="_blank" rel="noopener noreferrer">NHS: Is my breastfed baby getting enough milk?</a></li><li><a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/relationship-building-resources/responsive-feeding-infosheet/" target="_blank" rel="noopener noreferrer">UNICEF UK Baby Friendly Initiative: Responsive feeding</a></li><li><a href="https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/" target="_blank" rel="noopener noreferrer">NHS: Is your baby or toddler seriously ill?</a></li></ul>
 <p><em>OBubba is a tracking, pattern and education tool, not a medical device. Its growth-spurt card is a deterministic comparison of parent-entered feed events. It cannot measure milk transfer, calories, hydration, supply, weight gain, illness or the cause of frequent feeding. Follow feeding cues and seek professional advice when feeding, nappies, growth or wellbeing concerns you.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -986,6 +1001,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

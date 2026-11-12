@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -871,7 +876,21 @@
 <ul><li>how long it has been since the last logged feed;</li><li>time awake since the last logged sleep; and</li><li>how long it has been since the last logged nappy.</li></ul>
 <p>Those details reduce mental arithmetic. They do not rule a need in or out. “No feed logged” may mean the baby has not fed, or simply that the feed was not recorded.</p>
 <p>At the bottom, <strong>What helped?</strong> offers ten outcome buttons:</p>
-<p>| Button | What it records | |---|---| | <strong>Hungry</strong> | A feed helped | | <strong>Tired/sleep</strong> | Help getting to sleep settled the moment | | <strong>Wind/gas</strong> | Winding or gas relief helped | | <strong>Nappy change</strong> | A change helped | | <strong>Teething</strong> | Teething comfort helped | | <strong>Temperature</strong> | Adjusting or checking temperature helped | | <strong>Overstimulated</strong> | Less stimulation helped | | <strong>Comfort/cuddle</strong> | Contact or a cuddle helped | | <strong>Bath</strong> | A bath helped | | <strong>Walk/fresh air</strong> | A walk or change of scene helped |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Button</th><th scope="col">What it records</th></tr></thead>
+<tbody>
+<tr><td><strong>Hungry</strong></td><td>A feed helped</td></tr>
+<tr><td><strong>Tired/sleep</strong></td><td>Help getting to sleep settled the moment</td></tr>
+<tr><td><strong>Wind/gas</strong></td><td>Winding or gas relief helped</td></tr>
+<tr><td><strong>Nappy change</strong></td><td>A change helped</td></tr>
+<tr><td><strong>Teething</strong></td><td>Teething comfort helped</td></tr>
+<tr><td><strong>Temperature</strong></td><td>Adjusting or checking temperature helped</td></tr>
+<tr><td><strong>Overstimulated</strong></td><td>Less stimulation helped</td></tr>
+<tr><td><strong>Comfort/cuddle</strong></td><td>Contact or a cuddle helped</td></tr>
+<tr><td><strong>Bath</strong></td><td>A bath helped</td></tr>
+<tr><td><strong>Walk/fresh air</strong></td><td>A walk or change of scene helped</td></tr>
+</tbody>
+</table></div>
 <p>Tap only after you have a reasonable sense that the response helped. You do not need to log an outcome when nothing clearly changed.</p>
 <figure><img src="/obubba-what-helped-shared-care-loop.svg" alt="A visual explainer showing how one soothing outcome becomes a cautious ranking and then a useful carer hand-off, while remaining separate from the cause of crying or a diagnosis." loading="lazy"/><figcaption>One useful outcome at a time: respond, record what helped, wait for repetition, then share the leading methods without turning them into a diagnosis.</figcaption></figure>
 <h2>Why OBubba waits for four outcomes</h2>
@@ -888,7 +907,13 @@
 <p>That simplicity is deliberate: the action has to be usable after a draining moment. But it creates an important boundary.</p>
 <p>If the family needs a factual record of crying itself, <strong>Track → More logs → Crying</strong> is separate. That quick logger records a cry at the current time as <strong>Mild, Moderate or Intense</strong>.</p>
 <p>Use the two controls for different questions:</p>
-<p>| Question | Use | |---|---| | “How intense was the crying, and when?” | <strong>Track → Crying</strong> | | “What seemed to help this time?” | <strong>Care → Crying Helper → What helped?</strong> |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Question</th><th scope="col">Use</th></tr></thead>
+<tbody>
+<tr><td>“How intense was the crying, and when?”</td><td><strong>Track → Crying</strong></td></tr>
+<tr><td>“What seemed to help this time?”</td><td><strong>Care → Crying Helper → What helped?</strong></td></tr>
+</tbody>
+</table></div>
 <p>Logging an intense cry does not automatically claim that any method solved it. Tapping <strong>Wind/gas</strong> does not automatically create a crying event or diagnose trapped wind.</p>
 <h2>How the memory reaches another caregiver</h2>
 <p>Open <strong>Care → Carer hand-off</strong>. Once the baby has at least two days containing logs, OBubba can build a concise briefing rather than a blank template.</p>
@@ -937,6 +962,7 @@
 <p>No. Check the baby, the context and any health or safety concern first. The order is remembered experience, not a rule.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — remember what helps, keep the knowledge with your baby’s shared record, and give the next caregiver a calmer place to begin.</p>
 <p><em>This article describes the current OBubba implementation reviewed on 10 March 2027. OBubba provides tracking, organisation and informational support, not diagnosis or medical care. If a baby’s cry is unusual, constant or comes with worrying symptoms, seek appropriate professional help; call emergency services when necessary.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_what-actually-settles-baby-obubba-remembers-carer-handoff"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -968,6 +994,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

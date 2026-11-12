@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -857,7 +862,16 @@
 <p>There is no universal number of seconds or minutes that turns a stir into an official wake. The most honest question is not “Did an eyelid open?” but <strong>“Did baby move into a real awake state, and what happened next?”</strong></p>
 <p>&gt; <strong>The short answer:</strong> pause and observe if it is safe to do so. If baby drifts back quickly, keep one nap. If they are clearly awake but return to sleep, keep one nap with an awake gap. If they remain awake and the day resumes, end the nap at the genuine wake time.</p>
 <h2>A quick decision guide</h2>
-<p>| What you see | What it may mean | A practical logging choice | |---|---|---| | Eyelids flutter, face moves, brief squeak, body settles again | Light or active sleep | Keep the nap running | | Eyes open briefly but look glazed; baby lies quietly and closes them again | Drowsy transition | Watch and wait; keep one nap if sleep resumes | | Baby cries or sits up, you resettle for several minutes, then sleep resumes | Real mid-nap waking | Pause, record the awake gap, then resume the same nap | | Bright eyes, looking around, babbling or ready to interact | Clearly awake | End the nap if baby stays awake | | Baby is awake long enough for normal activity, then later sleeps again | Two distinct sleep periods | End the first nap and start another when the next sleep begins |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What you see</th><th scope="col">What it may mean</th><th scope="col">A practical logging choice</th></tr></thead>
+<tbody>
+<tr><td>Eyelids flutter, face moves, brief squeak, body settles again</td><td>Light or active sleep</td><td>Keep the nap running</td></tr>
+<tr><td>Eyes open briefly but look glazed; baby lies quietly and closes them again</td><td>Drowsy transition</td><td>Watch and wait; keep one nap if sleep resumes</td></tr>
+<tr><td>Baby cries or sits up, you resettle for several minutes, then sleep resumes</td><td>Real mid-nap waking</td><td>Pause, record the awake gap, then resume the same nap</td></tr>
+<tr><td>Bright eyes, looking around, babbling or ready to interact</td><td>Clearly awake</td><td>End the nap if baby stays awake</td></tr>
+<tr><td>Baby is awake long enough for normal activity, then later sleeps again</td><td>Two distinct sleep periods</td><td>End the first nap and start another when the next sleep begins</td></tr>
+</tbody>
+</table></div>
 <p>These are observation labels, not medical tests. Age, temperament and the sleep environment all affect how a transition looks.</p>
 <h2>Why a sleeping baby can look awake</h2>
 <p>Sleep is not one completely still state. NHS infant-state guidance describes light sleep as a time when breathing may be less regular, the face or body may move, eyelids may flutter and the eyes can briefly open. A baby may then move into deeper sleep or wake fully.</p>
@@ -908,7 +922,15 @@
 <p>If the nap does not resume, ending it closes the pending stir safely. Implausibly long forgotten pauses are not blindly baked into sleep totals as if the baby spent hours resettling.</p>
 <p>These are small engineering choices, but they protect every result built on the nap record: total day sleep, weekly averages, nap budgets, reports and next-sleep predictions.</p>
 <h3>When to use each control</h3>
-<p>| Situation | OBubba control | Result | |---|---|---| | Brief movement while baby still looks asleep | Do nothing | Nap continues | | Baby appears awake and you are trying to resettle | Pause nap | Nap stays open; awake interval starts | | Baby returns to sleep | Resume nap | Same nap continues; awake interval closes | | Baby is clearly up | Wake/end nap | Nap ends and the next awake period begins |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Situation</th><th scope="col">OBubba control</th><th scope="col">Result</th></tr></thead>
+<tbody>
+<tr><td>Brief movement while baby still looks asleep</td><td>Do nothing</td><td>Nap continues</td></tr>
+<tr><td>Baby appears awake and you are trying to resettle</td><td>Pause nap</td><td>Nap stays open; awake interval starts</td></tr>
+<tr><td>Baby returns to sleep</td><td>Resume nap</td><td>Same nap continues; awake interval closes</td></tr>
+<tr><td>Baby is clearly up</td><td>Wake/end nap</td><td>Nap ends and the next awake period begins</td></tr>
+</tbody>
+</table></div>
 <p>The app cannot see the baby, assess breathing or decide whether a movement was sleep. The parent supplies the observation; OBubba keeps the maths honest afterwards.</p>
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — time naps, pause real stirs and keep sleep, feeds, nappies, health and development in one calm record without treating every eyelid flutter as a new wake window.</p>
 <h2>What not to do for a longer nap</h2>
@@ -951,6 +973,7 @@
 <p>A twitch is not a wake. Open eyes are not always an ended nap. And a real wake does not always mean the sleep period cannot continue.</p>
 <p>Keep the sleep space safe, watch the baby&#39;s state, respond when needed and record the sequence you actually observed. The goal is not a perfect graph. It is a truthful answer to a simple question: <strong>did baby go back to sleep, or did the day begin again?</strong></p>
 <p><em>This article provides general sleep-tracking information, not medical advice. Seek qualified help for concerns about breathing, unusual movements, illness, development or sleep, and follow your baby&#39;s individual clinical plan.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_did-baby-nap-end-mid-nap-stir"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -982,6 +1005,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

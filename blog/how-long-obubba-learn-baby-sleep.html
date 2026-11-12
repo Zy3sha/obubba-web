@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -857,7 +862,15 @@
 <p>That staggered approach matters. A parent should not have to enter two weeks of data before receiving any value, but the app should not call three entries a proven pattern either.</p>
 <figure><img src="/obubba-sleep-learning-steps.svg" alt="A four-stage explanation of how OBubba moves from the first useful logs to early reads, complete nights and deeper personalised patterns." loading="lazy"/><figcaption>OBubba gives small honest value early, then retires those starter messages as richer engines earn enough evidence. Twelve nights is a handover point, not a promise that every insight will appear.</figcaption></figure>
 <h2>The short answer</h2>
-<p>| What you have logged | What OBubba may do | What it cannot responsibly claim yet | |---|---|---| | 0–2 useful moments | help you start with one nap, feed or wake | a personal rhythm | | 3–25 useful moments across the latest 7 days | show one early read when the data supports it | a stable trend or cause | | 4–11 complete nights in the latest 14 | acknowledge that a real sleep picture is building | that any one change will improve sleep | | Around 12 complete nights and beyond | let mature prediction, trend and comparison engines take over when their own gates pass | a diagnosis, guarantee or universal schedule |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What you have logged</th><th scope="col">What OBubba may do</th><th scope="col">What it cannot responsibly claim yet</th></tr></thead>
+<tbody>
+<tr><td>0–2 useful moments</td><td>help you start with one nap, feed or wake</td><td>a personal rhythm</td></tr>
+<tr><td>3–25 useful moments across the latest 7 days</td><td>show one early read when the data supports it</td><td>a stable trend or cause</td></tr>
+<tr><td>4–11 complete nights in the latest 14</td><td>acknowledge that a real sleep picture is building</td><td>that any one change will improve sleep</td></tr>
+<tr><td>Around 12 complete nights and beyond</td><td>let mature prediction, trend and comparison engines take over when their own gates pass</td><td>a diagnosis, guarantee or universal schedule</td></tr>
+</tbody>
+</table></div>
 <p>A <strong>useful moment</strong> is a real feed, nap, sleep, wake, nappy, solids or pump record. A <strong>complete night</strong> needs both a reconstructed bedtime and a morning wake. An app full of feeds but no sleep boundaries may know feeding rhythm while still knowing little about nights.</p>
 <h2>Stage 1: one real log is better than a perfect imaginary day</h2>
 <p>For a new profile, OBubba’s small setup nudge asks for a nap, feed or wake. If the baby has no more than three logged days and today contains fewer than three useful moments, the wording shows how many more moments are needed before the app can start learning.</p>
@@ -904,7 +917,16 @@
 <p>You do not need to tap the app for every sigh. Consistent boundaries matter more than exhaustive surveillance.</p>
 <h2>Stage 4: deeper features each earn their own evidence</h2>
 <p>There is no single “OBubba has learnt the baby” flag. The app asks different questions with different data.</p>
-<p>| Feature question | Example minimum in the current logic | |---|---:| | Is there enough for a longer sleep consultation? | 5 usable day profiles | | Does a day factor line up with rougher nights? | 8 usable nights for that factor, with at least 3 on each side of a real split | | Is a particular nap length becoming personal? | 3 valid recent samples for that nap position | | Are night wakes changing week to week? | enough comparable nights in each window, depending on the detector | | Is an experiment helping? | checkpoints after 3, 7 and 14 nights, with enough outcome data |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Feature question</th><th scope="col">Example minimum in the current logic</th></tr></thead>
+<tbody>
+<tr><td>Is there enough for a longer sleep consultation?</td><td>5 usable day profiles</td></tr>
+<tr><td>Does a day factor line up with rougher nights?</td><td>8 usable nights for that factor, with at least 3 on each side of a real split</td></tr>
+<tr><td>Is a particular nap length becoming personal?</td><td>3 valid recent samples for that nap position</td></tr>
+<tr><td>Are night wakes changing week to week?</td><td>enough comparable nights in each window, depending on the detector</td></tr>
+<tr><td>Is an experiment helping?</td><td>checkpoints after 3, 7 and 14 nights, with enough outcome data</td></tr>
+</tbody>
+</table></div>
 <p>The same family can therefore see a personalised next-nap time while a bedtime correlation remains silent. The nap engine may have enough completed Nap 1 examples; the correlation engine may not have eight comparable day-to-night pairs.</p>
 <p>Read <a href="/blog/how-obubba-decides-baby-sleep-pattern-real.html">how OBubba decides a baby sleep pattern is real</a> for the full correlation gates.</p>
 <h2>What the finished insight surface can look like</h2>
@@ -960,6 +982,7 @@
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/your-babys-sleep-patterns/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Your baby’s sleep patterns</a></li><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.lullabytrust.org.uk/safer-sleep-advice/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Safer sleep advice</a></li></ul>
 <p><em>This article gives general information for UK families and describes the OBubba implementation reviewed on 21 March 2027. OBubba cannot diagnose illness, assess a baby in person or guarantee that a particular amount of logging will reveal a useful pattern.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_how-long-obubba-learn-baby-sleep"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -991,6 +1014,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

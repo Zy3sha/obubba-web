@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,13 +864,31 @@
 <p>The distinction matters because tired parents do not need every wake converted into a new technique. Sometimes the most useful intelligence is permission not to fix what may be ordinary between-cycle stirring.</p>
 <h2>The exact rule</h2>
 <p>OBubba uses this label only when every gate below passes:</p>
-<p>| Gate | Current requirement | |---|---| | Age | Baby is <strong>at least 16 weeks</strong> | | Number of wakes | <strong>2 or more</strong> night wakes | | Duration completeness | <strong>Every wake</strong> has an explicitly logged duration | | Duration range | Every duration is <strong>1–10 minutes</strong>, inclusive | | Night feeds | <strong>0</strong> night feeds | | Active disruption | If illness, teething or a developmental leap is supplied to the classifier, that context takes priority | | Result | <strong>Brief cycle-linked stirs</strong> and “nothing to change” |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">Current requirement</th></tr></thead>
+<tbody>
+<tr><td>Age</td><td>Baby is <strong>at least 16 weeks</strong></td></tr>
+<tr><td>Number of wakes</td><td><strong>2 or more</strong> night wakes</td></tr>
+<tr><td>Duration completeness</td><td><strong>Every wake</strong> has an explicitly logged duration</td></tr>
+<tr><td>Duration range</td><td>Every duration is <strong>1–10 minutes</strong>, inclusive</td></tr>
+<tr><td>Night feeds</td><td><strong>0</strong> night feeds</td></tr>
+<tr><td>Active disruption</td><td>If illness, teething or a developmental leap is supplied to the classifier, that context takes priority</td></tr>
+<tr><td>Result</td><td><strong>Brief cycle-linked stirs</strong> and “nothing to change”</td></tr>
+</tbody>
+</table></div>
 <p>There is no seven-night trend requirement. This is a reading of one reconstructed night, not a claim that a long-term pattern has formed.</p>
 <figure><img src="/obubba-brief-cycle-linked-stirs-logic.svg" alt="The exact gates behind OBubba’s Brief cycle-linked stirs insight." loading="lazy"/><figcaption>OBubba uses the reassuring label only for a baby at least 16 weeks old, with two or more wakes, every wake explicitly timed at one to ten minutes, no night feed, and no supplied illness, teething or developmental-leap context taking priority.</figcaption></figure>
 <h2>Wake count tells you how often; duration tells you what kind of night it was</h2>
 <p>A basic tracker can report “three wakes”. OBubba keeps the awake interval attached to each wake, because the intervals change the interpretation.</p>
 <p>Consider three nights:</p>
-<p>| Logged night | Wake count | Time awake | What the shape suggests to OBubba | |---|---:|---:|---| | 11:30pm for 5m, 1:30am for 6m, 3:30am for 4m | 3 | 15m total | All short and self-contained: cycle-linked reassurance can qualify | | 11:30pm for 5m, 1:30am for 11m, 3:30am for 4m | 3 | 20m total | One wake exceeds the brief-wake boundary: no cycle-linked label | | 1:30am for 75m | 1 | 75m total | A sustained middle-of-night interval: assessed through split-night logic |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Logged night</th><th scope="col">Wake count</th><th scope="col">Time awake</th><th scope="col">What the shape suggests to OBubba</th></tr></thead>
+<tbody>
+<tr><td>11:30pm for 5m, 1:30am for 6m, 3:30am for 4m</td><td>3</td><td>15m total</td><td>All short and self-contained: cycle-linked reassurance can qualify</td></tr>
+<tr><td>11:30pm for 5m, 1:30am for 11m, 3:30am for 4m</td><td>3</td><td>20m total</td><td>One wake exceeds the brief-wake boundary: no cycle-linked label</td></tr>
+<tr><td>1:30am for 75m</td><td>1</td><td>75m total</td><td>A sustained middle-of-night interval: assessed through split-night logic</td></tr>
+</tbody>
+</table></div>
 <p>The difference between the first two examples is one minute. That does not mean a 10-minute wake is biologically safe and an 11-minute wake is a problem. It means the app needs a deterministic boundary before it can attach a confident reassuring label.</p>
 <p>The boundary is a <strong>product rule</strong>, not a medical threshold.</p>
 <h2>“Cycle-linked” is a pattern name, not something the phone observed</h2>
@@ -931,6 +954,7 @@
 <p>That is more useful than celebrating a low number and kinder than pathologising a high one.</p>
 <p>OBubba connects exact night-wake intervals with bedtime, morning, feeds, naps, age and family context so three tiny ripples do not look like three identical problems. <a href="/#download">Explore OBubba</a> when you want a baby tracker that knows when to guide—and when to let a reassuring night simply be reassuring.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -961,6 +985,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

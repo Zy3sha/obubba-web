@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,20 @@
 <p>This guide traces the live app behaviour so parents can understand what the card noticed, what it missed and what to do next.</p>
 <h2>The short answer</h2>
 <p>Here is the whole current route:</p>
-<p>| Step | Current rule | |---|---| | History supplied | Today plus the previous <strong>13 calendar days</strong> | | Reaction selected | The first Reaction meal found while scanning newest day first | | Current enough to show | Day index <strong>0–9</strong>: today plus nine earlier calendar days | | Starting score | <strong>0.50</strong> | | Recognised allergen in food text | <strong>+0.20</strong> | | Three or more calm exact-food logs | <strong>−0.10</strong> | | Separate same-day confounder | <strong>−0.25</strong> | | Raw/lightly cooked egg wording | <strong>−0.15</strong> | | Final range | Clamped between <strong>0.10 and 0.85</strong> |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Step</th><th scope="col">Current rule</th></tr></thead>
+<tbody>
+<tr><td>History supplied</td><td>Today plus the previous <strong>13 calendar days</strong></td></tr>
+<tr><td>Reaction selected</td><td>The first Reaction meal found while scanning newest day first</td></tr>
+<tr><td>Current enough to show</td><td>Day index <strong>0–9</strong>: today plus nine earlier calendar days</td></tr>
+<tr><td>Starting score</td><td><strong>0.50</strong></td></tr>
+<tr><td>Recognised allergen in food text</td><td><strong>+0.20</strong></td></tr>
+<tr><td>Three or more calm exact-food logs</td><td><strong>−0.10</strong></td></tr>
+<tr><td>Separate same-day confounder</td><td><strong>−0.25</strong></td></tr>
+<tr><td>Raw/lightly cooked egg wording</td><td><strong>−0.15</strong></td></tr>
+<tr><td>Final range</td><td>Clamped between <strong>0.10 and 0.85</strong></td></tr>
+</tbody>
+</table></div>
 <p>The score becomes one of three explanations:</p>
 <ul><li>below 0.40: the log leans towards another cause, although one episode cannot rule out allergy;</li><li>0.40 to below 0.65: worth watching, but far from certain; or</li><li>0.65 and above: worth taking seriously.</li></ul>
 <p>Only the highest band gets medium urgency in the app. The other two are low urgency. None means “safe”, “allergic” or “X% likely”.</p>
@@ -903,7 +921,15 @@
 <p>Preparation text can also be wrong or incomplete. “Scrambled egg” is classified as cooked, but the app cannot know how thoroughly it was cooked. “Cake” may contain baked egg without the word egg. Clinical advice, ingredients and the actual meal matter more than the keyword.</p>
 <h2>Four worked examples</h2>
 <p>These examples show why the band describes app logic, not symptom severity.</p>
-<p>| Saved record | Calculation | Card band | |---|---:|---| | First Reaction to recognised “egg” | 0.50 + 0.20 = <strong>0.70</strong> | Worth taking seriously; medium urgency | | “Egg” Reaction plus 3 calm exact “egg” logs | 0.50 + 0.20 − 0.10 = <strong>0.60</strong> | Worth watching; low urgency | | “Egg” Reaction plus a separate fever-temperature entry | 0.50 + 0.20 − 0.25 = <strong>0.45</strong> | Worth watching; low urgency | | “Egg” Reaction, 3 calm exact logs and a confounder | 0.50 + 0.20 − 0.10 − 0.25 = <strong>0.35</strong> | Leans another cause; low urgency |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Saved record</th><th scope="col">Calculation</th><th scope="col">Card band</th></tr></thead>
+<tbody>
+<tr><td>First Reaction to recognised “egg”</td><td>0.50 + 0.20 = <strong>0.70</strong></td><td>Worth taking seriously; medium urgency</td></tr>
+<tr><td>“Egg” Reaction plus 3 calm exact “egg” logs</td><td>0.50 + 0.20 − 0.10 = <strong>0.60</strong></td><td>Worth watching; low urgency</td></tr>
+<tr><td>“Egg” Reaction plus a separate fever-temperature entry</td><td>0.50 + 0.20 − 0.25 = <strong>0.45</strong></td><td>Worth watching; low urgency</td></tr>
+<tr><td>“Egg” Reaction, 3 calm exact logs and a confounder</td><td>0.50 + 0.20 − 0.10 − 0.25 = <strong>0.35</strong></td><td>Leans another cause; low urgency</td></tr>
+</tbody>
+</table></div>
 <p>A fifth example is instructive: a first Reaction to an unrecognised phrase stays at 0.50. The app gives the middle explanation even if the real-world symptoms were severe.</p>
 <p>That is why urgency on this card must not be read as triage. The score does not inspect swelling, breathing, colour, collapse, rash spread, vomiting, onset after the meal or the amount eaten.</p>
 <h2>What the card always says to do</h2>
@@ -941,6 +967,7 @@
 <p>Use the card to preserve the food, timing, preparation and context for a professional conversation. Do not let a low band talk you into a home retry. And if the baby has swelling, breathing difficulty, a spreading rash, abnormal colour, collapse or another severe symptom, seek urgent help based on the baby—not the app.</p>
 <p>That is the standard a parent-first tracker should meet: remember the details exhaustion erases, show its reasoning plainly, and know when software must step back.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -971,6 +998,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -630,6 +630,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -863,7 +868,15 @@
 <p>&gt; The clock changed overnight. Your baby’s body clock is allowed to take longer.</p>
 <h2>What the one-hour change feels like to a baby</h2>
 <p>When UK clocks go back, 6am becomes 5am and 7pm becomes 6pm. The wall clock changes; hunger, sleep pressure and the baby&#39;s learned pattern do not instantly follow.</p>
-<p>| What the new clock says | What the old rhythm may feel like | What you might notice | |---|---|---| | 5am | 6am | Baby seems ready to start the day | | 8am | 9am | First nap cues appear earlier than expected | | 5pm | 6pm | Evening fussiness or an accidental late nap | | 6pm | 7pm | Baby seems ready for bed “too early” |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What the new clock says</th><th scope="col">What the old rhythm may feel like</th><th scope="col">What you might notice</th></tr></thead>
+<tbody>
+<tr><td>5am</td><td>6am</td><td>Baby seems ready to start the day</td></tr>
+<tr><td>8am</td><td>9am</td><td>First nap cues appear earlier than expected</td></tr>
+<tr><td>5pm</td><td>6pm</td><td>Evening fussiness or an accidental late nap</td></tr>
+<tr><td>6pm</td><td>7pm</td><td>Baby seems ready for bed “too early”</td></tr>
+</tbody>
+</table></div>
 <p>In spring, the direction reverses: 7pm suddenly feels like 6pm, so bedtime may be met with bright eyes rather than tired ones.</p>
 <p>This is not a regression, a failed routine or proof that your baby now needs less sleep. It is a one-hour mismatch between social time and the rhythm their body was expecting.</p>
 <h2>First choose: follow baby or shift the clock?</h2>
@@ -878,7 +891,15 @@
 <p>The goal is to prevent a tired baby being stretched by a full extra hour.</p>
 <h3>Days 2–4: move one anchor at a time</h3>
 <p>Move your chosen morning start, naps and bedtime <strong>10–15 minutes later each day</strong> after the autumn change. For example:</p>
-<p>| Day | Morning target | Bedtime target | |---|---:|---:| | Old rhythm showing on new clock | 5:30am | 6:15pm | | Day 2 | 5:45am | 6:30pm | | Day 3 | 6:00am | 6:45pm | | Day 4 | 6:15am | 7:00pm |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Day</th><th scope="col">Morning target</th><th scope="col">Bedtime target</th></tr></thead>
+<tbody>
+<tr><td>Old rhythm showing on new clock</td><td>5:30am</td><td>6:15pm</td></tr>
+<tr><td>Day 2</td><td>5:45am</td><td>6:30pm</td></tr>
+<tr><td>Day 3</td><td>6:00am</td><td>6:45pm</td></tr>
+<tr><td>Day 4</td><td>6:15am</td><td>7:00pm</td></tr>
+</tbody>
+</table></div>
 <p>This is an example, not a prescription. A newborn does not need these targets. An older baby who is coping well may move faster; a sensitive sleeper may need smaller steps or a pause.</p>
 <h3>Days 5–7: hold the workable rhythm</h3>
 <p>Once morning, naps and bedtime are close to the clock times you want, stop moving them. Repeat the ordinary cues:</p>
@@ -940,6 +961,7 @@
 <h2>Sources and support</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/baby/health/sleep-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Sleep and young children</a></li><li><a href="https://www.newcastle-hospitals.nhs.uk/services/sleep-service/paediatric-sleep/sleep-infants-0-12-months-2/" target="_blank" rel="noopener noreferrer">Newcastle Hospitals: Sleep in infants 0–12 months</a></li><li><a href="https://www.gosh.nhs.uk/documents/14988/GOSH_Sleep_Hygiene_in_children.pdf" target="_blank" rel="noopener noreferrer">Great Ormond Street Hospital: Sleep hygiene in children</a></li><li><a href="https://www.lullabytrust.org.uk/baby-safety/safer-sleep-information/safer-sleep-overview/" target="_blank" rel="noopener noreferrer">The Lullaby Trust: Safer sleep overview</a></li></ul>
 <p><em>This UK-oriented article provides general information, not medical advice or an individual sleep prescription. Follow your baby&#39;s feeding, neonatal and medication plans. Contact your health visitor, neonatal team, GP or NHS 111 when concerned; call 999 in an emergency.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_baby-sleep-after-clocks-change-gentle-reset"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -971,6 +993,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

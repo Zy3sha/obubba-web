@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,15 @@
 <p><strong>When your baby first starts solids at around six months, one small meal opportunity a day is enough. Add a second when the first feels manageable. From about seven to nine months, move gradually towards breakfast, lunch and tea alongside usual milk feeds. By 10 to 12 months, three meals a day is the general direction. Babies under 12 months do not need snacks; offer extra breast milk or first infant formula if they are hungry between meals.</strong></p>
 <p>That is a progression, not a deadline. A meal counts as an opportunity to practise even when most of it reaches the bib.</p>
 <h2>The short guide by age</h2>
-<p>| Stage | A useful direction | Milk and snacks | | --- | --- | --- | | Around 6 months, just starting | Begin with 1 small meal opportunity at a calm time | Continue usual breastfeeds or first infant formula; no snacks needed | | Around 6–7 months, gaining confidence | Add a second meal when sitting, swallowing and preparation feel manageable | Milk remains the main drink; do not drop a feed simply because a meal was offered | | Around 7–9 months | Gradually work towards 3 meals: breakfast, lunch and tea | Continue usual milk feeds; offer extra milk rather than snacks between meals | | Around 10–12 months | Usually 3 meals each day with increasing variety and texture | Continue breast milk or first infant formula; babies under 1 still do not need snacks |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Stage</th><th scope="col">A useful direction</th><th scope="col">Milk and snacks</th></tr></thead>
+<tbody>
+<tr><td>Around 6 months, just starting</td><td>Begin with 1 small meal opportunity at a calm time</td><td>Continue usual breastfeeds or first infant formula; no snacks needed</td></tr>
+<tr><td>Around 6–7 months, gaining confidence</td><td>Add a second meal when sitting, swallowing and preparation feel manageable</td><td>Milk remains the main drink; do not drop a feed simply because a meal was offered</td></tr>
+<tr><td>Around 7–9 months</td><td>Gradually work towards 3 meals: breakfast, lunch and tea</td><td>Continue usual milk feeds; offer extra milk rather than snacks between meals</td></tr>
+<tr><td>Around 10–12 months</td><td>Usually 3 meals each day with increasing variety and texture</td><td>Continue breast milk or first infant formula; babies under 1 still do not need snacks</td></tr>
+</tbody>
+</table></div>
 <p>The <a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS first-solid-foods guidance</a> says a baby who has just started does not need three meals a day. It recommends small amounts—just a few pieces or teaspoons—at a time when neither of you is rushed and baby is not too tired.</p>
 <p>For <a href="https://www.nhs.uk/best-start-in-life/baby/weaning/what-to-feed-your-baby/7-to-9-months/" target="_blank" rel="noopener noreferrer">7 to 9 months</a>, the NHS describes a gradual move towards three meals alongside usual milk feeds. By <a href="https://www.nhs.uk/best-start-in-life/baby/weaning/what-to-feed-your-baby/10-to-12-months/" target="_blank" rel="noopener noreferrer">10 to 12 months</a>, breakfast, lunch and tea should feel established for many babies.</p>
 <p>“Gradually” is doing important work. You do not have to serve three complete meals on the day your baby turns seven months.</p>
@@ -887,7 +900,15 @@
 <p>Milk does not disappear when the high chair arrives. Breast milk or first infant formula remains the main drink throughout the first year.</p>
 <p>When solids first begin, the NHS suggests offering food before the usual milk feed—when baby is interested but not desperately hungry. Continue to feed responsively. As food intake grows, some babies naturally take less at a milk feed or eventually drop one; that change does not need to be forced from the calendar.</p>
 <p>A beginner&#39;s day might look like:</p>
-<p>| Part of day | Example rhythm—not a prescription | | --- | --- | | Morning | usual milk feeds following cues | | Late morning or lunch | one short solids opportunity + sips of water | | Afternoon and evening | usual milk feeds following cues | | Night | milk as needed for age, feeding pattern and individual needs |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Part of day</th><th scope="col">Example rhythm—not a prescription</th></tr></thead>
+<tbody>
+<tr><td>Morning</td><td>usual milk feeds following cues</td></tr>
+<tr><td>Late morning or lunch</td><td>one short solids opportunity + sips of water</td></tr>
+<tr><td>Afternoon and evening</td><td>usual milk feeds following cues</td></tr>
+<tr><td>Night</td><td>milk as needed for age, feeding pattern and individual needs</td></tr>
+</tbody>
+</table></div>
 <p>An older weaning baby&#39;s day may include breakfast, lunch and tea between responsive milk feeds. Exact spacing depends on wake time, naps, appetite and whether feeding is breast, bottle or mixed.</p>
 <p>Do not keep a hungry baby waiting for the “correct” meal slot. Equally, a baby who has just taken a full milk feed may have little interest in porridge five minutes later. Use the routine to create opportunities, not override cues.</p>
 <p>Our <a href="/blog/how-much-milk-baby-starting-solids.html">milk-while-starting-solids guide</a> covers the whole transition without treating formula figures as universal targets or trying to measure breastfeeds in millilitres.</p>
@@ -935,7 +956,16 @@
 <p>Food logs feed a wider picture: current texture stage, days since solids began, unique food descriptions and iron-rich meal count. Allergens recognised in logged foods join the allergen journey; any recorded reaction remains excluded from future suggestions even after the original day moves out of the recent active window.</p>
 <p>The weekly planner then selects age-appropriate recipes from the baby&#39;s history, marks iron-rich choices, carries detected allergens and builds a deduplicated shopping list. It is six useful meal ideas by default—not a demand for six different days or a complete nutrition prescription.</p>
 <p>That separation matters:</p>
-<p>| OBubba can organise | The parent and baby still decide | | --- | --- | | whether breakfast, lunch or tea is roughly due | whether baby is hungry and comfortable now | | which meals and textures were logged | how much was actually eaten | | recent food variety and iron-rich meal count | whether today&#39;s portion should be larger or smaller | | known allergen history and recorded reactions | what an allergy clinician advises for this baby | | a practical weekly recipe shortlist and shopping list | which meal fits real family life today |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">OBubba can organise</th><th scope="col">The parent and baby still decide</th></tr></thead>
+<tbody>
+<tr><td>whether breakfast, lunch or tea is roughly due</td><td>whether baby is hungry and comfortable now</td></tr>
+<tr><td>which meals and textures were logged</td><td>how much was actually eaten</td></tr>
+<tr><td>recent food variety and iron-rich meal count</td><td>whether today&#39;s portion should be larger or smaller</td></tr>
+<tr><td>known allergen history and recorded reactions</td><td>what an allergy clinician advises for this baby</td></tr>
+<tr><td>a practical weekly recipe shortlist and shopping list</td><td>which meal fits real family life today</td></tr>
+</tbody>
+</table></div>
 <p><a href="/app.html">Try OBubba free</a> to keep milk feeds, meals, allergens, reactions, textures and weekly ideas in one timeline—without turning the high chair into another place to chase a perfect score.</p>
 <h2>The rule worth remembering</h2>
 <p>Start with one opportunity. Add the second when it feels manageable. Move gradually towards three meals from around seven months, and aim for breakfast, lunch and tea by 10 to 12 months.</p>
@@ -955,6 +985,7 @@
 <p>When solids first begin, the NHS suggests offering food before the usual milk feed, when baby is interested but not desperately hungry. Continue milk responsively and do not force a feed to disappear because a meal was offered.</p>
 <h3>Does three meals mean three full bowls?</h3>
 <p>No. A meal is an opportunity, not a portion target. One may be a few teaspoons, another two finger-food pieces and another mostly exploration. Follow fullness cues and consider variety across the week.</p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -986,6 +1017,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

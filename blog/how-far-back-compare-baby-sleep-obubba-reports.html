@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,15 @@
 <p><strong>The useful rule is: choose the shortest range that is long enough to contain the change you are trying to understand.</strong> Use one week for a quick check after a disrupted night; two weeks for a routine experiment; one month for a developing nap transition or nursery pattern; and two months only for broad context when enough recent data is actually available.</p>
 <p>Longer ranges smooth out noise, but they also mix together different ages, illnesses, travel, childcare days and routines. A cleaner graph is not automatically a more relevant answer.</p>
 <h2>The quick decision table</h2>
-<p>| Choose | Best for | What it compares | Calendar history needed for a full comparison | Main weakness | |---|---|---|---:|---| | <strong>1 week</strong> | “Was this week really different?” | latest 7 days vs the 7 before | 14 days | one unusual week can dominate | | <strong>2 weeks</strong> | testing one routine change | latest 14 vs previous 14 | 28 days | can blend the experiment with unrelated days | | <strong>1 month</strong> | nap transitions, nursery or a broader settling pattern | latest 30 vs previous 30 | 60 days | older records may be incomplete on this screen | | <strong>2 months</strong> | a broad retrospective | latest 60 vs previous 60 | 120 days | the current Reports screen does not load archived days |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Choose</th><th scope="col">Best for</th><th scope="col">What it compares</th><th scope="col">Calendar history needed for a full comparison</th><th scope="col">Main weakness</th></tr></thead>
+<tbody>
+<tr><td><strong>1 week</strong></td><td>“Was this week really different?”</td><td>latest 7 days vs the 7 before</td><td>14 days</td><td>one unusual week can dominate</td></tr>
+<tr><td><strong>2 weeks</strong></td><td>testing one routine change</td><td>latest 14 vs previous 14</td><td>28 days</td><td>can blend the experiment with unrelated days</td></tr>
+<tr><td><strong>1 month</strong></td><td>nap transitions, nursery or a broader settling pattern</td><td>latest 30 vs previous 30</td><td>60 days</td><td>older records may be incomplete on this screen</td></tr>
+<tr><td><strong>2 months</strong></td><td>a broad retrospective</td><td>latest 60 vs previous 60</td><td>120 days</td><td>the current Reports screen does not load archived days</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-reports-window-decision-guide.svg" alt="A decision guide for OBubba&#39;s four Reports ranges, showing the question each range is best suited to, the full history needed and the trade-off between responsiveness and stability." loading="lazy"/><figcaption>Use a shorter window for a recent question and a longer one for a genuinely longer change. A full current-versus-previous comparison needs twice the selected range.</figcaption></figure>
 <p>The history number is twice the selected range because OBubba compares two adjacent blocks of the same nominal length. A two-week view is not “the last two weeks against a random baseline”; it is days 0–13 against days 14–27.</p>
 <p>That is the right comparison shape. It prevents a large recent window being judged against a tiny earlier sample. However, the current screen averages only days with relevant logs, so <strong>equal calendar windows do not guarantee equal contributing days</strong>. Check completeness before treating a delta as a verdict.</p>
@@ -894,7 +907,21 @@
 <h2>What does <strong>not</strong> change with the range</h2>
 <p>This is the most important product detail hidden by a very simple selector.</p>
 <p>The current app gives different report components their own fixed evidence windows:</p>
-<p>| Reports component | Current basis | |---|---| | headline sleep and feed cards | selected 7, 14, 30 or 60 days | | growth card | latest weight vs previous weight measurement | | “Sleep across each day” chart | latest 7 points passed to the overview | | sleep-quality score and band | latest 7 nights | | longest stretch | best complete night in the latest 7 | | weekly digest | its own weekly rules | | nap rhythm | last 35 complete days, excluding today | | consistency | last 7 nights | | copied GP / health-visitor summary | last 7 days | | clinic PDF | its own 4-week summary |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Reports component</th><th scope="col">Current basis</th></tr></thead>
+<tbody>
+<tr><td>headline sleep and feed cards</td><td>selected 7, 14, 30 or 60 days</td></tr>
+<tr><td>growth card</td><td>latest weight vs previous weight measurement</td></tr>
+<tr><td>“Sleep across each day” chart</td><td>latest 7 points passed to the overview</td></tr>
+<tr><td>sleep-quality score and band</td><td>latest 7 nights</td></tr>
+<tr><td>longest stretch</td><td>best complete night in the latest 7</td></tr>
+<tr><td>weekly digest</td><td>its own weekly rules</td></tr>
+<tr><td>nap rhythm</td><td>last 35 complete days, excluding today</td></tr>
+<tr><td>consistency</td><td>last 7 nights</td></tr>
+<tr><td>copied GP / health-visitor summary</td><td>last 7 days</td></tr>
+<tr><td>clinic PDF</td><td>its own 4-week summary</td></tr>
+</tbody>
+</table></div>
 <p>This design is not inherently wrong. A schedule-consistency score can be more useful over seven recent nights than across two developmental months. A clinical PDF should not silently change meaning because somebody tapped a chip above it.</p>
 <p>The problem is visual scope. The range control appears above the whole overview, so a parent can reasonably assume every card follows it. The app needs a small scope label on fixed-window cards: <strong>7-night quality</strong>, <strong>35-day nap rhythm</strong>, <strong>latest measurement</strong>, <strong>4-week PDF</strong>.</p>
 <p>There is also a visible inconsistency in the current source: the pill beside the “big picture” heading is hard-coded to <strong>7 days</strong>, even after the parent selects 2 weeks, 1 month or 2 months. The chips and date line update, but that pill does not. Until it is wired to the selected range, trust the highlighted chip and date line—not the pill.</p>
@@ -936,6 +963,7 @@
 <h2>Source and safety note</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/your-babys-sleep-patterns/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s sleep patterns</a></li></ul>
 <p><em>OBubba is a tracking and education tool, not medical advice or a diagnostic sleep study. Follow current safer-sleep guidance and seek professional help when you are worried about feeding, breathing, growth, pain, development or your baby’s wellbeing.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_how-far-back-compare-baby-sleep-obubba-reports"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -967,6 +995,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

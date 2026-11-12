@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -855,7 +860,27 @@
 <p>This guide separates three different ideas that often get bundled together:</p>
 <ol><li>foods babies should not have yet</li><li>foods that are safe only when prepared differently</li><li>foods that are technically edible but best kept low because of salt, sugar or food-poisoning risk</li></ol>
 <p>Here is the quick UK list.</p>
-<p>| Food or drink | What to do | Why | |---|---|---| | Honey | Avoid until after 12 months, including cooked honey | Infant botulism risk | | Whole nuts and popcorn | Avoid under 5 | Choking risk | | Thick spoonfuls of nut butter | Do not offer alone; thin or spread it | Sticky choking risk | | Whole grapes, cherry tomatoes and round sausage pieces | Quarter lengthways or cut into thin strips | Round shape can block the airway | | Raw hard apple, carrot or pear chunks | Grate or cook until soft | Hard choking hazard | | Added salt, stock cubes and salty processed foods | Avoid or keep very low | Babies&#39; kidneys cannot handle much salt | | Added sugar and sugary drinks | Avoid | Tooth decay and little nutritional value | | Cow&#39;s milk as the main drink | Wait until 12 months; cooking is fine from around 6 months | Does not have the right nutritional balance | | Rice drinks | Avoid under 5 | Arsenic exposure | | Raw shellfish | Avoid; cook thoroughly | Food-poisoning risk | | Shark, swordfish and marlin | Avoid for children under 16 | High mercury levels | | Unpasteurised and mould-ripened soft cheese | Avoid for babies | Listeria risk | | Unpasteurised or raw milk | Avoid | Food-poisoning risk | | Fresh pâté made from meat, fish or vegetables | Avoid | Food-poisoning risk | | Plant-based drinks | Do not use as a main drink before 12 months | They do not replace breast milk or first infant formula | | Raw jelly cubes, hard sweets and marshmallows | Avoid | Choking risk |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Food or drink</th><th scope="col">What to do</th><th scope="col">Why</th></tr></thead>
+<tbody>
+<tr><td>Honey</td><td>Avoid until after 12 months, including cooked honey</td><td>Infant botulism risk</td></tr>
+<tr><td>Whole nuts and popcorn</td><td>Avoid under 5</td><td>Choking risk</td></tr>
+<tr><td>Thick spoonfuls of nut butter</td><td>Do not offer alone; thin or spread it</td><td>Sticky choking risk</td></tr>
+<tr><td>Whole grapes, cherry tomatoes and round sausage pieces</td><td>Quarter lengthways or cut into thin strips</td><td>Round shape can block the airway</td></tr>
+<tr><td>Raw hard apple, carrot or pear chunks</td><td>Grate or cook until soft</td><td>Hard choking hazard</td></tr>
+<tr><td>Added salt, stock cubes and salty processed foods</td><td>Avoid or keep very low</td><td>Babies&#39; kidneys cannot handle much salt</td></tr>
+<tr><td>Added sugar and sugary drinks</td><td>Avoid</td><td>Tooth decay and little nutritional value</td></tr>
+<tr><td>Cow&#39;s milk as the main drink</td><td>Wait until 12 months; cooking is fine from around 6 months</td><td>Does not have the right nutritional balance</td></tr>
+<tr><td>Rice drinks</td><td>Avoid under 5</td><td>Arsenic exposure</td></tr>
+<tr><td>Raw shellfish</td><td>Avoid; cook thoroughly</td><td>Food-poisoning risk</td></tr>
+<tr><td>Shark, swordfish and marlin</td><td>Avoid for children under 16</td><td>High mercury levels</td></tr>
+<tr><td>Unpasteurised and mould-ripened soft cheese</td><td>Avoid for babies</td><td>Listeria risk</td></tr>
+<tr><td>Unpasteurised or raw milk</td><td>Avoid</td><td>Food-poisoning risk</td></tr>
+<tr><td>Fresh pâté made from meat, fish or vegetables</td><td>Avoid</td><td>Food-poisoning risk</td></tr>
+<tr><td>Plant-based drinks</td><td>Do not use as a main drink before 12 months</td><td>They do not replace breast milk or first infant formula</td></tr>
+<tr><td>Raw jelly cubes, hard sweets and marshmallows</td><td>Avoid</td><td>Choking risk</td></tr>
+</tbody>
+</table></div>
 <p>The <a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-and-drinks-to-avoid/" target="_blank" rel="noopener noreferrer">NHS foods-and-drinks-to-avoid guide</a> is the primary reference behind this list. Individual advice from your health visitor, GP or dietitian takes priority.</p>
 <h2>Honey: never before the first birthday</h2>
 <p>Do not give honey to a baby under 12 months. This includes:</p>
@@ -963,6 +988,7 @@
 <p>Most everyday family foods can be adapted by removing the baby&#39;s portion before seasoning, cooking until soft and changing the shape. The goal is not a bland, anxious weaning journey. It is safe preparation plus variety, one calm taste at a time.</p>
 <p><em>This article provides general UK information and does not replace advice from your health visitor, GP, dietitian or allergy team.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -993,6 +1019,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

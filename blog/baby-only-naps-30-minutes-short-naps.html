@@ -630,6 +630,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -874,7 +879,17 @@
 <p>One short nap is an event. Several similar naps across comparable days may be a pattern.</p>
 <h2>The most useful clue: how did your baby wake?</h2>
 <p>Nap duration alone cannot tell you what to do next. Wake mood helps.</p>
-<p>| How the nap ended | What it may suggest | Sensible next move | |---|---|---| | Calm, bright-eyed and ready to engage | The nap may have been enough, or sleep pressure was low | Get up; do not automatically shorten the next wake window | | Happy after a late-afternoon catnap | The short nap may have done its job as a bridge | Keep bedtime near the earlier end of its usual range | | Fussy, rubbing eyes or difficult to soothe | Baby may still be tired | Consider an earlier next sleep or one supported rescue nap | | Fell asleep almost instantly, then woke crying | The previous awake stretch may have been too long | Try the comparable nap 10–15 minutes earlier next time | | Took a long time to settle, then woke cheerful | There may not have been enough sleep pressure | Try the comparable nap 10–15 minutes later next time | | Woke coughing, crying sharply or arching | Discomfort may matter more than timing | Check ordinary needs and seek advice if symptoms persist |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">How the nap ended</th><th scope="col">What it may suggest</th><th scope="col">Sensible next move</th></tr></thead>
+<tbody>
+<tr><td>Calm, bright-eyed and ready to engage</td><td>The nap may have been enough, or sleep pressure was low</td><td>Get up; do not automatically shorten the next wake window</td></tr>
+<tr><td>Happy after a late-afternoon catnap</td><td>The short nap may have done its job as a bridge</td><td>Keep bedtime near the earlier end of its usual range</td></tr>
+<tr><td>Fussy, rubbing eyes or difficult to soothe</td><td>Baby may still be tired</td><td>Consider an earlier next sleep or one supported rescue nap</td></tr>
+<tr><td>Fell asleep almost instantly, then woke crying</td><td>The previous awake stretch may have been too long</td><td>Try the comparable nap 10–15 minutes earlier next time</td></tr>
+<tr><td>Took a long time to settle, then woke cheerful</td><td>There may not have been enough sleep pressure</td><td>Try the comparable nap 10–15 minutes later next time</td></tr>
+<tr><td>Woke coughing, crying sharply or arching</td><td>Discomfort may matter more than timing</td><td>Check ordinary needs and seek advice if symptoms persist</td></tr>
+</tbody>
+</table></div>
 <p>These are clues, not guarantees. A fussy wake does not prove overtiredness, and a cheerful wake does not prove your baby has completed an ideal amount of sleep.</p>
 <h2>Undertired and overtired can both produce short naps</h2>
 <p>This is why generic advice often sends parents in circles. If you shorten every wake window after every short nap, an undertired baby may be put down earlier and earlier. If you keep stretching time awake because the baby “didn&#39;t sleep enough”, an overtired baby may become increasingly wired.</p>
@@ -952,6 +967,7 @@
 <p>There is no dependable birthday. Sleep organisation changes rapidly in the first year, but babies develop at different rates. Track your baby&#39;s trend rather than waiting for a promised week when every nap should consolidate.</p>
 <h3>Is a 30-minute last nap worth having?</h3>
 <p>It can be an effective bridge when bedtime is still a long way off. If bedtime is close, quiet time and a modestly earlier night may protect sleep better than forcing a late catnap.</p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_baby-only-naps-30-minutes-short-naps"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -983,6 +999,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

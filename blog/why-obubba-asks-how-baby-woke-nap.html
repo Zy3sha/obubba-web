@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,15 @@
 <h2>The short answer: the clock records the event; the review describes the outcome</h2>
 <p>For a completed nap, the most important facts are still the <strong>start and real end time</strong>. They tell OBubba how long the sleep lasted and when the next awake stretch began.</p>
 <p>The review can then add four different kinds of context:</p>
-<p>| Optional detail | Choices in the current app | What it can help distinguish | |---|---|---| | How they woke | Happy, Sleepy, Fussy | two naps of the same length that appeared to leave baby differently restored | | Nap quality | Good, OK, Rough | the parent’s quick overall read of a smooth or disrupted nap | | Time to fall asleep | Under 5m, 5–15m, 15–30m, 30m+ | a nap that began easily from one that needed a long settling attempt | | Where | Cot, Contact, Pram, Carrier, Car, Other | whether repeated naps tend to run differently in different settings |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Optional detail</th><th scope="col">Choices in the current app</th><th scope="col">What it can help distinguish</th></tr></thead>
+<tbody>
+<tr><td>How they woke</td><td>Happy, Sleepy, Fussy</td><td>two naps of the same length that appeared to leave baby differently restored</td></tr>
+<tr><td>Nap quality</td><td>Good, OK, Rough</td><td>the parent’s quick overall read of a smooth or disrupted nap</td></tr>
+<tr><td>Time to fall asleep</td><td>Under 5m, 5–15m, 15–30m, 30m+</td><td>a nap that began easily from one that needed a long settling attempt</td></tr>
+<tr><td>Where</td><td>Cot, Contact, Pram, Carrier, Car, Other</td><td>whether repeated naps tend to run differently in different settings</td></tr>
+</tbody>
+</table></div>
 <p>There is also <strong>How they settled</strong>—self-settled, fed, rocked, held, patted or dummy—and a <strong>Moved to</strong> option when a nap begins in one place and is rescued in another.</p>
 <p>You do not need to complete every field. Log the detail that answers a real question; leave the rest blank.</p>
 <h2>What Happy, Sleepy and Fussy mean—and what they do not</h2>
@@ -937,6 +950,7 @@
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/bonding-with-your-baby/understanding-your-baby/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Understanding your baby</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Safer sleep advice for babies</a></li><li><a href="https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/" target="_blank" rel="noopener noreferrer">NHS: Is your baby or toddler seriously ill?</a></li></ul>
 <p><em>OBubba is a tracking and education tool, not medical advice. Seek qualified help for concerns about unusual sleepiness, breathing, illness, feeding, growth, wet nappies or development, and follow your baby&#39;s individual clinical plan.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-asks-how-baby-woke-nap"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -968,6 +982,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -857,7 +862,16 @@
 <p>Use the instructions on the exact product you buy. Drop concentrations vary, so “one drop” from one bottle is not automatically the same dose as “one drop” from another.</p>
 <p>&gt; Milk type and daily formula volume answer the first question. The product label answers how much liquid to give.</p>
 <h2>The vitamin D decision table</h2>
-<p>| Your baby | Current UK guidance | |---|---| | Exclusively breastfed, birth to 1 year | 8.5–10µg vitamin D daily from birth | | Breast milk plus any formula, birth to 1 year | 8.5–10µg vitamin D daily from birth | | Formula-fed and drinking under 500ml formula a day | Daily vitamin D supplement | | Formula-fed and drinking 500ml or more formula a day | No extra vitamin supplement is normally needed; formula is fortified | | Age 1–4 years | 10µg vitamin D daily throughout the year |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Your baby</th><th scope="col">Current UK guidance</th></tr></thead>
+<tbody>
+<tr><td>Exclusively breastfed, birth to 1 year</td><td>8.5–10µg vitamin D daily from birth</td></tr>
+<tr><td>Breast milk plus any formula, birth to 1 year</td><td>8.5–10µg vitamin D daily from birth</td></tr>
+<tr><td>Formula-fed and drinking under 500ml formula a day</td><td>Daily vitamin D supplement</td></tr>
+<tr><td>Formula-fed and drinking 500ml or more formula a day</td><td>No extra vitamin supplement is normally needed; formula is fortified</td></tr>
+<tr><td>Age 1–4 years</td><td>10µg vitamin D daily throughout the year</td></tr>
+</tbody>
+</table></div>
 <p>The 500ml figure is a <strong>daily total</strong>, not the size of one bottle. If intake moves above and below it while feeds are changing, ask your health visitor or pharmacist what is simplest for your baby rather than trying to calculate a perfect answer after every feed.</p>
 <h2>Why breastfed babies need their own drops</h2>
 <p>Breast milk remains an excellent food for babies, but it does not reliably provide enough vitamin D. That is why the NHS recommendation applies to babies who receive <strong>any breast milk</strong>, whether exclusively or alongside formula.</p>
@@ -921,6 +935,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/caring-for-your-baby/vitamins-for-babies/" target="_blank" rel="noopener noreferrer">NHS: Vitamins for babies</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/vitamins-for-children/" target="_blank" rel="noopener noreferrer">NHS: Vitamins for children</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby&#39;s first solid foods</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/breastfeeding/healthy-diet-when-breastfeeding/breastfeeding-vitamins/" target="_blank" rel="noopener noreferrer">NHS: Breastfeeding vitamins</a></li><li><a href="https://www.healthystart.nhs.uk/getting-vitamins/" target="_blank" rel="noopener noreferrer">Healthy Start: Getting vitamins</a></li></ul>
 <p><em>This UK-oriented article provides general information, not medical advice. Follow the label on your baby&#39;s exact supplement and any neonatal or clinical plan. Ask a pharmacist, health visitor or GP when unsure; contact NHS 111 if you think too much was given, and call 999 in an emergency.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -951,6 +966,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

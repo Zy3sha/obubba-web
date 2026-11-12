@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,16 @@
 <figure><img src="/obubba-loved-unsure-reaction-new-food.jpg" alt="A parent watches their baby explore one soft new food before recording an honest response." loading="lazy"/><figcaption>Watch the baby first and tap second. An uncertain face can be normal food learning; the response field should preserve what happened without inventing certainty.</figcaption></figure>
 <h2>The short answer</h2>
 <p>Use this practical interpretation:</p>
-<p>| What happened | Best OBubba response | Add to the note | |---|---|---| | Baby explored or ate the food calmly; no concerning symptom noticed | <strong>Loved it</strong> | Texture or rough amount only when useful | | You genuinely cannot tell—perhaps a vague change, tiny taste or mixed signals | <strong>Unsure</strong> | Exactly what made you uncertain | | You observed a possible physical reaction after the food | <strong>Reaction</strong> | Symptom, timing, amount and every relevant ingredient | | Baby simply turned away, gagged on texture or disliked the flavour, with no allergy symptom | Usually <strong>Unsure</strong> or leave the response blank | Describe the refusal or texture in plain words | | Baby has severe symptoms or breathing difficulty | <strong>Get emergency help first</strong> | Complete the record later |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What happened</th><th scope="col">Best OBubba response</th><th scope="col">Add to the note</th></tr></thead>
+<tbody>
+<tr><td>Baby explored or ate the food calmly; no concerning symptom noticed</td><td><strong>Loved it</strong></td><td>Texture or rough amount only when useful</td></tr>
+<tr><td>You genuinely cannot tell—perhaps a vague change, tiny taste or mixed signals</td><td><strong>Unsure</strong></td><td>Exactly what made you uncertain</td></tr>
+<tr><td>You observed a possible physical reaction after the food</td><td><strong>Reaction</strong></td><td>Symptom, timing, amount and every relevant ingredient</td></tr>
+<tr><td>Baby simply turned away, gagged on texture or disliked the flavour, with no allergy symptom</td><td>Usually <strong>Unsure</strong> or leave the response blank</td><td>Describe the refusal or texture in plain words</td></tr>
+<tr><td>Baby has severe symptoms or breathing difficulty</td><td><strong>Get emergency help first</strong></td><td>Complete the record later</td></tr>
+</tbody>
+</table></div>
 <p>The buttons are not a severity scale. <strong>Unsure</strong> is not a mild version of Reaction, and <strong>Loved it</strong> is not medical proof that a food was tolerated.</p>
 <figure><img src="/obubba-solids-response-paths.svg" alt="How Loved it, Unsure and Reaction travel through OBubba’s current weaning intelligence." loading="lazy"/><figcaption>Loved it can become calm evidence, Unsure stays neutral and Reaction can enter lifetime safety filters. All three remain parent observations rather than diagnoses.</figcaption></figure>
 <h2>Loved it means the meal went calmly—not “allergy cleared”</h2>
@@ -915,7 +929,15 @@
 <p>Babies spit, gag, grimace, turn away and throw food for many non-allergic reasons. The texture may be unfamiliar, the bite may be too large, the baby may be tired or they may simply be finished.</p>
 <p>In OBubba, the separate refusal detector does <strong>not</strong> infer refusal from Loved it, Unsure or Reaction. It reads plain-language notes across the last three meals for words such as “refused”, “spat”, “turned away”, “no interest”, “gagged” or “too big”.</p>
 <p>That separation matters:</p>
-<p>| Event | Response field | Note | |---|---|---| | Turned away from broccoli, no symptom | Unsure or blank | “turned away after one taste” | | Gagged on a firm lump, recovered normally | Unsure | “gagged on texture; piece too firm” | | Ate yoghurt, then developed hives | Reaction | “raised itchy rash 10 minutes later” | | Loved toast but became tired before finishing | Loved it | “stopped when sleepy” |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Event</th><th scope="col">Response field</th><th scope="col">Note</th></tr></thead>
+<tbody>
+<tr><td>Turned away from broccoli, no symptom</td><td>Unsure or blank</td><td>“turned away after one taste”</td></tr>
+<tr><td>Gagged on a firm lump, recovered normally</td><td>Unsure</td><td>“gagged on texture; piece too firm”</td></tr>
+<tr><td>Ate yoghurt, then developed hives</td><td>Reaction</td><td>“raised itchy rash 10 minutes later”</td></tr>
+<tr><td>Loved toast but became tired before finishing</td><td>Loved it</td><td>“stopped when sleepy”</td></tr>
+</tbody>
+</table></div>
 <p>Gagging is not the same as choking, and neither is automatically allergy. Choking is an emergency when the airway is blocked. Use age-appropriate preparation, sit the baby upright and supervise within arm’s reach.</p>
 <h2>Why exact ingredients matter more after Reaction</h2>
 <p>“Pasta” is too vague for useful allergen history. The dish might contain wheat, egg, cows’ milk, sesame, nuts or none of those, depending on the recipe.</p>
@@ -957,6 +979,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-allergies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Baby food allergies</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/food-allergies-in-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Food allergies in babies and young children</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s first solid foods</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/help-your-baby-enjoy-new-foods/" target="_blank" rel="noopener noreferrer">NHS: Help your baby enjoy new foods</a></li></ul>
 <p><em>This article provides general information for UK families. OBubba is not a medical device and its response field cannot diagnose food allergy or determine whether reintroduction is safe. Follow your baby’s individual clinical plan, seek appropriate medical advice for a possible reaction and call 999 in an emergency.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -987,6 +1010,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,20 @@
 <ul><li><strong>white, grey or chalky-pale poo</strong></li><li><strong>red or clearly blood-streaked poo</strong></li><li><strong>black, tar-like poo after the newborn meconium days</strong></li></ul>
 <p>This guide explains the ordinary changes, the warning signs and what is genuinely useful to record.</p>
 <h2>Quick guide: colour, texture and the next step</h2>
-<p>| What you notice | Common interpretation | What to do | |---|---|---| | Brown, tan, yellow, orange or green; baby is otherwise well | Often normal variation, influenced by milk, food and digestion | Observe the pattern and continue normal feeds | | Thicker, paste-like or increasingly formed poo | Common as the amount and variety of solid food grows | Keep textures varied and milk feeds responsive | | Visible soft food pieces | Can happen while chewing and digestion skills mature | Check food was served safely; observe without trying to “fix” one nappy | | Dry, hard lumps or small pellets; straining or pain | Possible constipation | Increase suitable fluid and fibre; seek advice if it persists or baby is distressed | | Repeated very watery poo | Possible diarrhoea, especially with vomiting, fever or illness | Prioritise feeds and fluids; watch wet nappies and seek advice for warning signs | | Mucus that keeps recurring, especially with blood or illness | Needs context and may require assessment | Contact your GP or NHS 111 for advice | | Red or blood-streaked poo | Blood must be checked, even though causes vary | Contact your GP or NHS 111 promptly | | White, grey or chalky-pale poo | Can signal a problem with bile flow or the liver | Contact your GP promptly; do not wait for several more nappies | | Black, tar-like poo after the first newborn days | May represent digested blood | Seek urgent medical advice |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What you notice</th><th scope="col">Common interpretation</th><th scope="col">What to do</th></tr></thead>
+<tbody>
+<tr><td>Brown, tan, yellow, orange or green; baby is otherwise well</td><td>Often normal variation, influenced by milk, food and digestion</td><td>Observe the pattern and continue normal feeds</td></tr>
+<tr><td>Thicker, paste-like or increasingly formed poo</td><td>Common as the amount and variety of solid food grows</td><td>Keep textures varied and milk feeds responsive</td></tr>
+<tr><td>Visible soft food pieces</td><td>Can happen while chewing and digestion skills mature</td><td>Check food was served safely; observe without trying to “fix” one nappy</td></tr>
+<tr><td>Dry, hard lumps or small pellets; straining or pain</td><td>Possible constipation</td><td>Increase suitable fluid and fibre; seek advice if it persists or baby is distressed</td></tr>
+<tr><td>Repeated very watery poo</td><td>Possible diarrhoea, especially with vomiting, fever or illness</td><td>Prioritise feeds and fluids; watch wet nappies and seek advice for warning signs</td></tr>
+<tr><td>Mucus that keeps recurring, especially with blood or illness</td><td>Needs context and may require assessment</td><td>Contact your GP or NHS 111 for advice</td></tr>
+<tr><td>Red or blood-streaked poo</td><td>Blood must be checked, even though causes vary</td><td>Contact your GP or NHS 111 promptly</td></tr>
+<tr><td>White, grey or chalky-pale poo</td><td>Can signal a problem with bile flow or the liver</td><td>Contact your GP promptly; do not wait for several more nappies</td></tr>
+<tr><td>Black, tar-like poo after the first newborn days</td><td>May represent digested blood</td><td>Seek urgent medical advice</td></tr>
+</tbody>
+</table></div>
 <p>A food can tint a nappy. Beetroot can look red and dark berries can look almost black. But do not use a recent meal to dismiss a warning colour when you are unsure. Photograph the nappy for a clinician if appropriate, record what baby ate and ask for advice.</p>
 <h2>Why does poo change when solids begin?</h2>
 <p>Before weaning, a baby&#39;s gut is processing a liquid milk diet. Solid food adds starch, fibre, protein, fat, plant pigments and textures that are digested in different ways. The result is often less liquid, more bulk and a stronger smell.</p>
@@ -946,6 +964,7 @@
 <p>Record just enough to make that pattern visible. Then act on the baby in front of you, not the neatness of the chart.</p>
 <p><em>This article provides general information for UK families and does not replace medical advice. Contact your GP or NHS 111 for concerning stool colours, blood, persistent diarrhoea or constipation, or any baby who is feeding poorly or producing fewer wet nappies. Call 999 for severe breathing difficulty, collapse, marked floppiness or another emergency.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -976,6 +995,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

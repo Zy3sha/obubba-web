@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -865,7 +870,15 @@
 <figure><img src="/obubba-nap-not-happening-decision.svg" alt="The decision path behind OBubba’s Nap not happening recommendation." loading="lazy"/><figcaption>The recommendation follows a strict priority: protect a close bedtime first, rescue significant overtiredness second, retry just-opened windows third, then offer quiet rest in the middle ground.</figcaption></figure>
 <h2>The recommendation order in plain English</h2>
 <p>The current function evaluates the four routes in a fixed order.</p>
-<p>| Priority | Software condition | Highlighted route | |---:|---|---| | 1 | Final planned nap <strong>and</strong> bedtime is no more than one maximum wake window plus 30 minutes away | Skip &amp; bring bedtime earlier | | 2 | Significant sleep debt <strong>or</strong> nap is at least 30 minutes overdue | Rescue nap | | 3 | Nap is no more than 15 minutes overdue | Try again in 15 min | | 4 | Nap is 16–29 minutes overdue, without the higher-priority conditions | Rest time |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Priority</th><th scope="col">Software condition</th><th scope="col">Highlighted route</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Final planned nap <strong>and</strong> bedtime is no more than one maximum wake window plus 30 minutes away</td><td>Skip &amp; bring bedtime earlier</td></tr>
+<tr><td>2</td><td>Significant sleep debt <strong>or</strong> nap is at least 30 minutes overdue</td><td>Rescue nap</td></tr>
+<tr><td>3</td><td>Nap is no more than 15 minutes overdue</td><td>Try again in 15 min</td></tr>
+<tr><td>4</td><td>Nap is 16–29 minutes overdue, without the higher-priority conditions</td><td>Rest time</td></tr>
+</tbody>
+</table></div>
 <p>This priority explains an apparent contradiction. A baby can be 60 minutes overdue and carrying sleep debt, yet the app may still highlight <strong>Skip</strong> if this is the final nap and bedtime is close enough. The bedtime-protection check runs before the overtired rescue check.</p>
 <p>If the app does not know the intended nap count for today, it deliberately treats the pending nap as <strong>not proven to be the last nap</strong>. It will not recommend skipping on missing schedule context.</p>
 <h2>Worked examples</h2>
@@ -962,6 +975,7 @@
 <h3>Should I drive so my baby sleeps?</h3>
 <p>Do not make a non-essential journey solely because the app labels Drive as an option. Car seats are for safe travel. If a baby sleeps during a necessary journey, remove them when you arrive and follow current NHS guidance.</p>
 <p><em>OBubba is a tracking and education tool, not a medical device or safer-sleep monitor. Follow current NHS guidance and your child’s individual clinical plan. Seek urgent help for breathing difficulty, unusual unresponsiveness or another emergency.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_what-happens-tap-nap-not-happening-obubba"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -993,6 +1007,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

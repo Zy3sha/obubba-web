@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,21 @@
 <p>Here is exactly how OBubba earns the sentence—and how to use it as permission to notice rather than pressure to perform.</p>
 <h2>The short answer</h2>
 <p>Every gate below must pass:</p>
-<p>| Gate | Current rule | |---|---| | Age | <strong>8 through 78 weeks</strong>, inclusive | | Lookback | Up to <strong>28 calendar days</strong>, with today first | | Daily measurement | Earliest non-night wake → start of first completed daytime nap | | Plausible range | At least <strong>45 minutes</strong>, no more than <strong>7 hours</strong> | | Recent group | Calendar days 0–13; at least <strong>5 measurable days</strong> | | Prior group | Calendar days 14–27; at least <strong>5 measurable days</strong> | | Summary value | The sorted value at index `length ÷ 2` in each group | | Change needed | Recent value is at least <strong>20 minutes longer</strong> <strong>and</strong> at least <strong>15% longer</strong> | | Direction | Positive lengthening only; flat or shorter stays silent | | Card | Low urgency, shown as a long-term pattern in <strong>What OBubba noticed</strong> |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">Current rule</th></tr></thead>
+<tbody>
+<tr><td>Age</td><td><strong>8 through 78 weeks</strong>, inclusive</td></tr>
+<tr><td>Lookback</td><td>Up to <strong>28 calendar days</strong>, with today first</td></tr>
+<tr><td>Daily measurement</td><td>Earliest non-night wake → start of first completed daytime nap</td></tr>
+<tr><td>Plausible range</td><td>At least <strong>45 minutes</strong>, no more than <strong>7 hours</strong></td></tr>
+<tr><td>Recent group</td><td>Calendar days 0–13; at least <strong>5 measurable days</strong></td></tr>
+<tr><td>Prior group</td><td>Calendar days 14–27; at least <strong>5 measurable days</strong></td></tr>
+<tr><td>Summary value</td><td>The sorted value at index `length ÷ 2` in each group</td></tr>
+<tr><td>Change needed</td><td>Recent value is at least <strong>20 minutes longer</strong> <strong>and</strong> at least <strong>15% longer</strong></td></tr>
+<tr><td>Direction</td><td>Positive lengthening only; flat or shorter stays silent</td></tr>
+<tr><td>Card</td><td>Low urgency, shown as a long-term pattern in <strong>What OBubba noticed</strong></td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-awake-stamina-detector.svg" alt="The exact decision path behind OBubba’s awake-stamina insight." loading="lazy"/><figcaption>OBubba measures each valid day from morning wake to the first completed daytime nap, compares the prior and recent calendar fortnights, requires at least five usable days in each, and surfaces the pattern only when the recent middle value is both 20 minutes and 15% longer. It measures timing, not comfort or cause.</figcaption></figure>
 <h2>One day contributes one very specific number</h2>
 <p>For each date, the detector tries to calculate:</p>
@@ -947,6 +966,7 @@
 <p>That is what <strong>Awake stamina is growing</strong> can offer at its best: not a stricter schedule, but evidence that the schedule may be allowed to grow with the baby.</p>
 <p>OBubba turns everyday sleep, feeding and care logs into personalised patterns, predictions and gentle next steps. <a href="/#download">Explore OBubba</a> when you want an app that learns the baby in front of you—not an imaginary average baby.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -977,6 +997,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

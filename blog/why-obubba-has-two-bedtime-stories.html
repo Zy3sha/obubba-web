@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -857,7 +862,18 @@
 <p><strong>Bedtime Stories helps you create a calm, repeatable moment before sleep. Tonight’s Story helps you understand what the recorded week may mean for tonight.</strong> One is content you choose. The other is an explained summary that must earn its confidence from real logs.</p>
 <p>Neither promises that a story will make a baby sleep through. That boundary is exactly what makes the pair useful. The useful bedtime technology is the part that gets out of the way: one calm read for the baby, one clear explanation for the parent, then the phone can rest.</p>
 <h2>The difference at a glance</h2>
-<p>| | Bedtime Stories | Tonight’s Story | |---|---|---| | <strong>Who it is for</strong> | Baby and caregiver together | The parent making sense of sleep | | <strong>What it contains</strong> | 12 original, short animal tales | Tonight’s guidance, weekly wins, observations and gentle experiments | | <strong>Where it comes from</strong> | A fixed offline library inside the app | A deterministic read of the baby’s actual logs and active plan | | <strong>Personalisation</strong> | Baby’s first name in the dedication and sign-off | Baby’s name, current bedtime state and recorded patterns | | <strong>Data needed</strong> | None | At least 2 days of logs; stronger night language needs enough recorded nights | | <strong>Access in the reviewed build</strong> | Free | Premium; its Care-page preview remains visible | | <strong>What it cannot prove</strong> | That reading caused better sleep | Why a baby woke or that a suggestion will work |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col"></th><th scope="col">Bedtime Stories</th><th scope="col">Tonight’s Story</th></tr></thead>
+<tbody>
+<tr><td><strong>Who it is for</strong></td><td>Baby and caregiver together</td><td>The parent making sense of sleep</td></tr>
+<tr><td><strong>What it contains</strong></td><td>12 original, short animal tales</td><td>Tonight’s guidance, weekly wins, observations and gentle experiments</td></tr>
+<tr><td><strong>Where it comes from</strong></td><td>A fixed offline library inside the app</td><td>A deterministic read of the baby’s actual logs and active plan</td></tr>
+<tr><td><strong>Personalisation</strong></td><td>Baby’s first name in the dedication and sign-off</td><td>Baby’s name, current bedtime state and recorded patterns</td></tr>
+<tr><td><strong>Data needed</strong></td><td>None</td><td>At least 2 days of logs; stronger night language needs enough recorded nights</td></tr>
+<tr><td><strong>Access in the reviewed build</strong></td><td>Free</td><td>Premium; its Care-page preview remains visible</td></tr>
+<tr><td><strong>What it cannot prove</strong></td><td>That reading caused better sleep</td><td>Why a baby woke or that a suggestion will work</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-two-bedtime-stories-explained.svg" alt="A visual comparison of OBubba’s free story library for the baby and its premium log-derived evening briefing for the parent." loading="lazy"/><figcaption>The two story experiences have separate inputs, audiences and boundaries. A completed reading event is not treated as proof that the story improved sleep.</figcaption></figure>
 <h2>Story one: the little offline library</h2>
 <p>Open <strong>Care → Bedtime Stories</strong> and the current app shows a physical-looking bookshelf rather than an endless feed. There are 12 original tales, each organised around a value such as kindness, sharing, honesty, patience, courage, gratitude or empathy.</p>
@@ -918,6 +934,7 @@
 <h2>Product verification</h2>
 <ul><li>Current surfaces reviewed: the offline story content model, bookshelf, page reader, completion log, Care routing and Premium gate, Tonight’s Story screen, sleep-story engine and live evening-guidance handoff.</li><li>47 focused tests passed on 15 May 2027, covering story integrity and personalisation, after-midnight filing, sparse-data handling, missing-night guards, newborn sleep-debt suppression, one-bedtime consistency, live guidance and compact Care rendering.</li><li>The app image above is a genuine repository capture using a fictional baby profile. No production family data appears in it.</li></ul>
 <p><em>This article describes the reviewed build. OBubba supports routines, tracking and parent education; it does not guarantee sleep, diagnose sleep or feeding problems, or replace personalised clinical advice.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-has-two-bedtime-stories"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -949,6 +966,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

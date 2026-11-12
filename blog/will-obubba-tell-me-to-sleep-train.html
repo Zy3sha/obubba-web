@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -862,7 +867,15 @@
 <p>The implementation separates two questions that baby-sleep advice often muddles:</p>
 <ol><li><strong>When might sleep work better?</strong> This includes wake windows, naps, bedtime timing, routine and the sleep environment.</li><li><strong>How should my baby fall asleep?</strong> This includes feeding, rocking, holding, patting, gradual retreat, pick-up/put-down and structured methods.</li></ol>
 <p>Your Sleep approach primarily governs the second question.</p>
-<p>| Approach in the app | What OBubba is allowed to do | What it should not do | |---|---|---| | <strong>Gentle</strong> | Offer responsive, parent-present settling help when a pattern makes it relevant | Push a formal method just because your baby is old enough | | <strong>Baby-led</strong> | Help with timing, naps, bedtime, routine and environment | Frame contact naps, feeding or rocking to sleep as a “habit to break”; proactively suggest a method | | <strong>Build</strong> | Proactively offer structured but gentle, parent-present steps towards more independent settling | Leave a baby to cry alone or bypass the readiness checks | | <strong>Training</strong> | Add a vetted graduated timed-check-in option inside the Sleep Consultant when the age gate is met | Unlock it without explicit consent, show it below 26 weeks corrected age or let free-text AI invent the plan |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Approach in the app</th><th scope="col">What OBubba is allowed to do</th><th scope="col">What it should not do</th></tr></thead>
+<tbody>
+<tr><td><strong>Gentle</strong></td><td>Offer responsive, parent-present settling help when a pattern makes it relevant</td><td>Push a formal method just because your baby is old enough</td></tr>
+<tr><td><strong>Baby-led</strong></td><td>Help with timing, naps, bedtime, routine and environment</td><td>Frame contact naps, feeding or rocking to sleep as a “habit to break”; proactively suggest a method</td></tr>
+<tr><td><strong>Build</strong></td><td>Proactively offer structured but gentle, parent-present steps towards more independent settling</td><td>Leave a baby to cry alone or bypass the readiness checks</td></tr>
+<tr><td><strong>Training</strong></td><td>Add a vetted graduated timed-check-in option inside the Sleep Consultant when the age gate is met</td><td>Unlock it without explicit consent, show it below 26 weeks corrected age or let free-text AI invent the plan</td></tr>
+</tbody>
+</table></div>
 <p>The underlying sleep records do not change when you move between approaches. A logged feed stays a feed. A rocking settle stays an observation. The preference changes interpretation and coaching—not history.</p>
 <h2>1. Gentle: the default</h2>
 <p><strong>Gentle &amp; responsive</strong> is the app’s starting position.</p>
@@ -940,6 +953,7 @@
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS: Safer sleep advice for babies</a></li><li><a href="https://publications.aap.org/pediatrics/article-pdf/137/6/e20151486/1096703/peds_20151486.pdf" target="_blank" rel="noopener noreferrer">American Academy of Pediatrics: Behavioral Interventions for Infant Sleep Problems—a randomized controlled trial</a></li><li><a href="https://publications.aap.org/pediatrics/article-pdf/130/4/643/1088802/peds_2011-3467.pdf" target="_blank" rel="noopener noreferrer">American Academy of Pediatrics: Five-Year Follow-up of Harms and Benefits of Behavioral Infant Sleep Intervention</a></li></ul>
 <p><em>OBubba is a tracking and education tool, not a medical service. Sleep approaches are optional and do not replace individual advice from a health visitor, GP or qualified clinician.</em></p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_will-obubba-tell-me-to-sleep-train"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -971,6 +985,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

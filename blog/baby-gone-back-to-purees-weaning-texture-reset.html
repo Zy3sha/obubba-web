@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -886,7 +891,17 @@
 <h2>A gentler texture bridge</h2>
 <p>The <a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS advises moving from puréed or blended food to mashed, lumpy and finger foods as soon as a baby can manage them</a>, because varied textures help babies learn to chew, move food around the mouth and swallow. It also recognises that babies take different amounts of time.</p>
 <p>That means progress matters, but “progress” can be a very small change.</p>
-<p>| If this is comfortable | Make the next step this small | Avoid jumping straight to | |---|---|---| | Completely smooth vegetable purée | Blend for slightly less time so it is thicker and not perfectly uniform | Thin purée with separate firm chunks | | Thick smooth porridge | Add a little finely mashed soft fruit | Large raw fruit pieces | | Fine fork-mash | Leave a few very soft, squashable grains or tiny lumps | Dry, firm or rubbery pieces | | Mashed potato or lentils | Add finely minced, moist family food | Tough cubes of meat | | Soft minced pasta sauce | Use slightly less finely chopped soft pasta | A large slippery bowlful | | Preloaded spoon | Place one safely prepared soft piece alongside for self-feeding | Repeatedly placing food into a closed mouth |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">If this is comfortable</th><th scope="col">Make the next step this small</th><th scope="col">Avoid jumping straight to</th></tr></thead>
+<tbody>
+<tr><td>Completely smooth vegetable purée</td><td>Blend for slightly less time so it is thicker and not perfectly uniform</td><td>Thin purée with separate firm chunks</td></tr>
+<tr><td>Thick smooth porridge</td><td>Add a little finely mashed soft fruit</td><td>Large raw fruit pieces</td></tr>
+<tr><td>Fine fork-mash</td><td>Leave a few very soft, squashable grains or tiny lumps</td><td>Dry, firm or rubbery pieces</td></tr>
+<tr><td>Mashed potato or lentils</td><td>Add finely minced, moist family food</td><td>Tough cubes of meat</td></tr>
+<tr><td>Soft minced pasta sauce</td><td>Use slightly less finely chopped soft pasta</td><td>A large slippery bowlful</td></tr>
+<tr><td>Preloaded spoon</td><td>Place one safely prepared soft piece alongside for self-feeding</td><td>Repeatedly placing food into a closed mouth</td></tr>
+</tbody>
+</table></div>
 <p>Test food softness before serving. Sit your baby fully upright in a stable highchair with the harness secured, and remain within arm&#39;s reach.</p>
 <p>For a baby born prematurely or a child with an existing feeding, developmental or medical plan, use individual guidance rather than an age chart.</p>
 <h2>A three-day texture reset</h2>
@@ -943,6 +958,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby&#39;s first solid foods</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/what-to-feed-your-baby/from-around-6-months/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Feeding from around 6 months</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/help-your-baby-enjoy-new-foods/" target="_blank" rel="noopener noreferrer">NHS: Help your baby enjoy new foods</a></li><li><a href="https://www.nhs.uk/baby/babys-development/teething/baby-teething-symptoms/" target="_blank" rel="noopener noreferrer">NHS: Baby teething symptoms</a></li><li><a href="https://www.gov.uk/government/publications/feeding-in-the-first-year-of-life-sacn-report" target="_blank" rel="noopener noreferrer">GOV.UK: SACN report on feeding in the first year</a></li><li><a href="https://www.hct.nhs.uk/speech-and-language-referral-guidelines---feeding-difficulties/" target="_blank" rel="noopener noreferrer">Hertfordshire Community NHS Trust: Feeding-difficulty referral guidance</a></li></ul>
 <p><em>This article provides general information for UK families. It is not a feeding or swallowing assessment, and OBubba is not a medical device. Follow your baby&#39;s own healthcare plan and seek professional advice whenever eating or drinking seems unsafe or your instincts tell you something is wrong.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -973,6 +989,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

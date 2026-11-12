@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -880,7 +885,17 @@
 <ul><li>following where you look</li><li>watching when you point to something nearby</li><li>reaching towards wanted objects</li><li>holding or lifting an object for you to see</li><li>giving an object to continue a game</li><li>looking from an object back to your face</li><li>using arms-up, waving or head-shaking gestures</li><li>copying actions such as clapping</li><li>babbling to get your attention</li><li>taking turns in peekaboo or sound games</li></ul>
 <p>No baby needs to complete this checklist in order. The wider pattern matters because communication is shared across gaze, facial expression, sound, movement and gesture.</p>
 <h2>Pointing, reaching and poking are different, but all useful</h2>
-<p>| What you see | What it may be doing | How to respond | |---|---|---| | open-hand reach towards a cup | requesting or trying to grasp | name the cup and respond to the request | | index finger touches a picture | exploring with one finger or identifying the picture | label what they touched and pause | | point towards an object, then look at you | sharing or requesting with coordinated attention | follow the point and respond warmly | | your baby follows your point | understanding that your gesture directs attention | name the object without turning it into a quiz | | holds a toy up towards you | showing or inviting interaction | notice it: “You found the ball!” | | points with thumb, fist or several fingers | an emerging personal gesture | respond to the meaning; finger shape can refine later |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">What you see</th><th scope="col">What it may be doing</th><th scope="col">How to respond</th></tr></thead>
+<tbody>
+<tr><td>open-hand reach towards a cup</td><td>requesting or trying to grasp</td><td>name the cup and respond to the request</td></tr>
+<tr><td>index finger touches a picture</td><td>exploring with one finger or identifying the picture</td><td>label what they touched and pause</td></tr>
+<tr><td>point towards an object, then look at you</td><td>sharing or requesting with coordinated attention</td><td>follow the point and respond warmly</td></tr>
+<tr><td>your baby follows your point</td><td>understanding that your gesture directs attention</td><td>name the object without turning it into a quiz</td></tr>
+<tr><td>holds a toy up towards you</td><td>showing or inviting interaction</td><td>notice it: “You found the ball!”</td></tr>
+<tr><td>points with thumb, fist or several fingers</td><td>an emerging personal gesture</td><td>respond to the meaning; finger shape can refine later</td></tr>
+</tbody>
+</table></div>
 <p>Do not refuse to respond until the gesture looks textbook-perfect. Communication works because another person notices and answers it.</p>
 <h2>Five gentle ways to support pointing</h2>
 <h3>1. Point during ordinary life</h3>
@@ -952,6 +967,7 @@
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/learning-to-talk/listening-and-learning-6-to-12-months/" target="_blank" rel="noopener noreferrer">NHS Start for Life: Listening and learning, 6 to 12 months</a></li><li><a href="https://www.nhs.uk/baby/babys-development/play-and-learning/help-your-baby-learn-to-talk/" target="_blank" rel="noopener noreferrer">NHS: Help your baby learn to talk</a></li><li><a href="https://www.nhs.uk/baby/babys-development/height-weight-and-reviews/baby-reviews/" target="_blank" rel="noopener noreferrer">NHS: Your baby’s health and development reviews</a></li><li><a href="https://www.bedslutonchildrenshealth.nhs.uk/child-development-and-growing-up/milestones/12-months/" target="_blank" rel="noopener noreferrer">Bedfordshire and Luton Children’s Health: 12-month developmental milestones</a></li><li><a href="https://www.gosh.nhs.uk/conditions-and-treatments/procedures-and-treatments/speech-and-language-development-birth-12-months/" target="_blank" rel="noopener noreferrer">Great Ormond Street Hospital: Speech and language development from birth to 12 months</a></li></ul>
 <p><em>This article gives general information for UK families. It cannot assess an individual child’s communication, hearing, vision or development and does not replace advice from a health visitor, GP or speech and language professional.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -982,6 +998,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

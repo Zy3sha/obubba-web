@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,14 +863,32 @@
 <p>That distinction matters. A baby may wake because they are hungry and then feed. They may wake for another reason and find feeding the easiest route back to sleep. Both may be true on different nights. A parent-entered log can show co-occurrence; it cannot prove which explanation came first.</p>
 <h2>The short answer</h2>
 <p>The current app keeps this card hidden unless all of these conditions are met:</p>
-<p>| Gate | Current rule | |---|---| | Parenting preference | The card is suppressed for <strong>Follow my baby’s lead</strong>, the app’s minimal-intervention style | | Age | At least <strong>26 corrected weeks</strong>, roughly six months | | Complete data | At least <strong>5 nights</strong> have both bedtime and morning wake | | Repeated pattern | On at least <strong>60%</strong> of usable nights, there are 2+ wakes, 2+ night feeds and feeds on all or all but one wake | | Consolidation | The average longest stretch is more than 30 minutes below the app’s age-normal benchmark |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">Current rule</th></tr></thead>
+<tbody>
+<tr><td>Parenting preference</td><td>The card is suppressed for <strong>Follow my baby’s lead</strong>, the app’s minimal-intervention style</td></tr>
+<tr><td>Age</td><td>At least <strong>26 corrected weeks</strong>, roughly six months</td></tr>
+<tr><td>Complete data</td><td>At least <strong>5 nights</strong> have both bedtime and morning wake</td></tr>
+<tr><td>Repeated pattern</td><td>On at least <strong>60%</strong> of usable nights, there are 2+ wakes, 2+ night feeds and feeds on all or all but one wake</td></tr>
+<tr><td>Consolidation</td><td>The average longest stretch is more than 30 minutes below the app’s age-normal benchmark</td></tr>
+</tbody>
+</table></div>
 <p>The Brain currently checks the latest seven nights, so a card shown there is based on five, six or seven usable nights and is labelled an <strong>early signal</strong>.</p>
 <figure><img src="/obubba-feed-associated-waking-detector.svg" alt="The five gates behind OBubba’s feed-associated waking insight, plus the important things the log cannot know." loading="lazy"/><figcaption>OBubba checks parenting preference, corrected age, complete nights, a repeated feed-with-wake pattern and the average longest stretch before showing the card. The detector cannot know hunger, milk transfer, growth, daytime intake or causality.</figcaption></figure>
 <h2>What counts as a “feed-associated night”?</h2>
 <p>OBubba’s rule is narrower than “there was a night feed”. One night qualifies only when:</p>
 <ol><li>the log contains at least two wakes;</li><li>it contains at least two non-dream night feeds; and</li><li>the feed count is no lower than the wake count minus one.</li></ol>
 <p>So these examples qualify:</p>
-<p>| Logged wakes | Logged night feeds | Qualifies? | Why | |---:|---:|---|---| | 2 | 2 | Yes | Every recorded wake travels with a feed | | 3 | 2 | Yes | All but one recorded wake travels with a feed | | 4 | 3 | Yes | All but one recorded wake travels with a feed | | 4 | 2 | No | The feeds do not accompany nearly every wake | | 1 | 1 | No | The engine requires a multiple-wake pattern |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Logged wakes</th><th scope="col">Logged night feeds</th><th scope="col">Qualifies?</th><th scope="col">Why</th></tr></thead>
+<tbody>
+<tr><td>2</td><td>2</td><td>Yes</td><td>Every recorded wake travels with a feed</td></tr>
+<tr><td>3</td><td>2</td><td>Yes</td><td>All but one recorded wake travels with a feed</td></tr>
+<tr><td>4</td><td>3</td><td>Yes</td><td>All but one recorded wake travels with a feed</td></tr>
+<tr><td>4</td><td>2</td><td>No</td><td>The feeds do not accompany nearly every wake</td></tr>
+<tr><td>1</td><td>1</td><td>No</td><td>The engine requires a multiple-wake pattern</td></tr>
+</tbody>
+</table></div>
 <p>Dream feeds and solids are not treated as ordinary night milk feeds in the Night Weaning baseline. The association card receives the reconstructed night summary rather than trying to interpret one isolated log entry.</p>
 <h2>A worked seven-night example</h2>
 <p>Suppose all seven nights have a bedtime and morning wake. Sixty per cent of seven is 4.2, and the engine rounds that threshold up, so <strong>at least five nights must qualify</strong>.</p>
@@ -936,6 +959,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Responsive bottle feeding</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/22616943/" target="_blank" rel="noopener noreferrer">Ramamurthy et al., <em>Journal of Developmental &amp; Behavioral Pediatrics</em> (PubMed)</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/37980699/" target="_blank" rel="noopener noreferrer">Norwegian 6–12-month breastfeeding and sleep study (PubMed)</a></li><li>OBubba source reviewed: `feed_association.dart`, `brain.dart`, `day_metrics.dart`, `night_analysis.dart`, `adaptive_profile.dart`, `intervention.dart`, `night_weaning.dart`, `night_weaning_screen.dart` and their focused tests</li></ul>
 <p><em>OBubba is a tracking, planning and education tool, not a medical device. Its feed-associated waking insight is a deterministic summary of parent-entered logs. It cannot assess hunger, milk intake, growth, illness or feeding safety. Never withhold a needed feed to improve an app pattern; seek individualized advice when feeding, growth or health is uncertain.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -966,6 +990,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

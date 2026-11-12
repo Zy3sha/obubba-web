@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -857,7 +862,22 @@
 <p>We traced the current screen, its calculation engine, local storage and automated tests. <strong>OBubba builds the plan from the last five completed nights, requires at least two nights containing genuine night feeds, checks age and daytime logging, then chooses either a millilitre taper or a time-and-comfort sequence.</strong></p>
 <p>That is more personal than a generic “drop one feed tonight” checklist. But it is not a medical assessment, and there are a few details—especially for breastfeeding and mixed feeding—that parents deserve to understand before treating the targets as instructions.</p>
 <h2>The short answer</h2>
-<p>| Question | Current behaviour | |---|---| | What history does it use? | The last <strong>5 completed nights</strong> | | Which feeds count? | Logged night milk feeds that are not scheduled dream feeds; breast, bottle and wake-linked feeds can count | | Which feeds do not count? | Day feeds, dream feeds and solids | | How much data is enough? | At least <strong>2 nights containing a qualifying night feed</strong> | | What are the three green lights? | Corrected age of at least <strong>26 weeks</strong>, at least <strong>3 daytime feeds on one of the last 5 days</strong>, and enough night-feed data | | What happens with measured milk? | A seven-night total-volume taper is calculated from the logged average | | What happens with unmeasured breastfeeding? | The plan uses shorter feeds, soothing first and gradually dropping a feed, with no ml target | | Does an under-one bottle plan reach zero? | No. It retains a small final-night allowance; at 52 weeks or older it can reach zero | | Can the plan be completed in one sitting? | No. The night counter cannot advance faster than elapsed calendar nights | | Does the starting target stay fixed? | <strong>Not currently.</strong> The baseline is recalculated from a rolling five-night window, so targets can change during the plan | | Is “ready” medical approval? | <strong>No.</strong> It means the three software conditions passed, not that night-weaning is right for this baby |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Question</th><th scope="col">Current behaviour</th></tr></thead>
+<tbody>
+<tr><td>What history does it use?</td><td>The last <strong>5 completed nights</strong></td></tr>
+<tr><td>Which feeds count?</td><td>Logged night milk feeds that are not scheduled dream feeds; breast, bottle and wake-linked feeds can count</td></tr>
+<tr><td>Which feeds do not count?</td><td>Day feeds, dream feeds and solids</td></tr>
+<tr><td>How much data is enough?</td><td>At least <strong>2 nights containing a qualifying night feed</strong></td></tr>
+<tr><td>What are the three green lights?</td><td>Corrected age of at least <strong>26 weeks</strong>, at least <strong>3 daytime feeds on one of the last 5 days</strong>, and enough night-feed data</td></tr>
+<tr><td>What happens with measured milk?</td><td>A seven-night total-volume taper is calculated from the logged average</td></tr>
+<tr><td>What happens with unmeasured breastfeeding?</td><td>The plan uses shorter feeds, soothing first and gradually dropping a feed, with no ml target</td></tr>
+<tr><td>Does an under-one bottle plan reach zero?</td><td>No. It retains a small final-night allowance; at 52 weeks or older it can reach zero</td></tr>
+<tr><td>Can the plan be completed in one sitting?</td><td>No. The night counter cannot advance faster than elapsed calendar nights</td></tr>
+<tr><td>Does the starting target stay fixed?</td><td><strong>Not currently.</strong> The baseline is recalculated from a rolling five-night window, so targets can change during the plan</td></tr>
+<tr><td>Is “ready” medical approval?</td><td><strong>No.</strong> It means the three software conditions passed, not that night-weaning is right for this baby</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-seven-night-weaning-plan-logic.svg" alt="How OBubba turns recent night-feed logs into one of two seven-night plan branches." loading="lazy"/><figcaption>Five completed nights are filtered into a real-feed baseline, checked against three readiness gates and routed to either a measured-volume taper or a time-and-comfort plan.</figcaption></figure>
 <h2>Step 1: OBubba reads five completed nights</h2>
 <p>The screen asks the baby profile for the last five <strong>completed night windows</strong>, not simply five calendar-day buckets. That matters when a bedtime starts before midnight and the next feed happens after it.</p>
@@ -867,7 +887,16 @@
 <p>Dream feeds are deliberately excluded because they are scheduled rather than triggered by a genuine wake. Solids are excluded because they are not a milk feed and may be stored in grams; mixing grams into a millilitre baseline would make the number meaningless. It also avoids suggesting that more solids are a sleep intervention. The <a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS guide to first solid foods</a> says milk remains an important source of energy and nutrients during the first year, and starting solids does not make a baby more likely to sleep through.</p>
 <h2>What “average” means here</h2>
 <p>Suppose the five-night history looks like this:</p>
-<p>| Completed night | Qualifying feeds | Measured total | |---|---:|---:| | Night A | 2 | 210ml | | Night B | 1 | 150ml | | Night C | 0 | — | | Night D | no logging | — | | Night E | 1 dream feed only | excluded |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Completed night</th><th scope="col">Qualifying feeds</th><th scope="col">Measured total</th></tr></thead>
+<tbody>
+<tr><td>Night A</td><td>2</td><td>210ml</td></tr>
+<tr><td>Night B</td><td>1</td><td>150ml</td></tr>
+<tr><td>Night C</td><td>0</td><td>—</td></tr>
+<tr><td>Night D</td><td>no logging</td><td>—</td></tr>
+<tr><td>Night E</td><td>1 dream feed only</td><td>excluded</td></tr>
+</tbody>
+</table></div>
 <p>The baseline uses Nights A and B. It reports:</p>
 <ul><li><strong>2 feeding nights</strong></li><li><strong>1.5 feeds per feeding night</strong></li><li><strong>180ml average measured overnight volume</strong></li></ul>
 <p>The zero-feed, empty and dream-feed-only nights do not enter the denominator. In other words, this is the average <strong>on recent nights when a genuine night feed was logged</strong>, not the average across every night in the five-night span.</p>
@@ -883,13 +912,35 @@
 <p>If any qualifying feed has a recorded amount and the resulting average is above zero, OBubba chooses the measured-volume branch.</p>
 <p>Night 1 repeats the calculated baseline. Nights 2–7 move in six roughly equal steps toward the final target.</p>
 <p>For an 8-month-old with a 180ml baseline, the current targets are:</p>
-<p>| Plan night | Overnight total target | |---|---:| | 1 | 180ml | | 2 | 158ml | | 3 | 135ml | | 4 | 113ml | | 5 | 90ml | | 6 | 68ml | | 7 | 45ml |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Plan night</th><th scope="col">Overnight total target</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>180ml</td></tr>
+<tr><td>2</td><td>158ml</td></tr>
+<tr><td>3</td><td>135ml</td></tr>
+<tr><td>4</td><td>113ml</td></tr>
+<tr><td>5</td><td>90ml</td></tr>
+<tr><td>6</td><td>68ml</td></tr>
+<tr><td>7</td><td>45ml</td></tr>
+</tbody>
+</table></div>
 <p>Why 45ml rather than zero? Below 52 corrected weeks, the engine aims for about one quarter of the baseline, normally constrained to a 40–120ml range and never allowed to rise above the starting amount. That last protection matters for a tiny 30ml baseline: the plan stays flat or descends; it never tells a parent to increase 30ml to a 40ml “floor.”</p>
 <p>At 52 weeks or older, the same 180ml example can taper to zero: 180, 150, 120, 90, 60, 30, 0ml.</p>
 <p>These are total overnight targets, not a demand to refuse milk at a particular wake. The in-app wording repeatedly says to soothe first, keep daytime feeds full and accept that some babies take two or three weeks. Responsive feeding still matters. NHS bottle-feeding guidance says to respond to feeding cues, never force a baby to finish a bottle, and not assume a larger feed will create a longer interval (<a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">Feeding on demand</a>).</p>
 <h2>Step 3B: no measured volume becomes a comfort-and-time plan</h2>
 <p>When recent night feeds have no logged millilitres, the engine does not invent them. It uses this sequence instead:</p>
-<p>| Night | Current focus | |---|---| | 1 | Feed normally and notice which wakes lead to a feed | | 2 | Shorten the first feed by about 2 minutes; soothe first | | 3 | Shorten the first two feeds; pause 5–10 minutes before feeding | | 4 | Soothe first at every wake; feed if still unsettled after about 10 minutes | | 5 | Drop one feed and offer comfort instead | | 6 | Keep feeds short and respond with reassurance first | | 7 | Aim for most wakes to settle without milk; a feed or two is still okay |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Night</th><th scope="col">Current focus</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Feed normally and notice which wakes lead to a feed</td></tr>
+<tr><td>2</td><td>Shorten the first feed by about 2 minutes; soothe first</td></tr>
+<tr><td>3</td><td>Shorten the first two feeds; pause 5–10 minutes before feeding</td></tr>
+<tr><td>4</td><td>Soothe first at every wake; feed if still unsettled after about 10 minutes</td></tr>
+<tr><td>5</td><td>Drop one feed and offer comfort instead</td></tr>
+<tr><td>6</td><td>Keep feeds short and respond with reassurance first</td></tr>
+<tr><td>7</td><td>Aim for most wakes to settle without milk; a feed or two is still okay</td></tr>
+</tbody>
+</table></div>
 <p>This branch is practical for breastfeeding because feed duration can be noticed without pretending minutes equal millilitres. But duration is an imperfect proxy for intake, and the sequence currently does not change at 12 months in the same way the volume branch does.</p>
 <p>That makes individual context essential. The <a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/breastfeeding/how-to-stop/" target="_blank" rel="noopener noreferrer">NHS guide to stopping breastfeeding</a> recommends dropping feeds gradually and explains that a child under 1 still needs a replacement milk feed when a breastfeed is removed. Some families also choose to keep night feeds while reducing daytime feeds. Another national parenting source, Australia’s Raising Children Network, advises considering night-weaning healthy breastfed children from 12 months because earlier reduction can affect supply, while discussing earlier phasing for formula-fed babies over 6 months (<a href="https://raisingchildren.net.au/toddlers/sleep/better-sleep-settling/night-weaning" target="_blank" rel="noopener noreferrer">Night weaning</a>). Guidance varies because babies and feeding relationships vary.</p>
 <h2>The mixed-feeding edge case parents should know</h2>
@@ -914,7 +965,13 @@
 <h2>This plan is not the same as “Night feeds are dropping”</h2>
 <p>OBubba has a separate trend card, explained in <a href="/blog/why-obubba-says-night-feeds-are-dropping/">Why OBubba says night feeds are dropping</a>.</p>
 <p>The two features use different evidence:</p>
-<p>| Feature | Lookback | Minimum evidence | Purpose | |---|---|---|---| | Seven-night plan | Last 5 completed nights | 2 nights with genuine night feeds | Build a starting baseline and taper | | Feed trend | 14 night slots | At least 4 logged nights in each week | Compare this week with the previous week |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Feature</th><th scope="col">Lookback</th><th scope="col">Minimum evidence</th><th scope="col">Purpose</th></tr></thead>
+<tbody>
+<tr><td>Seven-night plan</td><td>Last 5 completed nights</td><td>2 nights with genuine night feeds</td><td>Build a starting baseline and taper</td></tr>
+<tr><td>Feed trend</td><td>14 night slots</td><td>At least 4 logged nights in each week</td><td>Compare this week with the previous week</td></tr>
+</tbody>
+</table></div>
 <p>The readiness lights are also explored in <a href="/blog/is-my-baby-ready-to-night-wean/">Is my baby ready to night-wean?</a>. The present article goes one layer deeper: how the plan is calculated after those lights appear.</p>
 <h2>The helpful takeaway</h2>
 <p>The best part of OBubba’s current approach is that it starts with <strong>your baby’s record</strong>. It excludes dream feeds and solids, refuses to build from a single feeding night, keeps under-one measured plans above zero and paces progress by real dates. It also gives unmeasured breastfeeding its own language instead of fabricating bottle numbers.</p>
@@ -935,6 +992,7 @@
 <p>Do not add solids as a sleep fix. Around the start of complementary feeding, milk remains central and the NHS says starting solids does not make sleeping through more likely.</p>
 <h3>Is the plan synced with my partner’s phone?</h3>
 <p>The current plan position is stored locally per child. Treat one device as the plan controller, even if both caregivers contribute logs.</p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -966,6 +1024,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

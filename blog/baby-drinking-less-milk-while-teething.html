@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -881,7 +886,15 @@
 <h2>Mixed feeding needs its own baseline</h2>
 <p>When a baby takes breast and bottle feeds, one side of the record can fall while the other rises. A 120ml bottle reduction may be balanced by extra effective breastfeeds, or it may not be.</p>
 <p>Keep the units separate:</p>
-<p>| Feed type | What you can record | What it cannot prove | |---|---|---| | Bottle | actual millilitres taken | absorption, hydration or why the baby stopped | | Breast | side, duration and observed swallowing | milk volume transferred | | Solids | food and approximate response | replacement for milk hydration or calories absorbed | | Wet nappy | timing and whether it felt normally wet | exact fluid intake |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Feed type</th><th scope="col">What you can record</th><th scope="col">What it cannot prove</th></tr></thead>
+<tbody>
+<tr><td>Bottle</td><td>actual millilitres taken</td><td>absorption, hydration or why the baby stopped</td></tr>
+<tr><td>Breast</td><td>side, duration and observed swallowing</td><td>milk volume transferred</td></tr>
+<tr><td>Solids</td><td>food and approximate response</td><td>replacement for milk hydration or calories absorbed</td></tr>
+<tr><td>Wet nappy</td><td>timing and whether it felt normally wet</td><td>exact fluid intake</td></tr>
+</tbody>
+</table></div>
 <p>This is why one combined “milk total” can create false precision for mixed-fed babies. Use the feeding pattern alongside nappies, behaviour and professional assessment when needed.</p>
 <h2>What wet nappies can tell you</h2>
 <p>Wet nappies are a practical output measure. A baby&#39;s individual pattern and age matter, but a clear reduction from normal deserves attention.</p>
@@ -943,6 +956,7 @@
 <ul><li><a href="https://www.nhs.uk/baby/babys-development/teething/baby-teething-symptoms/" target="_blank" rel="noopener noreferrer">NHS: Baby teething symptoms</a></li><li><a href="https://www.nhs.uk/baby/babys-development/teething/tips-for-helping-your-teething-baby/" target="_blank" rel="noopener noreferrer">NHS: Tips for helping your teething baby</a></li><li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/breastfeeding-problems/enough-milk/" target="_blank" rel="noopener noreferrer">NHS: Is my baby getting enough milk?</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/drinks-and-cups-for-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Drinks and cups for babies</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/bottle-feeding/bottle-feeding-your-baby/feeding-on-demand/" target="_blank" rel="noopener noreferrer">NHS: Feeding on demand</a></li><li><a href="https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/" target="_blank" rel="noopener noreferrer">NHS: When to get urgent medical help for babies and children under 5</a></li><li><a href="https://111.wales.nhs.uk/Encyclopaedia/d/article/dehydration/" target="_blank" rel="noopener noreferrer">NHS 111 Wales: Dehydration</a></li></ul>
 <p><em>This article provides general information for UK families. It is not a feeding or hydration assessment, and OBubba is not a medical device. Follow your baby&#39;s clinical feeding plan and seek professional advice whenever intake, nappies, behaviour or your instincts concern you.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -973,6 +987,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

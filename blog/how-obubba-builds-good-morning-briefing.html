@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -855,7 +860,15 @@
 <p>This is the moment OBubba’s <strong>Good morning</strong> briefing is designed for. On the fresh Bubba Coach screen, it can turn the completed overnight record into three short things: what last night looked like, today’s likely bedtime and one calm focus.</p>
 <p>We traced the current feature from the card parents see through the briefing engine, night reconstruction, day-plan calculation and automated tests. The useful part is its restraint: it will not call an unfinished night “slept through”. The part to read carefully is its confidence: labels such as “settled” and “routine worked” come from much less evidence than those phrases may suggest.</p>
 <h2>The short answer</h2>
-<p>| Briefing line | What the app actually uses | What it does not know | |---|---|---| | <strong>Last night</strong> | A completed bedtime-to-morning record, number of logged wakes and longest stretch | Whether an unlogged wake happened, how hard each wake felt or why the baby woke | | <strong>Today’s likely shape</strong> | Today’s entries, the current time and the baby’s known corrected age | A guaranteed bedtime or the baby’s future cues | | <strong>Worth knowing</strong> | A recent disruption note, otherwise the completed night’s wake count | Whether teething, illness or a regression caused the wakes | | <strong>Greeting</strong> | The carer name, when supplied, and the child profile | How rested the adult feels |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Briefing line</th><th scope="col">What the app actually uses</th><th scope="col">What it does not know</th></tr></thead>
+<tbody>
+<tr><td><strong>Last night</strong></td><td>A completed bedtime-to-morning record, number of logged wakes and longest stretch</td><td>Whether an unlogged wake happened, how hard each wake felt or why the baby woke</td></tr>
+<tr><td><strong>Today’s likely shape</strong></td><td>Today’s entries, the current time and the baby’s known corrected age</td><td>A guaranteed bedtime or the baby’s future cues</td></tr>
+<tr><td><strong>Worth knowing</strong></td><td>A recent disruption note, otherwise the completed night’s wake count</td><td>Whether teething, illness or a regression caused the wakes</td></tr>
+<tr><td><strong>Greeting</strong></td><td>The carer name, when supplied, and the child profile</td><td>How rested the adult feels</td></tr>
+</tbody>
+</table></div>
 <p>The briefing only appears from <strong>5am up to—but not including—noon</strong>, using the device’s local time. It is not shown for a pregnancy profile, and it appears on a fresh premium Coach surface before a chat has begun.</p>
 <figure><img src="/obubba-good-morning-briefing-logic.svg" alt="A flowchart showing how a completed night, today&#39;s entries, corrected age and disruption context become the three lines in OBubba&#39;s morning briefing." loading="lazy"/><figcaption>The morning briefing has separate evidence paths: last night shapes the night label, while today’s entries and known age shape the bedtime estimate.</figcaption></figure>
 <p>That separation is important. The app is not producing one all-knowing verdict. It is assembling three small answers from three overlapping—but different—sets of evidence.</p>
@@ -866,7 +879,14 @@
 <p>The record still depends on people. OBubba is not listening through the microphone, watching a cot or reading a wearable. A wake settled by a partner, a feed logged on paper or a nursery nap that never syncs will remain outside its evidence.</p>
 <h2>What “slept through”, “settled” and “broken” mean in the app</h2>
 <p>Once the night has two endpoints, the current engine sorts it by the number of logged wake entries:</p>
-<p>| Logged night wakes | Current briefing language | |---:|---| | <strong>0</strong> | “slept through last night, no wakes logged” | | <strong>1–2</strong> | “A settled night…” | | <strong>3 or more</strong> | “A broken night… Today is gentle catch-up, not catch-up by force.” |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Logged night wakes</th><th scope="col">Current briefing language</th></tr></thead>
+<tbody>
+<tr><td><strong>0</strong></td><td>“slept through last night, no wakes logged”</td></tr>
+<tr><td><strong>1–2</strong></td><td>“A settled night…”</td></tr>
+<tr><td><strong>3 or more</strong></td><td>“A broken night… Today is gentle catch-up, not catch-up by force.”</td></tr>
+</tbody>
+</table></div>
 <p>For a one- or two-wake night, the card also mentions the longest stretch when it reached at least five hours.</p>
 <p>These are product labels, not developmental or medical judgments. Two ten-minute wakes and two ninety-minute wakes receive the same “settled” category here because the briefing does not use wake duration. Three brief resettles become “broken”, even if the parent felt reasonably rested. And “no wakes logged” remains a statement about the record—not sensor-confirmed continuous sleep.</p>
 <p>The NHS notes that babies have individual sleep patterns and that night waking can change with growth spurts, teething and illness. Read the label as a quick description of the log, then look at the baby and the family experience before deciding what today needs.</p>
@@ -929,6 +949,7 @@
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/helping-your-baby-sleep/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Helping your baby sleep</a></li><li><a href="https://www.nhs.uk/baby/support-and-services/sleep-and-tiredness-after-having-a-baby/" target="_blank" rel="noopener noreferrer">NHS: Sleep and tiredness after having a baby</a></li><li><a href="https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/" target="_blank" rel="noopener noreferrer">NHS: Is your baby or toddler seriously ill?</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Safer sleep advice for babies</a></li></ul>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -959,6 +980,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

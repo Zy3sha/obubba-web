@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,14 @@
 <p>Here is the exact live rule, why reading and music make the confidence label stronger but cannot trigger it alone, where the signal appears, how it changes Today’s Play—and what the card cannot know.</p>
 <h2>The short answer</h2>
 <p>OBubba’s language-burst signal currently needs all three of these conditions:</p>
-<p>| Gate | Current rule | |---|---| | Age context | <strong>30–70 corrected weeks</strong>, inclusive | | Parent observation | At least one note from the recent 14-day scan contains a recognised babble phrase | | Required note words | `babble`, `baba`, `dada`, `mama`, `consonant`, `new sound` or `jabber` |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">Current rule</th></tr></thead>
+<tbody>
+<tr><td>Age context</td><td><strong>30–70 corrected weeks</strong>, inclusive</td></tr>
+<tr><td>Parent observation</td><td>At least one note from the recent 14-day scan contains a recognised babble phrase</td></tr>
+<tr><td>Required note words</td><td>`babble`, `baba`, `dada`, `mama`, `consonant`, `new sound` or `jabber`</td></tr>
+</tbody>
+</table></div>
 <p>If the family also logged at least two reading or music activities in that period, the app adds <strong>“all the reading/singing you’ve done”</strong> to the visible evidence.</p>
 <p>The result is a low-urgency development card. The app says it is <strong>60% sure</strong> from a matching note plus age, or <strong>80% sure</strong> when the reading/music context is present too. Those numbers are rule-based confidence labels, not measured probabilities that the interpretation is medically correct.</p>
 <figure><img src="/obubba-language-bubbling-up-logic.svg" alt="The exact path behind OBubba’s Language is bubbling up card." loading="lazy"/><figcaption>A parent’s recent note must contain a recognised sound phrase and the child must be 30 to 70 corrected weeks. Reading or music can strengthen the visible basis. The output is a reflection and play nudge, never a diagnosis or first-word forecast.</figcaption></figure>
@@ -884,7 +896,13 @@
 <p>That is a good restraint. Reading to a baby is worthwhile without needing to manufacture a “burst”. The NHS suggests looking at books, naming what you both see, singing and repeating the sounds a baby makes. The responsive back-and-forth—not a logged activity streak—is the useful part (<a href="https://www.nhs.uk/best-start-in-life/baby/learning-to-talk/listening-and-learning-6-to-12-months/" target="_blank" rel="noopener noreferrer">NHS: Learning to talk, 6 to 12 months</a>).</p>
 <h2>What “60% sure” and “80% sure” actually mean</h2>
 <p>starts this development detector at 40% and adds 20 percentage points for every counted supporting signal. For this branch:</p>
-<p>| Evidence shown | Rule-based confidence | |---|---:| | Parent note about new sounds + child’s age | 60% | | Parent note + reading/music context + age | 80% |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Evidence shown</th><th scope="col">Rule-based confidence</th></tr></thead>
+<tbody>
+<tr><td>Parent note about new sounds + child’s age</td><td>60%</td></tr>
+<tr><td>Parent note + reading/music context + age</td><td>80%</td></tr>
+</tbody>
+</table></div>
 <p>Age appears in the <strong>Based on</strong> list but the code subtracts that baseline before counting the confidence additions. The recognised note supplies one signal; reading/music supplies another.</p>
 <p>These are not probabilities from a validated study. “80% sure” does not mean an 80% chance that a language explosion is underway, that a first word is close or that development is typical. It means more of this deterministic rule’s own evidence fields were present.</p>
 <p>That label is most useful as a quick comparison of <strong>how much logged context supported the card</strong>, not as a clinical score.</p>
@@ -942,6 +960,7 @@
 <p>That is not a diagnosis. It is something many trackers never become: a useful bridge between the detail a parent saved and the next warm moment with their baby.</p>
 <p>OBubba connects sleep, feeds, development, play, weaning and the family’s own observations—then shows the reasoning instead of hiding it. <a href="/#download">Explore OBubba</a> when you want one baby app that remembers the detail and helps you decide what matters next.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -972,6 +991,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -868,7 +873,19 @@
 <h2>What crosses into OBuddy—and what does not</h2>
 <p>“Carry the history” could sound as if every bottle amount, wake time and note will be recreated as a toddler diary. The receiving code is more selective than that.</p>
 <p>With a readable OBubba family backup or live child record, OBuddy currently maps:</p>
-<p>| OBubba context | How OBuddy uses it | |---|---| | Child name | Pre-fills the toddler profile | | Date of birth | Selects a precise month-based age band | | Recent sleep and nap activity | Becomes a short count-based care memory and may shape the first challenge | | Recent feeds or meals | Becomes a short count-based care memory | | Recent nappy or potty care | Becomes a short count-based care memory | | Recent calming signals | Becomes a short count-based care memory | | Latest milestone | Becomes a “last win” in the carried memory | | Recognisable profile cues | May seed a temperament such as sensitive, high energy or careful/shy |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">OBubba context</th><th scope="col">How OBuddy uses it</th></tr></thead>
+<tbody>
+<tr><td>Child name</td><td>Pre-fills the toddler profile</td></tr>
+<tr><td>Date of birth</td><td>Selects a precise month-based age band</td></tr>
+<tr><td>Recent sleep and nap activity</td><td>Becomes a short count-based care memory and may shape the first challenge</td></tr>
+<tr><td>Recent feeds or meals</td><td>Becomes a short count-based care memory</td></tr>
+<tr><td>Recent nappy or potty care</td><td>Becomes a short count-based care memory</td></tr>
+<tr><td>Recent calming signals</td><td>Becomes a short count-based care memory</td></tr>
+<tr><td>Latest milestone</td><td>Becomes a “last win” in the carried memory</td></tr>
+<tr><td>Recognisable profile cues</td><td>May seed a temperament such as sensitive, high energy or careful/shy</td></tr>
+</tbody>
+</table></div>
 <p>The receiver reads up to the latest 14 logged days when summarising care activity. It does <strong>not</strong> reproduce those entries as a complete, browsable copy of the OBubba timeline. It converts them into context such as “2 recent sleep/nap logs” or “1 recent feed or meal.”</p>
 <p>That distinction is important. OBuddy begins with a clue about the child’s rhythm; it does not claim that a count explains the child.</p>
 <p>The parent can review and complete the missing basics during onboarding. OBuddy also adds broad starting goals around a calmer home, responsibility and kindness. Those are product defaults, not conclusions drawn from the child’s baby records.</p>
@@ -938,6 +955,7 @@
 <p><strong><a href="/app.html">Start the story in OBubba →</a></strong> — track the baby days, understand the patterns and keep a thoughtful route open for the questions that come next.</p>
 <p><em>This article gives general information for UK families and describes the OBubba sender and OBuddy receiver implementations reviewed on 4 March 2027. Product availability and behaviour can change. Neither app diagnoses developmental, behavioural or health conditions or replaces advice from a health visitor, GP or paediatric professional.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -968,6 +986,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

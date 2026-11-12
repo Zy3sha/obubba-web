@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -891,7 +896,17 @@
 <p>The app can become more helpful as the timeline grows, but <strong>care comes before capture</strong>. If a midwife or neonatal team has given you a feeding plan, follow that plan. If you are in hospital or special care, ask what the team wants recorded and avoid duplicating work that adds stress without helping a decision.</p>
 <h2>What stays private or local</h2>
 <p>“One profile” should never be translated into “every personal thing is shared”. The current app uses different storage boundaries for different jobs.</p>
-<p>| Information | After birth | Sharing boundary | |---|---|---| | Child profile and date of birth | Same child record is updated | Child cloud record | | Pregnancy preparation checklist | Remains with the child | Child cloud record | | Time-capsule letters | Remain with the child | Child cloud record; visible within the joined family context | | Maternal mood check-ins | Continue to support the parent on that phone | Private local storage; not placed in child sync | | Appointments | Remain on the same installation | Local device-wide storage; do not assume another phone has them | | NHS Red Book or eRedbook | Continues separately | NHS/clinical record, not imported into OBubba |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Information</th><th scope="col">After birth</th><th scope="col">Sharing boundary</th></tr></thead>
+<tbody>
+<tr><td>Child profile and date of birth</td><td>Same child record is updated</td><td>Child cloud record</td></tr>
+<tr><td>Pregnancy preparation checklist</td><td>Remains with the child</td><td>Child cloud record</td></tr>
+<tr><td>Time-capsule letters</td><td>Remain with the child</td><td>Child cloud record; visible within the joined family context</td></tr>
+<tr><td>Maternal mood check-ins</td><td>Continue to support the parent on that phone</td><td>Private local storage; not placed in child sync</td></tr>
+<tr><td>Appointments</td><td>Remain on the same installation</td><td>Local device-wide storage; do not assume another phone has them</td></tr>
+<tr><td>NHS Red Book or eRedbook</td><td>Continues separately</td><td>NHS/clinical record, not imported into OBubba</td></tr>
+</tbody>
+</table></div>
 <p>The distinction is especially important for maternal wellbeing. A check-in about mood is not automatically family data merely because it happened during pregnancy. Keeping it out of the child’s shared sync is a privacy choice.</p>
 <p>It also means continuity has practical limits. Reinstalling the app or moving phones should not be assumed to restore local mood entries or local appointments. Cloud-backed child information and device-local information are not the same promise.</p>
 <h2>OBubba is not the Red Book</h2>
@@ -941,6 +956,7 @@
 <h3>Is OBubba a replacement for the Red Book?</h3>
 <p>No. Keep using the Red Book or eRedbook as your child health record and take it to relevant appointments. OBubba is a family care tracker, not an NHS clinical record.</p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -971,6 +987,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

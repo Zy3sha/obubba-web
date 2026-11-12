@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -858,7 +863,14 @@
 <p>The goal is not a perfect seven-day menu. It is a small set of safe, adaptable meals that reduces decisions while helping your baby join family food.</p>
 <h2>The one-base, three-finishes method</h2>
 <p>Build dinner in three layers:</p>
-<p>| Layer | What everyone shares | Baby finish | Adult finish | |---|---|---|---| | <strong>Base</strong> | Soft-cooked vegetables, carbohydrate and protein | Keep unsalted and thoroughly cooked | Same base | | <strong>Texture</strong> | The ingredients themselves | Purée, mash, mince or cut into safe soft finger-food shapes | Leave chunky or crisp where wanted | | <strong>Flavour</strong> | Herbs, garlic, mild spices, tomato, lemon | Use age-appropriate flavour without added salt | Add salt, stock, chilli or salty condiments after baby&#39;s portion is removed |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Layer</th><th scope="col">What everyone shares</th><th scope="col">Baby finish</th><th scope="col">Adult finish</th></tr></thead>
+<tbody>
+<tr><td><strong>Base</strong></td><td>Soft-cooked vegetables, carbohydrate and protein</td><td>Keep unsalted and thoroughly cooked</td><td>Same base</td></tr>
+<tr><td><strong>Texture</strong></td><td>The ingredients themselves</td><td>Purée, mash, mince or cut into safe soft finger-food shapes</td><td>Leave chunky or crisp where wanted</td></tr>
+<tr><td><strong>Flavour</strong></td><td>Herbs, garlic, mild spices, tomato, lemon</td><td>Use age-appropriate flavour without added salt</td><td>Add salt, stock, chilli or salty condiments after baby&#39;s portion is removed</td></tr>
+</tbody>
+</table></div>
 <p>This is not “making baby food.” It is sequencing an ordinary meal so the baby-safe portion leaves the pan at the right moment.</p>
 <h3>Example: one pan of lentil and sweet potato stew</h3>
 <ol><li>Cook onion, garlic, lentils, sweet potato, spinach and mild spices until everything is soft.</li><li>Before adding salty stock, salt or hot chilli, take out the baby&#39;s portion.</li><li>Mash it to the texture your baby currently manages, loosening with water if needed.</li><li>Finish the family pan to adult taste.</li><li>Serve the same food at the same table.</li></ol>
@@ -870,7 +882,17 @@
 <p>Milk also remains important throughout the first year. Family meals are introduced alongside breast milk or first infant formula; they do not need to replace milk feeds quickly.</p>
 <h2>Six adaptable dinners, not 21 separate baby meals</h2>
 <p>Planning every breakfast, lunch, dinner and snack creates a grid large enough to fail by Tuesday. Begin with <strong>six anchor meals</strong> for the week instead.</p>
-<p>| Anchor meal | Baby adaptation | Easy adult finish | |---|---|---| | Lentil and vegetable dhal | Mash or serve very soft pieces; offer a soft spoon | Chilli oil, salt and fresh coriander at the table | | Pasta with tomato, veg and beans or mince | Soft pasta in a manageable shape; chop or mash sauce | Parmesan, olives or extra seasoning after portioning | | Fish, potato and peas | Check carefully for bones; mash or flake to a safe texture | Lemon, capers or seasoned butter for adults | | Chicken and vegetable tray bake | Use tender inner pieces; shred or cut appropriately | Crisp adult portions longer; add salty sauce separately | | Omelette with cooked vegetables | Fully cook; offer soft strips or small pieces to suit ability | Season adults&#39; portions and add a side salad | | Bean and sweet potato stew | Mash lightly or serve soft graspable pieces | Add chilli, seasoned yoghurt or crusty bread for adults |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Anchor meal</th><th scope="col">Baby adaptation</th><th scope="col">Easy adult finish</th></tr></thead>
+<tbody>
+<tr><td>Lentil and vegetable dhal</td><td>Mash or serve very soft pieces; offer a soft spoon</td><td>Chilli oil, salt and fresh coriander at the table</td></tr>
+<tr><td>Pasta with tomato, veg and beans or mince</td><td>Soft pasta in a manageable shape; chop or mash sauce</td><td>Parmesan, olives or extra seasoning after portioning</td></tr>
+<tr><td>Fish, potato and peas</td><td>Check carefully for bones; mash or flake to a safe texture</td><td>Lemon, capers or seasoned butter for adults</td></tr>
+<tr><td>Chicken and vegetable tray bake</td><td>Use tender inner pieces; shred or cut appropriately</td><td>Crisp adult portions longer; add salty sauce separately</td></tr>
+<tr><td>Omelette with cooked vegetables</td><td>Fully cook; offer soft strips or small pieces to suit ability</td><td>Season adults&#39; portions and add a side salad</td></tr>
+<tr><td>Bean and sweet potato stew</td><td>Mash lightly or serve soft graspable pieces</td><td>Add chilli, seasoned yoghurt or crusty bread for adults</td></tr>
+</tbody>
+</table></div>
 <p>These are meal structures, not a prescription. Swap ingredients for culture, budget, allergies, dietary choices and what your family actually enjoys.</p>
 <p>Repeating a reliable dinner is allowed. Variety is built over time; it does not require seven unique meals every week.</p>
 <h2>Adapt texture without turning dinner into a second recipe</h2>
@@ -909,7 +931,12 @@
 <p>Turn the six anchors into one deduplicated list. If three recipes use broccoli, buy broccoli once. If an ingredient will be used for a teaspoon and then forgotten, plan where the rest goes.</p>
 <h2>A fridge-first shopping rule</h2>
 <p>Before buying anything, make three columns:</p>
-<p>| Use first | Reliable staples | Buy for one new meal | |---|---|---| | Open vegetables, cooked grains, ripe fruit, safe leftovers | Lentils, beans, pasta, frozen veg, eggs, suitable yoghurt | The few ingredients needed for this week&#39;s new food or texture |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Use first</th><th scope="col">Reliable staples</th><th scope="col">Buy for one new meal</th></tr></thead>
+<tbody>
+<tr><td>Open vegetables, cooked grains, ripe fruit, safe leftovers</td><td>Lentils, beans, pasta, frozen veg, eggs, suitable yoghurt</td><td>The few ingredients needed for this week&#39;s new food or texture</td></tr>
+</tbody>
+</table></div>
 <p>This keeps weaning from turning into a trail of half-used specialist ingredients. Frozen vegetables, tinned pulses without added salt and batch-cooked family bases can be practical tools; check labels and handle, cool, store and reheat food using current food-safety guidance.</p>
 <h2>What to do when the plan falls apart</h2>
 <p>A baby may refuse dinner because they are tired, teething, distracted, unwell, learning a texture or simply not hungry. One refused plate does not prove the meal was wrong.</p>
@@ -925,7 +952,17 @@
 <p>The saved six-meal weekly plan and its shopping list are available in the free app. Free accounts see a smaller set of ranked cookbook ideas, while Premium unlocks the full 77-recipe garden.</p>
 <p><strong><a href="/app.html?utm_source=family_meals_article&amp;utm_medium=owned_search&amp;utm_campaign=from_bump_to_baby_auto&amp;utm_content=auto_20261028_family_meals">Turn six adaptable meals into one calmer week →</a></strong>. Keep meals, textures, allergens, reactions, recipe ideas and the week&#39;s shopping list beside feeds, sleep, nappies and growth.</p>
 <h2>What a meal planner can and cannot decide</h2>
-<p>| It can help with | It cannot decide | |---|---| | Reusing ingredients across several meals | Whether your baby is developmentally ready today | | Remembering foods and allergens already logged | Whether a food is free from cross-contamination | | Suggesting stage-matched recipe ideas | Whether a piece is soft or cut safely in front of you | | Bringing iron-rich foods back into view | How much your baby needs to eat at one sitting | | Filtering recorded reacted allergens from suggestions | Whether a symptom is an allergy or diagnosing its cause | | Creating a practical shopping list | Replacing advice from your baby&#39;s health professional |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">It can help with</th><th scope="col">It cannot decide</th></tr></thead>
+<tbody>
+<tr><td>Reusing ingredients across several meals</td><td>Whether your baby is developmentally ready today</td></tr>
+<tr><td>Remembering foods and allergens already logged</td><td>Whether a food is free from cross-contamination</td></tr>
+<tr><td>Suggesting stage-matched recipe ideas</td><td>Whether a piece is soft or cut safely in front of you</td></tr>
+<tr><td>Bringing iron-rich foods back into view</td><td>How much your baby needs to eat at one sitting</td></tr>
+<tr><td>Filtering recorded reacted allergens from suggestions</td><td>Whether a symptom is an allergy or diagnosing its cause</td></tr>
+<tr><td>Creating a practical shopping list</td><td>Replacing advice from your baby&#39;s health professional</td></tr>
+</tbody>
+</table></div>
 <p>The best plan is deliberately incomplete. It removes avoidable decisions and leaves room for appetite, milk feeds, leftovers, culture and the evening you serve toast.</p>
 <h2>Frequently asked questions</h2>
 <h3>Do I need to cook every baby meal from scratch?</h3>
@@ -943,6 +980,7 @@
 <h2>Sources and further help</h2>
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/baby/weaning/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Weaning</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/recipes-and-meal-ideas/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Recipes and meal ideas</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/" target="_blank" rel="noopener noreferrer">NHS: Your baby&#39;s first solid foods</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/foods-to-avoid-giving-babies-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Foods to avoid giving babies and young children</a></li><li><a href="https://www.nhs.uk/baby/weaning-and-feeding/help-your-baby-enjoy-new-foods/" target="_blank" rel="noopener noreferrer">NHS: Help your baby enjoy new foods</a></li></ul>
 <p><em>This UK-oriented article provides general information, not medical or dietetic advice. Weaning usually begins from around six months when the readiness signs appear together. Follow current safety guidance and any individual plan from your GP, health visitor, dietitian or allergy team.</em></p>
+
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -974,6 +1012,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

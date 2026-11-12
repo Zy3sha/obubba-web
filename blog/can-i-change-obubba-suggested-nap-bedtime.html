@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -856,7 +861,18 @@
 <p>The current OBubba app has an <strong>Adjust schedule</strong> sheet for exactly this. A parent can choose a preferred wake, bedtime, number of naps and whether the change is for today, phased in over three days or kept every day. There is also an off-day mode for illness, teething, travel or an unusual day.</p>
 <p>We traced the control from the real iOS screen through its child-scoped storage, bedtime and nap engines, day plan, reminders, widget bridge and focused tests. The honest answer is: <strong>bedtime and nap count genuinely change the shared plan; preferred wake is saved but is not yet connected to it; and “Just today” has one surprising exception.</strong></p>
 <h2>The short answer</h2>
-<p>| Control | What the current app actually does | |---|---| | <strong>Preferred wake</strong> | Saves and displays the chosen time, but does not currently feed the schedule engine, predictions, reminders or widget | | <strong>Bedtime</strong> | Changes the shared bedtime used by the live clock, plan, reminders and widget, within the engine’s safety clamp | | <strong>Number of naps</strong> | Auto or 0–6 changes nap prediction and the projected day across the same shared surfaces | | <strong>Just today</strong> | Wake and bedtime apply only on the start date; a chosen nap count keeps applying until it is reset | | <strong>Gradually</strong> | Moves wake and bedtime by one third of the total difference on each of three days, then keeps the target | | <strong>Every day</strong> | Keeps the chosen wake, bedtime and nap count from the start date until changed | | <strong>Off day</strong> | For three calendar days, shortens the engine’s contextual wake-window range by 20%, then stops |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Control</th><th scope="col">What the current app actually does</th></tr></thead>
+<tbody>
+<tr><td><strong>Preferred wake</strong></td><td>Saves and displays the chosen time, but does not currently feed the schedule engine, predictions, reminders or widget</td></tr>
+<tr><td><strong>Bedtime</strong></td><td>Changes the shared bedtime used by the live clock, plan, reminders and widget, within the engine’s safety clamp</td></tr>
+<tr><td><strong>Number of naps</strong></td><td>Auto or 0–6 changes nap prediction and the projected day across the same shared surfaces</td></tr>
+<tr><td><strong>Just today</strong></td><td>Wake and bedtime apply only on the start date; a chosen nap count keeps applying until it is reset</td></tr>
+<tr><td><strong>Gradually</strong></td><td>Moves wake and bedtime by one third of the total difference on each of three days, then keeps the target</td></tr>
+<tr><td><strong>Every day</strong></td><td>Keeps the chosen wake, bedtime and nap count from the start date until changed</td></tr>
+<tr><td><strong>Off day</strong></td><td>For three calendar days, shortens the engine’s contextual wake-window range by 20%, then stops</td></tr>
+</tbody>
+</table></div>
 <figure><img src="/obubba-adjust-schedule-rules.svg" alt="A diagram showing which Adjust Schedule controls connect to OBubba’s shared schedule, how the three application modes work, and that preferred wake is not yet wired to predictions." loading="lazy"/><figcaption>Bedtime, nap count and off-day mode reach the shared live schedule. Preferred wake is currently stored but not consumed. Just today expires wake and bedtime, while its nap-count choice persists.</figcaption></figure>
 <p>That diagram is deliberately less tidy than a marketing funnel. The four controls sit together, but the current code does not give them identical scope or reach.</p>
 <h2>Where to find Adjust schedule</h2>
@@ -873,7 +889,14 @@
 <h2>What “Gradually” means in the code</h2>
 <p>Gradually lasts three days by default. It is not a fixed 10- or 15-minute shift each day. OBubba divides the entire difference between the automatic time and the chosen time into three equal steps, rounding to whole minutes.</p>
 <p>If the automatic bedtime is 7:30pm and the target is 8:00pm, the effective sequence is approximately:</p>
-<p>| Day | Effective bedtime | |---|---| | Start day | 7:40pm | | Day 2 | 7:50pm | | Day 3 onward | 8:00pm |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Day</th><th scope="col">Effective bedtime</th></tr></thead>
+<tbody>
+<tr><td>Start day</td><td>7:40pm</td></tr>
+<tr><td>Day 2</td><td>7:50pm</td></tr>
+<tr><td>Day 3 onward</td><td>8:00pm</td></tr>
+</tbody>
+</table></div>
 <p>If the difference is 90 minutes, the steps become roughly 30 minutes, not 15. Day one already applies the first step; it does not wait until tomorrow. Once the third day reaches the target, that target continues until the override changes.</p>
 <p>Gradual applies to preferred wake and bedtime. Nap count switches immediately and, like every nap-count override, persists.</p>
 <p>The NHS suggests gradual bedtime movement for young children—bringing a wind-down routine forward by 5 to 10 minutes each week, or 15 minutes where bedtime is very late. That is not a prescription for every baby, and it is not the algorithm OBubba currently uses. The app should reveal its exact three-day steps before saving so parents can decide whether the pace suits their child.</p>
@@ -935,6 +958,7 @@
 <p>No. Overrides steer future predictions and plans. Completed sleep logs remain unchanged.</p>
 <h2>Sources and further reading</h2>
 <ul><li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">NHS: Helping your baby to sleep</a></li><li><a href="https://www.nhs.uk/baby/health/sleep-and-young-children/" target="_blank" rel="noopener noreferrer">NHS: Sleep and young children</a></li><li><a href="https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/safe-sleep-advice-for-babies/" target="_blank" rel="noopener noreferrer">NHS Best Start in Life: Safer sleep advice for babies</a></li></ul>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_can-i-change-obubba-suggested-nap-bedtime"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -966,6 +990,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

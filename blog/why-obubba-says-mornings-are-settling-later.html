@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -859,7 +864,19 @@
 <p>Here is the exact calculation, why it needs more history than the code comment first suggests, what can create a false later trend and why a later clock time does not automatically mean more sleep.</p>
 <h2>The short answer</h2>
 <p>The positive card needs all of these conditions:</p>
-<p>| Gate | Current rule | |---|---| | History searched | Up to <strong>28 recent nights</strong> | | Valid wake time | Morning wake from <strong>3:00am through 11:00am</strong> | | Newer comparison | The <strong>14 most recent valid wakes</strong> | | Older comparison | The next <strong>6–14 valid wakes</strong> | | Statistic | Median wake time in each group | | Positive shift | Newer median is at least <strong>20 minutes later</strong> | | Stronger early-rising card | Must not already own the morning question | | Result | Low-urgency <strong>Mornings are settling later</strong> insight, with no experiment |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">Current rule</th></tr></thead>
+<tbody>
+<tr><td>History searched</td><td>Up to <strong>28 recent nights</strong></td></tr>
+<tr><td>Valid wake time</td><td>Morning wake from <strong>3:00am through 11:00am</strong></td></tr>
+<tr><td>Newer comparison</td><td>The <strong>14 most recent valid wakes</strong></td></tr>
+<tr><td>Older comparison</td><td>The next <strong>6–14 valid wakes</strong></td></tr>
+<tr><td>Statistic</td><td>Median wake time in each group</td></tr>
+<tr><td>Positive shift</td><td>Newer median is at least <strong>20 minutes later</strong></td></tr>
+<tr><td>Stronger early-rising card</td><td>Must not already own the morning question</td></tr>
+<tr><td>Result</td><td>Low-urgency <strong>Mornings are settling later</strong> insight, with no experiment</td></tr>
+</tbody>
+</table></div>
 <p>Because fills the newer group with 14 valid wakes before it starts the older group, this detector actually needs at least <strong>20 valid morning wakes</strong>—14 newer and 6 older. It cannot fire from 12 mornings split six-versus-six.</p>
 <figure><img src="/obubba-mornings-settling-later-logic.svg" alt="The exact path behind OBubba’s Mornings are settling later card." loading="lazy"/><figcaption>OBubba keeps valid 3am-to-11am morning wakes from up to 28 nights, fills a 14-wake recent group, requires at least six older wakes, compares medians and celebrates a later shift of 20 minutes or more without launching an intervention.</figcaption></figure>
 <h2>It reads a trajectory, not last night</h2>
@@ -942,6 +959,7 @@
 <p>&gt; <strong>Across at least 20 valid morning records from the last 28 nights, the middle of the recent wake-time group is 20 minutes or more later than the middle of the older group. That looks encouraging, but the calculation does not know why it happened or whether total sleep increased.</strong></p>
 <p>That is the kind of quiet intelligence parents deserve: notice the win, explain the evidence and avoid creating work where none is needed.</p>
 <p>OBubba connects night wakes, morning endpoints, naps, feeds, development, weaning and family context in one timeline—then separates “worth noticing” from “worth changing”. <a href="/#download">Explore OBubba</a> when you want a baby tracker that can celebrate progress without turning it into another rule.</p>
+      <a class="free-tool-box" href="/baby-sleep/" data-from="blog_why-obubba-says-mornings-are-settling-later"><span>Baby sleep by age</span><strong>Every age in one table</strong><p>Typical wake windows, naps, bedtimes and total sleep from newborn to 12 months, with a guide for each month.</p></a>
 
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
@@ -973,6 +991,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>

@@ -623,6 +623,11 @@
     background: rgba(231, 241, 237, 0.58);
   }
   .rich-text li::marker { color: var(--rose-dark); font-weight: 900; }
+  .rich-text .table-scroll { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; }
+  .rich-text table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+  .rich-text th, .rich-text td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .rich-text thead th { font-weight: 800; background: rgba(201, 184, 255, .12); }
+  .rich-text tbody tr:last-child td { border-bottom: 0; }
   .rich-text figure {
     margin: 30px 0;
   }
@@ -857,7 +862,19 @@
 <p>The current app lets a parent tap a real timeline entry, reopen the appropriate form, update or delete it, and undo a deletion for four seconds. Behind that simple interaction are protections for overnight day boundaries, linked wake-and-feed records, twins, shared care and stale partner copies.</p>
 <p>This guide explains what the app actually does—and what to do when the mistake involves medicine rather than merely a record.</p>
 <h2>The 30-second answer</h2>
-<p>| Mistake | Best correction | |---|---| | Wrong time, amount, side, note or sleep detail | Tap the existing entry and update it | | Wrong baby | Delete it from the wrong baby, then log it once for the correct baby | | Duplicate entry | Keep the most complete version and delete the other | | Accidental new entry | Tap <strong>Undo</strong> on the “saved” message within four seconds | | Accidental deletion | Tap <strong>Undo</strong> on the “deleted” message within four seconds | | Whole day is test data or clearly wrong | Use <strong>Clear this day</strong>, confirm, then use Undo if needed | | Very old archived day | OBubba currently explains that the day cannot be edited there | | Medicine was actually given incorrectly | Correcting the log is not enough—follow the medicine leaflet and seek clinical advice |</p>
+<div class="table-scroll"><table>
+<thead><tr><th scope="col">Mistake</th><th scope="col">Best correction</th></tr></thead>
+<tbody>
+<tr><td>Wrong time, amount, side, note or sleep detail</td><td>Tap the existing entry and update it</td></tr>
+<tr><td>Wrong baby</td><td>Delete it from the wrong baby, then log it once for the correct baby</td></tr>
+<tr><td>Duplicate entry</td><td>Keep the most complete version and delete the other</td></tr>
+<tr><td>Accidental new entry</td><td>Tap <strong>Undo</strong> on the “saved” message within four seconds</td></tr>
+<tr><td>Accidental deletion</td><td>Tap <strong>Undo</strong> on the “deleted” message within four seconds</td></tr>
+<tr><td>Whole day is test data or clearly wrong</td><td>Use <strong>Clear this day</strong>, confirm, then use Undo if needed</td></tr>
+<tr><td>Very old archived day</td><td>OBubba currently explains that the day cannot be edited there</td></tr>
+<tr><td>Medicine was actually given incorrectly</td><td>Correcting the log is not enough—follow the medicine leaflet and seek clinical advice</td></tr>
+</tbody>
+</table></div>
 <p>Do not create a negative bottle, a zero-minute nap or a note saying “ignore the previous one” when the original row can be corrected. The app’s patterns should read one honest version of the event.</p>
 <h2>Where to edit a log</h2>
 <p>On <strong>Track</strong>, open the relevant day and tap the event in the day’s timeline. Entries found through log search open against their own date, not whichever day happened to be visible before the search.</p>
@@ -945,6 +962,7 @@
 <p><strong><a href="/app.html">Try OBubba free →</a></strong> — track the real day, correct tired-parent taps without shame, and keep one shared story the whole family can trust.</p>
 <p><em>This article gives general information for UK families and describes the current OBubba implementation reviewed on 6 March 2027. OBubba is a record and guidance tool, not a medical dosing system. For medicine mistakes, follow the medicine information and seek professional advice; call 999 in an emergency.</em></p>
 
+
       <section class="related-guides" aria-label="Related baby tracking guides">
         <h2>Related baby tracking guides</h2>
         <p>Keep exploring the OBubba guides parents use around feeds, sleep, nappies, routines and care handovers.</p>
@@ -975,6 +993,12 @@
 	        <a href="/pregnancy/">Pregnancy week by week</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/compare/">Compare apps</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/baby-sleep/">Baby sleep by age</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/about.html">About</a>
+	        <span aria-hidden="true"> / </span>
+	        <a href="/editorial-policy.html">Editorial policy</a>
 	        <span aria-hidden="true"> / </span>
 	        <a href="/privacy.html">Privacy</a>
 	        <span aria-hidden="true"> / </span>
