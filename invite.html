@@ -41,6 +41,20 @@
     .home{color:#f4c56d;font-weight:800}
     @media(max-width:430px){.card{padding:29px 18px 24px;border-radius:24px}.stores{grid-template-columns:1fr}}
   </style>
+  <!-- GA4 (12 Nov 2026). The invite code is a bearer secret in the fragment or query,
+       so page_location and page_referrer are sent WITHOUT any query or fragment. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7CHSL1YHZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    var __obConsent = 'denied';
+    try { if (localStorage.getItem('ob_analytics_consent') === 'granted') __obConsent = 'granted'; } catch (e) {}
+    gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: __obConsent });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'allow_ad_personalization_signals', false);
+    gtag('js', new Date());
+    gtag('config', 'G-Y7CHSL1YHZ', { page_location: location.origin + location.pathname, page_referrer: '' });
+  </script>
 </head>
 <body>
   <main>
@@ -59,8 +73,8 @@
         </div>
         <p class="steps"><strong>If you do not have OBubba yet:</strong> install it below, then on the very first screen tap the small link under the buttons. It reads <strong>Import data or partner code</strong>, or <strong>Import your data</strong> on older versions. Enter this code there and tap <strong>Connect for live sync</strong>. Do not tap Start tracking first, or you will make a second baby instead of joining this one.</p>
         <div class="stores">
-          <a class="store" href="https://apps.apple.com/gb/app/obubba/id6760968757">Download for iPhone</a>
-          <a class="store" href="https://play.google.com/store/apps/details?id=com.obubba.app">Get it on Android</a>
+          <a class="store" href="https://apps.apple.com/gb/app/obubba/id6760968757?pt=128670067&amp;ct=invite&amp;mt=8">Download for iPhone</a>
+          <a class="store" href="https://play.google.com/store/apps/details?id=com.obubba.app&amp;referrer=utm_source%3Dobubba.com%26utm_medium%3Dinvite%26utm_campaign%3Dpartner_invite%26utm_content%3Dinvite">Get it on Android</a>
         </div>
         <p class="small">Keep this code private. Anyone who has it can see and add to this baby's log. The person who invited you can replace it at any time from Family &amp; sharing in the app.</p>
       </div>
