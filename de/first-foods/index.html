@@ -818,7 +818,7 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Startseite",
-      "item": "https://obubba.com/de/calculators/"
+      "item": "https://obubba.com/de/"
     }
   ]
 }
@@ -840,7 +840,7 @@
   </nav>
 
   <main id="main" class="g-page">
-    <nav class="g-crumbs" aria-label="Breadcrumb"><a href="/de/calculators/">Startseite</a> / Beikost</nav>
+    <nav class="g-crumbs" aria-label="Breadcrumb"><a href="/de/">Startseite</a> / Beikost</nav>
     <section class="g-hero"><p class="eyebrow">Beikost-Datenbank</p><h1>Beikost für Babys: von A bis Z</h1><p class="g-lede">425 Lebensmittel, jeweils mit Zubereitung für 6, 9 und 12 Monate, Schutz vor Verschlucken, Allergenen und den wichtigen Nährstoffen. In unseren eigenen Worten geschrieben und mit den Empfehlungen von NHS und Food Standards Agency abgeglichen. <a href="/de/allergens/">Sieh dir auch die Allergen-Ratgeber an.</a></p></section>
     <div class="g-card g-filter"><label for="ff-q">425 Lebensmittel durchsuchen<input id="ff-q" type="search" placeholder="Zum Beispiel Avocado, Ei, Lachs..." autocomplete="off"/></label><div class="g-chips" role="group"><button type="button" class="g-chip is-on" data-g="">Alle</button><button type="button" class="g-chip" data-g="vegetables">🥦 Gemüse</button><button type="button" class="g-chip" data-g="fruit">🍓 Obst</button><button type="button" class="g-chip" data-g="meat">🍗 Fleisch und Geflügel</button><button type="button" class="g-chip" data-g="fish">🐟 Fisch und Meeresfrüchte</button><button type="button" class="g-chip" data-g="eggs-dairy">🧀 Eier und Milchprodukte</button><button type="button" class="g-chip" data-g="grains">🌾 Getreide und Stärke</button><button type="button" class="g-chip" data-g="legumes">🫘 Bohnen, Linsen und Tofu</button><button type="button" class="g-chip" data-g="nuts-seeds">🥜 Nüsse und Samen</button><button type="button" class="g-chip" data-g="herbs-spices">🌿 Kräuter und Gewürze</button><button type="button" class="g-chip" data-g="other">🫙 Öle, Getränke und alles andere</button></div><label class="g-check"><input type="checkbox" id="ff-6"/> <span>Nur Lebensmittel, die ab 6 Monaten geeignet sind</span></label><p class="g-hint" id="ff-count" aria-live="polite"></p></div>
     <script>document.addEventListener('DOMContentLoaded',()=>{const q=document.getElementById('ff-q'),six=document.getElementById('ff-6'),cnt=document.getElementById('ff-count');let g='';const tiles=[...document.querySelectorAll('.g-food')];function run(){const t=q.value.trim().toLowerCase();let n=0;for(const el of tiles){const ok=(!t||el.dataset.name.includes(t))&&(!g||el.dataset.group===g)&&(!six.checked||+el.dataset.age<=6);el.hidden=!ok;if(ok)n++}cnt.textContent=n+' Lebensmittel'}q.addEventListener('input',run);six.addEventListener('change',run);document.querySelectorAll('.g-chip').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.g-chip').forEach(x=>x.classList.remove('is-on'));b.classList.add('is-on');g=b.dataset.g;run()}));run()});</script>

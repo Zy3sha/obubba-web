@@ -818,7 +818,7 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Inicio",
-      "item": "https://obubba.com/es/calculators/"
+      "item": "https://obubba.com/es/"
     }
   ]
 }
@@ -840,7 +840,7 @@
   </nav>
 
   <main id="main" class="g-page">
-    <nav class="g-crumbs" aria-label="Breadcrumb"><a href="/es/calculators/">Inicio</a> / Primeros alimentos</nav>
+    <nav class="g-crumbs" aria-label="Breadcrumb"><a href="/es/">Inicio</a> / Primeros alimentos</nav>
     <section class="g-hero"><p class="eyebrow">Base de datos de primeros alimentos</p><h1>Primeros alimentos para bebés: de la A a la Z</h1><p class="g-lede">425 alimentos, cada uno con cómo ofrecerlo a los 6, 9 y 12 meses, seguridad ante el atragantamiento, alérgenos y los nutrientes que importan. Escrito con nuestras propias palabras y revisado según las recomendaciones del NHS y de la Food Standards Agency. <a href="/es/allergens/">Consulta también las guías de alérgenos.</a></p></section>
     <div class="g-card g-filter"><label for="ff-q">Busca entre 425 alimentos<input id="ff-q" type="search" placeholder="Prueba con aguacate, huevo, salmón..." autocomplete="off"/></label><div class="g-chips" role="group"><button type="button" class="g-chip is-on" data-g="">Todos</button><button type="button" class="g-chip" data-g="vegetables">🥦 Verduras</button><button type="button" class="g-chip" data-g="fruit">🍓 Fruta</button><button type="button" class="g-chip" data-g="meat">🍗 Carne y aves</button><button type="button" class="g-chip" data-g="fish">🐟 Pescado y marisco</button><button type="button" class="g-chip" data-g="eggs-dairy">🧀 Huevos y lácteos</button><button type="button" class="g-chip" data-g="grains">🌾 Cereales y féculas</button><button type="button" class="g-chip" data-g="legumes">🫘 Legumbres y tofu</button><button type="button" class="g-chip" data-g="nuts-seeds">🥜 Frutos secos y semillas</button><button type="button" class="g-chip" data-g="herbs-spices">🌿 Hierbas y especias</button><button type="button" class="g-chip" data-g="other">🫙 Aceites, bebidas y todo lo demás</button></div><label class="g-check"><input type="checkbox" id="ff-6"/> <span>Solo alimentos aptos desde los 6 meses</span></label><p class="g-hint" id="ff-count" aria-live="polite"></p></div>
     <script>document.addEventListener('DOMContentLoaded',()=>{const q=document.getElementById('ff-q'),six=document.getElementById('ff-6'),cnt=document.getElementById('ff-count');let g='';const tiles=[...document.querySelectorAll('.g-food')];function run(){const t=q.value.trim().toLowerCase();let n=0;for(const el of tiles){const ok=(!t||el.dataset.name.includes(t))&&(!g||el.dataset.group===g)&&(!six.checked||+el.dataset.age<=6);el.hidden=!ok;if(ok)n++}cnt.textContent=n+' alimentos'}q.addEventListener('input',run);six.addEventListener('change',run);document.querySelectorAll('.g-chip').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.g-chip').forEach(x=>x.classList.remove('is-on'));b.classList.add('is-on');g=b.dataset.g;run()}));run()});</script>

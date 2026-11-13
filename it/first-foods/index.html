@@ -818,7 +818,7 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://obubba.com/it/calculators/"
+      "item": "https://obubba.com/it/"
     }
   ]
 }
@@ -840,7 +840,7 @@
   </nav>
 
   <main id="main" class="g-page">
-    <nav class="g-crumbs" aria-label="Breadcrumb"><a href="/it/calculators/">Home</a> / Primi alimenti</nav>
+    <nav class="g-crumbs" aria-label="Breadcrumb"><a href="/it/">Home</a> / Primi alimenti</nav>
     <section class="g-hero"><p class="eyebrow">Database dei primi alimenti</p><h1>Primi alimenti per neonati: dalla A alla Z</h1><p class="g-lede">425 alimenti, ciascuno con come offrirlo a 6, 9 e 12 mesi, sicurezza e soffocamento, allergeni e i nutrienti che contano. Scritti con parole nostre, verificati sulle linee guida dell’NHS e della Food Standards Agency. <a href="/it/allergens/">Vedi anche le guide agli allergeni.</a></p></section>
     <div class="g-card g-filter"><label for="ff-q">Cerca tra 425 alimenti<input id="ff-q" type="search" placeholder="Prova avocado, uovo, salmone..." autocomplete="off"/></label><div class="g-chips" role="group"><button type="button" class="g-chip is-on" data-g="">Tutti</button><button type="button" class="g-chip" data-g="vegetables">🥦 Verdure</button><button type="button" class="g-chip" data-g="fruit">🍓 Frutta</button><button type="button" class="g-chip" data-g="meat">🍗 Carne e pollame</button><button type="button" class="g-chip" data-g="fish">🐟 Pesce e frutti di mare</button><button type="button" class="g-chip" data-g="eggs-dairy">🧀 Uova e latticini</button><button type="button" class="g-chip" data-g="grains">🌾 Cereali e amidi</button><button type="button" class="g-chip" data-g="legumes">🫘 Legumi e tofu</button><button type="button" class="g-chip" data-g="nuts-seeds">🥜 Frutta a guscio e semi</button><button type="button" class="g-chip" data-g="herbs-spices">🌿 Erbe e spezie</button><button type="button" class="g-chip" data-g="other">🫙 Oli, bevande e tutto il resto</button></div><label class="g-check"><input type="checkbox" id="ff-6"/> <span>Solo alimenti adatti dai 6 mesi</span></label><p class="g-hint" id="ff-count" aria-live="polite"></p></div>
     <script>document.addEventListener('DOMContentLoaded',()=>{const q=document.getElementById('ff-q'),six=document.getElementById('ff-6'),cnt=document.getElementById('ff-count');let g='';const tiles=[...document.querySelectorAll('.g-food')];function run(){const t=q.value.trim().toLowerCase();let n=0;for(const el of tiles){const ok=(!t||el.dataset.name.includes(t))&&(!g||el.dataset.group===g)&&(!six.checked||+el.dataset.age<=6);el.hidden=!ok;if(ok)n++}cnt.textContent=n+' alimenti'}q.addEventListener('input',run);six.addEventListener('change',run);document.querySelectorAll('.g-chip').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.g-chip').forEach(x=>x.classList.remove('is-on'));b.classList.add('is-on');g=b.dataset.g;run()}));run()});</script>

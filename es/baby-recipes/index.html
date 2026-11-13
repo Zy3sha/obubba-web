@@ -808,7 +808,7 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Inicio",
-      "item": "https://obubba.com/es/calculators/"
+      "item": "https://obubba.com/es/"
     }
   ]
 }
@@ -830,7 +830,7 @@
   </nav>
 
   <main id="main" class="g-page">
-    <nav class="g-crumbs" aria-label="Breadcrumb"><a href="/es/calculators/">Inicio</a> / Recetas</nav>
+    <nav class="g-crumbs" aria-label="Breadcrumb"><a href="/es/">Inicio</a> / Recetas</nav>
     <section class="g-hero"><p class="eyebrow">Recetas para bebés y niños pequeños</p><h1>Recetas para bebés y niños pequeños</h1><p class="g-lede">200 recetas originales, de las primeras probaditas a las comidas en familia. Cada una te dice para qué edad es, cómo ofrecérsela a tu bebé, qué alérgenos contiene y si se puede congelar.</p></section>
     <div class="g-card g-filter"><label for="ff-q">Busca entre 200 recetas<input id="ff-q" type="search" autocomplete="off"/></label><div class="g-chips" role="group"><button type="button" class="g-chip is-on" data-g="">Todos</button><button type="button" class="g-chip" data-g="breakfast">Desayuno</button><button type="button" class="g-chip" data-g="lunch">Comida</button><button type="button" class="g-chip" data-g="dinner">Cena</button><button type="button" class="g-chip" data-g="snack">Merienda</button></div><label class="g-check"><input type="checkbox" id="ff-6"/> <span>Solo recetas aptas desde los 6 meses</span></label><p class="g-hint" id="ff-count" aria-live="polite"></p></div>
     <script>document.addEventListener('DOMContentLoaded',()=>{const q=document.getElementById('ff-q'),six=document.getElementById('ff-6'),cnt=document.getElementById('ff-count');let g='';const tiles=[...document.querySelectorAll('.g-food')];function run(){const t=q.value.trim().toLowerCase();let c=0;for(const el of tiles){const ok=(!t||el.dataset.name.includes(t))&&(!g||el.dataset.group===g)&&(!six.checked||+el.dataset.age<=6);el.hidden=!ok;if(ok)c++}cnt.textContent=String(c)}q.addEventListener('input',run);six.addEventListener('change',run);document.querySelectorAll('.g-chip').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.g-chip').forEach(x=>x.classList.remove('is-on'));b.classList.add('is-on');g=b.dataset.g;run()}));run()});</script>
