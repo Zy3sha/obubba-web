@@ -27,6 +27,9 @@
 - [Pregnancy week by week](https://obubba.com/pregnancy/): weeks 4 to 42.
 - [Compare baby tracker apps](https://obubba.com/compare/): OBubba compared with 26 baby apps using each app's own listing, with sources and a checked-on date.
 - [What's free in each baby sleep app](https://obubba.com/compare/whats-free-in-baby-sleep-apps.html): what the free version of each baby sleep and tracker app includes, quoted from each app's own pages, and OBubba's own free vs Premium split (core tracking and partner sharing free; exact nap timing, Luna and daily plans Premium).
+- [Smart Sleep Coach by Pampers is closing: what to do next](https://obubba.com/smart-sleep-coach-closing/): the Pampers sleep coach app closes on 30 November 2026. Pampers' help centre says the full data is sent by support as CSV or JSON on request and can take up to two weeks; the in-app weekly and monthly download reads as a summary. Steps to ask, save and bring the history into OBubba.
+- [Why is Smart Sleep Coach closing?](https://obubba.com/blog/smart-sleep-coach-closing-save-your-data.html): what Pampers has and has not said (no reason given), refunds, and how to save a baby's data.
+- [Smart Sleep Coach alternatives compared](https://obubba.com/compare/obubba-vs-smart-sleep-coach-pampers.html): six apps parents name most, compared with OBubba from each app's own listing.
 - [Switching from Nara Baby](https://obubba.com/compare/nara-baby-alternative.html): Nara Baby is now a paid app (per Nara's own FAQ). How to export Nara data so parents keep a copy, and OBubba's free everyday logging with partner sync.
 
 ## Ratings and reviews

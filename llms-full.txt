@@ -27,6 +27,9 @@
 - [Pregnancy week by week](https://obubba.com/pregnancy/): weeks 4 to 42.
 - [Compare baby tracker apps](https://obubba.com/compare/): OBubba compared with 26 baby apps using each app's own listing, with sources and a checked-on date.
 - [What's free in each baby sleep app](https://obubba.com/compare/whats-free-in-baby-sleep-apps.html): what the free version of each baby sleep and tracker app includes, quoted from each app's own pages, and OBubba's own free vs Premium split (core tracking and partner sharing free; exact nap timing, Luna and daily plans Premium).
+- [Smart Sleep Coach by Pampers is closing: what to do next](https://obubba.com/smart-sleep-coach-closing/): the Pampers sleep coach app closes on 30 November 2026. Pampers' help centre says the full data is sent by support as CSV or JSON on request and can take up to two weeks; the in-app weekly and monthly download reads as a summary. Steps to ask, save and bring the history into OBubba.
+- [Why is Smart Sleep Coach closing?](https://obubba.com/blog/smart-sleep-coach-closing-save-your-data.html): what Pampers has and has not said (no reason given), refunds, and how to save a baby's data.
+- [Smart Sleep Coach alternatives compared](https://obubba.com/compare/obubba-vs-smart-sleep-coach-pampers.html): six apps parents name most, compared with OBubba from each app's own listing.
 - [Switching from Nara Baby](https://obubba.com/compare/nara-baby-alternative.html): Nara Baby is now a paid app (per Nara's own FAQ). How to export Nara data so parents keep a copy, and OBubba's free everyday logging with partner sync.
 
 ## Ratings and reviews
@@ -249,7 +252,7 @@ OBubba is a baby sleep app that works like a sleep consultant, and an all-in-one
 ## Blog posts
 
 - [Can My Baby Eat Cheese? What to Pick and How to Serve It](https://obubba.com/blog/can-babies-eat-cheese-first-food.html): From around six months, babies can eat pasteurised full-fat cheese. A simple UK guide to choosing a cheese, serving it safely and introducing dairy.
-- [Smart Sleep Coach is closing on 30 November: how to save your baby's sleep data and where to go next](https://obubba.com/blog/smart-sleep-coach-closing-save-your-data.html): Smart Sleep Coach by Pampers closes on 30 November 2026. How to download your baby's data and screenshot your plan before then, what happens to refunds, and what to look for in your next app.
+- [Why is Smart Sleep Coach by Pampers closing? What Pampers has said, and how to save your baby's data](https://obubba.com/blog/smart-sleep-coach-closing-save-your-data.html): Smart Sleep Coach by Pampers closes on 30 November 2026. What Pampers has and has not said about why, how to ask for your baby's full data by 16 November, refunds, and what to look for next.
 - [Why Did My Baby's Length Jump on the Growth Chart?](https://obubba.com/blog/baby-length-centile-jumped-measurement.html): A surprising length centile is worth checking, not decoding alone. Learn what to ask about the measurement, chart and follow-up with your health visitor.
 - [Waking Up Drenched After Birth? A Calm Check for Night Sweats](https://obubba.com/blog/postnatal-night-sweats-when-to-call.html): Night sweats can happen in the weeks after birth. Here is what may help tonight, which symptoms need a call and what to tell your midwife or GP.
 - [Can Visitors Kiss My Newborn? A Kind Way to Say No](https://obubba.com/blog/can-visitors-kiss-my-newborn.html): It is reasonable to ask visitors not to kiss your newborn. Here is the NHS safety advice, a simple message to send before visits and what to do if your baby seems unwell.
