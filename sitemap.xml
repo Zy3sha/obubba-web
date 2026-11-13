@@ -222,7 +222,7 @@
   </url>
   <url>
     <loc>https://obubba.com/blog/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -244,6 +244,11 @@
     <loc>https://obubba.com/resources/obubba-baby-care-handover-sheet.pdf</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://obubba.com/blog/baby-always-turns-head-one-way.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://obubba.com/blog/can-babies-eat-cheese-first-food.html</loc>
