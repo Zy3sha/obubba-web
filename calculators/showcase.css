@@ -76,3 +76,6 @@ body{background:linear-gradient(180deg,#071126 0,#0b1630 22%,#101936 43%,#08132b
 /* Design audit fix 2 (15 Nov 2026): width/height attributes reserve space; :where() keeps every class rule in charge */
 :where(img[width][height]){height:auto}
 .sv-rating{display:flex;flex-wrap:wrap;gap:6px 14px;margin:14px 0 0;color:#dad9e9;font-size:14px;line-height:1.4}.sv-rating span{display:inline-flex;align-items:center;gap:5px}.sv-rating b{color:#f1d48e;font-size:15px}
+/* Contrast (design audit fix 9, 15 Nov 2026): app day-theme tokens on light cards. Measured WCAG AA. */
+.sv-footnote .faq details p{color:#3a4d60}.sv-footnote .faq details a{color:#5b3f8a}
+.sv-hero-note span{color:#5a5370}.sv-hero-note small{color:#6a4a84}.sv-access-detail small{color:#5a5370}

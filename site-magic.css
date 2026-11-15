@@ -56,3 +56,6 @@ body:not(:has(.sv-page)):not(:has(.g-page)){font-family:"Nunito Sans",system-ui,
 .ob-install-x{flex:none;width:36px;height:44px;border:0;background:transparent;color:#a8abc2;font-size:24px;line-height:1;cursor:pointer}
 @media(min-width:761px){.ob-install-bar{display:none}}
 @media(prefers-reduced-motion:reduce){.ob-install-bar{transition:none}}
+/* Contrast (design audit fix 9, 15 Nov 2026): deep lilac #5b3f8a (8.3:1 on white) for tags and labels on light sections */
+body:not(:has(.sv-page)):not(:has(.g-page)) a.tag{color:#5b3f8a!important}
+body:not(:has(.sv-page)):not(:has(.g-page)) .section:not(.hero) :is(.eyebrow,.kicker,.read-link){color:#5b3f8a!important}
