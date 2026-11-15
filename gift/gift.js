@@ -294,6 +294,15 @@
   /* ---------- /redeem ---------- */
   function initRedeem() {
     var form = $('redeem-form');
+    // A code a partner handed out is not from a gift card. The partner's link
+    // is /redeem?from=partner, and the page then says "the code you were given".
+    // Nothing else reads the address, and the code itself is never put in it.
+    try {
+      if (new URLSearchParams(location.search).get('from') === 'partner') {
+        show($('redeem-intro-gift'), false);
+        show($('redeem-intro-partner'), true);
+      }
+    } catch (e) { /* an old browser: the gift sentence stays */ }
     if (!form) return;
     var codeInput = $('redeem-code');
     var userInput = $('redeem-username');
