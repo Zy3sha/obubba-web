@@ -337,6 +337,23 @@
     function post(body) {
       return call('/redeemGiftCode', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
     }
+    // The words follow the code: how long it is for, and whether it was a gift
+    // someone bought or a code a partner shared. A code is 3, 6 or 12 months.
+    // "year" and the gift thank-you are the page's own words, so a reply that
+    // says nothing leaves them as they are.
+    function giftWords(r) {
+      var m = Number(r && r.months);
+      if (m > 0) {
+        var year = m === 12;
+        each('[data-gift-length]', function (el) { text(el, year ? 'year' : (m === 1 ? 'month' : m + ' months')); });
+        each('[data-gift-verb]', function (el) { text(el, year || m === 1 ? 'is' : 'are'); });
+      }
+      if (r && r.from) {
+        var partner = r.from === 'partner';
+        show($('done-thanks-gift'), !partner);
+        show($('done-thanks-partner'), partner);
+      }
+    }
     form.addEventListener('submit', function (event) {
       event.preventDefault();
       var code = codeInput.value.trim();
@@ -350,6 +367,7 @@
         // An account with Premium for life: say so now. The code stays unused.
         if (r.willBe === 'lifetime') { only('lifetime'); return; }
         pending = { code: code, username: username, confirmToken: r.confirmToken };
+        giftWords(r);
         var hint = r.hint || {};
         var since = monthYear(hint.accountSince);
         text($('confirm-username'), username);
@@ -393,6 +411,7 @@
         var starts = held ? '' : day(r.startsOn);
         text($('done-until'), until);
         show($('done-until-line'), !waits && !!until);
+        giftWords(r);
         show($('done-title-year'), !held);
         show($('done-title-held'), held);
         show($('done-free'), r.case === 'after_free_weeks' && !!starts);
