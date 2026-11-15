@@ -257,3 +257,67 @@
   .card-words { display: none; }
   html, body { height: auto; }
 }
+
+/* ---- The redeem page in the site's night look -------------------------------
+   Navy page, one raised card, Playfair heading, lilac button: the tokens are
+   the site's own (site-magic.css), each with the value written out beside it
+   so the page still reads if that file is slow to arrive. Words unchanged. */
+.gift-night { background: var(--ob-night, #031127); color: var(--ob-ink, #F7F3FF); }
+.gift-night .site-nav .brand { color: var(--ob-ink, #F7F3FF) !important; }
+.gift-night .gift-card-shell {
+  background: var(--ob-surface, #0A203B);
+  border: 1px solid var(--ob-line, rgba(141,167,213,.26));
+  box-shadow: 0 18px 40px rgba(2,11,25,.45);
+  color: var(--ob-ink-soft, #DAD9E9);
+}
+.gift-night .gift-card-shell h1,
+.gift-night .gift-card-shell h2 {
+  font-family: var(--ob-serif, "Playfair Display", Georgia, "Times New Roman", serif);
+  font-weight: 600;
+  color: var(--ob-ink, #F7F3FF) !important;
+}
+.gift-night .gift-card-shell p,
+.gift-night .gift-card-shell li { color: var(--ob-ink-soft, #DAD9E9) !important; }
+.gift-night .gift-card-shell strong { color: var(--ob-ink, #F7F3FF); }
+.gift-night .gift-eyebrow { color: var(--ob-lilac, #B79AE6) !important; }
+.gift-night .gift-card-shell .gift-form { background: transparent; }
+.gift-night .gift-field label,
+.gift-night .gift-form legend { color: var(--ob-ink, #F7F3FF) !important; }
+.gift-night .gift-field .hint { color: var(--ob-ink-faint, #A8ABC2) !important; }
+.gift-night .gift-field input,
+.gift-night .gift-field textarea {
+  background: var(--ob-night-deep, #020B19);
+  border-color: var(--ob-lilac-line, #9B7ED0);
+  color: var(--ob-ink, #F7F3FF);
+  caret-color: var(--ob-lilac, #B79AE6);
+}
+.gift-night .gift-field input:focus-visible,
+.gift-night .gift-field textarea:focus-visible,
+.gift-night .gift-button:focus-visible {
+  outline: 3px solid var(--ob-lilac-hover, #D6C4F2);
+  outline-offset: 2px;
+}
+.gift-night .gift-button {
+  background: var(--ob-lilac, #B79AE6);
+  color: var(--ob-on-lilac, #241A33) !important;
+}
+.gift-night .gift-button:hover { background: var(--ob-lilac-hover, #D6C4F2); }
+.gift-night .gift-button[disabled],
+.gift-night .gift-button[aria-disabled="true"] { background: #4a4f66; color: #DAD9E9 !important; }
+.gift-night .gift-button.secondary {
+  background: transparent;
+  color: var(--ob-ink, #F7F3FF) !important;
+  border: 2px solid var(--ob-lilac-line, #9B7ED0);
+}
+.gift-night .gift-link-button { color: var(--ob-lilac-hover, #D6C4F2); }
+.gift-night .gift-note,
+.gift-night .gift-note.calm {
+  background: var(--ob-surface-2, #172B4A);
+  color: var(--ob-ink, #F7F3FF) !important;
+  border: 1px solid var(--ob-line, rgba(141,167,213,.26));
+}
+.gift-night .gift-note strong { color: var(--ob-ink, #F7F3FF); }
+.gift-night .gift-status { color: var(--ob-ink, #F7F3FF); }
+.gift-night .gift-meta { color: var(--ob-ink-faint, #A8ABC2) !important; }
+.gift-night .gift-from { background: var(--ob-surface-2, #172B4A); border-left-color: var(--ob-lilac, #B79AE6); color: var(--ob-ink, #F7F3FF); }
+.gift-night a:not(.gift-button):not(.brand):not(.nav-cta) { color: var(--ob-lilac-hover, #D6C4F2); }
