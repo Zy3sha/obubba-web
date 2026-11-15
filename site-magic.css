@@ -1,49 +1,256 @@
-.ob-magic-progress{position:fixed;z-index:100000;left:0;right:0;top:0;height:3px;pointer-events:none;background:linear-gradient(90deg,#bda5e6,#f2c767 58%,#8ed7bd);transform:scaleX(var(--ob-progress,0));transform-origin:left;box-shadow:0 0 15px rgba(242,199,103,.55)}
-.blog-post .rich-text > .cta-band{background:radial-gradient(circle at 88% 18%,rgba(201,184,255,.17),transparent 45%),linear-gradient(135deg,#111a3e,#17102f);color:#fff3df}
-.site-nav{transition:padding .3s ease,background .3s ease,box-shadow .3s ease}.ob-magic-travelled .site-nav{box-shadow:0 8px 28px rgba(37,25,43,.11)}
-.ob-magic-ready .ob-magic-scene{opacity:0;transform:translateY(28px);transition:opacity .72s ease var(--ob-delay,0ms),transform .72s cubic-bezier(.2,.75,.2,1) var(--ob-delay,0ms)}.ob-magic-ready .ob-magic-scene.is-ob-visible{opacity:1;transform:none}
-.ob-magic-sparks{position:fixed;z-index:100001;width:1px;height:1px;pointer-events:none}.ob-magic-sparks i{position:absolute;width:5px;height:5px;border-radius:50%;background:#f2c767;box-shadow:0 0 10px 3px rgba(242,199,103,.45);animation:ob-spark 1.1s ease-out forwards}.ob-magic-sparks i:nth-child(1){--x:42px;--y:-35px}.ob-magic-sparks i:nth-child(2){--x:-36px;--y:-43px;animation-delay:.04s}.ob-magic-sparks i:nth-child(3){--x:51px;--y:16px;animation-delay:.08s}.ob-magic-sparks i:nth-child(4){--x:-48px;--y:20px;animation-delay:.02s}.ob-magic-sparks i:nth-child(5){--x:5px;--y:-58px;animation-delay:.06s}
-@keyframes ob-spark{0%{opacity:0;transform:translate(0,0) scale(.3)}18%{opacity:1}100%{opacity:0;transform:translate(var(--x),var(--y)) scale(.8)}}
-@media(prefers-reduced-motion:reduce){.ob-magic-ready .ob-magic-scene{opacity:1;transform:none;transition:none}.ob-magic-sparks{display:none}.site-nav{transition:none}}
+/* OBubba shared stylesheet. It follows DESIGN.md at the repo root and loads LAST on
+   every generated page, so the tokens and components below are the site's one look.
+   Page sheets (growth.css, showcase.css, the inline layout CSS) handle layout only. */
 
-/* Shared editorial and employer identity. The long-form article remains a
-   warm reading surface while its entrance and conversion moments feel OBubba. */
-.blog-index,.blog-post,.topic-employee-family-wellbeing-benefit{background:#071126}
-.blog-index .site-nav,.blog-post .site-nav,.topic-employee-family-wellbeing-benefit .site-nav{background:rgba(3,9,23,.94);border-bottom-color:rgba(255,232,177,.14);backdrop-filter:blur(16px)}
-.blog-index .brand,.blog-post .brand,.topic-employee-family-wellbeing-benefit .brand{color:#f4d58d}
-.blog-index .nav-cta,.blog-post .nav-cta,.topic-employee-family-wellbeing-benefit .nav-cta{background:linear-gradient(#ffe3a1,#e9b958);border-color:#fff0bd;color:#211526!important;box-shadow:0 8px 22px rgba(0,0,0,.28)}
-.blog-index .nav-links a:not(.nav-cta),.blog-post .nav-links a:not(.nav-cta),.topic-employee-family-wellbeing-benefit .nav-links a:not(.nav-cta){color:#c8d1e1}
-.blog-index .blog-hero{background:radial-gradient(circle at 82% 38%,rgba(115,128,202,.2),transparent 24rem),linear-gradient(145deg,#111a3e,#09142e 65%,#17102f);color:#fff3df;border-bottom:1px solid rgba(255,232,177,.14)}
-.blog-index .blog-hero .eyebrow{color:#efd083}.blog-index .blog-hero h1{color:#fff3df}.blog-index .blog-hero p{color:#cbd4e5}.blog-index .section{background:linear-gradient(180deg,#071126,#0a1024)}
-.blog-index .post-card{border:1px solid rgba(255,232,177,.13);border-radius:24px;background:linear-gradient(145deg,#111a35,#17132f);color:#fff3df;box-shadow:0 20px 45px rgba(0,0,0,.2);transition:transform .22s ease,border-color .22s ease}.blog-index .post-card:hover{transform:translateY(-5px);border-color:rgba(239,208,131,.5)}.blog-index .post-card p,.blog-index .post-card .meta{color:#aeb9cd}.blog-index .post-card .read-link{color:#efd083}
-.blog-post .article-header{background:radial-gradient(circle at 82% 38%,rgba(115,128,202,.2),transparent 23rem),linear-gradient(145deg,#111a3e,#09142e 65%,#17102f);color:#fff3df;border-bottom:1px solid rgba(255,232,177,.14)}.blog-post .article-header h1{color:#fff3df}.blog-post .article-header p,.blog-post .article-header .meta,.blog-post .article-header .read-time{color:#cbd4e5}.blog-post main{background:linear-gradient(180deg,#071126 0,#f8f0e8 260px,#fffcf9 100%)}.blog-post .rich-text{border:1px solid rgba(77,55,76,.1);box-shadow:0 28px 70px rgba(26,17,38,.14)}.blog-post .rich-text>p:first-of-type{font-size:1.12rem;color:#4b3d50}.blog-post .cta-band{background:linear-gradient(145deg,#111a3e,#17102f);color:#fff3df;border:1px solid rgba(239,208,131,.24)}.blog-post .cta-band p{color:#cbd4e5}
-.topic-employee-family-wellbeing-benefit .hero{background:linear-gradient(90deg,rgba(5,13,32,.97),rgba(8,18,43,.82) 58%,rgba(12,18,42,.36)),var(--hero-image) right center/min(48vw,650px) auto no-repeat,#071126;color:#fff3df}.topic-employee-family-wellbeing-benefit .hero p{color:#cbd4e5}.topic-employee-family-wellbeing-benefit .hero .eyebrow{color:#efd083}.topic-employee-family-wellbeing-benefit .ai-answer,.topic-employee-family-wellbeing-benefit .cta-band{border:1px solid rgba(239,208,131,.24);background:linear-gradient(145deg,#111a3e,#17102f);color:#fff3df;box-shadow:0 24px 60px rgba(23,16,39,.16)}.topic-employee-family-wellbeing-benefit .ai-answer p,.topic-employee-family-wellbeing-benefit .cta-band p{color:#cbd4e5}.topic-employee-family-wellbeing-benefit .card{border-radius:22px}
+@font-face{font-family:"Playfair Display";src:url('/fonts/playfair-display-600-700.woff2') format('woff2');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Nunito";src:url('/fonts/nunito-400-800.woff2') format('woff2');font-weight:400 800;font-style:normal;font-display:swap}
+@font-face{font-family:"OBubba Script";src:url('/Parisienne-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
 
-/* Employer page: the whole story now lives in the same night village as the
-   flagship experience, not just its opening panel. */
-.topic-employee-family-wellbeing-benefit main{background:radial-gradient(circle at 88% 22%,rgba(112,126,199,.15),transparent 28rem),linear-gradient(180deg,#071126,#050c1d);color:#fff3df;overflow:hidden}
-.topic-employee-family-wellbeing-benefit .hero{min-height:690px;border-bottom:1px solid rgba(255,232,177,.15)}
-.topic-employee-family-wellbeing-benefit .hero:after{content:"";position:absolute;right:7%;bottom:10%;width:5px;height:5px;border-radius:50%;background:#ffe47d;box-shadow:0 0 11px 4px rgba(255,218,93,.6),-170px -90px 0 -1px #ffe47d,-280px 90px 0 -1px #ffe47d,-70px 140px 0 -1px #ffe47d;animation:ob-employer-stars 5s ease-in-out infinite alternate}
-.topic-employee-family-wellbeing-benefit .hero h1{max-width:13ch;color:#fff3df;font-size:clamp(54px,7vw,92px);line-height:.9;letter-spacing:-.035em}.topic-employee-family-wellbeing-benefit .hero .hero-actions{gap:10px}.topic-employee-family-wellbeing-benefit .hero .button{border-radius:999px;background:linear-gradient(#ffe3a1,#e9b958);border-color:#fff0bd;color:#211526!important;box-shadow:0 14px 34px rgba(0,0,0,.27)}.topic-employee-family-wellbeing-benefit .hero .button.secondary{background:rgba(255,255,255,.06);border-color:rgba(255,232,177,.26);color:#fff3df!important;backdrop-filter:blur(12px)}
-.topic-employee-family-wellbeing-benefit .section{position:relative;background:transparent;color:#fff3df;border:0}.topic-employee-family-wellbeing-benefit .section.alt{background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));border-top:1px solid rgba(255,232,177,.1);border-bottom:1px solid rgba(255,232,177,.1)}.topic-employee-family-wellbeing-benefit .section h2{color:#fff3df;font-size:clamp(39px,5vw,65px);line-height:.96;letter-spacing:-.025em}.topic-employee-family-wellbeing-benefit .section .eyebrow,.topic-employee-family-wellbeing-benefit .kicker{color:#efd083}.topic-employee-family-wellbeing-benefit .section-lede{max-width:760px;color:#b9c4d8;font-size:17px;line-height:1.7}
-.topic-employee-family-wellbeing-benefit .ai-answer{padding:clamp(27px,5vw,52px);border-radius:30px;background:radial-gradient(circle at 86% 8%,rgba(239,208,131,.11),transparent 17rem),linear-gradient(145deg,#111a3e,#17102f)}.topic-employee-family-wellbeing-benefit .ai-answer:before{content:"A private benefit, not an employer dashboard";display:inline-flex;margin-bottom:18px;padding:7px 10px;border:1px solid rgba(239,208,131,.27);border-radius:999px;color:#efd083;font:700 9px/1.1 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.08em}
-.topic-employee-family-wellbeing-benefit .grid{gap:14px}.topic-employee-family-wellbeing-benefit .panel{position:relative;overflow:hidden;min-height:230px;padding:24px;border:1px solid rgba(255,232,177,.13);border-radius:23px;background:linear-gradient(145deg,rgba(25,36,72,.92),rgba(23,19,47,.92));color:#fff3df;box-shadow:0 18px 42px rgba(0,0,0,.2);transition:transform .22s ease,border-color .22s ease}.topic-employee-family-wellbeing-benefit .panel:after{content:"";position:absolute;right:-18px;bottom:-22px;width:80px;height:80px;border:1px solid rgba(239,208,131,.13);border-radius:50%}.topic-employee-family-wellbeing-benefit .panel:hover{transform:translateY(-5px);border-color:rgba(239,208,131,.48)}.topic-employee-family-wellbeing-benefit .panel h3{color:#fff3df;font-size:28px;line-height:1}.topic-employee-family-wellbeing-benefit .panel p{color:#aebbd0;line-height:1.65}
-.topic-employee-family-wellbeing-benefit .section:nth-of-type(4) .grid{grid-template-columns:repeat(4,1fr);counter-reset:employer-step}.topic-employee-family-wellbeing-benefit .section:nth-of-type(4) .panel{min-height:260px;counter-increment:employer-step}.topic-employee-family-wellbeing-benefit .section:nth-of-type(4) .panel:before{content:counter(employer-step);display:grid;place-items:center;width:40px;height:40px;margin-bottom:24px;border-radius:14px;background:#efd083;color:#30223a;font:700 18px Georgia,serif;box-shadow:0 0 22px rgba(239,208,131,.18)}
-.topic-employee-family-wellbeing-benefit .section.alt .narrow{padding:clamp(28px,5vw,52px);border:1px solid rgba(239,208,131,.23);border-radius:30px;background:linear-gradient(145deg,#24183b,#111d42)}.topic-employee-family-wellbeing-benefit .section.alt .narrow ul{display:grid;gap:10px;padding:0;list-style:none}.topic-employee-family-wellbeing-benefit .section.alt .narrow li{position:relative;padding:15px 17px 15px 47px;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:rgba(255,255,255,.035);color:#cbd4e5;line-height:1.55}.topic-employee-family-wellbeing-benefit .section.alt .narrow li:before{content:"✓";position:absolute;left:15px;top:15px;display:grid;place-items:center;width:22px;height:22px;border-radius:8px;background:#efd083;color:#30223a;font-weight:800}
-.topic-employee-family-wellbeing-benefit .feature-split{padding:clamp(24px,5vw,50px);border:1px solid rgba(255,232,177,.13);border-radius:30px;background:radial-gradient(circle at 18% 50%,rgba(239,208,131,.1),transparent 16rem),linear-gradient(145deg,#101b3d,#17112f)}.topic-employee-family-wellbeing-benefit .feature-split img{max-width:310px;border-radius:50%;filter:drop-shadow(0 25px 45px rgba(0,0,0,.35))}.topic-employee-family-wellbeing-benefit .tag{border-color:rgba(239,208,131,.24);background:rgba(239,208,131,.07);color:#efd083}
-.topic-employee-family-wellbeing-benefit .faq{display:grid;grid-template-columns:1fr 1fr;gap:10px}.topic-employee-family-wellbeing-benefit .faq details{margin:0;border:1px solid rgba(255,232,177,.13);border-radius:18px;background:rgba(255,255,255,.035);color:#cbd4e5}.topic-employee-family-wellbeing-benefit .faq summary{color:#fff3df}.topic-employee-family-wellbeing-benefit .cta-band{padding:clamp(31px,5vw,58px);border-radius:30px;background:radial-gradient(circle at 85% 12%,rgba(239,208,131,.12),transparent 16rem),linear-gradient(145deg,#111a3e,#17102f)}.topic-employee-family-wellbeing-benefit .cta-band .button{border-radius:999px;background:linear-gradient(#ffe3a1,#e9b958);border-color:#fff0bd;color:#211526!important}.topic-employee-family-wellbeing-benefit .cta-band .button.secondary{background:rgba(255,255,255,.055);border-color:rgba(255,232,177,.28);color:#fff3df!important}
-@keyframes ob-employer-stars{to{transform:translate(8px,-12px);opacity:.65}}
-@media(max-width:900px){.topic-employee-family-wellbeing-benefit .section:nth-of-type(4) .grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.topic-employee-family-wellbeing-benefit .hero{min-height:720px;background:linear-gradient(180deg,rgba(5,13,32,.96),rgba(8,18,43,.86) 72%,rgba(12,18,42,.42)),var(--hero-image) center bottom/100% auto no-repeat,#071126}.topic-employee-family-wellbeing-benefit .hero h1{font-size:52px}.topic-employee-family-wellbeing-benefit .section{padding-top:48px;padding-bottom:48px}.topic-employee-family-wellbeing-benefit .section:nth-of-type(4) .grid,.topic-employee-family-wellbeing-benefit .faq{grid-template-columns:1fr}.topic-employee-family-wellbeing-benefit .panel{min-height:0}.topic-employee-family-wellbeing-benefit .feature-split{padding:23px}.topic-employee-family-wellbeing-benefit .feature-split img{width:180px;margin:auto}.topic-employee-family-wellbeing-benefit .ai-answer:before{white-space:normal}}
+:root{
+  /* Night (default world) */
+  --ob-night:#031127;--ob-night-deep:#020B19;--ob-surface:#0A203B;--ob-surface-2:#172B4A;
+  --ob-ink:#F7F3FF;--ob-ink-soft:#DAD9E9;--ob-ink-faint:#A8ABC2;--ob-line:rgba(141,167,213,.26);
+  /* Day (reading surfaces) */
+  --ob-day:#F2EDF7;--ob-card:#FFFFFF;--ob-day-ink:#1B2735;--ob-day-ink-soft:#3A4D60;--ob-day-ink-faint:#51637A;--ob-day-line:rgba(27,39,53,.14);
+  /* Action: the only button fill */
+  --ob-lilac:#B79AE6;--ob-lilac-hover:#D6C4F2;--ob-lilac-pressed:#9B7ED0;--ob-on-lilac:#241A33;
+  --ob-lilac-line:#9B7ED0;--ob-lilac-deep:#5B3F8A;--ob-lilac-line-day:#7E62B4;
+  /* Illustration and state only, never a button */
+  --ob-gold:#D4A855;--ob-mint:#8FD6C4;--ob-mint-day:#1E7A46;
+  /* Type */
+  --ob-serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  --ob-sans:"Nunito","Nunito Sans",ui-rounded,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ob-script:"OBubba Script",Georgia,serif;
+  --ob-fs-micro:.75rem;--ob-fs-small:.875rem;--ob-fs-body:1.0625rem;--ob-fs-lead:1.25rem;
+  --ob-fs-h3:1.25rem;--ob-fs-h2:clamp(1.75rem,1.35rem + 1.7vw,2.5rem);--ob-fs-h1:clamp(2.25rem,1.55rem + 3vw,3.75rem);
+  /* Space, shape, depth */
+  --ob-s1:4px;--ob-s2:8px;--ob-s3:12px;--ob-s4:16px;--ob-s5:24px;--ob-s6:32px;--ob-s7:48px;--ob-s8:64px;--ob-s9:96px;
+  --ob-r-sm:12px;--ob-r-md:22px;--ob-r-lg:32px;--ob-r-pill:999px;
+  --ob-shadow-media:0 18px 40px rgba(2,11,25,.45);
+  --ob-ease:cubic-bezier(.2,.8,.2,1);
+  /* Legacy names re-pointed at the tokens, so older page sheets follow the system. */
+  --g-bg:var(--ob-night);--g-bg-2:var(--ob-surface);--g-ink:var(--ob-ink);--g-muted:var(--ob-ink-soft);--g-muted-2:var(--ob-ink-faint);
+  --g-gold:var(--ob-lilac);--g-gold-bright:var(--ob-lilac-hover);--g-coral:var(--ob-lilac);--g-blue:var(--ob-lilac);
+  --g-card:var(--ob-surface);--g-card-2:var(--ob-surface-2);--g-line:var(--ob-line);--g-line-strong:rgba(141,167,213,.4);
+  --g-serif:var(--ob-serif);--g-sans:var(--ob-sans);--g-shadow:none;
+  --sv-bg:var(--ob-night);--sv-panel:var(--ob-surface);--sv-panel2:var(--ob-surface-2);--sv-cream:var(--ob-ink);--sv-copy:var(--ob-ink-soft);
+  --sv-muted:var(--ob-ink-faint);--sv-gold:var(--ob-lilac);--sv-line:var(--ob-line);--sv-serif:var(--ob-serif);--sv-sans:var(--ob-sans);
+  --cream:var(--ob-day);--paper:var(--ob-card);--ink:var(--ob-day-ink);--muted:var(--ob-day-ink-soft);--rose:var(--ob-lilac);--rose-dark:var(--ob-lilac-deep);
+  --mint:var(--ob-mint-day);--gold:var(--ob-gold);--lavender:var(--ob-lilac-deep);--line:var(--ob-day-line);--shadow:none;
+}
 
-/* Site-wide 2026 polish: one quiet type scale and one moonlit palette. */
-/* Keep reading time legible against the dark editorial hero. */
-.blog-post .article-header .read-time{background:rgba(16,25,54,.78);border-color:rgba(255,243,223,.45);color:#fff3df}
-.blog-post .article-header .read-time::before{color:#fff3df}
-@font-face{font-family:"Nunito Sans";src:url('/fonts/nunito-sans-400.ttf') format('truetype');font-weight:400;font-display:swap}@font-face{font-family:"Nunito Sans";src:url('/fonts/nunito-sans-600.ttf') format('truetype');font-weight:600;font-display:swap}@font-face{font-family:"Nunito Sans";src:url('/fonts/nunito-sans-700.ttf') format('truetype');font-weight:700;font-display:swap}
-body:not(:has(.sv-page)):not(:has(.g-page)){font-family:"Nunito Sans",system-ui,sans-serif;--rose:#b79ce4;--rose-dark:#9276c3;--gold:#c9b8ff;--lavender:#9786c9}body:not(:has(.sv-page)):not(:has(.g-page)) h1,body:not(:has(.sv-page)):not(:has(.g-page)) h2,body:not(:has(.sv-page)):not(:has(.g-page)) h3{font-family:"Nunito Sans",system-ui,sans-serif!important;font-weight:700;letter-spacing:-.035em}body:not(:has(.sv-page)):not(:has(.g-page)) .site-nav{background:rgba(4,11,27,.93)!important;border-color:rgba(201,184,255,.18)!important}body:not(:has(.sv-page)):not(:has(.g-page)) .brand{color:#d7c6ff!important;text-shadow:none!important}body:not(:has(.sv-page)):not(:has(.g-page)) .nav-links a:not(.nav-cta){color:#d6d5e6!important}body:not(:has(.sv-page)):not(:has(.g-page)) .nav-cta,body:not(:has(.sv-page)):not(:has(.g-page)) .button:not(.secondary){background:linear-gradient(135deg,#d8c8ff,#efb8d2)!important;border-color:#eadfff!important;color:#251b38!important;border-radius:999px!important;box-shadow:0 10px 28px rgba(165,132,220,.2)!important}body:not(:has(.sv-page)):not(:has(.g-page)) .button.secondary{border-color:rgba(201,184,255,.3)!important;border-radius:999px!important}body:not(:has(.sv-page)):not(:has(.g-page)) .eyebrow,body:not(:has(.sv-page)):not(:has(.g-page)) .kicker,body:not(:has(.sv-page)):not(:has(.g-page)) .read-link{color:#bda8ef!important}body:not(:has(.sv-page)):not(:has(.g-page)) .card,body:not(:has(.sv-page)):not(:has(.g-page)) .panel,body:not(:has(.sv-page)):not(:has(.g-page)) .post-card{border-color:rgba(201,184,255,.17)!important;box-shadow:none!important}body:not(:has(.sv-page)):not(:has(.g-page)) .hero h1,body:not(:has(.sv-page)):not(:has(.g-page)) .article-header h1,body:not(:has(.sv-page)):not(:has(.g-page)) .blog-hero h1{font-size:clamp(40px,5.2vw,66px)!important;line-height:1.03!important;max-width:14ch}body:not(:has(.sv-page)):not(:has(.g-page)) .section h2{font-size:clamp(30px,4vw,48px)!important;line-height:1.08!important}
-.blog-index .blog-hero,.blog-post .article-header{border-color:rgba(201,184,255,.18);background:radial-gradient(circle at 82% 38%,rgba(123,99,177,.23),transparent 23rem),linear-gradient(145deg,#101936,#09142e 65%,#17132f)}.blog-index .post-card{border-radius:16px;background:rgba(255,255,255,.035)}.blog-index .post-card:hover{border-color:#c9b8ff}.blog-post .cta-band{border-color:rgba(201,184,255,.22);background:linear-gradient(90deg,transparent,rgba(74,56,116,.56),transparent)}
-.topic-employee-family-wellbeing-benefit .hero:after{background:#c9d9ff;box-shadow:0 0 11px 4px rgba(181,196,255,.5),-170px -90px 0 -1px #c9d9ff,-280px 90px 0 -1px #c9d9ff,-70px 140px 0 -1px #c9d9ff}.topic-employee-family-wellbeing-benefit .hero .eyebrow,.topic-employee-family-wellbeing-benefit .section .eyebrow,.topic-employee-family-wellbeing-benefit .kicker{color:#c9b8ff!important}.topic-employee-family-wellbeing-benefit .ai-answer,.topic-employee-family-wellbeing-benefit .cta-band,.topic-employee-family-wellbeing-benefit .section.alt .narrow,.topic-employee-family-wellbeing-benefit .feature-split{border-width:1px 0;border-radius:0;background:linear-gradient(90deg,transparent,rgba(67,51,107,.5),transparent);box-shadow:none}.topic-employee-family-wellbeing-benefit .panel{border-width:1px 0;border-radius:0;background:rgba(255,255,255,.025);box-shadow:none}.topic-employee-family-wellbeing-benefit .section:nth-of-type(4) .panel:before,.topic-employee-family-wellbeing-benefit .section.alt .narrow li:before{background:linear-gradient(135deg,#d5c7ff,#f0bed5);color:#302440}.topic-employee-family-wellbeing-benefit .tag{border-color:rgba(201,184,255,.25);background:rgba(201,184,255,.07);color:#c9b8ff}
+/* ---------- Base ---------- */
+html{background:var(--ob-night);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-family:var(--ob-sans);font-size:var(--ob-fs-body);line-height:1.6;font-weight:500;letter-spacing:0;color:var(--ob-ink);background:var(--ob-night)}
+h1,h2{font-family:var(--ob-serif);font-weight:600;letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:var(--ob-fs-h1);line-height:1.08}
+h2{font-size:var(--ob-fs-h2);line-height:1.15}
+h3{font-family:var(--ob-sans);font-size:var(--ob-fs-h3);font-weight:800;line-height:1.3;letter-spacing:0;text-wrap:balance}
+h4,h5,h6{font-family:var(--ob-sans);font-weight:800;letter-spacing:0}
+p,li{text-wrap:pretty}
+::selection{background:var(--ob-lilac);color:var(--ob-on-lilac)}
+:focus-visible{outline:3px solid var(--ob-lilac-hover);outline-offset:3px;border-radius:6px}
+a{text-underline-offset:.2em;text-decoration-thickness:1px}
+img{height:auto}
+
+/* ---------- Header ---------- */
+.site-nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:var(--ob-s4);padding:var(--ob-s2) clamp(16px,4vw,48px);background:var(--ob-night-deep);border-bottom:1px solid var(--ob-line);backdrop-filter:none;box-shadow:none}
+.site-nav .brand,.brand{font-family:var(--ob-script);font-size:32px;font-weight:400;line-height:1;color:var(--ob-ink);text-decoration:none;text-shadow:none;display:inline-flex;align-items:center;min-height:44px}
+.site-nav .nav-links{display:flex;align-items:center;gap:var(--ob-s1);font-size:var(--ob-fs-small);font-weight:700}
+.site-nav .nav-links a:not(.nav-cta){display:inline-flex;align-items:center;min-height:44px;padding:0 var(--ob-s3);color:var(--ob-ink-soft);text-decoration:none;border-radius:var(--ob-r-pill)}
+.site-nav .nav-links a:not(.nav-cta):hover{color:var(--ob-ink);background:rgba(247,243,255,.06)}
+.skip-link{position:absolute;left:16px;top:-80px;z-index:60;padding:10px 16px;border-radius:var(--ob-r-pill);background:var(--ob-lilac);color:var(--ob-on-lilac);font-weight:800}
+.skip-link:focus{top:12px}
+
+/* ---------- Buttons: one primary, one secondary ---------- */
+.nav-cta,.button,.sv-page .button,.g-page .button,.ob-btn,.sv-show-tools,.sv-explainer [data-sv-play],.sv-story-popover [data-sv-popover-watch]{
+  display:inline-flex;align-items:center;justify-content:center;gap:var(--ob-s2);min-height:48px;padding:0 var(--ob-s5);
+  border:1.5px solid var(--ob-lilac);border-radius:var(--ob-r-pill);background:var(--ob-lilac);color:var(--ob-on-lilac);
+  font-family:var(--ob-sans);font-size:1rem;font-weight:800;line-height:1.1;letter-spacing:0;text-transform:none;text-decoration:none;
+  box-shadow:none;text-shadow:none;filter:none;cursor:pointer;transition:background-color .15s var(--ob-ease),border-color .15s var(--ob-ease),color .15s var(--ob-ease)}
+.nav-cta:hover,.button:hover,.ob-btn:hover,.sv-show-tools:hover,.sv-explainer [data-sv-play]:hover,.sv-story-popover [data-sv-popover-watch]:hover{background:var(--ob-lilac-hover);border-color:var(--ob-lilac-hover);color:var(--ob-on-lilac);transform:none}
+.nav-cta:active,.button:active,.ob-btn:active{background:var(--ob-lilac-pressed);border-color:var(--ob-lilac-pressed)}
+.site-nav .nav-links a.nav-cta{min-height:44px;padding:0 var(--ob-s4);margin-left:var(--ob-s2);font-size:var(--ob-fs-small);color:var(--ob-on-lilac)}
+.button.secondary,.sv-page .button.secondary,.g-page .button.secondary,.ob-btn.secondary,.sv-show-tools{background:transparent;border-color:var(--ob-lilac-line);color:var(--ob-ink)}
+.button.secondary:hover,.ob-btn.secondary:hover,.sv-show-tools:hover{background:rgba(183,154,230,.14);border-color:var(--ob-lilac);color:var(--ob-ink)}
+.button.store{min-width:0}
+
+/* ---------- One card style ---------- */
+.g-card,.g-pill-card,.g-res-card,.g-stat,.g-tile,.panel,.card,.post-card,.sv-tool,.sv-practical-grid article,.related-guides,.free-tool-box,.faq details,.sv-footnote details,.g-result,.sv-access-demo,.sv-switcher-offer{
+  border:1px solid var(--ob-line);border-radius:var(--ob-r-md);background:var(--ob-surface);color:var(--ob-ink);box-shadow:none;backdrop-filter:none}
+.g-tile:hover,.post-card:hover,.sv-tool:hover{transform:none;border-color:var(--ob-lilac-line);box-shadow:none}
+
+/* No eyebrow kit: any label that survives is a plain fact line, not tracked capitals. */
+.eyebrow,.kicker,.sv-eyebrow,.g-eyebrow,.g-tag,.meta{font-family:var(--ob-sans);font-size:var(--ob-fs-small);font-weight:700;letter-spacing:0;text-transform:none;color:var(--ob-ink-faint)}
+.eyebrow:before,.g-hero .eyebrow:before{content:none}
+
+/* ---------- Footer ---------- */
+.site-footer{padding:var(--ob-s7) clamp(16px,5vw,64px);background:var(--ob-night-deep);color:var(--ob-ink-soft);border-top:1px solid var(--ob-line);font-size:var(--ob-fs-small)}
+.site-footer .footer-inner{width:min(1160px,100%);margin:0 auto;display:grid;gap:var(--ob-s4);justify-content:stretch}
+.site-footer .footer-inner>div:last-child{display:flex;flex-wrap:wrap;gap:0 var(--ob-s1)}
+.site-footer a{display:inline-flex;align-items:center;min-height:44px;padding:0 var(--ob-s2);color:var(--ob-ink);font-weight:700;text-decoration:none;border-radius:var(--ob-r-pill)}
+.site-footer a:hover{background:rgba(247,243,255,.06)}
+.site-footer span[aria-hidden]{display:none}
+
+/* ---------- Scroll progress and reveal (site-magic.js) ---------- */
+.ob-magic-progress{position:fixed;z-index:100;left:0;right:0;top:0;height:3px;pointer-events:none;background:var(--ob-lilac);transform:scaleX(var(--ob-progress,0));transform-origin:left;box-shadow:none}
+.ob-magic-ready .ob-magic-scene{opacity:0;transform:translateY(16px);transition:opacity .5s var(--ob-ease) var(--ob-delay,0ms),transform .5s var(--ob-ease) var(--ob-delay,0ms)}
+.ob-magic-ready .ob-magic-scene.is-ob-visible{opacity:1;transform:none}
+/* Long reading never animates in. */
+.ob-magic-ready .blog-post .ob-magic-scene,.ob-magic-ready .rich-text .ob-magic-scene,.ob-magic-ready .blog-post .article-header{opacity:1;transform:none;transition:none}
+.ob-magic-sparks{display:none}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.ob-magic-ready .ob-magic-scene{opacity:1;transform:none}}
+
+/* =====================================================================
+   Night pages built on growth.css (compare, tools, language homes, libraries)
+   ===================================================================== */
+body:has(.g-page){background:linear-gradient(180deg,var(--ob-night-deep) 0,var(--ob-night) 520px,var(--ob-night) 100%);color:var(--ob-ink);font-family:var(--ob-sans)}
+.g-page{color:var(--ob-ink)}
+.g-page h1,.g-page h2{font-family:var(--ob-serif);font-weight:600;color:var(--ob-ink);letter-spacing:-.01em}
+.g-page h1{font-size:var(--ob-fs-h1);line-height:1.08}
+.g-page h2{font-size:var(--ob-fs-h2);line-height:1.15}
+.g-page h3{font-family:var(--ob-sans);font-weight:800;font-size:var(--ob-fs-h3);color:var(--ob-ink)}
+.g-page a:not(.button):not(.g-tile):not(.nav-cta){color:var(--ob-lilac-hover)}
+.g-page p,.g-page li,.g-lede,.g-section>p{color:var(--ob-ink-soft)}
+.g-lede{font-size:var(--ob-fs-lead);line-height:1.55}
+.g-page .faq details{padding:0 var(--ob-s5);margin:0 0 var(--ob-s3)}
+.g-page .faq summary,.sv-footnote summary,details summary{min-height:48px;display:flex;align-items:center;cursor:pointer;font-weight:800;color:inherit}
+.g-table-wrap{border:1px solid var(--ob-line);border-radius:var(--ob-r-md);background:var(--ob-surface);box-shadow:none}
+.g-table thead th{background:var(--ob-surface-2);color:var(--ob-ink)}
+.g-tile{color:var(--ob-ink)!important;background:var(--ob-surface)}
+.g-tile strong{font-family:var(--ob-sans);font-weight:800;font-size:var(--ob-fs-h3);color:var(--ob-ink)}
+.g-tile small{color:var(--ob-ink-soft)}
+.g-tile-art{border-radius:var(--ob-r-sm);overflow:hidden;background:var(--ob-surface-2)}
+
+/* Language-home and compare hero: the painted village replaces the code-drawn skyline. */
+.g-hero{border-bottom:0}
+.g-hero:before,.g-hero:after,.g-hero h1:after{content:none!important;display:none!important}
+.g-hero.ob-village-hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,4vw,56px);align-items:center;min-height:0;padding:clamp(32px,6vw,72px) 0 clamp(32px,5vw,56px);margin:0 0 var(--ob-s7)}
+.ob-village-hero .ob-hero-copy{display:grid;gap:var(--ob-s4);align-content:center}
+.ob-village-hero .ob-hero-copy h1{margin:0}
+.ob-village-hero .hero-actions{display:flex;flex-wrap:wrap;gap:var(--ob-s3);margin-top:var(--ob-s2)}
+.ob-hero-art{position:relative;margin:0;border-radius:var(--ob-r-lg);overflow:hidden;aspect-ratio:16/10;background:var(--ob-surface)}
+.ob-hero-art img{width:100%;height:100%;object-fit:cover;display:block}
+.ob-hero-art .ob-mascot{position:absolute;left:var(--ob-s4);bottom:var(--ob-s4);width:clamp(64px,9vw,96px);height:auto;border-radius:var(--ob-r-md);box-shadow:var(--ob-shadow-media)}
+.g-cta{border:0;border-radius:var(--ob-r-lg);background:var(--ob-surface);box-shadow:none;padding:clamp(28px,5vw,56px)}
+.g-cta:before,.g-cta:after{content:none!important;display:none!important}
+.g-cta h2{color:var(--ob-ink)}
+.ob-fact{margin:0;color:var(--ob-ink-faint);font-size:var(--ob-fs-small);font-weight:700}
+@media (max-width:760px){
+  .g-hero.ob-village-hero{grid-template-columns:1fr;padding-top:var(--ob-s5)}
+  .ob-hero-art{aspect-ratio:16/11;border-radius:var(--ob-r-md)}
+}
+
+/* =====================================================================
+   Home (showcase.css)
+   ===================================================================== */
+.sv-page{font-family:var(--ob-sans);color:var(--ob-ink)}
+.sv-page h1,.sv-page h2{font-family:var(--ob-serif);font-weight:600;letter-spacing:-.01em;color:var(--ob-ink)}
+.sv-page h1{font-size:var(--ob-fs-h1);line-height:1.06}
+.sv-page h2{font-size:var(--ob-fs-h2);line-height:1.15}
+.sv-page h3{font-family:var(--ob-sans);font-weight:800;font-size:var(--ob-fs-h3);color:var(--ob-ink)}
+.sv-page p{color:var(--ob-ink-soft)}
+.sv-page a{color:var(--ob-lilac-hover)}
+.sv-page .faq details{padding:0 var(--ob-s5);margin:0 0 var(--ob-s3)}
+.sv-page .faq details p{color:var(--ob-ink-soft)}
+.sv-review-phone{border:1px solid var(--ob-line);border-radius:var(--ob-r-md);background:var(--ob-surface);box-shadow:none}
+.sv-review-phone-top{display:none}
+.sv-review-ribbon-card{border:1px solid var(--ob-line);border-radius:var(--ob-r-md);background:var(--ob-surface);box-shadow:none;color:var(--ob-ink)}
+.sv-review-ribbon-card small,.sv-review-slide small{color:var(--ob-ink-faint)}
+.sv-review-controls button{min-width:44px;min-height:44px;border-radius:var(--ob-r-pill);border:1px solid var(--ob-lilac-line);background:transparent;color:var(--ob-ink)}
+.sv-belief{border:0;border-radius:var(--ob-r-lg);background:var(--ob-surface);box-shadow:none}
+.sv-practical-grid article{display:block;padding:var(--ob-s5)}
+.sv-practical-grid article>span{display:none}
+.sv-tool img{border-radius:var(--ob-r-sm)}
+.sv-tool small{display:none}
+.sv-tool b{color:var(--ob-lilac-hover)}
+.sv-scenarios button,.sv-hero-choices button,.sv-access-people button,.sv-steps button,[data-sv-care-toggle]{min-height:44px;box-shadow:none}
+.sv-access-people button{min-width:44px}
+.sv-final-art .sv-mascot,.sv-tools header img{border-radius:var(--ob-r-md)}
+.sv-phone,.sv-final-phone,.sv-app-core img{box-shadow:var(--ob-shadow-media)}
+.sv-store-badge,.sv-store-badge:hover{filter:none;transform:none}
+.sv-store-badge:focus-visible{outline:3px solid var(--ob-lilac-hover);outline-offset:4px}
+
+/* =====================================================================
+   Long-form reading (articles, topics, blog index): the day world
+   ===================================================================== */
+.blog-post main,.blog-index main,body.ob-day main{background:var(--ob-day)}
+.rich-text{color:var(--ob-day-ink)}
+.rich-text a,.ob-day-surface a{color:var(--ob-lilac-deep);font-weight:700}
+.rich-text :focus-visible,.ob-day-surface :focus-visible{outline-color:var(--ob-lilac-deep)}
+.rich-text .button.secondary,.ob-day-surface .button.secondary{border-color:var(--ob-lilac-line-day);color:var(--ob-lilac-deep)}
+.rich-text .free-tool-box,.rich-text .related-guides{background:var(--ob-card);border-color:var(--ob-day-line);color:var(--ob-day-ink)}
+.rich-text .free-tool-box span{color:var(--ob-lilac-deep)}
+.rich-text .related-guides p{color:var(--ob-day-ink-soft)}
+.rich-text .tag{background:var(--ob-card);border-color:var(--ob-day-line);color:var(--ob-lilac-deep)}
+.rich-text .cta-band,.blog-post .cta-band{border:0;border-radius:var(--ob-r-md);background:var(--ob-night);color:var(--ob-ink);box-shadow:none}
+.rich-text .cta-band h2,.blog-post .cta-band h2{color:var(--ob-ink)}
+.rich-text .cta-band p,.blog-post .cta-band p{color:var(--ob-ink-soft)}
+.rich-text .cta-band a:not(.button){color:var(--ob-lilac-hover)}
+.rich-text .cta-band .button.secondary{border-color:var(--ob-lilac-line);color:var(--ob-ink)}
+
+/* Home additions */
+.sv-switcher{grid-template-columns:minmax(0,1fr) auto auto;gap:clamp(24px,4vw,48px)}
+.ob-switch-shot{margin:0;width:clamp(160px,18vw,220px)}
+.ob-switch-shot img{display:block;width:100%;height:auto;border-radius:var(--ob-r-md);box-shadow:var(--ob-shadow-media)}
+.sv-switcher-offer{padding:var(--ob-s5)}
+.sv-switcher-offer a{display:inline-flex;align-items:center;min-height:44px;color:var(--ob-lilac-hover)}
+@media (max-width:700px){.sv-switcher{grid-template-columns:1fr}.ob-switch-shot{width:min(240px,70%)}}
+@media (max-width:600px){.sv-village-label{display:none}}
+/* The header button keeps its label colour on every page sheet (legacy sheets colour all nav links). */
+.site-nav .nav-links a.nav-cta,.site-nav .nav-links a.nav-cta:hover{color:var(--ob-on-lilac)!important}
+.sv-page{overflow-x:clip}
+.sv-review-phone:before,.sv-review-phone:after{content:none;display:none}
+/* Facts, not pills: these are not tappable, so they do not look tappable. */
+.sv-trust span{background:none;border:0;padding:0;box-shadow:none}
+@media (max-width:560px){.site-nav .nav-links a:not(.nav-cta){display:none}.site-nav{padding:6px 12px}.site-nav .brand{font-size:28px}}
+.g-page .g-tile,.g-page .g-tile:nth-child(n){background:var(--ob-surface)!important;color:var(--ob-ink)!important;border-color:var(--ob-line)}
+/* Buttons keep their own colours inside link-coloured prose. */
+.nav-cta,.button,.ob-btn{font-size:var(--ob-fs-body)}
+.site-nav .nav-links a.nav-cta{font-size:var(--ob-fs-small)}
+.rich-text a.button,.g-page a.button,.sv-page a.button{color:var(--ob-on-lilac)}
+.rich-text a.button.secondary,.g-page a.button.secondary,.sv-page a.button.secondary{color:var(--ob-ink)}
+/* 44px floor for every tap target the audit found under it. */
+.site-footer a{min-width:44px;justify-content:center}
+.tag,.tags a{min-height:44px}
+.sv-review-store-links a,.sv-proof header a{display:inline-flex;align-items:center;min-height:44px}
+[data-sv-popover-close]{min-width:44px;min-height:44px}
+.g-village-hotspot{min-width:44px;min-height:44px}
+.g-room-controls button{min-height:44px;min-width:44px}
+/* Small print on raised surfaces uses the softer ink, not the faint one. */
+.sv-hero-note small,.sv-hero-note span,.sv-page .sv-final small{color:var(--ob-ink-soft)}
+.sv-hero-note{background:var(--ob-surface);color:var(--ob-ink);border:1px solid var(--ob-line);border-radius:var(--ob-r-md);box-shadow:var(--ob-shadow-media)}
+.sv-hero-note strong{color:var(--ob-ink)}
+.g-page.g-compare-page .g-cta{background:var(--ob-surface);border:0;border-radius:var(--ob-r-lg)}
+.sv-trust{justify-content:flex-start;gap:var(--ob-s2) var(--ob-s5)}
+/* A positioning line kept from a removed eyebrow: it follows the H1 as a subtitle. */
+.ob-tagline{margin:0;font-family:var(--ob-sans);font-size:var(--ob-fs-lead);font-weight:800;line-height:1.35;color:var(--ob-lilac-hover)}
+.sv-access-detail{background:var(--ob-surface-2);color:var(--ob-ink);border:1px solid var(--ob-line)}
+.sv-access-detail p,.sv-access-detail strong{color:var(--ob-ink)}
+.sv-access-detail small{color:var(--ob-ink-soft)}
+.sv-access-detail>span{background:var(--ob-lilac);color:var(--ob-on-lilac)}
+.sv-page .sv-final>div:first-child>small{color:var(--ob-ink)}
+.sv-page .sv-final{background:var(--ob-surface)}
+/* The village demo rests on a readable state, not a faded one. */
+.sv-page .sv-outcome{opacity:1;background:var(--ob-surface);color:var(--ob-ink);border:1px solid var(--ob-line)}
+.sv-page .sv-outcome small,.sv-page .sv-outcome i,.sv-page .sv-outcome p{color:var(--ob-ink-soft)}
+.sv-page .sv-outcome b{color:var(--ob-ink)}
+.sv-page .sv-steps button b{color:var(--ob-ink-soft)}
+.sv-page{--sv-muted:var(--ob-ink-soft)}
+.sv-review-ribbon-card small,.sv-review-slide small,.sv-belief small,.sv-access-people button,.sv-review-controls b,.sv-practical-grid small,.sv-access-babies small{color:var(--ob-ink-soft)}
+.sv-page .sv-final{padding-inline:clamp(20px,5vw,56px);border-radius:var(--ob-r-lg)}
+.sv-access-detail{background:transparent;border:0;border-top:1px solid var(--ob-line);border-radius:0;padding-inline:0}
+.nav-cta,.button,.ob-btn{padding-block:12px}
+.site-nav .nav-links a.nav-cta{padding-block:8px}
+/* "Who can see what?" fits a 320px phone: people wrap instead of running off the edge. */
+.sv-access-people{display:flex;flex-wrap:wrap;gap:var(--ob-s2);overflow:visible}
+.sv-access-demo-head{display:flex;flex-wrap:wrap;gap:var(--ob-s2);align-items:center;justify-content:space-between}
+.sv-access-babies article{min-width:0}
+.sv-page .sv-review-slide small,.sv-page .sv-review-slide small span,.sv-page .sv-access-babies article small,.sv-page .sv-steps button span{color:var(--ob-ink-soft)}
+.sv-page .sv-review-slide small i{color:var(--ob-ink-soft)}
+.section p,.g-section>p,.g-page .g-lede,.sv-page section>p,.sv-page header>p{max-width:68ch}
+.sv-family-access p,details p,.section-inner>p,.ai-answer p{max-width:66ch}
+
 /* Phone install bar (design audit fix 3, 15 Nov 2026) */
 .ob-install-bar{position:fixed;z-index:60;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:10px;padding:9px 9px 9px 10px;border:1px solid rgba(255,255,255,.14);border-radius:18px;background:rgba(6,15,36,.94);color:#f7f3ff;box-shadow:0 14px 34px rgba(0,0,0,.38);backdrop-filter:blur(14px);font-family:Nunito,"Nunito Sans",system-ui,sans-serif;transform:translateY(140%);opacity:0;pointer-events:none;transition:transform .28s ease,opacity .28s ease}
 .ob-install-bar.is-on{transform:none;opacity:1;pointer-events:auto}
@@ -56,6 +263,14 @@ body:not(:has(.sv-page)):not(:has(.g-page)){font-family:"Nunito Sans",system-ui,
 .ob-install-x{flex:none;width:36px;height:44px;border:0;background:transparent;color:#a8abc2;font-size:24px;line-height:1;cursor:pointer}
 @media(min-width:761px){.ob-install-bar{display:none}}
 @media(prefers-reduced-motion:reduce){.ob-install-bar{transition:none}}
-/* Contrast (design audit fix 9, 15 Nov 2026): deep lilac #5b3f8a (8.3:1 on white) for tags and labels on light sections */
-body:not(:has(.sv-page)):not(:has(.g-page)) a.tag{color:#5b3f8a!important}
-body:not(:has(.sv-page)):not(:has(.g-page)) .section:not(.hero) :is(.eyebrow,.kicker,.read-link){color:#5b3f8a!important}
+/* Hero facts: plain text, one fact per line on phones, one row on wider screens. */
+.sv-page .sv-trust{display:flex;flex-wrap:wrap;gap:var(--ob-s2) var(--ob-s5);margin-top:var(--ob-s4);padding:0;list-style:none}
+.sv-page .sv-trust span{display:inline-flex;align-items:baseline;gap:.35em;min-height:0;padding:0;border:0;border-radius:0;background:none;text-align:left;justify-content:flex-start;white-space:nowrap;font-size:var(--ob-fs-small);line-height:1.4;color:var(--ob-ink-soft)}
+.sv-page .sv-trust span:last-child{grid-column:auto}
+.sv-page .sv-trust b{color:var(--ob-ink);font-weight:800}
+.sv-page .sv-trust i{font-style:normal}
+.sv-page .sv-trust span:before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--ob-lilac);align-self:center}
+@media (max-width:600px){.sv-page .sv-trust{flex-direction:column;gap:var(--ob-s2)}}
+/* The live trust line keeps Growth's words; it takes the system's ink. */
+.sv-rating{color:var(--ob-ink-soft);font-size:var(--ob-fs-small)}
+.sv-page .sv-hero h1{max-width:15ch}
