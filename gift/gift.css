@@ -1,0 +1,259 @@
+/* Gift pages: /gift/, /gift/reveal, /redeem and the printable card.
+   Built on the site's own layout (tools/render-seo.mjs). Only what those
+   pages add lives here. */
+
+/* The hero: words on a solid dark panel, the mascot beside them (below them on
+   a phone). The site's usual hero lays text over the picture; here that put
+   words across the mascot's face and over bright areas, where they were hard
+   to read. Every line is checked for contrast (tools/gift/check-pages.mjs). */
+.gift-page .hero {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: clamp(20px, 4vw, 56px);
+  padding: clamp(40px, 7vh, 84px) clamp(20px, 6vw, 72px);
+  background: #0c1430 !important;
+  background-image: none !important;
+  color: #fff;
+}
+.gift-page .hero::before,
+.gift-page .hero::after { display: none !important; }
+.gift-page .hero h1 { max-width: 14ch; color: #fff !important; }
+.gift-page .hero .eyebrow { color: #f1d9a8 !important; }
+.gift-page .hero p { color: #e6e9f4 !important; }
+.gift-hero-art {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  justify-self: center;
+  border-radius: 28px;
+}
+@media (max-width: 860px) {
+  .gift-page .hero { grid-template-columns: 1fr; }
+  .gift-hero-art { max-width: 240px; }
+}
+.gift-price {
+  display: inline-block;
+  margin: 18px 0 0;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #27305a;
+  color: #fff !important;
+  font-weight: 800;
+  font-size: 18px;
+}
+.gift-price[hidden] { display: none; }
+
+.gift-wrap { width: min(760px, 100%); margin: 0 auto; }
+.gift-steps { counter-reset: gift-step; list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 14px; }
+.gift-steps li {
+  counter-increment: gift-step;
+  position: relative;
+  padding: 16px 18px 16px 62px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  line-height: 1.55;
+}
+.gift-steps li::before {
+  content: counter(gift-step);
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #efe7ff;
+  color: #4b3a78;
+  font-weight: 800;
+}
+.gift-steps strong { display: block; margin-bottom: 2px; color: var(--ink); }
+
+.gift-list { margin: 16px 0 0; padding-left: 20px; line-height: 1.7; }
+.gift-list li { margin: 4px 0; }
+.gift-small { color: var(--muted); font-size: 15px; line-height: 1.65; }
+.gift-small li { margin: 8px 0; }
+
+/* Forms: the buy form and the redeem form share these. */
+.gift-form {
+  margin: 22px 0 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.gift-form fieldset { border: 0; margin: 0 0 18px; padding: 0; }
+.gift-form legend { padding: 0; margin-bottom: 8px; font-weight: 800; color: var(--ink); }
+.gift-field { margin: 0 0 16px; }
+.gift-field label,
+.gift-choice label { display: block; font-weight: 700; color: var(--ink); }
+.gift-field .hint { display: block; margin-top: 3px; color: var(--muted); font-size: 14px; font-weight: 400; line-height: 1.45; }
+.gift-field input,
+.gift-field textarea {
+  width: 100%;
+  margin-top: 7px;
+  padding: 13px 14px;
+  border: 1.5px solid #9a8fa6;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 17px;
+}
+.gift-field textarea { min-height: 96px; resize: vertical; }
+.gift-field input:focus-visible,
+.gift-field textarea:focus-visible,
+.gift-choice input:focus-visible,
+.gift-button:focus-visible,
+.gift-link-button:focus-visible,
+.scratch-surface:focus-visible {
+  outline: 3px solid #4b3a78;
+  outline-offset: 3px;
+}
+.gift-choice { display: flex; gap: 10px; align-items: flex-start; margin: 8px 0; }
+.gift-choice input { margin-top: 5px; width: 18px; height: 18px; accent-color: #4b3a78; }
+.gift-code-input { text-transform: uppercase; letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }
+
+.gift-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 13px 24px;
+  border: 0;
+  border-radius: 999px;
+  background: #4b3a78;
+  color: #fff;
+  font: inherit;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+}
+.gift-button[disabled],
+.gift-button[aria-disabled="true"] { background: #b9b2c4; color: #fff; cursor: not-allowed; }
+.gift-button.secondary { background: #fff; color: #4b3a78; border: 2px solid #4b3a78; }
+.gift-link-button { border: 0; background: none; padding: 6px 2px; color: #4b3a78; font: inherit; font-weight: 800; text-decoration: underline; cursor: pointer; }
+.gift-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 6px; }
+
+.gift-note {
+  margin: 16px 0 0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #f4efff;
+  color: #2f2635;
+  line-height: 1.55;
+}
+.gift-note.calm { background: #fff5e9; }
+.gift-note[hidden], .gift-panel[hidden] { display: none; }
+.gift-status { min-height: 1.4em; margin: 14px 0 0; color: var(--ink); line-height: 1.5; }
+/* Said to a screen reader, not drawn. */
+.gift-sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
+/* A heading that is given focus so a screen reader starts there shows no ring:
+   it is not something to press. */
+.gift-panel h1:focus, .gift-panel h2:focus { outline: none; }
+.gift-card-shell .gift-note { text-align: left; }
+
+/* Private pages (reveal, redeem): one calm card in the middle of the page. */
+.gift-private main { padding: clamp(28px, 6vw, 64px) 18px 72px; }
+.gift-card-shell {
+  width: min(560px, 100%);
+  margin: 0 auto;
+  padding: clamp(22px, 5vw, 36px);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.gift-card-shell h1 { margin: 6px 0 10px; font-size: clamp(28px, 6vw, 38px); line-height: 1.12; }
+.gift-card-shell p { line-height: 1.6; }
+.gift-card-shell .gift-form { text-align: left; box-shadow: none; padding: 0; border: 0; }
+.gift-eyebrow { margin: 0; color: #6a5a94; font-size: 13px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
+.gift-from { margin: 14px auto 0; max-width: 40ch; padding: 12px 16px; border-left: 4px solid #cdbdf3; background: #faf7ff; text-align: left; border-radius: 0 12px 12px 0; }
+.gift-from[hidden] { display: none; }
+
+/* The scratch card. The code is real text underneath; the canvas is the foil. */
+.scratch {
+  position: relative;
+  width: min(420px, 100%);
+  margin: 22px auto 10px;
+  aspect-ratio: 21 / 9;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fbf7ff, #f1e8ff);
+  border: 2px dashed #b9a6e6;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.scratch-code {
+  padding: 0 8px;
+  color: #2f2635;
+  /* 19 characters on one line, down to a 320-wide phone. */
+  font-size: clamp(15px, 5vw, 28px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.scratch.is-open .scratch-code { user-select: all; -webkit-user-select: all; }
+.scratch-surface {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  touch-action: none;
+  cursor: grab;
+  transition: opacity 0.5s ease;
+}
+.scratch.is-open .scratch-surface { opacity: 0; pointer-events: none; }
+/* The owner's gift card: shown whole, never cropped, never written over. */
+.gift-ecard { display: block; width: 100%; max-width: 480px; height: auto; margin: 16px auto 14px; border-radius: 14px; box-shadow: 0 10px 28px rgba(34, 30, 58, 0.22); }
+.gift-ecard-section .section-inner { padding-top: 0; padding-bottom: 0; }
+.gift-ecard-section .gift-ecard { max-width: 560px; margin: 0 auto; }
+.scratch-hint { margin: 0 0 6px; color: var(--muted); font-size: 15px; }
+.gift-meta { color: var(--muted); font-size: 15px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .scratch-surface { transition: none; }
+  html { scroll-behavior: auto; }
+}
+@media (max-width: 520px) {
+  .gift-form { padding: 18px; }
+  .gift-actions .gift-button { width: 100%; }
+}
+
+/* The printable card (card-a6.html, card-4x6.html, card-fold-a4.html,
+   card-fold-letter.html): Video's artwork at its true paper size, with the
+   code and the name printed on top in the artwork's own pixels. */
+@font-face { font-family: "Cormorant Garamond Card"; src: url("/fonts/cormorant-garamond-600.ttf") format("truetype"); font-weight: 600; font-display: block; }
+.gift-print-body { margin: 0; background: #fff; color: #2f2635; font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif; }
+.print-card { margin: 0 auto; width: var(--card-w); max-width: 100%; }
+.card-face { position: relative; width: 100%; margin: 0 0 14px; overflow: hidden; box-shadow: 0 2px 14px rgba(34, 30, 58, 0.18); }
+.card-face img { display: block; width: 100%; height: 100%; }
+.card-ink { position: absolute; inset: 0; width: 100%; height: 100%; }
+.card-code { font-family: "Nunito Sans", system-ui, sans-serif; font-weight: 800; letter-spacing: 0.06em; fill: #221e3a; }
+.card-name { font-family: "Cormorant Garamond Card", "Cormorant Garamond", Georgia, serif; font-weight: 600; fill: #fff9ef; }
+/* The words of the card, for a screen reader: not drawn, the artwork carries them. */
+.card-words { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
+.card-design { border: 0; margin: 0 0 10px; padding: 0; }
+.card-design legend { font-weight: 700; margin-bottom: 4px; }
+.card-design label { display: inline-flex; align-items: center; gap: 6px; margin: 0 10px; min-height: 44px; }
+.print-help { max-width: 520px; margin: 18px auto; padding: 0 16px; font-size: 15px; line-height: 1.55; color: #4f4558; text-align: center; }
+@media print {
+  .print-help { display: none; }
+  .print-card { margin: 0; width: var(--card-w); max-width: none; }
+  /* One face to a page, and nothing after the last one: a trailing break, or
+     the hidden words below, printed an empty extra page. */
+  .card-face { width: var(--card-w); height: var(--card-h); margin: 0; box-shadow: none; }
+  .card-face + .card-face { break-before: page; page-break-before: always; }
+  .card-words { display: none; }
+  html, body { height: auto; }
+}
