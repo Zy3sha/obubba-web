@@ -356,6 +356,13 @@
         var year = m === 12;
         each('[data-gift-length]', function (el) { text(el, year ? 'year' : (m === 1 ? 'month' : m + ' months')); });
         each('[data-gift-verb]', function (el) { text(el, year || m === 1 ? 'is' : 'are'); });
+      } else {
+        // 3am Club pass-on codes reply with days (e.g. 7) and months: null.
+        var d = Number(r && r.days);
+        if (d > 0) {
+          each('[data-gift-length]', function (el) { text(el, d === 1 ? 'day' : d + ' days'); });
+          each('[data-gift-verb]', function (el) { text(el, d === 1 ? 'is' : 'are'); });
+        }
       }
       if (r && r.from) {
         var partner = r.from === 'partner';
