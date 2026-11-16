@@ -286,7 +286,7 @@
 <p>We traced the current implementation—from the due-date calculation to all 37 week entries and the six storybook baby choices—to explain exactly what the screen knows, what it estimates and why your clinical dates always win.</p>
 <h2>The short answer</h2>
 <p>OBubba calculates the pregnancy week like this:</p>
-<ol><li>It reads the estimated due date entered when the bump profile was created.</li><li>It treats that due date as the 40-week, 280-day point.</li><li>It counts calendar days between today and that date.</li><li>It converts elapsed days into <strong>completed weeks</strong>.</li><li>It opens one of 37 pregnancy stories covering weeks 4 through 40.</li></ol>
+<ol><li>It reads the estimated due date entered when the bump profile was created.</li><li>It treats that due date as the 40-week, 280-day point.</li><li>It counts calendar days between today and that date.</li><li>It converts elapsed days into <strong>completed weeks</strong>.</li><li>It opens one of 39 pregnancy stories covering weeks 4 through 42.</li></ol>
 <p>You can swipe forward or backwards through the whole journey. Browsing week 36 does not change the real “today” week or make keepsakes behave as though birth is near.</p>
 <p>The NHS explains that a due date based on the first day of the last period is an estimate and may be adjusted using measurements at the dating scan. If OBubba and your maternity record disagree, use the date and gestation given by your maternity team for appointments, screening and health decisions.</p>
 <figure><img src="/obubba-pregnancy-weekly-story-logic.svg" alt="A four-step explanation of how OBubba uses the expected due date to choose a weekly pregnancy story while keeping clinical dating with the maternity team." loading="lazy"/><figcaption>OBubba uses date-only arithmetic to select one of 37 stories. Browsing another week does not alter the current week, and app storytelling never replaces clinical dating.</figcaption></figure>
@@ -308,7 +308,7 @@
 <p>OBubba normalises both dates to calendar midnight before counting the difference. That small implementation detail prevents the one-hour clock change in spring or autumn from shaving a day off the calculation and moving the displayed week too early.</p>
 <p>Parents should never need to think about that. A pregnancy tracker should simply remain predictable when the clocks change.</p>
 <h3>4. The weekly story is safely bounded</h3>
-<p>The calculation itself can defensively represent 0–42 weeks, including an overdue state. The visual journey contains stories for weeks 4–40, so requests outside that range are clamped to the nearest available story rather than causing a blank screen or invalid lookup.</p>
+<p>The calculation itself can defensively represent 0–42 weeks, including an overdue state. The visual journey contains stories for weeks 4 to 42, so requests outside that range are clamped to the nearest available story rather than causing a blank screen or invalid lookup.</p>
 <p>At the due date, the countdown reads <strong>any day now</strong> rather than pretending “0 days” is a deadline.</p>
 <h2>What you get each week</h2>
 <p>The current app has a complete entry for every week from 4 through 40—no filler weeks and no repeated block labelled “more development”. Each weekly contract contains:</p>
@@ -324,7 +324,7 @@
 <p>An ultrasound uses sound waves to build an image and is interpreted within maternity care. The NHS says the dating scan estimates the due date using measurements and the mid-pregnancy scan checks for specified physical conditions. A decorative orb on a tracker has none of those functions.</p>
 <p>Choose the companion that makes the space feel welcoming. Do not read its details as information about the baby.</p>
 <h2>What happens when you browse ahead?</h2>
-<p>Curiosity is allowed. In the current app, the Journey tab can move from week 4 to week 40 and back again.</p>
+<p>Curiosity is allowed. In the current app, the week picker under the week control can move from week 4 to week 42 and back again.</p>
 <p>The important safeguard is that <strong>selected browsing week</strong> and <strong>true current week</strong> are separate values.</p>
 <p>If you look ahead from week 14 to week 30:</p>
 <ul><li>the journey artwork and story can preview week 30</li><li>the app can offer a route back to this week</li><li>the saved current gestation does not become week 30</li><li>the Keepsakes tab still receives the true week</li><li>looking ahead cannot make late-pregnancy copy appear as current fact elsewhere</li></ul>
@@ -356,7 +356,7 @@
 <p>The same child profile can hold the bump name, expected date, chosen companion, preparation checklist and time-capsule letters. When baby arrives, that profile can become the live feed, nappy and sleep tracker rather than asking a recovering family to create a stranger called “Baby 2”. Our guide to <a href="/blog/do-i-need-new-baby-tracker-after-birth.html">OBubba’s pregnancy-to-newborn transition</a> shows exactly what carries forward and what stays private.</p>
 <p>That continuity is the reason to return each week: not to collect increasingly urgent notifications, but to build one calm thread from anticipation into real care.</p>
 <p>OBubba is not claiming to know your pregnancy from a date. It uses one date to open the right chapter, labels the artwork as imagination and leaves medical dating where it belongs.</p>
-<p><strong><a href="/app.html">Try OBubba free →</a></strong> — follow all 37 weekly pregnancy stories, choose a storybook companion and carry the same child profile into newborn feeds, nappies and sleep when baby arrives.</p>
+<p><strong><a href="/app.html">Try OBubba free →</a></strong> — follow all 39 weekly pregnancy stories, choose a storybook companion and carry the same child profile into newborn feeds, nappies and sleep when baby arrives.</p>
 <h2>Sources</h2>
 <ul><li><a href="https://www.nhs.uk/best-start-in-life/pregnancy/week-by-week-guide-to-pregnancy/" target="_blank" rel="noopener noreferrer">NHS: Week-by-week guide to pregnancy</a></li><li><a href="https://www.nhs.uk/pregnancy/finding-out/due-date-calculator/" target="_blank" rel="noopener noreferrer">NHS: Pregnancy due date calculator</a></li><li><a href="https://www.nhs.uk/pregnancy/your-pregnancy-care/ultrasound-scans/" target="_blank" rel="noopener noreferrer">NHS: Ultrasound scans in pregnancy</a></li><li><a href="https://www.nhs.uk/pregnancy/your-pregnancy-care/12-week-scan/" target="_blank" rel="noopener noreferrer">NHS: 12-week dating scan</a></li><li><a href="https://www.nhs.uk/pregnancy/your-pregnancy-care/your-antenatal-care-and-appointments/" target="_blank" rel="noopener noreferrer">NHS: Your antenatal care and appointments</a></li></ul>
 <h2>Quick questions</h2>
@@ -367,7 +367,7 @@
 <h3>Can the app tell whether my baby is the stated size?</h3>
 <p>No. The size line is a general weekly comparison, not an individual measurement. Only appropriate clinical assessment can provide information about your pregnancy and baby.</p>
 <h3>Can I look at future weeks without changing my pregnancy stage?</h3>
-<p>Yes. The Journey tab lets you browse weeks 4–40 while the current week remains separate for the countdown and keepsakes.</p>
+<p>Yes. The week picker under the week control lets you browse weeks 4 to 42 while the current week remains separate for the countdown and keepsakes.</p>
 <h3>Does the chosen storybook baby predict skin tone or hair?</h3>
 <p>No. It is one of six changeable hand-painted companions. The picker explicitly describes the characters as storybook friends, not predictions.</p>
 <h3>Which date should I trust if OBubba and my scan disagree?</h3>
