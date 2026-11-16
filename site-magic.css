@@ -274,3 +274,7 @@ body:has(.g-page){background:linear-gradient(180deg,var(--ob-night-deep) 0,var(-
 /* The live trust line keeps Growth's words; it takes the system's ink. */
 .sv-rating{color:var(--ob-ink-soft);font-size:var(--ob-fs-small)}
 .sv-page .sv-hero h1{max-width:15ch}
+
+/* US care note (fix 6, 16 Nov 2026) */
+.care-note{max-width:760px;margin:24px auto;padding:14px 18px;border:1px solid rgba(214,196,242,.35);border-radius:14px;font-size:15px;line-height:1.5}
+.care-note p{margin:0 0 6px}.care-note p:last-child{margin:0}
