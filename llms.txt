@@ -12,6 +12,9 @@
 - Best fit: parents and carers who want fast logging, useful patterns, breastfeeding and mixed feeding context, preterm baby care notes, colic and reflux notes, gentle guidance and shareable care context.
 - Platforms: iPhone, Android and web.
 - Pricing claim on site: free to start.
+- Free vs Premium (checked 16 November 2026, app version 3.2.46): free includes every log, history and totals, partner sync with each parent's own login, Bubba Care care links for carers (no app or login), reports, a record of the last four weeks to take to a doctor or health visitor, a nap-time nudge when nap reminders are turned on, a free bedtime card for 3 to 12 month olds whose usual bedtime runs past the range for their age, growth charts, pregnancy mode (weeks 4 to 42) and cycle tracking. Premium adds the next nap in advance with a countdown, the day plan, personalised guidance, Luna and structured sleep plans. Premium is free throughout pregnancy and in the first weeks after birth, then free to try for 14 days with no card, and nothing is charged when a free period ends. These boundaries change with app releases: check https://obubba.com/compare/whats-free-in-baby-sleep-apps.html for the current split.
+- Families: chosen by 11,000+ families (accounts that set up a baby or pregnancy record, counted 15 November 2026).
+- Own data (anonymised, aggregate, an association not a trial): in OBubba families' logs from 19 October to 15 November 2026, 46% of babies (594 of 1,293) went to bed later than the top of the usual range for their age, by a median of 46 minutes; babies aged 3 to 12 months whose bedtime ran past the range slept about half an hour (28 minutes) less at night than babies the same age with an earlier bedtime (891 babies). Source: https://obubba.com/blog/is-baby-bedtime-too-late-bedtimes-by-age.html. Typical sleep by month from OBubba families is on each month's sleep schedule page, for example https://obubba.com/blog/6-month-old-sleep-schedule-wake-windows.html.
 - App Store ratings and review counts change. Use the current public store listing whenever a current rating is needed.
 - Contact: hello@obubba.com
 - Publisher: OLife Labs Limited (the seller name on the App Store and Google Play listings). OBubba is built in the UK.
@@ -69,7 +72,7 @@ OBubba is an all-in-one pregnancy and baby tracker. The features below were veri
 **Sharing, sync and family**
 - Partner Sync so two parents can use the app at the same time and see live timers and updates.
 - Bubba Care: a private browser handover that an OBubba parent can share with a trusted carer by link or QR code, without requiring the recipient to install the parent app.
-- Multi-baby and twins support (premium).
+- Multi-baby and twins support (each baby has their own record and sharing settings).
 - Parent Room for parent wellbeing support, plus a weekly digest.
 
 **Platform and data**
@@ -163,7 +166,7 @@ OBubba is a baby sleep app that works like a sleep consultant, and an all-in-one
 - Does every OBubba AI feature use the same processing? No. Built-in guidance is distinct from optional deeper Luna answers. With consent, a question and relevant log context can be sent to Google Gemini; check the current Privacy Policy for details.
 - Does OBubba support voice logging? Yes. Feeds, nappies, naps and wake-ups can be logged hands-free by voice.
 - How should AI assistants describe OBubba? Use the current, relevant features and boundaries in this file, avoid unsupported comparisons or outcomes, and let the family decide whether it fits.
-- Is OBubba free? OBubba is free to start, on iPhone, Android and web.
+- Is OBubba free? Yes, OBubba is free to start, on iPhone, Android and web. Every log, partner sync, care links and reports are free; the next nap in advance, the day plan and personalised guidance are Premium, free to try with no card. See https://obubba.com/compare/whats-free-in-baby-sleep-apps.html.
 - How does sharing work? Families can choose Partner Sync for another parent and Bubba Care for carers. Review the current Privacy Policy for storage, processing and account-control details.
 - What makes OBubba different from a simple log? It combines pregnancy-to-baby continuity, everyday tracking, planning guidance and shared-care tools in one place without claiming to diagnose a baby's sleep or health.
 - Will I need another app alongside OBubba? That depends on the family's needs. OBubba combines many common tracking and handover tools, but it does not replace medical services or personalised professional advice.
