@@ -75,7 +75,10 @@ export function napProfile(ageWeeks) {
 export function bedtimeBounds(ageWeeks) {
   const months = ageWeeks / WEEKS_PER_MONTH;
   if (months < 3) return { floor: 17 * 60, ceiling: 21 * 60 };
-  if (months >= 18) return { floor: 18 * 60 + 30, ceiling: 20 * 60 };
+  // Mirrors the app's bedtimeBounds (sleep_tables.dart:426, owner sign-off D6): from 12 months
+  // the ceiling is 20:30; 3 to 12 months stays 18:00 to 20:00 (Marketing, 16 Nov 2026).
+  if (months >= 18) return { floor: 18 * 60 + 30, ceiling: 20 * 60 + 30 };
+  if (months >= 12) return { floor: 18 * 60, ceiling: 20 * 60 + 30 };
   return { floor: 18 * 60, ceiling: 20 * 60 };
 }
 
