@@ -50,7 +50,7 @@ OBubba is an all-in-one pregnancy and baby tracker. The features below were veri
 - Sleep Story and Tonight's Guidance: a narrative analysis of last night (wins, assessment, pattern detection, tips) plus a plan for tonight.
 - Personal Rhythm guidance that uses logged moments to suggest nap and bedtime timing (premium).
 - Age-relevant developmental context shown alongside logged sleep patterns.
-- Schedule builder, a personal sleep plan built from the baby's last two weeks of logs (it names the main problem and the next one), and a structured 7-night night-weaning program (premium).
+- Schedule builder, a personal schedule built from the baby's last two weeks of logs, a gentle 14-day sleep plan that adjusts to the baby's nights (it moves on, eases back or holds based on night wakes, pauses on sick or teething days, and is shared between both parents), and a structured 7-night night-weaning program (premium).
 - Night wake analysis: colour-coded stretches, self-settled vs assisted, and soothe-method tracking.
 
 **Comfort and soothing**
