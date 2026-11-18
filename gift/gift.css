@@ -170,6 +170,16 @@
   box-shadow: var(--shadow);
   text-align: center;
 }
+/* The WHITE card (the reveal page) sets its own ink. The site's theme gives
+   the page pale ink for its navy ground, and a white card that inherited it
+   showed its heading, the giver's message and "This is your code" almost
+   white on white (Engine's 320px shot, 18 Nov 2026). The navy card
+   (.gift-night, the redeem page) sets its own below. */
+body:not(.gift-night) .gift-card-shell { color: #2f2635; }
+body:not(.gift-night) .gift-card-shell h1,
+body:not(.gift-night) .gift-card-shell h2,
+body:not(.gift-night) .gift-card-shell strong { color: #201a2e; }
+body:not(.gift-night) .gift-card-shell .gift-from { color: #2f2635; }
 .gift-card-shell h1 { margin: 6px 0 10px; font-size: clamp(28px, 6vw, 38px); line-height: 1.12; }
 .gift-card-shell p { line-height: 1.6; }
 .gift-card-shell .gift-form { text-align: left; box-shadow: none; padding: 0; border: 0; }
