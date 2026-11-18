@@ -358,6 +358,8 @@
         each('[data-gift-verb]', function (el) { text(el, year || m === 1 ? 'is' : 'are'); });
       } else {
         // 3am Club pass-on codes reply with days (e.g. 7) and months: null.
+        // (Marketing's fix on main, 88984bd88; carried here because the
+        // generator writes gift/gift.js from this file.)
         var d = Number(r && r.days);
         if (d > 0) {
           each('[data-gift-length]', function (el) { text(el, d === 1 ? 'day' : d + ' days'); });

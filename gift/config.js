@@ -1,7 +1,10 @@
 window.OBUBBA_GIFT = {
   "price": null,
   "prices": {
-    "GBP": null,
+    "GBP": {
+      "amount": "49.99",
+      "display": "£49.99"
+    },
     "USD": null
   },
   "months": 12,
