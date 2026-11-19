@@ -9,7 +9,7 @@ window.OBUBBA_GIFT = {
   },
   "months": 12,
   "functionsBase": "https://us-central1-obubba-d9ccc.cloudfunctions.net",
-  "checkoutEnabled": false,
+  "checkoutEnabled": true,
   "messageMax": 400,
   "sendAheadDays": 180
 };
