@@ -67,7 +67,19 @@
       var m = /[-_]([A-Za-z]{2})\b/.exec(String(langs[0] || ''));
       return m ? m[1].toUpperCase() : '';
     }
-    if (usd && gbp && region() === 'US') usd.checked = true;
+    // A currency can be chosen only when it has a price. While dollars have
+    // none (the owner has not set one), everyone starts on pounds and the
+    // "Pay in" choice is hidden, so nobody is shown "not on sale" for a
+    // currency that is simply not offered yet (Manager, 19 Nov 2026).
+    function priced(c) { var p = prices[c]; return !!(p && p.display); }
+    var bothPriced = priced('GBP') && priced('USD');
+    if (usd && gbp) {
+      if (bothPriced) { if (region() === 'US') usd.checked = true; }
+      else if (priced('USD') && !priced('GBP')) usd.checked = true;
+      else gbp.checked = true;
+      var choice = $('gift-currency');
+      if (choice) choice.hidden = !bothPriced;
+    }
     function currency() { return usd && usd.checked ? 'USD' : 'GBP'; }
     function priceNow() {
       var p = prices[currency()];
