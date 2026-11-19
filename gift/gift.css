@@ -331,3 +331,15 @@ body:not(.gift-night) .gift-card-shell .gift-from { color: #2f2635; }
 .gift-night .gift-meta { color: var(--ob-ink-faint, #A8ABC2) !important; }
 .gift-night .gift-from { background: var(--ob-surface-2, #172B4A); border-left-color: var(--ob-lilac, #B79AE6); color: var(--ob-ink, #F7F3FF); }
 .gift-night a:not(.gift-button):not(.brand):not(.nav-cta) { color: var(--ob-lilac-hover, #D6C4F2); }
+
+/* The quick-answer comparison table (Marketing's, above "What it is"). The
+   site's other pages carry these rules inline; the gift page did not, so on
+   a narrow phone the table pushed the whole page sideways (381px in a 320px
+   screen; Engine's browser run, 18 Nov 2026). The table now scrolls inside
+   its own frame, as it does everywhere else on the site. */
+.quick-answer .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; border: 1px solid rgba(214,196,242,.28); border-radius: 16px; margin: 8px 0 12px; }
+.quick-answer table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 15px; line-height: 1.45; }
+.quick-answer caption { text-align: left; padding: 12px 14px; font-weight: 700; }
+.quick-answer th, .quick-answer td { padding: 10px 12px; border-top: 1px solid rgba(214,196,242,.18); text-align: left; vertical-align: top; }
+.quick-answer thead th { font-size: 13px; letter-spacing: .02em; opacity: .85; }
+.quick-answer .small { font-size: 13px; opacity: .85; }
