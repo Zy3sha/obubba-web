@@ -343,3 +343,35 @@ body:not(.gift-night) .gift-card-shell .gift-from { color: #2f2635; }
 .quick-answer th, .quick-answer td { padding: 10px 12px; border-top: 1px solid rgba(214,196,242,.18); text-align: left; vertical-align: top; }
 .quick-answer thead th { font-size: 13px; letter-spacing: .02em; opacity: .85; }
 .quick-answer .small { font-size: 13px; opacity: .85; }
+
+/* ---- The reveal page IS the printable card ---------------------------------
+   The owner's ask, 19 Nov 2026: "this is cute, can this not be the printable
+   pdf?" Printing the reveal page gives one sheet (A4 or US Letter): the
+   eyebrow, the heading, "For {name}.", the giver's message, the card picture,
+   the code in its dashed box, then how to use it and the key terms. The page
+   furniture, the buttons and the scratch surface are left out. */
+.print-only { display: none; }
+@media print {
+  @page { margin: 14mm; }
+  /* The site's navy ground sits on html as well as body: both go white on paper. */
+  html, body.gift-private, body.gift-private main { background: #fff !important; }
+  body.gift-private { color: #2f2635 !important; min-height: 0 !important; }
+  body.gift-private .site-nav, body.gift-private .site-footer, body.gift-private footer,
+  body.gift-private .no-print, body.gift-private .gift-actions, body.gift-private .scratch-hint,
+  body.gift-private .scratch-surface, body.gift-private .gift-sr-only,
+  body.gift-private [id*="cookie"], body.gift-private [class*="cookie"] { display: none !important; }
+  body.gift-private main { padding: 0 !important; }
+  body.gift-private .gift-card-shell { width: 100%; max-width: 150mm; margin: 0 auto; padding: 0; border: 0; box-shadow: none; background: #fff; }
+  body.gift-private .gift-card-shell h1 { font-size: 24pt; margin: 4pt 0 8pt; }
+  body.gift-private .gift-eyebrow { color: #5b4a8a !important; }
+  body.gift-private .gift-ecard { width: 100%; max-width: 120mm; height: auto; box-shadow: none; border-radius: 10pt; }
+  body.gift-private .gift-from, body.gift-private .scratch, body.gift-private .gift-ecard {
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; break-inside: avoid; }
+  body.gift-private .scratch { width: 100%; max-width: 110mm; aspect-ratio: auto; padding: 12pt 8pt; margin: 12pt auto 8pt; }
+  body.gift-private .scratch-code { font-size: 20pt; }
+  body.gift-private .print-only { display: block; text-align: left; max-width: 130mm; margin: 6pt auto 0; }
+  body.gift-private .print-only ol { margin: 6pt 0; padding-left: 16pt; font-size: 11pt; line-height: 1.5; }
+  body.gift-private .print-small { font-size: 8.5pt; line-height: 1.4; color: #5c5466; margin-top: 8pt; }
+  body.gift-private #reveal-shared-line { font-size: 9.5pt; }
+  html, body { height: auto; }
+}

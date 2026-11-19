@@ -236,6 +236,10 @@
       show($('reveal-after'), true);
       text(announce, announce.getAttribute('data-revealed') + ' ' + code.textContent.split('').join(' '));
     }
+    // The page itself is the printable card: the browser's own print window
+    // also offers "Save as PDF".
+    var printBtn = $('reveal-print');
+    if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
     if (open) open.addEventListener('click', reveal);
     canvas.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); reveal(); }
