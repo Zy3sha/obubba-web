@@ -2,14 +2,14 @@ window.OBUBBA_GIFT = {
   "price": null,
   "prices": {
     "GBP": {
-      "amount": "49.99",
-      "display": "£49.99"
+      "amount": "69.99",
+      "display": "£69.99"
     },
     "USD": null
   },
   "months": 12,
   "functionsBase": "https://us-central1-obubba-d9ccc.cloudfunctions.net",
-  "checkoutEnabled": false,
+  "checkoutEnabled": true,
   "messageMax": 400,
   "sendAheadDays": 180
 };
