@@ -375,3 +375,6 @@ body:not(.gift-night) .gift-card-shell .gift-from { color: #2f2635; }
   body.gift-private #reveal-shared-line { font-size: 9.5pt; }
   html, body { height: auto; }
 }
+
+/* 22 Nov 2026: the code window, said plainly above the pay button (owner). */
+.gift-form .gift-expiry { margin: 4px 0 14px; color: #2f2635 !important; font-weight: 700; line-height: 1.5; }
