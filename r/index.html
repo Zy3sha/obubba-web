@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Your friend uses OBubba</title>
+  <meta name="description" content="Use their code, log something on 10 days in your first two weeks, and you both get a free month of Premium."/>
+  <meta name="robots" content="noindex"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="OBubba"/>
+  <meta property="og:title" content="Your friend uses OBubba"/>
+  <meta property="og:description" content="Use their code, log something on 10 days in your first two weeks, and you both get a free month of Premium."/>
+  <meta property="og:image" content="https://obubba.com/og-image.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:url" content="https://obubba.com/r/"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <script>
+    // One real page for every family's link: obubba.com/r/?c=OB-XXXXXXXX.
+    // GitHub Pages cannot serve a page per code, so /r/<code> answered 404 to
+    // Facebook and WhatsApp and a shared link had no preview. This page
+    // answers 200 for everyone and carries the code on to the invite page.
+    (function () {
+      var c = (new URLSearchParams(location.search).get('c') || '').toUpperCase();
+      var ok = /^OB-[23456789ABCDEFGHJKMNPQRSTUVWXYZ]{8}$/.test(c);
+      location.replace(ok ? '/referral.html?code=' + encodeURIComponent(c) : '/referral.html');
+    })();
+  </script>
+</head>
+<body><a href="/referral.html">Open your invite</a></body>
+</html>
